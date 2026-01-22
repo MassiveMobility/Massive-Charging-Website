@@ -1,0 +1,178 @@
+/* src/features/HomeCharging/styles.css */
+
+/* --- 1. DESIGN TOKENS (Variables) --- */
+:root {
+  --hc-primary: #1e3a8a;       /* Deep Blue */
+  --hc-accent: #16a34a;        /* Green */
+  --hc-bg-light: #f9fafb;      /* Light Gray */
+  --hc-text-main: #111827;     /* Dark Text */
+  --hc-text-muted: #4b5563;    /* Gray Text */
+  --hc-white: #ffffff;
+  --hc-radius: 12px;
+  --hc-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* --- 2. LAYOUT UTILITIES --- */
+.hc-container {
+  font-family: sans-serif;
+  color: var(--hc-text-main);
+  background-color: var(--hc-bg-light);
+  min-height: 100vh;
+}
+
+.hc-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hc-section {
+  padding: 60px 0;
+}
+
+/* --- 3. MODULE A: HERO --- */
+.hc-hero {
+  background-color: var(--hc-white);
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.hc-trust-pill {
+  display: inline-block;
+  background-color: #dbeafe; /* Light Blue */
+  color: var(--hc-primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 24px;
+}
+
+.hc-hero h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hc-hero p {
+  font-size: 1.25rem;
+  color: var(--hc-text-muted);
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+}
+
+.hc-btn-primary {
+  background-color: var(--hc-accent);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: var(--hc-shadow);
+  transition: background 0.2s;
+}
+
+.hc-btn-primary:hover {
+  background-color: #15803d; /* Darker Green */
+}
+
+/* --- 4. MODULE B: CARDS --- */
+.hc-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.hc-card {
+  background: var(--hc-white);
+  padding: 24px;
+  border-radius: var(--hc-radius);
+  box-shadow: var(--hc-shadow);
+  border: 1px solid #f3f4f6;
+}
+
+.hc-card-icon {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.hc-cta-card {
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--hc-primary);
+  font-weight: 500;
+  padding: 24px;
+  border-radius: var(--hc-radius);
+}
+
+/* --- 5. MODULE C: FORM --- */
+.hc-form-container {
+  background: var(--hc-white);
+  padding: 40px;
+  border-radius: var(--hc-radius);
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+}
+
+.hc-input-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.hc-input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  min-width: 250px;
+}
+
+.hc-checkbox-group {
+  margin-bottom: 24px;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.hc-checkbox-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.hc-submit-btn {
+  width: 100%;
+  background-color: var(--hc-primary);
+  color: white;
+  padding: 16px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.hc-contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.hc-outline-btn {
+  background: white;
+  border: 1px solid #d1d5db;
+  padding: 8px 16px;
+  border-radius: 50px;
+  cursor: pointer;
+}
