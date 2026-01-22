@@ -1,0 +1,59 @@
+import React, { useState, useEffect } from 'react';
+import Navbar from './components/layout/Navbar'; 
+import { Footer } from './components/layout/Footer';
+import Surface from './components/atoms/Surface';
+import Container from './components/atoms/Container';
+
+/* [NEW] Import the refined Card and Service */
+import CarDetailCard from './components/modules/CarDetailCard';
+import { bringCars } from './services/carService';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&family=Inter:wght@400&display=swap');
+
+function App() {
+  const [carResults, setCarResults] = useState<any[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await bringCars(); // Fetches all flattened v5 cars
+      setCarResults(data);
+    };
+    fetchData();
+  }, []);
+
+  return (
+    <Surface variant="base" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <Navbar />
+
+      <main style={{ flex: 1, paddingBlock: 'var(--space-8)' }}>
+        <Container>
+          {/* Header Row */}
+          <div style={{ marginBottom: 'var(--space-8)', textAlign: 'center' }}>
+            <Text size="6" weight="900">EV Specification Database</Text>
+            <Text size="3" color="muted">Live telemetry from adirishi.net Strapi v5</Text>
+          </div>
+
+          {/* Technical Card Grid */}
+          <div style={{ 
+            display: 'flex', 
+            flexWrap: 'wrap', 
+            gap: 'var(--space-4)', 
+            justifyContent: 'center' 
+          }}>
+            {carResults.length > 0 ? (
+              carResults.map((car) => (
+                <CarDetailCard key={car.id} car={car} />
+              ))
+            ) : (
+              <Text color="muted">Initializing data streams...</Text>
+            )}
+          </div>
+        </Container>
+      </main>
+
+      <Footer />
+    </Surface>
+  );
+}
+
+export default App;

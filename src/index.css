@@ -1,0 +1,136 @@
+/* eviz Project: Massivecharging.com */
+/* Design System: Basic Theme */
+
+:root[data-theme="basic"] {
+  /* ---------------------------------------------------------
+     1. PRIMITIVES
+     The physical values (The DNA)
+     --------------------------------------------------------- */
+  
+  /* Brand & Vitality Primitives */
+  --p-red-brand: #E50000;      /* Standby / Critical / Identity */
+  --p-blue-data: #2979FF;      /* Processing / Telemetry / Info */
+  --p-green-live: #00E676;     /* Success / Powered / Charging */
+  --p-gold: #FFD600;           /* Warning / Busy */
+
+  /* Neutral & Surface Primitives */
+  --p-white: #FFFFFF;
+  --p-gray-50: #F8F9FA;
+  --p-gray-400: #9BA3AF;
+  --p-slate-800: #1E293B;      /* Machine Inset */
+  --p-slate-900: #0F172A;      /* Machine Base */
+  --p-ink-900: #111827;        /* Primary Ink */
+
+  /* ---------------------------------------------------------
+     2. SEMANTIC INTENT TOKENS
+     Mapping primitives to specific UI roles
+     --------------------------------------------------------- */
+
+  /* Fonts */
+  --font-sans: 'Geist Sans', system-ui, sans-serif;
+  --font-mono: 'Geist Mono', monospace;
+
+  /* Text Roles */
+  --text-primary: var(--p-ink-900);
+  --text-secondary: var(--p-slate-800);
+  --text-muted: var(--p-gray-400);
+  --text-data: var(--p-blue-data);     /* Specifically for Mono stats */
+  --text-on-action: var(--p-white);
+  --text-invert: var(--p-white);
+
+  /* Surface Roles */
+  --surface-base: var(--p-white);      /* Editorial/Guide Base */
+  --surface-card: var(--p-gray-50);    /* Guide Article Cards */
+  --surface-secondary: var(--p-gray-400); /* [NEW] Added as requested */
+  --surface-machine: var(--p-slate-900); /* Dashboard/Telemetry Base */
+  --surface-inset: var(--p-slate-800);  /* Machine Widget Backgrounds */
+  --surface-banner: var(--p-ink-900);
+  --surface-overlay: rgba(15, 23, 42, 0.8);
+
+  /* Kinetic Action State (Red -> Blue -> Green) */
+  --action-min: var(--p-red-brand);    /* Standby */
+  --action-mid: var(--p-blue-data);     /* Hover */
+  --action-glow: var(--p-green-live);   /* Active */
+
+  /* Status Mapping */
+  --status-available: var(--p-green-live);
+  --status-busy: var(--p-gold);
+  --status-alert: var(--p-red-brand);
+  --status-info: var(--p-blue-data);
+
+  /* Shape & Stroke */
+  --stroke-subtle: var(--p-gray-50);
+  --stroke-strong: var(--p-slate-800);
+  --stroke-glow: var(--p-green-live);
+  
+  --radius-1: 4px;
+  --radius-2: 8px;
+  --radius-3: 16px;
+  --radius-full: 9999px;
+
+  --shadow-low: 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-high: 0 10px 15px rgba(0,0,0,0.1);
+
+  /* ---------------------------------------------------------
+     3. SCALE & RHYTHM
+     The mathematical core (Power of 8)
+     --------------------------------------------------------- */
+
+  /* Spacing Scale */
+  --e-viz-base: 8px;
+  --space-0: 0px;
+  --space-0-5: calc(var(--e-viz-base) * 0.5); /* 4px */
+  --space-1: calc(var(--e-viz-base) * 1);     /* 8px */
+  --space-2: calc(var(--e-viz-base) * 2);     /* 16px */
+  --space-3: calc(var(--e-viz-base) * 3);     /* 24px */
+  --space-4: calc(var(--e-viz-base) * 4);     /* 32px */
+  --space-6: calc(var(--e-viz-base) * 6);     /* 48px */
+  --space-8: calc(var(--e-viz-base) * 8);     /* 64px */
+
+  /* Text Scale (Clean Numeric) */
+  --text-1: 0.75rem;    /* 12px */
+  --text-2: 0.875rem;   /* 14px */
+  --text-3: 1rem;       /* 16px */
+  --text-4: 1.25rem;    /* 20px */
+  --text-5: 1.5rem;     /* 24px */
+  --text-6: 2rem;       /* 32px */
+  --text-7: 3rem;       /* 48px */
+
+  /* Line Heights (Locked to 4px/8px baseline) */
+  --lh-1: 16px;
+  --lh-2: 24px;
+  --lh-3: 32px;
+  --lh-4: 40px;
+  --lh-5: 48px;
+  --lh-6: 56px;
+
+  /* Weights */
+  --weight-400: 400;
+  --weight-500: 500;
+  --weight-700: 700;
+  --weight-900: 900;
+}
+
+/* ---------------------------------------------------------
+   4. UTILITY CLASSES
+   Global layout patterns consuming the DNA
+   --------------------------------------------------------- */
+
+.container {
+  width: 100%;
+  /* Locked to the 1200px industry standard for desktops */
+  max-width: 1200px;
+  
+  /* [CRITICAL] Centering logic */
+  margin-left: auto;
+  margin-right: auto;
+  
+  /* Internal Gutters using your spacing tokens */
+  padding-left: var(--space-2);  /* 16px */
+  padding-right: var(--space-2); /* 16px */
+}
+
+/* Global reset to ensure padding doesn't affect width calculations */
+* {
+  box-sizing: border-box;
+}

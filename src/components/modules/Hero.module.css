@@ -1,0 +1,113 @@
+/* HERO WRAPPER - The full-width outer section */
+.heroWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;            /* Represents align-self: stretch */
+  padding: 9px 0;         /* Figma vertical padding (10px horiz ignored for full-width) */
+  background: #FFFFFF;
+}
+
+/* HERO CONTAINER - The 1200px centered content box */
+.heroContainer {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  padding: 72px 48px;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  background: #FFFFFF;
+  box-sizing: border-box;
+}
+
+/* LEFT COLUMN */
+.textContainerLeft {
+  display: flex;
+  width: 589px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 39px;
+  flex-shrink: 0;
+}
+
+.textCopywriting {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.textLine1 {
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: normal;
+  margin: 0;
+}
+
+.textLine2 {
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+}
+
+.textLine3 {
+  color: #000;
+  font-family: 'Inter', sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+
+/* BUTTONS */
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.heroButton {
+  display: flex;
+  padding: 16px;          /* Uniform 16px as extracted */
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 16px;    /* Updated to 16px */
+  background: #E50000;
+  border: none;
+  cursor: pointer;
+  
+  /* Text values for buttons */
+  color: #FFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  transition: opacity 0.2s ease;
+}
+
+.heroButton:hover {
+  opacity: 0.9;
+}
+
+/* RIGHT COLUMN */
+.imageContainerRight {
+  width: 527px;
+  height: 355px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background-image: url('../../assets/hero-image.png'); /* Replace with your logic */
+  background-color: lightgray;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
