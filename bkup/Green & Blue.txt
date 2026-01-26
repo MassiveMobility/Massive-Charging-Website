@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massivecharging Design System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // PRIMARY ACTION: Nature/Flow (Emerald)
+                        primary: {
+                            100: '#d1fae5', // Mint Wash (Badges)
+                            500: '#10b981', 
+                            600: '#059669', // BASE: "Go" / Buy
+                            700: '#047857', // Hover
+                        },
+                        // TECH ACCENT: Infrastructure (Electric Blue)
+                        tech: {
+                            50: '#f0f9ff',  // Alice Blue (Page Backgrounds)
+                            100: '#e0f2fe',
+                            500: '#0ea5e9', // Icons / Links
+                            600: '#0284c7',
+                        },
+                        // STRUCTURE: Trust (Deep Navy)
+                        structure: {
+                            800: '#1e293b',
+                            900: '#0f172a', // Footer / Heavy Text
+                        },
+                        // LEGACY BRAND: Utility (Micro-Accent Red)
+                        legacy: {
+                            DEFAULT: '#e50000', // Only for Logo/Stop/Errors
+                        },
+                        // NEUTRALS: Cleanliness (Slate)
+                        neutral: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0', // Borders
+                            400: '#94a3b8',
+                            600: '#64748b', // Body Text (Slate)
+                            900: '#111827', // Ink Black (Headings)
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 2px 4px -1px rgba(15, 23, 42, 0.03)',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Importing Inter font for that clean, tech feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-tech-50 text-neutral-600 antialiased">
+
+    <!-- Navigation: Clean & Trustworthy -->
+    <!-- White background, Structure-900 text. Green action button. Legacy Red Logo accent. -->
+    <nav class="bg-white border-b border-neutral-200 shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-18 py-4">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center gap-2">
+                        <!-- Logo Icon: The ONE place Red is prominent -->
+                        <div class="w-8 h-8 bg-legacy rounded flex items-center justify-center text-white font-bold shadow-sm">M</div>
+                        <span class="font-bold text-xl text-structure-900 tracking-tight">Massivecharging</span>
+                    </div>
+                    <div class="hidden sm:ml-10 sm:flex sm:space-x-8">
+                        <a href="#" class="text-structure-900 inline-flex items-center px-1 pt-1 border-b-2 border-primary-600 text-sm font-medium">
+                            Home
+                        </a>
+                        <a href="#" class="border-transparent text-neutral-600 hover:text-tech-500 hover:border-tech-100 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-colors">
+                            Products
+                        </a>
+                        <a href="#" class="border-transparent text-neutral-600 hover:text-tech-500 hover:border-tech-100 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-colors">
+                            Solutions
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="text-sm font-medium text-neutral-600 hover:text-structure-900">Log in</a>
+                    <button class="bg-primary-600 hover:bg-primary-700 text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all shadow-soft hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
+                        Start Charging
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <!-- Header -->
+        <div class="mb-12 pb-8 border-b border-neutral-200">
+            <h1 class="text-3xl font-bold text-structure-900 mb-3">Design System: "The Electric Flow"</h1>
+            <p class="text-neutral-600 max-w-2xl text-lg">
+                A "peaceful" strategic pivot. We utilize Blue (Infrastructure) and Green (Action) to signal sustainability and reliability. 
+                <span class="text-legacy font-bold text-sm bg-red-50 px-2 py-0.5 rounded ml-2">Legacy Red #e50000</span> is now a restricted micro-accent.
+            </p>
+        </div>
+
+        <!-- 1. Color Palette Section -->
+        <section class="mb-16">
+            <h2 class="text-xl font-bold text-structure-900 mb-6 flex items-center gap-2">
+                1. The Eco-Tech Palette
+                <span class="text-xs font-normal text-tech-600 bg-tech-100 px-2 py-1 rounded-full">New Strategy</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Primary Drivers -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-sm font-semibold text-neutral-900 mb-4 uppercase tracking-wide flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-primary-600"></span>
+                            Primary Action (Green)
+                        </h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-4">
+                                <div class="w-16 h-16 rounded-lg shadow-sm bg-primary-600"></div>
+                                <div>
+                                    <p class="text-structure-900 font-medium">Emerald-600</p>
+                                    <p class="text-xs text-neutral-500 font-mono">#059669</p>
+                                    <p class="text-xs text-primary-600 font-medium">"Go", Buy, Start</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-16 h-16 rounded-lg shadow-sm bg-primary-100"></div>
+                                <div>
+                                    <p class="text-structure-900 font-medium">Mint-100</p>
+                                    <p class="text-xs text-neutral-500 font-mono">#d1fae5</p>
+                                    <p class="text-xs text-neutral-400">Badges, Success Backgrounds</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm font-semibold text-neutral-900 mb-4 uppercase tracking-wide flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-tech-500"></span>
+                            Tech Infrastructure (Blue)
+                        </h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-4">
+                                <div class="w-16 h-16 rounded-lg shadow-sm bg-tech-500"></div>
+                                <div>
+                                    <p class="text-structure-900 font-medium">Electric-500</p>
+                                    <p class="text-xs text-neutral-500 font-mono">#0ea5e9</p>
+                                    <p class="text-xs text-tech-600 font-medium">Icons, Links, Energy</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-16 h-16 rounded-lg shadow-sm bg-structure-900"></div>
+                                <div>
+                                    <p class="text-structure-900 font-medium">Navy-900</p>
+                                    <p class="text-xs text-neutral-500 font-mono">#0f172a</p>
+                                    <p class="text-xs text-neutral-400">Structure, Footer, Deep Text</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Neutrals & Legacy -->
+                <div class="space-y-8">
+                     <div>
+                        <h3 class="text-sm font-semibold text-neutral-900 mb-4 uppercase tracking-wide">Neutrals & Canvas</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-4">
+                                <div class="w-16 h-16 rounded-lg shadow-sm border border-neutral-200 bg-tech-50"></div>
+                                <div>
+                                    <p class="text-structure-900 font-medium">Alice Blue (Tech-50)</p>
+                                    <p class="text-xs text-neutral-500 font-mono">#f0f9ff</p>
+                                    <p class="text-xs text-neutral-400">Main Page Background (Fresh Air)</p>
+                                </div>
+                            </div>
+                             <div class="flex items-center gap-4">
+                                <div class="w-16 h-16 rounded-lg shadow-sm bg-neutral-600"></div>
+                                <div>
+                                    <p class="text-structure-900 font-medium">Slate-600</p>
+                                    <p class="text-xs text-neutral-500 font-mono">#64748b</p>
+                                    <p class="text-xs text-neutral-400">Body Text (Soft)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                         <h3 class="text-sm font-semibold text-neutral-900 mb-4 uppercase tracking-wide flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-legacy"></span>
+                            Restricted Legacy
+                        </h3>
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 rounded-lg shadow-sm bg-legacy"></div>
+                            <div>
+                                <p class="text-legacy font-bold">Brand Red</p>
+                                <p class="text-xs text-neutral-500 font-mono">#e50000</p>
+                                <p class="text-xs text-legacy">Micro-accents ONLY</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. UI Components Section -->
+        <section class="mb-16">
+             <h2 class="text-xl font-bold text-structure-900 mb-6 flex items-center gap-2">
+                2. Applied Examples
+                <span class="text-xs font-normal text-tech-600 bg-tech-100 px-2 py-1 rounded-full">Eco-Tech Components</span>
+            </h2>
+
+            <!-- Product Cards Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Card 1: The "Eco-Charger" Concept -->
+                <!-- Note the micro-accent usage: border-l-2 border-legacy -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-soft hover:shadow-lg transition-shadow group border-l-2 border-legacy relative">
+                    <!-- Top subtle border for definition -->
+                    <div class="absolute top-0 left-0 right-0 h-px bg-neutral-100"></div>
+                    
+                    <div class="h-48 bg-neutral-50 relative flex items-center justify-center overflow-hidden">
+                        <!-- Icon Placeholder: Represents the Product -->
+                        <div class="text-neutral-300">
+                             <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <!-- Status Badge: Life/Flow -->
+                        <span class="absolute top-4 right-4 bg-primary-100 text-primary-700 text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
+                            <span class="w-1.5 h-1.5 rounded-full bg-primary-600 animate-pulse"></span>
+                            Available
+                        </span>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="text-tech-500">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path></svg>
+                                </span>
+                                <span class="text-xs font-semibold text-tech-600 uppercase tracking-wider">Fast Charger</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-structure-900">Downtown Station A</h3>
+                            <p class="text-sm text-neutral-600 mt-1">Level 3 DC Fast • 150kW</p>
+                        </div>
+                        
+                        <div class="flex items-center justify-between mb-6 pt-4 border-t border-neutral-100">
+                             <div class="flex flex-col">
+                                <span class="text-xs text-neutral-400">Rate</span>
+                                <span class="text-base font-bold text-structure-900">$0.35<span class="text-neutral-500 font-normal text-sm">/kWh</span></span>
+                            </div>
+                            <button class="bg-primary-600 hover:bg-primary-700 active:bg-primary-700 text-white font-medium py-2 px-6 rounded-lg transition-colors shadow-sm">
+                                Charge Here
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Tech Specs (Clean Information) -->
+                <div class="bg-white rounded-xl shadow-soft p-6 border border-neutral-100">
+                    <h3 class="text-lg font-bold text-structure-900 mb-6 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-tech-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+                        System Health
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center py-2 border-b border-neutral-100">
+                            <span class="text-neutral-600 text-sm flex items-center gap-2">
+                                Grid Connection
+                            </span>
+                            <span class="text-primary-600 font-medium text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Optimal
+                            </span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-neutral-100">
+                            <span class="text-neutral-600 text-sm">Current Load</span>
+                            <div class="w-24 bg-neutral-100 rounded-full h-2 overflow-hidden">
+                                <div class="bg-tech-500 h-2 rounded-full" style="width: 45%"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center py-2">
+                            <span class="text-neutral-600 text-sm">Firmware</span>
+                            <span class="text-structure-900 font-mono text-xs bg-neutral-100 px-2 py-1 rounded">v2.4.1</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="mt-6 block text-center w-full border border-neutral-200 hover:border-tech-300 text-neutral-600 hover:text-tech-600 font-medium text-sm py-2 rounded-lg transition-colors">
+                        View Diagnostics
+                    </a>
+                </div>
+
+                <!-- Card 3: The "Stop" State (Red Usage) -->
+                <div class="bg-white rounded-xl shadow-soft p-6 flex flex-col justify-center border border-neutral-100 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-neutral-200"></div> <!-- Inactive status bar -->
+                    
+                    <div class="pl-4">
+                        <h3 class="text-sm font-bold text-structure-900 uppercase tracking-wide mb-1">Active Session</h3>
+                        <p class="text-2xl font-bold text-structure-900 mb-1">24.5 kWh</p>
+                        <p class="text-sm text-neutral-500 mb-6">Added in 45 mins</p>
+                        
+                        <!-- The RED button (Functional utility only) -->
+                        <button class="w-full border border-legacy text-legacy hover:bg-red-50 font-medium py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2 group">
+                            <svg class="w-4 h-4 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 7a1 1 0 00-1 1v4a1 1 0 001 1h4a1 1 0 001-1V8a1 1 0 00-1-1H8z" clip-rule="evenodd"></path></svg>
+                            Stop Charging
+                        </button>
+                        <p class="text-xs text-neutral-400 text-center mt-3">Emergency stop available</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 3. Peaceful Forms -->
+        <section>
+            <h2 class="text-xl font-bold text-structure-900 mb-6 flex items-center gap-2">
+                3. Interactive Inputs
+                <span class="text-xs font-normal text-tech-600 bg-tech-100 px-2 py-1 rounded-full">Soft Focus</span>
+            </h2>
+            <div class="bg-white p-8 rounded-xl border border-neutral-200 shadow-sm max-w-2xl">
+                <div class="grid grid-cols-1 gap-6">
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-structure-900">Email Address</label>
+                        <div class="mt-1">
+                            <!-- Focus ring is now Tech Blue, not Red -->
+                            <input type="email" name="email" id="email" class="shadow-sm focus:ring-tech-500 focus:border-tech-500 block w-full sm:text-sm border-neutral-200 rounded-md p-2.5 border outline-none transition-shadow" placeholder="you@example.com">
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="flex items-center h-5">
+                            <!-- Checkbox uses Primary Green -->
+                            <input id="offers" name="offers" type="checkbox" checked class="focus:ring-primary-500 h-4 w-4 text-primary-600 border-neutral-300 rounded accent-primary-600">
+                        </div>
+                        <div class="ml-3 text-sm">
+                            <label for="offers" class="font-medium text-structure-900">Opt-in to Eco-Charging</label>
+                            <p class="text-neutral-500">Automatically charge when grid energy is cleanest.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer: Deep Navy Structure -->
+    <footer class="bg-structure-900 mt-20 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-sm font-bold text-tech-500 uppercase tracking-wider mb-4">Network</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-neutral-400 hover:text-white text-sm transition-colors">Locations</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white text-sm transition-colors">Pricing</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white text-sm transition-colors">App Download</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold text-tech-500 uppercase tracking-wider mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-neutral-400 hover:text-white text-sm transition-colors">Help Center</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white text-sm transition-colors">Status</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white text-sm transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-2 md:col-span-2">
+                    <h4 class="text-sm font-bold text-tech-500 uppercase tracking-wider mb-4">Join the Flow</h4>
+                    <p class="text-sm text-neutral-400 mb-4">Get updates on new sustainable charging locations.</p>
+                    <div class="flex gap-2">
+                        <input type="email" placeholder="Enter your email" class="flex-1 bg-structure-800 border border-structure-800 rounded px-3 py-2 text-sm focus:outline-none focus:border-tech-500 focus:ring-1 focus:ring-tech-500 text-white placeholder-neutral-500">
+                        <button class="bg-primary-600 hover:bg-primary-500 text-white px-4 py-2 rounded text-sm font-medium transition-colors">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-structure-800 flex justify-between items-center">
+                <p class="text-sm text-neutral-500">&copy; 2024 Massivecharging. Powered by Nature.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-neutral-500 hover:text-white transition-colors">
+                        <span class="sr-only">Social</span>
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massivecharging Design System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Brand Red Scale
+                        brand: {
+                            50: '#fef2f2',  // Tint/Surface
+                            100: '#fee2e2', // Wash
+                            500: '#e50000', // BASE: Primary Action
+                            600: '#b90000', // Hover
+                            700: '#8f0000', // Active/Pressed
+                        },
+                        // Neutral Scale (Cool Grey/Slate)
+                        neutral: {
+                            50: '#f9fafb',  // Surface/Page BG alt
+                            100: '#f5f5f5',
+                            200: '#e5e5e5', // Borders
+                            300: '#d4d4d4',
+                            400: '#a3a3a3',
+                            500: '#737373',
+                            600: '#525252', // Body Text
+                            700: '#404040',
+                            800: '#262626',
+                            900: '#171717', // Ink/Headings
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Importing Inter font for that clean, tech feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-neutral-50 text-neutral-600 antialiased">
+
+    <!-- Navigation Example: Option 1 (Clean) -->
+    <!-- White background, Neutral-900 text. A thin Red-500 strip at the top. -->
+    <nav class="bg-white border-t-4 border-brand-500 shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center gap-2">
+                        <!-- Logo Icon -->
+                        <div class="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center text-white font-bold">M</div>
+                        <span class="font-bold text-xl text-neutral-900 tracking-tight">Massivecharging</span>
+                    </div>
+                    <div class="hidden sm:ml-8 sm:flex sm:space-x-8">
+                        <a href="#" class="border-brand-500 text-neutral-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                            Home
+                        </a>
+                        <a href="#" class="border-transparent text-neutral-600 hover:text-brand-500 hover:border-brand-100 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-colors">
+                            Products
+                        </a>
+                        <a href="#" class="border-transparent text-neutral-600 hover:text-brand-500 hover:border-brand-100 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-colors">
+                            Solutions
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <button class="bg-brand-500 hover:bg-brand-600 active:bg-brand-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500">
+                        Get a Quote
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <!-- Header -->
+        <div class="mb-12 border-b border-neutral-200 pb-8">
+            <h1 class="text-3xl font-bold text-neutral-900 mb-2">Design System: The "Neat & Clean" Spec</h1>
+            <p class="text-neutral-600 max-w-2xl">
+                A high-contrast system designed to minimize visual fatigue while maximizing conversion.
+                Primary Action: <span class="text-brand-500 font-mono font-bold">#e50000</span>.
+            </p>
+        </div>
+
+        <!-- 1. Color Palette Section -->
+        <section class="mb-16">
+            <h2 class="text-xl font-bold text-neutral-900 mb-6 flex items-center gap-2">
+                1. Color Primitives
+                <span class="text-xs font-normal text-neutral-500 bg-neutral-200 px-2 py-1 rounded-full">Tailwind Config</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Brand Scale -->
+                <div>
+                    <h3 class="text-sm font-semibold text-neutral-900 mb-4 uppercase tracking-wide">Brand Red (Action)</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 rounded-lg shadow-sm bg-brand-50"></div>
+                            <div>
+                                <p class="text-neutral-900 font-medium">Brand-50</p>
+                                <p class="text-xs text-neutral-500 font-mono">#fef2f2</p>
+                                <p class="text-xs text-neutral-400">Tint: Backgrounds, Alerts</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 rounded-lg shadow-sm bg-brand-100"></div>
+                            <div>
+                                <p class="text-neutral-900 font-medium">Brand-100</p>
+                                <p class="text-xs text-neutral-500 font-mono">#fee2e2</p>
+                                <p class="text-xs text-neutral-400">Wash: Hover on Ghost buttons</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 rounded-lg shadow-sm bg-brand-500 ring-2 ring-offset-2 ring-brand-500"></div>
+                            <div>
+                                <p class="text-brand-500 font-bold">Brand-500 (Base)</p>
+                                <p class="text-xs text-neutral-500 font-mono">#e50000</p>
+                                <p class="text-xs text-neutral-400">Primary Actions, Links</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 rounded-lg shadow-sm bg-brand-600"></div>
+                            <div>
+                                <p class="text-neutral-900 font-medium">Brand-600</p>
+                                <p class="text-xs text-neutral-500 font-mono">#b90000</p>
+                                <p class="text-xs text-neutral-400">Hover State</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 rounded-lg shadow-sm bg-brand-700"></div>
+                            <div>
+                                <p class="text-neutral-900 font-medium">Brand-700</p>
+                                <p class="text-xs text-neutral-500 font-mono">#8f0000</p>
+                                <p class="text-xs text-neutral-400">Active/Pressed State</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Neutral Scale -->
+                <div>
+                    <h3 class="text-sm font-semibold text-neutral-900 mb-4 uppercase tracking-wide">Neutral Scale (Structure)</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 rounded-lg shadow-sm border border-neutral-200 bg-white"></div>
+                            <div>
+                                <p class="text-neutral-900 font-medium">White</p>
+                                <p class="text-xs text-neutral-500 font-mono">#ffffff</p>
+                                <p class="text-xs text-neutral-400">Main Canvas</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 rounded-lg shadow-sm bg-neutral-50"></div>
+                            <div>
+                                <p class="text-neutral-900 font-medium">Neutral-50</p>
+                                <p class="text-xs text-neutral-500 font-mono">#f9fafb</p>
+                                <p class="text-xs text-neutral-400">Secondary Backgrounds</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 rounded-lg shadow-sm bg-neutral-200"></div>
+                            <div>
+                                <p class="text-neutral-900 font-medium">Neutral-200</p>
+                                <p class="text-xs text-neutral-500 font-mono">#e5e5e5</p>
+                                <p class="text-xs text-neutral-400">Borders, Dividers</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 rounded-lg shadow-sm bg-neutral-600"></div>
+                            <div>
+                                <p class="text-neutral-900 font-medium">Neutral-600</p>
+                                <p class="text-xs text-neutral-500 font-mono">#525252</p>
+                                <p class="text-xs text-neutral-400">Body Text</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 rounded-lg shadow-sm bg-neutral-900"></div>
+                            <div>
+                                <p class="text-neutral-900 font-medium">Neutral-900</p>
+                                <p class="text-xs text-neutral-500 font-mono">#171717</p>
+                                <p class="text-xs text-neutral-400">Headings, Ink</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. UI Components Section -->
+        <section class="mb-16">
+             <h2 class="text-xl font-bold text-neutral-900 mb-6 flex items-center gap-2">
+                2. Applied Examples
+                <span class="text-xs font-normal text-neutral-500 bg-neutral-200 px-2 py-1 rounded-full">UI Elements</span>
+            </h2>
+
+            <!-- Product Cards Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Card 1: Standard Product -->
+                <div class="bg-white rounded-xl border border-neutral-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+                    <div class="h-48 bg-neutral-100 relative flex items-center justify-center">
+                        <span class="text-neutral-400 text-sm">Product Image Placeholder</span>
+                        <!-- Sale Tag Example -->
+                         <span class="absolute top-3 left-3 bg-brand-50 text-brand-600 text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">
+                            Best Seller
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <h3 class="text-lg font-bold text-neutral-900 group-hover:text-brand-500 transition-colors">Massive Fast Charger Home</h3>
+                            <p class="text-sm text-neutral-600 mt-1">Level 2, 48A, Hardwired</p>
+                        </div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex flex-col">
+                                <span class="text-xs text-neutral-500 line-through">$699.00</span>
+                                <span class="text-xl font-bold text-neutral-900">$599.00</span>
+                            </div>
+                            <!-- Rating -->
+                            <div class="flex text-yellow-400 text-sm">
+                                ★★★★★ <span class="text-neutral-400 ml-1">(42)</span>
+                            </div>
+                        </div>
+                        <!-- Primary Button Token Usage -->
+                        <button class="w-full bg-brand-500 hover:bg-brand-600 active:bg-brand-700 text-white font-medium py-3 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2: Technical/Specs Context -->
+                <div class="bg-white rounded-xl border border-neutral-200 overflow-hidden shadow-sm p-6">
+                    <h3 class="text-lg font-bold text-neutral-900 mb-4">Technical Specifications</h3>
+                    
+                    <div class="space-y-3">
+                        <div class="flex justify-between py-2 border-b border-neutral-200">
+                            <span class="text-neutral-600 text-sm">Output Power</span>
+                            <span class="text-neutral-900 font-medium text-sm">11.5 kW</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-neutral-200">
+                            <span class="text-neutral-600 text-sm">Amperage</span>
+                            <span class="text-neutral-900 font-medium text-sm">48A Adjustable</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-neutral-200">
+                            <span class="text-neutral-600 text-sm">Connectivity</span>
+                            <span class="text-neutral-900 font-medium text-sm">Wi-Fi / Bluetooth</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-neutral-200">
+                            <span class="text-neutral-600 text-sm">Cable Length</span>
+                            <span class="text-neutral-900 font-medium text-sm">25 ft</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="mt-6 inline-flex items-center text-brand-500 hover:text-brand-600 font-medium text-sm">
+                        Download full spec sheet
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+
+                <!-- Card 3: Alert/Feedback State -->
+                <div class="bg-white rounded-xl border border-neutral-200 overflow-hidden shadow-sm p-6 flex flex-col justify-center">
+                    <div class="bg-brand-50 border border-brand-100 rounded-lg p-4 mb-4">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <svg class="h-5 w-5 text-brand-500" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div class="ml-3">
+                                <h3 class="text-sm font-medium text-brand-700">Installation Required</h3>
+                                <div class="mt-2 text-sm text-brand-700">
+                                    <p>Professional installation is recommended for 48A hardwired connections.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-neutral-600 text-sm mb-4">
+                        Need an electrician? We can connect you with certified installers in your area.
+                    </p>
+                    <button class="w-full bg-white border border-neutral-200 text-neutral-900 hover:bg-neutral-50 hover:border-neutral-300 font-medium py-2 px-4 rounded-lg transition-colors">
+                        Find Installer
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 3. Form Elements -->
+        <section>
+            <h2 class="text-xl font-bold text-neutral-900 mb-6 flex items-center gap-2">
+                3. Interactive Inputs
+                <span class="text-xs font-normal text-neutral-500 bg-neutral-200 px-2 py-1 rounded-full">Forms</span>
+            </h2>
+            <div class="bg-white p-8 rounded-xl border border-neutral-200 shadow-sm max-w-2xl">
+                <div class="grid grid-cols-1 gap-6">
+                    <!-- Input Default -->
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-neutral-900">Email Address</label>
+                        <div class="mt-1">
+                            <input type="email" name="email" id="email" class="shadow-sm focus:ring-brand-500 focus:border-brand-500 block w-full sm:text-sm border-neutral-200 rounded-md p-2 border outline-none" placeholder="you@example.com">
+                        </div>
+                        <p class="mt-1 text-xs text-neutral-500">We'll send your receipt here.</p>
+                    </div>
+
+                    <!-- Input Focused (Simulated with classes for demo) -->
+                    <div>
+                        <label for="zip" class="block text-sm font-medium text-neutral-900">Zip Code (Active State Demo)</label>
+                        <div class="mt-1 relative rounded-md shadow-sm">
+                            <input type="text" name="zip" id="zip" class="block w-full sm:text-sm border-brand-500 ring-1 ring-brand-500 rounded-md p-2 border outline-none" value="90210">
+                        </div>
+                    </div>
+                    
+                    <!-- Checkbox -->
+                    <div class="flex items-start">
+                        <div class="flex items-center h-5">
+                            <input id="offers" name="offers" type="checkbox" class="focus:ring-brand-500 h-4 w-4 text-brand-600 border-neutral-300 rounded accent-brand-500">
+                        </div>
+                        <div class="ml-3 text-sm">
+                            <label for="offers" class="font-medium text-neutral-900">Subscribe to newsletter</label>
+                            <p class="text-neutral-500">Get notified about new chargers and software updates.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Example -->
+    <footer class="bg-neutral-50 border-t border-neutral-200 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-sm font-bold text-neutral-900 uppercase tracking-wider mb-4">Products</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-neutral-600 hover:text-brand-500 text-sm">Home Charging</a></li>
+                        <li><a href="#" class="text-neutral-600 hover:text-brand-500 text-sm">Commercial</a></li>
+                        <li><a href="#" class="text-neutral-600 hover:text-brand-500 text-sm">Accessories</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold text-neutral-900 uppercase tracking-wider mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-neutral-600 hover:text-brand-500 text-sm">Installation</a></li>
+                        <li><a href="#" class="text-neutral-600 hover:text-brand-500 text-sm">Documentation</a></li>
+                        <li><a href="#" class="text-neutral-600 hover:text-brand-500 text-sm">Warranty</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-2 md:col-span-2">
+                    <h4 class="text-sm font-bold text-neutral-900 uppercase tracking-wider mb-4">Stay Charged</h4>
+                    <p class="text-sm text-neutral-600 mb-4">Join our network for the latest EV news and exclusive offers.</p>
+                    <div class="flex gap-2">
+                        <input type="email" placeholder="Enter your email" class="flex-1 bg-white border border-neutral-200 rounded px-3 py-2 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500">
+                        <button class="bg-brand-500 hover:bg-brand-600 text-white px-4 py-2 rounded text-sm font-medium">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-neutral-200 flex justify-between items-center">
+                <p class="text-sm text-neutral-500">&copy; 2024 Massivecharging. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-neutral-400 hover:text-brand-500">
+                        <span class="sr-only">Facebook</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                    </a>
+                    <a href="#" class="text-neutral-400 hover:text-brand-500">
+                        <span class="sr-only">Twitter</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
