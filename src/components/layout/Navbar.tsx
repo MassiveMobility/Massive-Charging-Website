@@ -115,7 +115,8 @@ const Navbar = () => {
               <Text style={{ color: '#FFFFFF', fontFamily: 'inherit', fontSize: '16px', fontWeight: 400 }}>Shop</Text>
             </Link>
 
-            <Link to="/business" style={{ textDecoration: 'none' }}>
+            {/* UPDATED LINK: Points to the new business route */}
+            <Link to="/ev-charging-business" style={{ textDecoration: 'none' }}>
               <Text style={{ color: '#FFFFFF', fontFamily: 'inherit', fontSize: '16px', fontWeight: 400 }}>For Business</Text>
             </Link>
 

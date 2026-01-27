@@ -1,0 +1,331 @@
+Home Page Content Schema 
+//A
+
+Segment_Name: Hero
+Segment_Role: Hero
+
+Kicker:
+- Text: Charging Network Is Live
+- Icon: Pulse 
+
+Core_Message:
+- Heading: Find Chargers Anytime. Anywhere 
+- Subheading: Live life at 100% 
+- Body: Null
+
+Button:
+- Label: Find Chargers
+- Icon:
+- Intent:
+- Target:
+
+Button:
+- Label: Get App
+- Icon:
+- Intent:
+- Target:
+
+Pill:
+- Text: Sponsored by PayTm
+- Icon:
+
+Badge:
+- Text: Get it from Playstore
+- Icon: Playstore
+- Target
+
+Badge:
+- Text: Get it from Appstore 
+- Icon: Appstore 
+- Target:
+
+List:
+- Item_01:
+  - Icon:
+  - Text:
+- Item_02:
+  - Icon:
+  - Text:
+- Item_03:
+  - Icon:
+  - Text:
+
+Media: 
+- Source: 
+- Type: Icon, Illustration, or Image [Charger for EV]
+- Alt:
+
+Meta_Info:
+- Notes:
+
+Icon:
+- Name:
+
+//B
+
+Segment_Name: Home Owner Hardware Product Banner 
+Segment_Role: Product Banner Ad 
+
+Kicker:
+- Text: Private Home Charging
+- Icon: Home
+
+Core_Message:
+- Heading: Set-Up your Personal Charging Infrastructure  
+- Subheading:  Safe & Cost Effective
+- Body: Null
+
+Button:
+- Label: Get EV Charger 
+- Icon:
+- Intent:
+- Target:
+
+Button:
+- Label: Read Charging Guide 
+- Icon:
+- Intent:
+- Target:
+
+Pill:
+- Text: Private EV Charging 
+- Icon:
+
+Badge:
+- Text: 100% Charge in 10h 
+- Icon:
+- Target:
+
+List:
+- Item_01: 
+  - Icon:  Tickmark
+  - Text: Charge Safely At Home
+- Item_02:
+  - Icon: Tickmark 
+  - Text: Save Money & Time 
+- Item_03:
+  - Icon: Tickmark 
+  - Text: Control Charger Remotely 
+- Item_04:
+  - Icon: Tickmark 
+  - Text: Monitor Electricity Consumption & Optimize 
+  
+Media: 
+- Source: 
+- Type: Icon, Illustration, or Image [Home Charger and Mobile App with Charging Metrics]
+- Alt:
+
+Meta_Info:
+- Notes:
+
+Icon:
+- Name:
+
+
+//C
+
+Segment_Name: Charging App Banner  
+Segment_Role: App Banner Ad
+
+Kicker:
+- Text: EV Charging App
+- Icon: Phone App
+
+Core_Message:
+- Heading: Get 1C Charging App   
+- Subheading:  One App For All Activities
+- Body: Control all charging activities from single app in your phone.
+
+Button:
+- Label: Get EV Charging App  
+- Icon:
+- Intent:
+- Target:
+
+Button:
+- Label: Read Charging Guide 
+- Icon:
+- Intent:
+- Target:
+
+Pill:
+- Text: Private EV Charging 
+- Icon:
+
+Badge:
+- Text: 
+- Icon:
+- Target:
+
+List:
+- Item_01: 
+  - Icon:  
+  - Text: Locate Chargers & Charging Station
+- Item_02:
+  - Icon: 
+  - Text: Start & Stop Charging 
+- Item_03:
+  - Icon: 
+  - Text: Pay for Charging 
+- Item_04:
+  - Icon: 
+  - Text: Join EV Charging Community 
+
+- Item_05:
+  - Icon: 
+  - Text: Maintain Battery Health with Live Charging Monitoring  
+ 
+Media: 
+- Source: 
+- Type: Icon, Illustration, or Image [Mobile Phone App with Map & Charging Stations]
+- Alt:
+
+Meta_Info:
+- Notes:
+
+Icon:
+- Name:
+
+//D
+
+Segment_Name: For Business - Set up Charging Station Banner 
+Segment_Role: Set Up Station Banner Ad
+
+Kicker:
+- Text: Set Up Charger and Earn
+- Icon: ₹
+
+Core_Message:
+- Heading: Set-up your EV Charging Station  
+- Subheading:  Convert empty land into EV Charging Station and earn monthly income 
+- Body: Get Hardware and Software to run Charging Station. 
+
+Button:
+- Label: How To Setup Charging Station  
+- Icon:
+- Intent:
+- Target:
+
+Pill:
+- Text: Install EV Chargers and Earn
+- Icon:
+
+Badge:
+- Text: ₹ 80,000+ monthly income
+- Icon:
+- Target:
+ 
+Media: 
+- Source: 
+- Type: Icon, Illustration, or Image [Charging Station]
+- Alt:
+
+Meta_Info:
+- Notes:
+
+Icon:
+- Name:
+
+----
+Own an EV or Planning to Buy One 
+Confused about Charging Cost & Required Infrastructure ?
+Get Detailed Charging Guide for your Vehicles 
+Explore Charging Guide 
+----
+
+//E
+
+Segment_Name: EV Charging Guide Banner
+Segment_Role: Charging_Guide_Banner
+
+Core_Message:
+- Heading: Own an EV or Planning to Buy One ?   
+- Subheading: Confused about Charging Cost & Required Infrastructure ?
+- Body: Get Detailed Charging Guide for your Vehicles 
+
+Button:
+- Label: Explore Charging Guide  
+- Icon:
+- Intent:
+- Target:
+
+Pill:
+- Text: 2W, 3W, 4W
+- Icon:
+
+Media: 
+- Source: 
+- Type: Icon, Illustration, or Image [Booklet]
+- Alt:
+
+Meta_Info:
+- Notes:
+
+Icon:
+- Name:
+
+----
+
+Become a Pro Member and get
+Charging Discounts 
+Charging Pass 
+Access to Premium Charging Stations 
+Charging Points on Each Charge 
+Discount on Charging Hardware 
+----
+
+//F
+
+Segment_Name: Pro_Member_Banner
+Segment_Role: Banner_Ad
+
+Kicker:
+- Text: Exclusive Membership
+- Icon: Relevant 
+
+Core_Message:
+- Heading: Become a Pro Member  
+- Subheading:
+- Body: Null
+
+Button:
+- Label: Get Massive Membership
+- Icon:
+- Intent:
+- Target:
+
+
+
+List:
+- Item_01:
+  - Icon:
+  - Text: Charging Discounts 
+- Item_02:
+  - Icon:
+  - Text: Charging Pass 
+
+- Item_03:
+  - Icon:
+  - Text: Access to Premium Charging Stations 
+  
+  - Item_04:
+  - Icon:
+  - Text: Charging Points on Each Charge 
+ 
+
+- Item_05:
+  - Icon:
+  - Text: Discount on Charging Hardware 
+ 
+
+
+Media: 
+- Source: 
+- Type: Icon, Illustration, or Image Relevant
+- Alt:
+
+Meta_Info:
+- Notes:
+
+Icon:
+- Name:

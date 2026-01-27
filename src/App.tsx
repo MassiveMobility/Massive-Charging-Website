@@ -8,10 +8,10 @@ import { Footer } from './components/layout/Footer';
 /* Atoms */
 import Surface from './components/atoms/Surface';
 
-/* Modules */
-import Hero from './components/modules/Hero'; 
+/* Pages & Components */
+/* Note: We are now using EVHomePage as the main Hero/Landing */
+import EVHomePage from './chapters/urltest/EVHomePage';
 
-/* Pages */
 import { EVChargingGuidePage } from './components/pages/EVChargingGuidePage';
 import { EVIndividualGuide } from './components/pages/EVIndividualGuide'; 
 import EV_Charging_Guide_Home from './components/pages/EV_Charging_Guide_Home'; 
@@ -21,7 +21,6 @@ import MenuPage from './features/HomeCharging/MenuPage';
 import UniversalLandingPage from './features/HomeCharging'; 
 
 /* --- 2. THE DATASETS (Fuel) --- */
-/* Note: Ensure all your const exports are in this one file: features/HomeCharging/all-scenarios-data.js */
 import { 
   landingContent,             // 1. Home Owner
   apartmentResidentContent,   // 2. Apartment Resident
@@ -46,16 +45,20 @@ function App() {
 
         <main style={{ flex: 1 }}>
           <Routes>
-            <Route path="/" element={<Hero />} />
+            
+            {/* --- MAIN HOME PAGE --- */}
+            {/* Replaced <Hero /> with your new Design System Page */}
+            <Route path="/" element={<EVHomePage />} />
+            
             
             {/* --- EXISTING ROUTES --- */}
             <Route path="/charging-guide" element={<EV_Charging_Guide_Home />} />
             <Route path="/ev-charging-guide" element={<EVChargingGuidePage />} />
             <Route path="/charging-guide/:documentId" element={<EVIndividualGuide />} />
-            <Route path="/charging-directory" element={<MenuPage />} />
+            <Route path="/ev-charging-business" element={<MenuPage />} />
 
 
-            {/* --- NEW DYNAMIC LANDING PAGES (11 SCENARIOS) --- */}
+            {/* --- DYNAMIC LANDING PAGES (11 SCENARIOS) --- */}
             
             {/* 1. Independent Home Owner */}
             <Route 
