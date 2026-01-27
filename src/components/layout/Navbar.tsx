@@ -61,13 +61,13 @@ const Navbar = () => {
         <div style={{ 
           display: 'flex', 
           alignItems: 'center', 
-          gap: '48px' 
+          gap: '32px' /* Reduced gap slightly to fit more items */
         }}>
           
           {/* Menu Items */}
           <nav style={{ 
             display: 'flex', 
-            gap: '24px', 
+            gap: '20px', /* Tighter gap for the longer list */
             alignItems: 'center',
             fontFamily: '"Inter", sans-serif'
           }}>
@@ -75,28 +75,32 @@ const Navbar = () => {
               <Text style={{ color: '#FFFFFF', fontFamily: 'inherit', fontSize: '16px', fontWeight: 400 }}>Home</Text>
             </Link>
             
-            <Link to="/chargers" style={{ textDecoration: 'none' }}>
-              <Text style={{ color: '#FFFFFF', fontFamily: 'inherit', fontSize: '16px', fontWeight: 400 }}>EV Chargers</Text>
+            <Link to="/upi-charging" style={{ textDecoration: 'none' }}>
+              <Text style={{ color: '#FFFFFF', fontFamily: 'inherit', fontSize: '16px', fontWeight: 400 }}>UPI Charging</Text>
+            </Link>
+
+            <Link to="/plans-offers" style={{ textDecoration: 'none' }}>
+              <Text style={{ color: '#FFFFFF', fontFamily: 'inherit', fontSize: '16px', fontWeight: 400 }}>Plans & Offers</Text>
             </Link>
 
             {/* Guide Section with Popout */}
             <div ref={menuRef} style={{ position: 'relative' }}>
               <div 
-                style={{ cursor: 'pointer' }} 
+                style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px' }} 
                 onClick={() => setShowPopout(!showPopout)}
               >
-                <Text style={{ color: '#FFFFFF', fontFamily: 'inherit', fontSize: '16px', fontWeight: 400 }}>Guide</Text>
+                <Text style={{ color: '#FFFFFF', fontFamily: 'inherit', fontSize: '16px', fontWeight: 400 }}>EV Charging Guide</Text>
+                {/* Optional: Add a small chevron icon here if desired */}
               </div>
               
               {showPopout && (
                 <Surface style={{
-                  position: 'absolute', top: '100%', right: 0, width: '240px',
+                  position: 'absolute', top: '100%', right: 0, width: '260px',
                   display: 'flex', flexDirection: 'column', paddingBlock: '12px', paddingInline: '16px',
                   marginTop: '12px', borderRadius: '8px', backgroundColor: '#FFFFFF',
-                  boxShadow: '0px 10px 15px -3px rgba(0,0,0,0.1)', zIndex: 110, gap: '8px'
+                  boxShadow: '0px 10px 15px -3px rgba(0,0,0,0.1)', zIndex: 110, gap: '12px'
                 }}>
-                  {/* UPDATED: Points to the new /charging-guide portal */}
-                  <Link to="/charging-guide" style={{ textDecoration: 'none' }} onClick={() => setShowPopout(false)}>
+                   <Link to="/charging-guide" style={{ textDecoration: 'none' }} onClick={() => setShowPopout(false)}>
                     <Text size="3" weight="600" style={{color: '#000'}}>Guiding Tool</Text>
                   </Link>
 
@@ -107,13 +111,21 @@ const Navbar = () => {
               )}
             </div>
 
-            <Link to="/about" style={{ textDecoration: 'none' }}>
-              <Text style={{ color: '#FFFFFF', fontFamily: 'inherit', fontSize: '16px', fontWeight: 400 }}>About</Text>
+            <Link to="/shop" style={{ textDecoration: 'none' }}>
+              <Text style={{ color: '#FFFFFF', fontFamily: 'inherit', fontSize: '16px', fontWeight: 400 }}>Shop</Text>
+            </Link>
+
+            <Link to="/business" style={{ textDecoration: 'none' }}>
+              <Text style={{ color: '#FFFFFF', fontFamily: 'inherit', fontSize: '16px', fontWeight: 400 }}>For Business</Text>
+            </Link>
+
+            <Link to="/buy-chargers" style={{ textDecoration: 'none' }}>
+              <Text style={{ color: '#FFFFFF', fontFamily: 'inherit', fontSize: '16px', fontWeight: 400 }}>Buy EV Chargers</Text>
             </Link>
           </nav>
 
-          {/* Explore Button */}
-          <Link to="/charging-guide" style={{ textDecoration: 'none' }}>
+          {/* Primary CTA Button */}
+          <Link to="/find-chargers" style={{ textDecoration: 'none' }}>
             <Button style={{ 
               backgroundColor: '#39BD8A', 
               color: '#FFFFFF',
@@ -123,9 +135,10 @@ const Navbar = () => {
               fontWeight: 400, 
               border: 'none',
               fontFamily: '"Inter", sans-serif',
-              cursor: 'pointer'
+              cursor: 'pointer',
+              whiteSpace: 'nowrap'
             }}>
-              Explore
+              Find EV Chargers
             </Button>
           </Link>
         </div>
