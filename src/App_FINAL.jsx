@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 /* Layout Molecules */
 import Navbar from './components/layout/Navbar'; 
 import { Footer } from './components/layout/Footer';
-import ScrollToTop from './components/layout/ScrollToTop'; // ← NEW: Import ScrollToTop
 
 /* Atoms */
 import Surface from './components/atoms/Surface';
@@ -78,7 +77,6 @@ function App() {
 
   return (
     <Router>
-      <ScrollToTop /> {/* ← NEW: Add ScrollToTop component */}
       <Surface variant="base" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
         
         <Navbar />

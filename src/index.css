@@ -1,5 +1,8 @@
 /* eviz Project: Massivecharging.com */
 /* Design System: Basic Theme */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root[data-theme="basic"] {
   /* ---------------------------------------------------------

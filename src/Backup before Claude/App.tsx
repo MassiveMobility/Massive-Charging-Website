@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './index.css'  // ← This line is CRITICAL
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 /* Layout Molecules */
 import Navbar from './components/layout/Navbar'; 
 import { Footer } from './components/layout/Footer';
-import ScrollToTop from './components/layout/ScrollToTop'; // ← NEW: Import ScrollToTop
 
 /* Atoms */
 import Surface from './components/atoms/Surface';
@@ -19,12 +18,6 @@ import { EVIndividualGuide } from './components/pages/EVIndividualGuide';
 import EV_Charging_Guide_Home from './components/pages/EV_Charging_Guide_Home'; 
 import MenuPage from './features/HomeCharging/MenuPage';
 import EVJourneyReport from './chapters/urltest/EVJourneyReport';
-
-/* --- 🔄 NEW: QUERY PAGES (INTEGRATED) --- */
-import ChargingGuidePage from './Querycode/ChargingGuidePage';
-import EVChargingGuide_Dashboard from './Querycode/EVChargingGuide_Dashboard';
-import EVCarsCatalogue from './Querycode/EVCarsCatalogue';
-/* --- END NEW IMPORTS --- */
 
 /* --- 1. THE UNIVERSAL COMPONENT (Factory) --- */
 import UniversalLandingPage from './features/HomeCharging'; 
@@ -49,36 +42,8 @@ import {
 
 
 function App() {
-  // 🔄 NEW: State for JSON data (for Query pages)
-  const [database, setDatabase] = useState(null);
-  const [coreMessageData, setCoreMessageData] = useState(null);
-
-  // 🔄 NEW: Fetch JSON files on mount
-  useEffect(() => {
-    const loadData = async () => {
-      try {
-        const [vehicleResponse, messageResponse] = await Promise.all([
-          fetch('/vehicle_guide.json'),
-          fetch('/Core_message_block.json')
-        ]);
-
-        const vehicleData = await vehicleResponse.json();
-        const messageData = await messageResponse.json();
-
-        setDatabase(vehicleData);
-        setCoreMessageData(messageData);
-        console.log('✅ Vehicle & Message Data Loaded');
-      } catch (err) {
-        console.error("❌ Database fetch error:", err);
-      }
-    };
-    loadData();
-  }, []);
-  // --- END NEW CODE ---
-
   return (
     <Router>
-      <ScrollToTop /> {/* ← NEW: Add ScrollToTop component */}
       <Surface variant="base" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
         
         <Navbar />
@@ -92,39 +57,15 @@ function App() {
             
             
             {/* --- EXISTING ROUTES --- */}
+            <Route path="/charging-guide" element={<EV_Charging_Guide_Home />} />
             <Route path="/ev-charging-guide" element={<EVChargingGuidePage />} />
+            <Route path="/charging-guide/:documentId" element={<EVIndividualGuide />} />
             <Route path="/ev-charging-business" element={<MenuPage />} />
             <Route path="/pinktest" element={<PinkTestPage />} />
             <Route path="/upi-charging" element={<UPIChargingPage />} />
             <Route path="/plans-offers" element={<PricingPage />} />
             {/* --- NEW TRIP REPORT ROUTE --- */}
             <Route path="/EV-Trip-Report" element={<EVJourneyReport />} />
-
-
-            {/* 🔄 NEW: QUERY PAGES ROUTES */}
-            {/* Query Guide Dashboard - Main charging guide page */}
-            <Route 
-              path="/charging-guide" 
-              element={<EVChargingGuide_Dashboard database={database} />} 
-            />
-            
-            {/* Cars Catalogue - Browse all EV cars */}
-            <Route 
-              path="/charging-guide/ev-cars" 
-              element={<EVCarsCatalogue database={database} />} 
-            />
-            
-            {/* Dynamic Charging Guide Article Page (with slug) */}
-            <Route 
-              path="/charging-guide/:slug" 
-              element={
-                <ChargingGuidePage 
-                  vehicleGuideData={database} 
-                  coreMessageBlockData={coreMessageData} 
-                />
-              } 
-            />
-            {/* --- END NEW ROUTES --- */}
 
 
             {/* --- DYNAMIC LANDING PAGES (11 SCENARIOS) --- */}

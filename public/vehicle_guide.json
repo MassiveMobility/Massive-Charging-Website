@@ -1,0 +1,2097 @@
+{
+ "Categories_taxonomy": [
+  {
+    "Category_ID": "CAT_001",
+    "Parent_ID": "root",
+    "Category_Name": "charging_guide_categories",
+    "Category_Type": "organization",
+    "Level": "0"
+  },
+  {
+    "Category_ID": "CAT_002",
+    "Parent_ID": "CAT_001",
+    "Category_Name": "EV_vehicle_categories",
+    "Category_Type": "charging_guide",
+    "Level": "1"
+  },
+  {
+    "Category_ID": "CAT_003",
+    "Parent_ID": "CAT_001",
+    "Category_Name": "EV_charging_101",
+    "Category_Type": "charging_guide",
+    "Level": "1"
+  },
+  {
+    "Category_ID": "CAT_004",
+    "Parent_ID": "CAT_001",
+    "Category_Name": "EV_charging_trip_reports",
+    "Category_Type": "charging_guide",
+    "Level": "1"
+  },
+  {
+    "Category_ID": "CAT_005",
+    "Parent_ID": "CAT_001",
+    "Category_Name": "EV_charging_station_guide",
+    "Category_Type": "charging_guide",
+    "Level": "1"
+  },
+  {
+    "Category_ID": "CAT_006",
+    "Parent_ID": "CAT_002",
+    "Category_Name": "4w_vehicle_details",
+    "Category_Type": "vehicle",
+    "Level": "2"
+  },
+  {
+    "Category_ID": "CAT_007",
+    "Parent_ID": "CAT_002",
+    "Category_Name": "2w_vehicle_details",
+    "Category_Type": "vehicle",
+    "Level": "2"
+  }
+],
+
+"Vehicle_master": [
+  {
+    "Vehicle_ID": "INEV_A01",
+    "Manufacturer": "Audi",
+    "Vehicle_Name": "Audi e-tron",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_A02",
+    "Manufacturer": "Audi",
+    "Vehicle_Name": "Audi e-tron",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_A03",
+    "Manufacturer": "Audi",
+    "Vehicle_Name": "Audi e-tron GT",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_A04",
+    "Manufacturer": "Audi",
+    "Vehicle_Name": "Audi Q8 e-tron",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_A05",
+    "Manufacturer": "Audi",
+    "Vehicle_Name": "Audi Q8 e-tron",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_A06",
+    "Manufacturer": "Audi",
+    "Vehicle_Name": "Audi Q8 Sportback",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_A07",
+    "Manufacturer": "Audi",
+    "Vehicle_Name": "Audi Q8 Sportback",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_B01",
+    "Manufacturer": "BMW",
+    "Vehicle_Name": "BMW i4",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_B02",
+    "Manufacturer": "BMW",
+    "Vehicle_Name": "BMW i7",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_B03",
+    "Manufacturer": "BMW",
+    "Vehicle_Name": "BMW iX",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_B04",
+    "Manufacturer": "BMW",
+    "Vehicle_Name": "BMW iX1",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_B05",
+    "Manufacturer": "BYD",
+    "Vehicle_Name": "BYD Atto 3",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_B06",
+    "Manufacturer": "BYD",
+    "Vehicle_Name": "BYD Atto 3",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_B07",
+    "Manufacturer": "BYD",
+    "Vehicle_Name": "BYD Atto 3",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_B08",
+    "Manufacturer": "BYD",
+    "Vehicle_Name": "BYD eMAX 7",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_B09",
+    "Manufacturer": "BYD",
+    "Vehicle_Name": "BYD eMAX 7",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_B10",
+    "Manufacturer": "BYD",
+    "Vehicle_Name": "BYD eMAX 7",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_B11",
+    "Manufacturer": "BYD",
+    "Vehicle_Name": "BYD eMAX 7",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_B12",
+    "Manufacturer": "BYD",
+    "Vehicle_Name": "BYD Seal",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_B13",
+    "Manufacturer": "BYD",
+    "Vehicle_Name": "BYD Seal",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_B14",
+    "Manufacturer": "BYD",
+    "Vehicle_Name": "BYD Seal",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_B15",
+    "Manufacturer": "BYD",
+    "Vehicle_Name": "BYD Sealion 7",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_C01",
+    "Manufacturer": "Citroen",
+    "Vehicle_Name": "Citroen eC3",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_C02",
+    "Manufacturer": "Citroen",
+    "Vehicle_Name": "Citroen eC3",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_H01",
+    "Manufacturer": "Hyundai",
+    "Vehicle_Name": "Hyundai Creta EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_H02",
+    "Manufacturer": "Hyundai",
+    "Vehicle_Name": "Hyundai Creta EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_H03",
+    "Manufacturer": "Hyundai",
+    "Vehicle_Name": "Hyundai Creta EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_H04",
+    "Manufacturer": "Hyundai",
+    "Vehicle_Name": "Hyundai Creta EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_H05",
+    "Manufacturer": "Hyundai",
+    "Vehicle_Name": "Hyundai Creta EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_H06",
+    "Manufacturer": "Hyundai",
+    "Vehicle_Name": "Hyundai Creta EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_H07",
+    "Manufacturer": "Hyundai",
+    "Vehicle_Name": "Hyundai Creta EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_H08",
+    "Manufacturer": "Hyundai",
+    "Vehicle_Name": "Hyundai Creta EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_H09",
+    "Manufacturer": "Hyundai",
+    "Vehicle_Name": "Hyundai Ioniq 5",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_K01",
+    "Manufacturer": "Kia",
+    "Vehicle_Name": "Kia EV6",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_K02",
+    "Manufacturer": "Kia",
+    "Vehicle_Name": "Kia EV9",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_L01",
+    "Manufacturer": "Lotus",
+    "Vehicle_Name": "Lotus Eletre",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_L02",
+    "Manufacturer": "Lotus",
+    "Vehicle_Name": "Lotus Eletre",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_L03",
+    "Manufacturer": "Lotus",
+    "Vehicle_Name": "Lotus Eletre",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_M01",
+    "Manufacturer": "Mahindra",
+    "Vehicle_Name": "Mahindra BE 6e",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_M02",
+    "Manufacturer": "Mahindra",
+    "Vehicle_Name": "Mahindra BE 6e",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_M03",
+    "Manufacturer": "Mahindra",
+    "Vehicle_Name": "Mahindra BE 6e",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_M04",
+    "Manufacturer": "Mahindra",
+    "Vehicle_Name": "Mahindra BE 6e",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_M05",
+    "Manufacturer": "Mahindra",
+    "Vehicle_Name": "Mahindra BE 6e",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_M06",
+    "Manufacturer": "Mahindra",
+    "Vehicle_Name": "Mahindra XEV 9e",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_M07",
+    "Manufacturer": "Mahindra",
+    "Vehicle_Name": "Mahindra XEV 9e",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_M08",
+    "Manufacturer": "Mahindra",
+    "Vehicle_Name": "Mahindra XEV 9e",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_M09",
+    "Manufacturer": "Mahindra",
+    "Vehicle_Name": "Mahindra XEV 9e",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_M10",
+    "Manufacturer": "Mahindra",
+    "Vehicle_Name": "Mahindra XEV 9S",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_M11",
+    "Manufacturer": "Mahindra",
+    "Vehicle_Name": "Mahindra XUV 3XO",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_M12",
+    "Manufacturer": "Mahindra",
+    "Vehicle_Name": "Mahindra XUV 3XO",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_M13",
+    "Manufacturer": "Mahindra",
+    "Vehicle_Name": "Mahindra XUV400",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_M14",
+    "Manufacturer": "Mahindra",
+    "Vehicle_Name": "Mahindra XUV400",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_MS1",
+    "Manufacturer": "Maruti",
+    "Vehicle_Name": "Maruti e Vitara",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_MS2",
+    "Manufacturer": "Maruti",
+    "Vehicle_Name": "Maruti e Vitara",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_MS3",
+    "Manufacturer": "Maruti",
+    "Vehicle_Name": "Maruti e Vitara",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_MB1",
+    "Manufacturer": "Mercedes",
+    "Vehicle_Name": "Mercedes EQA",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_MB2",
+    "Manufacturer": "Mercedes",
+    "Vehicle_Name": "Mercedes EQB",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_MB3",
+    "Manufacturer": "Mercedes",
+    "Vehicle_Name": "Mercedes EQS",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_MB4",
+    "Manufacturer": "Mercedes",
+    "Vehicle_Name": "Mercedes G-Class",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_MG1",
+    "Manufacturer": "MG",
+    "Vehicle_Name": "MG Comet EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_MG2",
+    "Manufacturer": "MG",
+    "Vehicle_Name": "MG Comet EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_MG3",
+    "Manufacturer": "MG",
+    "Vehicle_Name": "MG Comet EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_MG4",
+    "Manufacturer": "MG",
+    "Vehicle_Name": "MG Windsor EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_MG5",
+    "Manufacturer": "MG",
+    "Vehicle_Name": "MG Windsor EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_MG6",
+    "Manufacturer": "MG",
+    "Vehicle_Name": "MG Windsor EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_MG7",
+    "Manufacturer": "MG",
+    "Vehicle_Name": "MG Windsor EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_MG8",
+    "Manufacturer": "MG",
+    "Vehicle_Name": "MG Windsor EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_MG9",
+    "Manufacturer": "MG",
+    "Vehicle_Name": "MG ZS EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_MG10",
+    "Manufacturer": "MG",
+    "Vehicle_Name": "MG ZS EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_MG11",
+    "Manufacturer": "MG",
+    "Vehicle_Name": "MG Cyberster",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_P01",
+    "Manufacturer": "Porsche",
+    "Vehicle_Name": "Porsche Macan EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_P02",
+    "Manufacturer": "Porsche",
+    "Vehicle_Name": "Porsche Macan EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_P03",
+    "Manufacturer": "Porsche",
+    "Vehicle_Name": "Porsche Macan EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_RR1",
+    "Manufacturer": "Rolls-Royce",
+    "Vehicle_Name": "Rolls-Royce",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_T01",
+    "Manufacturer": "Tata",
+    "Vehicle_Name": "Tata Curvv EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_T02",
+    "Manufacturer": "Tata",
+    "Vehicle_Name": "Tata Curvv EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_T03",
+    "Manufacturer": "Tata",
+    "Vehicle_Name": "Tata Curvv EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_T04",
+    "Manufacturer": "Tata",
+    "Vehicle_Name": "Tata Curvv EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_T05",
+    "Manufacturer": "Tata",
+    "Vehicle_Name": "Tata Curvv EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_T06",
+    "Manufacturer": "Tata",
+    "Vehicle_Name": "Tata Harrier EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_T07",
+    "Manufacturer": "Tata",
+    "Vehicle_Name": "Tata Harrier EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_T08",
+    "Manufacturer": "Tata",
+    "Vehicle_Name": "Tata Harrier EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_T09",
+    "Manufacturer": "Tata",
+    "Vehicle_Name": "Tata Harrier EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_T10",
+    "Manufacturer": "Tata",
+    "Vehicle_Name": "Tata Nexon EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_T11",
+    "Manufacturer": "Tata",
+    "Vehicle_Name": "Tata Nexon EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_T12",
+    "Manufacturer": "Tata",
+    "Vehicle_Name": "Tata Nexon EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_T13",
+    "Manufacturer": "Tata",
+    "Vehicle_Name": "Tata Nexon EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_T14",
+    "Manufacturer": "Tata",
+    "Vehicle_Name": "Tata Nexon EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_T15",
+    "Manufacturer": "Tata",
+    "Vehicle_Name": "Tata Punch EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_T16",
+    "Manufacturer": "Tata",
+    "Vehicle_Name": "Tata Punch EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_T17",
+    "Manufacturer": "Tata",
+    "Vehicle_Name": "Tata Punch EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_T18",
+    "Manufacturer": "Tata",
+    "Vehicle_Name": "Tata Punch EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_T19",
+    "Manufacturer": "Tata",
+    "Vehicle_Name": "Tata Tiago EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_T20",
+    "Manufacturer": "Tata",
+    "Vehicle_Name": "Tata Tiago EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_T21",
+    "Manufacturer": "Tata",
+    "Vehicle_Name": "Tata Tigor EV",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_V01",
+    "Manufacturer": "Vayve",
+    "Vehicle_Name": "Vayve Eva",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_VF1",
+    "Manufacturer": "VinFast",
+    "Vehicle_Name": "VinFast VF6",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_VF2",
+    "Manufacturer": "VinFast",
+    "Vehicle_Name": "VinFast VF6",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_VF3",
+    "Manufacturer": "VinFast",
+    "Vehicle_Name": "VinFast VF7",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_VL1",
+    "Manufacturer": "Volvo",
+    "Vehicle_Name": "Volvo EX30",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "INEV_VL2",
+    "Manufacturer": "Volvo",
+    "Vehicle_Name": "Volvo EC40",
+    "Category_ID": "CAT_006"
+  },
+  {
+    "Vehicle_ID": "2W001",
+    "Manufacturer": "Ather Energy",
+    "Vehicle_Name": "Ather",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W002",
+    "Manufacturer": "Ather Energy",
+    "Vehicle_Name": "Ather",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W003",
+    "Manufacturer": "Ather Energy",
+    "Vehicle_Name": "Ather",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W004",
+    "Manufacturer": "Ather Energy",
+    "Vehicle_Name": "Ather",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W005",
+    "Manufacturer": "Ather Energy",
+    "Vehicle_Name": "Ather",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W006",
+    "Manufacturer": "OLA Electric",
+    "Vehicle_Name": "S1 Series",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W007",
+    "Manufacturer": "OLA Electric",
+    "Vehicle_Name": "S1 Series",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W008",
+    "Manufacturer": "OLA Electric",
+    "Vehicle_Name": "S1 Series",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W009",
+    "Manufacturer": "OLA Electric",
+    "Vehicle_Name": "S1 Series",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W010",
+    "Manufacturer": "OLA Electric",
+    "Vehicle_Name": "S1 Series",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W011",
+    "Manufacturer": "TVS Motor",
+    "Vehicle_Name": "iQube",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W012",
+    "Manufacturer": "TVS Motor",
+    "Vehicle_Name": "iQube",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W013",
+    "Manufacturer": "TVS Motor",
+    "Vehicle_Name": "iQube",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W014",
+    "Manufacturer": "TVS Motor",
+    "Vehicle_Name": "Orbiter",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W015",
+    "Manufacturer": "Hero MotoCorp",
+    "Vehicle_Name": "Vida",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W016",
+    "Manufacturer": "Hero MotoCorp",
+    "Vehicle_Name": "Vida",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W017",
+    "Manufacturer": "Hero MotoCorp",
+    "Vehicle_Name": "Vida",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W018",
+    "Manufacturer": "Hero MotoCorp",
+    "Vehicle_Name": "Vida",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W019",
+    "Manufacturer": "Simple Energy",
+    "Vehicle_Name": "Simple",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W020",
+    "Manufacturer": "Simple Energy",
+    "Vehicle_Name": "Simple",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W021",
+    "Manufacturer": "Bajaj Auto",
+    "Vehicle_Name": "Chetak",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W022",
+    "Manufacturer": "Bajaj Auto",
+    "Vehicle_Name": "Chetak",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W023",
+    "Manufacturer": "Honda Two Wheeler",
+    "Vehicle_Name": "Activa e",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W024",
+    "Manufacturer": "River",
+    "Vehicle_Name": "Indie",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W025",
+    "Manufacturer": "Ultraviolette Automotive",
+    "Vehicle_Name": "Ultraviolette",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W026",
+    "Manufacturer": "Ultraviolette Automotive",
+    "Vehicle_Name": "Ultraviolette",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W027",
+    "Manufacturer": "Revolt Motors",
+    "Vehicle_Name": "RV Series",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W028",
+    "Manufacturer": "Revolt Motors",
+    "Vehicle_Name": "RV Series",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W029",
+    "Manufacturer": "Tork Motors",
+    "Vehicle_Name": "Kratos",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W030",
+    "Manufacturer": "Komaki",
+    "Vehicle_Name": "Komaki",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W031",
+    "Manufacturer": "Komaki",
+    "Vehicle_Name": "Komaki",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W032",
+    "Manufacturer": "Komaki",
+    "Vehicle_Name": "Komaki",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W033",
+    "Manufacturer": "BGauss",
+    "Vehicle_Name": "Max",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W034",
+    "Manufacturer": "Ampere Electric",
+    "Vehicle_Name": "Magnus",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W035",
+    "Manufacturer": "Ampere Electric",
+    "Vehicle_Name": "Magnus",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W036",
+    "Manufacturer": "Hero Electric",
+    "Vehicle_Name": "Hero Electric",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W037",
+    "Manufacturer": "Hero Electric",
+    "Vehicle_Name": "Hero Electric",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W038",
+    "Manufacturer": "Okinawa Autotech",
+    "Vehicle_Name": "Praise",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W039",
+    "Manufacturer": "PURE EV",
+    "Vehicle_Name": "PURE EV",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W040",
+    "Manufacturer": "iVOOMi",
+    "Vehicle_Name": "iVOOMi",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W041",
+    "Manufacturer": "Bounce Infinity",
+    "Vehicle_Name": "Infinity",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W042",
+    "Manufacturer": "Kinetic Green",
+    "Vehicle_Name": "Kinetic Green",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W043",
+    "Manufacturer": "Suzuki Motorcycle",
+    "Vehicle_Name": "e Access",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W044",
+    "Manufacturer": "Yamaha Motor",
+    "Vehicle_Name": "Yamaha",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W045",
+    "Manufacturer": "Yamaha Motor",
+    "Vehicle_Name": "Yamaha",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W046",
+    "Manufacturer": "Yulu",
+    "Vehicle_Name": "Wynn",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W047",
+    "Manufacturer": "Okaya Electric",
+    "Vehicle_Name": "Freedom",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W048",
+    "Manufacturer": "EeVe",
+    "Vehicle_Name": "Epik",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W049",
+    "Manufacturer": "Lohia Auto",
+    "Vehicle_Name": "Speed",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W050",
+    "Manufacturer": "Gemopai",
+    "Vehicle_Name": "Astrid",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W051",
+    "Manufacturer": "Lectrix EV",
+    "Vehicle_Name": "iO",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W052",
+    "Manufacturer": "Matter",
+    "Vehicle_Name": "Aera",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W053",
+    "Manufacturer": "BattRE Electric Mobility",
+    "Vehicle_Name": "LOEV+",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W054",
+    "Manufacturer": "Raptee Motors",
+    "Vehicle_Name": "Raptee.HV",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W055",
+    "Manufacturer": "Motovolt",
+    "Vehicle_Name": "Infinity+",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W056",
+    "Manufacturer": "Vegh Motors",
+    "Vehicle_Name": "EV8",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W057",
+    "Manufacturer": "Tunwal",
+    "Vehicle_Name": "Eco Plus",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W058",
+    "Manufacturer": "Oben",
+    "Vehicle_Name": "Rorr",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W059",
+    "Manufacturer": "OLA Electric",
+    "Vehicle_Name": "Roadster",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W060",
+    "Manufacturer": "Komaki",
+    "Vehicle_Name": "Ranger",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W061",
+    "Manufacturer": "ABZO",
+    "Vehicle_Name": "VS01",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W062",
+    "Manufacturer": "Royal Enfield",
+    "Vehicle_Name": "Flying Flea",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W063",
+    "Manufacturer": "Zelio",
+    "Vehicle_Name": "Eeva",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W064",
+    "Manufacturer": "Green EV",
+    "Vehicle_Name": "Udaan",
+    "Category_ID": "CAT_007"
+  },
+  {
+    "Vehicle_ID": "2W065",
+    "Manufacturer": "Yakuza Electric",
+    "Vehicle_Name": "Rubie",
+    "Category_ID": "CAT_007"
+  }
+],
+
+"4w_vehicle_details": [
+  {
+    "Vehicle_ID": "INEV_A01",
+    "Vehicle_Variant": "e-tron 50",
+    "Battery_Capacity": "95 kWh",
+    "Claimed_Range": "484 km",
+    "Realworld_Range": "360 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 1.02 Cr",
+    "Guide_ID": "GYD_001"
+  },
+  {
+    "Vehicle_ID": "INEV_A02",
+    "Vehicle_Variant": "e-tron 55",
+    "Battery_Capacity": "114 kWh",
+    "Claimed_Range": "600 km",
+    "Realworld_Range": "450 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 1.25 Cr",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_A03",
+    "Vehicle_Variant": "Quattro",
+    "Battery_Capacity": "93.4 kWh",
+    "Claimed_Range": "401 km",
+    "Realworld_Range": "315 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 1.72 Cr",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_A04",
+    "Vehicle_Variant": "50 Quattro",
+    "Battery_Capacity": "95 kWh",
+    "Claimed_Range": "491 km",
+    "Realworld_Range": "370 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 1.15 Cr",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_A05",
+    "Vehicle_Variant": "55 Quattro",
+    "Battery_Capacity": "106 kWh",
+    "Claimed_Range": "582 km",
+    "Realworld_Range": "435 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 1.27 Cr",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_A06",
+    "Vehicle_Variant": "Sportback 50",
+    "Battery_Capacity": "95 kWh",
+    "Claimed_Range": "505 km",
+    "Realworld_Range": "380 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 1.19 Cr",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_A07",
+    "Vehicle_Variant": "Sportback 55",
+    "Battery_Capacity": "114 kWh",
+    "Claimed_Range": "600 km",
+    "Realworld_Range": "455 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 1.32 Cr",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_B01",
+    "Vehicle_Variant": "eDrive40",
+    "Battery_Capacity": "83.9 kWh",
+    "Claimed_Range": "590 km",
+    "Realworld_Range": "470 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 72.50 Lakh",
+    "Guide_ID": "GYD_002"
+  },
+  {
+    "Vehicle_ID": "INEV_B02",
+    "Vehicle_Variant": "xDrive60",
+    "Battery_Capacity": "101.7 kWh",
+    "Claimed_Range": "625 km",
+    "Realworld_Range": "500 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 2.05 Cr",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_B03",
+    "Vehicle_Variant": "xDrive50",
+    "Battery_Capacity": "111.5 kWh",
+    "Claimed_Range": "635 km",
+    "Realworld_Range": "510 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 1.40 Cr",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_B04",
+    "Vehicle_Variant": "LWB",
+    "Battery_Capacity": "66.4 kWh",
+    "Claimed_Range": "531 km",
+    "Realworld_Range": "420 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 49.90 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_B05",
+    "Vehicle_Variant": "Dynamic",
+    "Battery_Capacity": "49.92 kWh",
+    "Claimed_Range": "468 km",
+    "Realworld_Range": "345 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 24.99 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_B06",
+    "Vehicle_Variant": "Premium",
+    "Battery_Capacity": "60.48 kWh",
+    "Claimed_Range": "521 km",
+    "Realworld_Range": "385 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 29.85 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_B07",
+    "Vehicle_Variant": "Superior",
+    "Battery_Capacity": "60.48 kWh",
+    "Claimed_Range": "521 km",
+    "Realworld_Range": "385 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 33.99 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_B08",
+    "Vehicle_Variant": "Premium 6-STR",
+    "Battery_Capacity": "55.4 kWh",
+    "Claimed_Range": "420 km",
+    "Realworld_Range": "315 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 26.90 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_B09",
+    "Vehicle_Variant": "Premium 7-STR",
+    "Battery_Capacity": "55.4 kWh",
+    "Claimed_Range": "420 km",
+    "Realworld_Range": "315 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 27.50 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_B10",
+    "Vehicle_Variant": "Superior 6-STR",
+    "Battery_Capacity": "71.8 kWh",
+    "Claimed_Range": "530 km",
+    "Realworld_Range": "400 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 29.30 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_B11",
+    "Vehicle_Variant": "Superior 7-STR",
+    "Battery_Capacity": "71.8 kWh",
+    "Claimed_Range": "530 km",
+    "Realworld_Range": "400 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 29.90 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_B12",
+    "Vehicle_Variant": "Dynamic",
+    "Battery_Capacity": "61.44 kWh",
+    "Claimed_Range": "510 km",
+    "Realworld_Range": "380 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 41.00 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_B13",
+    "Vehicle_Variant": "Premium",
+    "Battery_Capacity": "82.56 kWh",
+    "Claimed_Range": "650 km",
+    "Realworld_Range": "520 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 45.70 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_B14",
+    "Vehicle_Variant": "Performance",
+    "Battery_Capacity": "82.56 kWh",
+    "Claimed_Range": "580 km",
+    "Realworld_Range": "460 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 53.15 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_B15",
+    "Vehicle_Variant": "Premium",
+    "Battery_Capacity": "82.56 kWh",
+    "Claimed_Range": "567 km",
+    "Realworld_Range": "450 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 48.90 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_C01",
+    "Vehicle_Variant": "Feel",
+    "Battery_Capacity": "29.2 kWh",
+    "Claimed_Range": "320 km",
+    "Realworld_Range": "228 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 12.76 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_C02",
+    "Vehicle_Variant": "Shine",
+    "Battery_Capacity": "29.2 kWh",
+    "Claimed_Range": "320 km",
+    "Realworld_Range": "228 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 13.56 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_H01",
+    "Vehicle_Variant": "Executive 42",
+    "Battery_Capacity": "42 kWh",
+    "Claimed_Range": "420 km",
+    "Realworld_Range": "310 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 18.02 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_H02",
+    "Vehicle_Variant": "Executive Tech 42",
+    "Battery_Capacity": "42 kWh",
+    "Claimed_Range": "420 km",
+    "Realworld_Range": "310 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 19.00 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_H03",
+    "Vehicle_Variant": "Premium 42",
+    "Battery_Capacity": "42 kWh",
+    "Claimed_Range": "420 km",
+    "Realworld_Range": "310 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 20.00 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_H04",
+    "Vehicle_Variant": "Executive (O) 51.4",
+    "Battery_Capacity": "51.4 kWh",
+    "Claimed_Range": "510 km",
+    "Realworld_Range": "432 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 20.00 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_H05",
+    "Vehicle_Variant": "Excellence 42",
+    "Battery_Capacity": "42 kWh",
+    "Claimed_Range": "420 km",
+    "Realworld_Range": "310 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 21.30 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_H06",
+    "Vehicle_Variant": "Smart (O) 51.4",
+    "Battery_Capacity": "51.4 kWh",
+    "Claimed_Range": "510 km",
+    "Realworld_Range": "432 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 21.53 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_H07",
+    "Vehicle_Variant": "Excellence 51.4",
+    "Battery_Capacity": "51.4 kWh",
+    "Claimed_Range": "510 km",
+    "Realworld_Range": "432 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 23.67 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_H08",
+    "Vehicle_Variant": "Excellence HC 51.4",
+    "Battery_Capacity": "51.4 kWh",
+    "Claimed_Range": "510 km",
+    "Realworld_Range": "432 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 24.55 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_H09",
+    "Vehicle_Variant": "RWD",
+    "Battery_Capacity": "72.6 kWh",
+    "Claimed_Range": "631 km",
+    "Realworld_Range": "480 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 46.30 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_K01",
+    "Vehicle_Variant": "GT-Line AWD",
+    "Battery_Capacity": "84 kWh",
+    "Claimed_Range": "663 km",
+    "Realworld_Range": "520 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 65.97 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_K02",
+    "Vehicle_Variant": "GT-Line",
+    "Battery_Capacity": "99.8 kWh",
+    "Claimed_Range": "561 km",
+    "Realworld_Range": "500 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 1.30 Cr",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_L01",
+    "Vehicle_Variant": "Base",
+    "Battery_Capacity": "112 kWh",
+    "Claimed_Range": "600 km",
+    "Realworld_Range": "480 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 2.55 Cr",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_L02",
+    "Vehicle_Variant": "S",
+    "Battery_Capacity": "112 kWh",
+    "Claimed_Range": "600 km",
+    "Realworld_Range": "480 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 2.75 Cr",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_L03",
+    "Vehicle_Variant": "R",
+    "Battery_Capacity": "112 kWh",
+    "Claimed_Range": "490 km",
+    "Realworld_Range": "390 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 2.99 Cr",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_M01",
+    "Vehicle_Variant": "Pack One 59",
+    "Battery_Capacity": "59 kWh",
+    "Claimed_Range": "556 km",
+    "Realworld_Range": "415 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 18.90 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_M02",
+    "Vehicle_Variant": "Pack One Above 59",
+    "Battery_Capacity": "59 kWh",
+    "Claimed_Range": "556 km",
+    "Realworld_Range": "415 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 20.50 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_M03",
+    "Vehicle_Variant": "Pack Two 59",
+    "Battery_Capacity": "59 kWh",
+    "Claimed_Range": "556 km",
+    "Realworld_Range": "415 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 21.90 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_M04",
+    "Vehicle_Variant": "Pack Three Select 59",
+    "Battery_Capacity": "59 kWh",
+    "Claimed_Range": "556 km",
+    "Realworld_Range": "415 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 24.50 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_M05",
+    "Vehicle_Variant": "Pack Three 79",
+    "Battery_Capacity": "79 kWh",
+    "Claimed_Range": "682 km",
+    "Realworld_Range": "510 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 26.90 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_M06",
+    "Vehicle_Variant": "Pack One 59",
+    "Battery_Capacity": "59 kWh",
+    "Claimed_Range": "542 km",
+    "Realworld_Range": "400 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 21.90 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_M07",
+    "Vehicle_Variant": "Pack Two 59",
+    "Battery_Capacity": "59 kWh",
+    "Claimed_Range": "542 km",
+    "Realworld_Range": "400 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 24.90 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_M08",
+    "Vehicle_Variant": "Pack Three Select 59",
+    "Battery_Capacity": "59 kWh",
+    "Claimed_Range": "542 km",
+    "Realworld_Range": "400 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 27.90 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_M09",
+    "Vehicle_Variant": "Pack Three 79",
+    "Battery_Capacity": "79 kWh",
+    "Claimed_Range": "656 km",
+    "Realworld_Range": "490 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 30.50 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_M10",
+    "Vehicle_Variant": "Pack One 59",
+    "Battery_Capacity": "59 kWh",
+    "Claimed_Range": "521 km",
+    "Realworld_Range": "390 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 19.95 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_M11",
+    "Vehicle_Variant": "AX5",
+    "Battery_Capacity": "39.4 kWh",
+    "Claimed_Range": "285 km",
+    "Realworld_Range": "230 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 13.89 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_M12",
+    "Vehicle_Variant": "AX7L",
+    "Battery_Capacity": "39.4 kWh",
+    "Claimed_Range": "285 km",
+    "Realworld_Range": "230 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 14.96 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_M13",
+    "Vehicle_Variant": "EC Pro 34.5",
+    "Battery_Capacity": "34.5 kWh",
+    "Claimed_Range": "375 km",
+    "Realworld_Range": "260 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 15.49 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_M14",
+    "Vehicle_Variant": "EL Pro 39.4",
+    "Battery_Capacity": "39.4 kWh",
+    "Claimed_Range": "456 km",
+    "Realworld_Range": "310 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 17.48 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_MS1",
+    "Vehicle_Variant": "Delta 48.8",
+    "Battery_Capacity": "48.8 kWh",
+    "Claimed_Range": "543 km",
+    "Realworld_Range": "350 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 17.00 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_MS2",
+    "Vehicle_Variant": "Zeta 61.1",
+    "Battery_Capacity": "61.1 kWh",
+    "Claimed_Range": "543 km",
+    "Realworld_Range": "420 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 22.50 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_MS3",
+    "Vehicle_Variant": "Alpha 61.1",
+    "Battery_Capacity": "61.1 kWh",
+    "Claimed_Range": "543 km",
+    "Realworld_Range": "420 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 22.50 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_MB1",
+    "Vehicle_Variant": "250+",
+    "Battery_Capacity": "70.5 kWh",
+    "Claimed_Range": "560 km",
+    "Realworld_Range": "430 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 67.20 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_MB2",
+    "Vehicle_Variant": "350 4MATIC",
+    "Battery_Capacity": "66.5 kWh",
+    "Claimed_Range": "423 km",
+    "Realworld_Range": "330 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 72.20 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_MB3",
+    "Vehicle_Variant": "580 4MATIC",
+    "Battery_Capacity": "107.8 kWh",
+    "Claimed_Range": "857 km",
+    "Realworld_Range": "640 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 1.63 Cr",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_MB4",
+    "Vehicle_Variant": "G 580 Electric",
+    "Battery_Capacity": "116 kWh",
+    "Claimed_Range": "473 km",
+    "Realworld_Range": "350 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 3.10 Cr",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_MG1",
+    "Vehicle_Variant": "Executive",
+    "Battery_Capacity": "17.3 kWh",
+    "Claimed_Range": "230 km",
+    "Realworld_Range": "193 km",
+    "Charging_Type": "Type-2",
+    "Price": "₹ 7.50 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_MG2",
+    "Vehicle_Variant": "Excite",
+    "Battery_Capacity": "17.3 kWh",
+    "Claimed_Range": "230 km",
+    "Realworld_Range": "193 km",
+    "Charging_Type": "Type-2",
+    "Price": "₹ 8.50 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_MG3",
+    "Vehicle_Variant": "Exclusive",
+    "Battery_Capacity": "17.3 kWh",
+    "Claimed_Range": "230 km",
+    "Realworld_Range": "193 km",
+    "Charging_Type": "Type-2",
+    "Price": "₹ 9.56 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_MG4",
+    "Vehicle_Variant": "Excite 38",
+    "Battery_Capacity": "38 kWh",
+    "Claimed_Range": "331 km",
+    "Realworld_Range": "260 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 14.00 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_MG5",
+    "Vehicle_Variant": "Exclusive 38",
+    "Battery_Capacity": "38 kWh",
+    "Claimed_Range": "331 km",
+    "Realworld_Range": "260 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 15.53 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_MG6",
+    "Vehicle_Variant": "Essence 38",
+    "Battery_Capacity": "38 kWh",
+    "Claimed_Range": "331 km",
+    "Realworld_Range": "260 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 16.53 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_MG7",
+    "Vehicle_Variant": "Exclusive Pro 52.9",
+    "Battery_Capacity": "52.9 kWh",
+    "Claimed_Range": "449 km",
+    "Realworld_Range": "360 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 17.38 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_MG8",
+    "Vehicle_Variant": "Essence Pro 52.9",
+    "Battery_Capacity": "52.9 kWh",
+    "Claimed_Range": "449 km",
+    "Realworld_Range": "360 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 18.50 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_MG9",
+    "Vehicle_Variant": "Executive",
+    "Battery_Capacity": "50.3 kWh",
+    "Claimed_Range": "461 km",
+    "Realworld_Range": "339 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 17.99 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_MG10",
+    "Vehicle_Variant": "Essence",
+    "Battery_Capacity": "50.3 kWh",
+    "Claimed_Range": "461 km",
+    "Realworld_Range": "339 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 20.50 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_MG11",
+    "Vehicle_Variant": "Standard",
+    "Battery_Capacity": "77 kWh",
+    "Claimed_Range": "580 km",
+    "Realworld_Range": "450 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 75.00 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_P01",
+    "Vehicle_Variant": "Standard",
+    "Battery_Capacity": "100 kWh",
+    "Claimed_Range": "641 km",
+    "Realworld_Range": "510 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 1.22 Cr",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_P02",
+    "Vehicle_Variant": "4S",
+    "Battery_Capacity": "100 kWh",
+    "Claimed_Range": "619 km",
+    "Realworld_Range": "490 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 1.39 Cr",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_P03",
+    "Vehicle_Variant": "Turbo",
+    "Battery_Capacity": "100 kWh",
+    "Claimed_Range": "591 km",
+    "Realworld_Range": "470 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 1.69 Cr",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_RR1",
+    "Vehicle_Variant": "Spectre",
+    "Battery_Capacity": "102 kWh",
+    "Claimed_Range": "530 km",
+    "Realworld_Range": "420 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 7.50 Cr",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_T01",
+    "Vehicle_Variant": "Creative 45",
+    "Battery_Capacity": "45 kWh",
+    "Claimed_Range": "430 km",
+    "Realworld_Range": "330 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 17.49 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_T02",
+    "Vehicle_Variant": "Accomplished 45",
+    "Battery_Capacity": "45 kWh",
+    "Claimed_Range": "430 km",
+    "Realworld_Range": "330 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 18.49 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_T03",
+    "Vehicle_Variant": "Accomplished 55",
+    "Battery_Capacity": "55 kWh",
+    "Claimed_Range": "502 km",
+    "Realworld_Range": "365 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 19.25 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_T04",
+    "Vehicle_Variant": "Accomplished+ S 55",
+    "Battery_Capacity": "55 kWh",
+    "Claimed_Range": "502 km",
+    "Realworld_Range": "365 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 19.99 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_T05",
+    "Vehicle_Variant": "Empowered+ A 55",
+    "Battery_Capacity": "55 kWh",
+    "Claimed_Range": "502 km",
+    "Realworld_Range": "365 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 21.99 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_T06",
+    "Vehicle_Variant": "Adventure 65",
+    "Battery_Capacity": "65 kWh",
+    "Claimed_Range": "538 km",
+    "Realworld_Range": "400 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 21.49 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_T07",
+    "Vehicle_Variant": "Fearless+ 75",
+    "Battery_Capacity": "75 kWh",
+    "Claimed_Range": "627 km",
+    "Realworld_Range": "480 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 24.99 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_T08",
+    "Vehicle_Variant": "Empowered 75",
+    "Battery_Capacity": "75 kWh",
+    "Claimed_Range": "627 km",
+    "Realworld_Range": "480 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 27.49 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_T09",
+    "Vehicle_Variant": "Empowered QWD 75",
+    "Battery_Capacity": "75 kWh",
+    "Claimed_Range": "622 km",
+    "Realworld_Range": "480 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 28.99 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_T10",
+    "Vehicle_Variant": "Creative+ MR",
+    "Battery_Capacity": "30 kWh",
+    "Claimed_Range": "325 km",
+    "Realworld_Range": "240 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 12.49 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_T11",
+    "Vehicle_Variant": "Fearless MR",
+    "Battery_Capacity": "30 kWh",
+    "Claimed_Range": "325 km",
+    "Realworld_Range": "240 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 13.29 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_T12",
+    "Vehicle_Variant": "Creative 45",
+    "Battery_Capacity": "45 kWh",
+    "Claimed_Range": "489 km",
+    "Realworld_Range": "375 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 13.99 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_T13",
+    "Vehicle_Variant": "Fearless 45",
+    "Battery_Capacity": "45 kWh",
+    "Claimed_Range": "489 km",
+    "Realworld_Range": "375 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 14.99 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_T14",
+    "Vehicle_Variant": "Empowered+ LR",
+    "Battery_Capacity": "45 kWh",
+    "Claimed_Range": "489 km",
+    "Realworld_Range": "375 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 16.99 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_T15",
+    "Vehicle_Variant": "Smart 3.3",
+    "Battery_Capacity": "25 kWh",
+    "Claimed_Range": "315 km",
+    "Realworld_Range": "210 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 9.99 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_T16",
+    "Vehicle_Variant": "Adventure 3.3",
+    "Battery_Capacity": "25 kWh",
+    "Claimed_Range": "315 km",
+    "Realworld_Range": "210 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 11.84 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_T17",
+    "Vehicle_Variant": "Adventure LR 3.3",
+    "Battery_Capacity": "35 kWh",
+    "Claimed_Range": "421 km",
+    "Realworld_Range": "229 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 12.84 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_T18",
+    "Vehicle_Variant": "Empowered+ LR",
+    "Battery_Capacity": "35 kWh",
+    "Claimed_Range": "421 km",
+    "Realworld_Range": "229 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 13.64 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_T19",
+    "Vehicle_Variant": "XE MR",
+    "Battery_Capacity": "19.2 kWh",
+    "Claimed_Range": "250 km",
+    "Realworld_Range": "170 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 7.99 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_T20",
+    "Vehicle_Variant": "XZ+ LR",
+    "Battery_Capacity": "24 kWh",
+    "Claimed_Range": "315 km",
+    "Realworld_Range": "187 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 11.14 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_T21",
+    "Vehicle_Variant": "XZ+ Lux",
+    "Battery_Capacity": "26 kWh",
+    "Claimed_Range": "315 km",
+    "Realworld_Range": "220 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 13.75 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_V01",
+    "Vehicle_Variant": "Standard",
+    "Battery_Capacity": "18 kWh",
+    "Claimed_Range": "250 km",
+    "Realworld_Range": "180 km",
+    "Charging_Type": "Standard",
+    "Price": "₹ 4.49 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_VF1",
+    "Vehicle_Variant": "Eco",
+    "Battery_Capacity": "59.6 kWh",
+    "Claimed_Range": "468 km",
+    "Realworld_Range": "360 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 16.49 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_VF2",
+    "Vehicle_Variant": "Plus",
+    "Battery_Capacity": "59.6 kWh",
+    "Claimed_Range": "468 km",
+    "Realworld_Range": "360 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 18.29 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_VF3",
+    "Vehicle_Variant": "Sky AWD",
+    "Battery_Capacity": "70 kWh",
+    "Claimed_Range": "532 km",
+    "Realworld_Range": "410 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 25.49 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_VL1",
+    "Vehicle_Variant": "Single Motor",
+    "Battery_Capacity": "69 kWh",
+    "Claimed_Range": "480 km",
+    "Realworld_Range": "370 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 41.00 Lakh",
+    "Guide_ID": ""
+  },
+  {
+    "Vehicle_ID": "INEV_VL2",
+    "Vehicle_Variant": "Recharge",
+    "Battery_Capacity": "78 kWh",
+    "Claimed_Range": "530 km",
+    "Realworld_Range": "410 km",
+    "Charging_Type": "CCS-II",
+    "Price": "₹ 59.00 Lakh",
+    "Guide_ID": ""
+  }
+],
+
+"Guide_article": [
+  {
+    "Guide_ID": "GYD_001",
+    "Guide_Type": "vehicle_guide",
+    "cmsg_id": "MSG_101",
+    "Context": "Base Guide"
+  },
+  {
+    "Guide_ID": "GYD_002",
+    "Guide_Type": "vehicle_guide",
+    "cmsg_id": "MSG_102",
+    "Context": "Base Guide"
+  }
+],
+
+"Core_message": [
+  {
+    "cmsg_id": "MSG_101",
+    "title": "Audi Q6 e-tron Residential Charging Guide",
+    "status": "draft",
+    "author": "Massive",
+    "created_at": "2026-02-04 0:51:50"
+  },
+  {
+    "cmsg_id": "MSG_102",
+    "title": "BMW i4 Residential Charging Guide",
+    "status": "draft",
+    "author": "Massive",
+    "created_at": "2026-02-04 0:51:50"
+  }
+]
+}

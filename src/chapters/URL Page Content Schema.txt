@@ -1,0 +1,78 @@
+UPI Charging Page Content Schema 
+//A
+
+Segment_Name: UPI_Charging_Hero
+Segment_Role: Hero
+
+Kicker:
+- Text: Quick On-The-Go Charging
+- Icon: Zap
+
+Core_Message:
+- Heading: Scan UPI & Charge EV 
+- Body: No App Installation Required 
+
+Button:
+- Label: Find UPI Chargers 
+- Icon:
+- Intent:
+- Target:
+
+Badge:
+- Text: 100+ Charging Stations
+- Icon: Charging Station
+- Target
+
+Media: 
+- Source: 
+- Type: Icon, Illustration, or Image [Charger with UPI and Mobile Phone with Scanner]
+- Alt:
+
+Meta_Info:
+- Notes:
+
+Icon:
+- Name:
+
+//B
+
+Segment_Name: Home Owner Hardware Product Banner 
+Segment_Role: Product Banner Ad 
+
+Kicker:
+- Text: Hassle Free Charging
+- Icon: Home
+
+Core_Message:
+- Heading: Tired of Downloading 100 EV Apps ?
+- Subheading:  Get 1 App to Rule them All 
+- Body: Be free of maintaining 100 wallets and charge straight from UPI
+
+Button:
+- Label: Get 1C EV App
+- Icon:
+- Intent:
+- Target:
+
+Pill:
+- Text: Ultimate EV Charging App 
+- Icon:
+
+Badge:
+- Text: 100% Charge in 10h 
+- Icon:
+- Target:
+
+  
+Media: 
+- Source: 
+- Type: Icon, Illustration, or Image [Home Charger and Mobile App with Charging Metrics]
+- Alt:
+
+Meta_Info:
+- Notes:
+
+Icon:
+- Name:
+
+

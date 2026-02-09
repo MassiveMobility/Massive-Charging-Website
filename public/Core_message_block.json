@@ -1,0 +1,1024 @@
+{
+"Core_message_blocks": [
+  {
+    "block_id": "BLK_MSG_101_001",
+    "cmsg_id": "MSG_101",
+    "block_order": "1",
+    "block_type": "heading_1",
+    "text": "Audi Q6 e-tron Residential Charging Guide",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_002",
+    "cmsg_id": "MSG_101",
+    "block_order": "2",
+    "block_type": "heading_2",
+    "text": "Q6 e-tron Residential Charging Overview",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_003",
+    "cmsg_id": "MSG_101",
+    "block_order": "3",
+    "block_type": "body",
+    "text": "The Audi Q6 e-tron is set to dominate the luxury EV market. Its features include cutting-edge technology from the Premium Platform Electric (PPE) architecture, a massive 83 kWh battery capacity for long range, and premium luxury status in the highly desirable SUV segment, making it a strong competitor against models like the BMW iX, the Mercedes-Benz EQE SUV, and even the high-performance Porsche Macan EV.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_004",
+    "cmsg_id": "MSG_101",
+    "block_order": "4",
+    "block_type": "body",
+    "text": "One of the greatest benefits of owning an electric vehicle is the remarkably low operational cost. The monthly running expenditure for an EV is typically 4 to 5x lower than for a comparable gasoline vehicle. Other advantages include enhanced energy efficiency, high torque output, reduced maintenance needs, a contemporary look, and environmentally cleaner operation.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_005",
+    "cmsg_id": "MSG_101",
+    "block_order": "5",
+    "block_type": "body",
+    "text": "A key convenience of EV ownership is the ability to recharge the vehicle at home. This eliminates the need for frequent trips to fuel stations, waiting in lines, or concerns over fluctuating fuel prices or ethanol content. An EV can be conveniently charged at your residence, much like a mobile phone or laptop. This feature significantly enhances the comfort and ease of the ownership experience.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_006",
+    "cmsg_id": "MSG_101",
+    "block_order": "6",
+    "block_type": "body",
+    "text": "Let’s explore the different methods for charging your Audi Q6 e-tron at home.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_007",
+    "cmsg_id": "MSG_101",
+    "block_order": "7",
+    "block_type": "divider",
+    "text": "",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_008",
+    "cmsg_id": "MSG_101",
+    "block_order": "8",
+    "block_type": "heading_2",
+    "text": "Charging the Audi Q6 e-tron with a Standard 16A Outlet",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_009",
+    "cmsg_id": "MSG_101",
+    "block_order": "9",
+    "block_type": "body",
+    "text": "The Audi Q6 e-tron comes with a portable 3.3 kW charging unit. This unit is essentially an adapter with a standard 3-pin plug. This plug can be connected to any 16A household socket, commonly used for high-power appliances such as air conditioners and water heaters.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_010",
+    "cmsg_id": "MSG_101",
+    "block_order": "10",
+    "block_type": "body",
+    "text": "Simply connecting the 3.3 kW charger to the 16A socket initiates the charging process.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_011",
+    "cmsg_id": "MSG_101",
+    "block_order": "11",
+    "block_type": "heading_3",
+    "text": "Charging Time Calculation",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_012",
+    "cmsg_id": "MSG_101",
+    "block_order": "12",
+    "block_type": "body",
+    "text": "For the 83 kWh battery, a full charge (0% to 100%) will take approximately 25 hours. This is because the charger draws only 3.3 kW of power per hour, and to fill 83 kWh of energy:",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_013",
+    "cmsg_id": "MSG_101",
+    "block_order": "13",
+    "block_type": "body",
+    "text": "83 kWh ÷ 3.3 kW ≈ 25 hours",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_014",
+    "cmsg_id": "MSG_101",
+    "block_order": "14",
+    "block_type": "body",
+    "text": "While this is the most straightforward and accessible charging method, it presents several challenges.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_015",
+    "cmsg_id": "MSG_101",
+    "block_order": "15",
+    "block_type": "heading_3",
+    "text": "Practical Considerations",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_016",
+    "cmsg_id": "MSG_101",
+    "block_order": "16",
+    "block_type": "list",
+    "text": "- The 16A socket must be located within usable distance of the vehicle.\n - Ground-floor residents may find this convenient.\n - High-rise apartment residents may need professional wiring extensions and a dedicated 16A socket near the parking area.\n - Always use safety-compliant wiring such as 3 mm thick, 3-core Polycab wire with an MCB installed.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{\"\"style\"\": \"\"bullet\"\"}"
+  },
+  {
+    "block_id": "BLK_MSG_101_017",
+    "cmsg_id": "MSG_101",
+    "block_order": "17",
+    "block_type": "heading_3",
+    "text": "Limitations of Standard 16A Charging",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_018",
+    "cmsg_id": "MSG_101",
+    "block_order": "18",
+    "block_type": "list",
+    "text": "- High risk of unauthorized use or electricity theft.\n - No accurate tracking of EV-specific energy consumption.\n - Safety concerns during heavy rain, thunderstorms, or lightning.\n - No immediate access to manually shut down charging in emergencies.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{\"\"style\"\": \"\"bullet\"\"}"
+  },
+  {
+    "block_id": "BLK_MSG_101_019",
+    "cmsg_id": "MSG_101",
+    "block_order": "19",
+    "block_type": "body",
+    "text": "For these reasons, a dedicated AC charging solution is recommended.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_020",
+    "cmsg_id": "MSG_101",
+    "block_order": "20",
+    "block_type": "divider",
+    "text": "",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_021",
+    "cmsg_id": "MSG_101",
+    "block_order": "21",
+    "block_type": "heading_2",
+    "text": "Charging the Audi Q6 e-tron with a Massive Mobility 3.3 kW AC Charger",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_022",
+    "cmsg_id": "MSG_101",
+    "block_order": "22",
+    "block_type": "body",
+    "text": "The 3.3 kW AC charger is a custom-engineered EV charging point designed to prioritize safety, security, emergency response, and efficiency.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_023",
+    "cmsg_id": "MSG_101",
+    "block_order": "23",
+    "block_type": "body",
+    "text": "The Massive Mobility 3.3 kW AC charging unit provides a secure 16A outlet that can be remotely managed using a mobile application. Your smartphone effectively becomes the remote control for the charger.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_024",
+    "cmsg_id": "MSG_101",
+    "block_order": "24",
+    "block_type": "heading_3",
+    "text": "Smart Features",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_025",
+    "cmsg_id": "MSG_101",
+    "block_order": "25",
+    "block_type": "list",
+    "text": "- Real-time electricity consumption tracking\n - Voltage monitoring\n - Charging session history\n - Data insights to optimize charging habits",
+    "src": "",
+    "alt": "",
+    "meta_json": "{\"\"style\"\": \"\"bullet\"\"}"
+  },
+  {
+    "block_id": "BLK_MSG_101_026",
+    "cmsg_id": "MSG_101",
+    "block_order": "26",
+    "block_type": "heading_3",
+    "text": "Cost Control Benefits",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_027",
+    "cmsg_id": "MSG_101",
+    "block_order": "27",
+    "block_type": "body",
+    "text": "During power outages, apartment generators often charge electricity at 2 to 3x the normal rate. With remote control functionality, charging can be scheduled only when cost-effective power is available.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_028",
+    "cmsg_id": "MSG_101",
+    "block_order": "28",
+    "block_type": "body",
+    "text": "This solution represents the safest way to charge your EV at home using a 3.3 kW setup.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_029",
+    "cmsg_id": "MSG_101",
+    "block_order": "29",
+    "block_type": "divider",
+    "text": "",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_030",
+    "cmsg_id": "MSG_101",
+    "block_order": "30",
+    "block_type": "heading_2",
+    "text": "Charging the Audi Q6 e-tron with a Massive Mobility 7.4 kW AC Charger",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_031",
+    "cmsg_id": "MSG_101",
+    "block_order": "31",
+    "block_type": "body",
+    "text": "The Massive Mobility 7.4 kW AC charger operates similarly to the 3.3 kW model but delivers significantly faster charging.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_032",
+    "cmsg_id": "MSG_101",
+    "block_order": "32",
+    "block_type": "body",
+    "text": "With a maximum output of 7.4 kW, the Audi Q6 e-tron can be charged in approximately 11 to 11.5 hours for the 83 kWh battery. The vehicle supports up to 11 kW AC charging, which could reduce charging time to approximately 7.5 hours with higher-capacity hardware and electrical infrastructure.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_033",
+    "cmsg_id": "MSG_101",
+    "block_order": "33",
+    "block_type": "heading_3",
+    "text": "Hardware and Connection",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_034",
+    "cmsg_id": "MSG_101",
+    "block_order": "34",
+    "block_type": "list",
+    "text": "- Permanently wall-mounted near the parking space\n - Long CCS2 charging connector plugs directly into the vehicle",
+    "src": "",
+    "alt": "",
+    "meta_json": "{\"\"style\"\": \"\"bullet\"\"}"
+  },
+  {
+    "block_id": "BLK_MSG_101_035",
+    "cmsg_id": "MSG_101",
+    "block_order": "35",
+    "block_type": "heading_3",
+    "text": "Remote Control and Security",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_036",
+    "cmsg_id": "MSG_101",
+    "block_order": "36",
+    "block_type": "list",
+    "text": "- Smartphone-controlled operation\n - Authorization-based activation prevents energy theft\n - Remote emergency shutdown capability during adverse weather",
+    "src": "",
+    "alt": "",
+    "meta_json": "{\"\"style\"\": \"\"bullet\"\"}"
+  },
+  {
+    "block_id": "BLK_MSG_101_037",
+    "cmsg_id": "MSG_101",
+    "block_order": "37",
+    "block_type": "body",
+    "text": "This charger offers a premium, seamless, and highly secure residential charging experience.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_038",
+    "cmsg_id": "MSG_101",
+    "block_order": "38",
+    "block_type": "divider",
+    "text": "",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_039",
+    "cmsg_id": "MSG_101",
+    "block_order": "39",
+    "block_type": "heading_2",
+    "text": "Charging the Audi Q6 e-tron at Home with Massive Mobility Portable Charging Extension",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_040",
+    "cmsg_id": "MSG_101",
+    "block_order": "40",
+    "block_type": "body",
+    "text": "The Massive Mobility EV charging extension is a unique hardware solution designed to address complex residential charging scenarios.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_041",
+    "cmsg_id": "MSG_101",
+    "block_order": "41",
+    "block_type": "heading_3",
+    "text": "Key Capabilities",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_042",
+    "cmsg_id": "MSG_101",
+    "block_order": "42",
+    "block_type": "list",
+    "text": "- 30 to 45 meters of safety-compliant cable\n - Built-in energy metering\n - Extends private 16A or 3.3 kW AC sockets\n - Enables charging from upper floors (4th or 5th floor)",
+    "src": "",
+    "alt": "",
+    "meta_json": "{\"\"style\"\": \"\"bullet\"\"}"
+  },
+  {
+    "block_id": "BLK_MSG_101_043",
+    "cmsg_id": "MSG_101",
+    "block_order": "43",
+    "block_type": "heading_3",
+    "text": "Portability and Smart Usage",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_044",
+    "cmsg_id": "MSG_101",
+    "block_order": "44",
+    "block_type": "list",
+    "text": "- Portable and easy to store in the vehicle\n - Suitable for roadside shops, hotels, or travel charging\n - Provides precise energy consumption readings",
+    "src": "",
+    "alt": "",
+    "meta_json": "{\"\"style\"\": \"\"bullet\"\"}"
+  },
+  {
+    "block_id": "BLK_MSG_101_045",
+    "cmsg_id": "MSG_101",
+    "block_order": "45",
+    "block_type": "divider",
+    "text": "",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_046",
+    "cmsg_id": "MSG_101",
+    "block_order": "46",
+    "block_type": "heading_2",
+    "text": "Key Summary of Audi Q6 e-tron Home Charging Options",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_047",
+    "cmsg_id": "MSG_101",
+    "block_order": "47",
+    "block_type": "table",
+    "text": "| Charging Method | Max Power Output | Approx. Charging Time (83 kWh) | Pros | Cons / Notes |\n |---------------|----------------|-------------------------------|------|--------------|\n | Standard 16A Socket | 3.3 kW (Portable Charger) | ~25 hours | Simple, uses included equipment | Very slow; security risks; no energy tracking |\n | Massive Mobility 3.3 kW AC Charger | 3.3 kW (Wall-mounted) | ~25 hours | Safe, secure, remote control, energy tracking | Still slow |\n | Massive Mobility 7.4 kW AC Charger | 7.4 kW | ~11–11.5 hours | Fast, premium, secure, remote operation | 11 kW requires higher electrical capacity |\n | Massive Mobility Portable Extension | N/A | Depends on source | Solves distance issues; portable; accurate metering | Requires source socket |",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_048",
+    "cmsg_id": "MSG_101",
+    "block_order": "48",
+    "block_type": "divider",
+    "text": "",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_049",
+    "cmsg_id": "MSG_101",
+    "block_order": "49",
+    "block_type": "heading_2",
+    "text": "Conclusion",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_050",
+    "cmsg_id": "MSG_101",
+    "block_order": "50",
+    "block_type": "body",
+    "text": "By utilizing reliable home charging equipment and the Massive Mobility Home Charging Toolkit, you can ensure a safe, smooth, and hassle-free charging experience.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_101_051",
+    "cmsg_id": "MSG_101",
+    "block_order": "51",
+    "block_type": "body",
+    "text": "These chargers, sockets, and extensions eliminate range anxiety and guarantee that a suitable charging solution is always available. Ultimately, this enhances your EV ownership experience, allowing you to remain stress-free and fully supported in all charging scenarios.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "",
+    "cmsg_id": "",
+    "block_order": "",
+    "block_type": "",
+    "text": "",
+    "src": "",
+    "alt": "",
+    "meta_json": ""
+  },
+  {
+    "block_id": "BLK_MSG_102_001",
+    "cmsg_id": "MSG_102",
+    "block_order": "1",
+    "block_type": "heading_1",
+    "text": "BMW i4 Residential Charging Guide",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_002",
+    "cmsg_id": "MSG_102",
+    "block_order": "2",
+    "block_type": "heading_2",
+    "text": "i4 Residential Charging Overview",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_003",
+    "cmsg_id": "MSG_102",
+    "block_order": "3",
+    "block_type": "body",
+    "text": "The BMW i4 is a market leader in the luxury electric sedan segment. Its features include the sporty aesthetic of an electric Gran Coupé, a powerful 81.5 kWh battery pack for high range, and the performance expected from a luxury sports sedan, making it a strong competitor against models like the Audi e-tron GT, the Porsche Taycan, and the Mercedes-Benz EQE.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_004",
+    "cmsg_id": "MSG_102",
+    "block_order": "4",
+    "block_type": "body",
+    "text": "One of the greatest benefits of owning an electric vehicle is the remarkably low operational cost. The monthly running expenditure for an EV is typically 4 to 5x lower than for a comparable gasoline vehicle. Other advantages include enhanced energy efficiency, high torque output, reduced maintenance needs, a contemporary look, and environmentally cleaner operation.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_005",
+    "cmsg_id": "MSG_102",
+    "block_order": "5",
+    "block_type": "body",
+    "text": "A key convenience of EV ownership is the ability to recharge the vehicle at home. This eliminates the need for frequent trips to fuel stations, waiting in lines, or concerns over fluctuating fuel prices or ethanol content. An EV can be conveniently charged at your residence, much like a mobile phone or laptop. This feature significantly enhances the comfort and ease of the ownership experience.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_006",
+    "cmsg_id": "MSG_102",
+    "block_order": "6",
+    "block_type": "body",
+    "text": "Let’s explore the different methods for charging your BMW i4 at home.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_007",
+    "cmsg_id": "MSG_102",
+    "block_order": "7",
+    "block_type": "divider",
+    "text": "",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_008",
+    "cmsg_id": "MSG_102",
+    "block_order": "8",
+    "block_type": "heading_2",
+    "text": "Charging the BMW i4 with a Standard 16A Outlet",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_009",
+    "cmsg_id": "MSG_102",
+    "block_order": "9",
+    "block_type": "body",
+    "text": "The BMW i4 is typically supplied with a portable 3.3 kW charging unit. This unit is essentially an adapter with a standard 3-pin plug. This plug can be connected to any 16A household socket, commonly used for high-power appliances such as air conditioners and water heaters.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_010",
+    "cmsg_id": "MSG_102",
+    "block_order": "10",
+    "block_type": "body",
+    "text": "Simply connecting the 3.3 kW charger to the 16A socket initiates the charging process.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_011",
+    "cmsg_id": "MSG_102",
+    "block_order": "11",
+    "block_type": "heading_3",
+    "text": "Charging Time Calculation",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_012",
+    "cmsg_id": "MSG_102",
+    "block_order": "12",
+    "block_type": "body",
+    "text": "For the 81.5 kWh battery, a full charge (0% to 100%) will take approximately 25 hours. This is because the charger draws only 3.3 kW of power per hour, and to fill 81.5 kWh of energy:",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_013",
+    "cmsg_id": "MSG_102",
+    "block_order": "13",
+    "block_type": "body",
+    "text": "81.5 kWh ÷ 3.3 kW ≈ 25 hours",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_014",
+    "cmsg_id": "MSG_102",
+    "block_order": "14",
+    "block_type": "heading_3",
+    "text": "Practical Considerations",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_015",
+    "cmsg_id": "MSG_102",
+    "block_order": "15",
+    "block_type": "list",
+    "text": "- The 16A socket must be located within a usable distance of the vehicle.\n - Ground-floor residents may find this setup convenient.\n - High-rise apartment residents may require professional wiring extensions and a dedicated 16A socket near the parking space.\n - Always use safety-compliant wiring such as 3 mm thick, 3-core Polycab wire with an MCB installed.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{\"\"style\"\": \"\"bullet\"\"}"
+  },
+  {
+    "block_id": "BLK_MSG_102_016",
+    "cmsg_id": "MSG_102",
+    "block_order": "16",
+    "block_type": "heading_3",
+    "text": "Limitations of Standard 16A Charging",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_017",
+    "cmsg_id": "MSG_102",
+    "block_order": "17",
+    "block_type": "list",
+    "text": "- High risk of unauthorized use or electricity theft.\n - No accurate tracking of EV-specific energy consumption.\n - Safety concerns during heavy rain, thunderstorms, or lightning.\n - No immediate access to manually switch off charging during emergencies.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{\"\"style\"\": \"\"bullet\"\"}"
+  },
+  {
+    "block_id": "BLK_MSG_102_018",
+    "cmsg_id": "MSG_102",
+    "block_order": "18",
+    "block_type": "body",
+    "text": "For these reasons, installing a dedicated 3.3 kW AC charging socket is a safer alternative.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_019",
+    "cmsg_id": "MSG_102",
+    "block_order": "19",
+    "block_type": "divider",
+    "text": "",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_020",
+    "cmsg_id": "MSG_102",
+    "block_order": "20",
+    "block_type": "heading_2",
+    "text": "Charging the BMW i4 with a Massive Mobility 3.3 kW AC Charger",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_021",
+    "cmsg_id": "MSG_102",
+    "block_order": "21",
+    "block_type": "body",
+    "text": "The 3.3 kW AC charger is a custom-engineered EV charging point designed to prioritize security, functionality, emergency response, and efficiency.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_022",
+    "cmsg_id": "MSG_102",
+    "block_order": "22",
+    "block_type": "body",
+    "text": "The Massive Mobility 3.3 kW AC charging unit provides a secure 16A outlet that can be remotely managed using a mobile application. Your smartphone effectively becomes the remote control for the charger.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_023",
+    "cmsg_id": "MSG_102",
+    "block_order": "23",
+    "block_type": "heading_3",
+    "text": "Smart Features",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_024",
+    "cmsg_id": "MSG_102",
+    "block_order": "24",
+    "block_type": "list",
+    "text": "- Real-time electricity consumption tracking\n - Voltage monitoring\n - Charging session history\n - Data insights to optimize charging habits",
+    "src": "",
+    "alt": "",
+    "meta_json": "{\"\"style\"\": \"\"bullet\"\"}"
+  },
+  {
+    "block_id": "BLK_MSG_102_025",
+    "cmsg_id": "MSG_102",
+    "block_order": "25",
+    "block_type": "heading_3",
+    "text": "Cost Control Benefits",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_026",
+    "cmsg_id": "MSG_102",
+    "block_order": "26",
+    "block_type": "body",
+    "text": "During power outages, apartment generators often charge electricity at 2 to 3x the normal rate. With remote control functionality, charging can be scheduled only when cost-effective power is available.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_027",
+    "cmsg_id": "MSG_102",
+    "block_order": "27",
+    "block_type": "body",
+    "text": "This solution represents the safest way to charge your EV at home using a 3.3 kW setup.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_028",
+    "cmsg_id": "MSG_102",
+    "block_order": "28",
+    "block_type": "divider",
+    "text": "",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_029",
+    "cmsg_id": "MSG_102",
+    "block_order": "29",
+    "block_type": "heading_2",
+    "text": "Charging the BMW i4 with a Massive Mobility 7.4 kW AC Charger",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_030",
+    "cmsg_id": "MSG_102",
+    "block_order": "30",
+    "block_type": "body",
+    "text": "The Massive Mobility 7.4 kW AC charger operates similarly to the 3.3 kW model but delivers significantly faster charging.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_031",
+    "cmsg_id": "MSG_102",
+    "block_order": "31",
+    "block_type": "body",
+    "text": "With a maximum output of 7.4 kW, the BMW i4 can be charged in approximately 11 hours for the 81.5 kWh battery. The vehicle supports up to 11 kW AC charging, which could reduce charging time to approximately 7.5 hours with higher-capacity hardware and electrical infrastructure.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_032",
+    "cmsg_id": "MSG_102",
+    "block_order": "32",
+    "block_type": "heading_3",
+    "text": "Hardware and Connection",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_033",
+    "cmsg_id": "MSG_102",
+    "block_order": "33",
+    "block_type": "list",
+    "text": "- Permanently wall-mounted near the parking space\n - Long CCS2 charging connector plugs directly into the vehicle",
+    "src": "",
+    "alt": "",
+    "meta_json": "{\"\"style\"\": \"\"bullet\"\"}"
+  },
+  {
+    "block_id": "BLK_MSG_102_034",
+    "cmsg_id": "MSG_102",
+    "block_order": "34",
+    "block_type": "heading_3",
+    "text": "Remote Control and Security",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_035",
+    "cmsg_id": "MSG_102",
+    "block_order": "35",
+    "block_type": "list",
+    "text": "- Smartphone-controlled operation\n - Authorization-based activation prevents energy theft\n - Remote emergency shutdown capability during adverse weather",
+    "src": "",
+    "alt": "",
+    "meta_json": "{\"\"style\"\": \"\"bullet\"\"}"
+  },
+  {
+    "block_id": "BLK_MSG_102_036",
+    "cmsg_id": "MSG_102",
+    "block_order": "36",
+    "block_type": "body",
+    "text": "In summary, the Massive Mobility 7.4 kW AC charger delivers a seamless, secure, convenient, and premium charging experience while optimizing energy consumption.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_037",
+    "cmsg_id": "MSG_102",
+    "block_order": "37",
+    "block_type": "divider",
+    "text": "",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_038",
+    "cmsg_id": "MSG_102",
+    "block_order": "38",
+    "block_type": "heading_2",
+    "text": "Charging the BMW i4 at Home with Massive Mobility Portable Charging Extension",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_039",
+    "cmsg_id": "MSG_102",
+    "block_order": "39",
+    "block_type": "body",
+    "text": "The Massive Mobility EV charging extension is a specialized hardware solution designed to address complex residential charging scenarios.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_040",
+    "cmsg_id": "MSG_102",
+    "block_order": "40",
+    "block_type": "heading_3",
+    "text": "Key Capabilities",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_041",
+    "cmsg_id": "MSG_102",
+    "block_order": "41",
+    "block_type": "list",
+    "text": "- 30 to 45 meters of safety-compliant cable\n - Built-in energy metering\n - Extends private 16A or 3.3 kW AC sockets\n - Enables charging from upper floors such as the 4th or 5th floor",
+    "src": "",
+    "alt": "",
+    "meta_json": "{\"\"style\"\": \"\"bullet\"\"}"
+  },
+  {
+    "block_id": "BLK_MSG_102_042",
+    "cmsg_id": "MSG_102",
+    "block_order": "42",
+    "block_type": "heading_3",
+    "text": "Portability and Smart Usage",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_043",
+    "cmsg_id": "MSG_102",
+    "block_order": "43",
+    "block_type": "list",
+    "text": "- Portable and easy to store in the vehicle\n - Suitable for roadside shops, hotels, or travel charging\n - Provides precise energy consumption readings",
+    "src": "",
+    "alt": "",
+    "meta_json": "{\"\"style\"\": \"\"bullet\"\"}"
+  },
+  {
+    "block_id": "BLK_MSG_102_044",
+    "cmsg_id": "MSG_102",
+    "block_order": "44",
+    "block_type": "divider",
+    "text": "",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_045",
+    "cmsg_id": "MSG_102",
+    "block_order": "45",
+    "block_type": "heading_2",
+    "text": "Key Summary of BMW i4 Home Charging Options",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_046",
+    "cmsg_id": "MSG_102",
+    "block_order": "46",
+    "block_type": "table",
+    "text": "| Charging Method | Max Power Output | Approx. Charging Time (81.5 kWh) | Pros | Cons / Notes |\n |----------------|----------------|----------------------------------|------|--------------|\n | Standard 16A Socket | 3.3 kW (Portable Charger) | ~25 hours | Simple, uses included equipment | Very slow; security risks; no energy tracking |\n | Massive Mobility 3.3 kW AC Charger | 3.3 kW (Wall-mounted) | ~25 hours | Safe, secure, remote control, energy tracking | Still very slow for this battery size |\n | Massive Mobility 7.4 kW AC Charger | 7.4 kW | ~11 hours | Fast, premium, secure, remote operation | 11 kW requires higher electrical capacity |\n | Massive Mobility Portable Extension | N/A | Depends on source | Solves distance issues; portable; accurate metering | Requires a source socket |",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_047",
+    "cmsg_id": "MSG_102",
+    "block_order": "47",
+    "block_type": "divider",
+    "text": "",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_048",
+    "cmsg_id": "MSG_102",
+    "block_order": "48",
+    "block_type": "heading_2",
+    "text": "Conclusion",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_049",
+    "cmsg_id": "MSG_102",
+    "block_order": "49",
+    "block_type": "body",
+    "text": "By utilizing reliable home charging equipment and the Massive Mobility Home Charging Toolkit, you can ensure a safe, smooth, and hassle-free charging experience.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  },
+  {
+    "block_id": "BLK_MSG_102_050",
+    "cmsg_id": "MSG_102",
+    "block_order": "50",
+    "block_type": "body",
+    "text": "These chargers, sockets, and extensions eliminate range anxiety and ensure that a suitable charging solution is always available. Ultimately, this enhances your EV ownership experience, allowing you to remain stress-free and fully supported in all charging scenarios.",
+    "src": "",
+    "alt": "",
+    "meta_json": "{}"
+  }
+]
+}

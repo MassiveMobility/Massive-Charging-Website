@@ -1,0 +1,615 @@
+/* ==========================================================================
+   MASSIVE CHARGING — DESIGN SYSTEM v1.0 (FINAL)
+   Scope: Applies ONLY inside elements with class="massive-theme"
+   Scale: 8px Grid
+   Font: Inter
+   ========================================================================== */
+
+.massive-theme {
+  /* ============================
+     0) FONTS
+  ============================ */
+  --font-sans: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --font-serif: 'Georgia', 'Cambria', 'Times New Roman', serif; /* Added for Editorial Concept */
+
+  /* ============================
+     1) CANVAS (Backgrounds)
+  ============================ */
+  --bg-page: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-tech-wash: #F1F5F9;
+  --bg-infra-navy: #0F172A;
+  --bg-overlay-dark: rgba(2, 6, 23, 0.7);
+
+  /* ============================
+     2) INK (Text)
+  ============================ */
+  --text-ink: #020617;        /* Slate 950 */
+  --text-ink-light: #334155;  /* Slate 700 */
+  --text-ink-muted: #64748B;  /* Slate 500 */
+  --text-inverse: #FFFFFF;
+  --text-inverse-muted: #CBD5E1;
+
+  /* ============================
+     3) FLOW (Actions)
+  ============================ */
+  --action-primary: #059669;  /* Emerald 600 */
+  --action-hover: #047857;    /* Emerald 700 */
+  --bg-flow-light: #D1FAE5;   /* Emerald 100 */
+
+  /* ============================
+     4) INFRA (Tech Accent)
+  ============================ */
+  --accent-tech: #0EA5E9;     /* Sky 500 */
+  --accent-gold: #EAB308;     /* Yellow 500 (VIP) */
+
+  /* ============================
+     5) UTILITY (Borders)
+  ============================ */
+  --border-subtle: #E2E8F0;   /* Slate 200 */
+  --border-focus: #0EA5E9;
+  --border-width-1: 1px;
+  --border-width-2: 2px;
+
+  /* ============================
+     6) SPACING (8px Scale)
+  ============================ */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+  /* ============================
+     7) RADII
+  ============================ */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 9999px;
+
+  /* ============================
+     8) SHADOWS (Elevation)
+  ============================ */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-glow-flow: 0 4px 14px 0 rgba(5, 150, 105, 0.39);
+  --shadow-glow-tech: 0 0 20px rgba(14, 165, 233, 0.4);
+
+  /* ============================
+     9) LAYOUT
+  ============================ */
+  --container-max: 1280px;
+  --gutter: var(--space-4);
+  --section-pad-y: var(--space-16);
+  --header-height: 80px;
+
+  /* ============================
+     10) TYPOGRAPHY (Fluid Scale)
+  ============================ */
+  --text-xs: 0.75rem;    /* 12px */
+  --text-sm: 0.875rem;   /* 14px */
+  --text-base: 1rem;     /* 16px */
+  --text-lg: 1.125rem;   /* 18px */
+  --text-xl: 1.25rem;    /* 20px */
+  --text-2xl: 1.5rem;    /* 24px */
+  --text-3xl: 2rem;      /* 32px */
+  --text-4xl: 2.5rem;    /* 40px */
+  --text-5xl: 3.5rem;    /* 56px */
+  --text-hero: 4.5rem;   /* 72px */
+}
+
+/* ============================
+   GLOBAL RESETS
+============================ */
+.massive-theme {
+  font-family: var(--font-sans);
+  color: var(--text-ink);
+  background-color: var(--bg-page);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.massive-theme *, 
+.massive-theme *::before, 
+.massive-theme *::after {
+  box-sizing: border-box;
+}
+
+.massive-theme h1, .massive-theme h2, .massive-theme h3, .massive-theme p {
+  margin: 0;
+}
+
+.massive-theme img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============================
+   LAYOUT PRIMITIVES
+============================ */
+
+/* The Container (Max Width Wrapper) */
+.m-container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+  position: relative;
+  z-index: 10;
+}
+
+/* Section Padding */
+.m-section {
+  padding-top: var(--section-pad-y);
+  padding-bottom: var(--section-pad-y);
+  position: relative;
+}
+
+/* The Grid (12 Col) */
+.m-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-6);
+}
+
+/* Flex Utilities */
+.m-flex { display: flex; }
+.m-flex-col { flex-direction: column; }
+.m-flex-center { align-items: center; justify-content: center; }
+.m-items-center { align-items: center; }
+.m-justify-between { justify-content: space-between; }
+.m-gap-2 { gap: var(--space-2); }
+.m-gap-4 { gap: var(--space-4); }
+.m-gap-6 { gap: var(--space-6); }
+
+/* ============================
+   TYPOGRAPHY CLASSES
+============================ */
+
+.t-hero {
+  font-size: var(--text-hero);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.t-h1 {
+  font-size: var(--text-4xl);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.t-h2 {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.t-h3 {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.t-body-lg {
+  font-size: var(--text-lg);
+  color: var(--text-ink-muted);
+}
+
+.t-body {
+  font-size: var(--text-base);
+  color: var(--text-ink-light);
+}
+
+.t-small {
+  font-size: var(--text-sm);
+  color: var(--text-ink-muted);
+}
+
+/* ============================
+   UI COMPONENTS (ATOMS)
+============================ */
+
+/* --- Buttons --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: var(--text-base);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+  border: none;
+  text-decoration: none;
+}
+
+.btn:active { transform: scale(0.98); }
+
+.btn-primary {
+  background-color: var(--action-primary);
+  color: white;
+  box-shadow: var(--shadow-glow-flow);
+}
+.btn-primary:hover { background-color: var(--action-hover); transform: translateY(-1px); }
+
+.btn-ghost {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.btn-ghost:hover { background-color: rgba(255, 255, 255, 0.2); }
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--text-ink);
+  color: var(--text-ink);
+}
+.btn-outline:hover { background: var(--bg-tech-wash); }
+
+.btn-gradient {
+  background: linear-gradient(135deg, #2563EB, #9333EA);
+  color: white;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+}
+
+.btn-link {
+  background: none;
+  padding: 0;
+  color: var(--accent-tech);
+  font-weight: 600;
+}
+.btn-link:hover { text-decoration: underline; }
+
+/* --- Badges / Pills --- */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.pill-accent { background: var(--action-primary); color: white; }
+.pill-tech { border: 1px solid var(--accent-tech); color: var(--accent-tech); }
+.pill-gold { background: var(--bg-infra-navy); color: var(--accent-gold); border: 1px solid var(--accent-gold); }
+
+/* --- Lists (Checkmarks) --- */
+.list-check-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+  font-size: var(--text-base);
+  color: var(--text-ink);
+}
+.list-icon-box {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--bg-flow-light);
+  color: var(--action-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================
+   META DESIGN CONCEPTS (Layouts)
+============================ */
+
+/* --- CONCEPT A: IMMERSIVE GATEWAY (Hero) --- */
+.concept-a {
+  height: 100vh;
+  min-height: 700px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: var(--text-inverse);
+  background-color: var(--bg-infra-navy);
+  overflow: hidden;
+}
+
+.concept-a-media-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.concept-a-media-layer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.concept-a-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(15,23,42,0.9) 0%, rgba(15,23,42,0.4) 100%);
+  z-index: 1;
+}
+
+.concept-a-content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+
+/* --- CONCEPT B: SPLIT SCREEN (Product Banner) --- */
+.concept-b {
+  background-color: var(--bg-page);
+}
+
+.concept-b-card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border-subtle);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.concept-b-content-side {
+  padding: var(--space-12);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.concept-b-media-side {
+  background-color: var(--bg-tech-wash);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-12);
+}
+
+/* --- CONCEPT C: ORBIT (App Features) --- */
+.concept-c {
+  background-color: var(--bg-infra-navy);
+  color: var(--text-inverse);
+  text-align: center;
+  overflow: hidden;
+}
+
+.concept-c-phone-frame {
+  width: 280px;
+  height: 560px;
+  background: #000;
+  border-radius: 40px;
+  border: 6px solid #334155;
+  margin: 0 auto;
+  box-shadow: 0 0 40px rgba(14, 165, 233, 0.2);
+  overflow: hidden;
+}
+
+.concept-c-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px 1fr;
+  align-items: center;
+  gap: var(--space-8);
+  margin-top: var(--space-10);
+}
+
+.concept-c-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+  text-align: left;
+}
+/* Reversing the right side items for symmetry */
+.concept-c-right .concept-c-item {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+/* --- CONCEPT D: ROI (Business) --- */
+.concept-d {
+  background-color: #1E3A8A; /* Corporate Blue */
+  color: white;
+}
+.concept-d-stat-card {
+  background: white;
+  color: var(--text-ink);
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
+  transform: rotate(2deg);
+  box-shadow: var(--shadow-xl);
+  text-align: center;
+}
+.concept-d-value {
+  font-size: var(--text-4xl);
+  font-weight: 800;
+  background: linear-gradient(to right, #2563EB, #1E40AF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- CONCEPT E: EDITORIAL (Guide) --- */
+.concept-e-wrapper {
+  margin-top: -60px; /* Overlap effect */
+  position: relative;
+  z-index: 20;
+}
+.concept-e-card {
+  background: #F5F5F4; /* Stone 100 */
+  border-radius: var(--radius-lg);
+  padding: var(--space-10);
+  box-shadow: var(--shadow-lg);
+  border-top: 4px solid #78716C;
+  display: flex;
+  align-items: center;
+  gap: var(--space-10);
+}
+.concept-e-title {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--text-3xl);
+  color: #44403C;
+}
+
+/* --- CONCEPT F: VIP (Pro Member) --- */
+.concept-f {
+  background-color: #000;
+  border-top: 1px solid #451a03;
+}
+.concept-f-border {
+  padding: 4px;
+  background: linear-gradient(135deg, #713f12, #eab308, #713f12);
+  border-radius: var(--radius-xl);
+  max-width: 900px;
+  margin: 0 auto;
+}
+.concept-f-inner {
+  background: #0f0f0f;
+  border-radius: 20px;
+  padding: var(--space-12);
+  text-align: center;
+}
+.concept-f h2 {
+  font-family: var(--font-serif);
+  background: linear-gradient(to right, #fde047, #eab308);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ============================
+   RESPONSIVE BREAKPOINTS
+============================ */
+
+/* Tablet (md) */
+@media (max-width: 1024px) {
+  .massive-theme { --text-hero: 3.5rem; }
+  .concept-b-card { grid-template-columns: 1fr; }
+  .concept-b-media-side { order: -1; padding: var(--space-8); }
+  .concept-c-grid { grid-template-columns: 1fr; }
+  .concept-c-phone-frame { margin-bottom: var(--space-8); }
+}
+
+/* Mobile (sm) */
+@media (max-width: 640px) {
+  .massive-theme { 
+    --text-hero: 2.5rem; 
+    --text-4xl: 2rem;
+    --section-pad-y: var(--space-10);
+  }
+  
+  .m-grid { grid-template-columns: 1fr; }
+  
+  .concept-a { min-height: 100svh; } /* Use svh for mobile browsers */
+  .concept-e-card { flex-direction: column; text-align: center; }
+  
+  .btn { width: 100%; } /* Full width buttons on mobile */
+  
+  /* Reset flex directions for stacking */
+  .concept-b-card, .concept-d .m-grid { display: flex; flex-direction: column; }
+}
+
+/* ============================
+   PRICING CONCEPTS (Add to MassiveSystem.css)
+============================ */
+
+.concept-pricing {
+  background-color: var(--bg-page);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  align-items: stretch; /* Make cards same height */
+}
+
+.pricing-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Featured / Popular Card (Pro) */
+.pricing-card.featured {
+  border: 2px solid var(--action-primary);
+  background: #F0FDF4; /* Very light green tint */
+  box-shadow: var(--shadow-glow-flow);
+}
+
+/* Elite Card */
+.pricing-card.elite {
+  background: var(--bg-infra-navy);
+  color: white;
+  border: 1px solid var(--accent-gold);
+}
+
+/* Typography inside cards */
+.price-box {
+  margin: var(--space-6) 0;
+}
+
+.price-main {
+  font-size: var(--text-4xl);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.price-original {
+  text-decoration: line-through;
+  color: var(--text-ink-muted);
+  font-size: var(--text-lg);
+  margin-right: var(--space-2);
+}
+
+.price-period {
+  font-size: var(--text-base);
+  color: var(--text-ink-muted);
+  font-weight: 400;
+}
+
+/* Elite specific text overrides */
+.pricing-card.elite .price-period, 
+.pricing-card.elite .t-body {
+  color: var(--text-inverse-muted);
+}
+.pricing-card.elite .price-original {
+  color: #94A3B8;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .pricing-grid {
+    grid-template-columns: 1fr; /* Stack on mobile */
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}

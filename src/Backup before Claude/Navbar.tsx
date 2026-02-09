@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 /* Import Atoms */
@@ -9,6 +9,20 @@ import Container from '../atoms/Container';
 import MCNLogo from '../../assets/MCN Logo.png'; 
 
 const Navbar = () => {
+  const [showPopout, setShowPopout] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  // Close popout when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setShowPopout(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   return (
     /* OUTER WRAPPER */
     <Surface style={{ 
@@ -69,10 +83,33 @@ const Navbar = () => {
               <Text style={{ color: '#FFFFFF', fontFamily: 'inherit', fontSize: '16px', fontWeight: 400 }}>Plans & Offers</Text>
             </Link>
 
-            {/* 🔄 UPDATED: Direct link to Charging Guide (removed dropdown) */}
-            <Link to="/charging-guide" style={{ textDecoration: 'none' }}>
-              <Text style={{ color: '#FFFFFF', fontFamily: 'inherit', fontSize: '16px', fontWeight: 400 }}>EV Charging Guide</Text>
-            </Link>
+            {/* Guide Section with Popout */}
+            <div ref={menuRef} style={{ position: 'relative' }}>
+              <div 
+                style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px' }} 
+                onClick={() => setShowPopout(!showPopout)}
+              >
+                <Text style={{ color: '#FFFFFF', fontFamily: 'inherit', fontSize: '16px', fontWeight: 400 }}>EV Charging Guide</Text>
+                {/* Optional: Add a small chevron icon here if desired */}
+              </div>
+              
+              {showPopout && (
+                <Surface style={{
+                  position: 'absolute', top: '100%', right: 0, width: '260px',
+                  display: 'flex', flexDirection: 'column', paddingBlock: '12px', paddingInline: '16px',
+                  marginTop: '12px', borderRadius: '8px', backgroundColor: '#FFFFFF',
+                  boxShadow: '0px 10px 15px -3px rgba(0,0,0,0.1)', zIndex: 110, gap: '12px'
+                }}>
+                   <Link to="/charging-guide" style={{ textDecoration: 'none' }} onClick={() => setShowPopout(false)}>
+                    <Text size="3" weight="600" style={{color: '#000'}}>Guiding Tool</Text>
+                  </Link>
+
+                  <Link to="/ev-charging-guide" style={{ textDecoration: 'none' }} onClick={() => setShowPopout(false)}>
+                    <Text size="3" style={{color: '#000'}}>EV Cars Charging Guide</Text>
+                  </Link>
+                </Surface>
+              )}
+            </div>
 
             <Link to="/shop" style={{ textDecoration: 'none' }}>
               <Text style={{ color: '#FFFFFF', fontFamily: 'inherit', fontSize: '16px', fontWeight: 400 }}>Shop</Text>

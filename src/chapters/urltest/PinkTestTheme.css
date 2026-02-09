@@ -1,0 +1,75 @@
+/* src/chapters/urltest/PinkTestTheme.css */
+
+:root {
+  /* --- 1. THE VALS (Design Tokens) --- */
+  
+  /* Colors */
+  --pink-bg: #ff00ff;        /* Hot Pink */
+  --pink-soft: #ffccff;      /* Light Pink for contrast */
+  --black-text: #000000;
+  
+  /* Scales */
+  --scale-unit: 8px;         /* The 8px Scale */
+  
+  /* Effects */
+  --border-thick: 4px solid var(--black-text);
+  --glow-effect: 0 0 15px var(--pink-bg);
+}
+
+/* --- 2. THE META DESIGN CLASSES --- */
+
+/* The Page Wrapper */
+.pink-wrapper {
+  background-color: var(--black-text); /* Dark backdrop to make pink pop */
+  color: var(--pink-bg);
+  min-height: 100vh;
+  font-family: 'Courier New', monospace; /* Techy font */
+  padding: calc(var(--scale-unit) * 4); /* 32px padding */
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--scale-unit) * 4);
+}
+
+/* Common Container Styles */
+.pink-box {
+  border: var(--border-thick);
+  padding: calc(var(--scale-unit) * 3); /* 24px */
+  margin-bottom: calc(var(--scale-unit) * 2);
+  transition: all 0.3s ease;
+}
+
+/* STYLE A: The Banner (Click Me) */
+.pink-banner {
+  background-color: var(--pink-bg);
+  color: var(--black-text);
+  cursor: pointer;
+}
+
+/* Hover Effect for Banner */
+.pink-banner:hover {
+  transform: scale(1.05); /* Grow slightly */
+  box-shadow: 0 0 25px var(--pink-bg); /* Massive Glow */
+  background-color: white; /* Flash white on hover */
+}
+
+/* STYLE B: The Non-Banner (Don't Click Me) */
+.pink-non-banner {
+  background-color: transparent;
+  color: var(--pink-bg);
+  border-style: dashed; /* Different border to signify "Non-Banner" */
+  opacity: 0.7;
+}
+
+.pink-non-banner:hover {
+  /* No Glow, No Scale - just a subtle shake or color change */
+  color: white;
+  border-color: white;
+}
+
+/* Icon Styling */
+.pink-icon {
+  width: calc(var(--scale-unit) * 6);
+  height: calc(var(--scale-unit) * 6);
+  margin-bottom: var(--scale-unit);
+  display: block;
+}
