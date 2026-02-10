@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Public+Sans:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: locked base to activate your schema defaults */
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+
+  body {
+    margin: 0;
+    background: theme(colors.mcn.bg);
+    color: theme(colors.mcn.text.primary);
+  }
+
+  a {
+    color: theme(colors.mcn.blue);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}

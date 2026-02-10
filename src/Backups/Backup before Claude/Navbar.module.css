@@ -1,0 +1,91 @@
+/* The Full-Width Black Bar */
+.navbarWrapper {
+  display: flex;
+  width: 100%;
+  padding: 12px 0; /* Vertical 12px from Figma */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #000000;
+}
+
+/* The 1296px Inner Content */
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1296px;
+  padding: 8px 48px; /* Your 48px horizontal extraction */
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Logo Section */
+.logoBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logoIcon {
+  display: flex;
+  width: 40px; /* Base size for aspect ratio */
+  aspect-ratio: 1/1;
+  padding: 8px 0 8px 7px;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.1); /* Necessary for blur visibility */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.brandText {
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  /* width: 116.786px; - I recommend leaving this auto for flexibility */
+}
+
+/* Menu Section */
+.menuItems {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menuLink {
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Button */
+.exploreButton {
+  display: flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: #39BD8A;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.exploreButton:hover {
+  opacity: 0.9;
+}
+
+.buttonText {
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}

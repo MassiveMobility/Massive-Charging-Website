@@ -12,7 +12,6 @@ import Surface from './components/atoms/Surface';
 
 /* Pages & Components */
 /* Note: We are now using EVHomePage as the main Hero/Landing */
-import ThemeSamplerPage from "./pages/ThemeSamplerPage";
 import EVHomePage from './chapters/urltest/EVHomePage';
 
 import { EVChargingGuidePage } from './components/pages/EVChargingGuidePage';
@@ -90,7 +89,6 @@ function App() {
             {/* --- MAIN HOME PAGE --- */}
             {/* Replaced <Hero /> with your new Design System Page */}
             <Route path="/" element={<EVHomePage />} />
-            <Route path="/themesampler" element={<ThemeSamplerPage />} />
             
             
             {/* --- EXISTING ROUTES --- */}

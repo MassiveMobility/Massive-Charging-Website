@@ -5,14 +5,12 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 /* Layout Molecules */
 import Navbar from './components/layout/Navbar'; 
 import { Footer } from './components/layout/Footer';
-import ScrollToTop from './components/layout/ScrollToTop'; // ← NEW: Import ScrollToTop
 
 /* Atoms */
 import Surface from './components/atoms/Surface';
 
 /* Pages & Components */
 /* Note: We are now using EVHomePage as the main Hero/Landing */
-import ThemeSamplerPage from "./pages/ThemeSamplerPage";
 import EVHomePage from './chapters/urltest/EVHomePage';
 
 import { EVChargingGuidePage } from './components/pages/EVChargingGuidePage';
@@ -79,7 +77,6 @@ function App() {
 
   return (
     <Router>
-      <ScrollToTop /> {/* ← NEW: Add ScrollToTop component */}
       <Surface variant="base" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
         
         <Navbar />
@@ -90,7 +87,6 @@ function App() {
             {/* --- MAIN HOME PAGE --- */}
             {/* Replaced <Hero /> with your new Design System Page */}
             <Route path="/" element={<EVHomePage />} />
-            <Route path="/themesampler" element={<ThemeSamplerPage />} />
             
             
             {/* --- EXISTING ROUTES --- */}
