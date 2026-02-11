@@ -33,6 +33,16 @@ import PinkTestPage from './chapters/urltest/PinkTestPage';
 import UPIChargingPage from './chapters/urltest/UPIChargingPage';
 import PricingPage from './chapters/urltest/PricingPage';
 
+import StationBizHomePage from "./pages/Station_Biz_HomePage";
+import EvChargingStationHomePage from "./pages/Charging-Station_Business/ev-charging-station-home-page";
+import Master_Form from "./pages/Master_Form";
+
+import CPOTypeMenuPage from "./pages/Charging-Station_Business/CPO_Types/CPOTypeMenuPage";
+import CPOTypeIndividualPage from "./pages/Charging-Station_Business/CPO_Types/CPOTypeIndividualPage";
+import CPOTypeIndexPage from "./pages/Charging-Station_Business/CPO_Types/CPOTypeIndexPage";
+
+
+
 /* --- 2. THE DATASETS (Fuel) --- */
 import { 
   landingContent,             // 1. Home Owner
@@ -127,6 +137,34 @@ function App() {
               } 
             />
             {/* --- END NEW ROUTES --- */}
+
+            <Route
+  path="/charging-station-business"
+  element={<StationBizHomePage />}
+/>
+<Route
+  path="/ev-charging-station-business"
+  element={<EvChargingStationHomePage />}
+/>
+
+  <Route
+    path="/cpo"
+    element={<CPOTypeIndexPage />}
+  />
+  <Route
+  path="/cpo/*"
+  element={<CPOTypeIndividualPage />}
+/>
+
+<Route
+          path="/charging-station-biz"
+          element={<CPOTypeMenuPage />}
+        />
+        <Route path="/cpo/:segment/:cpoId" element={<CPOTypeIndividualPage />} />
+
+ 
+        {/* View the form here */}
+        <Route path="/get-chargers" element={<Master_Form />} />
 
 
             {/* --- DYNAMIC LANDING PAGES (11 SCENARIOS) --- */}

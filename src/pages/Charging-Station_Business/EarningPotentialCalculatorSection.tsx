@@ -1,0 +1,14 @@
+import React from "react";
+
+export function EarningPotentialCalculatorSection() {
+  return (
+    <section className="container pb-14">
+      <div className="rounded-mcn-xl border border-mcn-stroke-soft bg-mcn-surface p-6 shadow-mcn-soft">
+        <h2 className="font-heading text-mt-up-3">Earning Potential Calculator</h2>
+        <p className="mt-2 text-mt-base text-mcn-text-muted">
+          TODO: Build later — calculator UI + assumptions + payout outputs.
+        </p>
+      </div>
+    </section>
+  );
+}

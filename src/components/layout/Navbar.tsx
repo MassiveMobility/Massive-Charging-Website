@@ -10,7 +10,7 @@ export default function Navbar() {
   const location = useLocation();
 
   const CHARGING_GUIDE_ROUTE = "/charging-guide";
-  const BUSINESS_ROUTE = "/ev-charging-business";
+  const BUSINESS_ROUTE = "/ev-charging-station-business";
   const PRICING_ROUTE = "/plans-offers";
 
   const navItems: NavItem[] = useMemo(
