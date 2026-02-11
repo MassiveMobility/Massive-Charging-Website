@@ -1,104 +1,84 @@
 import React from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
-import Container from "../atoms/Container";
-import Text from "../atoms/Text";
-import Surface from "../atoms/Surface";
 
 export const Footer = () => {
   return (
-    <Surface 
-      variant="base" 
-      style={{ 
-        borderTop: '1px solid var(--stroke-subtle)', 
-        marginTop: 'auto',
-        paddingBlock: 'var(--space-8)' 
-      }}
-    >
-      <Container>
+    <footer className="mt-auto border-t border-mcn-ink-stroke-soft bg-mcn-ink-bg/80 backdrop-blur-mcn py-16 text-mcn-ink-text-primary">
+      <div className="container mx-auto">
         {/* Main Footer Wrapper */}
-        <div style={{ 
-          display: 'flex', 
-          justifyContent: 'space-between', 
-          gap: 'var(--space-8)',
-          alignItems: 'start'
-        }}>
+        <div className="flex flex-col md:flex-row justify-between gap-12 items-start">
           
           {/* LEFT ZONE: Brand & Contact */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)', flex: '1' }}>
+          <div className="flex flex-col gap-6 flex-1">
             <div>
-              <Text size="4" weight="400" style={{ display: 'block', marginBottom: 'var(--space-1)' }}>
+              <h2 className="text-mt-down-1 font-bold tracking-widest uppercase mb-2">
                 Massive Charging Network
-              </Text>
-              <Text size="2" color="muted" style={{ display: 'block', lineHeight: 'var(--lh-2)', maxWidth: '320px' }}>
+              </h2>
+              <p className="text-mt-down-1 text-mcn-ink-text-muted leading-relaxed max-w-xs">
                 Configuring the next-gen infrastructure for seamless electric mobility.
-              </Text>
+              </p>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
+            <div className="flex flex-col gap-3">
               {[
                 { icon: <Mail size={14} />, text: "connect@massivecharging.com", href: "mailto:connect@massivecharging.com" },
                 { icon: <Phone size={14} />, text: "+91 91200300400", href: "tel:+9191200300400" },
                 { icon: <MapPin size={14} />, text: "HQ, Gurugram, India", href: null }
               ].map((item, i) => (
-                <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-2)' }}>
-                   <span style={{ color: 'var(--text-muted)' }}>{item.icon}</span>
+                <div key={i} className="flex items-center gap-3 group">
+                   <span className="text-mcn-ink-text-faint group-hover:text-mcn-red transition-colors">{item.icon}</span>
                    {item.href ? (
-                     <a href={item.href} style={{ textDecoration: 'none' }}>
-                       <Text size="2" color="muted">{item.text}</Text>
+                     <a href={item.href} className="no-underline transition-colors hover:text-mcn-ink-text-primary">
+                       <span className="text-mt-down-1 text-mcn-ink-text-muted">{item.text}</span>
                      </a>
                    ) : (
-                     <Text size="2" color="muted">{item.text}</Text>
+                     <span className="text-mt-down-1 text-mcn-ink-text-muted">{item.text}</span>
                    )}
                 </div>
               ))}
             </div>
           </div>
 
-          {/* RIGHT ZONE: Updated to Right Aligned with 1x smaller gap */}
-          <div style={{ 
-            display: 'flex', 
-            flex: '2', 
-            justifyContent: 'flex-end', // Clump to the right
-            gap: 'var(--space-2)'       // Smaller 16px gap (1x step down from space-4)
-          }}>
+          {/* RIGHT ZONE: Clumped Right */}
+          <div className="flex flex-wrap justify-end gap-8 md:gap-4 flex-[2]">
             
             {/* Column: Products */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)', minWidth: '160px' }}>
-              <Text size="2" weight="700" style={{ textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+            <div className="flex flex-col gap-4 min-w-[140px]">
+              <span className="text-pf-down-2 font-black uppercase tracking-[0.2em] text-mcn-ink-text-faint">
                 Products
-              </Text>
-              <nav style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
+              </span>
+              <nav className="flex flex-col gap-2">
                 {['All Products', '3.3kw AC Socket', '7.4kw Home Charger', '14kw Office Charger'].map(link => (
-                  <a key={link} href="#" style={{ textDecoration: 'none' }}>
-                    <Text size="2" color="muted">{link}</Text>
+                  <a key={link} href="#" className="text-mt-down-1 text-mcn-ink-text-muted hover:text-mcn-ink-text-primary no-underline transition-colors">
+                    {link}
                   </a>
                 ))}
               </nav>
             </div>
 
             {/* Column: Resources */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)', minWidth: '160px' }}>
-              <Text size="2" weight="700" style={{ textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+            <div className="flex flex-col gap-4 min-w-[140px]">
+              <span className="text-pf-down-2 font-black uppercase tracking-[0.2em] text-mcn-ink-text-faint">
                 Resources
-              </Text>
-              <nav style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
+              </span>
+              <nav className="flex flex-col gap-2">
                 {['Charging Guide', 'EV Battery Stats', 'EV Guide'].map(link => (
-                  <a key={link} href="#" style={{ textDecoration: 'none' }}>
-                    <Text size="2" color="muted">{link}</Text>
+                  <a key={link} href="#" className="text-mt-down-1 text-mcn-ink-text-muted hover:text-mcn-ink-text-primary no-underline transition-colors">
+                    {link}
                   </a>
                 ))}
               </nav>
             </div>
 
             {/* Column: Company */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)', minWidth: '160px' }}>
-              <Text size="2" weight="700" style={{ textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+            <div className="flex flex-col gap-4 min-w-[140px]">
+              <span className="text-pf-down-2 font-black uppercase tracking-[0.2em] text-mcn-ink-text-faint">
                 Company
-              </Text>
-              <nav style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
+              </span>
+              <nav className="flex flex-col gap-2">
                 {['About Us', 'Contact', 'Support'].map(link => (
-                  <a key={link} href="#" style={{ textDecoration: 'none' }}>
-                    <Text size="2" color="muted">{link}</Text>
+                  <a key={link} href="#" className="text-mt-down-1 text-mcn-ink-text-muted hover:text-mcn-ink-text-primary no-underline transition-colors">
+                    {link}
                   </a>
                 ))}
               </nav>
@@ -107,19 +87,15 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div style={{ 
-          marginTop: 'var(--space-10)', 
-          paddingTop: 'var(--space-4)', 
-          borderTop: '1px solid var(--stroke-subtle)',
-          display: 'flex',
-          justifyContent: 'space-between'
-        }}>
-          <Text size="1" color="muted">@TM 2026 Massive Charging Network</Text>
-          <a href="/privacy" style={{ textDecoration: 'none' }}>
-            <Text size="1" color="muted">Privacy Policy</Text>
+        <div className="mt-20 pt-6 border-t border-mcn-ink-stroke-softer flex flex-col md:flex-row justify-between items-center gap-4">
+          <span className="text-pf-down-2 text-mcn-ink-text-faint uppercase tracking-widest">
+            © 2026 Massive Charging Network
+          </span>
+          <a href="/privacy" className="no-underline group">
+            <span className="text-pf-down-2 text-mcn-ink-text-faint group-hover:text-mcn-ink-text-primary transition-colors">Privacy Policy</span>
           </a>
         </div>
-      </Container>
-    </Surface>
+      </div>
+    </footer>
   );
 };

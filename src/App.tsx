@@ -7,6 +7,8 @@ import Navbar from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import ScrollToTop from './components/layout/ScrollToTop'; // ← NEW: Import ScrollToTop
 
+import Home_Page from "./pages/Home/Home_Page";
+
 /* Atoms */
 import Surface from './components/atoms/Surface';
 
@@ -101,6 +103,7 @@ function App() {
             {/* Replaced <Hero /> with your new Design System Page */}
             <Route path="/" element={<EVHomePage />} />
             <Route path="/themesampler" element={<ThemeSamplerPage />} />
+             <Route path="/temp-home" element={<Home_Page />} />
             
             
             {/* --- EXISTING ROUTES --- */}
