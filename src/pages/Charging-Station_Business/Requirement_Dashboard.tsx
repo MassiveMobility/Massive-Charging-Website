@@ -672,8 +672,8 @@ export default function DiscoverRequirementDashboard() {
           </div>
 
           <div className="flex flex-wrap gap-3 pt-2">
-            <PrimaryButton to="/contact">Book site survey</PrimaryButton>
-            <SecondaryButton to="/station-business">Download detailed guide</SecondaryButton>
+            <PrimaryButton to="/ev-charging-station-business#how-it-works">Book site survey</PrimaryButton>
+            <SecondaryButton to="/ev-charging-station-business#how-it-works">Download detailed guide</SecondaryButton>
           </div>
         </div>
       </div>
@@ -885,8 +885,8 @@ export default function DiscoverRequirementDashboard() {
 
                   {/* Next actions */}
                   <div className="mt-5 flex flex-wrap gap-3">
-                    <PrimaryButton to="/contact">Book site survey</PrimaryButton>
-                    <SecondaryButton to="/station-business">Detailed guide</SecondaryButton>
+                    <PrimaryButton to="/ev-charging-station-business#how-it-works">Book site survey</PrimaryButton>
+                    <SecondaryButton to="/ev-charging-station-business#how-it-works">Detailed guide</SecondaryButton>
                   </div>
                 </div>
               </div>

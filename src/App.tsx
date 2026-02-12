@@ -32,6 +32,8 @@ import CPOTypeIndividualPage from "./pages/Charging-Station_Business/CPO_Types/C
 import CPOTypeIndexPage from "./pages/Charging-Station_Business/CPO_Types/CPOTypeIndexPage";
 
 import EvGuideHomeDashboard from "./pages/Charging_Guide/EvGuideHomeDashboard";
+import ScrollToHash from "./components/layout/ScrollToHash";
+
 
 /* --- 1. THE UNIVERSAL COMPONENT (Factory) --- */
 import UniversalLandingPage from "./features/HomeCharging";
@@ -50,6 +52,8 @@ import {
   fuelPumpHighwayContent,
   hospitalInstitutionContent,
 } from "./features/HomeCharging/all-scenarios-data";
+
+
 
 /* =========================
    SOURCE OF TRUTH CONTEXT
@@ -139,6 +143,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+          <ScrollToHash />
       <AppDataContext.Provider value={appDataValue}>
         <Surface
           variant="base"

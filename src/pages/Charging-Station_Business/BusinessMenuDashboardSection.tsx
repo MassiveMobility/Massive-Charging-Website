@@ -89,7 +89,8 @@ export function BusinessMenuDashboardSection() {
   }, [menuItems, activeCategory, query]);
 
   return (
-    <section className="pb-20">
+    
+    <section id="how-it-works" className="pb-20">
       {/* =========================
           FULL-WIDTH DARK BLOCK
          ========================= */}

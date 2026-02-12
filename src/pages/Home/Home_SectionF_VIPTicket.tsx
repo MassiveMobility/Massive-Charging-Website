@@ -1,4 +1,7 @@
 import React from "react";
+// ✅ NEW: for internal navigation
+import { Link } from "react-router-dom";
+
 
 /**
  * Home_SectionF_VIPTicket
@@ -145,18 +148,21 @@ export default function Home_SectionF_VIPTicket() {
                   Unlock premium stations + extra savings.
                 </div>
 
-                <button
-                  className={[
-                    "mt-6 w-full rounded-mcn-lg px-6 py-3 font-semibold",
-                    "text-[#1a1200]",
-                    "bg-[linear-gradient(135deg,#FFD36A,#FFB400)]",
-                    "shadow-[0_18px_60px_rgba(255,180,0,0.22)]",
-                    "transition duration-200 ease-out hover:-translate-y-[1px]",
-                    "active:translate-y-0",
-                  ].join(" ")}
-                >
-                  {content.cta}
-                </button>
+             {/* ✅ UPDATED: Navigates to /plans-offers */}
+<Link
+  to="/plans-offers"
+  className={[
+    "mt-6 block w-full text-center rounded-mcn-lg px-6 py-3 font-semibold",
+    "text-[#1a1200]",
+    "bg-[linear-gradient(135deg,#FFD36A,#FFB400)]",
+    "shadow-[0_18px_60px_rgba(255,180,0,0.22)]",
+    "transition duration-200 ease-out hover:-translate-y-[1px]",
+    "active:translate-y-0",
+  ].join(" ")}
+>
+  {content.cta}
+</Link>
+
 
                 <div className="mt-4 text-xs text-white/55">
                   Cancel anytime • Instant activation

@@ -12,6 +12,9 @@ import {
   Zap,
 } from "lucide-react";
 
+const PLAYSTORE_URL =
+  "https://play.google.com/store/apps/details?id=in.one.charging&hl=en_IN";
+
 // NOTE:
 // - Tailwind is treated as global + absolute (no page-specific CSS).
 // - Electric Dawn theme tokens are expressed via cool surfaces + controlled glow.
@@ -19,23 +22,50 @@ import {
 
 type Stat = { k: string; v: string; hint?: string; icon?: React.ReactNode };
 
-const RedGlowButton: React.FC<
-  React.ButtonHTMLAttributes<HTMLButtonElement> & { rightIcon?: React.ReactNode }
-> = ({ className = "", children, rightIcon, ...props }) => {
+// ✅ UPDATED: supports `href` so it can navigate to PLAYSTORE_URL
+type RedGlowButtonProps =
+  React.ButtonHTMLAttributes<HTMLButtonElement> & {
+    rightIcon?: React.ReactNode;
+    href?: string;
+  };
+
+const RedGlowButton: React.FC<RedGlowButtonProps> = ({
+  className = "",
+  children,
+  rightIcon,
+  href,
+  ...props
+}) => {
+  const classes =
+    "group relative inline-flex items-center justify-center gap-2 rounded-mcn-xl px-5 py-3 text-mt-down-1 font-semibold text-mcn-text-inverse " +
+    "bg-mcn-red shadow-[0_14px_40px_rgba(229,0,0,0.28)] " +
+    "ring-1 ring-[rgba(229,0,0,0.30)] " +
+    "transition duration-normal ease-out-standard " +
+    "hover:bg-mcn-red-hover hover:shadow-[0_16px_48px_rgba(229,0,0,0.34)] " +
+    "focus:outline-none focus-visible:ring-2 focus-visible:ring-mcn-red " +
+    "active:translate-y-[1px] " +
+    className;
+
+  // ✅ NEW: render as <a> when href is provided
+  if (href) {
+    return (
+      <a href={href} target="_blank" rel="noreferrer" className={classes}>
+        {/* subtle inner highlight */}
+        <span className="pointer-events-none absolute inset-0 rounded-mcn-xl bg-[radial-gradient(70%_80%_at_30%_20%,rgba(255,255,255,0.30),rgba(255,255,255,0)_60%)] opacity-70" />
+        {/* controlled glow edge */}
+        <span className="pointer-events-none absolute -inset-0.5 rounded-[22px] bg-[radial-gradient(60%_80%_at_50%_50%,rgba(229,0,0,0.40),rgba(229,0,0,0)_70%)] opacity-60 blur-md transition group-hover:opacity-75" />
+        <span className="relative z-10">{children}</span>
+        {rightIcon ? (
+          <span className="relative z-10 transition group-hover:translate-x-0.5">
+            {rightIcon}
+          </span>
+        ) : null}
+      </a>
+    );
+  }
+
   return (
-    <button
-      {...props}
-      className={
-        "group relative inline-flex items-center justify-center gap-2 rounded-mcn-xl px-5 py-3 text-mt-down-1 font-semibold text-mcn-text-inverse " +
-        "bg-mcn-red shadow-[0_14px_40px_rgba(229,0,0,0.28)] " +
-        "ring-1 ring-[rgba(229,0,0,0.30)] " +
-        "transition duration-normal ease-out-standard " +
-        "hover:bg-mcn-red-hover hover:shadow-[0_16px_48px_rgba(229,0,0,0.34)] " +
-        "focus:outline-none focus-visible:ring-2 focus-visible:ring-mcn-red " +
-        "active:translate-y-[1px] " +
-        className
-      }
-    >
+    <button {...props} className={classes}>
       {/* subtle inner highlight */}
       <span className="pointer-events-none absolute inset-0 rounded-mcn-xl bg-[radial-gradient(70%_80%_at_30%_20%,rgba(255,255,255,0.30),rgba(255,255,255,0)_60%)] opacity-70" />
       {/* controlled glow edge */}
@@ -50,23 +80,44 @@ const RedGlowButton: React.FC<
   );
 };
 
-const GlowOutlineButton: React.FC<
-  React.ButtonHTMLAttributes<HTMLButtonElement> & { leftIcon?: React.ReactNode }
-> = ({ className = "", children, leftIcon, ...props }) => {
+// ✅ UPDATED: supports `href` so it can navigate to PLAYSTORE_URL
+type GlowOutlineButtonProps =
+  React.ButtonHTMLAttributes<HTMLButtonElement> & {
+    leftIcon?: React.ReactNode;
+    href?: string;
+  };
+
+const GlowOutlineButton: React.FC<GlowOutlineButtonProps> = ({
+  className = "",
+  children,
+  leftIcon,
+  href,
+  ...props
+}) => {
+  const classes =
+    "group relative inline-flex items-center justify-center gap-2 rounded-mcn-xl px-5 py-3 text-mt-down-1 font-semibold " +
+    "bg-[rgba(255,255,255,0.70)] text-mcn-text-primary " +
+    "ring-1 ring-[rgba(13,27,42,0.14)] " +
+    "shadow-[0_10px_30px_rgba(13,27,42,0.08)] " +
+    "transition duration-normal ease-out-standard " +
+    "hover:bg-white hover:shadow-[0_14px_40px_rgba(13,27,42,0.12)] " +
+    "focus:outline-none focus-visible:ring-2 focus-visible:ring-mcn-blue " +
+    className;
+
+  // ✅ NEW: render as <a> when href is provided
+  if (href) {
+    return (
+      <a href={href} target="_blank" rel="noreferrer" className={classes}>
+        <span className="pointer-events-none absolute inset-0 rounded-mcn-xl bg-[radial-gradient(70%_80%_at_20%_20%,rgba(0,209,255,0.18),rgba(0,209,255,0)_55%)] opacity-80" />
+        <span className="pointer-events-none absolute -inset-0.5 rounded-[22px] bg-[radial-gradient(70%_80%_at_50%_40%,rgba(30,255,136,0.20),rgba(0,209,255,0.00)_70%)] opacity-50 blur-md transition group-hover:opacity-70" />
+        {leftIcon ? <span className="relative z-10">{leftIcon}</span> : null}
+        <span className="relative z-10">{children}</span>
+      </a>
+    );
+  }
+
   return (
-    <button
-      {...props}
-      className={
-        "group relative inline-flex items-center justify-center gap-2 rounded-mcn-xl px-5 py-3 text-mt-down-1 font-semibold " +
-        "bg-[rgba(255,255,255,0.70)] text-mcn-text-primary " +
-        "ring-1 ring-[rgba(13,27,42,0.14)] " +
-        "shadow-[0_10px_30px_rgba(13,27,42,0.08)] " +
-        "transition duration-normal ease-out-standard " +
-        "hover:bg-white hover:shadow-[0_14px_40px_rgba(13,27,42,0.12)] " +
-        "focus:outline-none focus-visible:ring-2 focus-visible:ring-mcn-blue " +
-        className
-      }
-    >
+    <button {...props} className={classes}>
       <span className="pointer-events-none absolute inset-0 rounded-mcn-xl bg-[radial-gradient(70%_80%_at_20%_20%,rgba(0,209,255,0.18),rgba(0,209,255,0)_55%)] opacity-80" />
       <span className="pointer-events-none absolute -inset-0.5 rounded-[22px] bg-[radial-gradient(70%_80%_at_50%_40%,rgba(30,255,136,0.20),rgba(0,209,255,0.00)_70%)] opacity-50 blur-md transition group-hover:opacity-70" />
       {leftIcon ? <span className="relative z-10">{leftIcon}</span> : null}
@@ -182,7 +233,6 @@ const UPIChargingPage: React.FC = () => {
                 <span className="text-[rgba(13,27,42,0.72)]">
                   Quick on-the-go charging
                 </span>
-                
               </div>
 
               <h1 className="mt-6 font-heading text-pf-up-4 leading-[1.05] tracking-[-0.02em] text-[rgba(13,27,42,0.95)] md:text-pf-up-5">
@@ -197,7 +247,12 @@ const UPIChargingPage: React.FC = () => {
                 <RedGlowButton rightIcon={<ArrowRight size={16} />}>
                   Find UPI chargers
                 </RedGlowButton>
-                <GlowOutlineButton leftIcon={<Smartphone size={18} />}>
+
+                {/* ✅ UPDATED: now uses PLAYSTORE_URL */}
+                <GlowOutlineButton
+                  href={PLAYSTORE_URL}
+                  leftIcon={<Smartphone size={18} />}
+                >
                   Get 1C EV App
                 </GlowOutlineButton>
               </div>
@@ -277,7 +332,9 @@ const UPIChargingPage: React.FC = () => {
                 not app fatigue.
               </h2>
               <p className="mt-4 max-w-md text-mt-base text-white/80">
-                Massive UPI Charging lets you start EV Charger directly from PayTM, PhonePay, Gpay, etc allowing you to begin charging session in seconds. Skip juggling between apps - charge with UPI.
+                Massive UPI Charging lets you start EV Charger directly from PayTM,
+                PhonePay, Gpay, etc allowing you to begin charging session in seconds.
+                Skip juggling between apps - charge with UPI.
               </p>
 
               <div className="mt-7 flex items-center gap-3">
@@ -298,10 +355,7 @@ const UPIChargingPage: React.FC = () => {
                     className="rounded-[22px] border border-white/10 bg-white/5 p-5 shadow-[0_18px_55px_rgba(0,0,0,0.35)]"
                   >
                     <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-mt-down-2 text-white/85">
-                      <span className="text-[rgba(0,209,255,0.95)]">
-                        {s.icon}
-                      </span>
-              
+                      <span className="text-[rgba(0,209,255,0.95)]">{s.icon}</span>
                     </div>
                     <div className="mt-4 text-mt-up-1 font-semibold text-white">
                       {s.title}
@@ -320,12 +374,16 @@ const UPIChargingPage: React.FC = () => {
                       One app to rule them all
                     </div>
                     <div className="mt-2 max-w-xl text-mt-down-1 text-white/80">
-                      Skip juggling multiple wallets and fragmented networks.
-                      Use the 1C EV App for discovery, receipts, and a unified
-                      charging history.
+                      Skip juggling multiple wallets and fragmented networks. Use the
+                      1C EV App for discovery, receipts, and a unified charging history.
                     </div>
                   </div>
-                  <RedGlowButton rightIcon={<ArrowRight size={16} />}>
+
+                  {/* ✅ UPDATED: now uses PLAYSTORE_URL */}
+                  <RedGlowButton
+                    href={PLAYSTORE_URL}
+                    rightIcon={<ArrowRight size={16} />}
+                  >
                     Get 1C EV App
                   </RedGlowButton>
                 </div>
@@ -334,8 +392,6 @@ const UPIChargingPage: React.FC = () => {
           </div>
         </div>
       </section>
-
-     
     </main>
   );
 };

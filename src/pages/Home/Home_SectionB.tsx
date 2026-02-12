@@ -163,13 +163,19 @@ export default function Home_SectionB() {
 
               {/* CTA row */}
               <div className="mt-7 flex flex-wrap gap-3">
-                <button className="inline-flex items-center justify-center rounded-mcn-lg bg-mcn-red px-6 py-3 font-semibold text-white shadow-[0_10px_30px_rgba(229,0,0,0.22)] transition duration-fast ease-ease-out-standard hover:bg-mcn-red-hover">
-                  Get My Home Charger
-                </button>
+                <a
+  href="/ev-charging-station-business#choose"
+  className="inline-flex items-center justify-center rounded-mcn-lg bg-mcn-red px-6 py-3 font-semibold text-white shadow-[0_10px_30px_rgba(229,0,0,0.22)] transition duration-fast ease-ease-out-standard hover:bg-mcn-red-hover"
+>
+  Get My Home Charger
+</a>
 
-                <button className="inline-flex items-center justify-center rounded-mcn-lg border border-white/15 bg-white/5 px-6 py-3 font-semibold text-white shadow-[0_10px_28px_rgba(0,0,0,0.25)] transition duration-fast ease-ease-out-standard hover:bg-white/10">
-                  View Installation Guide
-                </button>
+<a
+  href="/ev-charging-station-business#choose"
+  className="inline-flex items-center justify-center rounded-mcn-lg border border-white/15 bg-white/5 px-6 py-3 font-semibold text-white shadow-[0_10px_28px_rgba(0,0,0,0.25)] transition duration-fast ease-ease-out-standard hover:bg-white/10"
+>
+  View Installation Guide
+</a>
               </div>
             </div>
 

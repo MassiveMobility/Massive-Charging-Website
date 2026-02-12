@@ -98,8 +98,8 @@ const ChargingGuidePage = ({ vehicleGuideData, coreMessageBlockData }) => {
     <div className="min-h-screen bg-slate-50">
       {/* Row 1: Article Content */}
       <article className="max-w-3xl mx-auto px-6 py-16 bg-white shadow-xl my-10 rounded-xl border border-slate-100">
-        <Link to="/" className="text-sky-600 hover:text-sky-800 font-medium mb-10 inline-block">
-          ← Back to Fleet
+        <Link to="/charging-guide/ev-cars" className="text-sky-600 hover:text-sky-800 font-medium mb-10 inline-block">
+          ← Back to EV Cars
         </Link>
         {blocks.map(renderBlock)}
       </article>

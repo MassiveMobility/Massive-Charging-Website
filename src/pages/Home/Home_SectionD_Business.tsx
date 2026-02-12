@@ -100,21 +100,34 @@ const Icon = ({
   }
 };
 
-const SolidWhiteButton = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <button
-      className={[
-        "inline-flex items-center justify-center",
-        "rounded-mcn-lg px-6 py-3 font-semibold",
-        "bg-white text-black",
-        "shadow-[0_14px_40px_rgba(0,0,0,0.28)]",
-        "transition duration-200 ease-out hover:-translate-y-[1px] hover:bg-white/95",
-      ].join(" ")}
-    >
-      {children}
-    </button>
-  );
+// ✅ UPDATED: Button can now behave like a link
+const SolidWhiteButton = ({
+  children,
+  href,
+}: {
+  children: React.ReactNode;
+  href?: string; // ✅ NEW
+}) => {
+  const className = [
+    "inline-flex items-center justify-center",
+    "rounded-mcn-lg px-6 py-3 font-semibold",
+    "bg-white text-black",
+    "shadow-[0_14px_40px_rgba(0,0,0,0.28)]",
+    "transition duration-200 ease-out hover:-translate-y-[1px] hover:bg-white/95",
+  ].join(" ");
+
+  // ✅ If href provided, render anchor
+  if (href) {
+    return (
+      <a href={href} className={className}>
+        {children}
+      </a>
+    );
+  }
+
+  return <button className={className}>{children}</button>;
 };
+
 
 function RightROICard() {
   return (
@@ -253,7 +266,11 @@ export default function Home_SectionD_Business() {
               </ul>
 
               <div className="mt-7 flex flex-wrap items-center gap-3">
-                <SolidWhiteButton>{content.button.label}</SolidWhiteButton>
+                {/* ✅ UPDATED: Now links to business page */}
+<SolidWhiteButton href="/ev-charging-station-business">
+  {content.button.label}
+</SolidWhiteButton>
+
               </div>
 
               <div className="mt-4 text-xs text-white/55">

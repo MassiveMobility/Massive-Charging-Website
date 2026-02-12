@@ -1,5 +1,8 @@
 import React from "react";
 
+const PLAYSTORE_URL =
+  "https://play.google.com/store/apps/details?id=in.one.charging&hl=en_IN";
+
 /**
  * Home_SectionC_AppSplit_V3
  * - Dark grid background
@@ -100,19 +103,38 @@ const MiniIcon = ({
   }
 };
 
-const GradientButton = ({ children }: { children: React.ReactNode }) => (
-  <button
-    className={[
-      "relative inline-flex w-full items-center justify-center rounded-mcn-lg px-6 py-3 font-semibold text-white sm:w-auto",
-      "shadow-[0_18px_50px_rgba(0,0,0,0.22)] transition duration-200 ease-out hover:-translate-y-[1px]",
-      "bg-[linear-gradient(135deg,rgba(229,0,0,0.95),rgba(255,140,0,0.95))]",
-      "before:absolute before:inset-0 before:rounded-mcn-lg before:bg-white/10 before:opacity-0 before:transition",
-      "hover:before:opacity-100",
-    ].join(" ")}
-  >
-    <span className="relative">{children}</span>
-  </button>
-);
+// ✅ UPDATED: Can act like a button OR a link
+const GradientButton = ({
+  children,
+  href,
+}: {
+  children: React.ReactNode;
+  href?: string;
+}) => {
+  const className = [
+    "relative inline-flex w-full items-center justify-center rounded-mcn-lg px-6 py-3 font-semibold text-white sm:w-auto",
+    "shadow-[0_18px_50px_rgba(0,0,0,0.22)] transition duration-200 ease-out hover:-translate-y-[1px]",
+    "bg-[linear-gradient(135deg,rgba(229,0,0,0.95),rgba(255,140,0,0.95))]",
+    "before:absolute before:inset-0 before:rounded-mcn-lg before:bg-white/10 before:opacity-0 before:transition",
+    "hover:before:opacity-100",
+  ].join(" ");
+
+  // ✅ NEW: If href exists, render as <a> so it navigates properly
+  if (href) {
+    return (
+      <a href={href} target="_blank" rel="noreferrer" className={className}>
+        <span className="relative">{children}</span>
+      </a>
+    );
+  }
+
+  // fallback: normal button
+  return (
+    <button className={className} type="button">
+      <span className="relative">{children}</span>
+    </button>
+  );
+};
 
 function PhoneMock({ features }: { features: Feature[] }) {
   return (
@@ -242,7 +264,7 @@ export default function Home_SectionC_AppSplit_V3() {
               </p>
 
               <div className="mt-6">
-                <GradientButton>{cta}</GradientButton>
+                <GradientButton href={PLAYSTORE_URL}>{cta}</GradientButton>
               </div>
             </div>
 

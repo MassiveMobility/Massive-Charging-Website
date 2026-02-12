@@ -3,6 +3,12 @@ import { Search, Download, MapPin, Zap, ShieldCheck, CreditCard } from "lucide-r
 
 type HeroVariant = "01" | "02";
 
+const PLAYSTORE_URL =
+  "https://play.google.com/store/apps/details?id=in.one.charging&hl=en_IN";
+
+const APPSTORE_URL =
+  "https://apps.apple.com/in/app/1c-ev-charging/id6478754214";
+
 export default function HomeHero() {
   const [variant, setVariant] = useState<HeroVariant>("01");
 
@@ -111,10 +117,15 @@ function Hero01() {
           Find Chargers
         </button>
 
-        <button className="inline-flex items-center gap-2 px-7 py-3 rounded-2xl border border-slate-200 bg-white/70 backdrop-blur-md hover:bg-white transition-all duration-300 shadow-sm">
-          <Download className="w-4 h-4" />
-          Get App
-        </button>
+        <a
+  href={PLAYSTORE_URL}
+  target="_blank"
+  rel="noreferrer"
+  className="inline-flex items-center gap-2 px-7 py-3 rounded-2xl border border-slate-200 bg-white/70 backdrop-blur-md hover:bg-white transition-all duration-300 shadow-sm"
+>
+  <Download className="w-4 h-4" />
+  Get App
+</a>
       </div>
 
       <div className="mb-10">
@@ -124,8 +135,9 @@ function Hero01() {
       </div>
 
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <StoreBadge title="Playstore" />
-        <StoreBadge title="Appstore" />
+        <StoreBadge title="Playstore" href={PLAYSTORE_URL} />
+<StoreBadge title="Appstore" href={APPSTORE_URL} />
+
       </div>
     </div>
   );
@@ -159,10 +171,15 @@ function Hero02() {
             Find Chargers
           </button>
 
-          <button className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3 rounded-2xl border border-slate-200 bg-white/70 backdrop-blur-md hover:bg-white transition-all duration-300 shadow-sm">
-            <Download className="w-4 h-4" />
-            Get App
-          </button>
+          <a
+  href={PLAYSTORE_URL}
+  target="_blank"
+  rel="noreferrer"
+  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3 rounded-2xl border border-slate-200 bg-white/70 backdrop-blur-md hover:bg-white transition-all duration-300 shadow-sm"
+>
+  <Download className="w-4 h-4" />
+  Get App
+</a>
         </div>
 
         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3">
@@ -171,8 +188,8 @@ function Hero02() {
           </span>
 
           <div className="flex gap-3">
-            <StoreBadge title="Playstore" compact />
-            <StoreBadge title="Appstore" compact />
+        <StoreBadge title="Playstore" href={PLAYSTORE_URL} compact />
+<StoreBadge title="Appstore" href={APPSTORE_URL} compact />
           </div>
         </div>
       </div>
@@ -185,20 +202,31 @@ function Hero02() {
   );
 }
 
-function StoreBadge({ title, compact = false }: { title: string; compact?: boolean }) {
+function StoreBadge({
+  title,
+  href,
+  compact = false,
+}: {
+  title: string;
+  href: string;
+  compact?: boolean;
+}) {
   return (
-    <div
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
       className={[
         "rounded-2xl border border-slate-200 bg-white/70 backdrop-blur-md hover:border-cyan-300/60 transition-all duration-300 shadow-sm",
+        "hover:bg-white/80",
         compact ? "px-4 py-2" : "px-5 py-3",
       ].join(" ")}
     >
       <p className="text-[11px] leading-none text-slate-500">Get it from</p>
       <p className="text-sm font-medium tracking-wide text-slate-900">{title}</p>
-    </div>
+    </a>
   );
 }
-
 function StackedCards() {
   const rows = useMemo(
     () => [
