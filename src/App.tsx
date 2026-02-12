@@ -1,39 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import './index.css'  // ← This line is CRITICAL
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import React, { useEffect, useMemo, useState, createContext, useContext } from "react";
+import "./index.css"; // ← This line is CRITICAL
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 /* Layout Molecules */
-import Navbar from './components/layout/Navbar'; 
-import { Footer } from './components/layout/Footer';
-import ScrollToTop from './components/layout/ScrollToTop'; // ← NEW: Import ScrollToTop
-
-import Home_Page from "./pages/Home/Home_Page";
+import Navbar from "./components/layout/Navbar";
+import { Footer } from "./components/layout/Footer";
+import ScrollToTop from "./components/layout/ScrollToTop";
 
 /* Atoms */
-import Surface from './components/atoms/Surface';
+import Surface from "./components/atoms/Surface";
 
-/* Pages & Components */
-/* Note: We are now using EVHomePage as the main Hero/Landing */
+/* Pages */
+import Home_Page from "./pages/Home/Home_Page";
 import ThemeSamplerPage from "./pages/ThemeSamplerPage";
-import EVHomePage from './chapters/urltest/EVHomePage';
+import EVJourneyReport from "./chapters/urltest/EVJourneyReport";
+import PinkTestPage from "./chapters/urltest/PinkTestPage";
+import UPIChargingPage from "./chapters/urltest/UPIChargingPage";
+import PricingPage from "./chapters/urltest/PricingPage";
 
-import { EVChargingGuidePage } from './components/pages/EVChargingGuidePage';
-import { EVIndividualGuide } from './components/pages/EVIndividualGuide'; 
-import EV_Charging_Guide_Home from './components/pages/EV_Charging_Guide_Home'; 
-import MenuPage from './features/HomeCharging/MenuPage';
-import EVJourneyReport from './chapters/urltest/EVJourneyReport';
-
-/* --- 🔄 NEW: QUERY PAGES (INTEGRATED) --- */
-import ChargingGuidePage from './Querycode/ChargingGuidePage';
-import EVChargingGuide_Dashboard from './Querycode/EVChargingGuide_Dashboard';
-import EVCarsCatalogue from './Querycode/EVCarsCatalogue';
-/* --- END NEW IMPORTS --- */
-
-/* --- 1. THE UNIVERSAL COMPONENT (Factory) --- */
-import UniversalLandingPage from './features/HomeCharging'; 
-import PinkTestPage from './chapters/urltest/PinkTestPage';
-import UPIChargingPage from './chapters/urltest/UPIChargingPage';
-import PricingPage from './chapters/urltest/PricingPage';
+import { EVChargingGuidePage } from "./components/pages/EVChargingGuidePage";
+import EVChargingGuide_Dashboard from "./Querycode/EVChargingGuide_Dashboard";
+import EVCarsCatalogue from "./Querycode/EVCarsCatalogue";
+import ChargingGuidePage from "./Querycode/ChargingGuidePage";
 
 import StationBizHomePage from "./pages/Station_Biz_HomePage";
 import EvChargingStationHomePage from "./pages/Charging-Station_Business/ev-charging-station-home-page";
@@ -43,207 +31,217 @@ import CPOTypeMenuPage from "./pages/Charging-Station_Business/CPO_Types/CPOType
 import CPOTypeIndividualPage from "./pages/Charging-Station_Business/CPO_Types/CPOTypeIndividualPage";
 import CPOTypeIndexPage from "./pages/Charging-Station_Business/CPO_Types/CPOTypeIndexPage";
 
+import EvGuideHomeDashboard from "./pages/Charging_Guide/EvGuideHomeDashboard";
 
+/* --- 1. THE UNIVERSAL COMPONENT (Factory) --- */
+import UniversalLandingPage from "./features/HomeCharging";
 
 /* --- 2. THE DATASETS (Fuel) --- */
-import { 
-  landingContent,             // 1. Home Owner
-  apartmentResidentContent,   // 2. Apartment Resident
-  apartmentSocietyContent,    // 3. Society / RWA
-  gatedCommunityContent,      // 4. Gated Community
-  pgCoLivingContent,          // 5. PG / Co-living
-  retailShopContent,          // 6. Retail Shop
-  restaurantCafeContent,      // 7. Restaurant
-  mallCommercialContent,      // 8. Mall
-  fleetOperatorContent,       // 9. Fleet
-  fuelPumpHighwayContent,     // 10. Fuel Pump
-  hospitalInstitutionContent  // 11. Hospital
-} from './features/HomeCharging/all-scenarios-data';
+import {
+  landingContent,
+  apartmentResidentContent,
+  apartmentSocietyContent,
+  gatedCommunityContent,
+  pgCoLivingContent,
+  retailShopContent,
+  restaurantCafeContent,
+  mallCommercialContent,
+  fleetOperatorContent,
+  fuelPumpHighwayContent,
+  hospitalInstitutionContent,
+} from "./features/HomeCharging/all-scenarios-data";
 
+/* =========================
+   SOURCE OF TRUTH CONTEXT
+   ========================= */
+
+type AppDataContextValue = {
+  vehicleGuideData: any | null;
+  coreMessageBlockData: any | null;
+  loading: boolean;
+  error: string | null;
+};
+
+const AppDataContext = createContext<AppDataContextValue | null>(null);
+
+export function useAppData() {
+  const ctx = useContext(AppDataContext);
+  if (!ctx) throw new Error("useAppData must be used inside <AppDataContext.Provider>");
+  return ctx;
+}
 
 function App() {
-  // 🔄 NEW: State for JSON data (for Query pages)
-  const [database, setDatabase] = useState(null);
-  const [coreMessageData, setCoreMessageData] = useState(null);
+  // Source-of-truth state (loaded once in App)
+  const [vehicleGuideData, setVehicleGuideData] = useState<any | null>(null);
+  const [coreMessageBlockData, setCoreMessageBlockData] = useState<any | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
 
-  // 🔄 NEW: Fetch JSON files on mount
   useEffect(() => {
+    let cancelled = false;
+
     const loadData = async () => {
       try {
-        const [vehicleResponse, messageResponse] = await Promise.all([
-          fetch('/vehicle_guide.json'),
-          fetch('/Core_message_block.json')
+        setLoading(true);
+        setError(null);
+
+        // NOTE: These files MUST exist in /public
+        // public/vehicle_guide.json
+        // public/Core_message_block.json
+        const [vehicleRes, messageRes] = await Promise.all([
+          fetch("/vehicle_guide.json", { cache: "no-store" }),
+          fetch("/Core_message_block.json", { cache: "no-store" }),
         ]);
 
-        const vehicleData = await vehicleResponse.json();
-        const messageData = await messageResponse.json();
+        if (!vehicleRes.ok) {
+          throw new Error(`vehicle_guide.json fetch failed (${vehicleRes.status})`);
+        }
+        if (!messageRes.ok) {
+          throw new Error(`Core_message_block.json fetch failed (${messageRes.status})`);
+        }
 
-        setDatabase(vehicleData);
-        setCoreMessageData(messageData);
-        console.log('✅ Vehicle & Message Data Loaded');
-      } catch (err) {
-        console.error("❌ Database fetch error:", err);
+        const [vehicleJson, messageJson] = await Promise.all([
+          vehicleRes.json(),
+          messageRes.json(),
+        ]);
+
+        if (cancelled) return;
+
+        setVehicleGuideData(vehicleJson);
+        setCoreMessageBlockData(messageJson);
+        setLoading(false);
+
+        console.log("✅ App Source-of-Truth JSON Loaded");
+      } catch (e: any) {
+        if (cancelled) return;
+        console.error("❌ App JSON load error:", e);
+        setError(e?.message || "Unknown JSON load error");
+        setLoading(false);
       }
     };
+
     loadData();
+    return () => {
+      cancelled = true;
+    };
   }, []);
-  // --- END NEW CODE ---
+
+  const appDataValue: AppDataContextValue = useMemo(
+    () => ({
+      vehicleGuideData,
+      coreMessageBlockData,
+      loading,
+      error,
+    }),
+    [vehicleGuideData, coreMessageBlockData, loading, error]
+  );
 
   return (
     <Router>
-      <ScrollToTop /> {/* ← NEW: Add ScrollToTop component */}
-      <Surface variant="base" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-        
-        <Navbar />
+      <ScrollToTop />
+      <AppDataContext.Provider value={appDataValue}>
+        <Surface
+          variant="base"
+          style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}
+        >
+          <Navbar />
 
-        <main style={{ flex: 1 }}>
-          <Routes>
-            
-            {/* --- MAIN HOME PAGE --- */}
-            {/* Replaced <Hero /> with your new Design System Page */}
-            <Route path="/" element={<EVHomePage />} />
-            <Route path="/themesampler" element={<ThemeSamplerPage />} />
-             <Route path="/temp-home" element={<Home_Page />} />
-            
-            
-            {/* --- EXISTING ROUTES --- */}
-            <Route path="/ev-charging-guide" element={<EVChargingGuidePage />} />
-            <Route path="/ev-charging-business" element={<MenuPage />} />
-            <Route path="/pinktest" element={<PinkTestPage />} />
-            <Route path="/upi-charging" element={<UPIChargingPage />} />
-            <Route path="/plans-offers" element={<PricingPage />} />
-            {/* --- NEW TRIP REPORT ROUTE --- */}
-            <Route path="/EV-Trip-Report" element={<EVJourneyReport />} />
+          <main style={{ flex: 1 }}>
+            <Routes>
+              {/* --- MAIN HOME PAGE --- */}
+              <Route path="/" element={<Home_Page />} />
+              <Route path="/themesampler" element={<ThemeSamplerPage />} />
+              <Route path="/temp-home" element={<Home_Page />} />
 
+              <Route path="/temp-05" element={<EvGuideHomeDashboard />} />
 
-            {/* 🔄 NEW: QUERY PAGES ROUTES */}
-            {/* Query Guide Dashboard - Main charging guide page */}
-            <Route 
-              path="/charging-guide" 
-              element={<EVChargingGuide_Dashboard database={database} />} 
-            />
-            
-            {/* Cars Catalogue - Browse all EV cars */}
-            <Route 
-              path="/charging-guide/ev-cars" 
-              element={<EVCarsCatalogue database={database} />} 
-            />
-            
-            {/* Dynamic Charging Guide Article Page (with slug) */}
-            <Route 
-              path="/charging-guide/:slug" 
-              element={
-                <ChargingGuidePage 
-                  vehicleGuideData={database} 
-                  coreMessageBlockData={coreMessageData} 
-                />
-              } 
-            />
-            {/* --- END NEW ROUTES --- */}
+              {/* --- EXISTING ROUTES --- */}
+              <Route path="/ev-charging-guide" element={<EVChargingGuidePage />} />
+              <Route path="/pinktest" element={<PinkTestPage />} />
+              <Route path="/upi-charging" element={<UPIChargingPage />} />
+              <Route path="/plans-offers" element={<PricingPage />} />
+              <Route path="/EV-Trip-Report" element={<EVJourneyReport />} />
 
-            <Route
-  path="/charging-station-business"
-  element={<StationBizHomePage />}
-/>
-<Route
-  path="/ev-charging-station-business"
-  element={<EvChargingStationHomePage />}
-/>
+              {/* 🔄 QUERY PAGES (still receiving props, but also available via context everywhere) */}
+              <Route
+                path="/charging-guide"
+                element={<EVChargingGuide_Dashboard database={vehicleGuideData} />}
+              />
+              <Route
+                path="/charging-guide/ev-cars"
+                element={<EVCarsCatalogue database={vehicleGuideData} />}
+              />
+              <Route
+                path="/charging-guide/:slug"
+                element={
+                  <ChargingGuidePage
+                    vehicleGuideData={vehicleGuideData}
+                    coreMessageBlockData={coreMessageBlockData}
+                  />
+                }
+              />
 
-  <Route
-    path="/cpo"
-    element={<CPOTypeIndexPage />}
-  />
-  <Route
-  path="/cpo/*"
-  element={<CPOTypeIndividualPage />}
-/>
+              {/* Station biz */}
+              <Route path="/charging-station-business" element={<StationBizHomePage />} />
+              <Route
+                path="/ev-charging-station-business"
+                element={<EvChargingStationHomePage />}
+              />
 
-<Route
-          path="/charging-station-biz"
-          element={<CPOTypeMenuPage />}
-        />
-        <Route path="/cpo/:segment/:cpoId" element={<CPOTypeIndividualPage />} />
+              {/* CPO */}
+              <Route path="/cpo" element={<CPOTypeIndexPage />} />
+              <Route path="/cpo/*" element={<CPOTypeIndividualPage />} />
+              <Route path="/charging-station-biz" element={<CPOTypeMenuPage />} />
+              <Route path="/cpo/:segment/:cpoId" element={<CPOTypeIndividualPage />} />
 
- 
-        {/* View the form here */}
-        <Route path="/get-chargers" element={<Master_Form />} />
+              {/* Form */}
+              <Route path="/get-chargers" element={<Master_Form />} />
 
+              {/* --- DYNAMIC LANDING PAGES (11 SCENARIOS) --- */}
+              <Route path="/home-charging" element={<UniversalLandingPage data={landingContent} />} />
+              <Route
+                path="/apartment-resident"
+                element={<UniversalLandingPage data={apartmentResidentContent} />}
+              />
+              <Route
+                path="/society-charging"
+                element={<UniversalLandingPage data={apartmentSocietyContent} />}
+              />
+              <Route
+                path="/community-charging"
+                element={<UniversalLandingPage data={gatedCommunityContent} />}
+              />
+              <Route path="/pg-charging" element={<UniversalLandingPage data={pgCoLivingContent} />} />
+              <Route
+                path="/retail-charging"
+                element={<UniversalLandingPage data={retailShopContent} />}
+              />
+              <Route
+                path="/restaurant-charging"
+                element={<UniversalLandingPage data={restaurantCafeContent} />}
+              />
+              <Route
+                path="/mall-charging"
+                element={<UniversalLandingPage data={mallCommercialContent} />}
+              />
+              <Route
+                path="/fleet-charging"
+                element={<UniversalLandingPage data={fleetOperatorContent} />}
+              />
+              <Route
+                path="/highway-charging"
+                element={<UniversalLandingPage data={fuelPumpHighwayContent} />}
+              />
+              <Route
+                path="/hospital-charging"
+                element={<UniversalLandingPage data={hospitalInstitutionContent} />}
+              />
+            </Routes>
+          </main>
 
-            {/* --- DYNAMIC LANDING PAGES (11 SCENARIOS) --- */}
-            
-            {/* 1. Independent Home Owner */}
-            <Route 
-              path="/home-charging" 
-              element={<UniversalLandingPage data={landingContent} />} 
-            />
-
-            {/* 2. Apartment Resident (Individual) */}
-            <Route 
-              path="/apartment-resident" 
-              element={<UniversalLandingPage data={apartmentResidentContent} />} 
-            />
-
-            {/* 3. Apartment Society / RWA */}
-            <Route 
-              path="/society-charging" 
-              element={<UniversalLandingPage data={apartmentSocietyContent} />} 
-            />
-
-            {/* 4. Gated Community */}
-            <Route 
-              path="/community-charging" 
-              element={<UniversalLandingPage data={gatedCommunityContent} />} 
-            />
-
-            {/* 5. PG / Co-living */}
-            <Route 
-              path="/pg-charging" 
-              element={<UniversalLandingPage data={pgCoLivingContent} />} 
-            />
-
-            {/* 6. Retail Shop */}
-            <Route 
-              path="/retail-charging" 
-              element={<UniversalLandingPage data={retailShopContent} />} 
-            />
-
-            {/* 7. Restaurant / Café */}
-            <Route 
-              path="/restaurant-charging" 
-              element={<UniversalLandingPage data={restaurantCafeContent} />} 
-            />
-
-            {/* 8. Mall / Commercial */}
-            <Route 
-              path="/mall-charging" 
-              element={<UniversalLandingPage data={mallCommercialContent} />} 
-            />
-
-            {/* 9. Delivery Fleet */}
-            <Route 
-              path="/fleet-charging" 
-              element={<UniversalLandingPage data={fleetOperatorContent} />} 
-            />
-
-            {/* 10. Fuel Pump / Highway */}
-            <Route 
-              path="/highway-charging" 
-              element={<UniversalLandingPage data={fuelPumpHighwayContent} />} 
-            />
-
-            {/* 11. Hospital / Institution */}
-            <Route 
-              path="/hospital-charging" 
-              element={<UniversalLandingPage data={hospitalInstitutionContent} />} 
-            />
-
-          </Routes>
-        </main>
-
-        <Footer />
-
-      </Surface>
+          <Footer />
+        </Surface>
+      </AppDataContext.Provider>
     </Router>
   );
 }

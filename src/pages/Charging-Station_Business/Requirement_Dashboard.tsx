@@ -649,7 +649,7 @@ export default function DiscoverRequirementDashboard() {
         <div className="mt-6 grid gap-4">
           <div className="rounded-mcn-lg border border-mcn-stroke-soft bg-mcn-bg p-4">
             <div className="text-mt-down-1 text-mcn-text-muted">Recommended model</div>
-            <div className="mt-1 font-heading text-mt-up-2">{blueprint.recommendedModel} • {blueprint.useCase}</div>
+            <div className="mt-1 font-heading text-mt-up-2 ">{blueprint.recommendedModel} • {blueprint.useCase}</div>
             <div className="mt-1 text-mt-down-1 text-mcn-text-muted">Setup: {blueprint.setup}</div>
           </div>
 
@@ -692,214 +692,221 @@ export default function DiscoverRequirementDashboard() {
       </div>
 
       <div className="relative">
-        {/* Top Bar */}
-        <div className="sticky top-0 z-20 border-b border-mcn-stroke-soft bg-white/70 backdrop-blur-mcn">
-          <div className="container py-4">
-            <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-              <div>
-                <div className="font-heading text-mt-up-2">Discover Requirement</div>
-                <div className="mt-1 text-mt-down-1 text-mcn-text-muted">
-                  Build your charging station blueprint in minutes.
-                </div>
+  {/* DASHBOARD WRAPPER (faint boundary) */}
+  <div className="container py-8">
+    <div className="overflow-hidden rounded-2xl border border-mcn-stroke-soft bg-white/60 shadow-mcn-soft backdrop-blur-mcn">
+      {/* Top Bar (inside dashboard boundary) */}
+      <div className="border-b border-mcn-stroke-soft bg-white/70">
+        <div className="p-4 md:p-6">
+          <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+            <div>
+              <div className="font-heading text-mt-up-2">Earn By Charging Calculator</div>
+              <div className="mt-1 text-mt-down-1 text-mcn-text-muted">
+                Build your charging station blueprint in minutes.
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <div className="hidden md:block text-mt-down-1 text-mcn-text-muted">
+                Progress: {progressPct}%
               </div>
 
-              <div className="flex items-center gap-3">
-                <div className="hidden md:block text-mt-down-1 text-mcn-text-muted">
-                  Progress: {progressPct}%
-                </div>
-
-                <div className="w-36 rounded-full bg-mcn-surface2">
-                  <div
-                    className="h-2 rounded-full bg-mcn-blue transition-all"
-                    style={{ width: `${progressPct}%` }}
-                  />
-                </div>
-
-                <SecondaryButton to="/contact">Talk to an expert</SecondaryButton>
+              <div className="w-36 rounded-full bg-mcn-surface2">
+                <div
+                  className="h-2 rounded-full bg-mcn-blue transition-all"
+                  style={{ width: `${progressPct}%` }}
+                />
               </div>
+
+              <SecondaryButton to="/contact">Talk to an expert</SecondaryButton>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Main Grid */}
-        <div className="container py-8">
-          <div className="grid gap-6 lg:grid-cols-12">
-            {/* Left: Stepper + Active Step */}
-            <div className="lg:col-span-7">
-              <div className="grid gap-4 lg:grid-cols-12">
-                {/* Stepper */}
-                <div className="lg:col-span-4">
-                  <div className="rounded-mcn-xl border border-mcn-stroke-soft bg-mcn-surface p-3 shadow-mcn-soft">
-                    <div className="px-2 pb-2 text-mt-down-1 text-mcn-text-muted">
-                      Steps
-                    </div>
-
-                    <div className="grid gap-1">
-                      {steps.map((t, idx) => (
-                        <StepItem
-                          key={t}
-                          index={idx}
-                          title={t}
-                          isActive={state.stepIndex === idx}
-                          status={stepStatus(idx)}
-                          onClick={() => dispatch({ type: "GOTO", index: idx })}
-                        />
-                      ))}
-                    </div>
-
-                    <div className="mt-3 px-2 text-mt-down-2 text-mcn-text-faint">
-                      Complete the first 3 steps to see a reliable setup recommendation.
-                    </div>
+      {/* Main Grid (inside same boundary) */}
+      <div className="p-4 md:p-6">
+        <div className="grid gap-6 lg:grid-cols-12">
+          {/* Left: Stepper + Active Step */}
+          <div className="lg:col-span-7">
+            <div className="grid gap-4 lg:grid-cols-12">
+              {/* Stepper */}
+              <div className="lg:col-span-4">
+                <div className="rounded-mcn-xl border border-mcn-stroke-soft bg-mcn-surface p-3 shadow-mcn-soft">
+                  <div className="px-2 pb-2 text-mt-down-1 text-mcn-text-muted">
+                    Steps
                   </div>
-                </div>
 
-                {/* Active Step */}
-                <div className="lg:col-span-8">
-                  <ActiveStep />
+                  <div className="grid gap-1">
+                    {steps.map((t, idx) => (
+                      <StepItem
+                        key={t}
+                        index={idx}
+                        title={t}
+                        isActive={state.stepIndex === idx}
+                        status={stepStatus(idx)}
+                        onClick={() => dispatch({ type: "GOTO", index: idx })}
+                      />
+                    ))}
+                  </div>
 
-                  <div className="mt-4 flex items-center justify-between">
-                    <button
-                      type="button"
-                      onClick={() => dispatch({ type: "BACK" })}
-                      className="rounded-mcn-lg border border-mcn-stroke-soft bg-white px-5 py-3 font-semibold text-mcn-text-primary shadow-mcn-soft transition duration-fast ease-ease-out-standard hover:shadow-mcn-card disabled:opacity-50"
-                      disabled={state.stepIndex === 0}
-                    >
-                      Back
-                    </button>
-
-                    <button
-                      type="button"
-                      onClick={() => dispatch({ type: "NEXT" })}
-                      className="rounded-mcn-lg bg-mcn-ink-bg px-5 py-3 font-semibold text-mcn-ink-text-primary shadow-mcn-soft transition duration-fast ease-ease-out-standard hover:shadow-mcn-card"
-                      disabled={state.stepIndex === 7}
-                    >
-                      Next
-                    </button>
+                  <div className="mt-3 px-2 text-mt-down-2 text-mcn-text-faint">
+                    Complete the first 3 steps to see a reliable setup recommendation.
                   </div>
                 </div>
               </div>
+
+              {/* Active Step */}
+              <div className="lg:col-span-8">
+                <ActiveStep />
+
+                <div className="mt-4 flex items-center justify-between">
+                  <button
+                    type="button"
+                    onClick={() => dispatch({ type: "BACK" })}
+                    className="rounded-mcn-lg border border-mcn-stroke-soft bg-white px-5 py-3 font-semibold text-mcn-text-primary shadow-mcn-soft transition duration-fast ease-ease-out-standard hover:shadow-mcn-card disabled:opacity-50"
+                    disabled={state.stepIndex === 0}
+                  >
+                    Back
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => dispatch({ type: "NEXT" })}
+                    className="rounded-mcn-lg bg-mcn-ink-bg px-5 py-3 font-semibold text-mcn-ink-text-primary shadow-mcn-soft transition duration-fast ease-ease-out-standard hover:shadow-mcn-card"
+                    disabled={state.stepIndex === 7}
+                  >
+                    Next
+                  </button>
+                </div>
+              </div>
             </div>
+          </div>
 
-            {/* Right: Live Blueprint (Sticky) */}
-            <div className="lg:col-span-5">
-              <div className="sticky top-[92px]">
-                {/* Monitor-style blueprint card */}
-                <div className="relative overflow-hidden rounded-mcn-xl border border-[rgba(255,255,255,0.12)] bg-[rgba(17,17,20,0.90)] p-6 shadow-[0_18px_50px_rgba(0,0,0,0.55)]">
-                  {/* monitor glow accents */}
-                  <div className="pointer-events-none absolute -right-14 -top-14 h-56 w-56 rounded-full bg-[rgba(18,184,214,0.18)] blur-3xl" />
-                  <div className="pointer-events-none absolute -left-20 -bottom-20 h-60 w-60 rounded-full bg-[rgba(47,107,255,0.16)] blur-3xl" />
+          {/* Right: Live Blueprint (Sticky) */}
+          <div className="lg:col-span-5">
+            <div className="sticky top-[92px]">
+              {/* Monitor-style blueprint card */}
+              <div className="relative overflow-hidden rounded-mcn-xl border border-[rgba(255,255,255,0.12)] bg-[rgba(17,17,20,0.90)] p-6 shadow-[0_18px_50px_rgba(0,0,0,0.55)]">
+                {/* monitor glow accents */}
+                <div className="pointer-events-none absolute -right-14 -top-14 h-56 w-56 rounded-full bg-[rgba(18,184,214,0.18)] blur-3xl" />
+                <div className="pointer-events-none absolute -left-20 -bottom-20 h-60 w-60 rounded-full bg-[rgba(47,107,255,0.16)] blur-3xl" />
 
-                  <div className="relative">
-                    {/* Header */}
-                    <div className="flex items-start justify-between gap-3">
-                      <div className="inline-flex items-center gap-3">
-                        <span className="inline-flex h-11 w-11 items-center justify-center rounded-mcn-lg border border-white/10 bg-white/5">
-                          <ChargerIcon className="h-6 w-6 text-white/90" />
-                        </span>
-                        <div>
-                          <div className="text-mt-down-1 font-semibold text-white/90">
-                            Live Blueprint
-                          </div>
-                          <div className="text-mt-down-2 text-white/60">
-                            Updates as you fill steps
-                          </div>
+                <div className="relative">
+                  {/* Header */}
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="inline-flex items-center gap-3">
+                      <span className="inline-flex h-11 w-11 items-center justify-center rounded-mcn-lg border border-white/10 bg-white/5">
+                        <ChargerIcon className="h-6 w-6 text-white/90" />
+                      </span>
+                      <div>
+                        <div className="text-mt-down-1 font-semibold text-white/90">
+                          Live Blueprint
+                        </div>
+                        <div className="text-mt-down-2 text-white/60">
+                          Updates as you fill steps
                         </div>
                       </div>
+                    </div>
 
+                    <span className="rounded-full border border-white/12 bg-white/5 px-3 py-1 text-mt-down-2 font-semibold text-white/70">
+                      {blueprint.confidence} confidence
+                    </span>
+                  </div>
+
+                  {/* Model */}
+                  <div className="mt-6 rounded-mcn-lg border border-white/10 bg-white/5 p-4">
+                    <div className="text-mt-down-2 text-white/60">Recommended model</div>
+                    <div className="mt-1 font-heading text-mt-up-2 text-mcn-blue drop-shadow-[0_0_10px_rgba(47,107,255,0.7)]">
+                      {blueprint.recommendedModel} • {blueprint.useCase}
+                    </div>
+                    <div className="mt-1 text-mt-down-1 text-white/65">Setup: {blueprint.setup}</div>
+                  </div>
+
+                  {/* Requirements checklist */}
+                  <div className="mt-4 rounded-mcn-lg border border-white/10 bg-white/5 p-4">
+                    <div className="text-mt-down-2 text-white/60">Requirements</div>
+                    <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                      <div>
+                        <div className="text-mt-down-1 font-semibold text-white/85">You arrange</div>
+                        <ul className="mt-2 space-y-1 text-mt-down-1 text-white/65">
+                          <li>• Land / parking space</li>
+                          <li>• Electricity connection</li>
+                          <li>• Basic permissions</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <div className="text-mt-down-1 font-semibold text-white/85">MCN provides</div>
+                        <ul className="mt-2 space-y-1 text-mt-down-1 text-white/65">
+                          <li>• Hardware + installation</li>
+                          <li>• Software + payments</li>
+                          <li>• Monitoring + support</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Investment */}
+                  <div className="mt-4 rounded-mcn-lg border border-white/10 bg-white/5 p-4">
+                    <div className="text-mt-down-2 text-white/60">Investment estimate</div>
+                    <div className="mt-1 font-heading text-mt-up-2 text-[rgba(34,197,94,0.95)]">
+                      {formatINR(blueprint.totalMin)} – {formatINR(blueprint.totalMax)}
+                    </div>
+                    <div className="mt-1 text-mt-down-1 text-white/60">Go-live: {blueprint.timeToLive}</div>
+                  </div>
+
+                  {/* Earnings */}
+                  <div className="mt-4 rounded-mcn-lg border border-white/10 bg-white/5 p-4">
+                    <div className="flex items-center justify-between gap-3">
+                      <div className="text-mt-down-2 text-white/60">Earnings (range)</div>
                       <span className="rounded-full border border-white/12 bg-white/5 px-3 py-1 text-mt-down-2 font-semibold text-white/70">
-                        {blueprint.confidence} confidence
+                        Computed
                       </span>
                     </div>
 
-                    {/* Model */}
-                    <div className="mt-6 rounded-mcn-lg border border-white/10 bg-white/5 p-4">
-                      <div className="text-mt-down-2 text-white/60">Recommended model</div>
-                      <div className="mt-1 font-heading text-mt-up-2 text-white/92">
-                        {blueprint.recommendedModel} • {blueprint.useCase}
-                      </div>
-                      <div className="mt-1 text-mt-down-1 text-white/65">Setup: {blueprint.setup}</div>
+                    <div className="mt-1 font-heading text-mt-up-2 text-[rgba(74,222,128,0.95)]">
+                      {formatINR(blueprint.netMin)} – {formatINR(blueprint.netMax)}
                     </div>
 
-                    {/* Requirements checklist */}
-                    <div className="mt-4 rounded-mcn-lg border border-white/10 bg-white/5 p-4">
-                      <div className="text-mt-down-2 text-white/60">Requirements</div>
-                      <div className="mt-3 grid gap-3 sm:grid-cols-2">
-                        <div>
-                          <div className="text-mt-down-1 font-semibold text-white/85">You arrange</div>
-                          <ul className="mt-2 space-y-1 text-mt-down-1 text-white/65">
-                            <li>• Land / parking space</li>
-                            <li>• Electricity connection</li>
-                            <li>• Basic permissions</li>
-                          </ul>
-                        </div>
-                        <div>
-                          <div className="text-mt-down-1 font-semibold text-white/85">MCN provides</div>
-                          <ul className="mt-2 space-y-1 text-mt-down-1 text-white/65">
-                            <li>• Hardware + installation</li>
-                            <li>• Software + payments</li>
-                            <li>• Monitoring + support</li>
-                          </ul>
-                        </div>
-                      </div>
+                    <div className="mt-2 text-mt-down-1 text-white/60">
+                      Sessions/day ~ <span className="font-semibold text-white/80">{blueprint.sessionsPerDay}</span>
+                      {" · "}
+                      Avg/session ~ <span className="font-semibold text-white/80">₹{blueprint.avgRevenuePerSession}</span>
                     </div>
 
-                    {/* Investment */}
-                    <div className="mt-4 rounded-mcn-lg border border-white/10 bg-white/5 p-4">
-                      <div className="text-mt-down-2 text-white/60">Investment estimate</div>
-                      <div className="mt-1 font-heading text-mt-up-2 text-white/92">
-                        {formatINR(blueprint.totalMin)} – {formatINR(blueprint.totalMax)}
-                      </div>
-                      <div className="mt-1 text-mt-down-1 text-white/60">Go-live: {blueprint.timeToLive}</div>
+                    <div className="mt-2 text-mt-down-1 text-white/55">
+                      Payback ~ {blueprint.paybackMonths} months (approx)
                     </div>
 
-                    {/* Earnings */}
-                    <div className="mt-4 rounded-mcn-lg border border-white/10 bg-white/5 p-4">
-                      <div className="flex items-center justify-between gap-3">
-                        <div className="text-mt-down-2 text-white/60">Earnings (range)</div>
-                        <span className="rounded-full border border-white/12 bg-white/5 px-3 py-1 text-mt-down-2 font-semibold text-white/70">
-                          Computed
-                        </span>
-                      </div>
-
-                      <div className="mt-1 font-heading text-mt-up-2 text-[rgba(74,222,128,0.95)]">
-                        {formatINR(blueprint.netMin)} – {formatINR(blueprint.netMax)}
-                      </div>
-
-                      <div className="mt-2 text-mt-down-1 text-white/60">
-                        Sessions/day ~ <span className="font-semibold text-white/80">{blueprint.sessionsPerDay}</span>
-                        {" · "}
-                        Avg/session ~ <span className="font-semibold text-white/80">₹{blueprint.avgRevenuePerSession}</span>
-                      </div>
-
-                      <div className="mt-2 text-mt-down-1 text-white/55">
-                        Payback ~ {blueprint.paybackMonths} months (approx)
-                      </div>
-
-                      <div className="mt-3 text-mt-down-2 text-white/45">
-                        *Earnings vary by location, utilization, tariff, and charger type.
-                      </div>
-                    </div>
-
-                    {/* Next actions */}
-                    <div className="mt-5 flex flex-wrap gap-3">
-                      <PrimaryButton to="/contact">Book site survey</PrimaryButton>
-                      <SecondaryButton to="/station-business">Detailed guide</SecondaryButton>
+                    <div className="mt-3 text-mt-down-2 text-white/45">
+                      *Earnings vary by location, utilization, tariff, and charger type.
                     </div>
                   </div>
-                </div>
 
-                {/* Small note */}
-                <div className="mt-3 text-mt-down-2 text-mcn-text-muted">
-                  Tip: Fill Step 3 (Power) and Step 6 (Demand) to make estimates far more accurate.
+                  {/* Next actions */}
+                  <div className="mt-5 flex flex-wrap gap-3">
+                    <PrimaryButton to="/contact">Book site survey</PrimaryButton>
+                    <SecondaryButton to="/station-business">Detailed guide</SecondaryButton>
+                  </div>
                 </div>
+              </div>
+
+              {/* Small note */}
+              <div className="mt-3 text-mt-down-2 text-mcn-text-muted">
+                Tip: Fill Step 3 (Power) and Step 6 (Demand) to make estimates far more accurate.
               </div>
             </div>
           </div>
         </div>
-
-        {/* Footer spacing */}
-        <div className="h-10" />
       </div>
+      {/* end dashboard wrapper */}
+    </div>
+  </div>
+
+  {/* Footer spacing */}
+  <div className="h-10" />
+</div>
+
     </div>
   );
 }

@@ -1,0 +1,346 @@
+/* MainDashboard.tsx */
+import React, { useMemo, useState } from "react";
+import {
+  Search,
+  Battery,
+  MapPin,
+  Zap,
+  Info,
+  Car,
+  Bike,
+  ChevronRight,
+  Loader2,
+  Clock,
+  Sparkles,
+} from "lucide-react";
+import { useNavigate } from "react-router-dom";
+
+/**
+ * ✅ Data Flow Compatibility
+ * - New flow: <MainDashboard vehicleGuideData={vehicleGuideData} />
+ * - Old flow: <MainDashboard database={vehicleGuideData} />
+ */
+interface MainDashboardProps {
+  vehicleGuideData?: any;
+  database?: any;
+}
+
+const MainDashboard: React.FC<MainDashboardProps> = ({ vehicleGuideData, database }) => {
+  const navigate = useNavigate();
+  const db = database ?? vehicleGuideData;
+
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedVehicle, setSelectedVehicle] = useState<any>(null);
+
+  const [activeCategory, setActiveCategory] = useState("CAT_002");
+  const isEVChargingGuide = activeCategory === "CAT_002";
+
+  const allVehicles = useMemo(() => {
+    if (!db || !db.Vehicle_master) return [];
+    return db.Vehicle_master.map((v: any) => {
+      const details4w = db["4w_vehicle_details"]?.find(
+        (d: any) => d.Vehicle_ID === v.Vehicle_ID
+      );
+      const details2w = db["2w_vehicle_details"]?.find(
+        (d: any) => d.Vehicle_ID === v.Vehicle_ID
+      );
+      return { ...v, details: details4w || details2w || null };
+    });
+  }, [db]);
+
+  const filteredResults = useMemo(() => {
+    if (searchTerm.trim().length < 2) return [];
+    const q = searchTerm.toLowerCase();
+    return allVehicles
+      .filter((v: any) => {
+        const name = (v.Vehicle_Name || "").toLowerCase();
+        const mfg = (v.Manufacturer || "").toLowerCase();
+        return name.includes(q) || mfg.includes(q);
+      })
+      .slice(0, 7);
+  }, [searchTerm, allVehicles]);
+
+  const handleSelectVehicle = (vehicle: any) => {
+    setSelectedVehicle(vehicle);
+    setSearchTerm("");
+  };
+
+  const slugify = (name: string) =>
+    (name || "")
+      .toLowerCase()
+      .trim()
+      .replace(/[^\w\s-]/g, "")
+      .replace(/\s+/g, "-");
+
+  if (!db) {
+    return (
+      <div className="w-full rounded-3xl border border-mcn-stroke-soft bg-mcn-surface/70 backdrop-blur-md p-12 shadow-[0_12px_40px_rgba(47,107,255,0.10)]">
+        <div className="flex flex-col items-center justify-center">
+          <Loader2 className="animate-spin text-mcn-blue mb-4" size={44} />
+          <p className="text-mcn-text-secondary font-semibold text-lg">
+            Loading Vehicle Database…
+          </p>
+          <p className="text-mcn-text-faint text-sm mt-1">
+            Waiting for App source-of-truth JSON
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="relative rounded-[28px] border border-mcn-stroke-soft bg-mcn-surface/80 backdrop-blur-md p-8 shadow-[0_18px_60px_rgba(18,184,214,0.10)] overflow-hidden">
+      {/* Electric Dawn glow layer */}
+      <div className="pointer-events-none absolute inset-0 opacity-70">
+        <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full blur-3xl bg-[radial-gradient(circle_at_center,rgba(47,107,255,0.35),transparent_65%)]" />
+        <div className="absolute -bottom-28 -right-28 h-80 w-80 rounded-full blur-3xl bg-[radial-gradient(circle_at_center,rgba(229,0,0,0.22),transparent_65%)]" />
+        <div className="absolute top-12 right-24 h-56 w-56 rounded-full blur-3xl bg-[radial-gradient(circle_at_center,rgba(18,184,214,0.28),transparent_65%)]" />
+      </div>
+
+      <div className="relative grid grid-cols-12 gap-8">
+        {/* SIDEBAR */}
+        <aside className="col-span-12 lg:col-span-3 rounded-2xl border border-mcn-stroke-soft bg-mcn-surface3 backdrop-blur-md p-6 shadow-[0_10px_30px_rgba(0,0,0,0.06)]">
+          <div className="flex items-center gap-2 mb-5 px-1">
+            <Sparkles size={16} className="text-mcn-cyan" />
+            <h3 className="text-xs font-black uppercase tracking-wider text-mcn-text-muted">
+              Categories
+            </h3>
+          </div>
+
+          <nav className="space-y-2">
+            {[
+              { id: "CAT_002", name: "e-Vehicles Charging Guide", icon: <Zap size={18} /> },
+              { id: "CAT_003", name: "EV Charging 101", icon: <Info size={18} /> },
+              { id: "CAT_004", name: "Trip Reports", icon: <MapPin size={18} /> },
+              { id: "CAT_005", name: "Charging Stations", icon: <Battery size={18} /> },
+            ].map((cat) => {
+              const active = activeCategory === cat.id;
+              return (
+                <button
+                  key={cat.id}
+                  onClick={() => setActiveCategory(cat.id)}
+                  className={[
+                    "w-full flex items-center gap-3 px-4 py-3.5 rounded-xl text-left font-semibold text-sm transition-all",
+                    active
+                      ? "bg-white text-mcn-text-primary border border-mcn-stroke-soft shadow-[0_10px_26px_rgba(47,107,255,0.14)]"
+                      : "bg-transparent text-mcn-text-secondary hover:bg-white/70 hover:shadow-sm border border-transparent",
+                  ].join(" ")}
+                >
+                  <span
+                    className={[
+                      "grid place-items-center h-9 w-9 rounded-lg border",
+                      active
+                        ? "bg-[radial-gradient(circle_at_top,rgba(47,107,255,0.16),rgba(255,255,255,0.9))] border-mcn-stroke-soft text-mcn-blue shadow-[0_0_0_1px_rgba(47,107,255,0.12)]"
+                        : "bg-white/70 border-mcn-stroke-softer text-mcn-cyan",
+                    ].join(" ")}
+                  >
+                    {cat.icon}
+                  </span>
+
+                  <span className="leading-tight">{cat.name}</span>
+                </button>
+              );
+            })}
+          </nav>
+        </aside>
+
+        {/* CONTENT */}
+        {isEVChargingGuide ? (
+          <>
+            {/* SEARCH + CARDS */}
+            <section className="col-span-12 lg:col-span-5 space-y-6">
+              <div className="rounded-2xl border border-mcn-stroke-soft bg-mcn-surface3 backdrop-blur-md p-6 shadow-[0_12px_34px_rgba(18,184,214,0.10)]">
+                <h3 className="text-xs font-black uppercase tracking-wider text-mcn-text-muted mb-4">
+                  Search Vehicles
+                </h3>
+
+                <div className="relative">
+                  <Search
+                    className="absolute left-4 top-1/2 -translate-y-1/2 text-mcn-text-faint"
+                    size={18}
+                  />
+
+                  <input
+                    type="text"
+                    placeholder="Search Tata Nexon, BYD eMax, Ola…"
+                    className="w-full pl-11 pr-4 py-3.5 bg-white/90 border border-mcn-stroke-soft rounded-xl outline-none transition-all
+                               focus:ring-4 focus:ring-[rgba(47,107,255,0.18)] focus:border-[rgba(47,107,255,0.35)]
+                               shadow-[0_6px_18px_rgba(0,0,0,0.05)]"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                  />
+
+                  {filteredResults.length > 0 && (
+                    <div className="absolute z-30 w-full mt-2 bg-white/95 backdrop-blur-md border border-mcn-stroke-soft rounded-xl shadow-[0_18px_60px_rgba(47,107,255,0.14)] overflow-hidden">
+                      {filteredResults.map((v: any) => (
+                        <button
+                          key={v.Vehicle_ID}
+                          onClick={() => handleSelectVehicle(v)}
+                          className="w-full text-left px-4 py-3 hover:bg-[rgba(47,107,255,0.06)] flex justify-between items-center border-b border-mcn-stroke-softer last:border-0 transition-colors"
+                        >
+                          <div>
+                            <div className="font-semibold text-mcn-text-primary text-sm">
+                              {v.Vehicle_Name}
+                            </div>
+                            <div className="text-xs text-mcn-text-faint">{v.Manufacturer}</div>
+                          </div>
+                          <ChevronRight size={16} className="text-mcn-text-faint" />
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Tiles */}
+              <div className="grid grid-cols-2 gap-4">
+                <div
+                  onClick={() => navigate("/charging-guide/ev-cars")}
+                  className="group cursor-pointer rounded-2xl border border-mcn-stroke-soft bg-white/80 backdrop-blur-md p-6
+                             shadow-[0_14px_40px_rgba(47,107,255,0.10)]
+                             hover:shadow-[0_18px_60px_rgba(47,107,255,0.16)]
+                             transition-all"
+                >
+                  <div className="h-12 w-12 rounded-xl grid place-items-center border border-mcn-stroke-soft bg-[radial-gradient(circle_at_top,rgba(47,107,255,0.16),rgba(255,255,255,0.95))]
+                                  shadow-[0_0_0_1px_rgba(47,107,255,0.10)] mb-4">
+                    <Car size={22} className="text-mcn-blue" />
+                  </div>
+
+                  <h4 className="font-black text-mcn-text-primary text-lg mb-1 tracking-tight">
+                    4-Wheeler EVs
+                  </h4>
+                  <p className="text-[10px] text-mcn-text-faint font-black uppercase tracking-widest">
+                    Passenger Cars
+                  </p>
+                </div>
+
+                <div
+                  className="group cursor-pointer rounded-2xl border border-mcn-stroke-soft bg-white/80 backdrop-blur-md p-6
+                             shadow-[0_14px_40px_rgba(18,184,214,0.10)]
+                             hover:shadow-[0_18px_60px_rgba(18,184,214,0.16)]
+                             transition-all"
+                >
+                  <div className="h-12 w-12 rounded-xl grid place-items-center border border-mcn-stroke-soft bg-[radial-gradient(circle_at_top,rgba(18,184,214,0.16),rgba(255,255,255,0.95))]
+                                  shadow-[0_0_0_1px_rgba(18,184,214,0.10)] mb-4">
+                    <Bike size={22} className="text-mcn-cyan" />
+                  </div>
+
+                  <h4 className="font-black text-mcn-text-primary text-lg mb-1 tracking-tight">
+                    2-Wheeler EVs
+                  </h4>
+                  <p className="text-[10px] text-mcn-text-faint font-black uppercase tracking-widest">
+                    Bikes & Scooters
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* DETAILS */}
+            <section className="col-span-12 lg:col-span-4">
+              {selectedVehicle ? (
+                <div className="rounded-2xl border border-mcn-stroke-soft bg-white/85 backdrop-blur-md overflow-hidden shadow-[0_18px_70px_rgba(229,0,0,0.10)]">
+                  {/* Header */}
+                  <div className="relative p-6 text-mcn-text-primary bg-[linear-gradient(135deg,rgba(255,255,255,0.85),rgba(255,255,255,0.65))]">
+                    <div className="pointer-events-none absolute inset-0">
+                      <div className="absolute -top-20 -left-20 h-60 w-60 rounded-full blur-3xl bg-[radial-gradient(circle_at_center,rgba(229,0,0,0.18),transparent_60%)]" />
+                      <div className="absolute -bottom-20 -right-16 h-56 w-56 rounded-full blur-3xl bg-[radial-gradient(circle_at_center,rgba(47,107,255,0.20),transparent_60%)]" />
+                    </div>
+
+                    <div className="relative">
+                      <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/80 border border-mcn-stroke-soft text-[10px] font-black uppercase tracking-wider shadow-sm">
+                        <Zap size={12} className="text-mcn-blue" />
+                        {selectedVehicle.Manufacturer}
+                      </span>
+
+                      <h3 className="mt-3 text-2xl font-black leading-tight">
+                        {selectedVehicle.Vehicle_Name}
+                      </h3>
+
+                      <div className="mt-2 text-sm text-mcn-text-muted flex items-center gap-2">
+                        <Battery size={14} className="text-mcn-cyan" />
+                        {selectedVehicle.details?.Vehicle_Variant || "Standard"}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Body */}
+                  <div className="p-6 space-y-6">
+                    <div className="grid grid-cols-2 gap-4">
+                      <DetailBox label="Price" value={selectedVehicle.details?.Price} />
+                      <DetailBox label="Battery" value={selectedVehicle.details?.Battery_Capacity} />
+                      <DetailBox label="Claimed Range" value={selectedVehicle.details?.Claimed_Range} />
+                      <DetailBox label="Real Range" value={selectedVehicle.details?.Realworld_Range} />
+                    </div>
+
+                    <div className="rounded-xl p-4 flex items-center justify-between border border-mcn-stroke-soft bg-mcn-surface3 backdrop-blur-md shadow-[0_12px_32px_rgba(18,184,214,0.10)]">
+                      <div>
+                        <p className="text-[10px] font-black uppercase tracking-wider text-mcn-text-faint mb-1">
+                          Connector
+                        </p>
+                        <p className="text-mcn-text-primary font-black text-sm">
+                          {selectedVehicle.details?.Charging_Type || "Standard"}
+                        </p>
+                      </div>
+                      <div className="h-11 w-11 rounded-xl grid place-items-center bg-white/80 border border-mcn-stroke-soft shadow-sm">
+                        <Battery className="text-mcn-blue" size={18} />
+                      </div>
+                    </div>
+
+                    {/* ✅ RED button as requested */}
+                    <button
+                      onClick={() =>
+                        navigate(`/charging-guide/${slugify(selectedVehicle.Vehicle_Name)}`)
+                      }
+                      className="w-full py-3.5 rounded-xl font-black flex items-center justify-center gap-2 transition-all
+                                 bg-mcn-red text-mcn-text-inverse
+                                 shadow-[0_16px_50px_rgba(229,0,0,0.28)]
+                                 hover:bg-mcn-red-hover hover:shadow-[0_20px_70px_rgba(229,0,0,0.36)]
+                                 active:scale-[0.99]"
+                    >
+                      View Charging Guide
+                      <ChevronRight size={18} />
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <div className="rounded-2xl border border-mcn-stroke-soft bg-white/70 backdrop-blur-md p-12 text-center min-h-[500px] flex flex-col items-center justify-center shadow-[0_14px_50px_rgba(47,107,255,0.08)]">
+                  <div className="bg-white/90 p-5 rounded-2xl mb-4 border border-mcn-stroke-soft shadow-sm">
+                    <Search size={34} className="text-mcn-text-faint" />
+                  </div>
+                  <h4 className="text-mcn-text-faint font-semibold">
+                    Search for a vehicle to view details
+                  </h4>
+                </div>
+              )}
+            </section>
+          </>
+        ) : (
+          <section className="col-span-12 lg:col-span-9">
+            <div className="rounded-2xl border border-mcn-stroke-soft bg-white/75 backdrop-blur-md p-16 text-center min-h-[600px] flex flex-col items-center justify-center shadow-[0_18px_70px_rgba(18,184,214,0.10)]">
+              <div className="bg-white/90 p-8 rounded-3xl mb-6 border border-mcn-stroke-soft shadow-sm">
+                <Clock size={64} className="text-mcn-text-faint" />
+              </div>
+              <h2 className="text-4xl font-black text-mcn-text-primary mb-4">
+                Content Coming Soon
+              </h2>
+              <p className="text-lg text-mcn-text-muted font-medium max-w-md">
+                We’re building comprehensive guides for this category. Stay tuned!
+              </p>
+            </div>
+          </section>
+        )}
+      </div>
+    </div>
+  );
+};
+
+const DetailBox: React.FC<{ label: string; value: any }> = ({ label, value }) => (
+  <div className="rounded-xl p-3 border border-mcn-stroke-soft bg-white/85 backdrop-blur-md shadow-[0_10px_26px_rgba(0,0,0,0.05)]">
+    <p className="text-[10px] uppercase font-black text-mcn-text-faint tracking-wider mb-1">
+      {label}
+    </p>
+    <p className="text-mcn-text-primary font-black text-base">{value || "N/A"}</p>
+  </div>
+);
+
+export default MainDashboard;

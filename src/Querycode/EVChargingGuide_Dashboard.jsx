@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Search, Battery, MapPin, Zap, Info, Car, Bike, ChevronRight, Loader2, Clock } from 'lucide-react';
+import { Search, Battery, MapPin, Zap, Info, Car, Bike, ChevronRight, Loader2, Clock, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const EVChargingGuide_Dashboard = ({ database }) => {
@@ -51,30 +51,52 @@ const EVChargingGuide_Dashboard = ({ database }) => {
     <div className="min-h-screen bg-slate-100">
       
       {/* ROW 1: HERO SECTION */}
-      <header className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20 px-8">
-        <div className="max-w-[1600px] mx-auto">
-          <div className="inline-block px-4 py-1.5 mb-5 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-xs font-bold uppercase tracking-wider">
-            Massive Charging Network
-          </div>
-          <h1 className="text-5xl lg:text-6xl font-black mb-6 tracking-tight leading-tight">
-            Electric Vehicle (EV) <br />
-            <span className="text-blue-400">Charging Guide</span>
-          </h1>
-          <p className="text-xl text-slate-300 max-w-3xl leading-relaxed mb-2">
-            Confused about how to set-up your EV charging infrastructure?
-          </p>
-          <p className="text-lg text-slate-400 max-w-3xl leading-relaxed mb-6">
-            Get detailed guide to set-up home, office, public, or commercial charging infrastructure.
-          </p>
-          <div className="flex items-center gap-2 text-slate-300 font-medium">
-            Browse the guide by relevant categories
-            <ChevronRight className="text-blue-400" size={20} />
-          </div>
-        </div>
-      </header>
+      {/* ROW 1: HERO SECTION */}
+<header className="relative w-full bg-gradient-to-br from-white via-slate-50 to-slate-100 py-24 px-8 overflow-hidden">
+  <div className="max-w-[1400px] mx-auto text-center">
+
+    {/* Badge */}
+    <div className="inline-block mb-6 px-4 py-1.5 rounded-full bg-blue-100 text-blue-600 text-xs font-semibold uppercase tracking-wider">
+      Massive Charging Network
+    </div>
+
+    {/* Heading */}
+    <h1 className="text-5xl md:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+      Electric Vehicle{" "}
+      <span className="relative inline-block">
+        <span className="bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent">
+          Charging Guide
+        </span>
+      </span>
+    </h1>
+
+    {/* Subtext */}
+    <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed">
+      Everything you need to know about setting up home, office, commercial, and public EV charging
+      infrastructure — simplified and practical.
+    </p>
+
+    {/* CTA */}
+    <button
+  onClick={() => {
+    document
+      .getElementById('charging-guide-section')
+      ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }}
+  className="inline-flex items-center gap-2 px-8 py-4 bg-red-600 text-white text-lg font-semibold rounded-xl transition-all duration-300 hover:bg-red-700 hover:scale-105 shadow-lg hover:shadow-[0_0_30px_rgba(220,38,38,0.6)]"
+>
+  Explore the Guide
+  <ArrowRight size={20} />
+</button>
+
+  </div>
+</header>
 
       {/* ROW 2: DYNAMIC GRID LAYOUT - UNIFIED APP CONTAINER */}
-      <main className="max-w-[1600px] mx-auto px-8 py-8">
+      <main
+  id="charging-guide-section"
+  className="max-w-[1600px] mx-auto px-8 py-8"
+>
         {/* Unified white container wrapping all columns */}
         <div className="bg-white rounded-3xl shadow-xl border border-slate-200 p-8">
           <div className={`grid ${isEVChargingGuide ? 'grid-cols-12' : 'grid-cols-12'} gap-8`}>

@@ -124,53 +124,6 @@ module.exports = {
             },
           },
         },
-
-        /* -------------------------------------------------
-           Electric Dawn Color Options (Additive)
-           - Not a new theme; additional tokens you can opt into
-           - Existing MCN colors remain unchanged
-           ------------------------------------------------- */
-        electric: {
-          /* Light cool backgrounds (preferred for Electric Dawn) */
-          bg: {
-            frost: "#F4F7FA",
-            mist: "#EEF2F6",
-            steel: "#E6EBF1",
-          },
-
-          /* Purposeful dark blocks (infrastructure/system sections) */
-          dark: {
-            graphite: "#121418",
-            deepNavy: "#0D1B2A",
-            carbonSteel: "#1A1F25",
-          },
-
-          /* Electric accents */
-          accent: {
-            green: "#1EFF88",
-            cyan: "#00D1FF",
-            ionBlue: "#2563EB",
-          },
-
-          /* Text helpers (re-using your existing contrast logic) */
-          text: {
-            primary: "#0B0B0C",
-            secondary: "#2A2A2C",
-            inverse: "#FFFFFF",
-          },
-
-          /* Optional glow utilities (use sparingly) */
-          glow: {
-            green: "rgba(30,255,136,0.45)",
-            cyan: "rgba(0,209,255,0.45)",
-            ionBlue: "rgba(37,99,235,0.35)",
-          },
-
-          stroke: {
-            soft: "rgba(0,0,0,0.08)",
-            strong: "rgba(0,0,0,0.14)",
-          },
-        },
       },
 
       /* -------------------------------------------------
@@ -231,10 +184,7 @@ module.exports = {
       ringColor: {
         "mcn-blue": "#2F6BFF",
         "mcn-red": "#E50000",
-              "electric-cyan": "#00D1FF",
-        "electric-green": "#1EFF88",
-        "electric-ion": "#2563EB",
-},
+      },
 
       transitionDuration: {
         fast: "160ms",
