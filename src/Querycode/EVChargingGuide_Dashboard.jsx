@@ -2,6 +2,8 @@ import React, { useState, useMemo } from 'react';
 import { Search, Battery, MapPin, Zap, Info, Car, Bike, ChevronRight, Loader2, Clock, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
+const slugifyTitle = (title = '') => title.toLowerCase().trim().replace(/\s+/g, '-');
+
 const EVChargingGuide_Dashboard = ({ database }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedVehicle, setSelectedVehicle] = useState(null);
@@ -30,6 +32,24 @@ const EVChargingGuide_Dashboard = ({ database }) => {
     ).slice(0, 6);
   }, [searchTerm, allVehicles]);
 
+  const tripReports = useMemo(() => {
+    if (!database || activeCategory !== 'CAT_004') return [];
+
+    return (database.Category_Guide_Map || [])
+      .filter((item) => item.Category_ID === 'CAT_004')
+      .map((item) => {
+        const guide = (database.Guide_article || []).find((g) => g.Guide_ID === item.Guide_ID);
+        const message = guide
+          ? (database.Core_message || []).find((m) => m.cmsg_id === guide.cmsg_id)
+          : null;
+
+        if (!guide || !message) return null;
+
+        return { guide, message };
+      })
+      .filter(Boolean);
+  }, [database, activeCategory]);
+
   const handleSelectVehicle = (vehicle) => {
     setSelectedVehicle(vehicle);
     setSearchTerm('');
@@ -46,6 +66,7 @@ const EVChargingGuide_Dashboard = ({ database }) => {
 
   // Check if active category is the EV Charging Guide (CAT_002)
   const isEVChargingGuide = activeCategory === 'CAT_002';
+  const isTripReportsCategory = activeCategory === 'CAT_004';
 
   return (
     <div className="min-h-screen bg-slate-100">
@@ -281,6 +302,47 @@ const EVChargingGuide_Dashboard = ({ database }) => {
                   )}
                 </section>
               </>
+            ) : isTripReportsCategory ? (
+              <section className="col-span-12 lg:col-span-9">
+                <div className="bg-slate-50 rounded-2xl border border-slate-200 p-8 min-h-[600px]">
+                  <div className="mb-6">
+                    <h2 className="text-3xl font-black text-slate-900 mb-2">EV Trip Reports</h2>
+                    <p className="text-slate-600">
+                      Select a report to open the full article.
+                    </p>
+                  </div>
+
+                  {tripReports.length > 0 ? (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {tripReports.map(({ guide, message }) => (
+                        <button
+                          key={`${guide.Guide_ID}-${message.cmsg_id}`}
+                          onClick={() => navigate(`/charging-guide/${slugifyTitle(message.title)}`)}
+                          className="text-left bg-white rounded-2xl border border-slate-200 p-5 hover:border-blue-300 hover:bg-blue-50 transition-all shadow-sm hover:shadow-md"
+                        >
+                          <div className="flex items-start justify-between gap-4">
+                            <div>
+                              <p className="text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-2">
+                                Trip Report
+                              </p>
+                              <h3 className="text-lg font-bold text-slate-900 leading-snug">
+                                {message.title}
+                              </h3>
+                            </div>
+                            <ChevronRight size={18} className="text-slate-400 shrink-0 mt-1" />
+                          </div>
+                        </button>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="bg-white rounded-2xl border border-dashed border-slate-300 p-12 text-center">
+                      <p className="text-slate-500 font-semibold">
+                        No trip report is mapped to CAT_004 in `Category_Guide_Map`.
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </section>
             ) : (
               /* SINGLE COLUMN: CONTENT COMING SOON (9 cols spanning remaining space) */
               <section className="col-span-12 lg:col-span-9">

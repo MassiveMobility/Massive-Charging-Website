@@ -2075,12 +2075,6 @@
     "Guide_Type": "vehicle_guide",
     "cmsg_id": "MSG_102",
     "Context": "Base Guide"
-  },
-  {
-    "Guide_ID": "GYD_003",
-    "Guide_Type": "trip_report",
-    "cmsg_id": "MSG_103",
-    "Context": "Trip Report"
   }
 ],
 
@@ -2098,21 +2092,6 @@
     "status": "draft",
     "author": "Massive",
     "created_at": "2026-02-04 0:51:50"
-  },
-  {
-    "cmsg_id": "MSG_103",
-    "title": "EV Trip Report - Vrindavan to Noida",
-    "status": "published",
-    "author": "Massive",
-    "created_at": "2026-02-04 0:51:50"
-  }
-],
-
-"Category_Guide_Map": [
-  {
-    "Category_ID": "CAT_004",
-    "Guide_ID": "GYD_003"
   }
 ]
-
 }
