@@ -94,7 +94,7 @@ export default function Home_SectionB_NewCard() {
   };
 
   return (
-    <section className="container py-6 md:py-10">
+    <section className="container py-8 md:py-10">
       <div
         className="
           relative overflow-hidden rounded-mcn-xl
@@ -108,28 +108,28 @@ export default function Home_SectionB_NewCard() {
         <div className="pointer-events-none absolute inset-0 rounded-mcn-xl ring-1 ring-white/10" />
 
         {/* ✅ Mobile: text → image | Desktop: text → image */}
-        <div className="flex flex-col md:flex-row gap-8 md:gap-10 p-6 md:p-10 items-stretch">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-8 p-5 md:p-8 items-stretch">
           {/* TEXT — vertically centered, always left-aligned */}
           <div className="flex-1 flex flex-col justify-center text-left">
             <h2 className="font-heading text-mt-up-5 tracking-tight text-white">
               {content.title}
             </h2>
 
-            <div className="mt-3 text-mt-up-2 font-semibold text-white/85">
+            <div className="mt-2 text-mt-up-2 font-semibold text-white/85">
               {content.heading}
             </div>
 
-            <p className="mt-3 max-w-2xl text-mt-up-1 text-white/70">
+            <p className="mt-2 max-w-2xl text-mt-up-1 text-white/70">
               {content.body}
             </p>
 
-            <div className="mt-5">
+            <div className="mt-4">
               <span className="inline-flex items-center rounded-full border border-white/12 bg-white/5 px-3 py-1 text-mt-down-2 font-semibold text-white/75">
                 {content.badge}
               </span>
             </div>
 
-            <ul className="mt-5 space-y-2">
+            <ul className="mt-4 space-y-2">
               {content.list.map((item, idx) => (
                 <li key={idx} className="flex items-center gap-2 text-mt-up-0 text-white/80">
                   <Icon name={item.icon} className="h-4 w-4 text-white/70" />
@@ -138,17 +138,17 @@ export default function Home_SectionB_NewCard() {
               ))}
             </ul>
 
-            <div className="mt-7 flex flex-wrap gap-3">
+            <div className="mt-5 flex flex-wrap gap-3">
               <a
                 href={content.ctas.primary.href}
-                className="inline-flex items-center justify-center rounded-mcn-lg bg-mcn-red px-6 py-3 font-semibold text-white shadow-[0_10px_30px_rgba(229,0,0,0.22)] hover:bg-mcn-red-hover"
+                className="inline-flex items-center justify-center rounded-mcn-lg bg-mcn-red px-5 py-2.5 font-semibold text-white shadow-[0_10px_30px_rgba(229,0,0,0.22)] hover:bg-mcn-red-hover"
               >
                 {content.ctas.primary.label}
               </a>
 
               <a
                 href={content.ctas.secondary.href}
-                className="inline-flex items-center justify-center rounded-mcn-lg border border-white/15 bg-white/5 px-6 py-3 font-semibold text-white hover:bg-white/10"
+                className="inline-flex items-center justify-center rounded-mcn-lg border border-white/15 bg-white/5 px-5 py-2.5 font-semibold text-white hover:bg-white/10"
               >
                 {content.ctas.secondary.label}
               </a>
@@ -163,7 +163,7 @@ export default function Home_SectionB_NewCard() {
                 bg-[rgba(17,17,20,0.86)]
                 border border-[rgba(255,255,255,0.12)]
                 shadow-[0_18px_50px_rgba(0,0,0,0.55)]
-                w-[85%] sm:w-[340px] md:w-[400px]
+                w-[85%] sm:w-[320px] md:w-[360px]
                 aspect-[4/5]
               "
             >

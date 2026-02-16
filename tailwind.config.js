@@ -19,6 +19,14 @@ module.exports = {
 
     extend: {
       /* -------------------------------------------------
+         Screens (explicit schema breakpoints)
+         ------------------------------------------------- */
+      screens: {
+        mobile: { max: "767px" },
+        desktop: "768px",
+      },
+
+      /* -------------------------------------------------
          Fonts
          ------------------------------------------------- */
       fontFamily: {
@@ -99,6 +107,58 @@ module.exports = {
             warning: "#F59E0B",
             error: "#DC2626",
             info: "#2F6BFF",
+          },
+
+          /* Component tokens (semantic mapping) */
+          component: {
+            button: {
+              primary: "#E50000",
+              primaryHover: "#FF1A1A",
+              secondary: "#FFFFFF",
+              secondaryBorder: "#1A1A1D",
+              tertiary: "#2F6BFF",
+            },
+            card: {
+              result: "#FFFCF5",
+              spec: "#FFFFFF",
+              setup: "#FFFCF5",
+              guide: "#FFFCF5",
+            },
+            badge: {
+              connector: "#FFFFFF",
+              availability: "#1F7A5A",
+              verified: "#1F7A5A",
+              new: "#12B8D6",
+            },
+            table: {
+              spec: "#FFFFFF",
+              compareHeader: "rgba(255,255,255,0.90)",
+            },
+            input: {
+              base: "#FFFFFF",
+              border: "rgba(0,0,0,0.14)",
+              focus: "#2F6BFF",
+            },
+            nav: {
+              glass: "rgba(255,255,255,0.72)",
+              breadcrumb: "#2F6BFF",
+            },
+            map: {
+              pin: "#2F6BFF",
+              pinInactive: "#2A2A2C",
+              panel: "#FFFCF5",
+            },
+          },
+
+          /* State tokens */
+          state: {
+            hover: "rgba(0,0,0,0.04)",
+            pressed: "rgba(0,0,0,0.08)",
+            selected: "rgba(47,107,255,0.12)",
+            disabled: "rgba(0,0,0,0.35)",
+            focus: "#2F6BFF",
+            focusAlt: "#E50000",
+            skeleton: "rgba(0,0,0,0.06)",
           },
 
           /* ---------------------------------------------
@@ -199,6 +259,26 @@ module.exports = {
         "pf-up-5": ["67px", { lineHeight: "1.02" }],
       },
 
+      lineHeight: {
+        tight: "1.2",
+        normal: "1.5",
+        loose: "1.7",
+      },
+
+      /* -------------------------------------------------
+         Spacing Scale (Schema rhythm)
+         ------------------------------------------------- */
+      spacing: {
+        4: "4px",
+        8: "8px",
+        12: "12px",
+        16: "16px",
+        24: "24px",
+        32: "32px",
+        48: "48px",
+        64: "64px",
+      },
+
       /* -------------------------------------------------
          Radius
          ------------------------------------------------- */
@@ -206,6 +286,7 @@ module.exports = {
         mcn: "12px",
         "mcn-lg": "16px",
         "mcn-xl": "20px",
+        pill: "999px",
       },
 
       /* -------------------------------------------------
@@ -228,13 +309,38 @@ module.exports = {
         mcn: "12px",
       },
 
+      backgroundOpacity: {
+        60: "0.60",
+        70: "0.70",
+        82: "0.82",
+      },
+
+      borderOpacity: {
+        8: "0.08",
+        10: "0.10",
+        14: "0.14",
+      },
+
       ringColor: {
         "mcn-blue": "#2F6BFF",
         "mcn-red": "#E50000",
-              "electric-cyan": "#00D1FF",
+        "electric-cyan": "#00D1FF",
         "electric-green": "#1EFF88",
         "electric-ion": "#2563EB",
-},
+      },
+
+      ringWidth: {
+        focus: "2px",
+      },
+
+      opacity: {
+        disabled: "0.4",
+        muted: "0.7",
+      },
+
+      translate: {
+        press: "1px",
+      },
 
       transitionDuration: {
         fast: "160ms",
@@ -242,9 +348,36 @@ module.exports = {
         slow: "320ms",
       },
 
+      transitionProperty: {
+        mcn: "color, background-color, border-color, box-shadow, transform, opacity",
+      },
+
       transitionTimingFunction: {
         "ease-out-standard": "cubic-bezier(0.16, 1, 0.3, 1)",
         "ease-in-standard": "cubic-bezier(0.7, 0, 0.84, 0)",
+      },
+
+      keyframes: {
+        "mcn-skeleton": {
+          "0%": { backgroundPosition: "-200px 0" },
+          "100%": { backgroundPosition: "calc(200px + 100%) 0" },
+        },
+      },
+
+      animation: {
+        "mcn-skeleton": "mcn-skeleton 1.2s ease-in-out infinite",
+      },
+
+      /* -------------------------------------------------
+         Grid + Columns (schema hints)
+         ------------------------------------------------- */
+      gridTemplateColumns: {
+        "mcn-desktop": "repeat(12, minmax(0, 1fr))",
+        "mcn-mobile": "repeat(4, minmax(0, 1fr))",
+      },
+
+      gap: {
+        gutter: "16px",
       },
     },
   },

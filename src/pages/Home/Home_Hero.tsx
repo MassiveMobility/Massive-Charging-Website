@@ -37,7 +37,7 @@ export default function HomeHero() {
       </div>
 
       {/* Content */}
-      <div className="relative max-w-7xl mx-auto px-6 py-24 md:py-28">
+      <div className="relative max-w-7xl mx-auto px-6 py-16 md:py-20">
         <Hero02 />
       </div>
     </section>
@@ -62,14 +62,14 @@ function LiveKicker() {
 /** HERO 02 — Buttons -> Badges -> Sponsored */
 function Hero02() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
       {/* Left: copy */}
       <div className="lg:col-span-6">
-        <div className="mb-8">
+        <div className="mb-6">
           <LiveKicker />
         </div>
 
-        <h1 className="text-4xl md:text-[56px] font-semibold leading-tight mb-6">
+        <h1 className="text-4xl md:text-[52px] font-semibold leading-tight mb-5">
           Find Chargers{" "}
           <span className="bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
             Anytime.
@@ -77,13 +77,13 @@ function Hero02() {
           Anywhere.
         </h1>
 
-        <p className="text-lg md:text-xl text-slate-600 max-w-xl mb-10">
+        <p className="text-lg md:text-xl text-slate-600 max-w-xl mb-8">
           Live life at 100%
         </p>
 
         {/* LINE 1: Buttons */}
-        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-6">
-          <button className="w-full sm:w-auto group inline-flex items-center justify-center gap-2 px-7 py-3 rounded-2xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-medium shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300">
+        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 mb-5">
+          <button className="w-full sm:w-auto group inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-2xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-medium shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300">
             <Search className="w-4 h-4" />
             Find Chargers
           </button>
@@ -92,7 +92,7 @@ function Hero02() {
             href={PLAYSTORE_URL}
             target="_blank"
             rel="noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3 rounded-2xl border border-slate-200 bg-white/70 backdrop-blur-md hover:bg-white transition-all duration-300 shadow-sm"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-2xl border border-slate-200 bg-white/70 backdrop-blur-md hover:bg-white transition-all duration-300 shadow-sm"
           >
             <Download className="w-4 h-4" />
             Get App
@@ -100,7 +100,7 @@ function Hero02() {
         </div>
 
         {/* LINE 2: Official Store Badges (SVG) */}
-        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 mb-6">
+        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 mb-5">
           <StoreBadgeImage href={PLAYSTORE_URL} src={PLAY_BADGE_SRC} alt="Get it on Google Play" />
           <StoreBadgeImage href={APPSTORE_URL} src={APP_BADGE_SRC} alt="Download on the App Store" />
         </div>
@@ -141,10 +141,10 @@ function StoreBadgeImage({
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-white/70 backdrop-blur-md hover:bg-white/80 transition-all duration-300 shadow-sm px-3 py-2"
+      className="inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-white/70 backdrop-blur-md hover:bg-white/80 transition-all duration-300 shadow-sm px-3 py-1.5"
       aria-label={alt}
     >
-      <div className="h-12 sm:h-11 md:h-12 max-w-[220px]">
+      <div className="h-10 sm:h-10 md:h-11 max-w-[200px]">
         <img
           src={src}
           alt={alt}
@@ -171,10 +171,10 @@ function StackedCards() {
       {/* Soft frame */}
       <div className="absolute -inset-3 rounded-[28px] bg-white/60 backdrop-blur-md border border-slate-200 pointer-events-none shadow-sm" />
 
-      <div className="relative p-6 md:p-8">
-        <div className="relative h-[420px] md:h-[460px]">
+      <div className="relative p-5 md:p-6">
+        <div className="relative h-[380px] md:h-[420px]">
           {/* Card 3 (back) */}
-          <div className="absolute right-0 top-14 w-[92%] md:w-[84%] rotate-2">
+          <div className="absolute right-0 top-12 w-[92%] md:w-[84%] rotate-2">
             <CardShell>
               <div className="flex items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
@@ -195,7 +195,7 @@ function StackedCards() {
           </div>
 
           {/* Card 2 (middle) */}
-          <div className="absolute left-0 top-6 w-[92%] md:w-[86%] -rotate-1">
+          <div className="absolute left-0 top-5 w-[92%] md:w-[86%] -rotate-1">
             <CardShell>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
@@ -229,7 +229,7 @@ function StackedCards() {
           </div>
 
           {/* Card 1 (front) */}
-          <div className="absolute right-0 top-28 w-[96%] md:w-[90%]">
+          <div className="absolute right-0 top-24 w-[96%] md:w-[90%]">
             <CardShell highlight>
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-3">
@@ -295,7 +295,7 @@ function CardShell({
         highlight ? "ring-1 ring-cyan-400/30" : "",
       ].join(" ")}
     >
-      <div className="p-5 md:p-6">{children}</div>
+      <div className="p-4 md:p-5">{children}</div>
     </div>
   );
 }

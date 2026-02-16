@@ -110,7 +110,7 @@ const SolidWhiteButton = ({
 }) => {
   const className = [
     "inline-flex items-center justify-center",
-    "rounded-mcn-lg px-6 py-3 font-semibold",
+    "rounded-mcn-lg px-5 py-2.5 font-semibold",
     "bg-white text-black",
     "shadow-[0_14px_40px_rgba(0,0,0,0.28)]",
     "transition duration-200 ease-out hover:-translate-y-[1px] hover:bg-white/95",
@@ -136,7 +136,7 @@ function RightROICard() {
         "relative overflow-hidden rounded-mcn-xl",
         "border border-white/12 bg-[rgba(17,17,20,0.86)]",
         "shadow-[0_18px_50px_rgba(0,0,0,0.55)]",
-        "p-6 md:p-7",
+        "p-5 md:p-6",
       ].join(" ")}
     >
       {/* glows */}
@@ -161,12 +161,12 @@ function RightROICard() {
       </div>
 
       {/* chart */}
-      <div className="relative mt-5 h-[240px] w-full">
+      <div className="relative mt-4 h-[220px] w-full">
         <ROIGrowthChart className="h-full w-full" live={false} />
       </div>
 
       {/* footer stats */}
-      <div className="relative mt-5 grid grid-cols-2 gap-4 border-t border-white/10 pt-4">
+      <div className="relative mt-4 grid grid-cols-2 gap-3 border-t border-white/10 pt-3">
         <div>
           <div className="text-[10px] font-semibold uppercase tracking-wider text-white/45">
             Power Output
@@ -214,11 +214,11 @@ export default function Home_SectionD_Business() {
         <div className="absolute -bottom-52 left-1/4 h-[560px] w-[560px] rounded-full bg-[rgba(47,107,255,0.10)] blur-3xl" />
       </div>
 
-      <div className="container relative py-10 md:py-12">
+      <div className="container relative py-8 md:py-10">
         {/* Main black-glass card */}
         <div
           className={[
-            "relative rounded-mcn-xl p-8 md:p-12",
+            "relative rounded-mcn-xl p-6 md:p-8",
             "bg-[rgba(11,11,12,0.72)] backdrop-blur-mcn",
             "border border-[rgba(255,255,255,0.16)]",
             "shadow-[0_22px_70px_rgba(0,0,0,0.35)]",
@@ -239,25 +239,25 @@ export default function Home_SectionD_Business() {
             </div>
           </div> */}
 
-          <div className="mt-8 grid gap-10 lg:grid-cols-12 lg:items-start">
+          <div className="mt-6 grid gap-8 lg:grid-cols-12 lg:items-start">
             {/* LEFT */}
             <div className="lg:col-span-7">
               <h2 className="font-heading text-mt-up-5 tracking-tight text-white">
                 {content.core.title}
               </h2>
 
-              <p className="mt-3 max-w-2xl text-mt-up-1 text-white/70">
+              <p className="mt-2 max-w-2xl text-mt-up-1 text-white/70">
                 {content.core.subheading}
               </p>
 
-              <div className="mt-6 text-sm font-semibold uppercase tracking-wide text-white/60">
+              <div className="mt-4 text-sm font-semibold uppercase tracking-wide text-white/60">
                 What We Offer:
               </div>
 
               <ul className="mt-3 space-y-2">
                 {content.list.map((item, idx) => (
                   <li key={idx} className="flex items-center gap-2 text-white/80">
-                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl border border-white/10 bg-white/5">
+                    <span className="inline-flex h-7 w-7 items-center justify-center rounded-xl border border-white/10 bg-white/5">
                       <Icon name={item.icon} className="h-4 w-4 text-white/75" />
                     </span>
                     <span className="text-sm font-semibold">{item.text}</span>
@@ -265,7 +265,7 @@ export default function Home_SectionD_Business() {
                 ))}
               </ul>
 
-              <div className="mt-7 flex flex-wrap items-center gap-3">
+              <div className="mt-5 flex flex-wrap items-center gap-3">
                 {/* ✅ UPDATED: Now links to business page */}
 <SolidWhiteButton href="/ev-charging-station-business">
   {content.button.label}
@@ -273,7 +273,7 @@ export default function Home_SectionD_Business() {
 
               </div>
 
-              <div className="mt-4 text-xs text-white/55">
+              <div className="mt-3 text-xs text-white/55">
                 <span className="font-semibold text-white/60">Requirement:</span>{" "}
                 {content.compliance.coreRequirement}
               </div>

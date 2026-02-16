@@ -96,11 +96,11 @@ export default function Home_SectionE_Education() {
         <div className="absolute -bottom-56 left-1/4 h-[560px] w-[560px] rounded-full bg-[rgba(47,107,255,0.08)] blur-3xl" />
       </div>
 
-      <div className="container relative py-10 md:py-12">
+      <div className="container relative py-8 md:py-10">
         {/* Paper + glass card */}
         <div
           className={[
-            "relative overflow-hidden rounded-mcn-xl p-6 md:p-10",
+            "relative overflow-hidden rounded-mcn-xl p-5 md:p-8",
             "bg-mcn-surface3 backdrop-blur-mcn",
             "border border-mcn-stroke-soft",
             "shadow-mcn-card",
@@ -109,35 +109,35 @@ export default function Home_SectionE_Education() {
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/70 via-transparent to-white/40" />
           <div className="pointer-events-none absolute inset-0 opacity-[0.35] bg-[linear-gradient(to_right,rgba(0,0,0,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.05)_1px,transparent_1px)] bg-[size:72px_72px]" />
 
-          <div className="relative grid items-center gap-10 lg:grid-cols-12">
+          <div className="relative grid items-center gap-8 lg:grid-cols-12">
             {/* Left: text */}
             <div className="lg:col-span-7">
               <div className="inline-flex items-center rounded-full border border-mcn-stroke-soft bg-white/60 px-3 py-1 text-mt-down-1 font-semibold text-mcn-text-muted">
                 {content.pill}
               </div>
 
-              <h2 className="mt-4 font-heading text-mt-up-4 tracking-tight text-mcn-text-primary">
+              <h2 className="mt-3 font-heading text-mt-up-4 tracking-tight text-mcn-text-primary">
                 {content.heading}
               </h2>
 
-              <div className="mt-3 text-mt-up-1 font-semibold text-mcn-text-secondary">
+              <div className="mt-2 text-mt-up-1 font-semibold text-mcn-text-secondary">
                 {content.subheading}
               </div>
 
-              <p className="mt-3 max-w-2xl text-mt-base text-mcn-text-faint">
+              <p className="mt-2 max-w-2xl text-mt-base text-mcn-text-faint">
                 {content.body}
               </p>
 
-              <div className="mt-7 flex flex-wrap gap-3">
+              <div className="mt-5 flex flex-wrap gap-3">
                 <Link
                   to="/charging-guide"
-                  className="inline-flex items-center justify-center rounded-mcn-lg bg-mcn-red px-6 py-3 font-semibold text-white shadow-[0_10px_30px_rgba(229,0,0,0.18)] transition duration-fast ease-ease-out-standard hover:bg-mcn-red-hover"
+                  className="inline-flex items-center justify-center rounded-mcn-lg bg-mcn-red px-5 py-2.5 font-semibold text-white shadow-[0_10px_30px_rgba(229,0,0,0.18)] transition duration-fast ease-ease-out-standard hover:bg-mcn-red-hover"
                 >
                   {content.cta}
                 </Link>
               </div>
 
-              <div className="mt-6 flex flex-wrap gap-2">
+              <div className="mt-4 flex flex-wrap gap-2">
                 {["Costs", "Infrastructure", "Charging Types", "Best Practices"].map(
                   (t) => (
                     <span

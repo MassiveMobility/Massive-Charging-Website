@@ -29,7 +29,7 @@ const RedGlowButton: React.FC<RedGlowButtonProps> = ({
   ...props
 }) => {
   const classes =
-    "group relative inline-flex items-center justify-center gap-2 rounded-mcn-xl px-5 py-3 text-mt-down-1 font-semibold text-mcn-text-inverse " +
+    "group relative inline-flex items-center justify-center gap-2 rounded-mcn-xl px-5 py-2.5 text-mt-down-1 font-semibold text-mcn-text-inverse " +
     "bg-mcn-red shadow-[0_14px_40px_rgba(229,0,0,0.28)] " +
     "ring-1 ring-[rgba(229,0,0,0.30)] " +
     "transition duration-normal ease-out-standard " +
@@ -72,7 +72,7 @@ export default function EVChargingAppSection() {
   const imageSrc = appMockup;
 
   return (
-    <section className="relative w-full bg-mcn-ink-surface py-10 md:py-14">
+    <section className="relative w-full bg-mcn-ink-surface py-8 md:py-10">
       {/* Optional: keep the electric glow, but apply it to the SECTION background */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(980px_560px_at_20%_10%,rgba(0,209,255,0.12),transparent_60%),radial-gradient(860px_520px_at_88%_22%,rgba(30,255,136,0.10),transparent_62%),radial-gradient(1100px_720px_at_40%_115%,rgba(37,99,235,0.14),transparent_62%)]" />
@@ -81,68 +81,68 @@ export default function EVChargingAppSection() {
       </div>
 
       <div className="relative mx-auto w-full max-w-[1280px] px-4 md:px-6">
-        <div className="flex flex-col gap-8 md:flex-row md:items-stretch md:gap-12">
+        <div className="flex flex-col gap-6 md:flex-row md:items-stretch md:gap-10">
           {/* LEFT */}
           <div className="flex min-h-full flex-1 flex-col justify-center">
-            <div className="inline-flex w-fit items-center gap-2 rounded-full bg-mcn-ink-glass px-4 py-2 text-sm font-semibold tracking-wide text-mcn-ink-text-secondary backdrop-blur-mcn">
-              <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-[rgba(255,255,255,0.06)]">
+            <div className="inline-flex w-fit items-center gap-2 rounded-full bg-mcn-ink-glass px-3 py-1.5 text-sm font-semibold tracking-wide text-mcn-ink-text-secondary backdrop-blur-mcn">
+              <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-[rgba(255,255,255,0.06)]">
                 <Zap size={16} className="text-[rgba(0,209,255,0.95)]" />
               </span>
               EV Charging App
             </div>
 
-            <h3 className="mt-5 font-heading font-semibold text-mcn-ink-text-primary text-[32px] leading-[1.08] md:text-[40px] md:leading-[1.06] lg:text-[49px] lg:leading-[1.04]">
+            <h3 className="mt-4 font-heading font-semibold text-mcn-ink-text-primary text-[30px] leading-[1.08] md:text-[38px] md:leading-[1.06] lg:text-[46px] lg:leading-[1.04]">
               Get 1C Charging App
             </h3>
 
-            <div className="mt-4 font-semibold text-mcn-ink-text-primary text-[18px] leading-[1.25] md:text-[21px] lg:text-[24.5px]">
+            <div className="mt-3 font-semibold text-mcn-ink-text-primary text-[17px] leading-[1.25] md:text-[20px] lg:text-[23px]">
               One App For All Activities
             </div>
 
-            <p className="mt-3 max-w-[62ch] text-mt-base leading-7 text-mcn-ink-text-muted">
+            <p className="mt-2 max-w-[62ch] text-mt-base leading-7 text-mcn-ink-text-muted">
               Control all charging activities from single app in your phone.
             </p>
 
-            <div className="my-6 h-px w-full bg-mcn-ink-stroke-softer" />
+            <div className="my-5 h-px w-full bg-mcn-ink-stroke-softer" />
 
-            <ul className="grid gap-4 text-mt-base text-mcn-ink-text-secondary">
+            <ul className="grid gap-3 text-mt-base text-mcn-ink-text-secondary">
               <li className="flex items-center gap-3">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-mcn-lg bg-[rgba(255,255,255,0.06)]">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-mcn-lg bg-[rgba(255,255,255,0.06)]">
                   <MapPin size={19} className="text-[rgba(30,255,136,0.90)]" />
                 </span>
                 Locate Chargers
               </li>
 
               <li className="flex items-center gap-3">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-mcn-lg bg-[rgba(255,255,255,0.06)]">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-mcn-lg bg-[rgba(255,255,255,0.06)]">
                   <Power size={19} className="text-[rgba(0,209,255,0.90)]" />
                 </span>
                 Start &amp; Stop
               </li>
 
               <li className="flex items-center gap-3">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-mcn-lg bg-[rgba(255,255,255,0.06)]">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-mcn-lg bg-[rgba(255,255,255,0.06)]">
                   <CreditCard size={19} className="text-[rgba(37,99,235,0.92)]" />
                 </span>
                 Pay for Charging
               </li>
 
               <li className="flex items-center gap-3">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-mcn-lg bg-[rgba(255,255,255,0.06)]">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-mcn-lg bg-[rgba(255,255,255,0.06)]">
                   <Users size={19} className="text-[rgba(255,255,255,0.82)]" />
                 </span>
                 Join Community
               </li>
 
               <li className="flex items-center gap-3">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-mcn-lg bg-[rgba(255,255,255,0.06)]">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-mcn-lg bg-[rgba(255,255,255,0.06)]">
                   <BatteryCharging size={19} className="text-[rgba(30,255,136,0.90)]" />
                 </span>
                 Battery Health
               </li>
             </ul>
 
-            <div className="mt-8">
+            <div className="mt-6">
               <RedGlowButton
                 href={PLAYSTORE_URL}
                 rightIcon={<ArrowRight size={18} />}
@@ -157,7 +157,7 @@ export default function EVChargingAppSection() {
             <div
               className={[
                 "aspect-[2/3] w-full",
-                "max-h-[340px] sm:max-h-[380px] md:max-h-none",
+                "max-h-[320px] sm:max-h-[360px] md:max-h-none",
                 "overflow-hidden rounded-mcn-2xl",
                 "shadow-[0_18px_50px_rgba(0,0,0,0.40)]",
               ].join(" ")}
