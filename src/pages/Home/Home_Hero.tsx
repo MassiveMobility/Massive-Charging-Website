@@ -1,7 +1,5 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo } from "react";
 import { Search, Download, MapPin, Zap, ShieldCheck, CreditCard } from "lucide-react";
-
-type HeroVariant = "01" | "02";
 
 const PLAYSTORE_URL =
   "https://play.google.com/store/apps/details?id=in.one.charging&hl=en_IN";
@@ -9,9 +7,11 @@ const PLAYSTORE_URL =
 const APPSTORE_URL =
   "https://apps.apple.com/in/app/1c-ev-charging/id6478754214";
 
-export default function HomeHero() {
-  const [variant, setVariant] = useState<HeroVariant>("01");
+// Public folder paths (copy your SVGs into /public and use these URLs)
+const PLAY_BADGE_SRC = "/GetItOnGooglePlay_Badge_Web_color_English.svg";
+const APP_BADGE_SRC = "/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917 (1).svg";
 
+export default function HomeHero() {
   return (
     <section className="relative overflow-hidden bg-white text-slate-900">
       {/* Background (shared) */}
@@ -36,41 +36,9 @@ export default function HomeHero() {
         <div className="absolute inset-0 bg-gradient-to-b from-white via-white/70 to-white" />
       </div>
 
-      {/* Toggle (top-right) */}
-      <div className="absolute top-5 right-5 z-20">
-        <div className="inline-flex items-center rounded-full border border-slate-200 bg-white/70 backdrop-blur-md shadow-sm p-1">
-          <button
-            type="button"
-            onClick={() => setVariant("01")}
-            className={[
-              "px-3 py-1.5 text-xs rounded-full transition-all",
-              variant === "01"
-                ? "bg-slate-900 text-white"
-                : "text-slate-600 hover:text-slate-900",
-            ].join(" ")}
-            aria-pressed={variant === "01"}
-          >
-            Hero 01
-          </button>
-          <button
-            type="button"
-            onClick={() => setVariant("02")}
-            className={[
-              "px-3 py-1.5 text-xs rounded-full transition-all",
-              variant === "02"
-                ? "bg-slate-900 text-white"
-                : "text-slate-600 hover:text-slate-900",
-            ].join(" ")}
-            aria-pressed={variant === "02"}
-          >
-            Hero 02
-          </button>
-        </div>
-      </div>
-
       {/* Content */}
       <div className="relative max-w-7xl mx-auto px-6 py-24 md:py-28">
-        {variant === "01" ? <Hero01 /> : <Hero02 />}
+        <Hero02 />
       </div>
     </section>
   );
@@ -91,59 +59,7 @@ function LiveKicker() {
   );
 }
 
-/** HERO 01 — light, centered */
-function Hero01() {
-  return (
-    <div className="text-center">
-      <div className="mb-8">
-        <LiveKicker />
-      </div>
-
-      <h1 className="text-4xl md:text-[56px] font-semibold leading-tight mb-6">
-        Find Chargers{" "}
-        <span className="bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
-          Anytime.
-        </span>{" "}
-        Anywhere.
-      </h1>
-
-      <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-10">
-        Live life at 100%
-      </p>
-
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-        <button className="group inline-flex items-center gap-2 px-7 py-3 rounded-2xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-medium shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300">
-          <Search className="w-4 h-4" />
-          Find Chargers
-        </button>
-
-        <a
-  href={PLAYSTORE_URL}
-  target="_blank"
-  rel="noreferrer"
-  className="inline-flex items-center gap-2 px-7 py-3 rounded-2xl border border-slate-200 bg-white/70 backdrop-blur-md hover:bg-white transition-all duration-300 shadow-sm"
->
-  <Download className="w-4 h-4" />
-  Get App
-</a>
-      </div>
-
-      <div className="mb-10">
-        <span className="inline-block px-4 py-2 text-xs tracking-wide rounded-full bg-white/70 backdrop-blur-md border border-slate-200 text-slate-600 shadow-sm">
-          Sponsored by PayTm
-        </span>
-      </div>
-
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <StoreBadge title="Playstore" href={PLAYSTORE_URL} />
-<StoreBadge title="Appstore" href={APPSTORE_URL} />
-
-      </div>
-    </div>
-  );
-}
-
-/** HERO 02 — light, left copy + right stacked cards */
+/** HERO 02 — Buttons -> Badges -> Sponsored */
 function Hero02() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -165,32 +81,35 @@ function Hero02() {
           Live life at 100%
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-8">
+        {/* LINE 1: Buttons */}
+        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-6">
           <button className="w-full sm:w-auto group inline-flex items-center justify-center gap-2 px-7 py-3 rounded-2xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-medium shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300">
             <Search className="w-4 h-4" />
             Find Chargers
           </button>
 
           <a
-  href={PLAYSTORE_URL}
-  target="_blank"
-  rel="noreferrer"
-  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3 rounded-2xl border border-slate-200 bg-white/70 backdrop-blur-md hover:bg-white transition-all duration-300 shadow-sm"
->
-  <Download className="w-4 h-4" />
-  Get App
-</a>
+            href={PLAYSTORE_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3 rounded-2xl border border-slate-200 bg-white/70 backdrop-blur-md hover:bg-white transition-all duration-300 shadow-sm"
+          >
+            <Download className="w-4 h-4" />
+            Get App
+          </a>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3">
+        {/* LINE 2: Official Store Badges (SVG) */}
+        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 mb-6">
+          <StoreBadgeImage href={PLAYSTORE_URL} src={PLAY_BADGE_SRC} alt="Get it on Google Play" />
+          <StoreBadgeImage href={APPSTORE_URL} src={APP_BADGE_SRC} alt="Download on the App Store" />
+        </div>
+
+        {/* LINE 3: Sponsored */}
+        <div>
           <span className="inline-block px-4 py-2 text-xs tracking-wide rounded-full bg-white/70 backdrop-blur-md border border-slate-200 text-slate-600 shadow-sm">
             Sponsored by PayTm
           </span>
-
-          <div className="flex gap-3">
-        <StoreBadge title="Playstore" href={PLAYSTORE_URL} compact />
-<StoreBadge title="Appstore" href={APPSTORE_URL} compact />
-          </div>
         </div>
       </div>
 
@@ -202,31 +121,41 @@ function Hero02() {
   );
 }
 
-function StoreBadge({
-  title,
+/**
+ * Ratio-safe badge wrapper:
+ * - fixed height (no stretching)
+ * - image uses object-contain
+ * - optional max width so huge SVGs don’t overflow
+ */
+function StoreBadgeImage({
   href,
-  compact = false,
+  src,
+  alt,
 }: {
-  title: string;
   href: string;
-  compact?: boolean;
+  src: string;
+  alt: string;
 }) {
   return (
     <a
       href={href}
       target="_blank"
       rel="noreferrer"
-      className={[
-        "rounded-2xl border border-slate-200 bg-white/70 backdrop-blur-md hover:border-cyan-300/60 transition-all duration-300 shadow-sm",
-        "hover:bg-white/80",
-        compact ? "px-4 py-2" : "px-5 py-3",
-      ].join(" ")}
+      className="inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-white/70 backdrop-blur-md hover:bg-white/80 transition-all duration-300 shadow-sm px-3 py-2"
+      aria-label={alt}
     >
-      <p className="text-[11px] leading-none text-slate-500">Get it from</p>
-      <p className="text-sm font-medium tracking-wide text-slate-900">{title}</p>
+      <div className="h-12 sm:h-11 md:h-12 max-w-[220px]">
+        <img
+          src={src}
+          alt={alt}
+          className="h-full w-auto max-w-full object-contain"
+          loading="lazy"
+        />
+      </div>
     </a>
   );
 }
+
 function StackedCards() {
   const rows = useMemo(
     () => [

@@ -5,8 +5,8 @@ import Home_SectionA_LeftRight from "./Home_SectionD_Business.tsx";
 import Home_SectionE_Education from "./Home_SectionE_Education";
 import Home_SectionF_VIPTicket from "./Home_SectionF_VIPTicket";
 
-
-
+// ✅ NEW: Image Frame card (last section)
+import Img_Frame from "./Img_Frame";
 
 export default function Home_Page() {
   return (
@@ -14,10 +14,12 @@ export default function Home_Page() {
       <HomeHero />
       <Home_SectionB />
       <Home_SectionC_AppOrbit />
-      <Home_SectionA_LeftRight/>
+      <Home_SectionA_LeftRight />
       <Home_SectionE_Education />
       <Home_SectionF_VIPTicket />
 
+      {/* ✅ LAST SECTION 
+      <Img_Frame /> */}
     </div>
   );
 }
