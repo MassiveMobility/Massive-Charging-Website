@@ -1,7 +1,8 @@
 import React from "react";
 import WhyMassiveCard from "./WhyMassiveCard";
 
-export default function WhyMassiveCardsSection() {
+export default function WhyMassiveCardsSection({ tone = "light" }: { tone?: "light" | "dark" }) {
+  const isDark = tone === "dark";
   const cards = [
     {
       icon: "⚡",
@@ -185,10 +186,20 @@ export default function WhyMassiveCardsSection() {
       
       {/* Header */}
       <div className="mx-auto max-w-2xl text-center">
-        <h3 className="font-heading text-mt-up-3 text-mcn-text-primary">
+        <h3
+          className={[
+            "font-heading text-mt-up-3",
+            isDark ? "text-white" : "text-mcn-text-primary",
+          ].join(" ")}
+        >
           Our Expertise In EV Business
         </h3>
-        <p className="mt-3 text-mt-base text-mcn-text-muted">
+        <p
+          className={[
+            "mt-3 text-mt-base",
+            isDark ? "text-white/75" : "text-mcn-text-muted",
+          ].join(" ")}
+        >
           Built from real deployments, reliability benchmarking, and operations-led execution.
         </p>
       </div>

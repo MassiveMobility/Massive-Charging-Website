@@ -1,6 +1,7 @@
 import React from "react";
 
-export default function WhyMassiveHero() {
+export default function WhyMassiveHero({ tone = "light" }: { tone?: "light" | "dark" }) {
+  const isDark = tone === "dark";
   return (
     <section className="relative text-center">
 
@@ -12,7 +13,12 @@ export default function WhyMassiveHero() {
 
 
         {/* ===== Title ===== */}
-        <h2 className="font-heading text-pf-up-4 md:text-pf-up-4 leading-tight">
+        <h2
+          className={[
+            "font-heading text-pf-up-4 md:text-pf-up-4 leading-tight",
+            isDark ? "text-white" : "text-mcn-text-primary",
+          ].join(" ")}
+        >
           Why Set Up a Charging Station with{" "}
           <span className="text-mcn-red drop-shadow-[0_0_12px_rgba(229,0,0,0.6)]">
             Massive
@@ -20,7 +26,12 @@ export default function WhyMassiveHero() {
         </h2>
 
         {/* ===== Body ===== */}
-        <p className="mx-auto mt-6 max-w-2xl font-sans text-pf-up-1 text-mcn-text-muted">
+        <p
+          className={[
+            "mx-auto mt-6 max-w-2xl font-sans text-pf-up-1",
+            isDark ? "text-white/75" : "text-mcn-text-muted",
+          ].join(" ")}
+        >
           Massive helps you launch, operate, and grow a charging station
           with proven execution, deep EV market understanding,
           reliable vendor selection, strong safety standards,

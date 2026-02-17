@@ -20,6 +20,7 @@ import PricingPage from "./chapters/urltest/PricingPage";
 import TestHome from "./test/Home";
 import HomeSchemaPage from "./test/Home_Schema_Page";
 import ChargingStationBusiness_Test from "./test/ChargingStationBusiness_Test";
+import ChargingBusinessFreshHome from "./pages/Charging-Station_Business/Fresh/FreshHome";
 
 import { EVChargingGuidePage } from "./components/pages/EVChargingGuidePage";
 import EVChargingGuide_Dashboard from "./Querycode/EVChargingGuide_Dashboard";
@@ -165,6 +166,7 @@ function App() {
               <Route path="/destest" element={<TestHome />} />
               <Route path="/flathome" element={<HomeSchemaPage />} />
               <Route path="/csb-test" element={<ChargingStationBusiness_Test />} />
+              <Route path="/fresh" element={<ChargingBusinessFreshHome />} />
 
               {/* --- EXISTING ROUTES --- */}
               <Route path="/ev-charging-guide" element={<EVChargingGuidePage />} />
