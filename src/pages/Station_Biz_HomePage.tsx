@@ -36,7 +36,7 @@ const MenuPage = () => {
     <div className="min-h-screen bg-mcn-bg text-mcn-text-primary">
       {/* HERO */}
       <section className="relative overflow-hidden">
-        <div className="container py-10 md:py-14">
+        <div className="container px-6 py-12 md:py-16">
           <div className="inline-flex items-center gap-2 rounded-full border border-mcn-stroke-soft bg-mcn-surface3 px-4 py-2 shadow-mcn-soft backdrop-blur-mcn">
             <span className="h-2 w-2 rounded-full bg-mcn-red" />
             <span className="text-mt-down-1 text-mcn-text-muted">
@@ -115,7 +115,7 @@ const MenuPage = () => {
       </section>
 
       {/* CHOOSE */}
-      <section id="choose" className="container pb-14">
+      <section id="choose" className="container px-6 py-12">
         <div className="rounded-mcn-xl border border-mcn-stroke-soft bg-mcn-surface p-5 shadow-mcn-soft">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>

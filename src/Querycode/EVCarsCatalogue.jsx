@@ -96,8 +96,8 @@ const EVCarsCatalogue = ({ database }) => {
     <div className="min-h-screen bg-slate-100">
       {/* ROW 1: HEADER */}
       <header className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-14 px-8">
-        <div className="max-w-[1400px] mx-auto">
-          <div className="inline-block px-4 py-1.5 mb-4 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-xs font-bold uppercase tracking-wider">
+        <div className="max-w-[1280px] mx-auto">
+          <div className="inline-block px-12 py-1.5 mb-4 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-xs font-bold uppercase tracking-wider">
             Complete EV Catalogue
           </div>
           <h1 className="text-4xl lg:text-5xl font-black mb-3 tracking-tight">
@@ -110,13 +110,13 @@ const EVCarsCatalogue = ({ database }) => {
       </header>
 
       {/* ROW 2: 2-COLUMN GRID */}
-      <main className="max-w-[1400px] mx-auto px-8 py-8">
+      <main className="max-w-[1280px] mx-auto px-8 py-8">
         <div className="bg-white rounded-3xl shadow-xl border border-slate-200 p-6">
           <div className="grid grid-cols-12 gap-6">
             {/* COLUMN 1: VEHICLE CARDS (Wide - 7 cols) */}
             <section className="col-span-12 lg:col-span-7 space-y-5">
               {/* Search Bar */}
-              <div className="bg-slate-50 rounded-xl border border-slate-200 p-4">
+              <div className="bg-slate-50 rounded-xl border border-slate-200 p-6">
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500">Browse Vehicles</h3>
                   <span className="text-xs font-bold text-slate-400">{filteredCars.length} Models</span>
@@ -134,7 +134,7 @@ const EVCarsCatalogue = ({ database }) => {
               </div>
 
               {/* Vehicle Cards Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-h-[calc(100vh-340px)] overflow-y-auto pr-2 custom-scrollbar">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {filteredCars.map((car) => (
                   <div
                     key={car.Vehicle_ID}
@@ -144,7 +144,7 @@ const EVCarsCatalogue = ({ database }) => {
                     }}
                     onMouseEnter={() => setHoveredId(car.Vehicle_ID)}
                     onMouseLeave={() => setHoveredId(null)}
-                    className={`group p-4 rounded-xl border-2 transition-all cursor-pointer ${
+                    className={`group px-6 py-3 rounded-xl border-2 transition-all cursor-pointer ${
                       selectedId === car.Vehicle_ID
                         ? "border-blue-600 bg-blue-50 shadow-md shadow-blue-100"
                         : hoveredId === car.Vehicle_ID
@@ -208,8 +208,9 @@ const EVCarsCatalogue = ({ database }) => {
             </section>
 
             {/* COLUMN 2: VEHICLE DETAILS (5 cols) */}
-            <section className="col-span-12 lg:col-span-5 sticky top-6">
-              <div className="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden transition-all duration-300">
+            <section className="col-span-12 lg:col-span-5">
+              <div className="sticky top-28 self-start">
+                <div className="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden transition-all duration-300">
                 {/* Details Header */}
                 <div className="bg-gradient-to-br from-slate-900 to-slate-800 p-6 text-white">
                   <span className="inline-block px-3 py-1 rounded-lg bg-white/10 text-blue-300 text-[10px] font-bold uppercase tracking-wider mb-3 border border-white/20">
@@ -251,7 +252,7 @@ const EVCarsCatalogue = ({ database }) => {
                   </div>
 
                   {/* Charging Type */}
-                  <div className="bg-white rounded-xl p-3.5 flex items-center justify-between border border-slate-200">
+                  <div className="bg-white rounded-xl p-6 flex items-center justify-between border border-slate-200">
                     <div>
                       <p className="text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-1">Connector Type</p>
                       <p className="text-slate-900 font-bold text-sm">
@@ -280,6 +281,7 @@ const EVCarsCatalogue = ({ database }) => {
                   <p className="text-center text-slate-400 text-[10px] font-medium uppercase tracking-wider">
                     Vehicle ID: {displayCar?.Vehicle_ID}
                   </p>
+                </div>
                 </div>
               </div>
             </section>
@@ -329,7 +331,7 @@ const EVCarsCatalogue = ({ database }) => {
 // Specification Card Component
 const SpecCard = ({ icon, label, value, highlight = false }) => (
   <div
-    className={`rounded-lg p-3 border transition-all ${
+    className={`rounded-lg p-6 border transition-all ${
       highlight ? "bg-blue-50 border-blue-200" : "bg-white border-slate-200"
     }`}
   >

@@ -123,12 +123,12 @@ const EVChargingGuide_Dashboard = ({ database }) => {
           <div className="bg-white rounded-3xl shadow-xl border border-slate-200 p-10">
           <div className={`grid ${isEVChargingGuide ? 'grid-cols-12' : 'grid-cols-12'} gap-8`}>
             
-            {/* ROW 1: CATEGORY PILLS (Horizontal) */}
-            <aside className="col-span-12 bg-slate-50 rounded-2xl p-6 border border-slate-200">
+            {/* COLUMN 1: SIDEBAR NAVIGATION (Always 3 cols) */}
+            <aside className="col-span-12 lg:col-span-2 bg-slate-50 rounded-2xl p-8 border border-slate-200">
               <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-4 px-2">
                 Categories
               </h3>
-              <nav className="flex gap-2 overflow-x-auto pb-1 lg:pb-0 lg:flex-row lg:overflow-visible">
+              <nav className="flex gap-2 overflow-x-auto pb-1 lg:pb-0 lg:flex-col lg:overflow-visible">
                 {[
                   { id: 'CAT_002', name: 'e-Vehicles Charging Guide', icon: <Zap size={20}/> },
                   { id: 'CAT_003', name: 'EV Charging 101', icon: <Info size={20}/> },
@@ -138,10 +138,10 @@ const EVChargingGuide_Dashboard = ({ database }) => {
                   <button
                     key={cat.id}
                     onClick={() => setActiveCategory(cat.id)}
-                    className={`min-w-max w-auto flex items-center gap-3 px-12 py-2.5 rounded-full text-left font-semibold text-sm transition-all ${
+                    className={`min-w-max lg:min-w-0 w-auto lg:w-full flex items-center gap-3 px-4 py-3 rounded-xl text-left font-semibold text-sm transition-all ${
                       activeCategory === cat.id 
                       ? 'bg-blue-600 text-white shadow-lg shadow-blue-200' 
-                      : 'text-slate-700 bg-white hover:shadow-sm'
+                      : 'text-slate-700 hover:bg-white hover:shadow-sm'
                     }`}
                   >
                     <span className={activeCategory === cat.id ? 'text-white' : 'text-blue-600'}>
@@ -155,12 +155,12 @@ const EVChargingGuide_Dashboard = ({ database }) => {
 
             {/* CONDITIONAL RENDERING: 2-column layout for EV Guide, 1-column for others */}
             {isEVChargingGuide ? (
-              <div className="col-span-12 grid grid-cols-12 gap-8">
-                {/* COLUMN 2: SEARCH + CATEGORY CARDS */}
-                <section className="col-span-12 lg:col-span-6 space-y-6">
+              <>
+                {/* COLUMN 2: SEARCH + CATEGORY CARDS (5 cols) */}
+                <section className="col-span-12 lg:col-span-5 space-y-6">
                   
                   {/* ROW 1: SEARCH */}
-                  <div className="bg-slate-50 rounded-2xl border border-slate-200 p-24">
+                  <div className="bg-slate-50 rounded-2xl border border-slate-200 p-8">
                     <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-4">
                       Search Vehicles
                     </h3>
@@ -199,7 +199,7 @@ const EVChargingGuide_Dashboard = ({ database }) => {
 <div className="grid grid-cols-2 gap-4">
   <div 
     onClick={() => navigate('/charging-guide/ev-cars')} // This links to your Cars Catalogue page
-    className="bg-slate-50 rounded-2xl border border-slate-200 p-12 hover:bg-blue-50 hover:border-blue-300 transition-all cursor-pointer group shadow-sm hover:shadow-md"
+    className="bg-slate-50 rounded-2xl border border-slate-200 p-8 hover:bg-blue-50 hover:border-blue-300 transition-all cursor-pointer group shadow-sm hover:shadow-md"
   >
     <div className="bg-white w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:bg-indigo-600 transition-colors shadow-sm">
       <Car size={28} className="text-indigo-600 group-hover:text-white transition-colors" />
@@ -209,7 +209,7 @@ const EVChargingGuide_Dashboard = ({ database }) => {
   </div>
 
   {/* 2-Wheeler Card (Optional: Link this to a 2W specific route later) */}
-  <div className="bg-slate-50 rounded-2xl border border-slate-200 p-12 hover:bg-emerald-50 hover:border-emerald-300 transition-all cursor-pointer group shadow-sm hover:shadow-md">
+  <div className="bg-slate-50 rounded-2xl border border-slate-200 p-8 hover:bg-emerald-50 hover:border-emerald-300 transition-all cursor-pointer group shadow-sm hover:shadow-md">
     <div className="bg-white w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:bg-emerald-600 transition-colors shadow-sm">
       <Bike size={28} className="text-emerald-600 group-hover:text-white transition-colors" />
     </div>
@@ -219,8 +219,8 @@ const EVChargingGuide_Dashboard = ({ database }) => {
 </div>
                 </section>
 
-                {/* COLUMN 3: VEHICLE DETAILS */}
-                <section className="col-span-12 lg:col-span-6">
+                {/* COLUMN 3: VEHICLE DETAILS (4 cols) */}
+                <section className="col-span-12 lg:col-span-5">
                   {selectedVehicle ? (
                     <div className="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden">
                       {/* Header */}
@@ -302,10 +302,10 @@ const EVChargingGuide_Dashboard = ({ database }) => {
                     </div>
                   )}
                 </section>
-              </div>
+              </>
             ) : isTripReportsCategory ? (
               <section className="col-span-12 lg:col-span-9">
-                <div className="bg-slate-50 rounded-2xl border border-slate-200 p-24 min-h-[600px]">
+                <div className="bg-slate-50 rounded-2xl border border-slate-200 p-8 min-h-[600px]">
                   <div className="mb-6">
                     <h2 className="text-3xl font-black text-slate-900 mb-2">EV Trip Reports</h2>
                     <p className="text-slate-600">

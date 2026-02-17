@@ -77,7 +77,7 @@ export const HeroSection: React.FC = () => {
         <div className="absolute -bottom-52 left-1/4 h-[560px] w-[560px] rounded-full bg-[rgba(47,107,255,0.12)] blur-3xl" />
       </div>
 
-      <div className="container relative py-10 md:py-12">
+      <div className="container relative px-6 py-12 md:py-16">
         {/* ================================
             HERO CARD — Black Glass
             (Later: make tokens: bg-mcn-glass-black, border-mcn-glass-stroke, shadow-mcn-glass)

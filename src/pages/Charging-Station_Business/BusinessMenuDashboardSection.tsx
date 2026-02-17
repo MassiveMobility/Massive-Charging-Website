@@ -90,14 +90,14 @@ export function BusinessMenuDashboardSection() {
 
   return (
     
-    <section id="how-it-works" className="pb-20">
+    <section id="how-it-works" className="pb-16 md:pb-20">
       {/* =========================
           FULL-WIDTH DARK BLOCK
          ========================= */}
       <section className="relative overflow-hidden">
         <ElectricDawnBackdrop variant="dark" />
 
-        <div className="relative z-10 mx-auto max-w-[1280px] px-4 py-14 md:px-6 md:py-16">
+        <div className="relative z-10 mx-auto max-w-[1280px] px-6 py-16 md:py-20">
           {/* How It Works (NO bodyline) */}
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="mt-5 font-heading text-[49px] leading-[1.05] tracking-[-0.02em] text-white">
@@ -153,7 +153,7 @@ export function BusinessMenuDashboardSection() {
       {/* =========================
           DASHBOARD MENU (REDESIGNED)
          ========================= */}
-      <section id="choose" className="relative overflow-hidden pt-10">
+      <section id="choose" className="relative overflow-hidden py-12 md:py-16">
         {/* Dark + grid + glow accents like Hero */}
         <div className="pointer-events-none absolute inset-0">
   <div className="absolute inset-0 bg-[#161A22]" />
@@ -164,7 +164,7 @@ export function BusinessMenuDashboardSection() {
 </div>
 
 
-        <div className="relative z-10 mx-auto max-w-[1280px] px-4 pb-4 md:px-6">
+        <div className="relative z-10 mx-auto max-w-[1280px] px-6">
           {/* Glass wrapper */}
           <div className="rounded-[28px] border border-white/10 bg-white/5 p-6 shadow-[0_22px_70px_rgba(0,0,0,0.45)] backdrop-blur-xl md:p-8">
             <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">

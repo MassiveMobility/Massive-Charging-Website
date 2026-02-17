@@ -179,9 +179,9 @@ export default function WhyMassiveCardsSection() {
   ];
 
  return (
- <section className="relative py-20">
+ <section className="relative">
 
-    <div className="container">
+    <div className="container px-6 py-12 md:py-16">
       
       {/* Header */}
       <div className="mx-auto max-w-2xl text-center">

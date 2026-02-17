@@ -693,7 +693,7 @@ export default function DiscoverRequirementDashboard() {
 
       <div className="relative">
   {/* DASHBOARD WRAPPER (faint boundary) */}
-  <div className="container py-8">
+  <div className="container px-6 py-12 md:py-16">
     <div className="overflow-hidden rounded-2xl border border-mcn-stroke-soft bg-white/60 shadow-mcn-soft backdrop-blur-mcn">
       {/* Top Bar (inside dashboard boundary) */}
       <div className="border-b border-mcn-stroke-soft bg-white/70">

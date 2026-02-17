@@ -8,7 +8,7 @@ export default function WhyMassiveHero() {
       
     
 
-      <div className="relative container pt-24 pb-8 md:pt-28 md:pb-6">
+      <div className="relative container px-6 py-12 md:py-16">
 
 
         {/* ===== Title ===== */}

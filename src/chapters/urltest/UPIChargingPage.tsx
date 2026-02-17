@@ -128,7 +128,7 @@ const GlowOutlineButton: React.FC<GlowOutlineButtonProps> = ({
 
 const StatCard: React.FC<Stat> = ({ k, v, hint, icon }) => {
   return (
-    <div className="rounded-mcn-lg border border-[rgba(13,27,42,0.10)] bg-[rgba(255,255,255,0.70)] p-4 shadow-[0_12px_30px_rgba(13,27,42,0.08)] backdrop-blur-mcn">
+      <div className="rounded-mcn-lg border border-[rgba(13,27,42,0.10)] bg-[rgba(255,255,255,0.70)] px-3 py-3 shadow-[0_12px_30px_rgba(13,27,42,0.08)] backdrop-blur-mcn">
       <div className="flex items-center gap-2 text-mt-down-1 text-[rgba(13,27,42,0.70)]">
         <span className="text-[rgba(37,99,235,0.90)]">{icon}</span>
         <span>{k}</span>
@@ -222,8 +222,8 @@ const UPIChargingPage: React.FC = () => {
       <section className="relative overflow-hidden">
         <ElectricDawnBackdrop variant="light" />
 
-        <div className="relative z-10 mx-auto max-w-[1280px] px-4 py-16 md:px-6 md:py-24">
-          <div className="grid items-center gap-12 lg:grid-cols-12">
+        <div className="relative z-10 mx-auto max-w-[1280px] px-4 py-20 md:px-6 md:py-28">
+          <div className="grid items-center gap-14 lg:grid-cols-12">
             {/* Left */}
             <div className="lg:col-span-6">
               <div className="inline-flex items-center gap-2 rounded-full border border-[rgba(13,27,42,0.12)] bg-[rgba(255,255,255,0.72)] px-3 py-1.5 text-mt-down-1 shadow-[0_10px_24px_rgba(13,27,42,0.08)] backdrop-blur-mcn">
@@ -238,12 +238,12 @@ const UPIChargingPage: React.FC = () => {
               <h1 className="mt-6 font-heading text-pf-up-4 leading-[1.05] tracking-[-0.02em] text-[rgba(13,27,42,0.95)] md:text-pf-up-5">
                 Scan UPI &amp; Charge EV
               </h1>
-              <p className="mt-5 max-w-xl text-mt-up-1 text-[rgba(13,27,42,0.68)]">
+              <p className="mt-6 max-w-xl text-mt-up-1 text-[rgba(13,27,42,0.68)]">
                 No app installation required. Pay from any UPI app and start a
                 verified charging session in seconds.
               </p>
 
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
                 <RedGlowButton rightIcon={<ArrowRight size={16} />}>
                   Find UPI chargers
                 </RedGlowButton>
@@ -257,7 +257,7 @@ const UPIChargingPage: React.FC = () => {
                 </GlowOutlineButton>
               </div>
 
-              <p className="mt-6 max-w-xl text-mt-down-2 text-[rgba(13,27,42,0.55)]">
+              <p className="mt-8 max-w-xl text-mt-down-2 text-[rgba(13,27,42,0.55)]">
                 *Availability varies by location and connector type.
               </p>
             </div>
@@ -269,7 +269,7 @@ const UPIChargingPage: React.FC = () => {
                 <div className="pointer-events-none absolute -inset-8 rounded-[32px] bg-[radial-gradient(55%_60%_at_30%_25%,rgba(0,209,255,0.18),transparent_60%),radial-gradient(55%_60%_at_70%_35%,rgba(30,255,136,0.14),transparent_62%),radial-gradient(80%_80%_at_50%_70%,rgba(37,99,235,0.18),transparent_65%)] blur-2xl" />
 
                 <div className="relative overflow-hidden rounded-[28px] border border-[rgba(13,27,42,0.12)] bg-[rgba(255,255,255,0.68)] shadow-[0_18px_55px_rgba(13,27,42,0.14)] backdrop-blur-mcn">
-                  <div className="flex items-center justify-between border-b border-[rgba(13,27,42,0.10)] px-5 py-4">
+                  <div className="flex items-center justify-between border-b border-[rgba(13,27,42,0.10)] px-6 py-5">
                     <div className="flex items-center gap-2 text-mt-down-1 text-[rgba(13,27,42,0.75)]">
                       <span className="text-[rgba(0,209,255,0.95)]">
                         <Zap size={18} />
@@ -281,14 +281,14 @@ const UPIChargingPage: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="p-5">
-                    <div className="grid gap-3 sm:grid-cols-2">
+                  <div className="p-6">
+                    <div className="grid gap-4 sm:grid-cols-2">
                       {stats.map((s) => (
                         <StatCard key={s.k} {...s} />
                       ))}
                     </div>
 
-                    <div className="mt-4 flex items-center gap-2 rounded-mcn-lg border border-[rgba(0,209,255,0.22)] bg-[rgba(0,209,255,0.08)] px-3 py-2 text-mt-down-2 text-[rgba(13,27,42,0.72)]">
+                    <div className="mt-5 flex items-center gap-2 rounded-mcn-lg border border-[rgba(0,209,255,0.22)] bg-[rgba(0,209,255,0.08)] px-4 py-3 text-mt-down-2 text-[rgba(13,27,42,0.72)]">
                       <span className="text-[rgba(0,209,255,0.95)]">
                         <ShieldCheck size={16} />
                       </span>
@@ -298,7 +298,7 @@ const UPIChargingPage: React.FC = () => {
                 </div>
 
                 {/* bottom label */}
-                <div className="mt-4 flex items-center justify-between text-mt-down-2 text-[rgba(13,27,42,0.55)]">
+                <div className="mt-6 flex items-center justify-between text-mt-down-2 text-[rgba(13,27,42,0.55)]">
                   <span className="inline-flex items-center gap-2">
                     <BatteryCharging size={14} />
                     UPI-enabled chargers
@@ -317,8 +317,8 @@ const UPIChargingPage: React.FC = () => {
       {/* HOW IT WORKS (purposeful dark block) */}
       <section className="relative overflow-hidden">
         <ElectricDawnBackdrop variant="dark" />
-        <div className="relative z-10 mx-auto max-w-[1280px] px-4 py-16 md:px-6">
-          <div className="grid gap-10 lg:grid-cols-12 lg:items-start">
+        <div className="relative z-10 mx-auto max-w-[1280px] px-4 py-20 md:px-6 py-28">
+          <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
             <div className="lg:col-span-5">
               <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-mt-down-1 text-white backdrop-blur-mcn">
                 <span className="text-[rgba(30,255,136,0.95)]">
@@ -326,18 +326,18 @@ const UPIChargingPage: React.FC = () => {
                 </span>
                 Charge EV With UPI
               </div>
-              <h2 className="mt-5 font-heading text-mt-up-4 tracking-[-0.02em] text-white">
+              <h2 className="mt-6 font-heading text-pf-up-3 tracking-[-0.02em] text-white">
                 Built for fast starts,
                 <br className="hidden sm:block" />
                 not app fatigue.
               </h2>
-              <p className="mt-4 max-w-md text-mt-base text-white/80">
+              <p className="mt-5 max-w-md text-mt-base text-white/80">
                 Massive UPI Charging lets you start EV Charger directly from PayTM,
                 PhonePay, Gpay, etc allowing you to begin charging session in seconds.
                 Skip juggling between apps - charge with UPI.
               </p>
 
-              <div className="mt-7 flex items-center gap-3">
+              <div className="mt-5 flex items-center gap-6">
                 <GlowOutlineButton leftIcon={<Search size={18} />}>
                   Locate chargers
                 </GlowOutlineButton>
@@ -348,32 +348,32 @@ const UPIChargingPage: React.FC = () => {
             </div>
 
             <div className="lg:col-span-7">
-              <div className="grid gap-3 md:grid-cols-3">
+              <div className="grid gap-12 md:grid-cols-3">
                 {steps.map((s) => (
                   <div
                     key={s.title}
-                    className="rounded-[22px] border border-white/10 bg-white/5 p-5 shadow-[0_18px_55px_rgba(0,0,0,0.35)]"
+                    className="rounded-[22px] border border-white/10 bg-white/5 p-6 shadow-[0_18px_55px_rgba(0,0,0,0.35)]"
                   >
                     <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-mt-down-2 text-white/85">
                       <span className="text-[rgba(0,209,255,0.95)]">{s.icon}</span>
                     </div>
-                    <div className="mt-4 text-mt-up-1 font-semibold text-white">
+                    <div className="mt-5 text-mt-up-1 font-semibold text-white">
                       {s.title}
                     </div>
-                    <div className="mt-2 text-mt-down-1 text-white/80">
+                    <div className="mt-3 text-mt-down-1 text-white/80">
                       {s.body}
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-6 rounded-[26px] border border-white/10 bg-white/5 p-6">
+              <div className="mt-16 rounded-[26px] border border-white/10 bg-white/5 p-7">
                 <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                   <div>
                     <div className="text-mt-up-2 font-semibold text-white">
                       One app to rule them all
                     </div>
-                    <div className="mt-2 max-w-xl text-mt-down-1 text-white/80">
+                    <div className="mt-3 max-w-xl text-mt-down-1 text-white/80">
                       Skip juggling multiple wallets and fragmented networks. Use the
                       1C EV App for discovery, receipts, and a unified charging history.
                     </div>
@@ -397,3 +397,4 @@ const UPIChargingPage: React.FC = () => {
 };
 
 export default UPIChargingPage;
+
