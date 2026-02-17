@@ -50,26 +50,30 @@ export default function Navbar() {
 
   // Menu pill styles (dark glass navbar)
   const pillBase =
-    "inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium " +
+    "inline-flex items-center justify-center rounded-[12px] px-4 py-2 text-sm font-medium " +
     "transition whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20";
 
-  const pillInactive = "text-white/75 hover:text-white hover:bg-white/5";
+  const pillInactive = "text-white/75 hover:text-white hover:bg-white/6";
 
   const pillActive = "text-white bg-white/10 ring-1 ring-white/15";
 
-  // Red CTA button (more rounded)
+  // CTA button (outline, muted emphasis)
   const businessBtn =
-    "inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold " +
-    "bg-mcn-red text-white shadow-[0_10px_30px_rgba(229,0,0,0.22)] " +
-    "hover:bg-mcn-red-hover " +
-    "focus:outline-none focus-visible:ring-2 focus-visible:ring-mcn-red/40 transition";
+    "inline-flex items-center justify-center rounded-[12px] px-5 py-2.5 text-sm font-semibold " +
+    "bg-white/0 text-white/85 ring-1 ring-white/20 shadow-[0_10px_30px_rgba(0,0,0,0.25)] " +
+    "hover:bg-white/8 hover:text-white hover:shadow-[0_12px_34px_rgba(229,0,0,0.18)] " +
+    "active:bg-white/10 active:shadow-[0_8px_24px_rgba(229,0,0,0.24)] " +
+    "focus:outline-none focus-visible:ring-2 focus-visible:ring-white/35 transition";
 
   return (
     <header className="sticky top-0 z-50 w-full">
       {/* NAVBAR: Dark Glass */}
-      <div className="relative bg-mcn-ink-glass backdrop-blur-mcn border-b border-mcn-ink-stroke-soft shadow-[0_10px_40px_rgba(0,0,0,0.35)]">
-        {/* subtle sheen */}
+      <div className="relative bg-[#0f1114]/85 backdrop-blur-mcn border-b border-white/10 shadow-[0_12px_40px_rgba(0,0,0,0.45)]">
+        {/* subtle sheen + warm accents */}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/6 to-transparent" />
+        <div className="pointer-events-none absolute -left-10 -top-10 h-32 w-32 rounded-full bg-[rgba(229,0,0,0.18)] blur-3xl" />
+        <div className="pointer-events-none absolute right-1/3 -top-12 h-36 w-36 rounded-full bg-[rgba(30,255,136,0.12)] blur-3xl" />
+        <div className="pointer-events-none absolute right-10 -top-12 h-28 w-28 rounded-full bg-[rgba(255,215,110,0.16)] blur-3xl" />
 
         <div className="relative mx-auto flex max-w-[1280px] items-center px-4 py-3 md:px-6">
           {/* Left: Logo -> Home */}
@@ -153,7 +157,7 @@ export default function Navbar() {
                     key={"m-" + item.to + item.label}
                     to={item.to}
                     className={({ isActive }) =>
-                      "rounded-xl px-4 py-3 text-sm font-medium transition ring-1 " +
+                      "rounded-[12px] px-4 py-3 text-sm font-medium transition ring-1 " +
                       (isActive
                         ? "bg-white/10 text-white ring-white/15"
                         : "bg-white/0 text-white/75 ring-white/12 hover:bg-white/6 hover:text-white")

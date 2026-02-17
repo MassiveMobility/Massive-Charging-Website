@@ -1,215 +1,138 @@
-import React from 'react';
-import './MassiveSystem.css'; 
-import { Check, X, Crown, Zap, Shield } from 'lucide-react';
+﻿import React from "react";
+import { Check, Shield, Zap, BadgePercent } from "lucide-react";
 
-// --- 1. EXTENDED TYPES ---
-
-type DesignConcept = 'Header_Simple' | 'Pricing_Table_3_Col';
-
-interface PricingFeature {
-  text: string;
-  included: boolean;
-}
-
-interface PricingCardData {
-  tier: 'Normal' | 'Pro' | 'Elite';
-  price: string;
-  originalPrice?: string;
-  description: string;
-  features: PricingFeature[];
-  buttonLabel: string;
-  isPopular?: boolean;
-}
-
-interface SegmentData {
-  heading?: string;
-  subheading?: string;
-  cards?: PricingCardData[]; // New field for pricing cards
-}
-
-interface SchemaItem {
-  id: string;
-  concept: DesignConcept;
-  data: SegmentData;
-}
-
-// --- 2. CONTENT SCHEMA ---
-
-const PRICING_CONTENT: SchemaItem[] = [
+const plans = [
   {
-    id: "Header",
-    concept: "Header_Simple",
-    data: {
-      heading: "Choose Your Charging Plan",
-      subheading: "Flexible plans for every type of EV owner. Upgrade anytime."
-    }
+    name: "Elite",
+    price: "₹1299",
+    original: "₹1399",
+    duration: "for 12 months",
+    highlight: true,
   },
   {
-    id: "Plans",
-    concept: "Pricing_Table_3_Col",
-    data: {
-      cards: [
-        {
-          tier: "Normal",
-          price: "Free",
-          description: "Perfect for occasional charging.",
-          buttonLabel: "Get Started",
-          features: [
-            { text: "Access to 100+ Chargers", included: true },
-            { text: "Pay-as-you-go Rates", included: true },
-            { text: "Community Support", included: true },
-            { text: "Slot Reservation", included: false },
-            { text: "Zero Convenience Fee", included: false },
-          ]
-        },
-        {
-          tier: "Pro",
-          price: "₹149",
-          originalPrice: "₹250",
-          description: "Best value for daily commuters.",
-          buttonLabel: "Go Pro",
-          isPopular: true,
-          features: [
-            { text: "Access to 100+ Chargers", included: true },
-            { text: "Discounted Rates (5% Off)", included: true },
-            { text: "Priority Support", included: true },
-            { text: "Slot Reservation", included: true },
-            { text: "Zero Convenience Fee", included: true },
-          ]
-        },
-        {
-          tier: "Elite",
-          price: "₹799",
-          description: "VIP treatment & maximum savings.",
-          buttonLabel: "Become Elite",
-          features: [
-            { text: "All Pro Features", included: true },
-            { text: "Free Charging (First 50 Units)", included: true },
-            { text: "Dedicated Account Manager", included: true },
-            { text: "Home Charger Maintenance", included: true },
-            { text: "Roadside Assistance", included: true },
-          ]
-        }
-      ]
-    }
-  }
+    name: "Pro",
+    price: "₹749",
+    original: "₹849",
+    duration: "for 6 months",
+  },
+  {
+    name: "Starter",
+    price: "₹149",
+    original: "₹249",
+    duration: "for 1 month",
+  },
 ];
 
-// --- 3. COMPONENTS ---
-
-const PricingCard: React.FC<{ data: PricingCardData }> = ({ data }) => {
-  // Determine style classes based on Tier
-  let cardClass = "pricing-card";
-  let btnClass = "btn btn-outline"; // Default
-  let iconColor = "var(--text-ink)";
-
-  if (data.isPopular) {
-    cardClass += " featured";
-    btnClass = "btn btn-primary"; // Green button
-    iconColor = "var(--action-primary)";
-  } else if (data.tier === 'Elite') {
-    cardClass += " elite";
-    btnClass = "btn btn-gradient"; // Gradient or Gold button
-    iconColor = "var(--accent-gold)";
-  }
-
-  return (
-    <div className={cardClass}>
-      {data.isPopular && (
-        <div className="pill pill-accent" style={{ position: 'absolute', top: '-12px', left: '50%', transform: 'translateX(-50%)' }}>
-          Most Popular
-        </div>
-      )}
-      
-      {/* Header */}
-      <div style={{ marginBottom: 'var(--space-4)' }}>
-        <h3 className="t-h3" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-           {data.tier === 'Elite' && <Crown size={20} color="var(--accent-gold)" />}
-           {data.tier === 'Pro' && <Zap size={20} fill="currentColor" color="var(--action-primary)" />}
-           {data.tier}
-        </h3>
-        <p className="t-body" style={{ fontSize: 'var(--text-sm)', marginTop: '4px' }}>{data.description}</p>
-      </div>
-
-      {/* Price */}
-      <div className="price-box">
-        {data.originalPrice && <span className="price-original">{data.originalPrice}</span>}
-        <span className="price-main">{data.price}</span>
-        {data.price !== 'Free' && <span className="price-period">/month</span>}
-      </div>
-
-      {/* Button */}
-      <button className={btnClass} style={{ width: '100%', marginBottom: 'var(--space-8)' }}>
-        {data.buttonLabel}
-      </button>
-
-      {/* Features List */}
-      <div style={{ flex: 1 }}>
-        {data.features.map((feat, i) => (
-          <div key={i} className="list-check-item" style={{ fontSize: 'var(--text-sm)', color: data.tier === 'Elite' ? 'var(--text-inverse-muted)' : 'inherit' }}>
-            {feat.included ? (
-              <Check size={16} color={iconColor} style={{ flexShrink: 0 }} />
-            ) : (
-              <X size={16} color="var(--text-ink-muted)" style={{ flexShrink: 0, opacity: 0.5 }} />
-            )}
-            <span style={{ opacity: feat.included ? 1 : 0.5, textDecoration: feat.included ? 'none' : 'line-through' }}>
-              {feat.text}
-            </span>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-// --- 4. SECTIONS ---
-
-const PricingHeader: React.FC<{ data: SegmentData }> = ({ data }) => (
-  <section className="m-section" style={{ paddingBottom: 'var(--space-8)', textAlign: 'center' }}>
-    <div className="m-container">
-      <h1 className="t-h2" style={{ marginBottom: 'var(--space-4)' }}>{data.heading}</h1>
-      <p className="t-body-lg" style={{ maxWidth: '600px', margin: '0 auto' }}>{data.subheading}</p>
-    </div>
-  </section>
-);
-
-const PricingTable: React.FC<{ data: SegmentData }> = ({ data }) => (
-  <section className="m-section concept-pricing" style={{ paddingTop: 0 }}>
-    <div className="m-container">
-      <div className="pricing-grid">
-        {data.cards?.map((card, i) => (
-          <PricingCard key={i} data={card} />
-        ))}
-      </div>
-    </div>
-  </section>
-);
-
-// --- 5. MAIN PAGE ---
+const benefits = [
+  {
+    title: "10% Flat Cashback",
+    desc: "Every time you charge your EV",
+    icon: <BadgePercent className="h-5 w-5" />,
+  },
+  {
+    title: "Priority Customer Support",
+    desc: "Faster resolution and dedicated help",
+    icon: <Shield className="h-5 w-5" />,
+  },
+  {
+    title: "Free Session Alerts",
+    desc: "Get notified before a session ends",
+    icon: <Zap className="h-5 w-5" />,
+  },
+  {
+    title: "VIP Queue Access",
+    desc: "Skip the line at premium stations",
+    icon: <Check className="h-5 w-5" />,
+  },
+  {
+    title: "Member-Only Deals",
+    desc: "Exclusive discounts on accessories",
+    icon: <BadgePercent className="h-5 w-5" />,
+  },
+  {
+    title: "Extended Support Hours",
+    desc: "Longer hours for priority members",
+    icon: <Shield className="h-5 w-5" />,
+  },
+];
 
 const PricingPage: React.FC = () => {
   return (
-    <div className="massive-theme">
-      {PRICING_CONTENT.map((segment) => {
-        switch (segment.concept) {
-          case 'Header_Simple':
-            return <PricingHeader key={segment.id} data={segment.data} />;
-          case 'Pricing_Table_3_Col':
-            return <PricingTable key={segment.id} data={segment.data} />;
-          default:
-            return null;
-        }
-      })}
-
-      {/* Trust Footer */}
-      <footer className="m-section" style={{ textAlign: 'center', borderTop: '1px solid var(--border-subtle)' }}>
-        <div className="m-container">
-           <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', opacity: 0.7 }}>
-              <div className="pill" style={{ background: 'transparent' }}><Shield size={16}/> Secure Payment</div>
-              <div className="pill" style={{ background: 'transparent' }}><Zap size={16}/> Instant Activation</div>
-           </div>
+    <div className="min-h-screen bg-[#0b0d12] text-white">
+      <section className="relative overflow-hidden">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute -top-24 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[rgba(255,190,125,0.20)] blur-[140px]" />
+          <div className="absolute -top-10 right-0 h-[420px] w-[620px] bg-gradient-to-r from-[rgba(255,168,110,0.18)] via-[rgba(255,168,110,0.06)] to-transparent blur-[120px]" />
+          <div className="absolute inset-0 bg-[radial-gradient(700px_500px_at_20%_20%,rgba(255,180,120,0.15),transparent_60%),radial-gradient(800px_520px_at_80%_10%,rgba(255,220,160,0.10),transparent_60%)]" />
         </div>
-      </footer>
+
+        <div className="relative mx-auto max-w-[1200px] px-6 py-20">
+          <div className="mx-auto flex max-w-[920px] flex-col items-center text-center">
+            <div className="text-xs uppercase tracking-[0.3em] text-white/60">Subscribe to</div>
+            <h1 className="mt-1 text-[44px] font-extrabold tracking-[0.12em] text-[#f2c4a0] md:text-[56px]">
+              ELITE
+            </h1>
+            <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs uppercase tracking-[0.22em] text-white/70">
+              <Zap className="h-4 w-4" />
+              Subscription Plans
+              <Zap className="h-4 w-4" />
+            </div>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {plans.map((plan) => (
+              <div
+                key={plan.name}
+                className={`relative rounded-[28px] border px-6 py-8 text-center shadow-[0_20px_60px_rgba(0,0,0,0.35)] ${
+                  plan.highlight
+                    ? "border-[rgba(255,190,125,0.45)] bg-[rgba(17,18,22,0.8)]"
+                    : "border-white/15 bg-[rgba(17,18,22,0.65)]"
+                }`}
+              >
+                <div className="text-[28px] font-semibold text-[#f2c4a0]">{plan.price}</div>
+                <div className="mt-2 text-sm text-white/45 line-through">{plan.original}</div>
+                <div className="mt-3 text-sm text-white/80">{plan.duration}</div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 flex items-center justify-center gap-3 text-sm text-white/70">
+            <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/5">
+              i
+            </span>
+            <span>Only for Personal Use, Commercial Use is Prohibited</span>
+          </div>
+
+          <div className="mt-14 flex items-center justify-center gap-3 text-white/60">
+            <Zap className="h-4 w-4" />
+            <div className="text-xs uppercase tracking-[0.28em]">Benefits</div>
+            <Zap className="h-4 w-4" />
+          </div>
+
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            {benefits.map((b) => (
+              <div
+                key={b.title}
+                className="flex items-start gap-4 rounded-2xl border border-white/10 bg-[rgba(17,18,22,0.6)] p-6"
+              >
+                <div className="mt-1 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/5 text-[#f2c4a0]">
+                  {b.icon}
+                </div>
+                <div>
+                  <div className="text-[18px] font-semibold text-white">{b.title}</div>
+                  <div className="mt-1 text-sm text-white/60">{b.desc}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-16 flex justify-center">
+            <button className="rounded-full bg-gradient-to-r from-[#f2c4a0] via-[#f0b88f] to-[#eaa981] px-10 py-3 text-sm font-semibold text-[#191b21] shadow-[0_16px_40px_rgba(242,196,160,0.25)]">
+              JOIN ELITE
+            </button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

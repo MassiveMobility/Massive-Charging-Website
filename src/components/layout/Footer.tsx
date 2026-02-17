@@ -1,83 +1,87 @@
-import React from "react";
-import { Mail, Phone, MapPin } from "lucide-react";
+﻿import React from "react";
+import { Mail, Phone, MapPin, Zap } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="mt-auto border-t border-mcn-ink-stroke-soft bg-mcn-ink-bg/80 backdrop-blur-mcn py-16 text-mcn-ink-text-primary">
-      <div className="container mx-auto">
-        {/* Main Footer Wrapper */}
-        <div className="flex flex-col md:flex-row justify-between gap-12 items-start">
-          
-          {/* LEFT ZONE: Brand & Contact */}
-          <div className="flex flex-col gap-6 flex-1">
-            <div>
-              <h2 className="text-mt-down-1 font-bold tracking-widest uppercase mb-2">
+    <footer className="relative mt-auto min-h-[75vh] overflow-hidden border-t border-white/10 bg-[#0a0d11] text-white">
+      {/* Warm glow accents (no blue) */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute -bottom-56 right-1/3 h-[560px] w-[560px] rounded-full bg-[rgba(30,255,136,0.07)] blur-[190px]" />
+        <div className="absolute -bottom-40 left-1/4 h-[420px] w-[420px] rounded-full bg-[rgba(255,215,110,0.09)] blur-[190px]" />
+      </div>
+
+      <div className="relative container mx-auto px-6 py-20 min-h-[75vh] flex flex-col">
+        <div className="grid gap-10 md:grid-cols-12 items-start">
+          {/* Brand */}
+          <div className="md:col-span-6">
+            <div className="flex items-center gap-3">
+              <Zap className="h-7 w-7 text-white/40" />
+              <h2 className="text-mt-down-1 font-bold tracking-[0.2em] uppercase">
                 Massive Charging Network
               </h2>
-              <p className="text-mt-down-1 text-mcn-ink-text-muted leading-relaxed max-w-xs">
-                Configuring the next-gen infrastructure for seamless electric mobility.
-              </p>
             </div>
+            <p className="mt-3 text-pf-down-1 text-white/70 leading-relaxed max-w-xl">
+              Configuring the next-gen infrastructure for seamless electric mobility.
+            </p>
 
-            <div className="flex flex-col gap-3">
+            <div className="mt-8 grid gap-4 max-w-lg">
               {[
-                { icon: <Mail size={14} />, text: "connect@massivecharging.com", href: "mailto:connect@massivecharging.com" },
-                { icon: <Phone size={14} />, text: "+91 91200300400", href: "tel:+9191200300400" },
-                { icon: <MapPin size={14} />, text: "HQ, Gurugram, India", href: null }
+                {
+                  icon: <Mail size={16} />,
+                  text: "connect@massivecharging.com",
+                  href: "mailto:connect@massivecharging.com",
+                },
+                { icon: <Phone size={16} />, text: "+91 91200300400", href: "tel:+9191200300400" },
+                { icon: <MapPin size={16} />, text: "HQ, Gurugram, India", href: null },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3 group">
-                   <span className="text-mcn-ink-text-faint group-hover:text-mcn-red transition-colors">{item.icon}</span>
-                   {item.href ? (
-                     <a href={item.href} className="no-underline transition-colors hover:text-mcn-ink-text-primary">
-                       <span className="text-mt-down-1 text-mcn-ink-text-muted">{item.text}</span>
-                     </a>
-                   ) : (
-                     <span className="text-mt-down-1 text-mcn-ink-text-muted">{item.text}</span>
-                   )}
+                  <span className="text-white/50 group-hover:text-white transition-colors">
+                    {item.icon}
+                  </span>
+                  {item.href ? (
+                    <a href={item.href} className="no-underline transition-colors hover:text-white">
+                      <span className="text-pf-down-1 text-white/70">{item.text}</span>
+                    </a>
+                  ) : (
+                    <span className="text-pf-down-1 text-white/70">{item.text}</span>
+                  )}
                 </div>
               ))}
             </div>
           </div>
 
-          {/* RIGHT ZONE: Clumped Right */}
-          <div className="flex flex-wrap justify-end gap-8 md:gap-4 flex-[2]">
-            
-            {/* Column: Products */}
-            <div className="flex flex-col gap-4 min-w-[140px]">
-              <span className="text-pf-down-2 font-black uppercase tracking-[0.2em] text-mcn-ink-text-faint">
-                Products
-              </span>
-              <nav className="flex flex-col gap-2">
-                {['All Products', '3.3kw AC Socket', '7.4kw Home Charger', '14kw Office Charger'].map(link => (
-                  <a key={link} href="#" className="text-mt-down-1 text-mcn-ink-text-muted hover:text-mcn-ink-text-primary no-underline transition-colors">
-                    {link}
-                  </a>
-                ))}
-              </nav>
-            </div>
-
-            {/* Column: Resources */}
-            <div className="flex flex-col gap-4 min-w-[140px]">
-              <span className="text-pf-down-2 font-black uppercase tracking-[0.2em] text-mcn-ink-text-faint">
+          {/* Columns */}
+          <div className="md:col-span-6 grid gap-10 sm:grid-cols-2">
+            <div className="rounded-mcn-xl border border-white/10 bg-black/40 p-6">
+              <div className="text-pf-down-1 font-black uppercase tracking-[0.22em] text-white/55">
                 Resources
-              </span>
-              <nav className="flex flex-col gap-2">
-                {['Charging Guide', 'EV Battery Stats', 'EV Guide'].map(link => (
-                  <a key={link} href="#" className="text-mt-down-1 text-mcn-ink-text-muted hover:text-mcn-ink-text-primary no-underline transition-colors">
-                    {link}
-                  </a>
-                ))}
+              </div>
+              <nav className="mt-5 flex flex-col gap-3">
+                {["1C EV Charging App", "EV Charging Guide", "EV Charging Station Business"].map(
+                  (link) => (
+                    <a
+                      key={link}
+                      href="#"
+                      className="text-pf-down-1 text-white/70 hover:text-white no-underline transition-colors"
+                    >
+                      {link}
+                    </a>
+                  )
+                )}
               </nav>
             </div>
 
-            {/* Column: Company */}
-            <div className="flex flex-col gap-4 min-w-[140px]">
-              <span className="text-pf-down-2 font-black uppercase tracking-[0.2em] text-mcn-ink-text-faint">
+            <div className="rounded-mcn-xl border border-white/10 bg-black/40 p-6">
+              <div className="text-pf-down-1 font-black uppercase tracking-[0.22em] text-white/55">
                 Company
-              </span>
-              <nav className="flex flex-col gap-2">
-                {['About Us', 'Contact', 'Support'].map(link => (
-                  <a key={link} href="#" className="text-mt-down-1 text-mcn-ink-text-muted hover:text-mcn-ink-text-primary no-underline transition-colors">
+              </div>
+              <nav className="mt-5 flex flex-col gap-3">
+                {["About Us", "Contact"].map((link) => (
+                  <a
+                    key={link}
+                    href="#"
+                    className="text-pf-down-1 text-white/70 hover:text-white no-underline transition-colors"
+                  >
                     {link}
                   </a>
                 ))}
@@ -87,12 +91,14 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-20 pt-6 border-t border-mcn-ink-stroke-softer flex flex-col md:flex-row justify-between items-center gap-4">
-          <span className="text-pf-down-2 text-mcn-ink-text-faint uppercase tracking-widest">
+        <div className="mt-auto pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+          <span className="text-pf-down-1 text-white/50 uppercase tracking-widest">
             © 2026 Massive Charging Network
           </span>
           <a href="/privacy" className="no-underline group">
-            <span className="text-pf-down-2 text-mcn-ink-text-faint group-hover:text-mcn-ink-text-primary transition-colors">Privacy Policy</span>
+            <span className="text-pf-down-1 text-white/50 group-hover:text-white transition-colors">
+              Privacy Policy
+            </span>
           </a>
         </div>
       </div>

@@ -305,7 +305,7 @@ export default function Home_Schema_Page() {
           <div className="grid gap-8 desktop:grid-cols-12 items-center">
             <div className="desktop:col-span-7">
               <div className="inline-flex items-center gap-2 rounded-full border border-mcn-stroke-soft bg-white/70 px-3 py-1.5 text-mt-down-1 text-mcn-text-muted">
-                <IconMap name="Zap" className="h-4 w-4 text-mcn-text-muted" />
+                <IconMap name="Zap" className="h-5 w-5 text-mcn-text-muted" />
                 EV Charging App
               </div>
               <h2 className="mt-5 font-heading text-pf-up-4">Get 1C Charging App</h2>
@@ -323,8 +323,8 @@ export default function Home_Schema_Page() {
                   { icon: "BatteryCharging", label: "Battery Health" },
                 ].map((item) => (
                   <li key={item.label} className="flex items-center gap-3">
-                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-mcn-lg border border-mcn-stroke-soft bg-white/70">
-                      <IconMap name={item.icon as IconName} className="h-4 w-4 text-mcn-text-primary" />
+                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-mcn-lg border border-mcn-stroke-soft bg-white/70">
+                      <IconMap name={item.icon as IconName} className="h-5 w-5 text-mcn-text-primary" />
                     </span>
                     {item.label}
                   </li>
@@ -392,8 +392,8 @@ export default function Home_Schema_Page() {
                   { icon: "ShieldCheck", label: "Uptime Monitoring & Service Support" },
                 ].map((item) => (
                   <li key={item.label} className="flex items-center gap-3">
-                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-mcn-lg border border-mcn-ink-stroke-soft bg-mcn-ink-surface">
-                      <IconMap name={item.icon as IconName} className="h-4 w-4 text-mcn-ink-text-primary" />
+                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-mcn-lg border border-mcn-ink-stroke-soft bg-mcn-ink-surface">
+                      <IconMap name={item.icon as IconName} className="h-5 w-5 text-mcn-ink-text-primary" />
                     </span>
                     {item.label}
                   </li>
@@ -551,6 +551,4 @@ export default function Home_Schema_Page() {
     </div>
   );
 }
-
-
 

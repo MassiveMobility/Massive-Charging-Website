@@ -26,6 +26,7 @@ import { EVChargingGuidePage } from "./components/pages/EVChargingGuidePage";
 import EVChargingGuide_Dashboard from "./Querycode/EVChargingGuide_Dashboard";
 import EVCarsCatalogue from "./Querycode/EVCarsCatalogue";
 import ChargingGuidePage from "./Querycode/ChargingGuidePage";
+import EVChargingShopComingSoon from "./pages/EVChargingShopComingSoon";
 
 import StationBizHomePage from "./pages/Station_Biz_HomePage";
 import EvChargingStationHomePage from "./pages/Charging-Station_Business/ev-charging-station-home-page";
@@ -158,7 +159,8 @@ function App() {
           <main style={{ flex: 1 }}>
             <Routes>
               {/* --- MAIN HOME PAGE --- */}
-              <Route path="/" element={<Home_Page />} />
+              <Route path="/" element={<HomeSchemaPage />} />
+              <Route path="/home-legacy" element={<Home_Page />} />
               <Route path="/themesampler" element={<ThemeSamplerPage />} />
               <Route path="/temp-home" element={<Home_Page />} />
 
@@ -166,12 +168,14 @@ function App() {
               <Route path="/destest" element={<TestHome />} />
               <Route path="/flathome" element={<HomeSchemaPage />} />
               <Route path="/csb-test" element={<ChargingStationBusiness_Test />} />
+              <Route path="/ev-charging-station-business" element={<ChargingBusinessFreshHome />} />
               <Route path="/fresh" element={<ChargingBusinessFreshHome />} />
 
               {/* --- EXISTING ROUTES --- */}
               <Route path="/ev-charging-guide" element={<EVChargingGuidePage />} />
               <Route path="/pinktest" element={<PinkTestPage />} />
               <Route path="/upi-charging" element={<UPIChargingPage />} />
+              <Route path="/ev-charging-shop" element={<EVChargingShopComingSoon />} />
               <Route path="/plans-offers" element={<PricingPage />} />
               <Route path="/EV-Trip-Report" element={<EVJourneyReport />} />
 
@@ -195,9 +199,9 @@ function App() {
               />
 
               {/* Station biz */}
-              <Route path="/charging-station-business" element={<StationBizHomePage />} />
+              <Route path="/charging-station-business-legacy" element={<StationBizHomePage />} />
               <Route
-                path="/ev-charging-station-business"
+                path="/ev-charging-station-business-legacy"
                 element={<EvChargingStationHomePage />}
               />
 
