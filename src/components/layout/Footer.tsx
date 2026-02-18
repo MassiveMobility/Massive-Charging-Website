@@ -57,17 +57,22 @@ export const Footer = () => {
                 Resources
               </div>
               <nav className="mt-5 flex flex-col gap-3">
-                {["1C EV Charging App", "EV Charging Guide", "EV Charging Station Business"].map(
-                  (link) => (
-                    <a
-                      key={link}
-                      href="#"
-                      className="text-pf-down-1 text-white/70 hover:text-white no-underline transition-colors"
-                    >
-                      {link}
-                    </a>
-                  )
-                )}
+                {[
+                  {
+                    label: "1C EV Charging App",
+                    href: "https://play.google.com/store/apps/details?id=in.one.charging&hl=en_IN",
+                  },
+                  { label: "EV Charging Guide", href: "/charging-guide" },
+                  { label: "EV Charging Station Business", href: "/ev-charging-station-business" },
+                ].map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className="text-pf-down-1 text-white/70 hover:text-white no-underline transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                ))}
               </nav>
             </div>
 
@@ -76,13 +81,16 @@ export const Footer = () => {
                 Company
               </div>
               <nav className="mt-5 flex flex-col gap-3">
-                {["About Us", "Contact"].map((link) => (
+                {[
+                  { label: "About Us", href: "/" },
+                  { label: "Contact", href: "/" },
+                ].map((link) => (
                   <a
-                    key={link}
-                    href="#"
+                    key={link.label}
+                    href={link.href}
                     className="text-pf-down-1 text-white/70 hover:text-white no-underline transition-colors"
                   >
-                    {link}
+                    {link.label}
                   </a>
                 ))}
               </nav>

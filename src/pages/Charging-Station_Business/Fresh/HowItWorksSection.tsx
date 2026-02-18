@@ -47,6 +47,15 @@ const RedGlowButton: React.FC<
 };
 
 export default function HowItWorksSection() {
+  const handleChooseSetup = () => {
+    const target = document.getElementById("choose");
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      window.location.hash = "#choose";
+    }
+  };
+
   return (
     <section id="how-it-works" className="relative min-h-screen overflow-hidden">
       <ElectricDawnBackdrop variant="dark" />
@@ -98,7 +107,9 @@ export default function HowItWorksSection() {
                 <Search size={18} />
                 Locate chargers
               </button>
-              <RedGlowButton rightIcon={<ArrowRight size={16} />}>Choose a setup</RedGlowButton>
+              <RedGlowButton rightIcon={<ArrowRight size={16} />} onClick={handleChooseSetup}>
+                Choose a setup
+              </RedGlowButton>
             </div>
           </div>
         </div>
