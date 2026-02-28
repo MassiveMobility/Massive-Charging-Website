@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState, createContext, useContext } from "react";
 import "./index.css"; // ← This line is CRITICAL
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 
 /* Layout Molecules */
 import Navbar from "./components/layout/Navbar";
@@ -37,6 +37,7 @@ import CPOTypeIndividualPage from "./pages/Charging-Station_Business/CPO_Types/C
 import CPOTypeIndexPage from "./pages/Charging-Station_Business/CPO_Types/CPOTypeIndexPage";
 
 import EvGuideHomeDashboard from "./pages/Charging_Guide/EvGuideHomeDashboard";
+import FrontPage from "./pages/FrontPage/FrontPage";
 import ScrollToHash from "./components/layout/ScrollToHash";
 
 
@@ -77,6 +78,21 @@ export function useAppData() {
   const ctx = useContext(AppDataContext);
   if (!ctx) throw new Error("useAppData must be used inside <AppDataContext.Provider>");
   return ctx;
+}
+
+/* Routes that use their own navbar/footer */
+const CUSTOM_LAYOUT_ROUTES = ["/front"];
+
+function NavbarWrapper() {
+  const { pathname } = useLocation();
+  if (CUSTOM_LAYOUT_ROUTES.includes(pathname)) return null;
+  return <Navbar />;
+}
+
+function FooterWrapper() {
+  const { pathname } = useLocation();
+  if (CUSTOM_LAYOUT_ROUTES.includes(pathname)) return null;
+  return <Footer />;
 }
 
 function App() {
@@ -154,12 +170,12 @@ function App() {
           variant="base"
           style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}
         >
-          <Navbar />
+          <NavbarWrapper />
 
           <main style={{ flex: 1 }}>
             <Routes>
               {/* --- MAIN HOME PAGE --- */}
-              <Route path="/" element={<HomeSchemaPage />} />
+              <Route path="/" element={<FrontPage />} />
               <Route path="/home-legacy" element={<Home_Page />} />
               <Route path="/themesampler" element={<ThemeSamplerPage />} />
               <Route path="/temp-home" element={<Home_Page />} />
@@ -167,6 +183,7 @@ function App() {
               <Route path="/temp-05" element={<EvGuideHomeDashboard />} />
               <Route path="/destest" element={<TestHome />} />
               <Route path="/flathome" element={<HomeSchemaPage />} />
+              <Route path="/front" element={<FrontPage />} />
               <Route path="/csb-test" element={<ChargingStationBusiness_Test />} />
               <Route path="/ev-charging-station-business" element={<ChargingBusinessFreshHome />} />
               <Route path="/fresh" element={<ChargingBusinessFreshHome />} />
@@ -256,7 +273,7 @@ function App() {
             </Routes>
           </main>
 
-          <Footer />
+          <FooterWrapper />
         </Surface>
       </AppDataContext.Provider>
     </Router>

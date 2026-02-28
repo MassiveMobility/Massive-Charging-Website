@@ -144,10 +144,11 @@ function DarkSectionBackdrop() {
   );
 }
 
-export default function Home_Schema_Page() {
+export default function Home_Schema_Page({ hideHero = false }: { hideHero?: boolean }) {
   return (
     <div className="bg-mcn-bg text-mcn-text-primary">
       {/* Hero */}
+      {!hideHero && (
       <section id="hero" className="relative min-h-screen overflow-hidden bg-white flex items-center">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute -top-36 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-electric-glow-cyan blur-[140px] opacity-60" />
@@ -226,6 +227,7 @@ export default function Home_Schema_Page() {
           </div>
         </div>
       </section>
+      )}
 
       {/* EV Home Charging */}
       <section
