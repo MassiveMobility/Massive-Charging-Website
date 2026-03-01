@@ -1,6 +1,7 @@
 import React from "react";
 import { Download } from "lucide-react";
 import FrontPageButton from "../FrontPage/FrontPageButton";
+import FastStartsSection from "./FastStartsSection";
 import "./UpiChargingPage.css";
 
 const PLAYSTORE_URL =
@@ -140,6 +141,8 @@ export default function UpiChargingPage() {
           </div>
         </div>
       </section>
+
+      <FastStartsSection />
     </div>
   );
 }
