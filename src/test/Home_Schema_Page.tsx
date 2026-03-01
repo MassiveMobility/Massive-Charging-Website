@@ -1,5 +1,6 @@
 import React from "react";
 import SecondScroll from "../pages/FrontPage/SecondScroll";
+import ThirdScroll from "../pages/FrontPage/ThirdScroll";
 import {
   ArrowRight,
   BatteryCharging,
@@ -234,74 +235,7 @@ export default function Home_Schema_Page({ hideHero = false }: { hideHero?: bool
       <SecondScroll />
 
       {/* EV Charging App */}
-      <section id="ev-charging-app" className="min-h-screen bg-white text-mcn-text-primary flex items-center">
-        <div className="container mx-auto px-4 md:px-6 py-20 md:py-24">
-          <div className="grid gap-8 desktop:grid-cols-12 items-center">
-            <div className="desktop:col-span-7">
-              <div className="inline-flex items-center gap-2 rounded-full border border-mcn-stroke-soft bg-white/70 px-3 py-1.5 text-mt-down-1 text-mcn-text-muted">
-                <IconMap name="Zap" className="h-5 w-5 text-mcn-text-muted" />
-                EV Charging App
-              </div>
-              <h2 className="mt-5 font-heading text-pf-up-4">Get 1C Charging App</h2>
-              <p className="mt-4 text-mt-up-1 text-mcn-text-secondary">One App For All Activities</p>
-              <p className="mt-3 text-mt-base text-mcn-text-faint">
-                Control all charging activities from single app in your phone.
-              </p>
-
-              <ul className="mt-6 grid gap-3 text-mt-base text-mcn-text-secondary md:grid-cols-2">
-                {[
-                  { icon: "MapPin", label: "Locate Chargers" },
-                  { icon: "Power", label: "Start & Stop" },
-                  { icon: "CreditCard", label: "Pay for Charging" },
-                  { icon: "Users", label: "Join Community" },
-                  { icon: "BatteryCharging", label: "Battery Health" },
-                ].map((item) => (
-                  <li key={item.label} className="flex items-center gap-3">
-                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-mcn-lg border border-mcn-stroke-soft bg-white/70">
-                      <IconMap name={item.icon as IconName} className="h-5 w-5 text-mcn-text-primary" />
-                    </span>
-                    {item.label}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-7">
-                <a
-                  href={PLAYSTORE_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-mcn-lg bg-mcn-red px-5 py-2.5 text-white shadow-mcn-card transition-mcn hover:bg-mcn-red-hover"
-                >
-                  Get EV Charging App
-                  <ArrowRight className="h-5 w-5" />
-                </a>
-              </div>
-            </div>
-
-            <div className="desktop:col-span-5">
-              <div className="rounded-mcn-xl border border-mcn-stroke-soft bg-mcn-surface2 p-6 shadow-mcn-card">
-                <div className="text-mt-down-1 text-mcn-text-muted">App quick actions</div>
-                <div className="mt-4 grid gap-3">
-                  {[
-                    { label: "Start session", value: "Tap to begin" },
-                    { label: "Stop session", value: "One‑tap end" },
-                    { label: "Pay securely", value: "UPI / Cards" },
-                    { label: "Track usage", value: "Live metrics" },
-                  ].map((item) => (
-                    <div
-                      key={item.label}
-                      className="flex items-center justify-between rounded-mcn border border-mcn-stroke-soft bg-white/70 px-4 py-3"
-                    >
-                      <span className="text-mt-down-1 text-mcn-text-muted">{item.label}</span>
-                      <span className="text-mt-down-1 text-mcn-text-primary">{item.value}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ThirdScroll />
 
       {/* Set Up Charging Station */}
       <section id="setup-charging-station" className="relative min-h-screen overflow-hidden text-mcn-ink-text-primary flex items-center">
