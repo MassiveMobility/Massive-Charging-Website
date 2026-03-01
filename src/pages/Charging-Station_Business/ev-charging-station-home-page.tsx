@@ -7,7 +7,7 @@ import { BusinessMenuDashboardSection } from "./BusinessMenuDashboardSection";
 import WhyMassiveSection from "./WhyMassiveSection";
 import { StatementsSection } from "./StatementsSection";
 import { FAQSection } from "./FAQSection";
-import GuideSection from "../../test/GuideSection";
+import FifthScroll from "../FrontPage/FifthScroll";
 
 
 export default function EvChargingStationHomePage() {
@@ -26,7 +26,7 @@ export default function EvChargingStationHomePage() {
         <RequirementDashboard />
       </section>
 
-      <GuideSection />
+      <FifthScroll />
 
       {/* Earnings Calculator 
       <EarningPotentialCalculatorSection />
