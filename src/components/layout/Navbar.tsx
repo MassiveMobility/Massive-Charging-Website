@@ -71,7 +71,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-[58] w-full">
-      <div className="relative flex items-center gap-10 px-10 py-4 bg-white">
+      <div className="relative flex items-center gap-10 px-10 pt-6 pb-4 bg-white">
         {/* Black strip at the right edge – only on home page hero area */}
         <div
           className="hidden xl:block absolute right-0 top-0 h-full bg-[#1A1A1A] transition-opacity duration-300"

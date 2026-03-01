@@ -1,0 +1,272 @@
+/* ── BottomBar ── */
+
+.bottom-bar {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  background: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ── Section 1: Main footer content (90%) ── */
+.bottom-bar__main {
+  flex: 1;
+  display: flex;
+  padding: 80px 80px 0 80px;
+  padding-bottom: 0;
+  gap: 0;
+  position: relative;
+}
+
+/* Left side – 70% */
+.bottom-bar__left {
+  width: 70%;
+  display: flex;
+  gap: 60px;
+  padding-right: 40px;
+}
+
+/* Each column in the left side */
+.bottom-bar__column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 200px;
+}
+
+.bottom-bar__column-title {
+  font-family: "ITC Avant Garde Gothic Std", "Century Gothic", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.002em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.bottom-bar__column-text,
+.bottom-bar__column-link {
+  font-family: "TT Fors Trial", "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0.002em;
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.bottom-bar__column-link:hover {
+  opacity: 0.7;
+}
+
+.bottom-bar__address {
+  max-width: 311px;
+}
+
+/* Vertical divider line */
+.bottom-bar__divider-vertical {
+  width: 0.8px;
+  background: #7a7979;
+  align-self: stretch;
+  margin: 0;
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+/* Right side – 30% */
+.bottom-bar__right {
+  width: 30%;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bottom-bar__right-title {
+  font-family: "ITC Avant Garde Gothic Std", "Century Gothic", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.002em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.bottom-bar__right-desc {
+  font-family: "TT Fors Trial", "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.003em;
+  color: #777777;
+  margin: 0;
+  max-width: 382px;
+}
+
+.bottom-bar__cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 162px;
+  height: 46px;
+  background: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.bottom-bar__cta-btn:hover {
+  background: #e0e0e0;
+}
+
+.bottom-bar__cta-text {
+  font-family: "TT Fors Trial", "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.002em;
+  color: #1a0000;
+}
+
+.bottom-bar__red-logo {
+  margin-top: auto;
+  padding-bottom: 16px;
+}
+
+.bottom-bar__red-logo img {
+  width: 219px;
+  height: auto;
+}
+
+/* Horizontal divider */
+.bottom-bar__divider-horizontal {
+  height: 0.8px;
+  background: #7a7979;
+  margin: 0 80px;
+}
+
+/* ── Section 2: Bottom copyright bar (10%) ── */
+.bottom-bar__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 80px;
+  min-height: 10vh;
+}
+
+.bottom-bar__footer-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bottom-bar__footer-link,
+.bottom-bar__footer-separator {
+  font-family: "TT Fors Trial", "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.002em;
+  color: #777777;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.bottom-bar__footer-link:hover {
+  color: #aaaaaa;
+}
+
+.bottom-bar__footer-copyright {
+  font-family: "TT Fors Trial", "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.002em;
+  color: #777777;
+}
+
+/* ── Large background SVG ── */
+.bottom-bar__bg-svg {
+  position: absolute;
+  bottom: 10vh;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  opacity: 0.06;
+  display: flex;
+  justify-content: center;
+}
+
+.bottom-bar__bg-svg img {
+  width: 80%;
+  max-width: 1200px;
+  height: auto;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .bottom-bar__main {
+    flex-direction: column;
+    padding: 48px 32px 0 32px;
+    gap: 40px;
+  }
+
+  .bottom-bar__left {
+    width: 100%;
+    flex-wrap: wrap;
+    padding-right: 0;
+  }
+
+  .bottom-bar__divider-vertical {
+    display: none;
+  }
+
+  .bottom-bar__right {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .bottom-bar__divider-horizontal {
+    margin: 0 32px;
+  }
+
+  .bottom-bar__footer {
+    padding: 24px 32px;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .bottom-bar__main {
+    padding: 32px 20px 0 20px;
+  }
+
+  .bottom-bar__left {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .bottom-bar__divider-horizontal {
+    margin: 0 20px;
+  }
+
+  .bottom-bar__footer {
+    padding: 20px;
+  }
+
+  .bottom-bar__column-title {
+    font-size: 20px;
+  }
+
+  .bottom-bar__column-text,
+  .bottom-bar__column-link {
+    font-size: 16px;
+  }
+}

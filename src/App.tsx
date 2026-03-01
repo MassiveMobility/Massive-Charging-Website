@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 
 /* Layout Molecules */
 import Navbar from "./components/layout/Navbar";
-import { Footer } from "./components/layout/Footer";
+import BottomBar from "./pages/FrontPage/BottomBar";
 import ScrollToTop from "./components/layout/ScrollToTop";
 
 /* Atoms */
@@ -80,19 +80,17 @@ export function useAppData() {
   return ctx;
 }
 
-/* Routes that use their own navbar/footer */
-const CUSTOM_LAYOUT_ROUTES = ["/front"];
+/* Routes that use their own navbar */
+const CUSTOM_NAVBAR_ROUTES = ["/front", "/flathome"];
 
 function NavbarWrapper() {
   const { pathname } = useLocation();
-  if (CUSTOM_LAYOUT_ROUTES.includes(pathname)) return null;
+  if (CUSTOM_NAVBAR_ROUTES.includes(pathname)) return null;
   return <Navbar />;
 }
 
 function FooterWrapper() {
-  const { pathname } = useLocation();
-  if (CUSTOM_LAYOUT_ROUTES.includes(pathname)) return null;
-  return <Footer />;
+  return <BottomBar />;
 }
 
 function App() {

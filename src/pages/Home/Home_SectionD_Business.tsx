@@ -107,8 +107,8 @@ const styles = {
     boxShadow: "none",
   },
   cardIcon: {
-    width: 96,
-    height: 96,
+    width: 160,
+    height: 160,
     margin: "0 auto 12px",
     display: "block",
   },
@@ -129,21 +129,21 @@ const styles = {
 /* ─── Card positions (matching the Figma diamond/flow layout) ─── */
 
 const cardPositions = {
-  siteFeasibility: { top: 143, left: 54 },
-  operations: { top: 10, left: 220 },
-  chargerHardware: { top: 300, left: 140 },
-  billing: { top: 137, left: 370 },
+  siteFeasibility: { top: 139, left: 32 },
+  operations: { top: -5, left: 220 },
+  chargerHardware: { top: 319, left: 140 },
+  billing: { top: 162, left: 310 },
 };
 
 /* ─── Connector positions (endpoints touching card edges) ─── */
 
 const connectorPositions = {
   /* Connector 1 (red): Site Feasibility top-right → Operations bottom-left */
-  line1: { top: 58, left: 140, width: 132, height: 92 },
+  line1: { top: 60, left: 118, width: 90, height: 66 },
   /* Connector 2 (red): Operations right → Billing top-left */
-  line2: { top: 78, left: 338, width: 132, height: 66 },
+  line2: { top: 118, left: 310, width: 90, height: 66 },
   /* Connector 3 (gray): Site Feasibility bottom → Charger Hardware top */
-  line3: { top: 180, left: 190, width: 55, height: 123 },
+  line3: { top: 210, left: 166, width: 90, height: 86 },
 };
 
 /* ─── Feature Card component ─── */
