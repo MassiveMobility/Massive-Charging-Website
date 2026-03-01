@@ -1,6 +1,7 @@
 import React from "react";
 import SecondScroll from "../pages/FrontPage/SecondScroll";
 import ThirdScroll from "../pages/FrontPage/ThirdScroll";
+import Home_SectionD_Business from "../pages/Home/Home_SectionD_Business";
 import {
   ArrowRight,
   BatteryCharging,
@@ -238,72 +239,7 @@ export default function Home_Schema_Page({ hideHero = false }: { hideHero?: bool
       <ThirdScroll />
 
       {/* Set Up Charging Station */}
-      <section id="setup-charging-station" className="relative min-h-screen overflow-hidden text-mcn-ink-text-primary flex items-center">
-        <DarkSectionBackdrop />
-        <div className="relative z-10 container mx-auto px-4 md:px-6 py-20 md:py-24">
-          <div className="grid gap-8 desktop:grid-cols-12 items-start">
-            <div className="desktop:col-span-7">
-              <div className="inline-flex items-center gap-2 rounded-full border border-mcn-ink-stroke-soft bg-mcn-ink-glass px-3 py-1 text-mt-down-1 text-mcn-ink-text-secondary">
-                Set Up Charger and Earn
-              </div>
-              <h2 className="mt-5 font-heading text-pf-up-4">Start Your EV Charging Business</h2>
-              <p className="mt-4 text-mt-up-1 text-mcn-ink-text-secondary">
-                Convert empty land into EV Charging Station and earn monthly income. Get Hardware and Software to run Charging Station.
-              </p>
-
-              <ul className="mt-6 grid gap-3 text-mt-base text-mcn-ink-text-secondary">
-                {[
-                  { icon: "MapPin", label: "Site Feasibility & Layout Planning" },
-                  { icon: "Tool", label: "Charger Hardware + Installation Support" },
-                  { icon: "CreditCard", label: "Billing, Payments & Settlements" },
-                  { icon: "Monitor", label: "Operations Dashboard & Remote Control" },
-                  { icon: "ShieldCheck", label: "Uptime Monitoring & Service Support" },
-                ].map((item) => (
-                  <li key={item.label} className="flex items-center gap-3">
-                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-mcn-lg border border-mcn-ink-stroke-soft bg-mcn-ink-surface">
-                      <IconMap name={item.icon as IconName} className="h-5 w-5 text-mcn-ink-text-primary" />
-                    </span>
-                    {item.label}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-5 flex items-center gap-3">
-                <a
-                  href="/ev-charging-station-business"
-                  className="inline-flex items-center justify-center rounded-mcn-lg bg-mcn-red px-5 py-2.5 text-white shadow-mcn-ink-card transition-mcn hover:bg-mcn-red-hover"
-                >
-                  How To Setup Station
-                </a>
-                <span className="rounded-pill border border-mcn-ink-stroke-soft bg-white/10 px-3 py-1 text-mt-down-1 text-mcn-ink-text-primary">
-                  ₹ 80,000+ monthly income
-                </span>
-              </div>
-            </div>
-
-            <div className="desktop:col-span-5 flex justify-center self-center">
-              <div className="w-full max-w-[440px] rounded-mcn-xl border border-mcn-ink-stroke-soft bg-mcn-ink-surface p-6 shadow-mcn-ink-card">
-                <div className="text-mt-down-1 text-mcn-ink-text-muted">Operator metrics</div>
-                <div className="mt-4 grid gap-3">
-                  {[
-                    { label: "ROI window", value: "10–18 months" },
-                    { label: "Avg utilization", value: "68–74%" },
-                    { label: "Monthly revenue", value: "₹ 80k+" },
-                  ].map((item) => (
-                    <div
-                      key={item.label}
-                      className="flex items-center justify-between rounded-mcn border border-mcn-ink-stroke-soft bg-mcn-ink-glass px-4 py-3"
-                    >
-                      <span className="text-mt-down-1 text-mcn-ink-text-secondary">{item.label}</span>
-                      <span className="font-mono text-mt-down-1 text-mcn-ink-text-primary">{item.value}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Home_SectionD_Business />
 
       {/* EV Charging Guide */}
       <section id="ev-charging-guide" className="min-h-screen bg-white text-mcn-text-primary flex items-center">
