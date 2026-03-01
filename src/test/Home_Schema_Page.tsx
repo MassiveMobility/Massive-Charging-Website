@@ -1,4 +1,5 @@
 import React from "react";
+import SecondScroll from "../pages/FrontPage/SecondScroll";
 import {
   ArrowRight,
   BatteryCharging,
@@ -230,76 +231,7 @@ export default function Home_Schema_Page({ hideHero = false }: { hideHero?: bool
       )}
 
       {/* EV Home Charging */}
-      <section
-        id="ev-home-charging"
-        className="relative min-h-screen overflow-hidden text-mcn-ink-text-primary flex items-center"
-      >
-        <DarkSectionBackdrop />
-        <div className="relative z-10 container mx-auto px-4 md:px-6 py-20 md:py-24">
-          <div className="grid gap-8 desktop:grid-cols-12 items-center">
-            <div className="desktop:col-span-7">
-              <div className="inline-flex items-center gap-2 rounded-full bg-mcn-ink-glass px-3 py-1.5 text-mt-down-1 text-mcn-ink-text-secondary">
-                EV Home Charging
-              </div>
-              <h2 className="mt-5 font-heading text-pf-up-4">Install Your Personal EV Charger at Home</h2>
-              <p className="mt-4 text-mt-up-1 text-mcn-ink-text-secondary">Safe • Smart • Cost-Effective</p>
-
-              <ul className="mt-6 grid gap-3 text-mt-base text-mcn-ink-text-secondary">
-                {[
-                  { icon: "Bolt", label: "Dedicated AC Charging for Your EV" },
-                  { icon: "Shield", label: "Certified Safe Installation" },
-                  { icon: "Phone", label: "Smart App-Based Monitoring" },
-                  { icon: "TrendDown", label: "Lower Cost vs Public Charging" },
-                ].map((item) => (
-                  <li key={item.label} className="flex items-center gap-3">
-                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-mcn-lg bg-white/10">
-                      <IconMap name={item.icon as IconName} className="h-5 w-5 text-white/85" />
-                    </span>
-                    {item.label}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-7 flex flex-wrap gap-3">
-                <a
-                  href="/ev-charging-station-business#choose"
-                  className="inline-flex items-center justify-center rounded-mcn-lg bg-mcn-red px-5 py-2.5 text-white shadow-mcn-ink-card transition-mcn hover:bg-mcn-red-hover"
-                >
-                  Get My Home Charger
-                </a>
-                <a
-                  href="/ev-charging-station-business#choose"
-                  className="inline-flex items-center justify-center rounded-mcn-lg border border-mcn-ink-stroke-soft bg-mcn-ink-surface px-5 py-2.5 text-mcn-ink-text-primary transition-mcn"
-                >
-                  View Installation Guide
-                </a>
-              </div>
-            </div>
-
-            <div className="desktop:col-span-5">
-              <div className="rounded-mcn-xl border border-mcn-ink-stroke-soft bg-mcn-ink-surface p-6 shadow-mcn-ink-card">
-                <div className="text-mt-down-1 text-mcn-ink-text-muted">Home charging snapshot</div>
-                <div className="mt-4 grid gap-3">
-                  {[
-                    { label: "Install time", value: "3–5 days" },
-                    { label: "Charging type", value: "AC 7.4–11kW" },
-                    { label: "Coverage", value: "1–2 EVs" },
-                    { label: "Monitoring", value: "App + Alerts" },
-                  ].map((item) => (
-                    <div
-                      key={item.label}
-                      className="flex items-center justify-between rounded-mcn border border-mcn-ink-stroke-soft bg-mcn-ink-glass px-4 py-3"
-                    >
-                      <span className="text-mt-down-1 text-mcn-ink-text-secondary">{item.label}</span>
-                      <span className="font-mono text-mt-down-1 text-mcn-ink-text-primary">{item.value}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <SecondScroll />
 
       {/* EV Charging App */}
       <section id="ev-charging-app" className="min-h-screen bg-white text-mcn-text-primary flex items-center">

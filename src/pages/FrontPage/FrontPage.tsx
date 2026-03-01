@@ -12,14 +12,20 @@ const PLAYSTORE_URL =
 const APPSTORE_URL =
   "https://apps.apple.com/in/app/1c-ev-charging/id6478754214";
 
-
 /* -------- Social Sidebar -------- */
 function SocialSidebar() {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const onScroll = () => {
-      setVisible(window.scrollY < window.innerHeight);
+      // Hide when the second scroll section enters the viewport
+      const secondSection = document.getElementById("ev-home-charging");
+      if (secondSection) {
+        const rect = secondSection.getBoundingClientRect();
+        setVisible(rect.top > window.innerHeight * 0.5);
+      } else {
+        setVisible(window.scrollY < window.innerHeight * 0.75);
+      }
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -28,7 +34,10 @@ function SocialSidebar() {
   return (
     <div
       className="fixed right-0 top-0 h-screen w-[128px] z-[55] hidden xl:flex flex-col transition-opacity duration-300"
-      style={{ opacity: visible ? 1 : 0, pointerEvents: visible ? "auto" : "none" }}
+      style={{
+        opacity: visible ? 1 : 0,
+        pointerEvents: visible ? "auto" : "none",
+      }}
     >
       {/* Black section – extends behind navbar */}
       <div className="bg-[#1A1A1A]" style={{ height: 284 }} />
@@ -281,12 +290,11 @@ function AppStoreBadge() {
 export default function FrontPage() {
   return (
     <div className="bg-white">
-      {/* Hero viewport – sidebar and button are scoped here */}
+      {/* Social Sidebar – outside hero so overflow-hidden doesn't affect it */}
+      <SocialSidebar />
+
+      {/* Hero viewport */}
       <div className="relative min-h-screen overflow-hidden">
-        {/* Social Sidebar */}
-        <SocialSidebar />
-
-
         {/* Hero Section */}
         <section className="relative flex items-center min-h-[calc(100vh-80px)] xl:pr-[128px]">
           <div className="w-full max-w-[1312px] mx-auto px-10 py-20">
@@ -366,7 +374,7 @@ export default function FrontPage() {
         </section>
       </div>
 
-      {/* Remaining sections from the original home page */}
+      {/* Remaining sections */}
       <HomeSchemaPage hideHero />
     </div>
   );
