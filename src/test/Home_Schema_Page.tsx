@@ -3,6 +3,7 @@ import SecondScroll from "../pages/FrontPage/SecondScroll";
 import ThirdScroll from "../pages/FrontPage/ThirdScroll";
 import Home_SectionD_Business from "../pages/Home/Home_SectionD_Business";
 import FifthScroll from "../pages/FrontPage/FifthScroll";
+import SixthScroll from "../pages/FrontPage/SixthScroll";
 import {
   ArrowRight,
   BatteryCharging,
@@ -246,61 +247,7 @@ export default function Home_Schema_Page({ hideHero = false }: { hideHero?: bool
       <FifthScroll />
 
       {/* Exclusive Membership */}
-      <section
-        id="exclusive-membership"
-        className="relative min-h-screen overflow-hidden flex items-center"
-      >
-        <div className="pointer-events-none absolute inset-0 bg-[#070607]" />
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(900px_520px_at_20%_10%,rgba(255,215,110,0.12),transparent_60%),radial-gradient(900px_520px_at_80%_20%,rgba(255,180,0,0.10),transparent_62%)]" />
-        <div className="pointer-events-none absolute inset-0 [background-image:linear-gradient(to_right,rgba(255,215,110,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,215,110,0.06)_1px,transparent_1px)] [background-size:64px_64px] opacity-[0.08]" />
-
-        <div className="relative z-10 container mx-auto px-4 md:px-6 py-20 md:py-24">
-          <div className="mx-auto max-w-4xl">
-            <div className="relative overflow-hidden rounded-mcn-xl border border-[rgba(255,215,110,0.28)] bg-[linear-gradient(135deg,rgba(17,14,10,0.96),rgba(8,7,6,0.98))] p-8 md:p-10 shadow-[0_22px_70px_rgba(0,0,0,0.55)]">
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_60%_at_20%_20%,rgba(255,215,110,0.18),transparent_60%)]" />
-              <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-[rgba(255,215,110,0.18)] blur-3xl" />
-
-              <div className="relative text-center">
-                <div className="inline-flex items-center rounded-full border border-[rgba(255,215,110,0.35)] bg-[rgba(255,215,110,0.10)] px-3 py-1 text-mt-down-1 text-[rgba(255,215,110,0.95)]">
-                  Exclusive Membership
-                </div>
-                <h2 className="mt-5 font-heading text-pf-up-4 text-[rgba(255,232,173,0.98)]">
-                  Become an Elite Member
-                </h2>
-                <p className="mt-4 text-mt-up-1 text-[rgba(255,215,110,0.78)]">
-                  Premium perks, priority access, and better savings every time you charge.
-                </p>
-
-                <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                  {[
-                    "Charging Discounts",
-                    "Charging Pass",
-                    "Access to Premium Stations",
-                    "Points on Each Charge",
-                    "Discount on Hardware",
-                  ].map((item) => (
-                    <div
-                      key={item}
-                      className="rounded-mcn-lg border border-[rgba(255,215,110,0.22)] bg-[rgba(255,215,110,0.06)] px-5 py-3 text-mt-base text-[rgba(255,215,110,0.86)]"
-                    >
-                      {item}
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-7">
-                  <a
-                    href="/plans-offers"
-                    className="inline-flex items-center justify-center rounded-mcn-lg px-6 py-3 font-semibold text-[#1a1200] bg-[linear-gradient(135deg,#FFD36A,#FFB400)] shadow-[0_18px_60px_rgba(255,180,0,0.35)] transition hover:-translate-y-[1px]"
-                  >
-                    Get Massive Membership
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <SixthScroll />
     </div>
   );
 }
