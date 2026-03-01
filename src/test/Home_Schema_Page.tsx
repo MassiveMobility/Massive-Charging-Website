@@ -2,6 +2,7 @@ import React from "react";
 import SecondScroll from "../pages/FrontPage/SecondScroll";
 import ThirdScroll from "../pages/FrontPage/ThirdScroll";
 import Home_SectionD_Business from "../pages/Home/Home_SectionD_Business";
+import FifthScroll from "../pages/FrontPage/FifthScroll";
 import {
   ArrowRight,
   BatteryCharging,
@@ -242,59 +243,7 @@ export default function Home_Schema_Page({ hideHero = false }: { hideHero?: bool
       <Home_SectionD_Business />
 
       {/* EV Charging Guide */}
-      <section id="ev-charging-guide" className="min-h-screen bg-white text-mcn-text-primary flex items-center">
-        <div className="container mx-auto px-4 md:px-6 py-20 md:py-24">
-          <div className="flex flex-col gap-10 lg:flex-row lg:items-center">
-            <div className="lg:flex-1">
-              <div className="inline-flex items-center rounded-full border border-mcn-stroke-soft bg-white/60 px-3 py-1 text-mt-down-1 text-mcn-text-muted">
-                2W, 3W, 4W
-              </div>
-              <h2 className="mt-5 font-heading text-pf-up-4">Own an EV or Planning to Buy One?</h2>
-              <p className="mt-4 text-mt-up-1 text-mcn-text-secondary">
-                Confused about Charging Cost & Required Infrastructure?
-              </p>
-              <p className="mt-3 text-mt-base text-mcn-text-faint">
-                Get Detailed Charging Guide for your Vehicles
-              </p>
-
-              <div className="mt-4 flex flex-wrap gap-2">
-                {["Costs", "Infrastructure", "Charging Types", "Best Practices"].map((t) => (
-                  <span
-                    key={t}
-                    className="rounded-pill border border-mcn-stroke-soft bg-white/60 px-3 py-1 text-mt-down-1 text-mcn-text-muted"
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
-
-              <div className="mt-7">
-                <a
-                  href="/charging-guide"
-                  className="inline-flex items-center justify-center rounded-mcn-lg bg-mcn-red px-5 py-2.5 text-white shadow-mcn-card transition-mcn hover:bg-mcn-red-hover"
-                >
-                  Explore Charging Guide
-                </a>
-              </div>
-            </div>
-
-            <div className="lg:w-[420px]">
-              <div className="rounded-mcn-xl border border-mcn-stroke-soft bg-white/70 p-6 shadow-mcn-card text-center">
-                <div className="text-mt-down-1 text-mcn-text-muted">Guide snapshot</div>
-                <div className="mt-4 rounded-mcn border border-mcn-stroke-soft bg-white/80 px-4 py-4">
-                  <div className="text-mt-base text-mcn-text-primary">Charging Guide</div>
-                  <div className="mt-1 text-mt-down-1 text-mcn-text-muted">
-                    Practical checklists and cost planning for new EV owners.
-                  </div>
-                </div>
-                <div className="mt-3">
-                  <OpenBookIconSVG />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FifthScroll />
 
       {/* Exclusive Membership */}
       <section
