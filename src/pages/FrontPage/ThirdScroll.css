@@ -108,14 +108,20 @@
 
 .third-scroll__hand-bg {
   position: absolute;
-  width: 550px;
-  height: 550px;
+  width: 600px;
+  height: 500px;
   border-radius: 0;
-  background: radial-gradient(ellipse at center, rgba(229, 0, 0, 0.10) 0%, rgba(229, 0, 0, 0.05) 40%, rgba(229, 0, 0, 0.02) 70%, transparent 100%);
+  background:
+    radial-gradient(ellipse 60% 50% at 35% 45%, rgba(229, 0, 0, 0.20) 0%, transparent 70%),
+    radial-gradient(ellipse 45% 55% at 65% 35%, rgba(229, 0, 0, 0.15) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 40% at 50% 65%, rgba(229, 0, 0, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 35% 45% at 25% 30%, rgba(229, 0, 0, 0.10) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 35% at 70% 60%, rgba(229, 0, 0, 0.12) 0%, transparent 60%);
   top: 50%;
   left: 40%;
   transform: translate(-50%, -50%);
   z-index: 1;
+  filter: blur(30px);
 }
 
 .third-scroll__hand {
@@ -146,13 +152,13 @@
 }
 
 .third-scroll__float-box--start {
-  top: 8%;
-  left: 8%;
+  top: 16%;
+  left: 12%;
 }
 
 .third-scroll__float-box--pay {
-  top: 6%;
-  right: -6%;
+  top: 14%;
+  right: -2%;
 }
 
 .third-scroll__float-box--stop {
@@ -161,8 +167,8 @@
 }
 
 .third-scroll__float-box--track {
-  bottom: 14%;
-  right: -8%;
+  bottom: 22%;
+  right: -2%;
 }
 
 /* ─── Horizontal red divider line ─── */

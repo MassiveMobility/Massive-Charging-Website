@@ -341,7 +341,7 @@ export default function FrontPage() {
                 </p>
 
                 {/* CTA Buttons */}
-                <div className="flex items-center gap-4 flex-wrap">
+                <div className="flex items-center gap-5 flex-wrap">
                   <FrontPageButton
                     variant="primary"
                     icon={<Search size={18} />}

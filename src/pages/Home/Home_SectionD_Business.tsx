@@ -74,14 +74,14 @@ const styles = {
     display: "inline-flex",
     alignItems: "center",
     gap: 8,
-    borderRadius: 28,
+    borderRadius: 10.72,
     border: "1px solid #ddd",
-    padding: "8px 20px",
+    padding: "12px 28px",
     fontSize: 14,
     fontWeight: 600,
     color: "#131313",
     marginTop: 20,
-    marginLeft: 12,
+    marginLeft: -4, // Slight left offset to align with button
   },
   badgeIcon: {
     width: 18,
@@ -100,6 +100,7 @@ const styles = {
   card: {
     position: "absolute" as const,
     width: 190,
+    zIndex: 1,
     backgroundColor: "transparent",
     borderRadius: 0,
     padding: 0,
@@ -123,27 +124,28 @@ const styles = {
   connector: {
     position: "absolute" as const,
     pointerEvents: "none" as const,
+    zIndex: 10,
   },
 };
 
 /* ─── Card positions (matching the Figma diamond/flow layout) ─── */
 
 const cardPositions = {
-  siteFeasibility: { top: 139, left: 32 },
+  siteFeasibility: { top: 112, left: 65 },
   operations: { top: -5, left: 220 },
-  chargerHardware: { top: 319, left: 140 },
-  billing: { top: 162, left: 310 },
+  chargerHardware: { top: 254, left: 165 },
+  billing: { top: 163, left: 320 },
 };
 
 /* ─── Connector positions (endpoints touching card edges) ─── */
 
 const connectorPositions = {
   /* Connector 1 (red): Site Feasibility top-right → Operations bottom-left */
-  line1: { top: 60, left: 118, width: 90, height: 66 },
+  line1: { top: 60, left: 158, width: 90, height: 66 },
   /* Connector 2 (red): Operations right → Billing top-left */
-  line2: { top: 118, left: 310, width: 90, height: 66 },
+  line2: { top: 118, left: 310, width: 98, height: 66 },
   /* Connector 3 (gray): Site Feasibility bottom → Charger Hardware top */
-  line3: { top: 210, left: 166, width: 90, height: 86 },
+  line3: { top: 180, left: 206, width: 90, height: 86 },
 };
 
 /* ─── Feature Card component ─── */
