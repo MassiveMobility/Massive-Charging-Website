@@ -15,7 +15,7 @@ import Home_Page from "./pages/Home/Home_Page";
 import ThemeSamplerPage from "./pages/ThemeSamplerPage";
 import EVJourneyReport from "./chapters/urltest/EVJourneyReport";
 import PinkTestPage from "./chapters/urltest/PinkTestPage";
-import UPIChargingPage from "./chapters/urltest/UPIChargingPage";
+import UpiChargingPage from "./pages/UpiCharging/UpiChargingPage";
 import PricingPage from "./chapters/urltest/PricingPage";
 import TestHome from "./test/Home";
 import HomeSchemaPage from "./test/Home_Schema_Page";
@@ -191,7 +191,7 @@ function App() {
               <Route path="/front-page" element={<FrontPage />} />
               <Route path="/find-chargers" element={<FrontPage />} />
               <Route path="/pinktest" element={<PinkTestPage />} />
-              <Route path="/upi-charging" element={<UPIChargingPage />} />
+              <Route path="/upi-charging" element={<UpiChargingPage />} />
               <Route path="/ev-charging-shop" element={<EVChargingShopComingSoon />} />
               <Route path="/plans-offers" element={<PricingPage />} />
               <Route path="/EV-Trip-Report" element={<EVJourneyReport />} />
