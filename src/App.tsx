@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState, createContext, useContext } from "react";
 import "./index.css"; // ← This line is CRITICAL
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
 
 /* Layout Molecules */
 import Navbar from "./components/layout/Navbar";
@@ -172,8 +172,8 @@ function App() {
 
           <main style={{ flex: 1 }}>
             <Routes>
-              {/* --- MAIN HOME PAGE --- */}
-              <Route path="/" element={<FrontPage />} />
+              {/* --- DEFAULT: redirect / to /find-chargers --- */}
+              <Route path="/" element={<Navigate to="/find-chargers" replace />} />
               <Route path="/home-legacy" element={<Home_Page />} />
               <Route path="/themesampler" element={<ThemeSamplerPage />} />
               <Route path="/temp-home" element={<Home_Page />} />
@@ -188,6 +188,8 @@ function App() {
 
               {/* --- EXISTING ROUTES --- */}
               <Route path="/ev-charging-guide" element={<EVChargingGuidePage />} />
+              <Route path="/front-page" element={<FrontPage />} />
+              <Route path="/find-chargers" element={<FrontPage />} />
               <Route path="/pinktest" element={<PinkTestPage />} />
               <Route path="/upi-charging" element={<UPIChargingPage />} />
               <Route path="/ev-charging-shop" element={<EVChargingShopComingSoon />} />
