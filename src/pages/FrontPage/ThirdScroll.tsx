@@ -100,6 +100,11 @@ export default function ThirdScroll() {
               alt="Hand holding 1C Charging App"
               className="third-scroll__hand"
             />
+            <img
+              src="/mobile_ke_andar.svg"
+              alt="App screen"
+              className="third-scroll__phone-screen"
+            />
           </div>
 
           <div className="third-scroll__float-box third-scroll__float-box--start">

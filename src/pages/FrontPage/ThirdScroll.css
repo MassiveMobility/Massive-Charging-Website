@@ -112,11 +112,31 @@
   height: 500px;
   border-radius: 0;
   background:
-    radial-gradient(ellipse 60% 50% at 35% 45%, rgba(229, 0, 0, 0.20) 0%, transparent 70%),
-    radial-gradient(ellipse 45% 55% at 65% 35%, rgba(229, 0, 0, 0.15) 0%, transparent 65%),
-    radial-gradient(ellipse 50% 40% at 50% 65%, rgba(229, 0, 0, 0.18) 0%, transparent 60%),
-    radial-gradient(ellipse 35% 45% at 25% 30%, rgba(229, 0, 0, 0.10) 0%, transparent 55%),
-    radial-gradient(ellipse 40% 35% at 70% 60%, rgba(229, 0, 0, 0.12) 0%, transparent 60%);
+    radial-gradient(
+      ellipse 60% 50% at 35% 45%,
+      rgba(229, 0, 0, 0.2) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 45% 55% at 65% 35%,
+      rgba(229, 0, 0, 0.15) 0%,
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse 50% 40% at 50% 65%,
+      rgba(229, 0, 0, 0.18) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 35% 45% at 25% 30%,
+      rgba(229, 0, 0, 0.1) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 40% 35% at 70% 60%,
+      rgba(229, 0, 0, 0.12) 0%,
+      transparent 60%
+    );
   top: 50%;
   left: 40%;
   transform: translate(-50%, -50%);
@@ -129,6 +149,18 @@
   height: auto;
   position: relative;
   z-index: 2;
+}
+
+.third-scroll__phone-screen {
+  position: absolute;
+  top: 1.5%;
+  left: 34.5%;
+  transform: translateX(-50%);
+  width: 52%;
+  height: auto;
+  z-index: 3;
+  border-radius: 20px;
+  pointer-events: none;
 }
 
 /* Floating boxes around the hand */
