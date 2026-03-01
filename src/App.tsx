@@ -27,6 +27,7 @@ import EVChargingGuide_Dashboard from "./Querycode/EVChargingGuide_Dashboard";
 import EVCarsCatalogue from "./Querycode/EVCarsCatalogue";
 import ChargingGuidePage from "./Querycode/ChargingGuidePage";
 import EVChargingShopComingSoon from "./pages/EVChargingShopComingSoon";
+import EVChargingGuidePage_New from "./pages/EVChargingGuide/EVChargingGuidePage";
 
 import StationBizHomePage from "./pages/Station_Biz_HomePage";
 import EvChargingStationHomePage from "./pages/Charging-Station_Business/ev-charging-station-home-page";
@@ -187,7 +188,6 @@ function App() {
               <Route path="/fresh" element={<ChargingBusinessFreshHome />} />
 
               {/* --- EXISTING ROUTES --- */}
-              <Route path="/ev-charging-guide" element={<EVChargingGuidePage />} />
               <Route path="/front-page" element={<FrontPage />} />
               <Route path="/find-chargers" element={<FrontPage />} />
               <Route path="/pinktest" element={<PinkTestPage />} />
@@ -196,24 +196,7 @@ function App() {
               <Route path="/plans-offers" element={<PricingPage />} />
               <Route path="/EV-Trip-Report" element={<EVJourneyReport />} />
 
-              {/* 🔄 QUERY PAGES (still receiving props, but also available via context everywhere) */}
-              <Route
-                path="/charging-guide"
-                element={<EVChargingGuide_Dashboard database={vehicleGuideData} />}
-              />
-              <Route
-                path="/charging-guide/ev-cars"
-                element={<EVCarsCatalogue database={vehicleGuideData} />}
-              />
-              <Route
-                path="/charging-guide/:slug"
-                element={
-                  <ChargingGuidePage
-                    vehicleGuideData={vehicleGuideData}
-                    coreMessageBlockData={coreMessageBlockData}
-                  />
-                }
-              />
+              <Route path="/charging-guide" element={<EVChargingGuidePage_New />} />
 
               {/* Station biz */}
               <Route path="/charging-station-business-legacy" element={<StationBizHomePage />} />

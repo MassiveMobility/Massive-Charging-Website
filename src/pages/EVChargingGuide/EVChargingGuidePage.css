@@ -1,0 +1,106 @@
+/* ------------------------------------------------------------------ */
+/*  EV Charging Guide Page                                             */
+/* ------------------------------------------------------------------ */
+
+.ev-guide {
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+.ev-guide__hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 80px);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-image: url('/Group 27808.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.ev-guide__container {
+  width: 100%;
+  max-width: 1312px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Badge */
+.ev-guide__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 9999px;
+  border: 1px solid #e5e7eb;
+  padding: 3px 10px;
+  margin-bottom: 24px;
+}
+
+.ev-guide__badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #41BA15;
+}
+
+.ev-guide__badge-text {
+  font-family: 'TT Fors Trial', Inter, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.003em;
+  color: #131313;
+}
+
+/* Heading */
+.ev-guide__heading {
+  font-family: 'ITC Avant Garde Gothic Std', 'Public Sans', sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 72px;
+  letter-spacing: -0.006em;
+  color: #131313;
+  margin: 0 0 24px;
+}
+
+.ev-guide__heading-accent {
+  color: #E50000;
+}
+
+/* Subtitle */
+.ev-guide__subtitle {
+  font-family: 'TT Fors Trial', Inter, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0.002em;
+  color: #505050;
+  max-width: 620px;
+  margin: 0 0 32px;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 768px) {
+  .ev-guide__container {
+    padding: 60px 20px;
+  }
+
+  .ev-guide__heading {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .ev-guide__subtitle {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
