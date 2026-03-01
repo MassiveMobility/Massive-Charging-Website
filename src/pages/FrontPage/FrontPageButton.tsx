@@ -12,7 +12,7 @@ interface FrontPageButtonProps {
 }
 
 const sharedStyles =
-  "items-center gap-2 rounded-full px-6 py-3 text-[16px] leading-[26px] tracking-[0.002em] transition-colors cursor-pointer";
+  "items-center gap-2 rounded-[10.72px] px-6 py-3 text-[16px] leading-[26px] tracking-[0.002em] transition-colors cursor-pointer";
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary: "bg-[#E50000] text-white hover:bg-[#c20000]",

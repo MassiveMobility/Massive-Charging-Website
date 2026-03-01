@@ -60,7 +60,7 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     padding: "12px 28px",
-    borderRadius: 28,
+    borderRadius: 10.72,
     backgroundColor: "#E50000",
     color: "#ffffff",
     fontSize: 15,
