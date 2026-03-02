@@ -15,9 +15,8 @@
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
-  max-width: 1312px;
   margin: 0 auto;
-  padding: 80px 40px 0;
+  padding: 80px 80px 0;
   min-height: 520px;
 }
 
@@ -86,121 +85,16 @@
   height: 18px;
 }
 
-/* ─── Right column: hand + floating boxes ─── */
+/* ─── Right column ─── */
 .third-scroll__right {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 100%;
-  min-height: 480px;
-  overflow: visible;
-  padding-right: 0px;
-}
-
-.third-scroll__hand-wrapper {
-  position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-right: -40px;
+  align-items: flex-end;
 }
 
-.third-scroll__hand-bg {
-  position: absolute;
-  width: 600px;
-  height: 500px;
-  border-radius: 0;
-  background:
-    radial-gradient(
-      ellipse 60% 50% at 35% 45%,
-      rgba(229, 0, 0, 0.2) 0%,
-      transparent 70%
-    ),
-    radial-gradient(
-      ellipse 45% 55% at 65% 35%,
-      rgba(229, 0, 0, 0.15) 0%,
-      transparent 65%
-    ),
-    radial-gradient(
-      ellipse 50% 40% at 50% 65%,
-      rgba(229, 0, 0, 0.18) 0%,
-      transparent 60%
-    ),
-    radial-gradient(
-      ellipse 35% 45% at 25% 30%,
-      rgba(229, 0, 0, 0.1) 0%,
-      transparent 55%
-    ),
-    radial-gradient(
-      ellipse 40% 35% at 70% 60%,
-      rgba(229, 0, 0, 0.12) 0%,
-      transparent 60%
-    );
-  top: 50%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  filter: blur(30px);
-}
-
-.third-scroll__hand {
-  width: 420px;
+.third-scroll__mockup {
+  width: 100%;
   height: auto;
-  position: relative;
-  z-index: 2;
-}
-
-.third-scroll__phone-screen {
-  position: absolute;
-  top: 1.5%;
-  left: 34.5%;
-  transform: translateX(-50%);
-  width: 52%;
-  height: auto;
-  z-index: 3;
-  border-radius: 20px;
-  pointer-events: none;
-}
-
-/* Floating boxes around the hand */
-.third-scroll__float-box {
-  position: absolute;
-  z-index: 3;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  background: #ffffff;
-  border: 0.6px solid #e0e0e0;
-  border-radius: 8px;
-  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
-  font-family: "TT Fors Trial", Inter, sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  color: #0c0c0c;
-  white-space: nowrap;
-}
-
-.third-scroll__float-box--start {
-  top: 16%;
-  left: 12%;
-}
-
-.third-scroll__float-box--pay {
-  top: 14%;
-  right: -2%;
-}
-
-.third-scroll__float-box--stop {
-  top: 50%;
-  left: 4%;
-}
-
-.third-scroll__float-box--track {
-  bottom: 22%;
-  right: -2%;
 }
 
 /* ─── Horizontal red divider line ─── */
@@ -217,9 +111,8 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 24px;
-  max-width: 1312px;
   margin: 0 auto;
-  padding: 40px 40px 60px;
+  padding: 40px 80px 60px;
 }
 
 .third-scroll__feature-card {
@@ -262,13 +155,6 @@
     min-height: auto;
   }
 
-  .third-scroll__right {
-    min-height: 380px;
-  }
-
-  .third-scroll__hand {
-    width: 320px;
-  }
 
   .third-scroll__features {
     grid-template-columns: repeat(3, 1fr);
@@ -287,12 +173,23 @@
     gap: 16px;
   }
 
-  .third-scroll__hand {
-    width: 260px;
-  }
 
-  .third-scroll__float-box {
-    font-size: 12px;
-    padding: 6px 12px;
+}
+
+@media (min-width: 1960px) {
+  .third-scroll__top {
+    padding: 80px 240px 0;
+  }
+  .third-scroll__features {
+    padding: 40px 240px 60px;
+  }
+}
+
+@media (min-width: 2400px) {
+  .third-scroll__top {
+    padding: 80px 480px 0;
+  }
+  .third-scroll__features {
+    padding: 40px 480px 60px;
   }
 }

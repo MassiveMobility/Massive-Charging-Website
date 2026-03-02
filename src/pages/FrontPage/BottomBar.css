@@ -270,3 +270,27 @@
     font-size: 16px;
   }
 }
+
+@media (min-width: 1960px) {
+  .bottom-bar__main {
+    padding: 80px 240px 0 240px;
+  }
+  .bottom-bar__divider-horizontal {
+    margin: 0 240px;
+  }
+  .bottom-bar__footer {
+    padding: 24px 240px;
+  }
+}
+
+@media (min-width: 2400px) {
+  .bottom-bar__main {
+    padding: 80px 480px 0 480px;
+  }
+  .bottom-bar__divider-horizontal {
+    margin: 0 480px;
+  }
+  .bottom-bar__footer {
+    padding: 24px 480px;
+  }
+}

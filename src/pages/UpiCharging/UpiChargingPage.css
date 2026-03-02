@@ -15,9 +15,20 @@
 
 .upi-charging__container {
   width: 100%;
-  max-width: 1312px;
   margin: 0 auto;
-  padding: 80px 40px;
+  padding: 80px 80px;
+}
+
+@media (min-width: 1960px) {
+  .upi-charging__container {
+    padding: 80px 240px;
+  }
+}
+
+@media (min-width: 2400px) {
+  .upi-charging__container {
+    padding: 80px 480px;
+  }
 }
 
 .upi-charging__grid {

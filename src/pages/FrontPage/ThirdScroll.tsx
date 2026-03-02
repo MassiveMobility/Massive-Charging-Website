@@ -91,34 +91,13 @@ export default function ThirdScroll() {
           </a>
         </div>
 
-        {/* Right Column – Hand with floating boxes */}
+        {/* Right Column – App mockup */}
         <div className="third-scroll__right">
-          <div className="third-scroll__hand-wrapper">
-            <div className="third-scroll__hand-bg" />
-            <img
-              src="/Hand.svg"
-              alt="Hand holding 1C Charging App"
-              className="third-scroll__hand"
-            />
-            <img
-              src="/mobile_ke_andar.svg"
-              alt="App screen"
-              className="third-scroll__phone-screen"
-            />
-          </div>
-
-          <div className="third-scroll__float-box third-scroll__float-box--start">
-            Start session
-          </div>
-          <div className="third-scroll__float-box third-scroll__float-box--pay">
-            Pay securely
-          </div>
-          <div className="third-scroll__float-box third-scroll__float-box--stop">
-            Stop session
-          </div>
-          <div className="third-scroll__float-box third-scroll__float-box--track">
-            Track usage
-          </div>
+          <img
+            src="/Group 27824.svg"
+            alt="1C Charging App"
+            className="third-scroll__mockup"
+          />
         </div>
       </div>
 

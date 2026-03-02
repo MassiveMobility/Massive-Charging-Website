@@ -30,7 +30,7 @@ export default function SecondScroll() {
 
       {/* ─── Content ─── */}
       <div className="relative z-10 h-full min-h-screen flex items-center">
-        <div className="w-full max-w-[1312px] mx-auto px-10">
+        <div className="w-full mx-auto px-[80px] min-[1960px]:px-[240px] min-[2400px]:px-[480px]">
           <div className="grid grid-cols-1 xl:grid-cols-12 gap-8 items-center">
             {/* ════ LEFT COLUMN (5 cols) ════ */}
             <div className="xl:col-span-5 flex flex-col">
@@ -123,97 +123,13 @@ export default function SecondScroll() {
               </div>
             </div>
 
-            {/* ════ RIGHT COLUMN (7 cols) – 4×2 feature grid ════ */}
-            <div className="xl:col-span-7 relative xl:translate-x-20">
-              {/* Vertical lines at column boundaries (0%, 25%, 50%, 75%) – bleed top & bottom */}
-              {[0, 25, 50, 75].map((pct) => (
-                <div
-                  key={pct}
-                  className="absolute hidden xl:block pointer-events-none z-20"
-                  style={{
-                    left: `${pct}%`,
-                    top: "-50vh",
-                    bottom: "-50vh",
-                    width: "0.4px",
-                    backgroundColor: "#F16363",
-                  }}
-                />
-              ))}
-              {/* Horizontal middle line */}
-              <div
-                className="absolute hidden xl:block pointer-events-none z-20"
-                style={{
-                  top: "42.5%",
-                  left: 0,
-                  right: 0,
-                  height: "0.4px",
-                  backgroundColor: "#F16363",
-                }}
+            {/* ════ RIGHT COLUMN (7 cols) ════ */}
+            <div className="xl:col-span-7 flex items-center justify-center">
+              <img
+                src="/Group 27821.svg"
+                alt="EV Home Charger"
+                style={{ width: "100%", height: "auto" }}
               />
-
-              <div
-                className="grid relative z-10"
-                style={{
-                  gridTemplateColumns: "repeat(4, 1fr)",
-                  gridTemplateRows: "0.85fr 1.15fr",
-                  height: "420px",
-                }}
-              >
-                {/* ── Row 1 ── */}
-                <div
-                  className="overflow-hidden"
-                  style={{ borderTop: "0.1px solid #F16363" }}
-                >
-                  <img
-                    src="/InstallTime.svg"
-                    alt="Install time – 3-5 days"
-                    className="w-full h-full object-fill"
-                  />
-                </div>
-                <div className="flex items-center justify-center">
-                  <span style={featureTextStyle}>Safe</span>
-                </div>
-                <div className="w-full overflow-hidden flex items-center justify-center">
-                  <img
-                    src="/Covergage.svg"
-                    alt="Coverage – 1-2 EVs"
-                    style={{ width: "110%", height: "100%" }}
-                  />
-                </div>
-                <div className="flex items-center justify-center">
-                  <span style={{ ...featureTextStyle, fontSize: "24px" }}>
-                    Cost-Effective
-                  </span>
-                </div>
-
-                {/* ── Row 2 ── */}
-                <div className="flex items-center justify-center">
-                  <span style={featureTextStyle}>Smart</span>
-                </div>
-                <div className="relative w-full h-full overflow-hidden">
-                  <img
-                    src="/chargingType.svg"
-                    alt="Charging type – AC 7.4-11KW"
-                    className="absolute"
-                    style={{
-                      // top: "-5%",
-                      // left: "-8%",
-                      width: "116%",
-                      // height: "100%",
-                      objectFit: "fill",
-                    }}
-                  />
-                </div>
-                <div />
-                <div className="w-full h-full" style={{}}>
-                  <img
-                    src="/Monitoring.svg"
-                    alt="Monitoring – App+ Alerts"
-                    className="w-full"
-                    style={{ objectFit: "fill" }}
-                  />
-                </div>
-              </div>
             </div>
           </div>
         </div>

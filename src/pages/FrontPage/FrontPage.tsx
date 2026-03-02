@@ -46,14 +46,16 @@ function SocialSidebar() {
       <div className="bg-[#E50000] flex-1 flex flex-col items-center justify-center gap-[32px] px-[52px] py-[66px]">
         {/* Search */}
         <a
-          href="#"
+          href="/charging-guide"
           className="text-white hover:text-gray-200 transition-colors"
         >
           <Search size={24} strokeWidth={1.5} />
         </a>
         {/* Facebook */}
         <a
-          href="#"
+          href="https://www.facebook.com/massivecharging"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-white hover:text-gray-200 transition-colors"
         >
           <svg
@@ -71,7 +73,9 @@ function SocialSidebar() {
         </a>
         {/* X (Twitter) */}
         <a
-          href="#"
+          href="https://x.com/massivecharging"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-white hover:text-gray-200 transition-colors"
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -80,7 +84,9 @@ function SocialSidebar() {
         </a>
         {/* Instagram */}
         <a
-          href="#"
+          href="https://www.instagram.com/massivecharging"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-white hover:text-gray-200 transition-colors"
         >
           <svg
@@ -100,7 +106,9 @@ function SocialSidebar() {
         </a>
         {/* YouTube */}
         <a
-          href="#"
+          href="https://www.youtube.com/@massivecharging"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-white hover:text-gray-200 transition-colors"
         >
           <svg
@@ -297,7 +305,7 @@ export default function FrontPage() {
       <div className="relative min-h-screen overflow-hidden">
         {/* Hero Section */}
         <section className="relative flex items-center min-h-[calc(100vh-80px)] xl:pr-[128px]">
-          <div className="w-full max-w-[1312px] mx-auto px-10 py-20">
+          <div className="w-full mx-auto px-[80px] py-20 min-[1960px]:px-[240px] min-[2400px]:px-[480px]">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Left Column */}
               <div className="flex flex-col gap-6">

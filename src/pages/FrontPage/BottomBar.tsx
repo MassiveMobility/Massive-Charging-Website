@@ -2,17 +2,17 @@ import React from "react";
 import "./BottomBar.css";
 
 const SOCIAL_LINKS = [
-  { label: "Facebook", href: "#" },
-  { label: "Instagram", href: "#" },
-  { label: "Twitter", href: "#" },
-  { label: "LinkedIn", href: "#" },
+  { label: "Facebook", href: "https://www.facebook.com/massivecharging" },
+  { label: "Instagram", href: "https://www.instagram.com/massivecharging" },
+  { label: "Twitter", href: "https://x.com/massivecharging" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/massivecharging" },
 ];
 
 const QUICK_LINKS = [
   { label: "Home", href: "/" },
-  { label: "About Us", href: "#" },
-  { label: "Services", href: "#" },
-  { label: "Contact", href: "#" },
+  { label: "About Us", href: "/ev-charging-station-business" },
+  { label: "Services", href: "/find-chargers" },
+  { label: "Contact", href: "/get-chargers" },
 ];
 
 export default function BottomBar() {
@@ -43,6 +43,8 @@ export default function BottomBar() {
               <a
                 key={link.label}
                 href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bottom-bar__column-link"
               >
                 {link.label}
@@ -77,9 +79,9 @@ export default function BottomBar() {
             Experience charging made simple. Find, manage, and optimize your
             electric journey all from one powerful app.
           </p>
-          <button className="bottom-bar__cta-btn">
+          <a href="https://play.google.com/store/apps/details?id=in.one.charging&hl=en_IN" target="_blank" rel="noopener noreferrer" className="bottom-bar__cta-btn" style={{ textDecoration: "none" }}>
             <span className="bottom-bar__cta-text">Get Started Now</span>
-          </button>
+          </a>
         </div>
       </div>
 

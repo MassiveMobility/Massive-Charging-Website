@@ -2,6 +2,8 @@ import React from "react";
 
 /* ─── styles (kept separate for easy editing) ─── */
 
+// 80,240, 480
+
 const styles = {
   section: {
     position: "relative" as const,
@@ -10,9 +12,7 @@ const styles = {
     padding: "80px 0",
   },
   container: {
-    maxWidth: 1280,
     margin: "0 auto",
-    padding: "0 40px",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -87,91 +87,14 @@ const styles = {
     width: 18,
     height: 18,
   },
-
-  /* ── Right column (card flow diagram) ── */
-  right: {
-    flex: "1 1 500px",
-    minWidth: 440,
-    position: "relative" as const,
-    height: 520,
-  },
-
-  /* Feature cards */
-  card: {
-    position: "absolute" as const,
-    width: 190,
-    zIndex: 1,
-    backgroundColor: "transparent",
-    borderRadius: 0,
-    padding: 0,
-    textAlign: "center" as const,
-    boxShadow: "none",
-  },
-  cardIcon: {
-    width: 160,
-    height: 160,
-    margin: "0 auto 12px",
-    display: "block",
-  },
-  cardLabel: {
-    fontSize: 14,
-    fontWeight: 600,
-    color: "#131313",
-    lineHeight: 1.4,
-  },
-
-  /* Connector SVGs */
-  connector: {
-    position: "absolute" as const,
-    pointerEvents: "none" as const,
-    zIndex: 10,
-  },
 };
-
-/* ─── Card positions (matching the Figma diamond/flow layout) ─── */
-
-const cardPositions = {
-  siteFeasibility: { top: 112, left: 65 },
-  operations: { top: -5, left: 220 },
-  chargerHardware: { top: 254, left: 165 },
-  billing: { top: 163, left: 320 },
-};
-
-/* ─── Connector positions (endpoints touching card edges) ─── */
-
-const connectorPositions = {
-  /* Connector 1 (red): Site Feasibility top-right → Operations bottom-left */
-  line1: { top: 60, left: 158, width: 90, height: 66 },
-  /* Connector 2 (red): Operations right → Billing top-left */
-  line2: { top: 118, left: 310, width: 98, height: 66 },
-  /* Connector 3 (gray): Site Feasibility bottom → Charger Hardware top */
-  line3: { top: 180, left: 206, width: 90, height: 86 },
-};
-
-/* ─── Feature Card component ─── */
-
-function FeatureCard({
-  icon,
-  label,
-  style,
-}: {
-  icon: string;
-  label: string;
-  style: React.CSSProperties;
-}) {
-  return (
-    <div style={{ ...styles.card, ...style }}>
-      <img src={icon} alt={label} style={styles.cardIcon} />
-    </div>
-  );
-}
 
 /* ─── Main Section ─── */
 
 export default function Home_SectionD_Business() {
   return (
     <section style={styles.section}>
-      <div style={styles.container}>
+      <div className="sectiond-container" style={styles.container}>
         {/* ── LEFT ── */}
         <div style={styles.left}>
           <div style={styles.kicker}>Setup your charger and earn</div>
@@ -188,7 +111,7 @@ export default function Home_SectionD_Business() {
           </p>
 
           <div>
-            <a href="/ev-charging-station-business" style={styles.ctaButton}>
+            <a href="https://play.google.com/store/apps/details?id=in.one.charging&hl=en_IN" target="_blank" rel="noopener noreferrer" style={styles.ctaButton}>
               Get EV Charging App
             </a>
           </div>
@@ -215,75 +138,19 @@ export default function Home_SectionD_Business() {
           </div>
         </div>
 
-        {/* ── RIGHT (flow diagram) ── */}
-        <div style={styles.right}>
-          {/* Connector lines (behind cards) */}
+        {/* ── RIGHT ── */}
+        <div
+          style={{
+            flex: "1 1 500px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <img
-            src="/Connector line1.svg"
-            alt=""
-            style={{
-              ...styles.connector,
-              top: connectorPositions.line1.top,
-              left: connectorPositions.line1.left,
-              width: connectorPositions.line1.width,
-              height: connectorPositions.line1.height,
-            }}
-          />
-          <img
-            src="/Connector line2.svg"
-            alt=""
-            style={{
-              ...styles.connector,
-              top: connectorPositions.line2.top,
-              left: connectorPositions.line2.left,
-              width: connectorPositions.line2.width,
-              height: connectorPositions.line2.height,
-            }}
-          />
-          <img
-            src="/Connector line3.svg"
-            alt=""
-            style={{
-              ...styles.connector,
-              top: connectorPositions.line3.top,
-              left: connectorPositions.line3.left,
-              width: connectorPositions.line3.width,
-              height: connectorPositions.line3.height,
-            }}
-          />
-
-          {/* Feature cards */}
-          <FeatureCard
-            icon="/siteFeasibitly.svg"
-            label="Site Feasibility & Layout Planning"
-            style={{
-              top: cardPositions.siteFeasibility.top,
-              left: cardPositions.siteFeasibility.left,
-            }}
-          />
-          <FeatureCard
-            icon="/operations.svg"
-            label="Operations Dashboard & Remote Control"
-            style={{
-              top: cardPositions.operations.top,
-              left: cardPositions.operations.left,
-            }}
-          />
-          <FeatureCard
-            icon="/Chargerhardware.svg"
-            label="Charger Hardware + Installation Support"
-            style={{
-              top: cardPositions.chargerHardware.top,
-              left: cardPositions.chargerHardware.left,
-            }}
-          />
-          <FeatureCard
-            icon="/billingPayments.svg"
-            label="Billing, Payments & Settlements"
-            style={{
-              top: cardPositions.billing.top,
-              left: cardPositions.billing.left,
-            }}
+            src="/Group 27823.svg"
+            alt="EV Charging Business"
+            style={{ width: "100%", maxWidth: 520, height: "auto" }}
           />
         </div>
       </div>

@@ -6,9 +6,8 @@
 }
 
 .fifth-scroll__container {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 56px 24px;
+  padding: 56px 80px;
   width: 100%;
 }
 
@@ -169,5 +168,17 @@
   .fifth-scroll__right {
     width: 100%;
     max-width: 360px;
+  }
+}
+
+@media (min-width: 1960px) {
+  .fifth-scroll__container {
+    padding: 56px 240px;
+  }
+}
+
+@media (min-width: 2400px) {
+  .fifth-scroll__container {
+    padding: 56px 480px;
   }
 }

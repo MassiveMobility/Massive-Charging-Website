@@ -258,3 +258,15 @@
     font-size: 14px;
   }
 }
+
+@media (min-width: 1960px) {
+  .sixth-scroll {
+    padding: 80px 240px;
+  }
+}
+
+@media (min-width: 2400px) {
+  .sixth-scroll {
+    padding: 80px 480px;
+  }
+}
