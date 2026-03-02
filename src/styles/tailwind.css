@@ -16,7 +16,7 @@
 
   body {
     margin: 0;
-    background: theme(colors.mcn.bg);
+    background: #0a0a0a;
     color: theme(colors.mcn.text.primary);
   }
 

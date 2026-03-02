@@ -1,4 +1,10 @@
 import React from "react";
+import SecondScroll from "../pages/FrontPage/SecondScroll";
+import ThirdScroll from "../pages/FrontPage/ThirdScroll";
+import Home_SectionD_Business from "../pages/Home/Home_SectionD_Business";
+import FifthScroll from "../pages/FrontPage/FifthScroll";
+import SixthScroll from "../pages/FrontPage/SixthScroll";
+
 import {
   ArrowRight,
   BatteryCharging,
@@ -20,7 +26,8 @@ const APPSTORE_URL =
   "https://apps.apple.com/in/app/1c-ev-charging/id6478754214";
 
 const PLAY_BADGE_SRC = "/GetItOnGooglePlay_Badge_Web_color_English.svg";
-const APP_BADGE_SRC = "/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917 (1).svg";
+const APP_BADGE_SRC =
+  "/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917 (1).svg";
 
 type IconName =
   | "Pulse"
@@ -65,8 +72,16 @@ function IconMap({
     CreditCard: <CreditCard className={className} />,
     Users: <Zap className={className} />,
     BatteryCharging: <BatteryCharging className={className} />,
-    Rupee: <span className={`${className} inline-flex items-center justify-center`}>₹</span>,
-    Tool: <span className={`${className} inline-flex items-center justify-center`}>🛠</span>,
+    Rupee: (
+      <span className={`${className} inline-flex items-center justify-center`}>
+        ₹
+      </span>
+    ),
+    Tool: (
+      <span className={`${className} inline-flex items-center justify-center`}>
+        🛠
+      </span>
+    ),
     Monitor: <Monitor className={className} />,
     ShieldCheck: <ShieldCheck className={className} />,
   };
@@ -91,7 +106,12 @@ function StoreBadge({
       aria-label={alt}
     >
       <div className="h-10 max-w-[200px]">
-        <img src={src} alt={alt} className="h-full w-auto max-w-full object-contain" loading="lazy" />
+        <img
+          src={src}
+          alt={alt}
+          className="h-full w-auto max-w-full object-contain"
+          loading="lazy"
+        />
       </div>
     </a>
   );
@@ -100,7 +120,12 @@ function StoreBadge({
 function OpenBookIconSVG() {
   return (
     <div className="mx-auto w-full max-w-[360px]">
-      <svg viewBox="0 0 240 180" className="h-auto w-full" role="img" aria-label="Open book">
+      <svg
+        viewBox="0 0 240 180"
+        className="h-auto w-full"
+        role="img"
+        aria-label="Open book"
+      >
         <path
           d="M120 42 C98 28, 70 26, 44 34 C36 36, 32 44, 32 52 V140 C32 148, 38 154, 46 152 C72 146, 98 150, 120 162 Z"
           fill="rgba(255,255,255,0.55)"
@@ -113,7 +138,12 @@ function OpenBookIconSVG() {
           stroke="rgba(0,0,0,0.18)"
           strokeWidth="2"
         />
-        <path d="M120 42 V162" stroke="rgba(0,0,0,0.22)" strokeWidth="2" strokeLinecap="round" />
+        <path
+          d="M120 42 V162"
+          stroke="rgba(0,0,0,0.22)"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
         <path
           d="M52 64 H108 M52 80 H108 M52 96 H104 M52 112 H100"
           stroke="rgba(0,0,0,0.18)"
@@ -144,411 +174,125 @@ function DarkSectionBackdrop() {
   );
 }
 
-export default function Home_Schema_Page() {
+export default function Home_Schema_Page({
+  hideHero = false,
+}: {
+  hideHero?: boolean;
+}) {
   return (
     <div className="bg-mcn-bg text-mcn-text-primary">
       {/* Hero */}
-      <section id="hero" className="relative min-h-screen overflow-hidden bg-white flex items-center">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute -top-36 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-electric-glow-cyan blur-[140px] opacity-60" />
-          <div className="absolute -bottom-32 right-0 h-[420px] w-[420px] rounded-full bg-electric-glow-ionBlue blur-[140px] opacity-60" />
-          <div
-            className="absolute inset-0 opacity-[0.2]"
-            style={{
-              backgroundImage:
-                "linear-gradient(to right, rgba(0,0,0,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.06) 1px, transparent 1px)",
-              backgroundSize: "32px 32px",
-            }}
-          />
-        </div>
-
-        <div className="relative container mx-auto px-4 md:px-6 py-20 md:py-28">
-          <div className="grid gap-8 desktop:grid-cols-12 items-center">
-            <div className="desktop:col-span-6">
-              <div className="inline-flex items-center gap-2 rounded-full border border-mcn-stroke-soft bg-white/70 px-3 py-1 text-mt-down-1 text-mcn-text-muted">
-                <span className="inline-flex h-2.5 w-2.5 rounded-full bg-mcn-green" />
-                Charging Network Is Live
-              </div>
-
-              <h1 className="mt-4 font-heading text-pf-up-4 md:text-pf-up-5 leading-tight">
-                Find Chargers Anytime. Anywhere.
-              </h1>
-              <p className="mt-3 text-mt-base text-mcn-text-secondary">Live life at 100%</p>
-
-              <div className="mt-6 flex flex-wrap gap-3">
-                <button className="inline-flex items-center gap-2 rounded-mcn-lg bg-mcn-red px-5 py-2.5 text-white shadow-mcn-card transition-mcn hover:bg-mcn-red-hover">
-                  <Search className="h-5 w-5" />
-                  Find Chargers
-                </button>
-                <a
-                  href={PLAYSTORE_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-mcn-lg border border-mcn-stroke-soft bg-white/70 px-5 py-2.5 text-mcn-text-primary shadow-mcn-soft transition-mcn hover:bg-white"
-                >
-                  <Download className="h-5 w-5" />
-                  Get App
-                </a>
-              </div>
-
-              <div className="mt-4 flex flex-wrap gap-3">
-                <StoreBadge href={PLAYSTORE_URL} src={PLAY_BADGE_SRC} alt="Get it on Google Play" />
-                <StoreBadge href={APPSTORE_URL} src={APP_BADGE_SRC} alt="Download on the App Store" />
-              </div>
-
-              <div className="mt-4 inline-flex items-center rounded-full border border-mcn-stroke-soft bg-white/70 px-3 py-1 text-mt-down-2 text-mcn-text-muted">
-                Sponsored by PayTm
-              </div>
-            </div>
-
-            <div className="desktop:col-span-6">
-              <div className="rounded-mcn-xl border border-mcn-stroke-soft bg-white/70 backdrop-blur-mcn p-6 shadow-mcn-card">
-                <div className="text-mt-down-1 text-mcn-text-muted">Live charging cards</div>
-                <div className="mt-3 space-y-3">
-                  {[
-                    { header: "Massive Hub - Sec 43, Gurugram" },
-                    { header: "Statiq Charging Station - Sec 15, Gurugram" },
-                    { header: "1C EV Charging Hub - Noida City Center" },
-                  ].map((item) => (
-                    <div
-                      key={item.header}
-                      className="flex items-center justify-between rounded-mcn border border-mcn-stroke-soft bg-white/70 px-4 py-3"
-                    >
-                      <div className="text-mt-base">{item.header}</div>
-                      <span className="rounded-pill border border-mcn-stroke-soft bg-mcn-blue/10 px-2 py-1 text-mt-down-2 text-mcn-text-primary">
-                        Live
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+      {!hideHero && (
+        <section
+          id="hero"
+          className="relative min-h-screen overflow-hidden bg-white flex items-center"
+        >
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute -top-36 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-electric-glow-cyan blur-[140px] opacity-60" />
+            <div className="absolute -bottom-32 right-0 h-[420px] w-[420px] rounded-full bg-electric-glow-ionBlue blur-[140px] opacity-60" />
+            <div
+              className="absolute inset-0 opacity-[0.2]"
+              style={{
+                backgroundImage:
+                  "linear-gradient(to right, rgba(0,0,0,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.06) 1px, transparent 1px)",
+                backgroundSize: "32px 32px",
+              }}
+            />
           </div>
-        </div>
-      </section>
 
-      {/* EV Home Charging */}
-      <section
-        id="ev-home-charging"
-        className="relative min-h-screen overflow-hidden text-mcn-ink-text-primary flex items-center"
-      >
-        <DarkSectionBackdrop />
-        <div className="relative z-10 container mx-auto px-4 md:px-6 py-20 md:py-24">
-          <div className="grid gap-8 desktop:grid-cols-12 items-center">
-            <div className="desktop:col-span-7">
-              <div className="inline-flex items-center gap-2 rounded-full bg-mcn-ink-glass px-3 py-1.5 text-mt-down-1 text-mcn-ink-text-secondary">
-                EV Home Charging
-              </div>
-              <h2 className="mt-5 font-heading text-pf-up-4">Install Your Personal EV Charger at Home</h2>
-              <p className="mt-4 text-mt-up-1 text-mcn-ink-text-secondary">Safe • Smart • Cost-Effective</p>
-
-              <ul className="mt-6 grid gap-3 text-mt-base text-mcn-ink-text-secondary">
-                {[
-                  { icon: "Bolt", label: "Dedicated AC Charging for Your EV" },
-                  { icon: "Shield", label: "Certified Safe Installation" },
-                  { icon: "Phone", label: "Smart App-Based Monitoring" },
-                  { icon: "TrendDown", label: "Lower Cost vs Public Charging" },
-                ].map((item) => (
-                  <li key={item.label} className="flex items-center gap-3">
-                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-mcn-lg bg-white/10">
-                      <IconMap name={item.icon as IconName} className="h-5 w-5 text-white/85" />
-                    </span>
-                    {item.label}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-7 flex flex-wrap gap-3">
-                <a
-                  href="/ev-charging-station-business#choose"
-                  className="inline-flex items-center justify-center rounded-mcn-lg bg-mcn-red px-5 py-2.5 text-white shadow-mcn-ink-card transition-mcn hover:bg-mcn-red-hover"
-                >
-                  Get My Home Charger
-                </a>
-                <a
-                  href="/ev-charging-station-business#choose"
-                  className="inline-flex items-center justify-center rounded-mcn-lg border border-mcn-ink-stroke-soft bg-mcn-ink-surface px-5 py-2.5 text-mcn-ink-text-primary transition-mcn"
-                >
-                  View Installation Guide
-                </a>
-              </div>
-            </div>
-
-            <div className="desktop:col-span-5">
-              <div className="rounded-mcn-xl border border-mcn-ink-stroke-soft bg-mcn-ink-surface p-6 shadow-mcn-ink-card">
-                <div className="text-mt-down-1 text-mcn-ink-text-muted">Home charging snapshot</div>
-                <div className="mt-4 grid gap-3">
-                  {[
-                    { label: "Install time", value: "3–5 days" },
-                    { label: "Charging type", value: "AC 7.4–11kW" },
-                    { label: "Coverage", value: "1–2 EVs" },
-                    { label: "Monitoring", value: "App + Alerts" },
-                  ].map((item) => (
-                    <div
-                      key={item.label}
-                      className="flex items-center justify-between rounded-mcn border border-mcn-ink-stroke-soft bg-mcn-ink-glass px-4 py-3"
-                    >
-                      <span className="text-mt-down-1 text-mcn-ink-text-secondary">{item.label}</span>
-                      <span className="font-mono text-mt-down-1 text-mcn-ink-text-primary">{item.value}</span>
-                    </div>
-                  ))}
+          <div className="relative container mx-auto px-4 md:px-6 py-20 md:py-28">
+            <div className="grid gap-8 desktop:grid-cols-12 items-center">
+              <div className="desktop:col-span-6">
+                <div className="inline-flex items-center gap-2 rounded-full border border-mcn-stroke-soft bg-white/70 px-3 py-1 text-mt-down-1 text-mcn-text-muted">
+                  <span className="inline-flex h-2.5 w-2.5 rounded-full bg-mcn-green" />
+                  Charging Network Is Live
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* EV Charging App */}
-      <section id="ev-charging-app" className="min-h-screen bg-white text-mcn-text-primary flex items-center">
-        <div className="container mx-auto px-4 md:px-6 py-20 md:py-24">
-          <div className="grid gap-8 desktop:grid-cols-12 items-center">
-            <div className="desktop:col-span-7">
-              <div className="inline-flex items-center gap-2 rounded-full border border-mcn-stroke-soft bg-white/70 px-3 py-1.5 text-mt-down-1 text-mcn-text-muted">
-                <IconMap name="Zap" className="h-5 w-5 text-mcn-text-muted" />
-                EV Charging App
-              </div>
-              <h2 className="mt-5 font-heading text-pf-up-4">Get 1C Charging App</h2>
-              <p className="mt-4 text-mt-up-1 text-mcn-text-secondary">One App For All Activities</p>
-              <p className="mt-3 text-mt-base text-mcn-text-faint">
-                Control all charging activities from single app in your phone.
-              </p>
-
-              <ul className="mt-6 grid gap-3 text-mt-base text-mcn-text-secondary md:grid-cols-2">
-                {[
-                  { icon: "MapPin", label: "Locate Chargers" },
-                  { icon: "Power", label: "Start & Stop" },
-                  { icon: "CreditCard", label: "Pay for Charging" },
-                  { icon: "Users", label: "Join Community" },
-                  { icon: "BatteryCharging", label: "Battery Health" },
-                ].map((item) => (
-                  <li key={item.label} className="flex items-center gap-3">
-                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-mcn-lg border border-mcn-stroke-soft bg-white/70">
-                      <IconMap name={item.icon as IconName} className="h-5 w-5 text-mcn-text-primary" />
-                    </span>
-                    {item.label}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-7">
-                <a
-                  href={PLAYSTORE_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-mcn-lg bg-mcn-red px-5 py-2.5 text-white shadow-mcn-card transition-mcn hover:bg-mcn-red-hover"
-                >
-                  Get EV Charging App
-                  <ArrowRight className="h-5 w-5" />
-                </a>
-              </div>
-            </div>
-
-            <div className="desktop:col-span-5">
-              <div className="rounded-mcn-xl border border-mcn-stroke-soft bg-mcn-surface2 p-6 shadow-mcn-card">
-                <div className="text-mt-down-1 text-mcn-text-muted">App quick actions</div>
-                <div className="mt-4 grid gap-3">
-                  {[
-                    { label: "Start session", value: "Tap to begin" },
-                    { label: "Stop session", value: "One‑tap end" },
-                    { label: "Pay securely", value: "UPI / Cards" },
-                    { label: "Track usage", value: "Live metrics" },
-                  ].map((item) => (
-                    <div
-                      key={item.label}
-                      className="flex items-center justify-between rounded-mcn border border-mcn-stroke-soft bg-white/70 px-4 py-3"
-                    >
-                      <span className="text-mt-down-1 text-mcn-text-muted">{item.label}</span>
-                      <span className="text-mt-down-1 text-mcn-text-primary">{item.value}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Set Up Charging Station */}
-      <section id="setup-charging-station" className="relative min-h-screen overflow-hidden text-mcn-ink-text-primary flex items-center">
-        <DarkSectionBackdrop />
-        <div className="relative z-10 container mx-auto px-4 md:px-6 py-20 md:py-24">
-          <div className="grid gap-8 desktop:grid-cols-12 items-start">
-            <div className="desktop:col-span-7">
-              <div className="inline-flex items-center gap-2 rounded-full border border-mcn-ink-stroke-soft bg-mcn-ink-glass px-3 py-1 text-mt-down-1 text-mcn-ink-text-secondary">
-                Set Up Charger and Earn
-              </div>
-              <h2 className="mt-5 font-heading text-pf-up-4">Start Your EV Charging Business</h2>
-              <p className="mt-4 text-mt-up-1 text-mcn-ink-text-secondary">
-                Convert empty land into EV Charging Station and earn monthly income. Get Hardware and Software to run Charging Station.
-              </p>
-
-              <ul className="mt-6 grid gap-3 text-mt-base text-mcn-ink-text-secondary">
-                {[
-                  { icon: "MapPin", label: "Site Feasibility & Layout Planning" },
-                  { icon: "Tool", label: "Charger Hardware + Installation Support" },
-                  { icon: "CreditCard", label: "Billing, Payments & Settlements" },
-                  { icon: "Monitor", label: "Operations Dashboard & Remote Control" },
-                  { icon: "ShieldCheck", label: "Uptime Monitoring & Service Support" },
-                ].map((item) => (
-                  <li key={item.label} className="flex items-center gap-3">
-                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-mcn-lg border border-mcn-ink-stroke-soft bg-mcn-ink-surface">
-                      <IconMap name={item.icon as IconName} className="h-5 w-5 text-mcn-ink-text-primary" />
-                    </span>
-                    {item.label}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-5 flex items-center gap-3">
-                <a
-                  href="/ev-charging-station-business"
-                  className="inline-flex items-center justify-center rounded-mcn-lg bg-mcn-red px-5 py-2.5 text-white shadow-mcn-ink-card transition-mcn hover:bg-mcn-red-hover"
-                >
-                  How To Setup Station
-                </a>
-                <span className="rounded-pill border border-mcn-ink-stroke-soft bg-white/10 px-3 py-1 text-mt-down-1 text-mcn-ink-text-primary">
-                  ₹ 80,000+ monthly income
-                </span>
-              </div>
-            </div>
-
-            <div className="desktop:col-span-5 flex justify-center self-center">
-              <div className="w-full max-w-[440px] rounded-mcn-xl border border-mcn-ink-stroke-soft bg-mcn-ink-surface p-6 shadow-mcn-ink-card">
-                <div className="text-mt-down-1 text-mcn-ink-text-muted">Operator metrics</div>
-                <div className="mt-4 grid gap-3">
-                  {[
-                    { label: "ROI window", value: "10–18 months" },
-                    { label: "Avg utilization", value: "68–74%" },
-                    { label: "Monthly revenue", value: "₹ 80k+" },
-                  ].map((item) => (
-                    <div
-                      key={item.label}
-                      className="flex items-center justify-between rounded-mcn border border-mcn-ink-stroke-soft bg-mcn-ink-glass px-4 py-3"
-                    >
-                      <span className="text-mt-down-1 text-mcn-ink-text-secondary">{item.label}</span>
-                      <span className="font-mono text-mt-down-1 text-mcn-ink-text-primary">{item.value}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* EV Charging Guide */}
-      <section id="ev-charging-guide" className="min-h-screen bg-white text-mcn-text-primary flex items-center">
-        <div className="container mx-auto px-4 md:px-6 py-20 md:py-24">
-          <div className="flex flex-col gap-10 lg:flex-row lg:items-center">
-            <div className="lg:flex-1">
-              <div className="inline-flex items-center rounded-full border border-mcn-stroke-soft bg-white/60 px-3 py-1 text-mt-down-1 text-mcn-text-muted">
-                2W, 3W, 4W
-              </div>
-              <h2 className="mt-5 font-heading text-pf-up-4">Own an EV or Planning to Buy One?</h2>
-              <p className="mt-4 text-mt-up-1 text-mcn-text-secondary">
-                Confused about Charging Cost & Required Infrastructure?
-              </p>
-              <p className="mt-3 text-mt-base text-mcn-text-faint">
-                Get Detailed Charging Guide for your Vehicles
-              </p>
-
-              <div className="mt-4 flex flex-wrap gap-2">
-                {["Costs", "Infrastructure", "Charging Types", "Best Practices"].map((t) => (
-                  <span
-                    key={t}
-                    className="rounded-pill border border-mcn-stroke-soft bg-white/60 px-3 py-1 text-mt-down-1 text-mcn-text-muted"
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
-
-              <div className="mt-7">
-                <a
-                  href="/charging-guide"
-                  className="inline-flex items-center justify-center rounded-mcn-lg bg-mcn-red px-5 py-2.5 text-white shadow-mcn-card transition-mcn hover:bg-mcn-red-hover"
-                >
-                  Explore Charging Guide
-                </a>
-              </div>
-            </div>
-
-            <div className="lg:w-[420px]">
-              <div className="rounded-mcn-xl border border-mcn-stroke-soft bg-white/70 p-6 shadow-mcn-card text-center">
-                <div className="text-mt-down-1 text-mcn-text-muted">Guide snapshot</div>
-                <div className="mt-4 rounded-mcn border border-mcn-stroke-soft bg-white/80 px-4 py-4">
-                  <div className="text-mt-base text-mcn-text-primary">Charging Guide</div>
-                  <div className="mt-1 text-mt-down-1 text-mcn-text-muted">
-                    Practical checklists and cost planning for new EV owners.
-                  </div>
-                </div>
-                <div className="mt-3">
-                  <OpenBookIconSVG />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Exclusive Membership */}
-      <section
-        id="exclusive-membership"
-        className="relative min-h-screen overflow-hidden flex items-center"
-      >
-        <div className="pointer-events-none absolute inset-0 bg-[#070607]" />
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(900px_520px_at_20%_10%,rgba(255,215,110,0.12),transparent_60%),radial-gradient(900px_520px_at_80%_20%,rgba(255,180,0,0.10),transparent_62%)]" />
-        <div className="pointer-events-none absolute inset-0 [background-image:linear-gradient(to_right,rgba(255,215,110,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,215,110,0.06)_1px,transparent_1px)] [background-size:64px_64px] opacity-[0.08]" />
-
-        <div className="relative z-10 container mx-auto px-4 md:px-6 py-20 md:py-24">
-          <div className="mx-auto max-w-4xl">
-            <div className="relative overflow-hidden rounded-mcn-xl border border-[rgba(255,215,110,0.28)] bg-[linear-gradient(135deg,rgba(17,14,10,0.96),rgba(8,7,6,0.98))] p-8 md:p-10 shadow-[0_22px_70px_rgba(0,0,0,0.55)]">
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_60%_at_20%_20%,rgba(255,215,110,0.18),transparent_60%)]" />
-              <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-[rgba(255,215,110,0.18)] blur-3xl" />
-
-              <div className="relative text-center">
-                <div className="inline-flex items-center rounded-full border border-[rgba(255,215,110,0.35)] bg-[rgba(255,215,110,0.10)] px-3 py-1 text-mt-down-1 text-[rgba(255,215,110,0.95)]">
-                  Exclusive Membership
-                </div>
-                <h2 className="mt-5 font-heading text-pf-up-4 text-[rgba(255,232,173,0.98)]">
-                  Become an Elite Member
-                </h2>
-                <p className="mt-4 text-mt-up-1 text-[rgba(255,215,110,0.78)]">
-                  Premium perks, priority access, and better savings every time you charge.
+                <h1 className="mt-4 font-heading text-pf-up-4 md:text-pf-up-5 leading-tight">
+                  Find Chargers Anytime. Anywhere.
+                </h1>
+                <p className="mt-3 text-mt-base text-mcn-text-secondary">
+                  Live life at 100%
                 </p>
 
-                <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                  {[
-                    "Charging Discounts",
-                    "Charging Pass",
-                    "Access to Premium Stations",
-                    "Points on Each Charge",
-                    "Discount on Hardware",
-                  ].map((item) => (
-                    <div
-                      key={item}
-                      className="rounded-mcn-lg border border-[rgba(255,215,110,0.22)] bg-[rgba(255,215,110,0.06)] px-5 py-3 text-mt-base text-[rgba(255,215,110,0.86)]"
-                    >
-                      {item}
-                    </div>
-                  ))}
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <button className="inline-flex items-center gap-2 rounded-mcn-lg bg-mcn-red px-5 py-2.5 text-white shadow-mcn-card transition-mcn hover:bg-mcn-red-hover">
+                    <Search className="h-5 w-5" />
+                    Find Chargers
+                  </button>
+                  <a
+                    href={PLAYSTORE_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-mcn-lg border border-mcn-stroke-soft bg-white/70 px-5 py-2.5 text-mcn-text-primary shadow-mcn-soft transition-mcn hover:bg-white"
+                  >
+                    <Download className="h-5 w-5" />
+                    Get App
+                  </a>
                 </div>
 
-                <div className="mt-7">
-                  <a
-                    href="/plans-offers"
-                    className="inline-flex items-center justify-center rounded-mcn-lg px-6 py-3 font-semibold text-[#1a1200] bg-[linear-gradient(135deg,#FFD36A,#FFB400)] shadow-[0_18px_60px_rgba(255,180,0,0.35)] transition hover:-translate-y-[1px]"
-                  >
-                    Get Massive Membership
-                  </a>
+                <div className="mt-4 flex flex-wrap gap-3">
+                  <StoreBadge
+                    href={PLAYSTORE_URL}
+                    src={PLAY_BADGE_SRC}
+                    alt="Get it on Google Play"
+                  />
+                  <StoreBadge
+                    href={APPSTORE_URL}
+                    src={APP_BADGE_SRC}
+                    alt="Download on the App Store"
+                  />
+                </div>
+
+                <div className="mt-4 inline-flex items-center rounded-full border border-mcn-stroke-soft bg-white/70 px-3 py-1 text-mt-down-2 text-mcn-text-muted">
+                  Sponsored by PayTm
+                </div>
+              </div>
+
+              <div className="desktop:col-span-6">
+                <div className="rounded-mcn-xl border border-mcn-stroke-soft bg-white/70 backdrop-blur-mcn p-6 shadow-mcn-card">
+                  <div className="text-mt-down-1 text-mcn-text-muted">
+                    Live charging cards
+                  </div>
+                  <div className="mt-3 space-y-3">
+                    {[
+                      { header: "Massive Hub - Sec 43, Gurugram" },
+                      { header: "Statiq Charging Station - Sec 15, Gurugram" },
+                      { header: "1C EV Charging Hub - Noida City Center" },
+                    ].map((item) => (
+                      <div
+                        key={item.header}
+                        className="flex items-center justify-between rounded-mcn border border-mcn-stroke-soft bg-white/70 px-4 py-3"
+                      >
+                        <div className="text-mt-base">{item.header}</div>
+                        <span className="rounded-pill border border-mcn-stroke-soft bg-mcn-blue/10 px-2 py-1 text-mt-down-2 text-mcn-text-primary">
+                          Live
+                        </span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
+
+      {/* EV Home Charging */}
+      <SecondScroll />
+
+      {/* EV Charging App */}
+      <ThirdScroll />
+
+      {/* Set Up Charging Station */}
+      <Home_SectionD_Business />
+
+      {/* EV Charging Guide */}
+      <FifthScroll />
+
+      {/* Exclusive Membership */}
+      <SixthScroll />
+
     </div>
   );
 }
-

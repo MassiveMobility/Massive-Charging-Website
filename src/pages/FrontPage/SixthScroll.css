@@ -1,0 +1,272 @@
+/* ── SixthScroll: Exclusive Membership ── */
+
+.sixth-scroll {
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 80px;
+}
+
+.sixth-scroll__card {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  background: #0d0d0d;
+  border-radius: 30px;
+  padding: 40px 32px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ── Top bar: badge + button ── */
+.sixth-scroll__top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.sixth-scroll__badge-wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+/* Star / diamond sparkle – top-right of the badge pill */
+.sixth-scroll__sparkle {
+  position: absolute;
+  top: -26px;
+  right: 5px;
+  width: "5%";
+  height: "5%";
+  mix-blend-mode: color-dodge;
+  pointer-events: none;
+}
+
+/* "Exclusive Membership" pill button */
+.sixth-scroll__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  padding: 0 32px;
+  border-radius: 63px;
+  border: 0.33px solid rgba(230, 232, 235, 0.25);
+  background: linear-gradient(
+    180deg,
+    rgba(230, 232, 235, 0.15) 0%,
+    rgba(230, 232, 235, 0) 100%
+  );
+}
+
+.sixth-scroll__badge-text {
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 21.73px;
+  background: linear-gradient(
+    279.27deg,
+    #707072 15.43%,
+    #a6a7ab 27.49%,
+    #dddee2 38.98%,
+    #d0d2d6 50.47%,
+    #808185 62.24%,
+    #a2a1a6 75.17%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Heading ── */
+.sixth-scroll__heading {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.005em;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.sixth-scroll__heading-white {
+  color: #ffffff;
+}
+
+.sixth-scroll__heading-gold {
+  background: linear-gradient(
+    148.99deg,
+    #c09a37 19.24%,
+    #f7ef8a 46.83%,
+    #d0aa45 74.04%,
+    #e2bc51 95.73%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-style: normal;
+}
+
+/* ── Subtitle row with bolt icon ── */
+.sixth-scroll__subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.sixth-scroll__subtitle-text {
+  font-family: "TT Fors Trial", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0.002em;
+  text-align: center;
+  color: #ffffff;
+}
+
+.sixth-scroll__bolt-icon {
+  width: auto;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* ── Perk chips row ── */
+.sixth-scroll__perks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.sixth-scroll__perk {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  padding: 8px 18px;
+  border-radius: 10.72px;
+  opacity: 0.99;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(4px);
+}
+
+.sixth-scroll__perk-text {
+  font-family: "TT Fors Trial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.006em;
+  background: linear-gradient(
+    148.99deg,
+    #c09a37 19.24%,
+    #f7ef8a 46.83%,
+    #d0aa45 74.04%,
+    #e2bc51 95.73%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── CTA Button ── */
+.sixth-scroll__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  padding: 8px 18px;
+  gap: 8px;
+  border-radius: 10.72px;
+  opacity: 0.99;
+  background: linear-gradient(
+    148.99deg,
+    #c09a37 19.24%,
+    #f7ef8a 46.83%,
+    #d0aa45 74.04%,
+    #e2bc51 95.73%
+  );
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.sixth-scroll__cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 40px rgba(255, 180, 0, 0.3);
+}
+
+.sixth-scroll__cta-text {
+  font-family: "TT Fors Trial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.006em;
+  color: #0d0d0d;
+}
+
+/* ── Responsive ── */
+@media (max-width: 767px) {
+  .sixth-scroll {
+    padding: 40px 16px;
+  }
+
+  .sixth-scroll__card {
+    padding: 32px 20px 40px;
+    border-radius: 20px;
+  }
+
+  .sixth-scroll__heading {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .sixth-scroll__badge {
+    height: 48px;
+    padding: 0 20px;
+  }
+
+  .sixth-scroll__badge-text {
+    font-size: 18px;
+  }
+
+  .sixth-scroll__subtitle-text {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .sixth-scroll__perks {
+    gap: 8px;
+  }
+
+  .sixth-scroll__perk {
+    height: 40px;
+    padding: 6px 14px;
+  }
+
+  .sixth-scroll__perk-text {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1960px) {
+  .sixth-scroll {
+    padding: 80px 240px;
+  }
+}
+
+@media (min-width: 2400px) {
+  .sixth-scroll {
+    padding: 80px 480px;
+  }
+}

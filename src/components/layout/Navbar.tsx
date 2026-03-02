@@ -1,9 +1,12 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 
-import Logo from "../../assets/MCN Logo.png";
-
 type NavItem = { label: string; to: string };
+
+const FONT_STYLE: React.CSSProperties = {
+  fontFamily: "'TT Fors Trial', Inter, sans-serif",
+  fontWeight: 400,
+};
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -13,15 +16,15 @@ export default function Navbar() {
   const BUSINESS_ROUTE = "/ev-charging-station-business";
   const PRICING_ROUTE = "/plans-offers";
 
-  const navItems: NavItem[] = useMemo(
+  const navItems = useMemo(
     () => [
-      { label: "Find Charging Stations", to: CHARGING_GUIDE_ROUTE },
-      { label: "UPI Charging", to: "/upi-charging" },
-      { label: "Get EV Charging Guide", to: CHARGING_GUIDE_ROUTE },
-      { label: "EV Charging Shop", to: "/ev-charging-shop" },
-      { label: "Pricing & Offers", to: PRICING_ROUTE },
+      { label: "Find Charging Stations", to: "/find-chargers", canHighlight: true },
+      { label: "UPI Charging", to: "/upi-charging", canHighlight: true },
+      { label: "Get Charging Guide", to: CHARGING_GUIDE_ROUTE, canHighlight: true },
+      { label: "EV Charging Shop", to: "/ev-charging-shop", canHighlight: true },
+      { label: "Pricing & Offers", to: PRICING_ROUTE, canHighlight: true },
     ],
-    []
+    [],
   );
 
   // Close drawer on route change
@@ -48,119 +51,157 @@ export default function Navbar() {
     };
   }, [open]);
 
-  // Menu pill styles (dark glass navbar)
-  const pillBase =
-    "inline-flex items-center justify-center rounded-[12px] px-4 py-2 text-sm font-medium " +
-    "transition whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20";
+  const isHomePage = location.pathname === "/";
+  const [inHero, setInHero] = useState(true);
 
-  const pillInactive = "text-white/75 hover:text-white hover:bg-white/6";
+  useEffect(() => {
+    if (!isHomePage) {
+      setInHero(false);
+      return;
+    }
+    const onScroll = () => {
+      setInHero(window.scrollY < window.innerHeight * 0.85);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [isHomePage]);
 
-  const pillActive = "text-white bg-white/10 ring-1 ring-white/15";
-
-  // CTA button (outline, muted emphasis)
-  const businessBtn =
-    "inline-flex items-center justify-center rounded-[12px] px-5 py-2.5 text-sm font-semibold " +
-    "bg-white/0 text-white/85 ring-1 ring-white/20 shadow-[0_10px_30px_rgba(0,0,0,0.25)] " +
-    "hover:bg-white/8 hover:text-white hover:shadow-[0_12px_34px_rgba(229,0,0,0.18)] " +
-    "active:bg-white/10 active:shadow-[0_8px_24px_rgba(229,0,0,0.24)] " +
-    "focus:outline-none focus-visible:ring-2 focus-visible:ring-white/35 transition";
+  const showBlackStrip = isHomePage && inHero;
 
   return (
-    <header className="sticky top-0 z-50 w-full">
-      {/* NAVBAR: Dark Glass */}
-      <div className="relative bg-[#0f1114]/85 backdrop-blur-mcn border-b border-white/10 shadow-[0_12px_40px_rgba(0,0,0,0.45)]">
-        {/* subtle sheen + warm accents */}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/6 to-transparent" />
-        <div className="pointer-events-none absolute -left-10 -top-10 h-32 w-32 rounded-full bg-[rgba(229,0,0,0.18)] blur-3xl" />
-        <div className="pointer-events-none absolute right-1/3 -top-12 h-36 w-36 rounded-full bg-[rgba(30,255,136,0.12)] blur-3xl" />
-        <div className="pointer-events-none absolute right-10 -top-12 h-28 w-28 rounded-full bg-[rgba(255,215,110,0.16)] blur-3xl" />
+    <header className="sticky top-0 z-[58] w-full">
+      <div className="relative flex items-center gap-10 px-[80px] min-[1960px]:px-[240px] min-[2400px]:px-[480px] pt-6 pb-4 bg-white">
+        {/* Black strip at the right edge – only on home page hero area */}
+        <div
+          className="hidden xl:block absolute right-0 top-0 h-full bg-[#1A1A1A] transition-opacity duration-300"
+          style={{ width: 128, opacity: showBlackStrip ? 1 : 0 }}
+        />
+        {/* CTA Button – above sidebar z-[55], navbar bg doesn't create stacking context for this */}
+        <Link
+          to={BUSINESS_ROUTE}
+          className="hidden xl:inline-flex items-center no-underline hover:no-underline hover:bg-[#c20000] transition-colors"
+          style={{
+            position: "absolute",
+            top: "50%",
+            right: 80,
+            transform: "translateY(-50%)",
+            zIndex: 60,
+            borderRadius: 10.72,
+            backgroundColor: "#E50000",
+            padding: "9.65px 19.3px",
+            color: "#fff",
+            fontSize: 16,
+            lineHeight: "26px",
+            letterSpacing: "0.002em",
+            textDecoration: "none",
+            whiteSpace: "nowrap",
+            fontFamily: "'TT Fors Trial', Inter, sans-serif",
+            fontWeight: 400,
+          }}
+        >
+          Start Charging Station Business
+        </Link>
+        {/* Logo */}
+        <Link to="/" className="flex-shrink-0">
+          <img
+            src="/massive-charging-logo.svg"
+            alt="Massive Charging"
+            style={{ height: 45, width: "auto" }}
+          />
+        </Link>
 
-        <div className="relative mx-auto flex max-w-[1280px] items-center px-4 py-3 md:px-6">
-          {/* Left: Logo -> Home */}
-          <Link to="/" className="flex items-center gap-2 shrink-0">
-            <img src={Logo} alt="Logo" className="h-9 w-auto" />
-          </Link>
+        {/* Desktop nav links */}
+        <ul className="hidden lg:flex items-center gap-9 list-none m-0 p-0">
+          {navItems.map((item) => (
+            <li key={item.label}>
+              {item.canHighlight ? (
+                <NavLink
+                  to={item.to}
+                  style={FONT_STYLE}
+                  className={({ isActive }) =>
+                    `text-[16px] leading-[26px] tracking-[0.002em] text-[#0C0C0C] whitespace-nowrap pb-1 border-b-2 transition-colors no-underline hover:no-underline ${
+                      isActive ? "border-[#E50000]" : "border-transparent"
+                    }`
+                  }
+                >
+                  {item.label}
+                </NavLink>
+              ) : (
+                <Link
+                  to={item.to}
+                  style={FONT_STYLE}
+                  className="text-[16px] leading-[26px] tracking-[0.002em] text-[#0C0C0C] whitespace-nowrap pb-1 border-b-2 border-transparent no-underline hover:no-underline transition-colors"
+                >
+                  {item.label}
+                </Link>
+              )}
+            </li>
+          ))}
+        </ul>
 
-          {/* Right: Desktop menu */}
-          <nav className="ml-auto hidden md:flex items-center gap-2">
-            {navItems.map((item) => (
-              <NavLink
-                key={item.to + item.label}
-                to={item.to}
-                className={({ isActive }) =>
-                  `${pillBase} ${isActive ? pillActive : pillInactive}`
-                }
-              >
-                {item.label}
-              </NavLink>
-            ))}
+        {/* Spacer */}
+        <div className="flex-1" />
 
-            {/* Business CTA */}
-            <Link to={BUSINESS_ROUTE} className={businessBtn}>
-              Start Charging Station Business
-            </Link>
-          </nav>
-
-          {/* Mobile hamburger */}
-          <div className="ml-auto md:hidden">
-            <button
-              type="button"
-              onClick={() => setOpen(true)}
-              className="inline-flex items-center justify-center rounded-xl bg-white/8 px-3 py-2 text-white ring-1 ring-white/12
-                         hover:bg-white/12 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/25"
-              aria-label="Open menu"
-              aria-expanded={open}
-            >
-              <span className="flex flex-col gap-1.5">
-                <span className="h-0.5 w-6 bg-current" />
-                <span className="h-0.5 w-6 bg-current" />
-                <span className="h-0.5 w-6 bg-current" />
-              </span>
-            </button>
-          </div>
+        {/* Mobile hamburger */}
+        <div className="ml-auto lg:hidden">
+          <button
+            type="button"
+            onClick={() => setOpen(true)}
+            className="inline-flex items-center justify-center rounded-xl bg-gray-100 px-3 py-2 text-[#131313] hover:bg-gray-200 focus:outline-none"
+            aria-label="Open menu"
+            aria-expanded={open}
+          >
+            <span className="flex flex-col gap-1.5">
+              <span className="h-0.5 w-6 bg-current" />
+              <span className="h-0.5 w-6 bg-current" />
+              <span className="h-0.5 w-6 bg-current" />
+            </span>
+          </button>
         </div>
       </div>
 
       {/* Mobile drawer */}
       {open && (
-        <div className="fixed inset-0 z-[60] md:hidden">
+        <div className="fixed inset-0 z-[60] lg:hidden">
           <button
-            className="absolute inset-0 bg-black/55"
+            className="absolute inset-0 bg-black/40"
             onClick={() => setOpen(false)}
             aria-label="Close menu"
           />
 
-          <div className="absolute right-0 top-0 h-full w-[86%] max-w-sm bg-[rgba(11,11,12,0.92)] backdrop-blur-mcn shadow-2xl border-l border-white/12">
-            <div className="flex items-center justify-between px-4 py-4 border-b border-white/10">
+          <div className="absolute right-0 top-0 h-full w-[86%] max-w-sm bg-white shadow-2xl border-l border-gray-200">
+            <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
               <Link to="/" className="flex items-center gap-3">
-                <img src={Logo} alt="Logo" className="h-9 w-auto" />
+                <img
+                  src="/massive-charging-logo.svg"
+                  alt="Massive Charging"
+                  style={{ height: 36, width: "auto" }}
+                />
               </Link>
 
               <button
                 onClick={() => setOpen(false)}
-                className="rounded-lg bg-white/8 px-3 py-2 text-white ring-1 ring-white/12 hover:bg-white/12
-                           focus:outline-none focus-visible:ring-2 focus-visible:ring-white/25"
+                className="rounded-lg bg-gray-100 px-3 py-2 text-[#131313] hover:bg-gray-200 focus:outline-none"
                 aria-label="Close menu"
               >
                 ✕
               </button>
             </div>
 
-            <div className="p-4">
-              <div className="mb-3 text-xs font-semibold tracking-wide text-white/45">
-                MENU
-              </div>
-
-              <div className="flex flex-col gap-2">
+            <div className="p-6">
+              <div className="flex flex-col gap-1">
                 {navItems.map((item) => (
                   <NavLink
                     key={"m-" + item.to + item.label}
                     to={item.to}
+                    style={FONT_STYLE}
                     className={({ isActive }) =>
-                      "rounded-[12px] px-4 py-3 text-sm font-medium transition ring-1 " +
-                      (isActive
-                        ? "bg-white/10 text-white ring-white/15"
-                        : "bg-white/0 text-white/75 ring-white/12 hover:bg-white/6 hover:text-white")
+                      `rounded-lg px-4 py-3 text-[16px] leading-[26px] tracking-[0.002em] no-underline hover:no-underline transition ${
+                        isActive
+                          ? "bg-red-50 text-[#E50000] border-l-2 border-[#E50000]"
+                          : "text-[#0C0C0C] hover:bg-gray-50"
+                      }`
                     }
                   >
                     {item.label}
@@ -168,8 +209,12 @@ export default function Navbar() {
                 ))}
               </div>
 
-              <div className="mt-5 pt-4 border-t border-white/10">
-                <Link to={BUSINESS_ROUTE} className={businessBtn + " w-full"}>
+              <div className="mt-6 pt-4 border-t border-gray-100">
+                <Link
+                  to={BUSINESS_ROUTE}
+                  className="inline-flex items-center justify-center w-full rounded-[10.72px] bg-[#E50000] px-[19.3px] py-[9.65px] text-white text-[16px] leading-[26px] tracking-[0.002em] no-underline hover:bg-[#c20000] hover:no-underline transition-colors"
+                  style={FONT_STYLE}
+                >
                   Start Charging Station Business
                 </Link>
               </div>

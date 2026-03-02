@@ -1,0 +1,266 @@
+/* ------------------------------------------------------------------ */
+/*  UPI Charging Page – Styles                                        */
+/* ------------------------------------------------------------------ */
+
+.upi-charging {
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+.upi-charging__hero {
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+}
+
+.upi-charging__container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px 80px;
+}
+
+@media (min-width: 1960px) {
+  .upi-charging__container {
+    padding: 80px 240px;
+  }
+}
+
+@media (min-width: 2400px) {
+  .upi-charging__container {
+    padding: 80px 480px;
+  }
+}
+
+.upi-charging__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .upi-charging__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ---- Left Column ---- */
+
+.upi-charging__left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Badge */
+.upi-charging__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-start;
+  border-radius: 9999px;
+  border: 1px solid #e5e7eb;
+  padding: 3px 10px;
+}
+
+.upi-charging__badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #41BA15;
+}
+
+.upi-charging__badge-text {
+  font-family: 'TT Fors Trial', Inter, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.003em;
+  color: #131313;
+}
+
+/* Heading */
+.upi-charging__heading {
+  font-family: 'ITC Avant Garde Gothic Std', 'Public Sans', sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 72px;
+  letter-spacing: -0.006em;
+  color: #131313;
+  max-width: 460px;
+  margin: 0;
+}
+
+.upi-charging__heading-accent {
+  color: #E50000;
+}
+
+/* Subtitle */
+.upi-charging__subtitle {
+  font-family: 'TT Fors Trial', Inter, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0.002em;
+  color: #131313;
+  max-width: 540px;
+  margin: 0;
+}
+
+/* Buttons */
+.upi-charging__buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ---- Right Column: Fun Facts Card ---- */
+
+.upi-charging__right {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .upi-charging__right {
+    justify-content: flex-end;
+  }
+}
+
+.fun-facts-card {
+  width: 100%;
+  max-width: 436px;
+  background: #FFFFFF;
+  border-radius: 24px;
+  border: 1px solid #D0D2D6;
+  overflow: hidden;
+}
+
+/* Header */
+.fun-facts-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 22px 16px;
+}
+
+.fun-facts-card__title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fun-facts-card__title-text {
+  font-family: 'TT Fors Trial', Inter, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.002em;
+  color: #0D0D0D;
+}
+
+.fun-facts-card__upi-badge {
+  font-family: 'TT Fors Trial', Inter, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.005em;
+  text-align: center;
+  color: #348E5E;
+  border: 1px solid #348E5E;
+  border-radius: 9999px;
+  padding: 4px 12px;
+}
+
+/* Stats Grid */
+.fun-facts-card__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 0 22px;
+}
+
+.stat-box {
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  border-radius: 12px;
+  padding: 8px 18px;
+  min-height: 84px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stat-box__label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.stat-box__label-text {
+  font-family: 'TT Fors Trial', Inter, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.003em;
+  color: #707070;
+}
+
+.stat-box__value {
+  font-family: 'TT Fors Trial', Inter, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0.002em;
+  color: #0C0C0C;
+}
+
+.stat-box__hint {
+  font-family: 'TT Fors Trial', Inter, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.005em;
+  color: #707070;
+}
+
+/* Bottom Banner */
+.fun-facts-card__banner {
+  margin: 16px 22px 22px;
+  background: #E1F2FB;
+  border: 1px solid #B2EDFE;
+  border-radius: 12px;
+  padding: 10px 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fun-facts-card__banner-text {
+  font-family: 'TT Fors Trial', Inter, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.005em;
+  color: #000000;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 768px) {
+  .upi-charging__container {
+    padding: 60px 20px;
+  }
+
+  .upi-charging__heading {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .upi-charging__subtitle {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}

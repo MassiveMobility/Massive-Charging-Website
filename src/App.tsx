@@ -1,10 +1,10 @@
 import React, { useEffect, useMemo, useState, createContext, useContext } from "react";
 import "./index.css"; // ← This line is CRITICAL
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
 
 /* Layout Molecules */
 import Navbar from "./components/layout/Navbar";
-import { Footer } from "./components/layout/Footer";
+import BottomBar from "./pages/FrontPage/BottomBar";
 import ScrollToTop from "./components/layout/ScrollToTop";
 
 /* Atoms */
@@ -15,7 +15,7 @@ import Home_Page from "./pages/Home/Home_Page";
 import ThemeSamplerPage from "./pages/ThemeSamplerPage";
 import EVJourneyReport from "./chapters/urltest/EVJourneyReport";
 import PinkTestPage from "./chapters/urltest/PinkTestPage";
-import UPIChargingPage from "./chapters/urltest/UPIChargingPage";
+import UpiChargingPage from "./pages/UpiCharging/UpiChargingPage";
 import PricingPage from "./chapters/urltest/PricingPage";
 import TestHome from "./test/Home";
 import HomeSchemaPage from "./test/Home_Schema_Page";
@@ -27,6 +27,7 @@ import EVChargingGuide_Dashboard from "./Querycode/EVChargingGuide_Dashboard";
 import EVCarsCatalogue from "./Querycode/EVCarsCatalogue";
 import ChargingGuidePage from "./Querycode/ChargingGuidePage";
 import EVChargingShopComingSoon from "./pages/EVChargingShopComingSoon";
+import EVChargingGuidePage_New from "./pages/EVChargingGuide/EVChargingGuidePage";
 
 import StationBizHomePage from "./pages/Station_Biz_HomePage";
 import EvChargingStationHomePage from "./pages/Charging-Station_Business/ev-charging-station-home-page";
@@ -37,6 +38,7 @@ import CPOTypeIndividualPage from "./pages/Charging-Station_Business/CPO_Types/C
 import CPOTypeIndexPage from "./pages/Charging-Station_Business/CPO_Types/CPOTypeIndexPage";
 
 import EvGuideHomeDashboard from "./pages/Charging_Guide/EvGuideHomeDashboard";
+import FrontPage from "./pages/FrontPage/FrontPage";
 import ScrollToHash from "./components/layout/ScrollToHash";
 
 
@@ -77,6 +79,19 @@ export function useAppData() {
   const ctx = useContext(AppDataContext);
   if (!ctx) throw new Error("useAppData must be used inside <AppDataContext.Provider>");
   return ctx;
+}
+
+/* Routes that use their own navbar */
+const CUSTOM_NAVBAR_ROUTES = ["/front", "/flathome"];
+
+function NavbarWrapper() {
+  const { pathname } = useLocation();
+  if (CUSTOM_NAVBAR_ROUTES.includes(pathname)) return null;
+  return <Navbar />;
+}
+
+function FooterWrapper() {
+  return <BottomBar />;
 }
 
 function App() {
@@ -154,12 +169,12 @@ function App() {
           variant="base"
           style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}
         >
-          <Navbar />
+          <NavbarWrapper />
 
           <main style={{ flex: 1 }}>
             <Routes>
-              {/* --- MAIN HOME PAGE --- */}
-              <Route path="/" element={<HomeSchemaPage />} />
+              {/* --- DEFAULT: redirect / to /find-chargers --- */}
+              <Route path="/" element={<Navigate to="/find-chargers" replace />} />
               <Route path="/home-legacy" element={<Home_Page />} />
               <Route path="/themesampler" element={<ThemeSamplerPage />} />
               <Route path="/temp-home" element={<Home_Page />} />
@@ -167,36 +182,21 @@ function App() {
               <Route path="/temp-05" element={<EvGuideHomeDashboard />} />
               <Route path="/destest" element={<TestHome />} />
               <Route path="/flathome" element={<HomeSchemaPage />} />
+              <Route path="/front" element={<FrontPage />} />
               <Route path="/csb-test" element={<ChargingStationBusiness_Test />} />
               <Route path="/ev-charging-station-business" element={<ChargingBusinessFreshHome />} />
               <Route path="/fresh" element={<ChargingBusinessFreshHome />} />
 
               {/* --- EXISTING ROUTES --- */}
-              <Route path="/ev-charging-guide" element={<EVChargingGuidePage />} />
+              <Route path="/front-page" element={<FrontPage />} />
+              <Route path="/find-chargers" element={<FrontPage />} />
               <Route path="/pinktest" element={<PinkTestPage />} />
-              <Route path="/upi-charging" element={<UPIChargingPage />} />
+              <Route path="/upi-charging" element={<UpiChargingPage />} />
               <Route path="/ev-charging-shop" element={<EVChargingShopComingSoon />} />
               <Route path="/plans-offers" element={<PricingPage />} />
               <Route path="/EV-Trip-Report" element={<EVJourneyReport />} />
 
-              {/* 🔄 QUERY PAGES (still receiving props, but also available via context everywhere) */}
-              <Route
-                path="/charging-guide"
-                element={<EVChargingGuide_Dashboard database={vehicleGuideData} />}
-              />
-              <Route
-                path="/charging-guide/ev-cars"
-                element={<EVCarsCatalogue database={vehicleGuideData} />}
-              />
-              <Route
-                path="/charging-guide/:slug"
-                element={
-                  <ChargingGuidePage
-                    vehicleGuideData={vehicleGuideData}
-                    coreMessageBlockData={coreMessageBlockData}
-                  />
-                }
-              />
+              <Route path="/charging-guide" element={<EVChargingGuidePage_New />} />
 
               {/* Station biz */}
               <Route path="/charging-station-business-legacy" element={<StationBizHomePage />} />
@@ -256,7 +256,7 @@ function App() {
             </Routes>
           </main>
 
-          <Footer />
+          <FooterWrapper />
         </Surface>
       </AppDataContext.Provider>
     </Router>

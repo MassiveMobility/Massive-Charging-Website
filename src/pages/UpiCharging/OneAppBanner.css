@@ -1,0 +1,46 @@
+/* ------------------------------------------------------------------ */
+/*  One App Banner                                                     */
+/* ------------------------------------------------------------------ */
+
+.one-app-banner {
+  background: #ffffff;
+  border: 1px solid rgba(217, 217, 217, 0.71);
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-right: -40px;
+}
+
+.one-app-banner__content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.one-app-banner__title {
+  font-family: "TT Fors Trial", Inter, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0.002em;
+  color: #0c0c0c;
+  margin: 0;
+}
+
+.one-app-banner__description {
+  font-family: "TT Fors Trial", Inter, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.005em;
+  color: #9b9b9b;
+  margin: 0;
+  max-width: 460px;
+}
+
+.one-app-banner__button {
+  flex-shrink: 0;
+}

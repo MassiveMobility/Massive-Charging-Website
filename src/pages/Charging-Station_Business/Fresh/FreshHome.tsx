@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { WhyMassiveSectionFresh } from "../WhyMassiveSection";
 import HowItWorksSection from "./HowItWorksSection";
 import ChooseSetupSection from "./ChooseSetupSection";
-import GuideSectionDark from "./GuideSectionDark";
+import FifthScroll from "../../FrontPage/FifthScroll";
 
 const ChargerIcon: React.FC<{ className?: string }> = ({ className }) => {
   return (
@@ -148,7 +148,7 @@ export default function ChargingBusinessFreshHome() {
       <WhyMassiveSectionFresh />
       <HowItWorksSection />
       <ChooseSetupSection />
-      <GuideSectionDark />
+      <FifthScroll />
     </div>
   );
 }

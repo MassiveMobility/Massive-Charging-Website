@@ -1,0 +1,98 @@
+/* ------------------------------------------------------------------ */
+/*  Build for Fast Starts Section                                      */
+/* ------------------------------------------------------------------ */
+
+.fast-starts {
+  background: #F0F0F0;
+}
+
+.fast-starts__container {
+  width: 100%;
+  max-width: 1312px;
+  margin: 0 auto;
+  padding: 80px 40px;
+}
+
+.fast-starts__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .fast-starts__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+}
+
+.fast-starts__left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.fast-starts__heading {
+  font-family: 'ITC Avant Garde Gothic Std', 'Public Sans', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.006em;
+  color: #131313;
+  max-width: 520px;
+  margin: 0;
+}
+
+.fast-starts__description {
+  font-family: 'TT Fors Trial', Inter, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.002em;
+  color: #505050;
+  max-width: 520px;
+  margin: 0;
+}
+
+.fast-starts__right {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .fast-starts__right {
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+}
+
+.fast-starts__right-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.fast-starts__steps {
+  display: flex;
+  gap: 16px;
+  flex-wrap: nowrap;
+  margin-right: -40px;
+}
+
+@media (max-width: 768px) {
+  .fast-starts__container {
+    padding: 60px 20px;
+  }
+
+  .fast-starts__heading {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .fast-starts__description {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}

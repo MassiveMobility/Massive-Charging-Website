@@ -8,6 +8,26 @@
   perspective: 1000px;
 }
 
+/* Responsive container padding for SectionD Business */
+.sectiond-container {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+@media (min-width: 1960px) {
+  .sectiond-container {
+    padding-left: 240px;
+    padding-right: 240px;
+  }
+}
+
+@media (min-width: 2400px) {
+  .sectiond-container {
+    padding-left: 480px;
+    padding-right: 480px;
+  }
+}
+
 .transform-style-preserve-3d {
   transform-style: preserve-3d;
 }

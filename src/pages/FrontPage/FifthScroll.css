@@ -1,0 +1,184 @@
+.fifth-scroll {
+  min-height: auto;
+  background: var(--PS14, #FFE5E5);
+  display: flex;
+  align-items: center;
+}
+
+.fifth-scroll__container {
+  margin: 0 auto;
+  padding: 56px 80px;
+  width: 100%;
+}
+
+.fifth-scroll__grid {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+
+/* ── Left Column ── */
+.fifth-scroll__left {
+  flex: 1;
+  max-width: 599px;
+}
+
+.fifth-scroll__vehicle-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  padding: 3px 16px;
+  border-radius: 18px;
+  border: 1px solid #B5BCC58F;
+  background: #FFFFFF;
+}
+
+.fifth-scroll__vehicle-chip-text {
+  font-family: 'TT Fors Trial', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.3%;
+  color: #131313;
+}
+
+.fifth-scroll__heading {
+  margin-top: 20px;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.005em;
+  color: #0C0C0C;
+}
+
+.fifth-scroll__subheading {
+  margin-top: 16px;
+  font-family: 'TT Fors Trial', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0.002em;
+  color: #0C0C0C;
+}
+
+.fifth-scroll__description {
+  margin-top: 12px;
+  font-family: 'TT Fors Trial', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.002em;
+  color: #777777;
+}
+
+/* ── Category Chips ── */
+.fifth-scroll__chips {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.fifth-scroll__chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  padding: 6px 16px;
+  border-radius: 18px;
+  border: 1px solid #B5BCC58F;
+  background: #FFFFFF;
+  gap: 4px;
+}
+
+.fifth-scroll__chip-text {
+  font-family: 'TT Fors Trial', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.003em;
+  color: #131313;
+}
+
+/* ── CTA Button ── */
+.fifth-scroll__cta {
+  margin-top: 28px;
+}
+
+.fifth-scroll__cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  padding: 0 24px;
+  gap: 16px;
+  border-radius: 10.72px;
+  background: #E51837;
+  color: #FFFFFF;
+  font-family: 'TT Fors Trial', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.fifth-scroll__cta-button:hover {
+  background: #c9142f;
+}
+
+/* ── Right Column (Product Manual) ── */
+.fifth-scroll__right {
+  flex-shrink: 0;
+  width: 420px;
+  margin-left: auto;
+}
+
+.fifth-scroll__manual-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Responsive ── */
+@media (max-width: 767px) {
+  .fifth-scroll__grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .fifth-scroll__left {
+    max-width: 100%;
+  }
+
+  .fifth-scroll__heading {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .fifth-scroll__subheading {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .fifth-scroll__right {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+
+@media (min-width: 1960px) {
+  .fifth-scroll__container {
+    padding: 56px 240px;
+  }
+}
+
+@media (min-width: 2400px) {
+  .fifth-scroll__container {
+    padding: 56px 480px;
+  }
+}

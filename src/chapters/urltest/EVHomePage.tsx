@@ -1,5 +1,6 @@
 import React from 'react';
 import './MassiveSystem.css'; // <--- IMPORTS YOUR LOCAL "SANDBOXED" STYLES
+
 import { 
   Activity, Home, Smartphone, Briefcase, Crown, Check, 
   ArrowRight, Download, Search, MapPin, Zap, CreditCard, 
@@ -449,10 +450,6 @@ const EVHomePage: React.FC = () => {
         }
       })}
       
-      {/* Simple Footer for context */}
-      <footer className="m-section" style={{ background: 'var(--bg-infra-navy)', color: 'var(--text-inverse-muted)', textAlign: 'center' }}>
-        <p className="t-small">© 2024 Massive Charging Network. All Rights Reserved.</p>
-      </footer>
     </div>
   );
 };
