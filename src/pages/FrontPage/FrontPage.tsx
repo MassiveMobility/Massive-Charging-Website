@@ -163,9 +163,9 @@ function LiveChargingCard({ name }: { name: string }) {
 /* -------- Live Charging Cards Panel -------- */
 function LiveChargingCardsPanel() {
   const stations = [
-    "Massive Hub - Sec 43, Gurugram",
-    "Massive Hub - Sec 43, Gurugram",
-    "Massive Hub - Sec 43, Gurugram",
+    "Gomti Nagar Charging Station",
+    "Kalkaji EV Charging Station",
+    "Wave City Center Charging Station",
   ];
 
   return (
@@ -177,7 +177,7 @@ function LiveChargingCardsPanel() {
           fontWeight: 400,
         }}
       >
-        Live charging cards
+        Live charging Stations
       </p>
       <div className="flex flex-col gap-3">
         {stations.map((station, i) => (

@@ -252,7 +252,7 @@ export default function Home_Schema_Page({
               <div className="desktop:col-span-6">
                 <div className="rounded-mcn-xl border border-mcn-stroke-soft bg-white/70 backdrop-blur-mcn p-6 shadow-mcn-card">
                   <div className="text-mt-down-1 text-mcn-text-muted">
-                    Live charging cards
+                    Live charging Stations
                   </div>
                   <div className="mt-3 space-y-3">
                     {[
@@ -292,7 +292,6 @@ export default function Home_Schema_Page({
 
       {/* Exclusive Membership */}
       <SixthScroll />
-
     </div>
   );
 }
