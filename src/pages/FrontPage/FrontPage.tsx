@@ -18,11 +18,11 @@ function SocialSidebar() {
 
   useEffect(() => {
     const onScroll = () => {
-      // Hide when the second scroll section enters the viewport
-      const secondSection = document.getElementById("ev-home-charging");
-      if (secondSection) {
-        const rect = secondSection.getBoundingClientRect();
-        setVisible(rect.top > window.innerHeight * 0.5);
+      // Hide when the elite membership section enters the viewport
+      const eliteSection = document.getElementById("exclusive-membership");
+      if (eliteSection) {
+        const rect = eliteSection.getBoundingClientRect();
+        setVisible(rect.top > window.innerHeight * 0.85);
       } else {
         setVisible(window.scrollY < window.innerHeight * 0.75);
       }
@@ -33,10 +33,12 @@ function SocialSidebar() {
 
   return (
     <div
-      className="fixed right-0 top-0 h-screen w-[128px] z-[55] hidden xl:flex flex-col transition-opacity duration-300"
+      className="fixed right-0 top-0 h-screen w-[128px] z-[55] hidden xl:flex flex-col transition-all duration-300"
       style={{
         opacity: visible ? 1 : 0,
+        transform: visible ? "translateX(0)" : "translateX(100%)",
         pointerEvents: visible ? "auto" : "none",
+        visibility: visible ? "visible" : "hidden",
       }}
     >
       {/* Black section – extends behind navbar */}

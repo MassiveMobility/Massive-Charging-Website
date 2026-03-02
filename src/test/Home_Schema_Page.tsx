@@ -278,6 +278,9 @@ export default function Home_Schema_Page({
         </section>
       )}
 
+      {/* Exclusive Membership */}
+      <SixthScroll />
+
       {/* EV Home Charging */}
       <SecondScroll />
 
@@ -290,8 +293,6 @@ export default function Home_Schema_Page({
       {/* EV Charging Guide */}
       <FifthScroll />
 
-      {/* Exclusive Membership */}
-      <SixthScroll />
     </div>
   );
 }
