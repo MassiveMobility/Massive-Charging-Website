@@ -86,22 +86,22 @@ const EVCarsCatalogue = ({ database }) => {
   if (!database) {
     return (
       <div className="h-screen w-full flex flex-col items-center justify-center bg-slate-50">
-        <Loader2 className="animate-spin text-blue-600 mb-4" size={48} />
+        <Loader2 className="animate-spin text-red-600 mb-4" size={48} />
         <p className="text-slate-600 font-semibold text-lg">Loading Vehicle Catalogue...</p>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-slate-100">
+    <div className="min-h-screen bg-rose-50">
       {/* ROW 1: HEADER */}
-      <header className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-14 px-8">
+      <header className="bg-gradient-to-br from-[#250505] via-[#3b0a0a] to-[#190606] text-white py-14 px-8">
         <div className="max-w-[1280px] mx-auto">
-          <div className="inline-block px-12 py-1.5 mb-4 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-xs font-bold uppercase tracking-wider">
+          <div className="inline-block px-12 py-1.5 mb-4 rounded-full bg-red-500/20 border border-red-400/30 text-red-300 text-xs font-bold uppercase tracking-wider">
             Complete EV Catalogue
           </div>
           <h1 className="text-4xl lg:text-5xl font-black mb-3 tracking-tight">
-            Electric <span className="text-blue-400">Cars Catalogue</span>
+            Electric <span className="text-red-400">Cars Catalogue</span>
           </h1>
           <p className="text-base text-slate-300 max-w-2xl leading-relaxed">
             Browse our comprehensive collection of electric vehicles with detailed specifications and charging guides.
@@ -126,7 +126,7 @@ const EVCarsCatalogue = ({ database }) => {
                   <input
                     type="text"
                     placeholder="Search by model or manufacturer..."
-                    className="w-full pl-10 pr-4 py-2.5 bg-white border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+                    className="w-full pl-10 pr-4 py-2.5 bg-white border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all"
                     value={catalogSearch}
                     onChange={(e) => setCatalogSearch(e.target.value)}
                   />
@@ -146,16 +146,16 @@ const EVCarsCatalogue = ({ database }) => {
                     onMouseLeave={() => setHoveredId(null)}
                     className={`group px-6 py-3 rounded-xl border-2 transition-all cursor-pointer ${
                       selectedId === car.Vehicle_ID
-                        ? "border-blue-600 bg-blue-50 shadow-md shadow-blue-100"
+                        ? "border-red-600 bg-red-50 shadow-md shadow-red-100"
                         : hoveredId === car.Vehicle_ID
-                        ? "border-blue-400 bg-blue-50/50 shadow-sm"
-                        : "border-slate-200 bg-white hover:border-blue-300"
+                        ? "border-red-400 bg-red-50/50 shadow-sm"
+                        : "border-slate-200 bg-white hover:border-red-300"
                     }`}
                   >
                     {/* Card Header */}
                     <div className="flex justify-between items-start mb-3">
                       <div className="flex-1">
-                        <span className="text-[9px] font-bold uppercase tracking-wider text-blue-600">
+                        <span className="text-[9px] font-bold uppercase tracking-wider text-red-600">
                           {car.Manufacturer}
                         </span>
                         <h3 className="text-base font-bold text-slate-900 leading-tight mt-0.5">
@@ -165,10 +165,10 @@ const EVCarsCatalogue = ({ database }) => {
                       <div
                         className={`p-2 rounded-lg transition-colors ${
                           selectedId === car.Vehicle_ID
-                            ? "bg-blue-600 text-white"
+                            ? "bg-red-600 text-white"
                             : hoveredId === car.Vehicle_ID
-                            ? "bg-blue-500 text-white"
-                            : "bg-slate-100 text-slate-400 group-hover:bg-blue-100 group-hover:text-blue-600"
+                            ? "bg-red-500 text-white"
+                            : "bg-slate-100 text-slate-400 group-hover:bg-red-100 group-hover:text-red-600"
                         }`}
                       >
                         <Car size={16} />
@@ -197,7 +197,7 @@ const EVCarsCatalogue = ({ database }) => {
                         size={14}
                         className={`ml-auto transition-transform ${
                           selectedId === car.Vehicle_ID || hoveredId === car.Vehicle_ID
-                            ? "translate-x-1 text-blue-600"
+                            ? "translate-x-1 text-red-600"
                             : "text-slate-300 group-hover:translate-x-0.5"
                         }`}
                       />
@@ -213,14 +213,14 @@ const EVCarsCatalogue = ({ database }) => {
                 <div className="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden transition-all duration-300">
                 {/* Details Header */}
                 <div className="bg-gradient-to-br from-slate-900 to-slate-800 p-6 text-white">
-                  <span className="inline-block px-3 py-1 rounded-lg bg-white/10 text-blue-300 text-[10px] font-bold uppercase tracking-wider mb-3 border border-white/20">
+                  <span className="inline-block px-3 py-1 rounded-lg bg-white/10 text-red-300 text-[10px] font-bold uppercase tracking-wider mb-3 border border-white/20">
                     {displayCar?.Manufacturer}
                   </span>
                   <h2 className="text-2xl font-black leading-tight mb-2 tracking-tight">
                     {displayCar?.Vehicle_Name}
                   </h2>
                   <div className="flex items-center gap-2 text-slate-300 text-sm">
-                    <Car size={13} className="text-blue-400" />
+                    <Car size={13} className="text-red-400" />
                     {displayCar?.details?.Vehicle_Variant || "Standard Model"}
                   </div>
                 </div>
@@ -229,22 +229,22 @@ const EVCarsCatalogue = ({ database }) => {
                 <div className="p-6 space-y-5">
                   <div className="grid grid-cols-2 gap-3">
                     <SpecCard
-                      icon={<IndianRupee size={16} className="text-blue-600" />}
+                      icon={<IndianRupee size={16} className="text-red-600" />}
                       label="Price"
                       value={displayCar?.details?.Price}
                     />
                     <SpecCard
-                      icon={<Battery size={16} className="text-emerald-600" />}
+                      icon={<Battery size={16} className="text-rose-600" />}
                       label="Battery"
                       value={displayCar?.details?.Battery_Capacity}
                     />
                     <SpecCard
-                      icon={<Navigation size={16} className="text-violet-600" />}
+                      icon={<Navigation size={16} className="text-red-500" />}
                       label="Claimed Range"
                       value={displayCar?.details?.Claimed_Range}
                     />
                     <SpecCard
-                      icon={<Gauge size={16} className="text-orange-600" />}
+                      icon={<Gauge size={16} className="text-rose-700" />}
                       label="Real Range"
                       value={displayCar?.details?.Realworld_Range}
                       highlight
@@ -260,7 +260,7 @@ const EVCarsCatalogue = ({ database }) => {
                       </p>
                     </div>
                     <div className="bg-slate-50 p-2.5 rounded-lg">
-                      <Zap className="text-blue-600" size={18} />
+                      <Zap className="text-red-600" size={18} />
                     </div>
                   </div>
 
@@ -270,7 +270,7 @@ const EVCarsCatalogue = ({ database }) => {
                     disabled={!displayCar?.details?.Guide_ID}
                     className={`w-full py-3.5 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition-all shadow-lg group ${
                       displayCar?.details?.Guide_ID
-                        ? "bg-blue-600 hover:bg-blue-700 text-white shadow-blue-500/20 cursor-pointer"
+                        ? "bg-red-600 hover:bg-red-700 text-white shadow-red-500/20 cursor-pointer"
                         : "bg-slate-300 text-slate-500 cursor-not-allowed shadow-slate-300/20"
                     }`}
                   >
@@ -295,7 +295,7 @@ const EVCarsCatalogue = ({ database }) => {
           guideToast.open ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3 pointer-events-none"
         }`}
       >
-        <div className="rounded-2xl px-5 py-4 border border-lime-200/60 bg-lime-200/20 backdrop-blur-xl shadow-xl">
+        <div className="rounded-2xl px-5 py-4 border border-red-200/70 bg-red-50/90 backdrop-blur-xl shadow-xl">
           <div className="text-slate-900 font-black text-sm mb-1">Guide Coming Soon</div>
           <div className="text-slate-700 text-xs leading-relaxed max-w-[420px]">{guideToast.msg}</div>
 
@@ -332,14 +332,14 @@ const EVCarsCatalogue = ({ database }) => {
 const SpecCard = ({ icon, label, value, highlight = false }) => (
   <div
     className={`rounded-lg p-6 border transition-all ${
-      highlight ? "bg-blue-50 border-blue-200" : "bg-white border-slate-200"
+      highlight ? "bg-red-50 border-red-200" : "bg-white border-slate-200"
     }`}
   >
     <div className="flex items-center gap-1.5 mb-1.5">
       {icon}
       <span className="text-[9px] uppercase font-bold text-slate-500 tracking-wider">{label}</span>
     </div>
-    <p className={`font-bold text-sm ${highlight ? "text-blue-600" : "text-slate-900"}`}>
+    <p className={`font-bold text-sm ${highlight ? "text-red-600" : "text-slate-900"}`}>
       {value || "N/A"}
     </p>
   </div>

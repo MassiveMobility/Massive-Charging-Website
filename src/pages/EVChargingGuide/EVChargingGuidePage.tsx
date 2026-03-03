@@ -4,6 +4,13 @@ import GuideCategoriesSection from "./GuideCategoriesSection";
 import "./EVChargingGuidePage.css";
 
 export default function EVChargingGuidePage() {
+  const handleExploreGuide = () => {
+    const section = document.getElementById("ev-guide-categories");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <div className="ev-guide">
       <section className="ev-guide__hero">
@@ -31,7 +38,7 @@ export default function EVChargingGuidePage() {
           </p>
 
           {/* Button */}
-          <FrontPageButton variant="primary" href="/charging-guide">
+          <FrontPageButton variant="primary" onClick={handleExploreGuide}>
             Explore the Guide
           </FrontPageButton>
         </div>

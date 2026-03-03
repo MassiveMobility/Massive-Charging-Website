@@ -85,7 +85,7 @@ export default function GuideCategoriesSection() {
   if (!database) return null;
 
   return (
-    <section className="guide-categories">
+    <section id="ev-guide-categories" className="guide-categories">
       <div className="guide-categories__container">
         <div className="guide-categories__wrapper">
           {/* Category Pills */}

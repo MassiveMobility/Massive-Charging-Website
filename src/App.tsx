@@ -197,6 +197,19 @@ function App() {
               <Route path="/EV-Trip-Report" element={<EVJourneyReport />} />
 
               <Route path="/charging-guide" element={<EVChargingGuidePage_New />} />
+              <Route
+                path="/charging-guide/ev-cars"
+                element={<EVCarsCatalogue database={vehicleGuideData} />}
+              />
+              <Route
+                path="/charging-guide/:slug"
+                element={
+                  <ChargingGuidePage
+                    vehicleGuideData={vehicleGuideData}
+                    coreMessageBlockData={coreMessageBlockData}
+                  />
+                }
+              />
 
               {/* Station biz */}
               <Route path="/charging-station-business-legacy" element={<StationBizHomePage />} />
