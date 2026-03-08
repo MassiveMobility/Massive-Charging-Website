@@ -48,10 +48,11 @@ export default function GuideCategoriesSection() {
       .slice(0, 6);
   }, [searchTerm, allVehicles]);
 
-  const tripReports = useMemo(() => {
-    if (!database || activeCategory !== "CAT_004") return [];
+  const categoryArticles = useMemo(() => {
+    if (!database || !["CAT_003", "CAT_004", "CAT_005"].includes(activeCategory))
+      return [];
     return (database.Category_Guide_Map || [])
-      .filter((item: any) => item.Category_ID === "CAT_004")
+      .filter((item: any) => item.Category_ID === activeCategory)
       .map((item: any) => {
         const guide = (database.Guide_article || []).find(
           (g: any) => g.Guide_ID === item.Guide_ID
@@ -73,7 +74,17 @@ export default function GuideCategoriesSection() {
   };
 
   const isEVChargingGuide = activeCategory === "CAT_002";
-  const isTripReportsCategory = activeCategory === "CAT_004";
+  const isArticleCategory = ["CAT_003", "CAT_004", "CAT_005"].includes(
+    activeCategory
+  );
+  const articleSectionTitle =
+    activeCategory === "CAT_004"
+      ? "EV Trip Reports"
+      : activeCategory === "CAT_003"
+      ? "EV Charging 101"
+      : "Charging Station Guides";
+  const articleCardLabel =
+    activeCategory === "CAT_004" ? "Trip Report" : "Guide";
 
   const categories = [
     { id: "CAT_002", name: "e-Vehicles Charging Guide", icon: <Zap size={18} /> },
@@ -288,19 +299,19 @@ export default function GuideCategoriesSection() {
                 )}
               </div>
             </div>
-          ) : isTripReportsCategory ? (
+          ) : isArticleCategory ? (
             <div className="guide-categories__trips">
               <div className="guide-categories__trips-header">
                 <h2 className="guide-categories__trips-title">
-                  EV Trip Reports
+                  {articleSectionTitle}
                 </h2>
                 <p className="guide-categories__trips-sub">
-                  Select a report to open the full article.
+                  Select an article to open the full page.
                 </p>
               </div>
-              {tripReports.length > 0 ? (
+              {categoryArticles.length > 0 ? (
                 <div className="guide-categories__trips-grid">
-                  {tripReports.map(({ guide, message }: any) => (
+                  {categoryArticles.map(({ guide, message }: any) => (
                     <button
                       key={`${guide.Guide_ID}-${message.cmsg_id}`}
                       onClick={() =>
@@ -312,7 +323,7 @@ export default function GuideCategoriesSection() {
                     >
                       <div>
                         <p className="guide-categories__trip-label">
-                          Trip Report
+                          {articleCardLabel}
                         </p>
                         <h3 className="guide-categories__trip-title">
                           {message.title}
@@ -325,7 +336,7 @@ export default function GuideCategoriesSection() {
               ) : (
                 <div className="guide-categories__coming-soon">
                   <p className="guide-categories__coming-soon-text">
-                    No trip reports available yet.
+                    No articles available yet.
                   </p>
                 </div>
               )}
