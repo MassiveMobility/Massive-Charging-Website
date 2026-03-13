@@ -1,34 +1,34 @@
-/* ── SixthScroll: Exclusive Membership ── */
+/* SixthScroll: Exclusive Membership */
 
 .sixth-scroll {
   background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0px 80px 80px;
+  padding: 0 80px 80px;
 }
 
 .sixth-scroll__card {
   position: relative;
   width: 100%;
-  max-width: 1280px;
+  max-width: none;
   background: #0d0d0d;
-  border-radius: 30px;
-  padding: 24px 32px 48px;
+  border-radius: clamp(20px, 2vw, 30px);
+  padding: clamp(20px, 2.2vw, 24px) clamp(16px, 2.6vw, 32px) clamp(36px, 3.8vw, 48px);
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
 }
 
-/* ── Top bar: badge + button ── */
+/* Top bar: badge */
 .sixth-scroll__top-bar {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   position: relative;
-  margin-bottom: 32px;
+  margin-bottom: clamp(22px, 2.4vw, 32px);
 }
 
 .sixth-scroll__badge-wrapper {
@@ -36,24 +36,23 @@
   display: inline-flex;
 }
 
-/* Star / diamond sparkle – top-right of the badge pill */
+/* Star / diamond sparkle at the top-right of the badge */
 .sixth-scroll__sparkle {
   position: absolute;
-  top: -26px;
-  right: 5px;
-  width: "5%";
-  height: "5%";
+  top: clamp(-26px, -1.3vw, -14px);
+  right: clamp(2px, 0.4vw, 8px);
+  width: clamp(18px, 1.8vw, 30px);
+  height: auto;
   mix-blend-mode: color-dodge;
   pointer-events: none;
 }
 
-/* "Exclusive Membership" pill button */
 .sixth-scroll__badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 60px;
-  padding: 0 32px;
+  min-height: clamp(48px, 3.8vw, 60px);
+  padding: 0 clamp(20px, 2.3vw, 32px);
   border-radius: 63px;
   border: 0.33px solid rgba(230, 232, 235, 0.25);
   background: linear-gradient(
@@ -66,8 +65,8 @@
 .sixth-scroll__badge-text {
   font-family: "Sora", sans-serif;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 21.73px;
+  font-size: clamp(18px, 1.6vw, 24px);
+  line-height: 1.1;
   background: linear-gradient(
     279.27deg,
     #707072 15.43%,
@@ -82,15 +81,15 @@
   background-clip: text;
 }
 
-/* ── Heading ── */
+/* Heading */
 .sixth-scroll__heading {
   font-family: "Urbanist", sans-serif;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 56px;
+  font-size: clamp(32px, 3.6vw, 56px);
+  line-height: clamp(40px, 4vw, 64px);
   letter-spacing: -0.005em;
   text-align: center;
-  margin-bottom: 8px;
+  margin: 0 0 clamp(8px, 1vw, 12px);
 }
 
 .sixth-scroll__heading-white {
@@ -111,20 +110,21 @@
   font-style: normal;
 }
 
-/* ── Subtitle row with bolt icon ── */
+/* Subtitle row with bolt icon */
 .sixth-scroll__subtitle {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: clamp(6px, 0.8vw, 12px);
+  margin-bottom: clamp(22px, 2.4vw, 32px);
 }
 
 .sixth-scroll__subtitle-text {
   font-family: "TT Fors Trial", sans-serif;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 32px;
+  font-size: clamp(16px, 1.35vw, 20px);
+  line-height: clamp(24px, 2vw, 32px);
   letter-spacing: 0.002em;
   text-align: center;
   color: #ffffff;
@@ -132,25 +132,25 @@
 
 .sixth-scroll__bolt-icon {
   width: auto;
-  height: 60px;
+  height: clamp(38px, 3.5vw, 60px);
   object-fit: contain;
 }
 
-/* ── Perk chips row ── */
+/* Perk chips row */
 .sixth-scroll__perks {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
-  margin-bottom: 32px;
+  gap: clamp(8px, 0.9vw, 12px);
+  margin-bottom: clamp(22px, 2.4vw, 32px);
 }
 
 .sixth-scroll__perk {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 46px;
-  padding: 8px 18px;
+  min-height: clamp(40px, 3.2vw, 46px);
+  padding: clamp(6px, 0.55vw, 8px) clamp(14px, 1.3vw, 18px);
   border-radius: 10.72px;
   opacity: 0.99;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -161,8 +161,8 @@
 .sixth-scroll__perk-text {
   font-family: "TT Fors Trial", sans-serif;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: clamp(14px, 1vw, 16px);
+  line-height: clamp(20px, 1.4vw, 24px);
   letter-spacing: 0.006em;
   background: linear-gradient(
     148.99deg,
@@ -176,13 +176,13 @@
   background-clip: text;
 }
 
-/* ── CTA Button ── */
+/* CTA Button */
 .sixth-scroll__cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 46px;
-  padding: 8px 18px;
+  min-height: clamp(40px, 3.2vw, 46px);
+  padding: clamp(6px, 0.55vw, 8px) clamp(14px, 1.3vw, 18px);
   gap: 8px;
   border-radius: 10.72px;
   opacity: 0.99;
@@ -209,64 +209,181 @@
 .sixth-scroll__cta-text {
   font-family: "TT Fors Trial", sans-serif;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: clamp(14px, 1vw, 16px);
+  line-height: clamp(20px, 1.4vw, 24px);
   letter-spacing: 0.006em;
   color: #0d0d0d;
 }
 
-/* ── Responsive ── */
+/* Responsive */
+@media (min-width: 1025px) {
+  .sixth-scroll__card {
+    padding: clamp(24px, 2.4vw, 32px) clamp(22px, 2.8vw, 40px) clamp(44px, 4.2vw, 58px);
+  }
+
+  .sixth-scroll__badge {
+    min-height: clamp(54px, 4vw, 68px);
+    padding: 0 clamp(24px, 2.6vw, 38px);
+  }
+
+  .sixth-scroll__badge-text {
+    font-size: clamp(20px, 1.8vw, 28px);
+  }
+
+  .sixth-scroll__heading {
+    font-size: clamp(40px, 4.5vw, 64px);
+    line-height: clamp(48px, 5vw, 72px);
+  }
+
+  .sixth-scroll__subtitle {
+    gap: clamp(8px, 1vw, 14px);
+  }
+
+  .sixth-scroll__subtitle-text {
+    font-size: clamp(18px, 1.55vw, 24px);
+    line-height: clamp(28px, 2.1vw, 36px);
+  }
+
+  .sixth-scroll__bolt-icon {
+    height: clamp(46px, 4vw, 68px);
+  }
+
+  .sixth-scroll__perks {
+    gap: clamp(10px, 1vw, 16px);
+  }
+
+  .sixth-scroll__perk {
+    min-height: clamp(44px, 3.4vw, 52px);
+    padding: clamp(8px, 0.65vw, 10px) clamp(16px, 1.45vw, 22px);
+  }
+
+  .sixth-scroll__perk-text {
+    font-size: clamp(16px, 1.15vw, 18px);
+    line-height: clamp(24px, 1.7vw, 28px);
+  }
+
+  .sixth-scroll__cta {
+    min-height: clamp(46px, 3.5vw, 54px);
+    padding: clamp(8px, 0.65vw, 10px) clamp(16px, 1.45vw, 22px);
+  }
+
+  .sixth-scroll__cta-text {
+    font-size: clamp(16px, 1.15vw, 18px);
+    line-height: clamp(24px, 1.7vw, 28px);
+  }
+}
+
+/* 125% display-scale like desktop: keep section slightly compact */
+@media (min-width: 1280px) and (max-width: 1700px) {
+  .sixth-scroll__card {
+    padding: clamp(22px, 2vw, 28px) clamp(20px, 2.4vw, 34px) clamp(40px, 3.8vw, 52px);
+  }
+
+  .sixth-scroll__badge-text {
+    font-size: clamp(18px, 1.5vw, 24px);
+  }
+
+  .sixth-scroll__heading {
+    font-size: clamp(36px, 4vw, 56px);
+    line-height: clamp(44px, 4.5vw, 64px);
+  }
+
+  .sixth-scroll__subtitle-text {
+    font-size: clamp(16px, 1.3vw, 21px);
+    line-height: clamp(24px, 1.9vw, 31px);
+  }
+
+  .sixth-scroll__perk-text,
+  .sixth-scroll__cta-text {
+    font-size: clamp(14px, 1vw, 16px);
+    line-height: clamp(20px, 1.45vw, 24px);
+  }
+}
+
+/* 100% display-scale like desktop: make section larger */
+@media (min-width: 1701px) {
+  .sixth-scroll__card {
+    padding: clamp(28px, 2.8vw, 38px) clamp(26px, 3vw, 46px) clamp(48px, 4.6vw, 64px);
+  }
+
+  .sixth-scroll__badge {
+    min-height: clamp(58px, 4.4vw, 74px);
+  }
+
+  .sixth-scroll__badge-text {
+    font-size: clamp(22px, 2vw, 32px);
+  }
+
+  .sixth-scroll__heading {
+    font-size: clamp(44px, 4.9vw, 72px);
+    line-height: clamp(52px, 5.5vw, 80px);
+  }
+
+  .sixth-scroll__subtitle-text {
+    font-size: clamp(20px, 1.7vw, 28px);
+    line-height: clamp(30px, 2.3vw, 40px);
+  }
+
+  .sixth-scroll__bolt-icon {
+    height: clamp(52px, 4.4vw, 76px);
+  }
+
+  .sixth-scroll__perk {
+    min-height: clamp(48px, 3.6vw, 58px);
+  }
+
+  .sixth-scroll__perk-text,
+  .sixth-scroll__cta-text {
+    font-size: clamp(17px, 1.3vw, 21px);
+    line-height: clamp(24px, 1.8vw, 30px);
+  }
+
+  .sixth-scroll__cta {
+    min-height: clamp(50px, 3.8vw, 60px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .sixth-scroll {
+    padding: 0 32px 56px;
+  }
+
+  .sixth-scroll__subtitle {
+    max-width: min(100%, 760px);
+  }
+}
+
 @media (max-width: 767px) {
   .sixth-scroll {
     padding: 40px 16px;
   }
 
   .sixth-scroll__card {
-    padding: 32px 20px 40px;
     border-radius: 20px;
+    padding: 26px 16px 34px;
   }
 
-  .sixth-scroll__heading {
-    font-size: 32px;
-    line-height: 40px;
-  }
-
-  .sixth-scroll__badge {
-    height: 48px;
-    padding: 0 20px;
-  }
-
-  .sixth-scroll__badge-text {
-    font-size: 18px;
-  }
-
-  .sixth-scroll__subtitle-text {
-    font-size: 16px;
-    line-height: 26px;
+  .sixth-scroll__subtitle {
+    gap: 8px;
   }
 
   .sixth-scroll__perks {
     gap: 8px;
   }
-
-  .sixth-scroll__perk {
-    height: 40px;
-    padding: 6px 14px;
-  }
-
-  .sixth-scroll__perk-text {
-    font-size: 14px;
-  }
 }
 
 @media (min-width: 1960px) {
   .sixth-scroll {
-    padding: 80px 240px;
+    padding-left: 240px;
+    padding-right: 240px;
+    padding-bottom: 80px;
   }
 }
 
 @media (min-width: 2400px) {
   .sixth-scroll {
-    padding: 80px 480px;
+    padding-left: 480px;
+    padding-right: 480px;
+    padding-bottom: 80px;
   }
 }

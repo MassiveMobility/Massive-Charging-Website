@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 
-type NavItem = { label: string; to: string };
+type NavItem = { label: string; to: string; canHighlight?: boolean };
 
 const FONT_STYLE: React.CSSProperties = {
   fontFamily: "'TT Fors Trial', Inter, sans-serif",
@@ -10,13 +10,14 @@ const FONT_STYLE: React.CSSProperties = {
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [isScale125Like, setIsScale125Like] = useState(false);
   const location = useLocation();
 
   const CHARGING_GUIDE_ROUTE = "/charging-guide";
   const BUSINESS_ROUTE = "/ev-charging-station-business";
   const PRICING_ROUTE = "/plans-offers";
 
-  const navItems = useMemo(
+  const navItems = useMemo<NavItem[]>(
     () => [
       { label: "Find Charging Stations", to: "/find-chargers", canHighlight: true },
       { label: "UPI Charging", to: "/upi-charging", canHighlight: true },
@@ -69,30 +70,98 @@ export default function Navbar() {
 
   const showBlackStrip = isHomePage && inHero;
 
+  // Approximate Windows 125% display scale on common 1920px screens.
+  // In this range we intentionally render larger desktop typography.
+  useEffect(() => {
+    const updateDesktopScale = () => {
+      const width = window.innerWidth;
+      setIsScale125Like(width >= 1280 && width <= 1700);
+    };
+    updateDesktopScale();
+    window.addEventListener("resize", updateDesktopScale);
+    return () => window.removeEventListener("resize", updateDesktopScale);
+  }, []);
+
+  const desktopBarGapClass = isScale125Like
+    ? "gap-[clamp(10px,1.15vw,24px)]"
+    : "gap-[clamp(12px,1.55vw,32px)]";
+  const desktopNavGapClass = isScale125Like
+    ? "gap-[clamp(10px,1.05vw,28px)]"
+    : "gap-[clamp(12px,1.35vw,40px)]";
+  const desktopNavTextClass = isScale125Like
+    ? "text-[clamp(12px,0.95vw,15px)] leading-[clamp(18px,1.35vw,24px)]"
+    : "text-[clamp(13px,1.05vw,17px)] leading-[clamp(20px,1.58vw,28px)]";
+  const desktopLogoHeight = isScale125Like ? "clamp(34px,2.3vw,43px)" : "clamp(36px,2.5vw,48px)";
+  const desktopCtaPadding = isScale125Like
+    ? "clamp(6px,0.55vw,9px) clamp(11px,1vw,17px)"
+    : "clamp(7px,0.62vw,10.5px) clamp(13px,1.2vw,21px)";
+  const desktopCtaFontSize = isScale125Like ? "clamp(12px,0.95vw,15px)" : "clamp(13px,1.05vw,17px)";
+  const desktopCtaLineHeight = isScale125Like
+    ? "clamp(18px,1.35vw,24px)"
+    : "clamp(20px,1.55vw,28px)";
+  const blackStripWidth = isScale125Like ? "clamp(95px,6.4vw,122px)" : "clamp(102px,6.9vw,132px)";
+
   return (
     <header className="sticky top-0 z-[58] w-full">
-      <div className="relative flex items-center gap-10 px-[80px] min-[1960px]:px-[240px] min-[2400px]:px-[480px] pt-6 pb-4 bg-white">
-        {/* Black strip at the right edge – only on home page hero area */}
+      <div
+        className={`relative flex items-center ${desktopBarGapClass} bg-white px-[clamp(16px,3.5vw,80px)] py-[clamp(14px,1.6vw,24px)] min-[1960px]:px-[240px] min-[2400px]:px-[480px]`}
+      >
+        {/* Black strip at the right edge - only on home page hero area */}
         <div
-          className="hidden xl:block absolute right-0 top-0 h-full bg-[#1A1A1A] transition-opacity duration-300"
-          style={{ width: 128, opacity: showBlackStrip ? 1 : 0 }}
+          className="absolute right-0 top-0 hidden h-full bg-[#1A1A1A] transition-opacity duration-300 lg:block"
+          style={{ width: blackStripWidth, opacity: showBlackStrip ? 1 : 0 }}
         />
-        {/* CTA Button – above sidebar z-[55], navbar bg doesn't create stacking context for this */}
+
+        {/* Logo */}
+        <Link to="/" className="flex-shrink-0">
+          <img
+            src="/massive-charging-logo.svg"
+            alt="Massive Charging"
+            style={{ height: desktopLogoHeight, width: "auto" }}
+          />
+        </Link>
+
+        {/* Desktop nav links */}
+        <div className="hidden min-w-0 flex-1 lg:flex lg:items-center lg:justify-center">
+          <ul className={`m-0 flex list-none items-center ${desktopNavGapClass} p-0`}>
+            {navItems.map((item) => (
+              <li key={item.label}>
+                {item.canHighlight ? (
+                  <NavLink
+                    to={item.to}
+                    style={FONT_STYLE}
+                    className={({ isActive }) =>
+                      `whitespace-nowrap pb-1 ${desktopNavTextClass} tracking-[0.002em] text-[#0C0C0C] no-underline transition-colors hover:no-underline ${
+                        isActive ? "border-b-2 border-[#E50000]" : "border-b-2 border-transparent"
+                      }`
+                    }
+                  >
+                    {item.label}
+                  </NavLink>
+                ) : (
+                  <Link
+                    to={item.to}
+                    style={FONT_STYLE}
+                    className={`whitespace-nowrap border-b-2 border-transparent pb-1 ${desktopNavTextClass} tracking-[0.002em] text-[#0C0C0C] no-underline transition-colors hover:no-underline`}
+                  >
+                    {item.label}
+                  </Link>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+
         <Link
           to={BUSINESS_ROUTE}
-          className="hidden xl:inline-flex items-center no-underline hover:no-underline hover:bg-[#c20000] transition-colors"
+          className="relative z-[60] ml-auto hidden flex-shrink-0 items-center no-underline transition-colors hover:bg-[#c20000] hover:no-underline lg:inline-flex"
           style={{
-            position: "absolute",
-            top: "50%",
-            right: 80,
-            transform: "translateY(-50%)",
-            zIndex: 60,
             borderRadius: 10.72,
             backgroundColor: "#E50000",
-            padding: "9.65px 19.3px",
+            padding: desktopCtaPadding,
             color: "#fff",
-            fontSize: 16,
-            lineHeight: "26px",
+            fontSize: desktopCtaFontSize,
+            lineHeight: desktopCtaLineHeight,
             letterSpacing: "0.002em",
             textDecoration: "none",
             whiteSpace: "nowrap",
@@ -102,46 +171,6 @@ export default function Navbar() {
         >
           Start Charging Station Business
         </Link>
-        {/* Logo */}
-        <Link to="/" className="flex-shrink-0">
-          <img
-            src="/massive-charging-logo.svg"
-            alt="Massive Charging"
-            style={{ height: 45, width: "auto" }}
-          />
-        </Link>
-
-        {/* Desktop nav links */}
-        <ul className="hidden lg:flex items-center gap-9 list-none m-0 p-0">
-          {navItems.map((item) => (
-            <li key={item.label}>
-              {item.canHighlight ? (
-                <NavLink
-                  to={item.to}
-                  style={FONT_STYLE}
-                  className={({ isActive }) =>
-                    `text-[16px] leading-[26px] tracking-[0.002em] text-[#0C0C0C] whitespace-nowrap pb-1 border-b-2 transition-colors no-underline hover:no-underline ${
-                      isActive ? "border-[#E50000]" : "border-transparent"
-                    }`
-                  }
-                >
-                  {item.label}
-                </NavLink>
-              ) : (
-                <Link
-                  to={item.to}
-                  style={FONT_STYLE}
-                  className="text-[16px] leading-[26px] tracking-[0.002em] text-[#0C0C0C] whitespace-nowrap pb-1 border-b-2 border-transparent no-underline hover:no-underline transition-colors"
-                >
-                  {item.label}
-                </Link>
-              )}
-            </li>
-          ))}
-        </ul>
-
-        {/* Spacer */}
-        <div className="flex-1" />
 
         {/* Mobile hamburger */}
         <div className="ml-auto lg:hidden">
@@ -170,8 +199,8 @@ export default function Navbar() {
             aria-label="Close menu"
           />
 
-          <div className="absolute right-0 top-0 h-full w-[86%] max-w-sm bg-white shadow-2xl border-l border-gray-200">
-            <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
+          <div className="absolute right-0 top-0 h-full w-[86%] max-w-sm border-l border-gray-200 bg-white shadow-2xl">
+            <div className="flex items-center justify-between border-b border-gray-100 px-6 py-4">
               <Link to="/" className="flex items-center gap-3">
                 <img
                   src="/massive-charging-logo.svg"
@@ -185,7 +214,7 @@ export default function Navbar() {
                 className="rounded-lg bg-gray-100 px-3 py-2 text-[#131313] hover:bg-gray-200 focus:outline-none"
                 aria-label="Close menu"
               >
-                ✕
+                X
               </button>
             </div>
 
@@ -197,9 +226,9 @@ export default function Navbar() {
                     to={item.to}
                     style={FONT_STYLE}
                     className={({ isActive }) =>
-                      `rounded-lg px-4 py-3 text-[16px] leading-[26px] tracking-[0.002em] no-underline hover:no-underline transition ${
+                      `rounded-lg px-4 py-3 text-[16px] leading-[26px] tracking-[0.002em] no-underline transition hover:no-underline ${
                         isActive
-                          ? "bg-red-50 text-[#E50000] border-l-2 border-[#E50000]"
+                          ? "border-l-2 border-[#E50000] bg-red-50 text-[#E50000]"
                           : "text-[#0C0C0C] hover:bg-gray-50"
                       }`
                     }
@@ -209,10 +238,10 @@ export default function Navbar() {
                 ))}
               </div>
 
-              <div className="mt-6 pt-4 border-t border-gray-100">
+              <div className="mt-6 border-t border-gray-100 pt-4">
                 <Link
                   to={BUSINESS_ROUTE}
-                  className="inline-flex items-center justify-center w-full rounded-[10.72px] bg-[#E50000] px-[19.3px] py-[9.65px] text-white text-[16px] leading-[26px] tracking-[0.002em] no-underline hover:bg-[#c20000] hover:no-underline transition-colors"
+                  className="inline-flex w-full items-center justify-center rounded-[10.72px] bg-[#E50000] px-[19.3px] py-[9.65px] text-[16px] leading-[26px] tracking-[0.002em] text-white no-underline transition-colors hover:bg-[#c20000] hover:no-underline"
                   style={FONT_STYLE}
                 >
                   Start Charging Station Business

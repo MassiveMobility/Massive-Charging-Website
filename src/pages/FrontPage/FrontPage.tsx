@@ -13,8 +13,11 @@ const APPSTORE_URL =
   "https://apps.apple.com/in/app/1c-ev-charging/id6478754214";
 
 /* -------- Social Sidebar -------- */
-function SocialSidebar() {
+function SocialSidebar({ isScale125Like }: { isScale125Like: boolean }) {
   const [visible, setVisible] = useState(true);
+  const sidebarIconSize = isScale125Like ? 24 : 30;
+  const sidebarIconStroke = isScale125Like ? 1.5 : 1.7;
+  const sidebarGapClass = isScale125Like ? "gap-[clamp(20px,2.3vw,32px)]" : "gap-[clamp(24px,2.6vw,38px)]";
 
   useEffect(() => {
     const onScroll = () => {
@@ -33,8 +36,9 @@ function SocialSidebar() {
 
   return (
     <div
-      className="fixed right-0 top-0 h-screen w-[128px] z-[55] hidden xl:flex flex-col transition-all duration-300"
+      className="fixed right-0 top-0 z-[55] hidden h-screen flex-col transition-all duration-300 lg:flex"
       style={{
+        width: "clamp(96px, 7vw, 128px)",
         opacity: visible ? 1 : 0,
         transform: visible ? "translateX(0)" : "translateX(100%)",
         pointerEvents: visible ? "auto" : "none",
@@ -42,16 +46,16 @@ function SocialSidebar() {
       }}
     >
       {/* Black section – extends behind navbar */}
-      <div className="bg-[#1A1A1A]" style={{ height: 284 }} />
+      <div className="bg-[#1A1A1A]" style={{ height: "clamp(224px, 22vh, 284px)" }} />
 
       {/* Red section – all icons including search */}
-      <div className="bg-[#E50000] flex-1 flex flex-col items-center justify-center gap-[32px] px-[52px] py-[66px]">
+      <div className={`flex flex-1 flex-col items-center justify-center ${sidebarGapClass} bg-[#E50000] px-[clamp(34px,2.8vw,52px)] py-[clamp(40px,4vw,66px)]`}>
         {/* Search */}
         <a
           href="/charging-guide"
           className="text-white hover:text-gray-200 transition-colors"
         >
-          <Search size={24} strokeWidth={1.5} />
+          <Search size={sidebarIconSize} strokeWidth={sidebarIconStroke} />
         </a>
         {/* Facebook */}
         <a
@@ -61,12 +65,12 @@ function SocialSidebar() {
           className="text-white hover:text-gray-200 transition-colors"
         >
           <svg
-            width="24"
-            height="24"
+            width={sidebarIconSize}
+            height={sidebarIconSize}
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            strokeWidth="1.5"
+            strokeWidth={sidebarIconStroke}
             strokeLinecap="round"
             strokeLinejoin="round"
           >
@@ -80,7 +84,7 @@ function SocialSidebar() {
           rel="noopener noreferrer"
           className="text-white hover:text-gray-200 transition-colors"
         >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <svg width={sidebarIconSize} height={sidebarIconSize} viewBox="0 0 24 24" fill="currentColor">
             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
           </svg>
         </a>
@@ -92,12 +96,12 @@ function SocialSidebar() {
           className="text-white hover:text-gray-200 transition-colors"
         >
           <svg
-            width="24"
-            height="24"
+            width={sidebarIconSize}
+            height={sidebarIconSize}
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            strokeWidth="1.5"
+            strokeWidth={sidebarIconStroke}
             strokeLinecap="round"
             strokeLinejoin="round"
           >
@@ -114,12 +118,12 @@ function SocialSidebar() {
           className="text-white hover:text-gray-200 transition-colors"
         >
           <svg
-            width="24"
-            height="24"
+            width={sidebarIconSize}
+            height={sidebarIconSize}
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            strokeWidth="1.5"
+            strokeWidth={sidebarIconStroke}
             strokeLinecap="round"
             strokeLinejoin="round"
           >
@@ -133,14 +137,30 @@ function SocialSidebar() {
 }
 
 /* -------- Live Charging Card -------- */
-function LiveChargingCard({ name }: { name: string }) {
+function LiveChargingCard({
+  name,
+  isScale125Like,
+}: {
+  name: string;
+  isScale125Like: boolean;
+}) {
+  const cardClass = isScale125Like
+    ? "flex items-center justify-between rounded-[10px] border border-gray-200 bg-white px-[clamp(12px,1vw,16px)] py-[clamp(9px,0.8vw,12px)]"
+    : "flex items-center justify-between rounded-[10px] border border-gray-200 bg-white px-[clamp(15px,1.3vw,20px)] py-[clamp(12px,1vw,15px)]";
+  const cardMinHeight = isScale125Like
+    ? "clamp(64px, 4.7vw, 88px)"
+    : "clamp(76px, 5.3vw, 104px)";
+  const titleClass = isScale125Like
+    ? "text-[clamp(17px,1.28vw,26px)] leading-[clamp(25px,1.85vw,35px)] tracking-[0.002em] text-black"
+    : "text-[clamp(19px,1.45vw,28px)] leading-[clamp(27px,1.95vw,36px)] tracking-[0.002em] text-black";
+  const liveClass = isScale125Like
+    ? "inline-flex items-center justify-center rounded-[14px] border border-[#B5BCC5] px-[clamp(10px,0.82vw,14px)] py-0.5 text-[clamp(13px,0.98vw,16px)] leading-[21px]"
+    : "inline-flex items-center justify-center rounded-[16px] border border-[#B5BCC5] px-[clamp(10px,0.85vw,14px)] py-0.5 text-[clamp(14px,0.95vw,16px)] leading-[22px]";
+
   return (
-    <div
-      className="flex items-center justify-between rounded-[8px] border-[0.6px] border-gray-200 bg-white px-[13px] py-[9px]"
-      style={{ height: 44 }}
-    >
+    <div className={cardClass} style={{ minHeight: cardMinHeight }}>
       <span
-        className="text-[16px] leading-[26px] tracking-[0.002em] text-black"
+        className={titleClass}
         style={{
           fontFamily: "'TT Fors Trial', Inter, sans-serif",
           fontWeight: 400,
@@ -148,14 +168,7 @@ function LiveChargingCard({ name }: { name: string }) {
       >
         {name}
       </span>
-      <span
-        className="inline-flex items-center justify-center rounded-[12px] border-[0.4px] border-[#B5BCC5] px-3 py-0.5 text-[12px] leading-[18px]"
-        style={{
-          background: "#CCDCF19C",
-          fontFamily: "'TT Fors Trial', Inter, sans-serif",
-          fontWeight: 400,
-        }}
-      >
+      <span className={liveClass} style={{ background: "#CCDCF19C", fontFamily: "'TT Fors Trial', Inter, sans-serif", fontWeight: 400 }}>
         Live
       </span>
     </div>
@@ -163,17 +176,24 @@ function LiveChargingCard({ name }: { name: string }) {
 }
 
 /* -------- Live Charging Cards Panel -------- */
-function LiveChargingCardsPanel() {
+function LiveChargingCardsPanel({ isScale125Like }: { isScale125Like: boolean }) {
   const stations = [
     "Gomti Nagar Charging Station",
     "Kalkaji EV Charging Station",
     "Wave City Center Charging Station",
   ];
 
+  const panelClass = isScale125Like
+    ? "w-full max-w-[min(100%,680px)] rounded-[18px] border border-gray-100 bg-white p-[clamp(20px,1.7vw,28px)] shadow-lg"
+    : "w-full max-w-[min(100%,780px)] rounded-[20px] border border-gray-100 bg-white p-[clamp(22px,2vw,32px)] shadow-lg";
+  const panelTextClass = isScale125Like
+    ? "mb-[clamp(11px,1.02vw,17px)] text-[clamp(15px,1.12vw,21px)] leading-[clamp(23px,1.68vw,30px)] tracking-[0.003em] text-[#707070]"
+    : "mb-[clamp(12px,1.1vw,18px)] text-[clamp(16px,1.2vw,21px)] leading-[clamp(24px,1.7vw,30px)] tracking-[0.003em] text-[#707070]";
+
   return (
-    <div className="w-full max-w-[504px] rounded-[16px] border border-gray-100 bg-white p-[22px] shadow-lg">
+    <div className={panelClass}>
       <p
-        className="mb-4 text-[14px] leading-[22px] tracking-[0.003em] text-[#707070]"
+        className={panelTextClass}
         style={{
           fontFamily: "'TT Fors Trial', Inter, sans-serif",
           fontWeight: 400,
@@ -181,9 +201,9 @@ function LiveChargingCardsPanel() {
       >
         Live charging Stations.
       </p>
-      <div className="flex flex-col gap-3">
+      <div className={`flex flex-col ${isScale125Like ? "gap-4" : "gap-3.5"}`}>
         {stations.map((station, i) => (
-          <LiveChargingCard key={i} name={station} />
+          <LiveChargingCard key={i} name={station} isScale125Like={isScale125Like} />
         ))}
       </div>
     </div>
@@ -298,24 +318,53 @@ function AppStoreBadge() {
 /*  MAIN PAGE COMPONENT                                               */
 /* ================================================================== */
 export default function FrontPage() {
+  const [isScale125Like, setIsScale125Like] = useState(false);
+
+  useEffect(() => {
+    const updateDesktopScale = () => {
+      const width = window.innerWidth;
+      setIsScale125Like(width >= 1280 && width <= 1700);
+    };
+    updateDesktopScale();
+    window.addEventListener("resize", updateDesktopScale);
+    return () => window.removeEventListener("resize", updateDesktopScale);
+  }, []);
+
+  const heroBadgeTextClass = isScale125Like
+    ? "text-[clamp(15px,1.08vw,20px)] leading-[clamp(23px,1.6vw,30px)] tracking-[0.003em] text-[#131313]"
+    : "text-[clamp(18px,1.3vw,24px)] leading-[clamp(26px,1.8vw,34px)] tracking-[0.003em] text-[#131313]";
+  const heroHeadingClass = isScale125Like
+    ? "text-[clamp(56px,4.2vw,88px)] leading-[clamp(64px,4.8vw,102px)] tracking-[-0.006em] text-[#131313]"
+    : "text-[clamp(62px,4.7vw,102px)] leading-[clamp(70px,5.2vw,114px)] tracking-[-0.006em] text-[#131313]";
+  const heroSubtitleClass = isScale125Like
+    ? "text-[clamp(20px,1.52vw,32px)] leading-[clamp(30px,2.2vw,42px)] tracking-[0.002em] text-[#131313]"
+    : "text-[clamp(24px,1.85vw,36px)] leading-[clamp(34px,2.5vw,48px)] tracking-[0.002em] text-[#131313]";
+  const heroButtonGapClass = isScale125Like
+    ? "flex flex-wrap items-center gap-[clamp(10px,0.9vw,18px)]"
+    : "flex flex-wrap items-center gap-[clamp(14px,1.25vw,22px)]";
+  const heroButtonSizeClass = isScale125Like
+    ? "lg:px-[26px] lg:py-[11px] lg:text-[20px] lg:leading-[32px]"
+    : "lg:px-[32px] lg:py-[14px] lg:text-[24px] lg:leading-[38px]";
+  const heroMaxWidth = isScale125Like ? "min(100%, 680px)" : "min(100%, 820px)";
+
   return (
     <div className="bg-white">
       {/* Social Sidebar – outside hero so overflow-hidden doesn't affect it */}
-      <SocialSidebar />
+      <SocialSidebar isScale125Like={isScale125Like} />
 
       {/* Hero viewport */}
       <div className="relative min-h-screen overflow-hidden">
         {/* Hero Section */}
-        <section className="relative flex items-center min-h-[calc(100vh-80px)] xl:pr-[128px]">
-          <div className="w-full mx-auto px-[80px] py-20 min-[1960px]:px-[240px] min-[2400px]:px-[480px]">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <section className="relative flex min-h-[calc(100vh-84px)] items-center lg:pr-[clamp(96px,7vw,128px)]">
+          <div className="mx-auto w-full px-[clamp(16px,3.5vw,80px)] py-[clamp(48px,6vw,80px)]">
+            <div className="grid grid-cols-1 items-center gap-[clamp(24px,4vw,48px)] lg:grid-cols-2">
               {/* Left Column */}
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-[clamp(16px,2vw,24px)]">
                 {/* Badge: Charging Network Is Live */}
                 <div className="inline-flex items-center gap-[10px] self-start rounded-full border border-gray-200 px-[10px] py-[3px]">
                   <span className="block w-[8px] h-[8px] rounded-full bg-[#41BA15]" />
                   <span
-                    className="text-[14px] leading-[22px] tracking-[0.003em] text-[#131313]"
+                    className={heroBadgeTextClass}
                     style={{
                       fontFamily: "'TT Fors Trial', Inter, sans-serif",
                       fontWeight: 400,
@@ -327,21 +376,30 @@ export default function FrontPage() {
 
                 {/* Heading */}
                 <h1
-                  className="text-[64px] leading-[72px] tracking-[-0.006em] text-[#131313]"
+                  className={heroHeadingClass}
                   style={{
                     fontFamily:
                       "'ITC Avant Garde Gothic Std', 'Public Sans', sans-serif",
-                    fontWeight: 700,
-                    maxWidth: 460,
+                    fontWeight: 800,
+                    maxWidth: heroMaxWidth,
                   }}
                 >
-                  Find Charger Anytime.{" "}
+                  Find Charger
+                  {isScale125Like ? (
+                    <>
+                      <br />
+                      Anytime.
+                      <br />
+                    </>
+                  ) : (
+                    " Anytime. "
+                  )}
                   <span className="text-[#E50000]">Anywhere.</span>
                 </h1>
 
                 {/* Subtitle */}
                 <p
-                  className="text-[20px] leading-[32px] tracking-[0.002em] text-[#131313]"
+                  className={heroSubtitleClass}
                   style={{
                     fontFamily: "'TT Fors Trial', Inter, sans-serif",
                     fontWeight: 400,
@@ -351,25 +409,27 @@ export default function FrontPage() {
                 </p>
 
                 {/* CTA Buttons */}
-                <div className="flex items-center gap-5 flex-wrap">
+                <div className={heroButtonGapClass}>
                   <FrontPageButton
                     variant="primary"
-                    icon={<Search size={18} />}
+                    icon={<Search size={isScale125Like ? 24 : 30} />}
                     href="/charging-guide"
+                    className={heroButtonSizeClass}
                   >
                     Find Chargers
                   </FrontPageButton>
                   <FrontPageButton
                     variant="outline"
-                    icon={<Download size={18} />}
+                    icon={<Download size={isScale125Like ? 24 : 30} />}
                     href={PLAYSTORE_URL}
+                    className={heroButtonSizeClass}
                   >
                     Get App
                   </FrontPageButton>
                 </div>
 
                 {/* Store Badges */}
-                <div className="flex items-center gap-3 flex-wrap">
+                <div className="flex flex-wrap items-center gap-[clamp(8px,0.9vw,12px)]">
                   <GooglePlayBadge />
                   <AppStoreBadge />
                 </div>
@@ -377,7 +437,7 @@ export default function FrontPage() {
 
               {/* Right Column – Live Charging Cards */}
               <div className="flex justify-center lg:justify-end">
-                <LiveChargingCardsPanel />
+                <LiveChargingCardsPanel isScale125Like={isScale125Like} />
               </div>
             </div>
           </div>
