@@ -1,5 +1,12 @@
-﻿import React, { useState, useMemo } from "react";
+import React, { useState, useMemo } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
+const slugifyTitle = (text = "") =>
+  text
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-");
 
 const ChargingGuidePage = ({ vehicleGuideData, coreMessageBlockData }) => {
   const { slug } = useParams();
@@ -13,9 +20,11 @@ const ChargingGuidePage = ({ vehicleGuideData, coreMessageBlockData }) => {
   }
 
   // 1. Find message by URL slug
-  const message = vehicleGuideData.Core_message.find(
-    (msg) => msg.title.toLowerCase().replace(/ /g, "-") === slug
-  );
+  const message = vehicleGuideData.Core_message.find((msg) => {
+    const normalized = slugifyTitle(msg.title);
+    const legacy = msg.title.toLowerCase().replace(/ /g, "-");
+    return normalized === slug || legacy === slug;
+  });
 
   if (!message) {
     return <div className="p-10 text-center">Guide not found.</div>;
@@ -62,7 +71,7 @@ const ChargingGuidePage = ({ vehicleGuideData, coreMessageBlockData }) => {
         (m) => m.cmsg_id === guideArticle.cmsg_id
       );
       if (msg) {
-        const nextSlug = msg.title.toLowerCase().replace(/ /g, "-");
+        const nextSlug = slugifyTitle(msg.title);
         navigate(`/charging-guide/${nextSlug}`);
         setSearchQuery("");
         setIsSearchFocused(false);
@@ -307,3 +316,7 @@ const TableRenderer = ({ rawText }) => {
 };
 
 export default ChargingGuidePage;
+
+
+
+

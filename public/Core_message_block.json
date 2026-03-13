@@ -1659,6 +1659,1306 @@
       "src": "",
       "alt": "",
       "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_105_001",
+      "cmsg_id": "MSG_105",
+      "block_order": "1",
+      "block_type": "heading_1",
+      "text": "Is EV Charging Profitable in India? Realistic Earnings & Break-Even (2026)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_105_002",
+      "cmsg_id": "MSG_105",
+      "block_order": "2",
+      "block_type": "body",
+      "text": "If you’re thinking of putting money into an EV charging station, the real question is not “Will EV charging grow?” Everyone already knows EV adoption is increasing. The real question is simpler and more practical: will this specific charging station make money, and how long will it take to recover what you spent?",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_105_003",
+      "cmsg_id": "MSG_105",
+      "block_order": "3",
+      "block_type": "body",
+      "text": "EV charging can be profitable in India, but it’s not automatic. Some locations do well quickly, and some struggle for months because the site selection is wrong or costs are not planned properly. In plain English, profitability depends on two things: steady usage and controlled costs.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_105_004",
+      "cmsg_id": "MSG_105",
+      "block_order": "4",
+      "block_type": "heading_2",
+      "text": "How an EV charging station makes money (simple version)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_105_005",
+      "cmsg_id": "MSG_105",
+      "block_order": "5",
+      "block_type": "body",
+      "text": "The basic business model is straightforward. A customer plugs in, charges, pays you, and you keep the difference after your costs. The confusion happens because many first-time investors assume “charging price minus electricity price” is the profit. In reality, there are a few more moving parts.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_105_006",
+      "cmsg_id": "MSG_105",
+      "block_order": "6",
+      "block_type": "list",
+      "text": "- Revenue: what the customer pays you (per unit / per session)\n- Direct cost: what you pay for electricity (plus payment/platform charges)\n- Operating costs: rent or revenue share, internet, maintenance/AMC, small manpower costs (if any), and the silent loss from downtime",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_105_007",
+      "cmsg_id": "MSG_105",
+      "block_order": "7",
+      "block_type": "body",
+      "text": "So profitability is not only about setting a high price. It is about utilisation (how often people charge at your location) and uptime (whether your charger is working reliably).",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_105_008",
+      "cmsg_id": "MSG_105",
+      "block_order": "8",
+      "block_type": "heading_2",
+      "text": "The biggest driver: utilisation (how much the charger is used)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_105_009",
+      "cmsg_id": "MSG_105",
+      "block_order": "9",
+      "block_type": "body",
+      "text": "Utilisation simply means how much the charger is actually being used. A charger installed in the wrong place can sit idle even if it is a top brand. On the other hand, even a basic setup in a location with real demand can perform well.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_105_010",
+      "cmsg_id": "MSG_105",
+      "block_order": "10",
+      "block_type": "list",
+      "text": "- Is the location easy to find and enter?\n- Do vehicles already park there long enough to charge?\n- Is it on a route EV owners actually take?\n- Is the charger reliable and payment smooth?\n- How much competition is nearby?",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_105_011",
+      "cmsg_id": "MSG_105",
+      "block_order": "11",
+      "block_type": "heading_2",
+      "text": "Typical earnings: what’s realistic?",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_105_012",
+      "cmsg_id": "MSG_105",
+      "block_order": "12",
+      "block_type": "body",
+      "text": "Instead of one income number, it’s better to think in scenarios. These are not guarantees — they’re patterns you will commonly see.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_105_013",
+      "cmsg_id": "MSG_105",
+      "block_order": "13",
+      "block_type": "heading_3",
+      "text": "Low-demand site (slow start)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_105_014",
+      "cmsg_id": "MSG_105",
+      "block_order": "14",
+      "block_type": "body",
+      "text": "This happens when the area doesn’t yet have enough EV users, the station is not visible, or the site is inconvenient. Usage stays low and break-even becomes long.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_105_015",
+      "cmsg_id": "MSG_105",
+      "block_order": "15",
+      "block_type": "heading_3",
+      "text": "Medium-demand site (stable performance)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_105_016",
+      "cmsg_id": "MSG_105",
+      "block_order": "16",
+      "block_type": "body",
+      "text": "You start seeing daily charging, repeat customers, and predictable weekly patterns. The station can produce a decent monthly surplus and the break-even timeline becomes clearer.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_105_017",
+      "cmsg_id": "MSG_105",
+      "block_order": "17",
+      "block_type": "heading_3",
+      "text": "High-demand site (strong performance)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_105_018",
+      "cmsg_id": "MSG_105",
+      "block_order": "18",
+      "block_type": "body",
+      "text": "This is common in high-traffic commercial hubs, strategic highway points, or fleet-linked locations. The money can be good, but uptime and operations become critical.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_105_019",
+      "cmsg_id": "MSG_105",
+      "block_order": "19",
+      "block_type": "heading_2",
+      "text": "Break-even: how long does it take?",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_105_020",
+      "cmsg_id": "MSG_105",
+      "block_order": "20",
+      "block_type": "body",
+      "text": "Break-even is simply the time it takes to recover your initial setup cost.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_105_021",
+      "cmsg_id": "MSG_105",
+      "block_order": "21",
+      "block_type": "list",
+      "text": "- Setup cost ÷ Net monthly profit = break-even months\n- Example: ₹20 lakh setup cost with ₹1 lakh net profit/month → ~20 months\n- Example: ₹20 lakh setup cost with ₹30,000 net profit/month → 66+ months",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_105_022",
+      "cmsg_id": "MSG_105",
+      "block_order": "22",
+      "block_type": "heading_2",
+      "text": "What reduces profit the most (common mistakes)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_105_023",
+      "cmsg_id": "MSG_105",
+      "block_order": "23",
+      "block_type": "list",
+      "text": "- Choosing location based on cheap rent, not demand\n- Over-investing in fast charging without proven utilisation\n- High revenue share / unclear terms with the property owner\n- Underestimating power and electrical costs\n- Downtime due to weak service support\n- Poor visibility and poor user experience (entry/exit, blocked bays, payment issues)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_105_024",
+      "cmsg_id": "MSG_105",
+      "block_order": "24",
+      "block_type": "heading_2",
+      "text": "So, is EV charging profitable in India in 2026?",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_105_025",
+      "cmsg_id": "MSG_105",
+      "block_order": "25",
+      "block_type": "body",
+      "text": "Yes — it can be profitable. But it behaves more like a retail + infrastructure business than a passive investment. If you treat it as “install and forget,” it may struggle. If you choose the right location, set it up cleanly, keep it reliable, and make the experience smooth, the economics improve a lot.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_106_001",
+      "cmsg_id": "MSG_106",
+      "block_order": "1",
+      "block_type": "heading_1",
+      "text": "How to Start an EV Charging Station Business in India (Beginner-Friendly Checklist)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_106_002",
+      "cmsg_id": "MSG_106",
+      "block_order": "2",
+      "block_type": "body",
+      "text": "Starting an EV charging station in India can feel confusing at first because people mix up two things: setting up a charger inside a private space (like a society or office), and setting up a public or semi-public charging point where anyone can come and charge.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_106_003",
+      "cmsg_id": "MSG_106",
+      "block_order": "3",
+      "block_type": "body",
+      "text": "You don’t need to be an engineer to get started. If you approach it step-by-step, most of the work is planning, choosing the right location, and coordinating with the right vendor and electricity connection.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_106_004",
+      "cmsg_id": "MSG_106",
+      "block_order": "4",
+      "block_type": "heading_2",
+      "text": "Step 1: Decide what kind of charging business you are building",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_106_005",
+      "cmsg_id": "MSG_106",
+      "block_order": "5",
+      "block_type": "body",
+      "text": "Be clear about your model. This decision affects cost, timeline, and profitability.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_106_006",
+      "cmsg_id": "MSG_106",
+      "block_order": "6",
+      "block_type": "list",
+      "text": "- Apartment/society charging\n- Office / workplace charging\n- Commercial parking (mall, retail, hotel)\n- Highway / main road charging\n- Fleet/depot charging",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_106_007",
+      "cmsg_id": "MSG_106",
+      "block_order": "7",
+      "block_type": "heading_2",
+      "text": "Step 2: Choose the site (this is where most success or failure happens)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_106_008",
+      "cmsg_id": "MSG_106",
+      "block_order": "8",
+      "block_type": "body",
+      "text": "A decent charger at a great site usually beats a premium charger at a weak site.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_106_009",
+      "cmsg_id": "MSG_106",
+      "block_order": "9",
+      "block_type": "list",
+      "text": "- Easy entry/exit and enough turning space\n- Safe, well-lit parking area\n- Some “waiting value” nearby (shops, cafe, office lobby)\n- Clear visibility (or easy Google Maps discoverability)\n- Electricity availability and a realistic path to upgrade if needed",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_106_010",
+      "cmsg_id": "MSG_106",
+      "block_order": "10",
+      "block_type": "heading_2",
+      "text": "Step 3: Check power availability and load (don’t skip this)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_106_011",
+      "cmsg_id": "MSG_106",
+      "block_order": "11",
+      "block_type": "body",
+      "text": "Power is the most common reason projects get delayed. Ask these early:",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_106_012",
+      "cmsg_id": "MSG_106",
+      "block_order": "12",
+      "block_type": "list",
+      "text": "- What connection already exists at the site?\n- Is the sanctioned load enough, or will you need load enhancement?\n- Where will the panel be, and what is the cabling route?\n- Is the wiring distance reasonable (long runs add cost)?",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_106_013",
+      "cmsg_id": "MSG_106",
+      "block_order": "13",
+      "block_type": "heading_2",
+      "text": "Step 4: Decide AC vs DC (keep it practical)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_106_014",
+      "cmsg_id": "MSG_106",
+      "block_order": "14",
+      "block_type": "list",
+      "text": "- If cars park for hours (society/office/hotel): AC usually works\n- If users expect quick top-ups (highway/busy hub): DC makes more sense, but costs more",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_106_015",
+      "cmsg_id": "MSG_106",
+      "block_order": "15",
+      "block_type": "body",
+      "text": "A common beginner mistake is buying fast charging because it sounds premium, and then realising the location doesn’t generate enough usage to justify the investment.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_106_016",
+      "cmsg_id": "MSG_106",
+      "block_order": "16",
+      "block_type": "heading_2",
+      "text": "Step 5: Finalise vendor + service support (uptime is your real product)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_106_017",
+      "cmsg_id": "MSG_106",
+      "block_order": "17",
+      "block_type": "body",
+      "text": "Customers don’t care which brand you installed if it is offline when they arrive. Ask vendors:",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_106_018",
+      "cmsg_id": "MSG_106",
+      "block_order": "18",
+      "block_type": "list",
+      "text": "- Who provides on-ground service in your city?\n- Typical response time?\n- What’s included in warranty and AMC?\n- How are payment issues and refunds handled?\n- Do you get a dashboard to monitor usage?",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_106_019",
+      "cmsg_id": "MSG_106",
+      "block_order": "19",
+      "block_type": "heading_2",
+      "text": "Step 6: Get basic approvals and paperwork in place",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_106_020",
+      "cmsg_id": "MSG_106",
+      "block_order": "20",
+      "block_type": "body",
+      "text": "Approvals vary by site, but usually you need owner permission and a safe, sanctioned electrical setup.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_106_021",
+      "cmsg_id": "MSG_106",
+      "block_order": "21",
+      "block_type": "list",
+      "text": "- Site owner agreement (rent or revenue share)\n- Electricity connection / load enhancement (if required)\n- Safety work (earthing, breakers, proper cabling)\n- Any property-level compliance if it’s a mall/fuel station site",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_106_022",
+      "cmsg_id": "MSG_106",
+      "block_order": "22",
+      "block_type": "heading_2",
+      "text": "Step 7: Installation + site readiness (keep it neat and usable)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_106_023",
+      "cmsg_id": "MSG_106",
+      "block_order": "23",
+      "block_type": "list",
+      "text": "- Clear parking markings (so bays don’t get blocked)\n- Visible signage\n- Weather protection if possible\n- Clean cable routing (no confusion, no trip hazards)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_106_024",
+      "cmsg_id": "MSG_106",
+      "block_order": "24",
+      "block_type": "heading_2",
+      "text": "Step 8: Go live and make it discoverable",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_106_025",
+      "cmsg_id": "MSG_106",
+      "block_order": "25",
+      "block_type": "list",
+      "text": "- Ensure your station shows up correctly on maps/apps\n- Put simple on-site instructions and a helpline number\n- Keep a contact number active for the first few weeks",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_106_026",
+      "cmsg_id": "MSG_106",
+      "block_order": "26",
+      "block_type": "heading_2",
+      "text": "Typical timeline (what beginners can expect)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_106_027",
+      "cmsg_id": "MSG_106",
+      "block_order": "27",
+      "block_type": "list",
+      "text": "- 1–2 weeks if power is already sufficient and setup is simple\n- 3–6 weeks if upgrades/approvals are needed\n- Longer for complex highway-scale sites",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_106_028",
+      "cmsg_id": "MSG_106",
+      "block_order": "28",
+      "block_type": "heading_2",
+      "text": "Common beginner mistakes (avoid these)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_106_029",
+      "cmsg_id": "MSG_106",
+      "block_order": "29",
+      "block_type": "list",
+      "text": "- Choosing a site just because rent is cheap\n- Not checking power availability early\n- Over-investing in fast charging without proven demand\n- Selecting a vendor without local service support\n- No signage / poor parking discipline\n- Treating it as install-and-forget instead of operations",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_107_001",
+      "cmsg_id": "MSG_107",
+      "block_order": "1",
+      "block_type": "heading_1",
+      "text": "Best Places to Set Up an EV Charging Station in India (Highway vs Mall vs Apartment vs Office)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_107_002",
+      "cmsg_id": "MSG_107",
+      "block_order": "2",
+      "block_type": "body",
+      "text": "In EV charging, the charger brand matters, but location matters more. Two people can install the same charger with the same pricing, and one will do well while the other struggles—mainly because one chose a site where EVs naturally come and park.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_107_003",
+      "cmsg_id": "MSG_107",
+      "block_order": "3",
+      "block_type": "heading_2",
+      "text": "What makes a location “good” for EV charging?",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_107_004",
+      "cmsg_id": "MSG_107",
+      "block_order": "4",
+      "block_type": "body",
+      "text": "A good location usually has demand, enough parking time for charging to happen, and power availability (or a realistic path to get it).",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_107_005",
+      "cmsg_id": "MSG_107",
+      "block_order": "5",
+      "block_type": "list",
+      "text": "- Demand: are EVs already coming to this area?\n- Dwell time: do vehicles stay long enough to charge?\n- Ease: entry/exit, safety, lighting\n- Discoverability: can users find it on maps/apps?\n- Power readiness: will upgrades be reasonable in time and cost?",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_107_006",
+      "cmsg_id": "MSG_107",
+      "block_order": "6",
+      "block_type": "heading_2",
+      "text": "1) Highway locations",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_107_007",
+      "cmsg_id": "MSG_107",
+      "block_order": "7",
+      "block_type": "body",
+      "text": "Highways can work well because charging is a need during travel, but they also require stronger operations and power planning.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_107_008",
+      "cmsg_id": "MSG_107",
+      "block_order": "8",
+      "block_type": "list",
+      "text": "- Works well when the corridor has proven EV traffic\n- Strong when located near food/toilets/lighting\n- Fails when power is hard to get or downtime is frequent",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_107_009",
+      "cmsg_id": "MSG_107",
+      "block_order": "9",
+      "block_type": "heading_2",
+      "text": "2) Malls and retail commercial parking",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_107_010",
+      "cmsg_id": "MSG_107",
+      "block_order": "10",
+      "block_type": "body",
+      "text": "Malls work because dwell time is naturally there and footfall helps. The tricky part is commercial terms and parking discipline.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_107_011",
+      "cmsg_id": "MSG_107",
+      "block_order": "11",
+      "block_type": "list",
+      "text": "- Best when EV bays are reserved and marked\n- Watch revenue share terms with the property owner\n- Placement matters: don’t hide the charger",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_107_012",
+      "cmsg_id": "MSG_107",
+      "block_order": "12",
+      "block_type": "heading_2",
+      "text": "3) Apartments and housing societies",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_107_013",
+      "cmsg_id": "MSG_107",
+      "block_order": "13",
+      "block_type": "body",
+      "text": "Societies are practical because EV owners need home charging. Usage can become steady once EVs increase inside the society.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_107_014",
+      "cmsg_id": "MSG_107",
+      "block_order": "14",
+      "block_type": "list",
+      "text": "- Repeat usage potential is high\n- Billing rules and management expectations must be clear\n- Parking discipline is critical to avoid blocked bays",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_107_015",
+      "cmsg_id": "MSG_107",
+      "block_order": "15",
+      "block_type": "heading_2",
+      "text": "4) Office and workplace locations",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_107_016",
+      "cmsg_id": "MSG_107",
+      "block_order": "16",
+      "block_type": "body",
+      "text": "Workplaces are stable because employees park for long hours. Access rules (public vs employees-only) decide your user base.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_107_017",
+      "cmsg_id": "MSG_107",
+      "block_order": "17",
+      "block_type": "list",
+      "text": "- Predictable pattern and repeat users\n- Clear access and pricing rules are needed\n- Works best when facility management supports the project",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_107_018",
+      "cmsg_id": "MSG_107",
+      "block_order": "18",
+      "block_type": "heading_2",
+      "text": "Other locations people consider (quick view)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_107_019",
+      "cmsg_id": "MSG_107",
+      "block_order": "19",
+      "block_type": "list",
+      "text": "- Hotels\n- Restaurants / cafes\n- Fuel stations\n- Fleet depots",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_107_020",
+      "cmsg_id": "MSG_107",
+      "block_order": "20",
+      "block_type": "heading_2",
+      "text": "Simple site shortlisting checklist",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_107_021",
+      "cmsg_id": "MSG_107",
+      "block_order": "21",
+      "block_type": "list",
+      "text": "- Easy entry/exit?\n- Enough parking time?\n- Real EV traffic today (not only future hope)?\n- Can EV bays be reserved?\n- Power available or upgrade realistic?\n- Commercial terms fair?\n- Good discoverability (signage + maps/apps)?",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_107_022",
+      "cmsg_id": "MSG_107",
+      "block_order": "22",
+      "block_type": "body",
+      "text": "The best location is not the fanciest one—it’s the one where people actually stop, charge, and come back again.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_108_001",
+      "cmsg_id": "MSG_108",
+      "block_order": "1",
+      "block_type": "heading_1",
+      "text": "EV Charging Franchise in India vs Own Setup: Which Is Better for Beginners?",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_108_002",
+      "cmsg_id": "MSG_108",
+      "block_order": "2",
+      "block_type": "body",
+      "text": "Once you’ve understood cost, profitability, and location, the next question comes up: should you take an EV charging franchise/partner model, or set up your own charging station independently?",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_108_003",
+      "cmsg_id": "MSG_108",
+      "block_order": "3",
+      "block_type": "body",
+      "text": "Both options can work in India. The better choice depends on your budget, your comfort with operations, and how much support you actually need.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_108_004",
+      "cmsg_id": "MSG_108",
+      "block_order": "4",
+      "block_type": "heading_2",
+      "text": "What does “franchise” mean in EV charging?",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_108_005",
+      "cmsg_id": "MSG_108",
+      "block_order": "5",
+      "block_type": "body",
+      "text": "In EV charging, “franchise” often means a partner program. The company provides some combination of branding, software/app access, onboarding support, and service packages. In return, you pay fees, buy their hardware, or share revenue.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_108_006",
+      "cmsg_id": "MSG_108",
+      "block_order": "6",
+      "block_type": "list",
+      "text": "- Access to their app/software for discovery and payments\n- Brand name (sometimes)\n- Installation guidance and standard process\n- Service/AMC packages\n- Payment and settlement system",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_108_007",
+      "cmsg_id": "MSG_108",
+      "block_order": "7",
+      "block_type": "heading_2",
+      "text": "Option 1: Franchise / partner model",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_108_008",
+      "cmsg_id": "MSG_108",
+      "block_order": "8",
+      "block_type": "body",
+      "text": "A franchise can reduce confusion in the beginning because you’re following a system.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_108_009",
+      "cmsg_id": "MSG_108",
+      "block_order": "9",
+      "block_type": "list",
+      "text": "- Pros: ready structure (software + payments), easier onboarding, brand trust in public sites, bundled support\n- Cons: tighter economics due to fees/revenue share, possible lock-in, support quality varies, contract terms matter",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_108_010",
+      "cmsg_id": "MSG_108",
+      "block_order": "10",
+      "block_type": "heading_2",
+      "text": "Option 2: Own setup (independent)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_108_011",
+      "cmsg_id": "MSG_108",
+      "block_order": "11",
+      "block_type": "body",
+      "text": "Own setup means you choose your charger vendor, software/payment setup, and manage installation and operations yourself.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_108_012",
+      "cmsg_id": "MSG_108",
+      "block_order": "12",
+      "block_type": "list",
+      "text": "- Pros: control over pricing and partners, flexibility to choose vendors, potentially better margins, no long lock-in\n- Cons: more coordination and troubleshooting responsibility, you manage customer issues and discoverability",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_108_013",
+      "cmsg_id": "MSG_108",
+      "block_order": "13",
+      "block_type": "heading_2",
+      "text": "Which option fits you?",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_108_014",
+      "cmsg_id": "MSG_108",
+      "block_order": "14",
+      "block_type": "list",
+      "text": "- Choose franchise if you want simplicity and support, and you’re okay sharing revenue/fees\n- Choose own setup if you want control and flexibility, and you’re comfortable managing operations",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_108_015",
+      "cmsg_id": "MSG_108",
+      "block_order": "15",
+      "block_type": "heading_2",
+      "text": "Common mistakes to avoid",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_108_016",
+      "cmsg_id": "MSG_108",
+      "block_order": "16",
+      "block_type": "list",
+      "text": "- Picking a weak location and expecting the brand to fix it\n- Signing without understanding revenue share and payout cycle\n- Not checking service support in your city\n- Underestimating downtime impact\n- Over-investing in fast charging without proven demand",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_108_017",
+      "cmsg_id": "MSG_108",
+      "block_order": "17",
+      "block_type": "heading_2",
+      "text": "Questions to ask before signing a partner agreement",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_108_018",
+      "cmsg_id": "MSG_108",
+      "block_order": "18",
+      "block_type": "list",
+      "text": "- Total upfront cost and what you get for it\n- Revenue share and how it is calculated\n- Settlement cycle (weekly/monthly)\n- Do you own the hardware?\n- Exit terms after 12–24 months\n- Who handles refunds and customer complaints?\n- Service response time in your city",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_109_001",
+      "cmsg_id": "MSG_109",
+      "block_order": "1",
+      "block_type": "heading_1",
+      "text": "Best EV Charging Franchise / Partner Options in India (2026): A Simple Comparison Guide",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_109_002",
+      "cmsg_id": "MSG_109",
+      "block_order": "2",
+      "block_type": "body",
+      "text": "Most EV charging partnerships are not “franchises” like food brands. They are usually partner programs. The brand may help with software, onboarding, and sometimes visibility — but your success still depends on location, power readiness, and uptime.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_109_003",
+      "cmsg_id": "MSG_109",
+      "block_order": "3",
+      "block_type": "heading_2",
+      "text": "What you should compare (before comparing brands)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_109_004",
+      "cmsg_id": "MSG_109",
+      "block_order": "4",
+      "block_type": "list",
+      "text": "- Commercial model: upfront fee, revenue share, or both\n- Who owns the charger\n- Software + payments and settlement cycle\n- Service support in your city\n- Lock-in (can you switch later?)\n- Visibility on apps/maps\n- Exit terms",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_109_005",
+      "cmsg_id": "MSG_109",
+      "block_order": "5",
+      "block_type": "heading_2",
+      "text": "Main categories of partner options in India",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_109_006",
+      "cmsg_id": "MSG_109",
+      "block_order": "6",
+      "block_type": "heading_3",
+      "text": "1) Network-led operators",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_109_007",
+      "cmsg_id": "MSG_109",
+      "block_order": "7",
+      "block_type": "body",
+      "text": "They focus on public charging networks and user discovery via apps.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_109_008",
+      "cmsg_id": "MSG_109",
+      "block_order": "8",
+      "block_type": "heading_3",
+      "text": "2) Hardware-led companies",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_109_009",
+      "cmsg_id": "MSG_109",
+      "block_order": "9",
+      "block_type": "body",
+      "text": "They sell chargers and provide software/onboarding; often good for offices and societies.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_109_010",
+      "cmsg_id": "MSG_109",
+      "block_order": "10",
+      "block_type": "heading_3",
+      "text": "3) Energy / utility-backed players",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_109_011",
+      "cmsg_id": "MSG_109",
+      "block_order": "11",
+      "block_type": "body",
+      "text": "They can carry higher trust for premium sites, but may be less flexible.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_109_012",
+      "cmsg_id": "MSG_109",
+      "block_order": "12",
+      "block_type": "heading_2",
+      "text": "A simple comparison table you can use",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_109_013",
+      "cmsg_id": "MSG_109",
+      "block_order": "13",
+      "block_type": "table",
+      "text": "| Item | Partner A | Partner B | Partner C |\n|---|---|---|---|\n| Upfront fee (₹) |  |  |  |\n| Revenue share (%) |  |  |  |\n| Charger ownership |  |  |  |\n| Settlement cycle |  |  |  |\n| Service response time |  |  |  |\n| Warranty + AMC |  |  |  |\n| Lock-in period |  |  |  |\n| Exit terms |  |  |  |\n| Visibility in your city |  |  |  |",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_109_014",
+      "cmsg_id": "MSG_109",
+      "block_order": "14",
+      "block_type": "heading_2",
+      "text": "Questions you must ask every partner",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_109_015",
+      "cmsg_id": "MSG_109",
+      "block_order": "15",
+      "block_type": "list",
+      "text": "- Total first-year cost (setup + AMC + platform fees)\n- How do I earn money and what is my share?\n- How often will I get paid?\n- Who handles refunds and failed payments?\n- Service response time in my city?\n- Lock-in and exit terms?",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_109_016",
+      "cmsg_id": "MSG_109",
+      "block_order": "16",
+      "block_type": "heading_2",
+      "text": "Common traps",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_109_017",
+      "cmsg_id": "MSG_109",
+      "block_order": "17",
+      "block_type": "list",
+      "text": "- “Biggest network” but weak presence in your area\n- Fast charger = higher profit (not if utilisation is low)\n- “We handle everything” without clear responsibilities",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_109_018",
+      "cmsg_id": "MSG_109",
+      "block_order": "18",
+      "block_type": "body",
+      "text": "If you compare partners on service support, commercial terms, and lock-in/exit first, the best option becomes much clearer than any online ranking.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_110_001",
+      "cmsg_id": "MSG_110",
+      "block_order": "1",
+      "block_type": "heading_1",
+      "text": "EV Charging Station Electricity Tariff in India: The Simple Truth About Power Cost (and Why Profit Changes)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_110_002",
+      "cmsg_id": "MSG_110",
+      "block_order": "2",
+      "block_type": "body",
+      "text": "Many people think EV charging is easy: buy a charger, sell electricity at a higher rate, and keep the difference. In reality, the biggest “silent” factor that decides profit is your electricity cost, and in India that cost is not always as simple as “₹X per unit”.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_110_003",
+      "cmsg_id": "MSG_110",
+      "block_order": "3",
+      "block_type": "body",
+      "text": "Two charging stations in the same city can charge customers the same price, but one makes decent profit and the other struggles. A common reason is the electricity tariff category, fixed charges, and how the power connection is structured.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_110_004",
+      "cmsg_id": "MSG_110",
+      "block_order": "4",
+      "block_type": "heading_2",
+      "text": "Why electricity tariff matters so much",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_110_005",
+      "cmsg_id": "MSG_110",
+      "block_order": "5",
+      "block_type": "list",
+      "text": "- Your per-unit cost (what you pay per kWh)\n- Your fixed charges (costs that come even if charging is low)\n- Your monthly bill behaviour (some months surprise you)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_110_006",
+      "cmsg_id": "MSG_110",
+      "block_order": "6",
+      "block_type": "heading_2",
+      "text": "Tariff is not just “₹ per unit”",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_110_007",
+      "cmsg_id": "MSG_110",
+      "block_order": "7",
+      "block_type": "body",
+      "text": "Most electricity bills have multiple parts. Names vary by DISCOM, but the idea is similar.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_110_008",
+      "cmsg_id": "MSG_110",
+      "block_order": "8",
+      "block_type": "list",
+      "text": "- Energy charge (₹/kWh)\n- Fixed charge (monthly)\n- Demand charge (in some connections)\n- Taxes and surcharges",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_110_009",
+      "cmsg_id": "MSG_110",
+      "block_order": "9",
+      "block_type": "heading_2",
+      "text": "Demand charge in simple words",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_110_010",
+      "cmsg_id": "MSG_110",
+      "block_order": "10",
+      "block_type": "body",
+      "text": "Demand is not only about total units used. It can also depend on how high your peak usage goes. A powerful charger can create higher peaks, which can change your bill structure.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_110_011",
+      "cmsg_id": "MSG_110",
+      "block_order": "11",
+      "block_type": "heading_2",
+      "text": "What tariff category might your EV charging fall under?",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_110_012",
+      "cmsg_id": "MSG_110",
+      "block_order": "12",
+      "block_type": "list",
+      "text": "- Domestic / residential (sometimes for private society setups)\n- Commercial (common for public-facing sites)\n- Special EV charging category (in some states)\n- Industrial (sometimes for fleets/depots)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_110_013",
+      "cmsg_id": "MSG_110",
+      "block_order": "13",
+      "block_type": "heading_2",
+      "text": "What you should ask before you install (simple checklist)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_110_014",
+      "cmsg_id": "MSG_110",
+      "block_order": "14",
+      "block_type": "list",
+      "text": "- Expected per-unit electricity cost at this site?\n- Any fixed charges and how much monthly?\n- Any demand charges and how calculated?\n- Will load enhancement be required and what timeline?\n- Separate meter for charger or existing meter?\n- Any time-based tariffs in this state?",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_110_015",
+      "cmsg_id": "MSG_110",
+      "block_order": "15",
+      "block_type": "heading_2",
+      "text": "Practical ways to keep power cost under control",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_110_016",
+      "cmsg_id": "MSG_110",
+      "block_order": "16",
+      "block_type": "list",
+      "text": "- Don’t oversize the charger for the site demand\n- Prefer sites with power already available\n- Do electrical work properly (avoid faults and inefficiency)\n- Keep utilisation steady so fixed costs don’t hurt\n- Track bills monthly and adjust pricing if needed",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_110_017",
+      "cmsg_id": "MSG_110",
+      "block_order": "17",
+      "block_type": "heading_2",
+      "text": "Pricing tip (simple)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_110_018",
+      "cmsg_id": "MSG_110",
+      "block_order": "18",
+      "block_type": "body",
+      "text": "If costs fluctuate due to fixed or demand charges, keep margin buffer. Also remember: reliability and convenience often matter more than being the cheapest.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
     }
   ]
 }

@@ -15,7 +15,12 @@ import { useAppData } from "../../App";
 import "./GuideCategoriesSection.css";
 
 const slugifyTitle = (title = "") =>
-  title.toLowerCase().trim().replace(/\s+/g, "-");
+  title
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-");
 
 export default function GuideCategoriesSection() {
   const { vehicleGuideData: database } = useAppData();
