@@ -12,16 +12,17 @@
 
 .guide-categories__container {
   width: 100%;
-  max-width: 1312px;
+  max-width: none;
   margin: 0 auto;
-  padding: 60px 40px;
+  padding: 60px 80px;
+  box-sizing: border-box;
 }
 
 .guide-categories__wrapper {
   background: #FFFFFF;
   border-radius: 24px;
   border: 1px solid #D0D2D6;
-  padding: 40px;
+  padding: 44px;
 }
 
 /* ---- Category Pills ---- */
@@ -37,8 +38,8 @@
 .guide-categories__pills-title {
   font-family: 'TT Fors Trial', Inter, sans-serif;
   font-weight: 700;
-  font-size: 11px;
-  line-height: 16px;
+  font-size: 12px;
+  line-height: 18px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #707070;
@@ -56,14 +57,14 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 8px 32px;
+  padding: 10px 34px;
   border-radius: 9999px;
   border: none;
   cursor: pointer;
   font-family: 'TT Fors Trial', Inter, sans-serif;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 26px;
   white-space: nowrap;
   transition: all 0.2s ease;
 }
@@ -103,14 +104,14 @@
   background: #F8F9FA;
   border-radius: 16px;
   border: 1px solid #E5E7EB;
-  padding: 24px;
+  padding: 26px;
 }
 
 .guide-categories__search-title {
   font-family: 'TT Fors Trial', Inter, sans-serif;
   font-weight: 700;
-  font-size: 11px;
-  line-height: 16px;
+  font-size: 12px;
+  line-height: 18px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #707070;
@@ -131,13 +132,13 @@
 
 .guide-categories__search-input {
   width: 100%;
-  padding: 12px 16px 12px 48px;
+  padding: 14px 16px 14px 50px;
   background: #FFFFFF;
   border: 1px solid #D9D9D9;
   border-radius: 12px;
   font-family: 'TT Fors Trial', Inter, sans-serif;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 26px;
   color: #131313;
   outline: none;
   transition: border-color 0.2s;
@@ -162,7 +163,7 @@
 .guide-categories__search-result {
   width: 100%;
   text-align: left;
-  padding: 12px 16px;
+  padding: 14px 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -184,13 +185,13 @@
 .guide-categories__search-result-name {
   font-family: 'TT Fors Trial', Inter, sans-serif;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   color: #131313;
 }
 
 .guide-categories__search-result-brand {
   font-family: 'TT Fors Trial', Inter, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   color: #9B9B9B;
 }
 
@@ -199,15 +200,15 @@
 .guide-categories__type-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-top: 24px;
+  gap: 18px;
+  margin-top: 26px;
 }
 
 .guide-categories__type-card {
   background: #F8F9FA;
   border-radius: 16px;
   border: 1px solid #E5E7EB;
-  padding: 32px;
+  padding: 34px;
   cursor: pointer;
   transition: all 0.2s;
 }
@@ -218,8 +219,8 @@
 }
 
 .guide-categories__type-card-icon {
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   border-radius: 12px;
   background: #FFFFFF;
   display: flex;
@@ -232,7 +233,8 @@
 .guide-categories__type-card-title {
   font-family: 'ITC Avant Garde Gothic Std', 'Public Sans', sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 22px;
+  line-height: 34px;
   color: #131313;
   margin: 0 0 4px;
 }
@@ -240,7 +242,7 @@
 .guide-categories__type-card-sub {
   font-family: 'TT Fors Trial', Inter, sans-serif;
   font-weight: 700;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #9B9B9B;
@@ -258,7 +260,7 @@
 
 .guide-categories__detail-header {
   background: #131313;
-  padding: 24px;
+  padding: 26px;
   color: #FFFFFF;
 }
 
@@ -280,15 +282,16 @@
 .guide-categories__detail-name {
   font-family: 'ITC Avant Garde Gothic Std', 'Public Sans', sans-serif;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 30px;
+  line-height: 40px;
   color: #FFFFFF;
   margin: 0 0 8px;
 }
 
 .guide-categories__detail-variant {
   font-family: 'TT Fors Trial', Inter, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 24px;
   color: #9B9B9B;
   display: flex;
   align-items: center;
@@ -296,7 +299,7 @@
 }
 
 .guide-categories__detail-body {
-  padding: 24px;
+  padding: 26px;
 }
 
 .guide-categories__detail-grid {
@@ -310,13 +313,13 @@
   background: #FFFFFF;
   border-radius: 12px;
   border: 1px solid #E5E7EB;
-  padding: 12px;
+  padding: 14px;
 }
 
 .guide-categories__detail-box-label {
   font-family: 'TT Fors Trial', Inter, sans-serif;
   font-weight: 700;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #9B9B9B;
@@ -326,7 +329,8 @@
 .guide-categories__detail-box-value {
   font-family: 'TT Fors Trial', Inter, sans-serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 28px;
   color: #131313;
   margin: 0;
 }
@@ -335,7 +339,7 @@
   background: #FFFFFF;
   border-radius: 12px;
   border: 1px solid #E5E7EB;
-  padding: 16px;
+  padding: 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -344,12 +348,13 @@
 
 .guide-categories__detail-cta {
   width: 100%;
-  padding: 14px;
+  padding: 16px;
   border-radius: 12px;
   border: none;
   font-family: 'TT Fors Trial', Inter, sans-serif;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 17px;
+  line-height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -396,7 +401,8 @@
 .guide-categories__empty-text {
   font-family: 'TT Fors Trial', Inter, sans-serif;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 24px;
   color: #9B9B9B;
 }
 
@@ -413,14 +419,16 @@
 .guide-categories__trips-title {
   font-family: 'ITC Avant Garde Gothic Std', 'Public Sans', sans-serif;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 34px;
+  line-height: 46px;
   color: #131313;
   margin: 0 0 8px;
 }
 
 .guide-categories__trips-sub {
   font-family: 'TT Fors Trial', Inter, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 26px;
   color: #707070;
   margin: 0;
 }
@@ -460,7 +468,7 @@
 .guide-categories__trip-label {
   font-family: 'TT Fors Trial', Inter, sans-serif;
   font-weight: 700;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #9B9B9B;
@@ -470,7 +478,8 @@
 .guide-categories__trip-title {
   font-family: 'TT Fors Trial', Inter, sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 22px;
+  line-height: 34px;
   color: #131313;
   margin: 0;
 }
@@ -502,17 +511,263 @@
 .guide-categories__coming-soon-title {
   font-family: 'ITC Avant Garde Gothic Std', 'Public Sans', sans-serif;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 38px;
+  line-height: 52px;
   color: #131313;
   margin: 0 0 16px;
 }
 
 .guide-categories__coming-soon-text {
   font-family: 'TT Fors Trial', Inter, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 30px;
   color: #707070;
   max-width: 400px;
   margin: 0;
+}
+
+/* 125% display-scale like desktop: keep section compact */
+@media (min-width: 1280px) and (max-width: 1700px) {
+  .guide-categories__container {
+    padding: 56px 64px;
+  }
+
+  .guide-categories__wrapper {
+    padding: 38px;
+  }
+
+  .guide-categories__pill {
+    font-size: 15px;
+    line-height: 24px;
+    padding: 9px 30px;
+  }
+
+  .guide-categories__search {
+    padding: 22px;
+  }
+
+  .guide-categories__search-input {
+    font-size: 15px;
+    line-height: 24px;
+    padding: 13px 16px 13px 48px;
+  }
+
+  .guide-categories__type-card {
+    padding: 30px;
+  }
+
+  .guide-categories__type-card-title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .guide-categories__detail-name {
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  .guide-categories__detail-variant {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .guide-categories__detail-box-value {
+    font-size: 17px;
+    line-height: 26px;
+  }
+
+  .guide-categories__detail-cta {
+    font-size: 16px;
+    line-height: 26px;
+    padding: 15px;
+  }
+
+  .guide-categories__trips-title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .guide-categories__trip-title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .guide-categories__coming-soon-title {
+    font-size: 34px;
+    line-height: 46px;
+  }
+
+  .guide-categories__coming-soon-text {
+    font-size: 17px;
+    line-height: 28px;
+  }
+}
+
+/* 100% display-scale like desktop: make section larger */
+@media (min-width: 1701px) {
+  .guide-categories__container {
+    padding: 66px 80px;
+  }
+
+  .guide-categories__wrapper {
+    padding: 52px;
+    border-radius: 28px;
+  }
+
+  .guide-categories__pills-section {
+    padding: 28px;
+    margin-bottom: 36px;
+  }
+
+  .guide-categories__pill {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 12px 36px;
+  }
+
+  .guide-categories__content {
+    gap: 36px;
+  }
+
+  .guide-categories__search {
+    border-radius: 18px;
+    padding: 30px;
+  }
+
+  .guide-categories__search-title {
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 18px;
+  }
+
+  .guide-categories__search-input {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 16px 18px 16px 54px;
+    border-radius: 14px;
+  }
+
+  .guide-categories__search-result {
+    padding: 16px 18px;
+  }
+
+  .guide-categories__search-result-name {
+    font-size: 18px;
+  }
+
+  .guide-categories__search-result-brand {
+    font-size: 15px;
+  }
+
+  .guide-categories__type-cards {
+    margin-top: 28px;
+    gap: 20px;
+  }
+
+  .guide-categories__type-card {
+    border-radius: 18px;
+    padding: 38px;
+  }
+
+  .guide-categories__type-card-icon {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 18px;
+  }
+
+  .guide-categories__type-card-title {
+    font-size: 26px;
+    line-height: 38px;
+  }
+
+  .guide-categories__type-card-sub {
+    font-size: 12px;
+  }
+
+  .guide-categories__detail-header {
+    padding: 30px;
+  }
+
+  .guide-categories__detail-name {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .guide-categories__detail-variant {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .guide-categories__detail-body {
+    padding: 30px;
+  }
+
+  .guide-categories__detail-grid {
+    gap: 14px;
+  }
+
+  .guide-categories__detail-box {
+    padding: 16px;
+  }
+
+  .guide-categories__detail-box-value {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .guide-categories__detail-connector {
+    padding: 20px;
+  }
+
+  .guide-categories__detail-cta {
+    font-size: 19px;
+    line-height: 30px;
+    padding: 18px;
+  }
+
+  .guide-categories__empty {
+    min-height: 560px;
+  }
+
+  .guide-categories__empty-text {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .guide-categories__trips-title {
+    font-size: 40px;
+    line-height: 54px;
+  }
+
+  .guide-categories__trips-sub {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .guide-categories__trip-card {
+    padding: 24px;
+    border-radius: 18px;
+  }
+
+  .guide-categories__trip-title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .guide-categories__coming-soon {
+    min-height: 460px;
+  }
+
+  .guide-categories__coming-soon-title {
+    font-size: 46px;
+    line-height: 62px;
+  }
+
+  .guide-categories__coming-soon-text {
+    font-size: 20px;
+    line-height: 34px;
+    max-width: 520px;
+  }
 }
 
 /* ---- Responsive ---- */
