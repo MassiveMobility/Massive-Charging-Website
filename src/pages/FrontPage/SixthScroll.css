@@ -85,8 +85,8 @@
 .sixth-scroll__heading {
   font-family: "Urbanist", sans-serif;
   font-weight: 700;
-  font-size: clamp(32px, 3.6vw, 56px);
-  line-height: clamp(40px, 4vw, 64px);
+  font-size: clamp(40px, 4.1vw, 64px);
+  line-height: clamp(48px, 4.6vw, 72px);
   letter-spacing: -0.005em;
   text-align: center;
   margin: 0 0 clamp(8px, 1vw, 12px);
@@ -123,8 +123,8 @@
 .sixth-scroll__subtitle-text {
   font-family: "TT Fors Trial", sans-serif;
   font-weight: 400;
-  font-size: clamp(16px, 1.35vw, 20px);
-  line-height: clamp(24px, 2vw, 32px);
+  font-size: clamp(18px, 1.5vw, 24px);
+  line-height: clamp(26px, 2.1vw, 34px);
   letter-spacing: 0.002em;
   text-align: center;
   color: #ffffff;
@@ -161,8 +161,8 @@
 .sixth-scroll__perk-text {
   font-family: "TT Fors Trial", sans-serif;
   font-weight: 500;
-  font-size: clamp(14px, 1vw, 16px);
-  line-height: clamp(20px, 1.4vw, 24px);
+  font-size: clamp(15px, 1.1vw, 18px);
+  line-height: clamp(22px, 1.55vw, 26px);
   letter-spacing: 0.006em;
   background: linear-gradient(
     148.99deg,
@@ -209,8 +209,8 @@
 .sixth-scroll__cta-text {
   font-family: "TT Fors Trial", sans-serif;
   font-weight: 500;
-  font-size: clamp(14px, 1vw, 16px);
-  line-height: clamp(20px, 1.4vw, 24px);
+  font-size: clamp(15px, 1.1vw, 18px);
+  line-height: clamp(22px, 1.55vw, 26px);
   letter-spacing: 0.006em;
   color: #0d0d0d;
 }
@@ -231,8 +231,8 @@
   }
 
   .sixth-scroll__heading {
-    font-size: clamp(40px, 4.5vw, 64px);
-    line-height: clamp(48px, 5vw, 72px);
+    font-size: clamp(48px, 5vw, 72px);
+    line-height: clamp(56px, 5.4vw, 80px);
   }
 
   .sixth-scroll__subtitle {
@@ -240,8 +240,8 @@
   }
 
   .sixth-scroll__subtitle-text {
-    font-size: clamp(18px, 1.55vw, 24px);
-    line-height: clamp(28px, 2.1vw, 36px);
+    font-size: clamp(20px, 1.75vw, 28px);
+    line-height: clamp(30px, 2.35vw, 40px);
   }
 
   .sixth-scroll__bolt-icon {
@@ -258,8 +258,8 @@
   }
 
   .sixth-scroll__perk-text {
-    font-size: clamp(16px, 1.15vw, 18px);
-    line-height: clamp(24px, 1.7vw, 28px);
+    font-size: clamp(17px, 1.25vw, 20px);
+    line-height: clamp(24px, 1.85vw, 30px);
   }
 
   .sixth-scroll__cta {
@@ -268,8 +268,8 @@
   }
 
   .sixth-scroll__cta-text {
-    font-size: clamp(16px, 1.15vw, 18px);
-    line-height: clamp(24px, 1.7vw, 28px);
+    font-size: clamp(17px, 1.25vw, 20px);
+    line-height: clamp(24px, 1.85vw, 30px);
   }
 }
 
@@ -284,19 +284,19 @@
   }
 
   .sixth-scroll__heading {
-    font-size: clamp(36px, 4vw, 56px);
-    line-height: clamp(44px, 4.5vw, 64px);
+    font-size: clamp(46px, 4.5vw, 64px);
+    line-height: clamp(54px, 5vw, 74px);
   }
 
   .sixth-scroll__subtitle-text {
-    font-size: clamp(16px, 1.3vw, 21px);
-    line-height: clamp(24px, 1.9vw, 31px);
+    font-size: clamp(18px, 1.45vw, 24px);
+    line-height: clamp(26px, 2vw, 34px);
   }
 
   .sixth-scroll__perk-text,
   .sixth-scroll__cta-text {
-    font-size: clamp(14px, 1vw, 16px);
-    line-height: clamp(20px, 1.45vw, 24px);
+    font-size: clamp(16px, 1.1vw, 18px);
+    line-height: clamp(22px, 1.6vw, 28px);
   }
 }
 
@@ -315,13 +315,13 @@
   }
 
   .sixth-scroll__heading {
-    font-size: clamp(44px, 4.9vw, 72px);
-    line-height: clamp(52px, 5.5vw, 80px);
+    font-size: clamp(58px, 5.6vw, 82px);
+    line-height: clamp(66px, 6.2vw, 92px);
   }
 
   .sixth-scroll__subtitle-text {
-    font-size: clamp(20px, 1.7vw, 28px);
-    line-height: clamp(30px, 2.3vw, 40px);
+    font-size: clamp(23px, 2vw, 32px);
+    line-height: clamp(34px, 2.6vw, 44px);
   }
 
   .sixth-scroll__bolt-icon {
@@ -334,8 +334,8 @@
 
   .sixth-scroll__perk-text,
   .sixth-scroll__cta-text {
-    font-size: clamp(17px, 1.3vw, 21px);
-    line-height: clamp(24px, 1.8vw, 30px);
+    font-size: clamp(19px, 1.45vw, 23px);
+    line-height: clamp(28px, 2vw, 34px);
   }
 
   .sixth-scroll__cta {

@@ -1,5 +1,5 @@
 /* ================================================================== */
-/*  ThirdScroll – "Get 1C Charging App" Section                       */
+/*  ThirdScroll - "Get 1C Charging App" Section                      */
 /* ================================================================== */
 
 .third-scroll {
@@ -9,7 +9,7 @@
   overflow: hidden;
 }
 
-/* ─── Top area: left text + right hand ─── */
+/* Top area: left text + right hand */
 .third-scroll__top {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -20,7 +20,7 @@
   min-height: 520px;
 }
 
-/* ─── Left column ─── */
+/* Left column */
 .third-scroll__left {
   display: flex;
   flex-direction: column;
@@ -30,8 +30,8 @@
 .third-scroll__heading {
   font-family: "Urbanist", sans-serif;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 56px;
+  font-size: 54px;
+  line-height: 64px;
   letter-spacing: -0.005em;
   color: #0c0c0c;
   margin: 0;
@@ -45,8 +45,8 @@
 .third-scroll__subtitle {
   font-family: "TT Fors Trial", Inter, sans-serif;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 26px;
+  font-size: 18px;
+  line-height: 30px;
   letter-spacing: 0.002em;
   color: #707070;
   margin: 0;
@@ -67,8 +67,8 @@
   text-decoration: none;
   font-family: "TT Fors Trial", Inter, sans-serif;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 26px;
+  font-size: 18px;
+  line-height: 28px;
   letter-spacing: 0.002em;
   color: #ffffff;
   width: fit-content;
@@ -85,7 +85,7 @@
   height: 18px;
 }
 
-/* ─── Right column ─── */
+/* Right column */
 .third-scroll__right {
   display: flex;
   justify-content: center;
@@ -97,16 +97,16 @@
   height: auto;
 }
 
-/* ─── Horizontal red divider line ─── */
+/* Horizontal red divider line */
 .third-scroll__divider {
   width: 100%;
-  height: 0px;
+  height: 0;
   border: none;
   border-top: 0.4px solid #f16363;
   margin: 0;
 }
 
-/* ─── Bottom icons row ─── */
+/* Bottom icons row */
 .third-scroll__features {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -129,7 +129,7 @@
 }
 
 .third-scroll__feature-card:hover {
-  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
 }
 
 .third-scroll__feature-icon {
@@ -141,20 +141,118 @@
 .third-scroll__feature-label {
   font-family: "TT Fors Trial", Inter, sans-serif;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 28px;
   color: #0c0c0c;
   text-align: center;
 }
 
-/* ─── Responsive ─── */
+/* 125% display-scale like desktop: keep section compact */
+@media (min-width: 1280px) and (max-width: 1700px) {
+  .third-scroll__top {
+    gap: 48px;
+    padding: 72px 64px 0;
+    min-height: 500px;
+  }
+
+  .third-scroll__heading {
+    font-size: 52px;
+    line-height: 62px;
+    max-width: 460px;
+  }
+
+  .third-scroll__subtitle {
+    font-size: 17px;
+    line-height: 28px;
+    max-width: 430px;
+  }
+
+  .third-scroll__cta {
+    padding: 7px 16px;
+    font-size: 17px;
+    line-height: 26px;
+  }
+
+  .third-scroll__features {
+    gap: 20px;
+    padding: 34px 64px 52px;
+  }
+
+  .third-scroll__feature-card {
+    gap: 10px;
+    padding: 24px 14px;
+  }
+
+  .third-scroll__feature-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .third-scroll__feature-label {
+    font-size: 17px;
+    line-height: 26px;
+  }
+}
+
+/* 100% display-scale like desktop: make section larger */
+@media (min-width: 1701px) {
+  .third-scroll__top {
+    gap: 72px;
+    padding: 92px 80px 0;
+    min-height: 560px;
+  }
+
+  .third-scroll__heading {
+    font-size: 70px;
+    line-height: 82px;
+    max-width: 580px;
+  }
+
+  .third-scroll__subtitle {
+    font-size: 21px;
+    line-height: 34px;
+    max-width: 520px;
+  }
+
+  .third-scroll__cta {
+    padding: 10px 22px;
+    font-size: 21px;
+    line-height: 34px;
+  }
+
+  .third-scroll__cta svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .third-scroll__features {
+    gap: 30px;
+    padding: 48px 80px 72px;
+  }
+
+  .third-scroll__feature-card {
+    gap: 14px;
+    padding: 34px 18px;
+  }
+
+  .third-scroll__feature-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .third-scroll__feature-label {
+    font-size: 21px;
+    line-height: 32px;
+  }
+}
+
+/* Responsive */
 @media (max-width: 1024px) {
   .third-scroll__top {
     grid-template-columns: 1fr;
     padding: 60px 24px 0;
     min-height: auto;
   }
-
 
   .third-scroll__features {
     grid-template-columns: repeat(3, 1fr);
@@ -172,24 +270,28 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
-
-
 }
 
 @media (min-width: 1960px) {
   .third-scroll__top {
-    padding: 80px 240px 0;
+    padding-left: 240px;
+    padding-right: 240px;
   }
+
   .third-scroll__features {
-    padding: 40px 240px 60px;
+    padding-left: 240px;
+    padding-right: 240px;
   }
 }
 
 @media (min-width: 2400px) {
   .third-scroll__top {
-    padding: 80px 480px 0;
+    padding-left: 480px;
+    padding-right: 480px;
   }
+
   .third-scroll__features {
-    padding: 40px 480px 60px;
+    padding-left: 480px;
+    padding-right: 480px;
   }
 }

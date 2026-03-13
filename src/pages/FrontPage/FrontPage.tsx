@@ -145,17 +145,17 @@ function LiveChargingCard({
   isScale125Like: boolean;
 }) {
   const cardClass = isScale125Like
-    ? "flex items-center justify-between rounded-[10px] border border-gray-200 bg-white px-[clamp(12px,1vw,16px)] py-[clamp(9px,0.8vw,12px)]"
-    : "flex items-center justify-between rounded-[10px] border border-gray-200 bg-white px-[clamp(15px,1.3vw,20px)] py-[clamp(12px,1vw,15px)]";
+    ? "flex items-center justify-between rounded-[10px] border border-gray-200 bg-white px-[clamp(14px,1.15vw,18px)] py-[clamp(10px,0.9vw,13px)]"
+    : "flex items-center justify-between rounded-[10px] border border-gray-200 bg-white px-[clamp(18px,1.55vw,24px)] py-[clamp(13px,1.15vw,16px)]";
   const cardMinHeight = isScale125Like
-    ? "clamp(64px, 4.7vw, 88px)"
-    : "clamp(76px, 5.3vw, 104px)";
+    ? "clamp(72px, 5vw, 96px)"
+    : "clamp(86px, 5.8vw, 112px)";
   const titleClass = isScale125Like
-    ? "text-[clamp(17px,1.28vw,26px)] leading-[clamp(25px,1.85vw,35px)] tracking-[0.002em] text-black"
-    : "text-[clamp(19px,1.45vw,28px)] leading-[clamp(27px,1.95vw,36px)] tracking-[0.002em] text-black";
+    ? "text-[clamp(19px,1.42vw,30px)] leading-[clamp(27px,1.98vw,38px)] tracking-[0.002em] text-black"
+    : "text-[clamp(22px,1.68vw,34px)] leading-[clamp(31px,2.28vw,44px)] tracking-[0.002em] text-black";
   const liveClass = isScale125Like
-    ? "inline-flex items-center justify-center rounded-[14px] border border-[#B5BCC5] px-[clamp(10px,0.82vw,14px)] py-0.5 text-[clamp(13px,0.98vw,16px)] leading-[21px]"
-    : "inline-flex items-center justify-center rounded-[16px] border border-[#B5BCC5] px-[clamp(10px,0.85vw,14px)] py-0.5 text-[clamp(14px,0.95vw,16px)] leading-[22px]";
+    ? "inline-flex items-center justify-center rounded-[14px] border border-[#B5BCC5] px-[clamp(11px,0.9vw,15px)] py-0.5 text-[clamp(14px,1.02vw,17px)] leading-[22px]"
+    : "inline-flex items-center justify-center rounded-[16px] border border-[#B5BCC5] px-[clamp(12px,0.95vw,16px)] py-0.5 text-[clamp(15px,1.05vw,18px)] leading-[24px]";
 
   return (
     <div className={cardClass} style={{ minHeight: cardMinHeight }}>
@@ -184,11 +184,11 @@ function LiveChargingCardsPanel({ isScale125Like }: { isScale125Like: boolean })
   ];
 
   const panelClass = isScale125Like
-    ? "w-full max-w-[min(100%,680px)] rounded-[18px] border border-gray-100 bg-white p-[clamp(20px,1.7vw,28px)] shadow-lg"
-    : "w-full max-w-[min(100%,780px)] rounded-[20px] border border-gray-100 bg-white p-[clamp(22px,2vw,32px)] shadow-lg";
+    ? "w-full max-w-[min(100%,720px)] rounded-[18px] border border-gray-100 bg-white p-[clamp(22px,1.9vw,30px)] shadow-lg"
+    : "w-full max-w-[min(100%,840px)] rounded-[20px] border border-gray-100 bg-white p-[clamp(26px,2.25vw,36px)] shadow-lg";
   const panelTextClass = isScale125Like
-    ? "mb-[clamp(11px,1.02vw,17px)] text-[clamp(15px,1.12vw,21px)] leading-[clamp(23px,1.68vw,30px)] tracking-[0.003em] text-[#707070]"
-    : "mb-[clamp(12px,1.1vw,18px)] text-[clamp(16px,1.2vw,21px)] leading-[clamp(24px,1.7vw,30px)] tracking-[0.003em] text-[#707070]";
+    ? "mb-[clamp(12px,1.08vw,18px)] text-[clamp(17px,1.25vw,24px)] leading-[clamp(25px,1.8vw,33px)] tracking-[0.003em] text-[#707070]"
+    : "mb-[clamp(14px,1.22vw,20px)] text-[clamp(19px,1.4vw,26px)] leading-[clamp(28px,2vw,36px)] tracking-[0.003em] text-[#707070]";
 
   return (
     <div className={panelClass}>
@@ -196,7 +196,7 @@ function LiveChargingCardsPanel({ isScale125Like }: { isScale125Like: boolean })
         className={panelTextClass}
         style={{
           fontFamily: "'TT Fors Trial', Inter, sans-serif",
-          fontWeight: 400,
+          fontWeight: 500,
         }}
       >
         Live charging Stations.
