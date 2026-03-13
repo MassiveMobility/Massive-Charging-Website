@@ -179,7 +179,7 @@ function LiveChargingCardsPanel() {
           fontWeight: 400,
         }}
       >
-        Live charging Stations
+        Live charging Stations.
       </p>
       <div className="flex flex-col gap-3">
         {stations.map((station, i) => (
