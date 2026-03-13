@@ -8,9 +8,10 @@
 
 .fast-starts__container {
   width: 100%;
-  max-width: 1312px;
+  max-width: none;
   margin: 0 auto;
-  padding: 80px 40px;
+  padding: 80px 80px;
+  box-sizing: border-box;
 }
 
 .fast-starts__grid {
@@ -36,23 +37,30 @@
 .fast-starts__heading {
   font-family: 'ITC Avant Garde Gothic Std', 'Public Sans', sans-serif;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 56px;
+  font-size: 58px;
+  line-height: 70px;
   letter-spacing: -0.006em;
   color: #131313;
-  max-width: 520px;
+  max-width: 620px;
   margin: 0;
 }
 
 .fast-starts__description {
   font-family: 'TT Fors Trial', Inter, sans-serif;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 21px;
+  line-height: 34px;
   letter-spacing: 0.002em;
   color: #505050;
-  max-width: 520px;
+  max-width: 620px;
   margin: 0;
+}
+
+.fast-starts .upi-charging__buttons a,
+.fast-starts .upi-charging__buttons button {
+  font-size: 18px;
+  line-height: 30px;
+  padding: 10px 22px;
 }
 
 .fast-starts__right {
@@ -76,9 +84,83 @@
 
 .fast-starts__steps {
   display: flex;
-  gap: 16px;
+  gap: 18px;
   flex-wrap: nowrap;
-  margin-right: -40px;
+  margin-right: 0;
+}
+
+/* 125% display-scale like desktop: keep section compact */
+@media (min-width: 1280px) and (max-width: 1700px) {
+  .fast-starts__container {
+    padding: 72px 64px;
+  }
+
+  .fast-starts__heading {
+    font-size: 52px;
+    line-height: 62px;
+    max-width: 560px;
+  }
+
+  .fast-starts__description {
+    font-size: 19px;
+    line-height: 30px;
+    max-width: 560px;
+  }
+
+  .fast-starts .upi-charging__buttons a,
+  .fast-starts .upi-charging__buttons button {
+    font-size: 17px;
+    line-height: 28px;
+    padding: 9px 20px;
+  }
+
+  .fast-starts__steps {
+    gap: 16px;
+    margin-right: 0;
+  }
+}
+
+/* 100% display-scale like desktop: make section larger */
+@media (min-width: 1701px) {
+  .fast-starts__container {
+    padding: 90px 80px;
+  }
+
+  .fast-starts__grid {
+    gap: 36px;
+  }
+
+  .fast-starts__left {
+    gap: 28px;
+  }
+
+  .fast-starts__heading {
+    font-size: 74px;
+    line-height: 88px;
+    max-width: 760px;
+  }
+
+  .fast-starts__description {
+    font-size: 25px;
+    line-height: 40px;
+    max-width: 760px;
+  }
+
+  .fast-starts .upi-charging__buttons a,
+  .fast-starts .upi-charging__buttons button {
+    font-size: 22px;
+    line-height: 34px;
+    padding: 12px 28px;
+  }
+
+  .fast-starts__right-content {
+    gap: 20px;
+  }
+
+  .fast-starts__steps {
+    gap: 20px;
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 768px) {

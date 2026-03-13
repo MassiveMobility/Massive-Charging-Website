@@ -3,28 +3,28 @@
 /* ------------------------------------------------------------------ */
 
 .step-card {
-  width: 220px;
-  min-height: 148px;
+  width: 236px;
+  min-height: 168px;
   background: #ffffff;
   border: 1px solid rgba(217, 217, 217, 0.71);
   border-radius: 12px;
-  padding: 20px 14px;
+  padding: 22px 16px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
 }
 
 .step-card__icon {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 8px;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 10px;
 }
 
 .step-card__title {
   font-family: "TT Fors Trial", Inter, sans-serif;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 32px;
+  font-size: 22px;
+  line-height: 34px;
   letter-spacing: 0.002em;
   color: #0c0c0c;
   margin: 0;
@@ -33,9 +33,62 @@
 .step-card__description {
   font-family: "TT Fors Trial", Inter, sans-serif;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 13px;
+  line-height: 18px;
   letter-spacing: 0.005em;
   color: #9b9b9b;
   margin: 0;
+}
+
+/* 125% display-scale like desktop: keep card compact */
+@media (min-width: 1280px) and (max-width: 1700px) {
+  .step-card {
+    width: 226px;
+    min-height: 158px;
+    padding: 20px 15px;
+    gap: 5px;
+  }
+
+  .step-card__icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+  }
+
+  .step-card__title {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .step-card__description {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+/* 100% display-scale like desktop: make card larger */
+@media (min-width: 1701px) {
+  .step-card {
+    width: 268px;
+    min-height: 192px;
+    border-radius: 14px;
+    padding: 24px 18px;
+    gap: 8px;
+  }
+
+  .step-card__icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+  }
+
+  .step-card__title {
+    font-size: 25px;
+    line-height: 38px;
+  }
+
+  .step-card__description {
+    font-size: 15px;
+    line-height: 20px;
+  }
 }
