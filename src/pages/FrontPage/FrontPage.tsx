@@ -11,6 +11,7 @@ const PLAYSTORE_URL =
   "https://play.google.com/store/apps/details?id=in.one.charging&hl=en_IN";
 const APPSTORE_URL =
   "https://apps.apple.com/in/app/1c-ev-charging/id6478754214";
+const SIDEBAR_VISIBILITY_EVENT = "frontpage-sidebar-visibility";
 
 /* -------- Social Sidebar -------- */
 function SocialSidebar({ isScale125Like }: { isScale125Like: boolean }) {
@@ -21,15 +22,21 @@ function SocialSidebar({ isScale125Like }: { isScale125Like: boolean }) {
 
   useEffect(() => {
     const onScroll = () => {
+      let nextVisible = true;
       // Hide when the elite membership section enters the viewport
       const eliteSection = document.getElementById("exclusive-membership");
       if (eliteSection) {
         const rect = eliteSection.getBoundingClientRect();
-        setVisible(rect.top > window.innerHeight * 0.85);
+        nextVisible = rect.top > window.innerHeight * 0.85;
       } else {
-        setVisible(window.scrollY < window.innerHeight * 0.75);
+        nextVisible = window.scrollY < window.innerHeight * 0.75;
       }
+      setVisible(nextVisible);
+      window.dispatchEvent(
+        new CustomEvent(SIDEBAR_VISIBILITY_EVENT, { detail: { visible: nextVisible } }),
+      );
     };
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
