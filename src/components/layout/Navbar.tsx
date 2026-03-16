@@ -7,6 +7,7 @@ const FONT_STYLE: React.CSSProperties = {
   fontFamily: "'TT Fors Trial', Inter, sans-serif",
   fontWeight: 400,
 };
+const SIDEBAR_VISIBILITY_EVENT = "frontpage-sidebar-visibility";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -52,23 +53,36 @@ export default function Navbar() {
     };
   }, [open]);
 
-  const isHomePage = location.pathname === "/";
-  const [inHero, setInHero] = useState(true);
+  const isFrontHeroPage = ["/find-chargers", "/front-page"].includes(location.pathname);
+  const [showBlackStrip, setShowBlackStrip] = useState(false);
 
   useEffect(() => {
-    if (!isHomePage) {
-      setInHero(false);
+    if (!isFrontHeroPage) {
+      setShowBlackStrip(false);
       return;
     }
-    const onScroll = () => {
-      setInHero(window.scrollY < window.innerHeight * 0.85);
+    const getSidebarVisibleFallback = () => {
+      const eliteSection = document.getElementById("exclusive-membership");
+      if (eliteSection) {
+        const rect = eliteSection.getBoundingClientRect();
+        return rect.top > window.innerHeight * 0.85;
+      } else {
+        return window.scrollY < window.innerHeight * 0.75;
+      }
     };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [isHomePage]);
+    const onSidebarVisibility = (event: Event) => {
+      const customEvent = event as CustomEvent<{ visible?: boolean }>;
+      const nextVisible = customEvent.detail?.visible;
+      if (typeof nextVisible === "boolean") {
+        setShowBlackStrip(nextVisible);
+      }
+    };
 
-  const showBlackStrip = isHomePage && inHero;
+    setShowBlackStrip(getSidebarVisibleFallback());
+
+    window.addEventListener(SIDEBAR_VISIBILITY_EVENT, onSidebarVisibility as EventListener);
+    return () => window.removeEventListener(SIDEBAR_VISIBILITY_EVENT, onSidebarVisibility as EventListener);
+  }, [isFrontHeroPage]);
 
   // Approximate Windows 125% display scale on common 1920px screens.
   // In this range we intentionally render larger desktop typography.
@@ -99,7 +113,8 @@ export default function Navbar() {
   const desktopCtaLineHeight = isScale125Like
     ? "clamp(18px,1.35vw,24px)"
     : "clamp(20px,1.55vw,28px)";
-  const blackStripWidth = isScale125Like ? "clamp(95px,6.4vw,122px)" : "clamp(102px,6.9vw,132px)";
+  // Keep this in sync with FrontPage social sidebar width for perfect alignment.
+  const blackStripWidth = "clamp(96px, 7vw, 128px)";
 
   return (
     <header className="sticky top-0 z-[58] w-full">
@@ -108,8 +123,12 @@ export default function Navbar() {
       >
         {/* Black strip at the right edge - only on home page hero area */}
         <div
-          className="absolute right-0 top-0 hidden h-full bg-[#1A1A1A] transition-opacity duration-300 lg:block"
-          style={{ width: blackStripWidth, opacity: showBlackStrip ? 1 : 0 }}
+          className="absolute right-0 top-0 hidden h-full bg-[#1A1A1A] transition-all duration-300 lg:block"
+          style={{
+            width: blackStripWidth,
+            opacity: showBlackStrip ? 1 : 0,
+            transform: showBlackStrip ? "translateX(0)" : "translateX(100%)",
+          }}
         />
 
         {/* Logo */}
