@@ -20,7 +20,7 @@ export default function Navbar() {
 
   const navItems = useMemo<NavItem[]>(
     () => [
-      { label: "Find Charging Stations", to: "/find-chargers", canHighlight: true },
+      { label: "Find Charging Stations", to: "/charging-stations-map", canHighlight: true },
       { label: "UPI Charging", to: "/upi-charging", canHighlight: true },
       { label: "Get Charging Guide", to: CHARGING_GUIDE_ROUTE, canHighlight: true },
       { label: "EV Charging Shop", to: "/ev-charging-shop", canHighlight: true },
@@ -53,7 +53,7 @@ export default function Navbar() {
     };
   }, [open]);
 
-  const isFrontHeroPage = ["/find-chargers", "/front-page"].includes(location.pathname);
+  const isFrontHeroPage = ["/", "/home", "/front-page", "/front"].includes(location.pathname);
   const [showBlackStrip, setShowBlackStrip] = useState(false);
 
   useEffect(() => {

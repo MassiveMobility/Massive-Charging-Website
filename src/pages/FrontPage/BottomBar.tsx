@@ -11,7 +11,7 @@ const SOCIAL_LINKS = [
 const QUICK_LINKS = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/ev-charging-station-business" },
-  { label: "Services", href: "/find-chargers" },
+  { label: "Services", href: "/charging-stations-map" },
   { label: "Contact", href: "/get-chargers" },
 ];
 

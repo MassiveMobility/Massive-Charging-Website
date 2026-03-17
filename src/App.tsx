@@ -40,6 +40,7 @@ import CPOTypeIndexPage from "./pages/Charging-Station_Business/CPO_Types/CPOTyp
 import EvGuideHomeDashboard from "./pages/Charging_Guide/EvGuideHomeDashboard";
 import FrontPage from "./pages/FrontPage/FrontPage";
 import ScrollToHash from "./components/layout/ScrollToHash";
+import FindChargersPage from "./pages/FindChargers/FindChargersPage";
 
 
 /* --- 1. THE UNIVERSAL COMPONENT (Factory) --- */
@@ -173,8 +174,9 @@ function App() {
 
           <main style={{ flex: 1 }}>
             <Routes>
-              {/* --- DEFAULT: redirect / to /find-chargers --- */}
-              <Route path="/" element={<Navigate to="/find-chargers" replace />} />
+              {/* --- HOME ROUTES --- */}
+              <Route path="/" element={<FrontPage />} />
+              <Route path="/home" element={<FrontPage />} />
               <Route path="/home-legacy" element={<Home_Page />} />
               <Route path="/themesampler" element={<ThemeSamplerPage />} />
               <Route path="/temp-home" element={<Home_Page />} />
@@ -188,8 +190,9 @@ function App() {
               <Route path="/fresh" element={<ChargingBusinessFreshHome />} />
 
               {/* --- EXISTING ROUTES --- */}
+              <Route path="/charging-stations-map" element={<FindChargersPage />} />
               <Route path="/front-page" element={<FrontPage />} />
-              <Route path="/find-chargers" element={<FrontPage />} />
+              <Route path="/find-chargers" element={<Navigate to="/charging-stations-map" replace />} />
               <Route path="/pinktest" element={<PinkTestPage />} />
               <Route path="/upi-charging" element={<UpiChargingPage />} />
               <Route path="/ev-charging-shop" element={<EVChargingShopComingSoon />} />
