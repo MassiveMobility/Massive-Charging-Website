@@ -1,8 +1,9 @@
 import type { FieldStyleConfig } from "@/lib/config/design-system";
 import type { SelectHTMLAttributes } from "react";
 
-import { buildFieldCssVariables } from "@/components/ui/field-style";
+import { buildFieldA11yState } from "@/lib/a11y/ids";
 import { cn } from "@/lib/utils/cn";
+import { FormField } from "@/components/ui/form-field";
 
 import { useId } from "react";
 
@@ -28,38 +29,38 @@ export function Select({
 }: SelectProps) {
   const generatedId = useId();
   const selectId = id ?? `select-${generatedId}`;
-  const hintId = hint ? `${selectId}-hint` : undefined;
-  const errorId = error ? `${selectId}-error` : undefined;
-  const describedBy = [props["aria-describedby"], hintId, errorId].filter(Boolean).join(" ") || undefined;
-  const isInvalid =
-    error !== undefined || props["aria-invalid"] === true || props["aria-invalid"] === "true";
+  const { "aria-describedby": ariaDescribedBy, "aria-invalid": ariaInvalid, ...selectProps } = props;
+  const { controlId, describedBy, errorId, hintId, isInvalid } = buildFieldA11yState({
+    ariaDescribedBy,
+    ariaInvalid,
+    controlId: selectId,
+    error,
+    hint
+  });
 
   return (
-    <div className="ui-field" style={buildFieldCssVariables(styleConfig)}>
-      {label ? (
-        <label className="ui-field__label" htmlFor={selectId}>
-          {label}
-        </label>
-      ) : null}
-      <select
-        {...props}
-        aria-describedby={describedBy}
-        aria-invalid={isInvalid}
-        className={cn("ui-select", isInvalid && "ui-control--invalid", className)}
-        id={selectId}
-      >
-        {children}
-      </select>
-      {hint ? (
-        <p className="ui-field__hint" id={hintId}>
-          {hint}
-        </p>
-      ) : null}
-      {error ? (
-        <p className="ui-field__error" id={errorId}>
-          {error}
-        </p>
-      ) : null}
-    </div>
+    <FormField
+      controlId={controlId}
+      describedBy={describedBy}
+      error={error}
+      errorId={errorId}
+      hint={hint}
+      hintId={hintId}
+      isInvalid={isInvalid}
+      label={label}
+      styleConfig={styleConfig}
+    >
+      {({ controlId: fieldId, describedBy: fieldDescribedBy, isInvalid: fieldIsInvalid }) => (
+        <select
+          {...selectProps}
+          aria-describedby={fieldDescribedBy}
+          aria-invalid={fieldIsInvalid}
+          className={cn("ui-select", fieldIsInvalid && "ui-control--invalid", className)}
+          id={fieldId}
+        >
+          {children}
+        </select>
+      )}
+    </FormField>
   );
 }

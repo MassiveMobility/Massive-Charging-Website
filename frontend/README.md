@@ -10,10 +10,14 @@ Massive Charging website.
 - Rendering decision matrix: `frontend/docs/codebase-knowledge/main/frontend-rendering-decision-matrix.md`
 - Design-system foundation:
   `frontend/docs/codebase-knowledge/main/frontend-design-system-foundation.md`
+- Accessibility foundation:
+  `frontend/docs/codebase-knowledge/main/frontend-accessibility-foundation.md`
 - Route groups + nested layouts concept:
   `frontend/docs/concept-learning/nextjs-route-groups-nested-layout-boundaries.md`
 - App Router server-first baseline concept:
   `frontend/docs/concept-learning/nextjs-app-router-server-first-baseline.md`
+- Accessibility foundation patterns concept:
+  `frontend/docs/concept-learning/accessibility-foundation-patterns.md`
 - Design tokens + semantic mapping concept:
   `frontend/docs/concept-learning/design-tokens-semantic-mapping-pattern.md`
 - Environment variable validation concept:
@@ -50,6 +54,9 @@ Visit [http://localhost:3000](http://localhost:3000).
 - `npm run build`: create production build
 - `npm run start`: run production server
 - `npm run lint`: run ESLint checks
+- `npm run lint:a11y`: run strict accessibility-focused lint checks
+- `npm run a11y:check`: run accessibility smoke checks (landmarks, selectors, contrast)
+- `npm run a11y`: run both lint and accessibility smoke checks
 - `npm run typecheck`: run strict TypeScript checks
 - `npm run clean`: remove `.next` build cache directory
 - `npm run format`: apply Prettier formatting
@@ -90,6 +97,7 @@ frontend/
       navigation/
       seo/
     lib/
+      a11y/
       config/
       constants/
       env/

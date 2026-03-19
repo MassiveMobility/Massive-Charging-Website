@@ -142,7 +142,7 @@ export const buttonStylePresets = {
     },
     typography: {
       color: "var(--raw-color-slate-0)",
-      fontFamily: "var(--font-sans), \"Segoe UI\", sans-serif",
+      fontFamily: "var(--font-sans), \"Inter\", \"Segoe UI\", sans-serif",
       fontSize: "var(--raw-font-size-sm)",
       fontStyle: "normal",
       fontWeight: 600,
@@ -156,7 +156,7 @@ export const buttonStylePresets = {
       background: "transparent",
       border: "transparent",
       foreground: "var(--raw-color-danger-700)",
-      hoverBackground: "rgb(143 31 45 / 0.1)",
+      hoverBackground: "var(--color-danger-bg)",
       hoverBorder: "transparent",
       hoverForeground: "var(--raw-color-danger-700)"
     },
@@ -169,7 +169,7 @@ export const buttonStylePresets = {
     },
     typography: {
       color: "var(--raw-color-danger-700)",
-      fontFamily: "var(--font-sans), \"Segoe UI\", sans-serif",
+      fontFamily: "var(--font-sans), \"Inter\", \"Segoe UI\", sans-serif",
       fontSize: "var(--raw-font-size-sm)",
       fontStyle: "normal",
       fontWeight: 600,
@@ -183,7 +183,7 @@ export const buttonStylePresets = {
       background: "transparent",
       border: "var(--raw-color-slate-300)",
       foreground: "var(--raw-color-slate-800)",
-      hoverBackground: "rgb(20 32 47 / 0.05)",
+      hoverBackground: "var(--color-canvas-soft)",
       hoverBorder: "var(--raw-color-slate-300)",
       hoverForeground: "var(--raw-color-slate-800)"
     },
@@ -196,7 +196,7 @@ export const buttonStylePresets = {
     },
     typography: {
       color: "var(--raw-color-slate-800)",
-      fontFamily: "var(--font-sans), \"Segoe UI\", sans-serif",
+      fontFamily: "var(--font-sans), \"Inter\", \"Segoe UI\", sans-serif",
       fontSize: "var(--raw-font-size-sm)",
       fontStyle: "normal",
       fontWeight: 600,
@@ -218,7 +218,7 @@ export const componentStylePresets = {
       paddingInline: "0.72rem",
       typography: {
         color: "var(--raw-color-brand-800)",
-        fontFamily: "var(--font-sans), \"Segoe UI\", sans-serif",
+        fontFamily: "var(--font-sans), \"Inter\", \"Segoe UI\", sans-serif",
         fontSize: "var(--raw-font-size-xs)",
         fontStyle: "normal",
         fontWeight: 700,
@@ -236,7 +236,7 @@ export const componentStylePresets = {
       paddingInline: "0.72rem",
       typography: {
         color: "var(--raw-color-danger-700)",
-        fontFamily: "var(--font-sans), \"Segoe UI\", sans-serif",
+        fontFamily: "var(--font-sans), \"Inter\", \"Segoe UI\", sans-serif",
         fontSize: "var(--raw-font-size-xs)",
         fontStyle: "normal",
         fontWeight: 700,
@@ -254,7 +254,7 @@ export const componentStylePresets = {
       paddingInline: "0.72rem",
       typography: {
         color: "var(--raw-color-slate-700)",
-        fontFamily: "var(--font-sans), \"Segoe UI\", sans-serif",
+        fontFamily: "var(--font-sans), \"Inter\", \"Segoe UI\", sans-serif",
         fontSize: "var(--raw-font-size-xs)",
         fontStyle: "normal",
         fontWeight: 700,
@@ -272,7 +272,7 @@ export const componentStylePresets = {
       paddingInline: "0.72rem",
       typography: {
         color: "var(--raw-color-success-700)",
-        fontFamily: "var(--font-sans), \"Segoe UI\", sans-serif",
+        fontFamily: "var(--font-sans), \"Inter\", \"Segoe UI\", sans-serif",
         fontSize: "var(--raw-font-size-xs)",
         fontStyle: "normal",
         fontWeight: 700,
@@ -290,7 +290,7 @@ export const componentStylePresets = {
       paddingInline: "0.52rem",
       typography: {
         color: "var(--raw-color-warning-700)",
-        fontFamily: "var(--font-sans), \"Segoe UI\", sans-serif",
+        fontFamily: "var(--font-sans), \"Inter\", \"Segoe UI\", sans-serif",
         fontSize: "var(--raw-font-size-2xs)",
         fontStyle: "normal",
         fontWeight: 700,
@@ -329,7 +329,7 @@ export const componentStylePresets = {
       fieldGap: "var(--space-2)",
       hintStyle: {
         color: "var(--color-text-subtle)",
-        fontFamily: "var(--font-sans), \"Segoe UI\", sans-serif",
+        fontFamily: "var(--font-sans), \"Inter\", \"Segoe UI\", sans-serif",
         fontSize: "var(--raw-font-size-xs)",
         fontStyle: "normal",
         fontWeight: 400,
@@ -344,8 +344,8 @@ export const componentStylePresets = {
         color: "var(--color-text)",
         disabledBackground: "var(--color-canvas-soft)",
         disabledColor: "var(--color-text-subtle)",
-        focusBorderColor: "var(--raw-color-brand-400)",
-        focusRingColor: "rgb(143 184 255 / 0.45)",
+        focusBorderColor: "var(--color-focus-ring)",
+        focusRingColor: "var(--color-focus-ring-soft)",
         invalidBackground: "var(--color-danger-bg)",
         invalidBorderColor: "var(--color-danger-accent)",
         minHeight: "2.7rem",
@@ -355,7 +355,7 @@ export const componentStylePresets = {
         resize: "vertical",
         typography: {
           color: "var(--color-text)",
-          fontFamily: "var(--font-sans), \"Segoe UI\", sans-serif",
+          fontFamily: "var(--font-sans), \"Inter\", \"Segoe UI\", sans-serif",
           fontSize: "var(--raw-font-size-sm)",
           fontStyle: "normal",
           fontWeight: 400,
@@ -366,7 +366,7 @@ export const componentStylePresets = {
       },
       labelStyle: {
         color: "var(--color-text)",
-        fontFamily: "var(--font-sans), \"Segoe UI\", sans-serif",
+        fontFamily: "var(--font-sans), \"Inter\", \"Segoe UI\", sans-serif",
         fontSize: "var(--raw-font-size-xs)",
         fontStyle: "normal",
         fontWeight: 600,
@@ -376,7 +376,7 @@ export const componentStylePresets = {
       },
       messageStyle: {
         color: "var(--color-danger-foreground)",
-        fontFamily: "var(--font-sans), \"Segoe UI\", sans-serif",
+        fontFamily: "var(--font-sans), \"Inter\", \"Segoe UI\", sans-serif",
         fontSize: "var(--raw-font-size-xs)",
         fontStyle: "normal",
         fontWeight: 500,
@@ -389,7 +389,7 @@ export const componentStylePresets = {
   heading: {
     brandName: {
       color: "var(--color-text)",
-      fontFamily: "var(--font-display), \"Times New Roman\", serif",
+      fontFamily: "var(--font-display), \"Montserrat\", sans-serif",
       fontSize: "var(--font-size-h5)",
       fontStyle: "normal",
       fontWeight: 600,
@@ -399,7 +399,7 @@ export const componentStylePresets = {
     },
     cardTitle: {
       color: "var(--color-text)",
-      fontFamily: "var(--font-display), \"Times New Roman\", serif",
+      fontFamily: "var(--font-display), \"Montserrat\", sans-serif",
       fontSize: "var(--font-size-h5)",
       fontStyle: "normal",
       fontWeight: 600,
@@ -409,7 +409,7 @@ export const componentStylePresets = {
     },
     heroInverse: {
       color: "var(--color-text-on-emphasis)",
-      fontFamily: "var(--font-display), \"Times New Roman\", serif",
+      fontFamily: "var(--font-display), \"Montserrat\", sans-serif",
       fontSize: "var(--font-size-h1)",
       fontStyle: "normal",
       fontWeight: 600,
@@ -419,7 +419,7 @@ export const componentStylePresets = {
     },
     pageTitle: {
       color: "var(--color-text)",
-      fontFamily: "var(--font-display), \"Times New Roman\", serif",
+      fontFamily: "var(--font-display), \"Montserrat\", sans-serif",
       fontSize: "var(--font-size-h1)",
       fontStyle: "normal",
       fontWeight: 600,
@@ -429,7 +429,7 @@ export const componentStylePresets = {
     },
     sectionTitle: {
       color: "var(--color-text)",
-      fontFamily: "var(--font-display), \"Times New Roman\", serif",
+      fontFamily: "var(--font-display), \"Montserrat\", sans-serif",
       fontSize: "var(--font-size-h3)",
       fontStyle: "normal",
       fontWeight: 600,
@@ -439,7 +439,7 @@ export const componentStylePresets = {
     },
     stateTitle: {
       color: "var(--color-text)",
-      fontFamily: "var(--font-display), \"Times New Roman\", serif",
+      fontFamily: "var(--font-display), \"Montserrat\", sans-serif",
       fontSize: "var(--font-size-h2)",
       fontStyle: "normal",
       fontWeight: 600,
@@ -456,7 +456,7 @@ export const componentStylePresets = {
       textUnderlineOffset: "0.18em",
       typography: {
         color: "var(--color-link)",
-        fontFamily: "var(--font-sans), \"Segoe UI\", sans-serif",
+        fontFamily: "var(--font-sans), \"Inter\", \"Segoe UI\", sans-serif",
         fontSize: "var(--raw-font-size-sm)",
         fontStyle: "normal",
         fontWeight: 500,
@@ -472,7 +472,7 @@ export const componentStylePresets = {
       textUnderlineOffset: "0.18em",
       typography: {
         color: "var(--color-text-on-emphasis)",
-        fontFamily: "var(--font-sans), \"Segoe UI\", sans-serif",
+        fontFamily: "var(--font-sans), \"Inter\", \"Segoe UI\", sans-serif",
         fontSize: "var(--raw-font-size-sm)",
         fontStyle: "normal",
         fontWeight: 500,
@@ -488,7 +488,7 @@ export const componentStylePresets = {
       textUnderlineOffset: "0.18em",
       typography: {
         color: "var(--color-text-muted)",
-        fontFamily: "var(--font-sans), \"Segoe UI\", sans-serif",
+        fontFamily: "var(--font-sans), \"Inter\", \"Segoe UI\", sans-serif",
         fontSize: "var(--raw-font-size-sm)",
         fontStyle: "normal",
         fontWeight: 500,
@@ -501,7 +501,7 @@ export const componentStylePresets = {
   text: {
     body: {
       color: "var(--color-text)",
-      fontFamily: "var(--font-sans), \"Segoe UI\", sans-serif",
+      fontFamily: "var(--font-sans), \"Inter\", \"Segoe UI\", sans-serif",
       fontSize: "var(--font-size-body)",
       fontStyle: "normal",
       fontWeight: 400,
@@ -511,7 +511,7 @@ export const componentStylePresets = {
     },
     bodyMuted: {
       color: "var(--color-text-muted)",
-      fontFamily: "var(--font-sans), \"Segoe UI\", sans-serif",
+      fontFamily: "var(--font-sans), \"Inter\", \"Segoe UI\", sans-serif",
       fontSize: "var(--font-size-body)",
       fontStyle: "normal",
       fontWeight: 400,
@@ -521,7 +521,7 @@ export const componentStylePresets = {
     },
     inverseLead: {
       color: "var(--color-text-on-emphasis)",
-      fontFamily: "var(--font-sans), \"Segoe UI\", sans-serif",
+      fontFamily: "var(--font-sans), \"Inter\", \"Segoe UI\", sans-serif",
       fontSize: "var(--font-size-body-lg)",
       fontStyle: "normal",
       fontWeight: 400,
@@ -531,7 +531,7 @@ export const componentStylePresets = {
     },
     legal: {
       color: "var(--color-text-muted)",
-      fontFamily: "var(--font-sans), \"Segoe UI\", sans-serif",
+      fontFamily: "var(--font-sans), \"Inter\", \"Segoe UI\", sans-serif",
       fontSize: "var(--raw-font-size-xs)",
       fontStyle: "normal",
       fontWeight: 400,
@@ -541,7 +541,7 @@ export const componentStylePresets = {
     },
     leadMuted: {
       color: "var(--color-text-muted)",
-      fontFamily: "var(--font-sans), \"Segoe UI\", sans-serif",
+      fontFamily: "var(--font-sans), \"Inter\", \"Segoe UI\", sans-serif",
       fontSize: "var(--font-size-body-lg)",
       fontStyle: "normal",
       fontWeight: 400,
@@ -551,7 +551,7 @@ export const componentStylePresets = {
     },
     smallMuted: {
       color: "var(--color-text-muted)",
-      fontFamily: "var(--font-sans), \"Segoe UI\", sans-serif",
+      fontFamily: "var(--font-sans), \"Inter\", \"Segoe UI\", sans-serif",
       fontSize: "var(--raw-font-size-xs)",
       fontStyle: "normal",
       fontWeight: 400,
@@ -569,7 +569,7 @@ export const marketingShellStylePresets = {
     navigationLinkStyle: componentStylePresets.link.default,
     rowGap: "var(--space-4)",
     rowPaddingBlock: "var(--space-4)",
-    shellBackground: "rgb(255 255 255 / 0.93)",
+    shellBackground: "var(--color-shell-bg)",
     shellBackdropFilter: "blur(10px)",
     shellBorderColor: "var(--color-border)"
   },
@@ -582,7 +582,7 @@ export const marketingShellStylePresets = {
     navigationLinkStyle: componentStylePresets.link.default,
     rowGap: "var(--space-4)",
     rowPaddingBlock: "var(--space-4)",
-    shellBackground: "rgb(255 255 255 / 0.93)",
+    shellBackground: "var(--color-shell-bg)",
     shellBackdropFilter: "blur(10px)",
     shellBorderColor: "var(--color-border)"
   }

@@ -1,4 +1,4 @@
-import { Manrope, Playfair_Display } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
@@ -6,13 +6,13 @@ import { buildRootMetadata } from "@/lib/seo/metadata";
 
 import "./globals.css";
 
-const bodyFont = Manrope({
+const bodyFont = Inter({
   display: "swap",
   subsets: ["latin"],
   variable: "--font-sans"
 });
 
-const headingFont = Playfair_Display({
+const headingFont = Montserrat({
   display: "swap",
   subsets: ["latin"],
   variable: "--font-display"

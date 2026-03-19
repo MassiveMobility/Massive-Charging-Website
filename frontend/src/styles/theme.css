@@ -24,6 +24,12 @@
   --color-link: var(--raw-color-brand-700);
   --color-link-hover: var(--raw-color-brand-900);
   --color-focus-ring: var(--raw-color-brand-300);
+  --color-focus-ring-soft: rgb(255 158 158 / 0.42);
+
+  /* Semantic shell tokens */
+  --color-shell-bg: rgb(255 255 255 / 0.92);
+  --color-shell-border: var(--color-border);
+  --color-overlay-backdrop: rgb(19 19 19 / 0.48);
 
   /* Semantic intents */
   --color-success-bg: var(--raw-color-success-50);
@@ -102,10 +108,10 @@ body {
   min-height: 100vh;
   color: var(--color-text);
   background:
-    radial-gradient(circle at 8% 6%, rgb(184 210 255 / 0.55) 0%, transparent 34%),
-    radial-gradient(circle at 95% 0%, rgb(220 236 255 / 0.65) 0%, transparent 26%),
-    linear-gradient(180deg, #f7f9fd 0%, #f0f4fb 100%);
-  font-family: var(--font-sans), "Segoe UI", sans-serif;
+    radial-gradient(circle at 10% 6%, rgb(255 214 214 / 0.52) 0%, transparent 36%),
+    radial-gradient(circle at 92% 0%, rgb(255 236 236 / 0.72) 0%, transparent 30%),
+    linear-gradient(180deg, #fffaf9 0%, #f7f3f2 100%);
+  font-family: var(--font-sans), "Inter", "Segoe UI", sans-serif;
   line-height: var(--raw-line-height-normal);
 }
 
@@ -146,7 +152,9 @@ input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
   outline: 2px solid transparent;
-  box-shadow: 0 0 0 4px rgb(143 184 255 / 0.45);
+  box-shadow:
+    0 0 0 2px var(--color-surface),
+    0 0 0 4px var(--color-focus-ring);
 }
 
 /* Shell structure */
@@ -162,13 +170,13 @@ select:focus-visible {
 .platform-header {
   position: relative;
   z-index: var(--z-base);
-  background-color: var(--shell-bg, rgb(255 255 255 / 0.93));
+  background-color: var(--shell-bg, var(--color-shell-bg));
   backdrop-filter: var(--shell-filter, blur(10px));
-  border-bottom: 1px solid var(--shell-border-color, var(--color-border));
+  border-bottom: 1px solid var(--shell-border-color, var(--color-shell-border));
 }
 
 .site-footer {
-  border-top: 1px solid var(--shell-border-color, var(--color-border));
+  border-top: 1px solid var(--shell-border-color, var(--color-shell-border));
   border-bottom: 0;
   margin-top: auto;
 }
@@ -204,6 +212,924 @@ select:focus-visible {
   gap: var(--nav-list-gap, var(--space-4));
   margin: 0;
   padding: 0;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav__list--desktop {
+  display: flex;
+}
+
+/* Centralized marketing header styles */
+.site-header-v2 {
+  --desktop-bar-gap: clamp(12px, 1.55vw, 32px);
+  --desktop-nav-gap: clamp(12px, 1.35vw, 40px);
+  --desktop-logo-height: clamp(36px, 2.5vw, 48px);
+  --desktop-cta-padding: clamp(7px, 0.62vw, 10.5px) clamp(13px, 1.2vw, 21px);
+  --desktop-cta-font-size: clamp(13px, 1.05vw, 17px);
+  --desktop-cta-line-height: clamp(20px, 1.55vw, 28px);
+  --desktop-nav-font-size: clamp(13px, 1.05vw, 17px);
+  --desktop-nav-line-height: clamp(20px, 1.58vw, 28px);
+  --desktop-black-strip-width: clamp(96px, 7vw, 128px);
+  position: sticky;
+  top: 0;
+  z-index: 58;
+  width: 100%;
+}
+
+.site-header-v2--scale-125 {
+  --desktop-bar-gap: clamp(10px, 1.15vw, 24px);
+  --desktop-nav-gap: clamp(10px, 1.05vw, 28px);
+  --desktop-logo-height: clamp(34px, 2.3vw, 43px);
+  --desktop-cta-padding: clamp(6px, 0.55vw, 9px) clamp(11px, 1vw, 17px);
+  --desktop-cta-font-size: clamp(12px, 0.95vw, 15px);
+  --desktop-cta-line-height: clamp(18px, 1.35vw, 24px);
+  --desktop-nav-font-size: clamp(12px, 0.95vw, 15px);
+  --desktop-nav-line-height: clamp(18px, 1.35vw, 24px);
+}
+
+.site-header-v2__row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--desktop-bar-gap);
+  background: var(--color-surface);
+  padding: clamp(14px, 1.6vw, 24px) clamp(16px, 3.5vw, 80px);
+}
+
+.site-header-v2__black-strip {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: none;
+  width: var(--desktop-black-strip-width);
+  height: 100%;
+  background: #1a1a1a;
+  opacity: 0;
+  transform: translateX(100%);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.site-header-v2__black-strip--visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.site-header-v2__black-strip--hidden {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.site-header-v2__logo-link {
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+.site-header-v2__logo {
+  width: auto;
+  height: var(--desktop-logo-height);
+}
+
+.site-header-v2__desktop-nav-wrap {
+  display: none;
+  min-width: 0;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-header-v2__desktop-nav-list {
+  margin: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: var(--desktop-nav-gap);
+  padding: 0;
+}
+
+.site-header-v2__desktop-nav-item {
+  margin: 0;
+  padding: 0;
+}
+
+.site-header-v2__desktop-nav-link {
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 0.25rem;
+  font-family: "TT Fors Trial", var(--font-sans), "Inter", "Segoe UI", sans-serif;
+  font-size: var(--desktop-nav-font-size);
+  font-weight: 400;
+  line-height: var(--desktop-nav-line-height);
+  letter-spacing: 0.002em;
+  color: #0c0c0c;
+  text-decoration: none;
+  transition: color var(--transition-standard);
+}
+
+.site-header-v2__desktop-nav-link:hover {
+  text-decoration: none;
+}
+
+.site-header-v2__desktop-nav-link--active {
+  border-bottom-color: var(--raw-color-brand-500);
+}
+
+.site-header-v2__desktop-cta {
+  position: relative;
+  z-index: 60;
+  margin-left: auto;
+  display: none;
+  flex-shrink: 0;
+  align-items: center;
+  border-radius: 10.72px;
+  background: var(--raw-color-brand-500);
+  padding: var(--desktop-cta-padding);
+  font-family: "TT Fors Trial", var(--font-sans), "Inter", "Segoe UI", sans-serif;
+  font-size: var(--desktop-cta-font-size);
+  font-weight: 400;
+  line-height: var(--desktop-cta-line-height);
+  letter-spacing: 0.002em;
+  color: var(--color-text-on-emphasis);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color var(--transition-standard);
+}
+
+.site-header-v2__desktop-cta:hover {
+  background: var(--raw-color-brand-600);
+  color: var(--color-text-on-emphasis);
+  text-decoration: none;
+}
+
+.site-header-v2__mobile-trigger-wrap {
+  margin-left: auto;
+}
+
+.site-header-v2__mobile-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 0.75rem;
+  background: #f3f4f6;
+  padding: 0.5rem 0.75rem;
+  color: #131313;
+  cursor: pointer;
+}
+
+.site-header-v2__mobile-trigger:hover {
+  background: #e5e7eb;
+}
+
+.site-header-v2__mobile-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.site-header-v2__mobile-bars-line {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: currentcolor;
+}
+
+.site-header-v2__mobile-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+}
+
+.site-header-v2__mobile-backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgb(0 0 0 / 0.4);
+}
+
+.site-header-v2__mobile-drawer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 86%;
+  max-width: 24rem;
+  border-left: 1px solid #e5e7eb;
+  background: var(--color-surface);
+  box-shadow: 0 20px 40px rgb(0 0 0 / 0.15);
+}
+
+.site-header-v2__mobile-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f3f4f6;
+  padding: 1rem 1.5rem;
+}
+
+.site-header-v2__mobile-logo-link {
+  line-height: 0;
+}
+
+.site-header-v2__mobile-logo {
+  width: auto;
+  height: 36px;
+}
+
+.site-header-v2__mobile-close {
+  border: 0;
+  border-radius: 0.5rem;
+  background: #f3f4f6;
+  padding: 0.5rem 0.75rem;
+  color: #131313;
+  cursor: pointer;
+}
+
+.site-header-v2__mobile-close:hover {
+  background: #e5e7eb;
+}
+
+.site-header-v2__mobile-drawer-body {
+  padding: 1.5rem;
+}
+
+.site-header-v2__mobile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.site-header-v2__mobile-link {
+  border-left: 2px solid transparent;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-family: "TT Fors Trial", var(--font-sans), "Inter", "Segoe UI", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.002em;
+  color: #0c0c0c;
+  text-decoration: none;
+  transition: all var(--transition-standard);
+}
+
+.site-header-v2__mobile-link:hover {
+  background: #f9fafb;
+  color: #0c0c0c;
+  text-decoration: none;
+}
+
+.site-header-v2__mobile-link--active {
+  border-left-color: var(--raw-color-brand-500);
+  background: #fef2f2;
+  color: var(--raw-color-brand-500);
+}
+
+.site-header-v2__mobile-cta-wrap {
+  margin-top: 1.5rem;
+  border-top: 1px solid #f3f4f6;
+  padding-top: 1rem;
+}
+
+.site-header-v2__mobile-cta {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10.72px;
+  background: var(--raw-color-brand-500);
+  padding: 9.65px 19.3px;
+  font-family: "TT Fors Trial", var(--font-sans), "Inter", "Segoe UI", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.002em;
+  color: var(--color-text-on-emphasis);
+  text-decoration: none;
+  transition: background-color var(--transition-standard);
+}
+
+.site-header-v2__mobile-cta:hover {
+  background: var(--raw-color-brand-600);
+  color: var(--color-text-on-emphasis);
+  text-decoration: none;
+}
+
+/* Centralized home first-scroll hero styles */
+.home-hero-v2 {
+  --home-hero-gutter: clamp(16px, 3.5vw, 80px);
+  --home-hero-title-size: clamp(62px, 4.7vw, 102px);
+  --home-hero-title-line-height: clamp(70px, 5.2vw, 114px);
+  --home-hero-title-max-width: min(100%, 820px);
+  --home-hero-subtitle-size: clamp(24px, 1.85vw, 36px);
+  --home-hero-subtitle-line-height: clamp(34px, 2.5vw, 48px);
+  --home-hero-badge-size: clamp(18px, 1.3vw, 24px);
+  --home-hero-badge-line-height: clamp(26px, 1.8vw, 34px);
+  --home-hero-cta-gap: clamp(14px, 1.25vw, 22px);
+  --home-hero-cta-padding-x: 32px;
+  --home-hero-cta-padding-y: 14px;
+  --home-hero-cta-font-size: 24px;
+  --home-hero-cta-line-height: 38px;
+  --home-hero-cta-icon-size: 30px;
+  --home-hero-cta-icon-stroke: 1.7;
+  --home-hero-sidebar-icon-size: 30px;
+  --home-hero-sidebar-icon-stroke: 1.7;
+  --home-hero-sidebar-gap: clamp(24px, 2.6vw, 38px);
+  --home-hero-panel-max-width: 840px;
+  --home-hero-panel-radius: 20px;
+  --home-hero-panel-padding: clamp(26px, 2.25vw, 36px);
+  --home-hero-panel-title-size: clamp(19px, 1.4vw, 26px);
+  --home-hero-panel-title-line-height: clamp(28px, 2vw, 36px);
+  --home-hero-panel-title-margin: clamp(14px, 1.22vw, 20px);
+  --home-hero-card-gap: 14px;
+  --home-hero-card-min-height: clamp(86px, 5.8vw, 112px);
+  --home-hero-card-padding-x: clamp(18px, 1.55vw, 24px);
+  --home-hero-card-padding-y: clamp(13px, 1.15vw, 16px);
+  --home-hero-card-title-size: clamp(22px, 1.68vw, 34px);
+  --home-hero-card-title-line-height: clamp(31px, 2.28vw, 44px);
+  --home-hero-live-badge-radius: 16px;
+  --home-hero-live-badge-padding-x: clamp(12px, 0.95vw, 16px);
+  --home-hero-live-badge-size: clamp(15px, 1.05vw, 18px);
+  --home-hero-live-badge-line-height: 24px;
+  position: relative;
+  background: #fff;
+}
+
+.home-hero-v2--scale-125 {
+  --home-hero-title-size: clamp(56px, 4.2vw, 88px);
+  --home-hero-title-line-height: clamp(64px, 4.8vw, 102px);
+  --home-hero-title-max-width: min(100%, 680px);
+  --home-hero-subtitle-size: clamp(20px, 1.52vw, 32px);
+  --home-hero-subtitle-line-height: clamp(30px, 2.2vw, 42px);
+  --home-hero-badge-size: clamp(15px, 1.08vw, 20px);
+  --home-hero-badge-line-height: clamp(23px, 1.6vw, 30px);
+  --home-hero-cta-gap: clamp(10px, 0.9vw, 18px);
+  --home-hero-cta-padding-x: 26px;
+  --home-hero-cta-padding-y: 11px;
+  --home-hero-cta-font-size: 20px;
+  --home-hero-cta-line-height: 32px;
+  --home-hero-cta-icon-size: 24px;
+  --home-hero-cta-icon-stroke: 1.5;
+  --home-hero-sidebar-icon-size: 24px;
+  --home-hero-sidebar-icon-stroke: 1.5;
+  --home-hero-sidebar-gap: clamp(20px, 2.3vw, 32px);
+  --home-hero-panel-max-width: 720px;
+  --home-hero-panel-radius: 18px;
+  --home-hero-panel-padding: clamp(22px, 1.9vw, 30px);
+  --home-hero-panel-title-size: clamp(17px, 1.25vw, 24px);
+  --home-hero-panel-title-line-height: clamp(25px, 1.8vw, 33px);
+  --home-hero-panel-title-margin: clamp(12px, 1.08vw, 18px);
+  --home-hero-card-gap: 16px;
+  --home-hero-card-min-height: clamp(72px, 5vw, 96px);
+  --home-hero-card-padding-x: clamp(14px, 1.15vw, 18px);
+  --home-hero-card-padding-y: clamp(10px, 0.9vw, 13px);
+  --home-hero-card-title-size: clamp(19px, 1.42vw, 30px);
+  --home-hero-card-title-line-height: clamp(27px, 1.98vw, 38px);
+  --home-hero-live-badge-radius: 14px;
+  --home-hero-live-badge-padding-x: clamp(11px, 0.9vw, 15px);
+  --home-hero-live-badge-size: clamp(14px, 1.02vw, 17px);
+  --home-hero-live-badge-line-height: 22px;
+}
+
+.home-hero-v2__viewport {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.home-hero-v2__section {
+  position: relative;
+  display: flex;
+  min-height: calc(100vh - 84px);
+  align-items: center;
+}
+
+.home-hero-v2__container {
+  margin-inline: auto;
+  width: 100%;
+  padding: clamp(48px, 6vw, 80px) var(--home-hero-gutter);
+}
+
+.home-hero-v2__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: clamp(24px, 4vw, 48px);
+}
+
+.home-hero-v2__left {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2vw, 24px);
+}
+
+.home-hero-v2__status-badge {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  align-self: flex-start;
+  gap: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+
+.home-hero-v2__status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #41ba15;
+}
+
+.home-hero-v2__status-text {
+  font-family: "TT Fors Trial", var(--font-sans), "Inter", sans-serif;
+  font-weight: 400;
+  font-size: var(--home-hero-badge-size);
+  line-height: var(--home-hero-badge-line-height);
+  letter-spacing: 0.003em;
+  color: #131313;
+}
+
+.home-hero-v2__title {
+  margin: 0;
+  max-width: var(--home-hero-title-max-width);
+  font-family: "ITC Avant Garde Gothic Std", "Public Sans", sans-serif;
+  font-weight: 800;
+  font-size: var(--home-hero-title-size);
+  line-height: var(--home-hero-title-line-height);
+  letter-spacing: -0.006em;
+  color: #131313;
+}
+
+.home-hero-v2__title-anytime {
+  display: inline;
+}
+
+.home-hero-v2--scale-125 .home-hero-v2__title-anytime {
+  display: block;
+}
+
+.home-hero-v2__title-accent {
+  color: var(--raw-color-brand-500);
+}
+
+.home-hero-v2__subtitle {
+  margin: 0;
+  font-family: "TT Fors Trial", var(--font-sans), "Inter", sans-serif;
+  font-weight: 400;
+  font-size: var(--home-hero-subtitle-size);
+  line-height: var(--home-hero-subtitle-line-height);
+  letter-spacing: 0.002em;
+  color: #131313;
+}
+
+.home-hero-v2__cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--home-hero-cta-gap);
+}
+
+.home-hero-v2__hero-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10.72px;
+  padding: 12px 24px;
+  font-family: "TT Fors Trial", var(--font-sans), "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.002em;
+  text-decoration: none;
+  transition: background-color var(--transition-standard);
+}
+
+.home-hero-v2__hero-button:hover {
+  text-decoration: none;
+}
+
+.home-hero-v2__hero-button--primary {
+  background: var(--raw-color-brand-500);
+  color: #fff;
+}
+
+.home-hero-v2__hero-button--primary:hover {
+  background: var(--raw-color-brand-600);
+  color: #fff;
+}
+
+.home-hero-v2__hero-button--outline {
+  border: 1px solid #d1d5db;
+  background: #fff;
+  color: #131313;
+}
+
+.home-hero-v2__hero-button--outline:hover {
+  background: #f9fafb;
+  color: #131313;
+}
+
+.home-hero-v2__hero-button-icon {
+  width: var(--home-hero-cta-icon-size);
+  height: var(--home-hero-cta-icon-size);
+  stroke: currentcolor;
+  stroke-width: var(--home-hero-cta-icon-stroke);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.home-hero-v2__store-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(8px, 0.9vw, 12px);
+}
+
+.home-hero-v2__store-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  background: #000;
+  padding: 8px 16px;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color var(--transition-standard);
+}
+
+.home-hero-v2__store-badge:hover {
+  background: #111827;
+  color: #fff;
+  text-decoration: none;
+}
+
+.home-hero-v2__store-badge svg {
+  width: 20px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.home-hero-v2__store-badge-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.home-hero-v2__store-badge-eyebrow {
+  margin: 0;
+  font-size: 8px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.home-hero-v2__store-badge-title {
+  margin-top: 2px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.home-hero-v2__right {
+  display: flex;
+  justify-content: center;
+}
+
+.home-hero-v2__live-panel {
+  width: 100%;
+  max-width: min(100%, var(--home-hero-panel-max-width));
+  border: 1px solid #f3f4f6;
+  border-radius: var(--home-hero-panel-radius);
+  background: #fff;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.15);
+  padding: var(--home-hero-panel-padding);
+}
+
+.home-hero-v2__live-panel-title {
+  margin: 0 0 var(--home-hero-panel-title-margin);
+  font-family: "TT Fors Trial", var(--font-sans), "Inter", sans-serif;
+  font-weight: 500;
+  font-size: var(--home-hero-panel-title-size);
+  line-height: var(--home-hero-panel-title-line-height);
+  letter-spacing: 0.003em;
+  color: #707070;
+}
+
+.home-hero-v2__live-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--home-hero-card-gap);
+}
+
+.home-hero-v2__live-card {
+  display: flex;
+  min-height: var(--home-hero-card-min-height);
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  padding: var(--home-hero-card-padding-y) var(--home-hero-card-padding-x);
+  gap: 12px;
+}
+
+.home-hero-v2__live-card-name {
+  font-family: "TT Fors Trial", var(--font-sans), "Inter", sans-serif;
+  font-weight: 400;
+  font-size: var(--home-hero-card-title-size);
+  line-height: var(--home-hero-card-title-line-height);
+  letter-spacing: 0.002em;
+  color: #000;
+}
+
+.home-hero-v2__live-card-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #b5bcc5;
+  border-radius: var(--home-hero-live-badge-radius);
+  background: #ccdcf19c;
+  padding: 2px var(--home-hero-live-badge-padding-x);
+  font-family: "TT Fors Trial", var(--font-sans), "Inter", sans-serif;
+  font-weight: 400;
+  font-size: var(--home-hero-live-badge-size);
+  line-height: var(--home-hero-live-badge-line-height);
+  color: #131313;
+}
+
+.home-hero-v2__social-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 55;
+  display: none;
+  width: clamp(96px, 7vw, 128px);
+  height: 100vh;
+  flex-direction: column;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.home-hero-v2__social-sidebar--visible {
+  opacity: 1;
+  transform: translateX(0);
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.home-hero-v2__social-sidebar--hidden {
+  opacity: 0;
+  transform: translateX(100%);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.home-hero-v2__social-black-zone {
+  height: clamp(224px, 22vh, 284px);
+  background: #1a1a1a;
+}
+
+.home-hero-v2__social-red-zone {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--home-hero-sidebar-gap);
+  background: var(--raw-color-brand-500);
+  padding: clamp(40px, 4vw, 66px) clamp(34px, 2.8vw, 52px);
+}
+
+.home-hero-v2__social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: color var(--transition-standard);
+}
+
+.home-hero-v2__social-link:hover {
+  color: #e5e7eb;
+}
+
+.home-hero-v2__social-icon {
+  width: var(--home-hero-sidebar-icon-size);
+  height: var(--home-hero-sidebar-icon-size);
+  stroke: currentcolor;
+  stroke-width: var(--home-hero-sidebar-icon-stroke);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.home-hero-v2__social-icon--filled {
+  fill: currentcolor;
+  stroke: none;
+}
+
+/* Centralized marketing footer styles */
+.site-footer-v2 {
+  --footer-gutter: clamp(16px, 3.5vw, 80px);
+  --footer-top: clamp(48px, 6vw, 80px);
+  --footer-col-gap: clamp(20px, 3vw, 60px);
+  --footer-split-gap: clamp(16px, 2vw, 40px);
+  width: 100%;
+  min-height: 70vh;
+  border-top: 0;
+  background: #0a0a0a;
+  backdrop-filter: none;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.site-footer-v2__main {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  padding: var(--footer-top) var(--footer-gutter) 0 var(--footer-gutter);
+}
+
+.site-footer-v2__left {
+  flex: 1 1 68%;
+  min-width: 0;
+  display: flex;
+  gap: var(--footer-col-gap);
+  padding-right: var(--footer-split-gap);
+}
+
+.site-footer-v2__column {
+  display: flex;
+  flex: 1 1 0;
+  min-width: 0;
+  flex-direction: column;
+  gap: clamp(10px, 1.2vw, 16px);
+}
+
+.site-footer-v2__column-title {
+  margin: 0;
+  font-family: "ITC Avant Garde Gothic Std", "Century Gothic", sans-serif;
+  font-weight: 600;
+  font-size: clamp(20px, 1.4vw, 24px);
+  line-height: clamp(28px, 2vw, 32px);
+  letter-spacing: -0.002em;
+  color: #fff;
+}
+
+.site-footer-v2__column-text,
+.site-footer-v2__column-link {
+  font-family: "TT Fors Trial", var(--font-sans), "Inter", sans-serif;
+  font-weight: 400;
+  font-size: clamp(16px, 1.15vw, 20px);
+  line-height: clamp(24px, 1.9vw, 32px);
+  letter-spacing: 0.002em;
+  color: #fff;
+  text-decoration: none;
+  transition: opacity var(--transition-standard);
+}
+
+.site-footer-v2__column-link:hover {
+  opacity: 0.7;
+  color: #fff;
+  text-decoration: none;
+}
+
+.site-footer-v2__address {
+  max-width: min(311px, 100%);
+}
+
+.site-footer-v2__red-logo {
+  margin-top: auto;
+  padding-bottom: clamp(10px, 1.2vw, 16px);
+}
+
+.site-footer-v2__red-logo-image {
+  width: clamp(168px, 15vw, 219px);
+  height: auto;
+}
+
+.site-footer-v2__divider-vertical {
+  width: 1px;
+  background: #7a7979;
+  align-self: stretch;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.site-footer-v2__right {
+  flex: 0 1 32%;
+  min-width: clamp(230px, 24vw, 320px);
+  padding-left: var(--footer-split-gap);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(14px, 1.4vw, 20px);
+}
+
+.site-footer-v2__right-title {
+  margin: 0;
+  font-family: "ITC Avant Garde Gothic Std", "Century Gothic", sans-serif;
+  font-weight: 600;
+  font-size: clamp(20px, 1.4vw, 24px);
+  line-height: clamp(28px, 2vw, 32px);
+  letter-spacing: -0.002em;
+  color: #fff;
+}
+
+.site-footer-v2__right-desc {
+  margin: 0;
+  max-width: 382px;
+  font-family: "TT Fors Trial", var(--font-sans), "Inter", sans-serif;
+  font-weight: 400;
+  font-size: clamp(13px, 0.9vw, 14px);
+  line-height: clamp(20px, 1.5vw, 22px);
+  letter-spacing: 0.003em;
+  color: #777;
+}
+
+.site-footer-v2__cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  min-height: clamp(40px, 3.2vw, 46px);
+  border: 0;
+  border-radius: 8px;
+  background: #fff;
+  padding: 0 clamp(14px, 1.3vw, 22px);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background var(--transition-standard);
+}
+
+.site-footer-v2__cta-btn:hover {
+  background: #e0e0e0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-footer-v2__cta-text {
+  font-family: "TT Fors Trial", var(--font-sans), "Inter", sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 1vw, 16px);
+  line-height: clamp(22px, 1.6vw, 26px);
+  letter-spacing: 0.002em;
+  color: #1a0000;
+}
+
+.site-footer-v2__divider-horizontal {
+  height: 1px;
+  background: #7a7979;
+  margin: 0 var(--footer-gutter);
+}
+
+.site-footer-v2__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(12px, 2vw, 24px);
+  padding: clamp(18px, 2vw, 24px) var(--footer-gutter);
+}
+
+.site-footer-v2__footer-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(6px, 0.8vw, 8px);
+}
+
+.site-footer-v2__footer-link-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(6px, 0.8vw, 8px);
+}
+
+.site-footer-v2__footer-link,
+.site-footer-v2__footer-separator,
+.site-footer-v2__footer-copyright {
+  font-family: "TT Fors Trial", var(--font-sans), "Inter", sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 0.95vw, 16px);
+  line-height: clamp(22px, 1.6vw, 26px);
+  letter-spacing: 0.002em;
+  color: #777;
+  text-decoration: none;
+  transition: color var(--transition-standard);
+}
+
+.site-footer-v2__footer-link:hover {
+  color: #aaa;
+  text-decoration: none;
 }
 
 /* Layout primitives */
@@ -375,6 +1301,12 @@ select:focus-visible {
   width: 100%;
 }
 
+.ui-button--icon-only {
+  width: var(--button-min-height);
+  min-width: var(--button-min-height);
+  padding-inline: 0;
+}
+
 .ui-link {
   color: var(--link-color);
   font-family: var(--link-font-family);
@@ -390,6 +1322,23 @@ select:focus-visible {
 
 .ui-link:hover {
   color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+.ui-link--nav {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--radius-sm);
+  padding: var(--space-1) var(--space-2);
+}
+
+.ui-link--active {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+  text-decoration-thickness: 0.11em;
+}
+
+.ui-link--active:focus-visible {
   text-decoration: underline;
 }
 
@@ -546,6 +1495,106 @@ select:focus-visible {
   top: var(--space-4);
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu__trigger,
+.mobile-menu__close {
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  font-family: var(--font-sans), "Inter", "Segoe UI", sans-serif;
+  font-size: var(--raw-font-size-xs);
+  font-weight: 600;
+  min-height: 2.5rem;
+  padding: 0.52rem var(--space-4);
+}
+
+.mobile-menu__trigger-icon {
+  display: inline-flex;
+  width: 1.25rem;
+  height: 0.14rem;
+  border-radius: var(--radius-pill);
+  background-color: currentcolor;
+  box-shadow:
+    0 -0.38rem 0 0 currentcolor,
+    0 0.38rem 0 0 currentcolor;
+}
+
+.mobile-menu__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-overlay);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mobile-menu__backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  padding: 0;
+  background-color: var(--color-overlay-backdrop);
+}
+
+.mobile-menu__panel {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 21rem);
+  height: 100%;
+  background-color: var(--color-surface);
+  border-left: 1px solid var(--color-border);
+  box-shadow: var(--shadow-lg);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: var(--space-4);
+  padding: var(--space-5);
+}
+
+.mobile-menu__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.mobile-menu__title {
+  color: var(--color-text);
+  font-family: var(--font-sans), "Inter", "Segoe UI", sans-serif;
+  font-size: var(--raw-font-size-sm);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.mobile-menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+
+.mobile-menu__link {
+  width: 100%;
+  justify-content: flex-start;
+  min-height: 2.5rem;
+}
+
 @media (min-width: 48rem) {
   .layout-grid--2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -566,6 +1615,229 @@ select:focus-visible {
   .platform-header__row {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .site-nav {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .site-nav__list--desktop {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+}
+
+@media (min-width: 64rem) {
+  .home-hero-v2__section {
+    padding-right: clamp(96px, 7vw, 128px);
+  }
+
+  .home-hero-v2__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .home-hero-v2__right {
+    justify-content: flex-end;
+  }
+
+  .home-hero-v2__hero-button {
+    padding: var(--home-hero-cta-padding-y) var(--home-hero-cta-padding-x);
+    font-size: var(--home-hero-cta-font-size);
+    line-height: var(--home-hero-cta-line-height);
+  }
+
+  .home-hero-v2__social-sidebar {
+    display: flex;
+  }
+
+  .site-header-v2__black-strip {
+    display: block;
+  }
+
+  .site-header-v2__desktop-nav-wrap {
+    display: flex;
+  }
+
+  .site-header-v2__desktop-cta {
+    display: inline-flex;
+  }
+
+  .site-header-v2__mobile-trigger-wrap {
+    display: none;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1700px) {
+  .site-footer-v2 {
+    --footer-gutter: 64px;
+    --footer-top: 56px;
+    --footer-col-gap: 42px;
+    --footer-split-gap: 24px;
+  }
+
+  .site-footer-v2__column-title,
+  .site-footer-v2__right-title {
+    font-size: clamp(18px, 1.2vw, 22px);
+    line-height: clamp(26px, 1.8vw, 30px);
+  }
+
+  .site-footer-v2__column-text,
+  .site-footer-v2__column-link {
+    font-size: clamp(14px, 1vw, 18px);
+    line-height: clamp(22px, 1.6vw, 28px);
+  }
+
+  .site-footer-v2__right-desc {
+    font-size: clamp(12px, 0.82vw, 13px);
+    line-height: clamp(18px, 1.2vw, 20px);
+  }
+
+  .site-footer-v2__cta-text {
+    font-size: clamp(13px, 0.9vw, 15px);
+    line-height: clamp(20px, 1.4vw, 24px);
+  }
+
+  .site-footer-v2__footer-link,
+  .site-footer-v2__footer-separator,
+  .site-footer-v2__footer-copyright {
+    font-size: clamp(13px, 0.85vw, 15px);
+    line-height: clamp(20px, 1.4vw, 24px);
+  }
+}
+
+@media (min-width: 1701px) {
+  .site-footer-v2 {
+    --footer-gutter: 80px;
+    --footer-top: 88px;
+    --footer-col-gap: 68px;
+    --footer-split-gap: 42px;
+  }
+
+  .site-footer-v2__column-title,
+  .site-footer-v2__right-title {
+    font-size: clamp(22px, 1.65vw, 30px);
+    line-height: clamp(30px, 2.2vw, 40px);
+  }
+
+  .site-footer-v2__column-text,
+  .site-footer-v2__column-link {
+    font-size: clamp(18px, 1.3vw, 24px);
+    line-height: clamp(28px, 2vw, 36px);
+  }
+
+  .site-footer-v2__right-desc {
+    font-size: clamp(14px, 1vw, 16px);
+    line-height: clamp(22px, 1.6vw, 26px);
+  }
+
+  .site-footer-v2__cta-btn {
+    min-height: clamp(46px, 3.6vw, 56px);
+    padding: 0 clamp(18px, 1.55vw, 28px);
+  }
+
+  .site-footer-v2__cta-text {
+    font-size: clamp(16px, 1.2vw, 20px);
+    line-height: clamp(24px, 1.75vw, 30px);
+  }
+
+  .site-footer-v2__footer-link,
+  .site-footer-v2__footer-separator,
+  .site-footer-v2__footer-copyright {
+    font-size: clamp(15px, 1.05vw, 18px);
+    line-height: clamp(22px, 1.55vw, 28px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .site-footer-v2__main {
+    flex-direction: column;
+    gap: 36px;
+    padding: clamp(40px, 5vw, 48px) 32px 0 32px;
+  }
+
+  .site-footer-v2__left {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 28px;
+    padding-right: 0;
+  }
+
+  .site-footer-v2__column {
+    flex: 1 1 min(220px, 100%);
+  }
+
+  .site-footer-v2__divider-vertical {
+    display: none;
+  }
+
+  .site-footer-v2__right {
+    width: 100%;
+    min-width: 0;
+    padding-left: 0;
+  }
+
+  .site-footer-v2__divider-horizontal {
+    margin: 0 32px;
+  }
+
+  .site-footer-v2__footer {
+    flex-direction: column;
+    padding: 24px 32px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-footer-v2__main {
+    padding: 32px 20px 0 20px;
+    gap: 28px;
+  }
+
+  .site-footer-v2__left {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .site-footer-v2__divider-horizontal {
+    margin: 0 20px;
+  }
+
+  .site-footer-v2__footer {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1960px) {
+  .home-hero-v2 {
+    --home-hero-gutter: 240px;
+  }
+
+  .site-header-v2__row {
+    padding-left: 240px;
+    padding-right: 240px;
+  }
+
+  .site-footer-v2 {
+    --footer-gutter: 240px;
+  }
+}
+
+@media (min-width: 2400px) {
+  .home-hero-v2 {
+    --home-hero-gutter: 480px;
+  }
+
+  .site-header-v2__row {
+    padding-left: 480px;
+    padding-right: 480px;
+  }
+
+  .site-footer-v2 {
+    --footer-gutter: 480px;
   }
 }
 

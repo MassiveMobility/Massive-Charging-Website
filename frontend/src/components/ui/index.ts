@@ -1,6 +1,7 @@
 export { Badge } from "@/components/ui/badge";
 export { Button } from "@/components/ui/button";
 export { Card } from "@/components/ui/card";
+export { FormField } from "@/components/ui/form-field";
 export { Heading } from "@/components/ui/heading";
 export { Input } from "@/components/ui/input";
 export { Select } from "@/components/ui/select";

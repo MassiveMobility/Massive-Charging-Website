@@ -7,6 +7,7 @@ type ButtonCssVariables = CSSProperties & Record<`--button-${string}`, number | 
 
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   fullWidth?: boolean;
+  iconOnly?: boolean;
   styleConfig: ButtonStyleConfig;
 };
 
@@ -14,13 +15,23 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
  * Reusable button driven entirely by prop-passed color, typography, and layout contracts.
  */
 export function Button({
+  children,
   className,
   fullWidth = false,
+  iconOnly = false,
   style,
   styleConfig,
   type = "button",
   ...props
 }: ButtonProps) {
+  if (process.env.NODE_ENV !== "production" && iconOnly) {
+    const hasAccessibleName = Boolean(props["aria-label"] || props["aria-labelledby"] || props.title);
+
+    if (!hasAccessibleName) {
+      console.warn("Button with iconOnly=true must include aria-label, aria-labelledby, or title.");
+    }
+  }
+
   const buttonVariables: ButtonCssVariables = {
     "--button-bg": styleConfig.colors.background,
     "--button-border": styleConfig.colors.border,
@@ -45,10 +56,12 @@ export function Button({
 
   return (
     <button
-      className={cn("ui-button", fullWidth && "ui-button--full", className)}
+      className={cn("ui-button", fullWidth && "ui-button--full", iconOnly && "ui-button--icon-only", className)}
       style={buttonVariables}
       type={type}
       {...props}
-    />
+    >
+      {children}
+    </button>
   );
 }

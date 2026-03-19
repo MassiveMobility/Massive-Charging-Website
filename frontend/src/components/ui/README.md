@@ -6,6 +6,7 @@ Reusable presentational primitives shared across features:
 - `input.tsx` (required `styleConfig` prop)
 - `textarea.tsx` (required `styleConfig` prop)
 - `select.tsx` (required `styleConfig` prop)
+- `form-field.tsx` (shared label/hint/error wrapper for consistent `aria-describedby` wiring)
 - `card.tsx` (required `styleConfig` prop)
 - `badge.tsx` (required `styleConfig` prop)
 - `heading.tsx` (required `styleConfig` prop)
