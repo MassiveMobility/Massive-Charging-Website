@@ -1,10 +1,17 @@
+import { Badge } from "@/components/ui";
 import { buildPageMetadata } from "@/lib/seo/metadata";
+import { componentStylePresets } from "@/lib/config/design-system";
+import { Heading } from "@/components/ui";
+import { routePaths } from "@/lib/constants/routes";
+import { Section } from "@/components/shared";
+import { Stack } from "@/components/shared";
+import { Text } from "@/components/ui";
 
 export const metadata = buildPageMetadata({
   title: "Contact Massive Charging",
   description:
     "Connect with Massive Charging to discuss EV charging deployment scope, operational needs, and launch timelines.",
-  path: "/contact"
+  path: routePaths.contact
 });
 
 const intakeChecklist = [
@@ -16,22 +23,34 @@ const intakeChecklist = [
 export default function ContactPage() {
   return (
     <>
-      <section aria-labelledby="contact-title" className="hero">
-        <p className="eyebrow">Contact</p>
-        <h1 id="contact-title">Start a deployment conversation</h1>
-        <p className="lead">
-          Share your charging goals and constraints so the team can scope the right rollout strategy.
-        </p>
-      </section>
+      <Section aria-labelledby="contact-title" padding="lg" tone="surface">
+        <Stack gap="md">
+          <Badge styleConfig={componentStylePresets.badge.brand}>
+            Contact
+          </Badge>
+          <Heading id="contact-title" level={1} styleConfig={componentStylePresets.heading.pageTitle}>
+            Start a deployment conversation
+          </Heading>
+          <Text styleConfig={componentStylePresets.text.leadMuted}>
+            Share your charging goals and constraints so the team can scope the right rollout strategy.
+          </Text>
+        </Stack>
+      </Section>
 
-      <section aria-labelledby="intake-title" className="surface">
-        <h2 id="intake-title">What to include in your request</h2>
-        <ul className="checklist">
-          {intakeChecklist.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-      </section>
+      <Section aria-labelledby="intake-title" tone="surface">
+        <Stack gap="md">
+          <Heading id="intake-title" level={2} styleConfig={componentStylePresets.heading.sectionTitle}>
+            What to include in your request
+          </Heading>
+          <Stack as="ul" gap="sm">
+            {intakeChecklist.map((item) => (
+              <li key={item}>
+                <Text styleConfig={componentStylePresets.text.body}>{item}</Text>
+              </li>
+            ))}
+          </Stack>
+        </Stack>
+      </Section>
     </>
   );
 }

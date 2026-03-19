@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Massive Charging">
+  <rect width="64" height="64" rx="14" fill="#0B4AA1" />
+  <path d="M16 46V18h8l8 12 8-12h8v28h-8V31l-8 11-8-11v15h-8Z" fill="#F8FBFF" />
+  <circle cx="52" cy="12" r="4" fill="#9FD6FF" />
+</svg>

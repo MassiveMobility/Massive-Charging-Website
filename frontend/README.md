@@ -8,10 +8,14 @@ Massive Charging website.
 - Frontend setup baseline: `frontend/docs/codebase-knowledge/main/frontend-setup-baseline.md`
 - Frontend architecture skeleton: `frontend/docs/codebase-knowledge/main/frontend-architecture-skeleton.md`
 - Rendering decision matrix: `frontend/docs/codebase-knowledge/main/frontend-rendering-decision-matrix.md`
+- Design-system foundation:
+  `frontend/docs/codebase-knowledge/main/frontend-design-system-foundation.md`
 - Route groups + nested layouts concept:
   `frontend/docs/concept-learning/nextjs-route-groups-nested-layout-boundaries.md`
 - App Router server-first baseline concept:
   `frontend/docs/concept-learning/nextjs-app-router-server-first-baseline.md`
+- Design tokens + semantic mapping concept:
+  `frontend/docs/concept-learning/design-tokens-semantic-mapping-pattern.md`
 - Environment variable validation concept:
   `frontend/docs/concept-learning/environment-variable-validation-pattern.md`
 
@@ -21,6 +25,7 @@ Massive Charging website.
 - Keep public routes semantic, server-rendered, and crawlable by default.
 - Centralize route inventory, ownership, and rendering contracts.
 - Centralize reusable metadata composition for SEO consistency.
+- Establish a reusable design system with centralized tokens and primitives.
 - Keep architecture ready for role-based admin article workflows.
 
 ## Requirements
@@ -90,14 +95,26 @@ frontend/
       env/
       seo/
       utils/
+    styles/
+      tokens.css
+      theme.css
+      typography.css
 ```
 
 ## Key architecture contracts
 
-- Route inventory and ownership are defined in `src/lib/constants/routes.ts`.
+- Routes are defined in one place: `src/lib/constants/routes.ts` (`routeRegistry`).
+- `routePaths` and `routeInventory` are derived from `routeRegistry` and consumed across links,
+  navigation, and metadata.
 - Marketing navigation constants are defined in `src/lib/constants/navigation.ts`.
 - Root and route-level metadata helpers are defined in `src/lib/seo/metadata.ts`.
 - Site identity defaults are centralized in `src/lib/config/site.ts`.
+- Design-system contracts are centralized in `src/lib/config/design-system.ts`.
+- Global style layers are centralized in `src/styles/*` and imported by `src/app/globals.css`.
+- UI primitives read visual values from prop-passed style configs so updating one preset object can
+  update all matching component usage.
+- Internal navigation (home/about/articles/contact/admin) uses built-in `next/link` for client-side route
+  transitions without hard reloads.
 
 ## Environment variable rules
 

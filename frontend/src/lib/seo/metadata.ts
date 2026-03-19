@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
+import type { Route } from "next";
 
 import { siteConfig, socialDefaults } from "@/lib/config/site";
+import { routePaths } from "@/lib/constants/routes";
 
 type PageMetadataInput = {
   title: string;
   description: string;
-  path: string;
+  path: Route;
   keywords?: readonly string[];
   noIndex?: boolean;
 };
@@ -27,7 +29,7 @@ export function buildRootMetadata(): Metadata {
     description: siteConfig.description,
     keywords: mergeKeywords(),
     alternates: {
-      canonical: "/"
+      canonical: routePaths.home
     },
     openGraph: {
       type: socialDefaults.openGraphType,

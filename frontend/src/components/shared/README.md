@@ -1,3 +1,8 @@
 # Shared Components
 
-Cross-feature components that are not low-level UI primitives (headers, footers, section wrappers, and shared content blocks).
+Cross-feature layout primitives that standardize page structure:
+
+- `container.tsx`: max-width and gutter contracts
+- `section.tsx`: semantic section spacing and surface tones
+- `stack.tsx`: vertical rhythm helper
+- `grid.tsx`: responsive repeatable layout helper

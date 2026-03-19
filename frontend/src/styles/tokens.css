@@ -1,0 +1,115 @@
+/*
+  Raw design tokens for the frontend.
+  These values are intentionally non-semantic so themes can remap meaning later.
+*/
+:root {
+  color-scheme: light;
+
+  /* Raw brand palette */
+  --raw-color-brand-50: #eff5ff;
+  --raw-color-brand-100: #dce9ff;
+  --raw-color-brand-200: #bdd5ff;
+  --raw-color-brand-300: #8eb8ff;
+  --raw-color-brand-400: #5c95ff;
+  --raw-color-brand-500: #2d74f2;
+  --raw-color-brand-600: #1f5ed2;
+  --raw-color-brand-700: #1a4ca7;
+  --raw-color-brand-800: #173f88;
+  --raw-color-brand-900: #17356f;
+
+  /* Raw neutral palette */
+  --raw-color-slate-0: #ffffff;
+  --raw-color-slate-25: #fbfcfe;
+  --raw-color-slate-50: #f3f6fb;
+  --raw-color-slate-100: #e9eef5;
+  --raw-color-slate-200: #d3dce8;
+  --raw-color-slate-300: #b2bfd0;
+  --raw-color-slate-400: #8593a8;
+  --raw-color-slate-500: #617188;
+  --raw-color-slate-600: #4a5b70;
+  --raw-color-slate-700: #36465b;
+  --raw-color-slate-800: #263447;
+  --raw-color-slate-900: #14202f;
+
+  /* Raw feedback palettes */
+  --raw-color-success-50: #ebf9ef;
+  --raw-color-success-100: #d1f0db;
+  --raw-color-success-500: #1f8f49;
+  --raw-color-success-700: #156739;
+
+  --raw-color-warning-50: #fff8e8;
+  --raw-color-warning-100: #ffedc0;
+  --raw-color-warning-500: #b97216;
+  --raw-color-warning-700: #8d550f;
+
+  --raw-color-danger-50: #fff1f1;
+  --raw-color-danger-100: #ffd8d8;
+  --raw-color-danger-500: #bf2d3d;
+  --raw-color-danger-700: #8f1f2d;
+
+  /* Space scale */
+  --raw-space-0: 0;
+  --raw-space-1: 0.25rem;
+  --raw-space-2: 0.5rem;
+  --raw-space-3: 0.75rem;
+  --raw-space-4: 1rem;
+  --raw-space-5: 1.25rem;
+  --raw-space-6: 1.5rem;
+  --raw-space-7: 1.75rem;
+  --raw-space-8: 2rem;
+  --raw-space-10: 2.5rem;
+  --raw-space-12: 3rem;
+  --raw-space-16: 4rem;
+  --raw-space-20: 5rem;
+
+  /* Radius scale */
+  --raw-radius-none: 0;
+  --raw-radius-sm: 0.375rem;
+  --raw-radius-md: 0.625rem;
+  --raw-radius-lg: 0.875rem;
+  --raw-radius-xl: 1.25rem;
+  --raw-radius-pill: 9999px;
+
+  /* Elevation scale */
+  --raw-shadow-sm: 0 1px 2px rgb(18 33 56 / 0.1);
+  --raw-shadow-md: 0 12px 24px rgb(18 33 56 / 0.1);
+  --raw-shadow-lg: 0 20px 40px rgb(18 33 56 / 0.14);
+
+  /* Z-index scale */
+  --raw-z-base: 0;
+  --raw-z-dropdown: 20;
+  --raw-z-sticky: 40;
+  --raw-z-overlay: 60;
+  --raw-z-modal: 80;
+
+  /* Typography scale */
+  --raw-font-size-2xs: 0.75rem;
+  --raw-font-size-xs: 0.875rem;
+  --raw-font-size-sm: 1rem;
+  --raw-font-size-md: 1.125rem;
+  --raw-font-size-lg: 1.25rem;
+  --raw-font-size-xl: 1.5rem;
+  --raw-font-size-2xl: 1.875rem;
+  --raw-font-size-3xl: 2.25rem;
+  --raw-font-size-4xl: 2.9rem;
+
+  --raw-line-height-tight: 1.2;
+  --raw-line-height-snug: 1.35;
+  --raw-line-height-normal: 1.6;
+  --raw-line-height-relaxed: 1.75;
+
+  --raw-letter-spacing-tight: -0.02em;
+  --raw-letter-spacing-normal: 0;
+  --raw-letter-spacing-wide: 0.08em;
+
+  /* Breakpoint tokens */
+  --raw-breakpoint-xs: 30rem;
+  --raw-breakpoint-sm: 48rem;
+  --raw-breakpoint-md: 64rem;
+  --raw-breakpoint-lg: 80rem;
+
+  /* Layout max widths */
+  --raw-layout-narrow-max: 52rem;
+  --raw-layout-content-max: 72rem;
+  --raw-layout-wide-max: 88rem;
+}
