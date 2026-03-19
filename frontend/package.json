@@ -2,12 +2,34 @@
   "name": "@massive/frontend",
   "private": true,
   "version": "0.1.0",
-  "description": "Frontend workspace for the Next.js public website.",
+  "description": "Production-grade Next.js frontend for the Massive Charging public website.",
   "scripts": {
-    "lint": "echo \"TODO: configure frontend lint\"",
-    "typecheck": "echo \"TODO: configure frontend typecheck\"",
-    "test": "echo \"TODO: configure frontend test\"",
-    "build": "echo \"TODO: configure frontend build\"",
-    "format:check": "echo \"TODO: configure frontend format check\""
+    "dev": "next dev",
+    "dev:clean": "npm run clean && next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "clean": "node -e \"require('node:fs').rmSync('.next', { recursive: true, force: true });\"",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "echo \"No test runner is configured yet.\""
+  },
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "dependencies": {
+    "next": "^14.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.24",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2"
   }
 }
