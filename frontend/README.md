@@ -1,22 +1,27 @@
-# Frontend Setup Baseline
+# Frontend Architecture Skeleton
 
-This workspace contains the production-grade Next.js App Router baseline for the public Massive Charging website.
+This workspace contains the production-grade Next.js App Router architecture skeleton for the public
+Massive Charging website.
 
 ## Docs index
 
-- Frontend Setup Baseline: `frontend/README.md`
-- Frontend baseline architecture notes: `frontend/codebase-knowledge/main/frontend-setup-baseline.md`
-- Frontend setup concepts:
-  - `frontend/concept-learning/nextjs-app-router-server-first-baseline.md`
-  - `frontend/concept-learning/environment-variable-validation-pattern.md`
+- Frontend setup baseline: `frontend/docs/codebase-knowledge/main/frontend-setup-baseline.md`
+- Frontend architecture skeleton: `frontend/docs/codebase-knowledge/main/frontend-architecture-skeleton.md`
+- Rendering decision matrix: `frontend/docs/codebase-knowledge/main/frontend-rendering-decision-matrix.md`
+- Route groups + nested layouts concept:
+  `frontend/docs/concept-learning/nextjs-route-groups-nested-layout-boundaries.md`
+- App Router server-first baseline concept:
+  `frontend/docs/concept-learning/nextjs-app-router-server-first-baseline.md`
+- Environment variable validation concept:
+  `frontend/docs/concept-learning/environment-variable-validation-pattern.md`
 
-## Objectives for this baseline
+## Objectives of this stage
 
-- Server-first rendering for crawlable public content
-- Strict TypeScript, linting, and formatting standards
-- Clean route structure for marketing and platform growth
-- Strong SEO, accessibility, and performance defaults
-- Environment validation that separates public vs server-only variables
+- Enforce route-group boundaries between marketing and platform surfaces.
+- Keep public routes semantic, server-rendered, and crawlable by default.
+- Centralize route inventory, ownership, and rendering contracts.
+- Centralize reusable metadata composition for SEO consistency.
+- Keep architecture ready for role-based admin article workflows.
 
 ## Requirements
 
@@ -46,6 +51,54 @@ Visit [http://localhost:3000](http://localhost:3000).
 - `npm run format:check`: check formatting in CI
 - `npm run test`: placeholder until test framework is added
 
+## Architecture map
+
+```text
+frontend/
+  src/
+    app/
+      (marketing)/
+        layout.tsx
+        page.tsx
+        about/page.tsx
+        articles/page.tsx
+        contact/page.tsx
+        loading.tsx
+        error.tsx
+      (platform)/
+        layout.tsx
+        loading.tsx
+        error.tsx
+        admin/page.tsx
+        admin/articles/page.tsx
+      layout.tsx
+      loading.tsx
+      error.tsx
+      not-found.tsx
+      globals.css
+    components/
+      marketing/
+      shared/
+      ui/
+    features/
+      articles/
+      navigation/
+      seo/
+    lib/
+      config/
+      constants/
+      env/
+      seo/
+      utils/
+```
+
+## Key architecture contracts
+
+- Route inventory and ownership are defined in `src/lib/constants/routes.ts`.
+- Marketing navigation constants are defined in `src/lib/constants/navigation.ts`.
+- Root and route-level metadata helpers are defined in `src/lib/seo/metadata.ts`.
+- Site identity defaults are centralized in `src/lib/config/site.ts`.
+
 ## Environment variable rules
 
 Use `.env.example` as the source template.
@@ -54,41 +107,5 @@ Use `.env.example` as the source template.
 - Server-only values must not use the `NEXT_PUBLIC_` prefix.
 - Public environment validation is implemented in `src/lib/env/public.ts`.
 - Server environment access pattern is implemented in `src/lib/env/server.ts`.
-- Non-production environments fall back to safe defaults (`Massive Charging`, `http://localhost:3000`) so first run is smooth.
+- Non-production environments fall back to safe defaults (`Massive Charging`, `http://localhost:3000`).
 - Production builds still require explicit `NEXT_PUBLIC_SITE_NAME` and `NEXT_PUBLIC_SITE_URL`.
-
-## Current structure
-
-```text
-frontend/
-  src/
-    app/
-      (marketing)/
-      (platform)/
-      layout.tsx
-      page.tsx
-      loading.tsx
-      error.tsx
-      not-found.tsx
-      globals.css
-    components/
-      ui/
-      shared/
-    features/
-    lib/
-      config/
-      env/
-    styles/
-    types/
-```
-
-## Rendering baseline
-
-- Public pages default to Server Components for SEO and crawlability.
-- Client Components are added only where browser interactivity requires them (for example, `src/app/error.tsx`).
-- Route groups are in place so marketing pages and platform/admin pages can evolve independently without URL noise.
-
-## Troubleshooting
-
-- If you see `Cannot find module './xxx.js'` from `.next/server/...`, run `npm run dev:clean` and restart.
-- If production build fails on missing public env variables, set `NEXT_PUBLIC_SITE_NAME` and `NEXT_PUBLIC_SITE_URL`.

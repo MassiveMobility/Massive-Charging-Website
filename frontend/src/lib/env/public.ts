@@ -33,6 +33,15 @@ function readPublicEnv(): PublicEnv {
   try {
     new URL(env.NEXT_PUBLIC_SITE_URL);
   } catch {
+    if (shouldFallbackToDefaults) {
+      /**
+       * Local/dev environments often run with partially configured `.env` files.
+       * Falling back here avoids hard-failing the app during route/module evaluation.
+       */
+      env.NEXT_PUBLIC_SITE_URL = developmentDefaults.NEXT_PUBLIC_SITE_URL;
+      return env;
+    }
+
     throw new Error(
       `[env] NEXT_PUBLIC_SITE_URL must be a valid absolute URL, received: "${env.NEXT_PUBLIC_SITE_URL}"`,
     );

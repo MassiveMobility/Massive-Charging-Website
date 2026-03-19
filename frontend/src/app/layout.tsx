@@ -2,7 +2,7 @@ import { Manrope, Playfair_Display } from "next/font/google";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-import { siteConfig } from "@/lib/config/site";
+import { buildRootMetadata } from "@/lib/seo/metadata";
 
 import "./globals.css";
 
@@ -18,33 +18,7 @@ const headingFont = Playfair_Display({
   variable: "--font-display"
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
-  title: {
-    default: siteConfig.name,
-    template: `%s | ${siteConfig.name}`
-  },
-  description: siteConfig.description,
-  alternates: {
-    canonical: "/"
-  },
-  openGraph: {
-    type: "website",
-    title: siteConfig.name,
-    description: siteConfig.description,
-    siteName: siteConfig.name,
-    url: siteConfig.url
-  },
-  robots: {
-    follow: true,
-    index: true
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.name,
-    description: siteConfig.description
-  }
-};
+export const metadata: Metadata = buildRootMetadata();
 
 type RootLayoutProps = {
   children: ReactNode;
