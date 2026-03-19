@@ -1,0 +1,13 @@
+{
+  "name": "@massive/backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Backend workspace for API, auth, RBAC, and content workflow services.",
+  "scripts": {
+    "lint": "echo \"TODO: configure backend lint\"",
+    "typecheck": "echo \"TODO: configure backend typecheck\"",
+    "test": "echo \"TODO: configure backend test\"",
+    "build": "echo \"TODO: configure backend build\"",
+    "format:check": "echo \"TODO: configure backend format check\""
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@massive/frontend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Frontend workspace for the Next.js public website.",
+  "scripts": {
+    "lint": "echo \"TODO: configure frontend lint\"",
+    "typecheck": "echo \"TODO: configure frontend typecheck\"",
+    "test": "echo \"TODO: configure frontend test\"",
+    "build": "echo \"TODO: configure frontend build\"",
+    "format:check": "echo \"TODO: configure frontend format check\""
+  }
+}
