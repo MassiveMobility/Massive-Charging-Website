@@ -1,5 +1,10 @@
 import { buildPageMetadata } from "@/lib/seo/metadata";
+import { HomeBusinessScroll } from "@/components/marketing/home/home-business-scroll";
+import { HomeFifthScroll } from "@/components/marketing/home/home-fifth-scroll";
 import { HomeHero } from "@/components/marketing/home/home-hero";
+import { HomeSecondScroll } from "@/components/marketing/home/home-second-scroll";
+import { HomeSixthScroll } from "@/components/marketing/home/home-sixth-scroll";
+import { HomeThirdScroll } from "@/components/marketing/home/home-third-scroll";
 import { routePaths } from "@/lib/constants/routes";
 
 export const metadata = buildPageMetadata({
@@ -10,5 +15,14 @@ export const metadata = buildPageMetadata({
 });
 
 export default function MarketingHomePage() {
-  return <HomeHero />;
+  return (
+    <>
+      <HomeHero />
+      <HomeSixthScroll />
+      <HomeSecondScroll />
+      <HomeThirdScroll />
+      <HomeBusinessScroll />
+      <HomeFifthScroll />
+    </>
+  );
 }
