@@ -77,6 +77,11 @@ function mapsDirectionUrl(station: Station): string {
   return `https://www.google.com/maps/dir/?api=1&destination=${destination}`;
 }
 
+function mapsPlaceUrl(station: Station): string {
+  const query = `${station.latitude},${station.longitude} (${station.name})`;
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+}
+
 function mapsEmbedUrl(station: Station): string {
   const query = `${station.latitude},${station.longitude}`;
   return `https://www.google.com/maps?q=${query}&z=13&output=embed`;
@@ -140,6 +145,26 @@ export function ChargingStationsExplorer() {
                   </span>
                   <span className="stations-explorer__rating">Rating: {station.rating}</span>
                 </div>
+                <div className="stations-explorer__card-actions">
+                  <a
+                    className="stations-explorer__open-link"
+                    href={mapsPlaceUrl(station)}
+                    onClick={(event) => event.stopPropagation()}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Open in Google Maps
+                  </a>
+                  <a
+                    className="stations-explorer__card-directions"
+                    href={mapsDirectionUrl(station)}
+                    onClick={(event) => event.stopPropagation()}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Directions {"->"}
+                  </a>
+                </div>
               </button>
             ))}
           </div>
@@ -147,29 +172,15 @@ export function ChargingStationsExplorer() {
 
         <div className="stations-explorer__right">
           {selectedStation ? (
-            <>
-              <div className="stations-explorer__map-frame">
-                <iframe
-                  className="stations-explorer__map"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  src={mapsEmbedUrl(selectedStation)}
-                  title={`${selectedStation.name} map`}
-                />
-              </div>
-              <div className="stations-explorer__detail">
-                <h3 className="stations-explorer__detail-title">{selectedStation.name}</h3>
-                <p className="stations-explorer__detail-address">{selectedStation.address}</p>
-                <a
-                  className="stations-explorer__directions-btn"
-                  href={mapsDirectionUrl(selectedStation)}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Open Directions
-                </a>
-              </div>
-            </>
+            <div className="stations-explorer__map-frame">
+              <iframe
+                className="stations-explorer__map"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                src={mapsEmbedUrl(selectedStation)}
+                title={`${selectedStation.name} map`}
+              />
+            </div>
           ) : (
             <div className="stations-explorer__empty">No stations found for your current search.</div>
           )}
