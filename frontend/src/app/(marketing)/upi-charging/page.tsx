@@ -1,20 +1,16 @@
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { MarketingRoutePlaceholder } from "@/components/marketing/marketing-route-placeholder";
+import { UpiChargingPage } from "@/features/marketing/components/upi-charging-page";
+import { getMarketingPageContent } from "@/features/marketing/data/general-pages";
+
+const routePath = "/upi-charging" as const;
+const pageContent = getMarketingPageContent(routePath);
 
 export const metadata = buildPageMetadata({
   title: "UPI Charging",
-  description:
-    "Legacy UPI charging route has been scaffolded for migration.",
-  path: "/upi-charging",
-  noIndex: true
+  description: pageContent.description,
+  path: routePath
 });
 
-export default function UpiChargingPage() {
-  return (
-    <MarketingRoutePlaceholder
-      title="UPI Charging"
-      routePath="/upi-charging"
-      description="Legacy UPI charging route has been scaffolded for migration."
-    />
-  );
+export default function UpiChargingRoutePage() {
+  return <UpiChargingPage />;
 }

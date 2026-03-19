@@ -1,20 +1,15 @@
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { MarketingRoutePlaceholder } from "@/components/marketing/marketing-route-placeholder";
+import { ChargingBusinessFreshPage } from "@/features/marketing/components/charging-business-fresh-page";
+
+const routePath = "/ev-charging-station-business" as const;
 
 export const metadata = buildPageMetadata({
   title: "EV Charging Station Business",
   description:
-    "Legacy EV charging station business route has been scaffolded for migration.",
-  path: "/ev-charging-station-business",
-  noIndex: true
+    "Legacy fresh charging-station-business page migrated to Next.js with setup pathways and business workflow sections.",
+  path: routePath
 });
 
-export default function EvChargingStationBusinessPage() {
-  return (
-    <MarketingRoutePlaceholder
-      title="EV Charging Station Business"
-      routePath="/ev-charging-station-business"
-      description="Legacy EV charging station business route has been scaffolded for migration."
-    />
-  );
+export default function EvChargingStationBusinessRoutePage() {
+  return <ChargingBusinessFreshPage />;
 }

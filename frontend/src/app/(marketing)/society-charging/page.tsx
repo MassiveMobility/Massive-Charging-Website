@@ -1,20 +1,14 @@
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { MarketingRoutePlaceholder } from "@/components/marketing/marketing-route-placeholder";
+import { ScenarioRoutePage } from "@/features/marketing/components/scenario-route-page";
+
+const routePath = "/society-charging" as const;
 
 export const metadata = buildPageMetadata({
   title: "Society Charging",
-  description:
-    "Legacy society-charging route has been scaffolded for migration.",
-  path: "/society-charging",
-  noIndex: true
+  description: "Set up EV charging for apartment societies and RWAs with scalable rollout planning.",
+  path: routePath
 });
 
-export default function SocietyChargingPage() {
-  return (
-    <MarketingRoutePlaceholder
-      title="Society Charging"
-      routePath="/society-charging"
-      description="Legacy society-charging route has been scaffolded for migration."
-    />
-  );
+export default function ScenarioPage() {
+  return <ScenarioRoutePage routePath={routePath} />;
 }

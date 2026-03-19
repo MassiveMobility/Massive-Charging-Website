@@ -1,20 +1,16 @@
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { MarketingRoutePlaceholder } from "@/components/marketing/marketing-route-placeholder";
+import { EvChargingShopPage } from "@/features/marketing/components/ev-charging-shop-page";
+import { getMarketingPageContent } from "@/features/marketing/data/general-pages";
+
+const routePath = "/ev-charging-shop" as const;
+const pageContent = getMarketingPageContent(routePath);
 
 export const metadata = buildPageMetadata({
   title: "EV Charging Shop",
-  description:
-    "Legacy EV charging shop route has been scaffolded for migration.",
-  path: "/ev-charging-shop",
-  noIndex: true
+  description: pageContent.description,
+  path: routePath
 });
 
-export default function EvChargingShopPage() {
-  return (
-    <MarketingRoutePlaceholder
-      title="EV Charging Shop"
-      routePath="/ev-charging-shop"
-      description="Legacy EV charging shop route has been scaffolded for migration."
-    />
-  );
+export default function EvChargingShopRoutePage() {
+  return <EvChargingShopPage />;
 }

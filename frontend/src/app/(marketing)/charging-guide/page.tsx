@@ -1,20 +1,48 @@
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { MarketingRoutePlaceholder } from "@/components/marketing/marketing-route-placeholder";
+import { LegacyGuideHomePage } from "@/features/marketing/components/legacy-guide-home-page";
+import { getLegacyCategoryArticles } from "@/features/marketing/data/legacy-guide-data";
+import { legacyFourWheelVehicles } from "@/features/marketing/data/legacy-guide-data";
+
+const routePath = "/charging-guide" as const;
 
 export const metadata = buildPageMetadata({
   title: "Charging Guide",
   description:
-    "Legacy charging guide index route has been scaffolded for migration.",
-  path: "/charging-guide",
-  noIndex: true
+    "Legacy charging-guide experience migrated to Next.js with category navigation, EV search, and article-level pages.",
+  path: routePath
 });
 
-export default function ChargingGuidePage() {
+export default function ChargingGuideRoutePage() {
+  const articlesByCategory = {
+    CAT_003: getLegacyCategoryArticles("CAT_003").map((article) => ({
+      slug: article.slug,
+      title: article.title
+    })),
+    CAT_004: getLegacyCategoryArticles("CAT_004").map((article) => ({
+      slug: article.slug,
+      title: article.title
+    })),
+    CAT_005: getLegacyCategoryArticles("CAT_005").map((article) => ({
+      slug: article.slug,
+      title: article.title
+    }))
+  };
+
   return (
-    <MarketingRoutePlaceholder
-      title="Charging Guide"
-      routePath="/charging-guide"
-      description="Legacy charging guide index route has been scaffolded for migration."
+    <LegacyGuideHomePage
+      articlesByCategory={articlesByCategory}
+      vehicles={legacyFourWheelVehicles.map((vehicle) => ({
+        battery: vehicle.Battery_Capacity || "",
+        claimedRange: vehicle.Claimed_Range || "",
+        connector: vehicle.Charging_Type || "",
+        guideSlug: vehicle.slug,
+        id: vehicle.Vehicle_ID,
+        manufacturer: vehicle.Manufacturer,
+        name: vehicle.Vehicle_Name,
+        price: vehicle.Price || "",
+        realRange: vehicle.Realworld_Range || "",
+        variant: vehicle.Vehicle_Variant || ""
+      }))}
     />
   );
 }

@@ -1,0 +1,1664 @@
+{
+  "Core_message_blocks": [
+    {
+      "block_id": "BLK_MSG_101_001",
+      "cmsg_id": "MSG_101",
+      "block_order": "1",
+      "block_type": "heading_1",
+      "text": "Audi Q6 e-tron Residential Charging Guide",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_002",
+      "cmsg_id": "MSG_101",
+      "block_order": "2",
+      "block_type": "heading_2",
+      "text": "Q6 e-tron Residential Charging Overview",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_003",
+      "cmsg_id": "MSG_101",
+      "block_order": "3",
+      "block_type": "body",
+      "text": "The Audi Q6 e-tron is set to dominate the luxury EV market. Its features include cutting-edge technology from the Premium Platform Electric (PPE) architecture, a massive 83 kWh battery capacity for long range, and premium luxury status in the highly desirable SUV segment, making it a strong competitor against models like the BMW iX, the Mercedes-Benz EQE SUV, and even the high-performance Porsche Macan EV.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_004",
+      "cmsg_id": "MSG_101",
+      "block_order": "4",
+      "block_type": "body",
+      "text": "One of the greatest benefits of owning an electric vehicle is the remarkably low operational cost. The monthly running expenditure for an EV is typically 4 to 5x lower than for a comparable gasoline vehicle. Other advantages include enhanced energy efficiency, high torque output, reduced maintenance needs, a contemporary look, and environmentally cleaner operation.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_005",
+      "cmsg_id": "MSG_101",
+      "block_order": "5",
+      "block_type": "body",
+      "text": "A key convenience of EV ownership is the ability to recharge the vehicle at home. This eliminates the need for frequent trips to fuel stations, waiting in lines, or concerns over fluctuating fuel prices or ethanol content. An EV can be conveniently charged at your residence, much like a mobile phone or laptop. This feature significantly enhances the comfort and ease of the ownership experience.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_006",
+      "cmsg_id": "MSG_101",
+      "block_order": "6",
+      "block_type": "body",
+      "text": "Let’s explore the different methods for charging your Audi Q6 e-tron at home.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_007",
+      "cmsg_id": "MSG_101",
+      "block_order": "7",
+      "block_type": "divider",
+      "text": "",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_008",
+      "cmsg_id": "MSG_101",
+      "block_order": "8",
+      "block_type": "heading_2",
+      "text": "Charging the Audi Q6 e-tron with a Standard 16A Outlet",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_009",
+      "cmsg_id": "MSG_101",
+      "block_order": "9",
+      "block_type": "body",
+      "text": "The Audi Q6 e-tron comes with a portable 3.3 kW charging unit. This unit is essentially an adapter with a standard 3-pin plug. This plug can be connected to any 16A household socket, commonly used for high-power appliances such as air conditioners and water heaters.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_010",
+      "cmsg_id": "MSG_101",
+      "block_order": "10",
+      "block_type": "body",
+      "text": "Simply connecting the 3.3 kW charger to the 16A socket initiates the charging process.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_011",
+      "cmsg_id": "MSG_101",
+      "block_order": "11",
+      "block_type": "heading_3",
+      "text": "Charging Time Calculation",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_012",
+      "cmsg_id": "MSG_101",
+      "block_order": "12",
+      "block_type": "body",
+      "text": "For the 83 kWh battery, a full charge (0% to 100%) will take approximately 25 hours. This is because the charger draws only 3.3 kW of power per hour, and to fill 83 kWh of energy:",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_013",
+      "cmsg_id": "MSG_101",
+      "block_order": "13",
+      "block_type": "body",
+      "text": "83 kWh ÷ 3.3 kW ≈ 25 hours",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_014",
+      "cmsg_id": "MSG_101",
+      "block_order": "14",
+      "block_type": "body",
+      "text": "While this is the most straightforward and accessible charging method, it presents several challenges.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_015",
+      "cmsg_id": "MSG_101",
+      "block_order": "15",
+      "block_type": "heading_3",
+      "text": "Practical Considerations",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_016",
+      "cmsg_id": "MSG_101",
+      "block_order": "16",
+      "block_type": "list",
+      "text": "- The 16A socket must be located within usable distance of the vehicle.\n - Ground-floor residents may find this convenient.\n - High-rise apartment residents may need professional wiring extensions and a dedicated 16A socket near the parking area.\n - Always use safety-compliant wiring such as 3 mm thick, 3-core Polycab wire with an MCB installed.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"\"style\"\": \"\"bullet\"\"}"
+    },
+    {
+      "block_id": "BLK_MSG_101_017",
+      "cmsg_id": "MSG_101",
+      "block_order": "17",
+      "block_type": "heading_3",
+      "text": "Limitations of Standard 16A Charging",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_018",
+      "cmsg_id": "MSG_101",
+      "block_order": "18",
+      "block_type": "list",
+      "text": "- High risk of unauthorized use or electricity theft.\n - No accurate tracking of EV-specific energy consumption.\n - Safety concerns during heavy rain, thunderstorms, or lightning.\n - No immediate access to manually shut down charging in emergencies.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"\"style\"\": \"\"bullet\"\"}"
+    },
+    {
+      "block_id": "BLK_MSG_101_019",
+      "cmsg_id": "MSG_101",
+      "block_order": "19",
+      "block_type": "body",
+      "text": "For these reasons, a dedicated AC charging solution is recommended.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_020",
+      "cmsg_id": "MSG_101",
+      "block_order": "20",
+      "block_type": "divider",
+      "text": "",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_021",
+      "cmsg_id": "MSG_101",
+      "block_order": "21",
+      "block_type": "heading_2",
+      "text": "Charging the Audi Q6 e-tron with a Massive Mobility 3.3 kW AC Charger",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_022",
+      "cmsg_id": "MSG_101",
+      "block_order": "22",
+      "block_type": "body",
+      "text": "The 3.3 kW AC charger is a custom-engineered EV charging point designed to prioritize safety, security, emergency response, and efficiency.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_023",
+      "cmsg_id": "MSG_101",
+      "block_order": "23",
+      "block_type": "body",
+      "text": "The Massive Mobility 3.3 kW AC charging unit provides a secure 16A outlet that can be remotely managed using a mobile application. Your smartphone effectively becomes the remote control for the charger.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_024",
+      "cmsg_id": "MSG_101",
+      "block_order": "24",
+      "block_type": "heading_3",
+      "text": "Smart Features",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_025",
+      "cmsg_id": "MSG_101",
+      "block_order": "25",
+      "block_type": "list",
+      "text": "- Real-time electricity consumption tracking\n - Voltage monitoring\n - Charging session history\n - Data insights to optimize charging habits",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"\"style\"\": \"\"bullet\"\"}"
+    },
+    {
+      "block_id": "BLK_MSG_101_026",
+      "cmsg_id": "MSG_101",
+      "block_order": "26",
+      "block_type": "heading_3",
+      "text": "Cost Control Benefits",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_027",
+      "cmsg_id": "MSG_101",
+      "block_order": "27",
+      "block_type": "body",
+      "text": "During power outages, apartment generators often charge electricity at 2 to 3x the normal rate. With remote control functionality, charging can be scheduled only when cost-effective power is available.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_028",
+      "cmsg_id": "MSG_101",
+      "block_order": "28",
+      "block_type": "body",
+      "text": "This solution represents the safest way to charge your EV at home using a 3.3 kW setup.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_029",
+      "cmsg_id": "MSG_101",
+      "block_order": "29",
+      "block_type": "divider",
+      "text": "",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_030",
+      "cmsg_id": "MSG_101",
+      "block_order": "30",
+      "block_type": "heading_2",
+      "text": "Charging the Audi Q6 e-tron with a Massive Mobility 7.4 kW AC Charger",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_031",
+      "cmsg_id": "MSG_101",
+      "block_order": "31",
+      "block_type": "body",
+      "text": "The Massive Mobility 7.4 kW AC charger operates similarly to the 3.3 kW model but delivers significantly faster charging.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_032",
+      "cmsg_id": "MSG_101",
+      "block_order": "32",
+      "block_type": "body",
+      "text": "With a maximum output of 7.4 kW, the Audi Q6 e-tron can be charged in approximately 11 to 11.5 hours for the 83 kWh battery. The vehicle supports up to 11 kW AC charging, which could reduce charging time to approximately 7.5 hours with higher-capacity hardware and electrical infrastructure.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_033",
+      "cmsg_id": "MSG_101",
+      "block_order": "33",
+      "block_type": "heading_3",
+      "text": "Hardware and Connection",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_034",
+      "cmsg_id": "MSG_101",
+      "block_order": "34",
+      "block_type": "list",
+      "text": "- Permanently wall-mounted near the parking space\n - Long CCS2 charging connector plugs directly into the vehicle",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"\"style\"\": \"\"bullet\"\"}"
+    },
+    {
+      "block_id": "BLK_MSG_101_035",
+      "cmsg_id": "MSG_101",
+      "block_order": "35",
+      "block_type": "heading_3",
+      "text": "Remote Control and Security",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_036",
+      "cmsg_id": "MSG_101",
+      "block_order": "36",
+      "block_type": "list",
+      "text": "- Smartphone-controlled operation\n - Authorization-based activation prevents energy theft\n - Remote emergency shutdown capability during adverse weather",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"\"style\"\": \"\"bullet\"\"}"
+    },
+    {
+      "block_id": "BLK_MSG_101_037",
+      "cmsg_id": "MSG_101",
+      "block_order": "37",
+      "block_type": "body",
+      "text": "This charger offers a premium, seamless, and highly secure residential charging experience.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_038",
+      "cmsg_id": "MSG_101",
+      "block_order": "38",
+      "block_type": "divider",
+      "text": "",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_039",
+      "cmsg_id": "MSG_101",
+      "block_order": "39",
+      "block_type": "heading_2",
+      "text": "Charging the Audi Q6 e-tron at Home with Massive Mobility Portable Charging Extension",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_040",
+      "cmsg_id": "MSG_101",
+      "block_order": "40",
+      "block_type": "body",
+      "text": "The Massive Mobility EV charging extension is a unique hardware solution designed to address complex residential charging scenarios.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_041",
+      "cmsg_id": "MSG_101",
+      "block_order": "41",
+      "block_type": "heading_3",
+      "text": "Key Capabilities",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_042",
+      "cmsg_id": "MSG_101",
+      "block_order": "42",
+      "block_type": "list",
+      "text": "- 30 to 45 meters of safety-compliant cable\n - Built-in energy metering\n - Extends private 16A or 3.3 kW AC sockets\n - Enables charging from upper floors (4th or 5th floor)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"\"style\"\": \"\"bullet\"\"}"
+    },
+    {
+      "block_id": "BLK_MSG_101_043",
+      "cmsg_id": "MSG_101",
+      "block_order": "43",
+      "block_type": "heading_3",
+      "text": "Portability and Smart Usage",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_044",
+      "cmsg_id": "MSG_101",
+      "block_order": "44",
+      "block_type": "list",
+      "text": "- Portable and easy to store in the vehicle\n - Suitable for roadside shops, hotels, or travel charging\n - Provides precise energy consumption readings",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"\"style\"\": \"\"bullet\"\"}"
+    },
+    {
+      "block_id": "BLK_MSG_101_045",
+      "cmsg_id": "MSG_101",
+      "block_order": "45",
+      "block_type": "divider",
+      "text": "",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_046",
+      "cmsg_id": "MSG_101",
+      "block_order": "46",
+      "block_type": "heading_2",
+      "text": "Key Summary of Audi Q6 e-tron Home Charging Options",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_047",
+      "cmsg_id": "MSG_101",
+      "block_order": "47",
+      "block_type": "table",
+      "text": "| Charging Method | Max Power Output | Approx. Charging Time (83 kWh) | Pros | Cons / Notes |\n |---------------|----------------|-------------------------------|------|--------------|\n | Standard 16A Socket | 3.3 kW (Portable Charger) | ~25 hours | Simple, uses included equipment | Very slow; security risks; no energy tracking |\n | Massive Mobility 3.3 kW AC Charger | 3.3 kW (Wall-mounted) | ~25 hours | Safe, secure, remote control, energy tracking | Still slow |\n | Massive Mobility 7.4 kW AC Charger | 7.4 kW | ~11–11.5 hours | Fast, premium, secure, remote operation | 11 kW requires higher electrical capacity |\n | Massive Mobility Portable Extension | N/A | Depends on source | Solves distance issues; portable; accurate metering | Requires source socket |",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_048",
+      "cmsg_id": "MSG_101",
+      "block_order": "48",
+      "block_type": "divider",
+      "text": "",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_049",
+      "cmsg_id": "MSG_101",
+      "block_order": "49",
+      "block_type": "heading_2",
+      "text": "Conclusion",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_050",
+      "cmsg_id": "MSG_101",
+      "block_order": "50",
+      "block_type": "body",
+      "text": "By utilizing reliable home charging equipment and the Massive Mobility Home Charging Toolkit, you can ensure a safe, smooth, and hassle-free charging experience.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_101_051",
+      "cmsg_id": "MSG_101",
+      "block_order": "51",
+      "block_type": "body",
+      "text": "These chargers, sockets, and extensions eliminate range anxiety and guarantee that a suitable charging solution is always available. Ultimately, this enhances your EV ownership experience, allowing you to remain stress-free and fully supported in all charging scenarios.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "",
+      "cmsg_id": "",
+      "block_order": "",
+      "block_type": "",
+      "text": "",
+      "src": "",
+      "alt": "",
+      "meta_json": ""
+    },
+    {
+      "block_id": "BLK_MSG_102_001",
+      "cmsg_id": "MSG_102",
+      "block_order": "1",
+      "block_type": "heading_1",
+      "text": "BMW i4 Residential Charging Guide",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_002",
+      "cmsg_id": "MSG_102",
+      "block_order": "2",
+      "block_type": "heading_2",
+      "text": "i4 Residential Charging Overview",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_003",
+      "cmsg_id": "MSG_102",
+      "block_order": "3",
+      "block_type": "body",
+      "text": "The BMW i4 is a market leader in the luxury electric sedan segment. Its features include the sporty aesthetic of an electric Gran Coupé, a powerful 81.5 kWh battery pack for high range, and the performance expected from a luxury sports sedan, making it a strong competitor against models like the Audi e-tron GT, the Porsche Taycan, and the Mercedes-Benz EQE.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_004",
+      "cmsg_id": "MSG_102",
+      "block_order": "4",
+      "block_type": "body",
+      "text": "One of the greatest benefits of owning an electric vehicle is the remarkably low operational cost. The monthly running expenditure for an EV is typically 4 to 5x lower than for a comparable gasoline vehicle. Other advantages include enhanced energy efficiency, high torque output, reduced maintenance needs, a contemporary look, and environmentally cleaner operation.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_005",
+      "cmsg_id": "MSG_102",
+      "block_order": "5",
+      "block_type": "body",
+      "text": "A key convenience of EV ownership is the ability to recharge the vehicle at home. This eliminates the need for frequent trips to fuel stations, waiting in lines, or concerns over fluctuating fuel prices or ethanol content. An EV can be conveniently charged at your residence, much like a mobile phone or laptop. This feature significantly enhances the comfort and ease of the ownership experience.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_006",
+      "cmsg_id": "MSG_102",
+      "block_order": "6",
+      "block_type": "body",
+      "text": "Let’s explore the different methods for charging your BMW i4 at home.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_007",
+      "cmsg_id": "MSG_102",
+      "block_order": "7",
+      "block_type": "divider",
+      "text": "",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_008",
+      "cmsg_id": "MSG_102",
+      "block_order": "8",
+      "block_type": "heading_2",
+      "text": "Charging the BMW i4 with a Standard 16A Outlet",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_009",
+      "cmsg_id": "MSG_102",
+      "block_order": "9",
+      "block_type": "body",
+      "text": "The BMW i4 is typically supplied with a portable 3.3 kW charging unit. This unit is essentially an adapter with a standard 3-pin plug. This plug can be connected to any 16A household socket, commonly used for high-power appliances such as air conditioners and water heaters.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_010",
+      "cmsg_id": "MSG_102",
+      "block_order": "10",
+      "block_type": "body",
+      "text": "Simply connecting the 3.3 kW charger to the 16A socket initiates the charging process.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_011",
+      "cmsg_id": "MSG_102",
+      "block_order": "11",
+      "block_type": "heading_3",
+      "text": "Charging Time Calculation",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_012",
+      "cmsg_id": "MSG_102",
+      "block_order": "12",
+      "block_type": "body",
+      "text": "For the 81.5 kWh battery, a full charge (0% to 100%) will take approximately 25 hours. This is because the charger draws only 3.3 kW of power per hour, and to fill 81.5 kWh of energy:",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_013",
+      "cmsg_id": "MSG_102",
+      "block_order": "13",
+      "block_type": "body",
+      "text": "81.5 kWh ÷ 3.3 kW ≈ 25 hours",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_014",
+      "cmsg_id": "MSG_102",
+      "block_order": "14",
+      "block_type": "heading_3",
+      "text": "Practical Considerations",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_015",
+      "cmsg_id": "MSG_102",
+      "block_order": "15",
+      "block_type": "list",
+      "text": "- The 16A socket must be located within a usable distance of the vehicle.\n - Ground-floor residents may find this setup convenient.\n - High-rise apartment residents may require professional wiring extensions and a dedicated 16A socket near the parking space.\n - Always use safety-compliant wiring such as 3 mm thick, 3-core Polycab wire with an MCB installed.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"\"style\"\": \"\"bullet\"\"}"
+    },
+    {
+      "block_id": "BLK_MSG_102_016",
+      "cmsg_id": "MSG_102",
+      "block_order": "16",
+      "block_type": "heading_3",
+      "text": "Limitations of Standard 16A Charging",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_017",
+      "cmsg_id": "MSG_102",
+      "block_order": "17",
+      "block_type": "list",
+      "text": "- High risk of unauthorized use or electricity theft.\n - No accurate tracking of EV-specific energy consumption.\n - Safety concerns during heavy rain, thunderstorms, or lightning.\n - No immediate access to manually switch off charging during emergencies.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"\"style\"\": \"\"bullet\"\"}"
+    },
+    {
+      "block_id": "BLK_MSG_102_018",
+      "cmsg_id": "MSG_102",
+      "block_order": "18",
+      "block_type": "body",
+      "text": "For these reasons, installing a dedicated 3.3 kW AC charging socket is a safer alternative.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_019",
+      "cmsg_id": "MSG_102",
+      "block_order": "19",
+      "block_type": "divider",
+      "text": "",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_020",
+      "cmsg_id": "MSG_102",
+      "block_order": "20",
+      "block_type": "heading_2",
+      "text": "Charging the BMW i4 with a Massive Mobility 3.3 kW AC Charger",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_021",
+      "cmsg_id": "MSG_102",
+      "block_order": "21",
+      "block_type": "body",
+      "text": "The 3.3 kW AC charger is a custom-engineered EV charging point designed to prioritize security, functionality, emergency response, and efficiency.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_022",
+      "cmsg_id": "MSG_102",
+      "block_order": "22",
+      "block_type": "body",
+      "text": "The Massive Mobility 3.3 kW AC charging unit provides a secure 16A outlet that can be remotely managed using a mobile application. Your smartphone effectively becomes the remote control for the charger.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_023",
+      "cmsg_id": "MSG_102",
+      "block_order": "23",
+      "block_type": "heading_3",
+      "text": "Smart Features",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_024",
+      "cmsg_id": "MSG_102",
+      "block_order": "24",
+      "block_type": "list",
+      "text": "- Real-time electricity consumption tracking\n - Voltage monitoring\n - Charging session history\n - Data insights to optimize charging habits",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"\"style\"\": \"\"bullet\"\"}"
+    },
+    {
+      "block_id": "BLK_MSG_102_025",
+      "cmsg_id": "MSG_102",
+      "block_order": "25",
+      "block_type": "heading_3",
+      "text": "Cost Control Benefits",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_026",
+      "cmsg_id": "MSG_102",
+      "block_order": "26",
+      "block_type": "body",
+      "text": "During power outages, apartment generators often charge electricity at 2 to 3x the normal rate. With remote control functionality, charging can be scheduled only when cost-effective power is available.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_027",
+      "cmsg_id": "MSG_102",
+      "block_order": "27",
+      "block_type": "body",
+      "text": "This solution represents the safest way to charge your EV at home using a 3.3 kW setup.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_028",
+      "cmsg_id": "MSG_102",
+      "block_order": "28",
+      "block_type": "divider",
+      "text": "",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_029",
+      "cmsg_id": "MSG_102",
+      "block_order": "29",
+      "block_type": "heading_2",
+      "text": "Charging the BMW i4 with a Massive Mobility 7.4 kW AC Charger",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_030",
+      "cmsg_id": "MSG_102",
+      "block_order": "30",
+      "block_type": "body",
+      "text": "The Massive Mobility 7.4 kW AC charger operates similarly to the 3.3 kW model but delivers significantly faster charging.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_031",
+      "cmsg_id": "MSG_102",
+      "block_order": "31",
+      "block_type": "body",
+      "text": "With a maximum output of 7.4 kW, the BMW i4 can be charged in approximately 11 hours for the 81.5 kWh battery. The vehicle supports up to 11 kW AC charging, which could reduce charging time to approximately 7.5 hours with higher-capacity hardware and electrical infrastructure.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_032",
+      "cmsg_id": "MSG_102",
+      "block_order": "32",
+      "block_type": "heading_3",
+      "text": "Hardware and Connection",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_033",
+      "cmsg_id": "MSG_102",
+      "block_order": "33",
+      "block_type": "list",
+      "text": "- Permanently wall-mounted near the parking space\n - Long CCS2 charging connector plugs directly into the vehicle",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"\"style\"\": \"\"bullet\"\"}"
+    },
+    {
+      "block_id": "BLK_MSG_102_034",
+      "cmsg_id": "MSG_102",
+      "block_order": "34",
+      "block_type": "heading_3",
+      "text": "Remote Control and Security",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_035",
+      "cmsg_id": "MSG_102",
+      "block_order": "35",
+      "block_type": "list",
+      "text": "- Smartphone-controlled operation\n - Authorization-based activation prevents energy theft\n - Remote emergency shutdown capability during adverse weather",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"\"style\"\": \"\"bullet\"\"}"
+    },
+    {
+      "block_id": "BLK_MSG_102_036",
+      "cmsg_id": "MSG_102",
+      "block_order": "36",
+      "block_type": "body",
+      "text": "In summary, the Massive Mobility 7.4 kW AC charger delivers a seamless, secure, convenient, and premium charging experience while optimizing energy consumption.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_037",
+      "cmsg_id": "MSG_102",
+      "block_order": "37",
+      "block_type": "divider",
+      "text": "",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_038",
+      "cmsg_id": "MSG_102",
+      "block_order": "38",
+      "block_type": "heading_2",
+      "text": "Charging the BMW i4 at Home with Massive Mobility Portable Charging Extension",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_039",
+      "cmsg_id": "MSG_102",
+      "block_order": "39",
+      "block_type": "body",
+      "text": "The Massive Mobility EV charging extension is a specialized hardware solution designed to address complex residential charging scenarios.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_040",
+      "cmsg_id": "MSG_102",
+      "block_order": "40",
+      "block_type": "heading_3",
+      "text": "Key Capabilities",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_041",
+      "cmsg_id": "MSG_102",
+      "block_order": "41",
+      "block_type": "list",
+      "text": "- 30 to 45 meters of safety-compliant cable\n - Built-in energy metering\n - Extends private 16A or 3.3 kW AC sockets\n - Enables charging from upper floors such as the 4th or 5th floor",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"\"style\"\": \"\"bullet\"\"}"
+    },
+    {
+      "block_id": "BLK_MSG_102_042",
+      "cmsg_id": "MSG_102",
+      "block_order": "42",
+      "block_type": "heading_3",
+      "text": "Portability and Smart Usage",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_043",
+      "cmsg_id": "MSG_102",
+      "block_order": "43",
+      "block_type": "list",
+      "text": "- Portable and easy to store in the vehicle\n - Suitable for roadside shops, hotels, or travel charging\n - Provides precise energy consumption readings",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"\"style\"\": \"\"bullet\"\"}"
+    },
+    {
+      "block_id": "BLK_MSG_102_044",
+      "cmsg_id": "MSG_102",
+      "block_order": "44",
+      "block_type": "divider",
+      "text": "",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_045",
+      "cmsg_id": "MSG_102",
+      "block_order": "45",
+      "block_type": "heading_2",
+      "text": "Key Summary of BMW i4 Home Charging Options",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_046",
+      "cmsg_id": "MSG_102",
+      "block_order": "46",
+      "block_type": "table",
+      "text": "| Charging Method | Max Power Output | Approx. Charging Time (81.5 kWh) | Pros | Cons / Notes |\n |----------------|----------------|----------------------------------|------|--------------|\n | Standard 16A Socket | 3.3 kW (Portable Charger) | ~25 hours | Simple, uses included equipment | Very slow; security risks; no energy tracking |\n | Massive Mobility 3.3 kW AC Charger | 3.3 kW (Wall-mounted) | ~25 hours | Safe, secure, remote control, energy tracking | Still very slow for this battery size |\n | Massive Mobility 7.4 kW AC Charger | 7.4 kW | ~11 hours | Fast, premium, secure, remote operation | 11 kW requires higher electrical capacity |\n | Massive Mobility Portable Extension | N/A | Depends on source | Solves distance issues; portable; accurate metering | Requires a source socket |",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_047",
+      "cmsg_id": "MSG_102",
+      "block_order": "47",
+      "block_type": "divider",
+      "text": "",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_048",
+      "cmsg_id": "MSG_102",
+      "block_order": "48",
+      "block_type": "heading_2",
+      "text": "Conclusion",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_049",
+      "cmsg_id": "MSG_102",
+      "block_order": "49",
+      "block_type": "body",
+      "text": "By utilizing reliable home charging equipment and the Massive Mobility Home Charging Toolkit, you can ensure a safe, smooth, and hassle-free charging experience.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_102_050",
+      "cmsg_id": "MSG_102",
+      "block_order": "50",
+      "block_type": "body",
+      "text": "These chargers, sockets, and extensions eliminate range anxiety and ensure that a suitable charging solution is always available. Ultimately, this enhances your EV ownership experience, allowing you to remain stress-free and fully supported in all charging scenarios.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_001",
+      "cmsg_id": "MSG_103",
+      "block_order": "1",
+      "block_type": "heading_1",
+      "text": "Electric Vehicle Trip Report 01: Noida to Vrindavan",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_002",
+      "cmsg_id": "MSG_103",
+      "block_order": "2",
+      "block_type": "heading_2",
+      "text": "Trip Name",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_003",
+      "cmsg_id": "MSG_103",
+      "block_order": "3",
+      "block_type": "body",
+      "text": "Noida to Vrindavan to Kundli with MG Windsor EV",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_004",
+      "cmsg_id": "MSG_103",
+      "block_order": "4",
+      "block_type": "divider",
+      "text": "",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_005",
+      "cmsg_id": "MSG_103",
+      "block_order": "5",
+      "block_type": "heading_2",
+      "text": "Vehicle",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_006",
+      "cmsg_id": "MSG_103",
+      "block_order": "6",
+      "block_type": "body",
+      "text": "Make & Model: MG Windsor EV Battery Capacity: 38 kwh Estimated Range: 220–300 km",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_007",
+      "cmsg_id": "MSG_103",
+      "block_order": "7",
+      "block_type": "divider",
+      "text": "",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_008",
+      "cmsg_id": "MSG_103",
+      "block_order": "8",
+      "block_type": "heading_2",
+      "text": "Route",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_009",
+      "cmsg_id": "MSG_103",
+      "block_order": "9",
+      "block_type": "list",
+      "text": "- Noida Sector 61\n - Vrindavan (Omaxe, near Prem Mandir)\n - Kundli",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"\"style\"\": \"\"bullet\"\"}"
+    },
+    {
+      "block_id": "BLK_MSG_103_010",
+      "cmsg_id": "MSG_103",
+      "block_order": "10",
+      "block_type": "divider",
+      "text": "",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_011",
+      "cmsg_id": "MSG_103",
+      "block_order": "11",
+      "block_type": "heading_2",
+      "text": "Episode 1",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_012",
+      "cmsg_id": "MSG_103",
+      "block_order": "12",
+      "block_type": "body",
+      "text": "It is 30th October. Our MG Windsor EV (with 38kwh battery ~ 220-300km) is charged to 100% and we are ready for a trip from Noida Sector 61 to Omaxe (Near Prem Mandir) Vrindavan. There are two of us and we don't have much luggage.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_013",
+      "cmsg_id": "MSG_103",
+      "block_order": "13",
+      "block_type": "body",
+      "text": "A few points: Vrindavan is about 155km away from the current location. So, it is around 300km+ round trip but the vehicle has a range of 200-250km. We are planning on taking the Yamuna Expressway. We don't have any assurace that there will be charging infrastructure at Vrindavan. So, there is range anxiety.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_014",
+      "cmsg_id": "MSG_103",
+      "block_order": "14",
+      "block_type": "body",
+      "text": "In order to solve the range anxiety, I come up with a plan. I download various EV charging apps on my phone - MG EV Hub, Tata Ez Charging, Plugshare, Statiq, 1C Charging, and other apps like Zeon Charging and ChargeZone. A day before the journey, I conduct a little experiment. I start exploring the apps and looking for DC Fast Chargers near me. I observe that 1C Charging, Zeon Charging, and ChargeZone are not showing DC chargers. 1C Charging is showing AC Chargers which have either standard AC Sockets, or Type 1/Type 2 cable. Plugshare, Tata Ez and Statiq are showing DC Chargers around me. PlugShare has the most number of chargers listed in the map, Statiq has the second most, and Tata Ez has the least. I also check Google Maps to search for EV Chargers around me (auto-suggested). I observe that Sector 62 has around 3 DC Chargers and the location is present in all the apps, i.e. Google, Statiq, Tata, and PlugShare are showing the same location for DC Chargers. I go to the location. Unfortunately, the chargers at first location are offline. Of the two chargers at the second location, 1 is offline, while the other is busy, though the Tata Ez app showed that all were available.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_015",
+      "cmsg_id": "MSG_103",
+      "block_order": "15",
+      "block_type": "body",
+      "text": "Google Maps & Tata Ez show a few same chargers. They are absent from Statiq",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_016",
+      "cmsg_id": "MSG_103",
+      "block_order": "16",
+      "block_type": "body",
+      "text": "Finally, I reach an OYO like hotel where I find empty DC chargers. I plug the CCS cable into the vehicle, and operate the Tata DC Charger with Tata Ez app. I locate the charger in the app, identify the charger name (Charge A - Connector 2) and start charging. The Charging starts and stops immediately. This happens 3 times. Then a Tata Nexon EV driver also comes to charge the car and upon seeing a new MG Windsor EV, he gets excited. He turns out to be a sales agent, and advises me to hold the charging connector plug to the car in order to start charging. I follow the instruction and charging works. I charge for 5 minutes then leave.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_017",
+      "cmsg_id": "MSG_103",
+      "block_order": "17",
+      "block_type": "body",
+      "text": "Thus, I have anxiety that Apps are not 100% reliable. Chargers are not 100% reliable. There is a lot of hassle involved in starting the charging. The charging itself is fast and quick providing confidence and happiness.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_018",
+      "cmsg_id": "MSG_103",
+      "block_order": "18",
+      "block_type": "body",
+      "text": "Despite charging my vehicle, I decided to test out Plugshare app as well in order to confirm whether the listed chargers on the map are present in real life or not. Unfortunately, I could not discover a single charger and realized that out of the community listed 1000+ chargers in Plugshare, 70-90% of them are imaginary. Plugshare took me to disgusting and dangerous location where the car couldn't even enter and there was no chance of a DC Charger being present in such a location. So, Plugshare was dropped.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_019",
+      "cmsg_id": "MSG_103",
+      "block_order": "19",
+      "block_type": "body",
+      "text": "Of all the apps, Statiq proved to be the best and most reliable. Statiq provided many functional features, such as trip planner, and for some reason (maybe due to App UI), it felt more reliable. It listed all the nearby chargers in the map, much like how Google Maps lists various places. More on this later.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_020",
+      "cmsg_id": "MSG_103",
+      "block_order": "20",
+      "block_type": "body",
+      "text": "So, overall, before setting out on the trip, I had a decent experience with charging my MG Windsor EV car. I used mobile apps to locate charging station near me. I discovered the DC fast chargers and used the mobile phone app to control the charger. I was satisfied with the charging experience itself, but the precursor to charging, i.e. locating and controlling the charger was shaky and filled with bugs and glitches. I'll list them down here:",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_021",
+      "cmsg_id": "MSG_103",
+      "block_order": "21",
+      "block_type": "body",
+      "text": "There are 10-15+ apps on phone and I don't know which is more reliable than others. EV Charging apps show imaginary, faulty, unavailable, and available chargers at the same time. So, locating and reaching an EV charger is a gamble. The EV Charging App's connection with DC Charger is also glitchy. Chargers don't have any ID, name, or Barcode marker, scanner etc. The names on the charger might not correspond with the name on the phone charger. So, there is user anxiety - what if the charger I've selected on the phone and in which I'm about to pay 100-300 rupees is not the right charger which is connected to my vehicle? Will my money go to waste? Finally, the charging requirement also demands mathematical knowledge from the user.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_022",
+      "cmsg_id": "MSG_103",
+      "block_order": "22",
+      "block_type": "body",
+      "text": "For example, my MG Windsor EV with 38kwh battery capacity is at 42% charge. Now, I can see immediately, that I need 58% battery in my car. However the charging app and the charger don't give me the option to charge through percentage. It asks me to put input time, charging cost, and unit consumed. How will I know how much time, unit, or cost is required to charge 52%? In order to get the answer, I have to do the calculations manually, but since the science involves knowledge of charger's power rating, voltage, battery capacity, etc, it is not as intuitive as filling petrol in the car. After doing the calculation (manually or GPT), one gets an idea that x minutes are suitable for this much charging. This feature can be automated and incorporated in the apps.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_023",
+      "cmsg_id": "MSG_103",
+      "block_order": "23",
+      "block_type": "divider",
+      "text": "",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_024",
+      "cmsg_id": "MSG_103",
+      "block_order": "24",
+      "block_type": "heading_2",
+      "text": "Episode 2",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_025",
+      "cmsg_id": "MSG_103",
+      "block_order": "25",
+      "block_type": "body",
+      "text": "We are inside the car and begun the journey. The car is on Eco driving mode, auto-cruising at 80-110km on the Noida-Greater Noida expressway and the Yamuna expressway. We have discovered a few charging stations in Vrindavan through Statiq and Tata Ez app though there is no way to confirm whether the stations will be work or not. At this point, Statiq has clearly beaten all other apps due to a simple reason - Trip planner.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_026",
+      "cmsg_id": "MSG_103",
+      "block_order": "26",
+      "block_type": "body",
+      "text": "Most of the EV Charging Apps show EV chargers around your present location. This unfolds through the familiar Google Map like interface. Your current location is highlighted with an icon and all the available chargers are shown around your locations in the map. This kind of interface works when you are still and standing, and not driving your vehicle, as it demands focus and concentration from your end to locate and navigate the chargers. Furthermore, each charging station demands you to check various items in the app such as whether the charger is available, what type of connector it has, what is the price/unit, and how far is it away from the current location. This kind of operation is not possible while driving at 80-110kmph on the highway. Statiq solves this problem by giving the Trip Planner.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_027",
+      "cmsg_id": "MSG_103",
+      "block_order": "27",
+      "block_type": "body",
+      "text": "In the Trip Planner, you can put the starting and end point of your journey, and the app will show all the available charging stations on the path. You can go through them one by one before starting your journey, and you can select those which look promising. Once you begin the journey, Statiq gives you a customized Google Map route which contains all the charging stations as additional stops between starting point and destination. This can be integrated with the car's navigational screen and you can easily navigate to the charger without having to rely on the phone again and again. This is by far the most niggle free way of discovering charger without re-routing too much or getting waylaid from the primary path. It is convenient as the chargers end up on your travel path itself. However, nothing beats the simplicity of spotting locations on Google Maps itself.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_028",
+      "cmsg_id": "MSG_103",
+      "block_order": "28",
+      "block_type": "body",
+      "text": "Select start and end point and acquire list of station. Select station and get them on your Google Map as A,B,C,D",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_029",
+      "cmsg_id": "MSG_103",
+      "block_order": "29",
+      "block_type": "body",
+      "text": "So, by using the Statiq Trip planner we knew that we'd come across 3 charging station in our journey. As we were nearing the first charger, we came across a food joint cum petrol station and inquired the guard about the availability of any EV charger. The guard responded in the affirmative and guided us towards a Tata EV charging station. A premium station with 4 clean and good looking chargers. Nice designated EV Car parking space. Mahindra BE6, Tata Nexon, and our Windsor EV car are shining in the sunlight. Unfortunately, none of the chargers are working. The screen shows 'Faulted'. All the EV cars and owners are looking at each other and getting irritated. Furthermore, the Charger (located at convenient hotspot) charged 600 rupees/15 minutes ~ 4x the normal price.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_030",
+      "cmsg_id": "MSG_103",
+      "block_order": "30",
+      "block_type": "body",
+      "text": "The Tata Charging Station was dropped. It was not shown in the Statiq app, maybe because Statiq knew that it was faulted. We went to the other locations shown originally in the charging app. We discovered a fancy Statiq charger situated at an unfancy local restaurant. The same BE 6 is connected here and another car is parking in the charging spot. We get out and do some inquiries. The charger is working, but it will take them ~30 minutes to finish. There is an electrician from Statiq and he is fiddling with the charger. He said that the charger is malfunctioning and he is fixing it. It will come to life pretty soon. He said that he only takes care of Statiq chargers around the place. When I asked him more, he stopped showing interest and went back to work.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_031",
+      "cmsg_id": "MSG_103",
+      "block_order": "31",
+      "block_type": "body",
+      "text": "We abandoned this charger as well and went to the last one - Ecoplug charger on the Laddu Gopal road. Miraculously we come across a large open space with capacity for 15+ car parking. It is empty and there is dusty Ecoplug charger standing near the hedge. A small boy is sitting on the stool inviting passerby cars to come to the restaurant. We ask him about the condition of the charger and he confirmed that everything is working. So, we plug the connector to the vehicle, activate the charger with the app, and the charging begins. Great! Then the charging stops automatically. Not so great. We run the same process again and the charging begins once again.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_032",
+      "cmsg_id": "MSG_103",
+      "block_order": "32",
+      "block_type": "body",
+      "text": "Here, there are a few points. Metrics shown on charger, on app, in the car, and in the car phone app are not in sync. We take the car's charging metric to be the most reliable and observe that Statiq is showing incorrect info, and Charger's metrics are also not matching. So, this was a minor issue. Furthermore, we didn't know how many units to charge in order to take our vehicle from 48% to 70%. We decided that we will take a break for 30 minutes and complete as much charging as possilbe. We put the charger and enjoyed Paneer Parantha and Tea at Vrindavan restaurant. This shows that there is opportunity for business owner to increase their sales by providing charging space to Ev owners who get locked to the space and are intuitievly prompted to enjoy the amenties and shed some cash from their wallets. This shows market potential and everybody benefits.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_033",
+      "cmsg_id": "MSG_103",
+      "block_order": "33",
+      "block_type": "body",
+      "text": "Unfortunately, while we are munching our Gobhi and Paneer Parantha there was a light outage and our charging stopped at 72%. We left the place after 30-40 minutes and reached our hotel.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_034",
+      "cmsg_id": "MSG_103",
+      "block_order": "34",
+      "block_type": "divider",
+      "text": "",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_035",
+      "cmsg_id": "MSG_103",
+      "block_order": "35",
+      "block_type": "heading_2",
+      "text": "Episode 3",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_036",
+      "cmsg_id": "MSG_103",
+      "block_order": "36",
+      "block_type": "body",
+      "text": "We are inside the hotel premise. It is a society which has turned into rental space and cheap tourist hotel. The area is overcrowded and the shops don't look trustworthy. There are no direct charging spots available inside the premise. We can always engage in the reliable home 3.3kw AC 16A socket charging, but the shopkeepers are hesitant and our room is in the 3rd floor so there is no scope for standard AC charging. I look in the app, but Statiq's information keeps fluctuating. Sometimes it shows a charger 7km away, but at other times, this charger vanishes. I observe many EV cars inside the premise and inquire them about charging, but they tell me that they do 3.3kw or 7.4kw Home charging as most of them have come from Mathura.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_037",
+      "cmsg_id": "MSG_103",
+      "block_order": "37",
+      "block_type": "body",
+      "text": "The next day, I find a community listed charger 500m away from my hotel, and locate the place with my scooty. It is a spiritual resort which has a DC charger indeed and the guard tells me that he will charge my EV cars as he'd done with others. So, I take the Windsor EV and get it charged from the offline charger. The guard controlled the charger with buttons and the boss calculated the price manually asking me car name (though he never bothered asking battery capacity). Here, there is a huge opportunity for 1C to discover all these offline and local DC chargers and offer them our CMS subscription. These folks will benefit a lot from the integration. Their discovery and sales will go up as well and 1C will build its CPO customer base. The charger on this location was called ChargeOnWay and it was not available on Statiq or Tata. It was available only in the community listed section of Statiq which is not the default view in the app.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_103_038",
+      "cmsg_id": "MSG_103",
+      "block_order": "38",
+      "block_type": "body",
+      "text": "After charging the car to 99%, we became happy and started the journey from Vrindavan to Kundli. We had to cover 197km. Driving on the Yamuna expressway at 100-110kmph on Eco mode, the battery dropped to 40% after 120km. Now there was anxiety. What if the car becomes 0 before reaching Kundli. So we decided to charge it again using Statiq and once again we discovered the charger on our way. This charger also gave us a few problems, as it stopped showing itself on the app due to which there was no way to control it. After a few minutes, the charger popped up again - a few km away from our current location, and activated it. We charged for 20 minutes and battery went from 30 to 80. Then we cruised on Normal and Sports mode and finished the remaining km quickly. This was the total charging experience.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_104_001",
+      "cmsg_id": "MSG_104",
+      "block_order": "1",
+      "block_type": "heading_1",
+      "text": "EV Charging Station Setup Cost in India (2026): Simple Breakdown + Examples",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_104_002",
+      "cmsg_id": "MSG_104",
+      "block_order": "2",
+      "block_type": "body",
+      "text": "If you’re planning to start an EV charging station business in India, the first question is always cost. People want one fixed number, but the reality is closer to setting up a small outlet: the final amount depends on your charger type, your location, and how ready the site is in terms of electricity load and basic infrastructure. The good part is you can still estimate it in a practical way once you know what items make up the budget.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_104_003",
+      "cmsg_id": "MSG_104",
+      "block_order": "3",
+      "block_type": "body",
+      "text": "Most beginners only think about the charger machine. But in real setups, the charger is only one part. Electrical work, civil work, safety, and sometimes power upgrades can change the budget a lot. This guide keeps it simple and gives you realistic ranges and examples so you can plan your first station without getting surprised later.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_104_004",
+      "cmsg_id": "MSG_104",
+      "block_order": "4",
+      "block_type": "heading_2",
+      "text": "What “setup cost” usually includes",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_104_005",
+      "cmsg_id": "MSG_104",
+      "block_order": "5",
+      "block_type": "body",
+      "text": "Your one-time setup cost is usually made up of a few buckets. Even if you start small, you will spend on more than just the charger. The main items are charger hardware, electrical work (cables, panel, breakers, earthing), basic civil work (markings, small foundation, signage), and sometimes power connection upgrades if your current sanctioned load isn’t enough. You may also need internet connectivity so payments and monitoring work smoothly.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_104_006",
+      "cmsg_id": "MSG_104",
+      "block_order": "6",
+      "block_type": "list",
+      "text": "- Charger hardware (the machine)\n- Electrical work (cables, panels, safety breakers, earthing)\n- Civil work (markings, foundation, basic shed if needed, signage)\n- Power connection or load upgrade (if required)\n- Basic operating setup (internet, payment/software onboarding)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_104_007",
+      "cmsg_id": "MSG_104",
+      "block_order": "7",
+      "block_type": "body",
+      "text": "Rent or revenue share to the property owner is usually not part of setup cost because it’s monthly. But it affects profitability, so you should still consider it while deciding the location.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_104_008",
+      "cmsg_id": "MSG_104",
+      "block_order": "8",
+      "block_type": "heading_2",
+      "text": "Typical EV charging station setup cost in India (2026)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_104_009",
+      "cmsg_id": "MSG_104",
+      "block_order": "9",
+      "block_type": "body",
+      "text": "In India in 2026, most new operators fall into three broad budget bands. A small starter setup is usually one or two slower chargers in a place where cars park longer, like apartments or offices. A medium setup is more common in malls or busy commercial areas where you want better visibility and a smoother experience. Large fast-charging setups are usually highway-style or high-demand hubs, and that’s where costs jump because power and electrical requirements are heavier.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_104_010",
+      "cmsg_id": "MSG_104",
+      "block_order": "10",
+      "block_type": "table",
+      "text": "| Setup Type | Typical Use Case | Budget Range |\n|---|---|---|\n| Small starter setup | Apartment, small office, small parking | ₹5 lakh to ₹12 lakh |\n| Medium commercial setup | Mall, office park, busy commercial area | ₹15 lakh to ₹35 lakh |\n| Fast-charging focused setup | Highway, hotspots, fleet depots | ₹40 lakh to ₹1.5 crore+ |",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_104_011",
+      "cmsg_id": "MSG_104",
+      "block_order": "11",
+      "block_type": "heading_2",
+      "text": "AC vs DC: the one decision that changes your budget",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_104_012",
+      "cmsg_id": "MSG_104",
+      "block_order": "12",
+      "block_type": "body",
+      "text": "This is the simplest way to understand it. AC chargers are slower and usually cheaper, and they work best where cars stay parked for hours (apartments, offices, hotels). DC fast chargers are faster and more expensive, and they make sense where drivers want quick top-ups (highways and busy hubs). A common mistake is buying a fast charger just because it sounds premium, even when the location doesn’t have enough demand. A fast charger sitting idle is one of the easiest ways to lose money in this business.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_104_013",
+      "cmsg_id": "MSG_104",
+      "block_order": "13",
+      "block_type": "heading_2",
+      "text": "Costs people forget (and regret later)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_104_014",
+      "cmsg_id": "MSG_104",
+      "block_order": "14",
+      "block_type": "body",
+      "text": "Even if your charger price looks manageable, hidden costs often create surprise expenses. Electrical safety and earthing is not an area where you should cut corners. Poor installation leads to faults and downtime, and downtime directly affects revenue. Power readiness is another factor. If the site doesn’t have enough sanctioned load, you may need load enhancement and upgrades which can add cost and delays. Civil work also matters more than people think because if the station looks temporary or confusing, users avoid it.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_104_015",
+      "cmsg_id": "MSG_104",
+      "block_order": "15",
+      "block_type": "list",
+      "text": "- Electrical safety + earthing (do it properly)\n- Power upgrades / load enhancement (budget buffer)\n- Civil readiness (markings, signage, simple shelter)\n- Internet and monitoring (small cost, big impact)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{\"style\":\"bullet\"}"
+    },
+    {
+      "block_id": "BLK_MSG_104_016",
+      "cmsg_id": "MSG_104",
+      "block_order": "16",
+      "block_type": "heading_2",
+      "text": "3 simple examples (so you can plan)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_104_017",
+      "cmsg_id": "MSG_104",
+      "block_order": "17",
+      "block_type": "heading_3",
+      "text": "Example A: Apartment or small office (starter)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_104_018",
+      "cmsg_id": "MSG_104",
+      "block_order": "18",
+      "block_type": "body",
+      "text": "For a starter site where vehicles park for hours, the typical setup cost is often around ₹6–10 lakh. This usually includes one or two AC chargers, decent electrical work and earthing, and basic civil work like markings and signage. This is a lower-risk entry, but income depends on whether people actually use it regularly.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_104_019",
+      "cmsg_id": "MSG_104",
+      "block_order": "19",
+      "block_type": "heading_3",
+      "text": "Example B: Mall or busy commercial parking",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_104_020",
+      "cmsg_id": "MSG_104",
+      "block_order": "20",
+      "block_type": "body",
+      "text": "A mall or busy commercial parking setup often lands around ₹18–30 lakh because you typically need a better finish, clearer signage, and stronger electrical infrastructure. These sites can work well if demand is consistent, but the commercial agreement with the property owner (rent or revenue share) can make a big difference to your monthly profitability.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_104_021",
+      "cmsg_id": "MSG_104",
+      "block_order": "21",
+      "block_type": "heading_3",
+      "text": "Example C: Highway-style fast charging site",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_104_022",
+      "cmsg_id": "MSG_104",
+      "block_order": "22",
+      "block_type": "body",
+      "text": "For a highway-style fast charging site, costs often start around ₹50 lakh and can go beyond ₹1 crore depending on the exact setup and site readiness. Electrical and civil work is heavier, expectations are higher, and downtime hurts more because highway users won’t tolerate repeated failures.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_104_023",
+      "cmsg_id": "MSG_104",
+      "block_order": "23",
+      "block_type": "heading_2",
+      "text": "How to control cost (without compromising safety)",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_104_024",
+      "cmsg_id": "MSG_104",
+      "block_order": "24",
+      "block_type": "body",
+      "text": "You don’t need to overspend to start. The most practical approach is to match the setup to real demand. Start with the right charger type, choose a site with reasonable power availability, and keep civil work clean but simple in the first phase. Also, don’t buy the cheapest hardware without checking service support. In EV charging, service and uptime matter as much as equipment price. Finally, keep a 10–15% budget buffer because almost every site throws up some surprise during installation.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_104_025",
+      "cmsg_id": "MSG_104",
+      "block_order": "25",
+      "block_type": "divider",
+      "text": "",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    },
+    {
+      "block_id": "BLK_MSG_104_026",
+      "cmsg_id": "MSG_104",
+      "block_order": "26",
+      "block_type": "body",
+      "text": "Quick takeaway: for India in 2026, a small setup is often ₹5–12 lakh, a mid-size commercial setup is usually ₹15–35 lakh, and fast-charging focused setups often start around ₹40 lakh and go higher based on scale and power readiness.",
+      "src": "",
+      "alt": "",
+      "meta_json": "{}"
+    }
+  ]
+}

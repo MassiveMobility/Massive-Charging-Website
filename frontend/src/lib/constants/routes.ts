@@ -28,7 +28,7 @@ export const routeRegistry = {
   about: {
     description: "Company and operating-principles page for trust and discoverability.",
     group: "marketing",
-    migrationStatus: "placeholder",
+    migrationStatus: "active",
     owner: "marketing-team",
     path: "/about",
     rendering: "SSG",
@@ -55,20 +55,137 @@ export const routeRegistry = {
   articles: {
     description: "Public article index for editorial discovery and internal linking.",
     group: "marketing",
-    migrationStatus: "placeholder",
+    migrationStatus: "active",
     owner: "content-team",
     path: "/articles",
     rendering: "ISR",
     title: "Articles"
   },
+  apartmentResident: {
+    description: "Scenario page for apartment-resident EV charging setup planning.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/apartment-resident",
+    rendering: "SSG",
+    title: "Apartment Resident Charging"
+  },
+  chargingGuide: {
+    description: "Guide hub for EV charging education and article discovery.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "content-team",
+    path: "/charging-guide",
+    rendering: "SSG",
+    title: "Charging Guide"
+  },
+  chargingGuideCars: {
+    description: "Vehicle catalogue route linked to EV charging guide articles.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "content-team",
+    path: "/charging-guide/ev-cars",
+    rendering: "SSG",
+    title: "EV Cars Catalogue"
+  },
+  chargingStationBiz: {
+    description: "Scenario menu route for charging station business setup choices.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/charging-station-biz",
+    rendering: "SSG",
+    title: "Charging Station Biz"
+  },
+  chargingStationsMap: {
+    description: "Searchable route for public charging station map and direction links.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/charging-stations-map",
+    rendering: "DYNAMIC",
+    title: "Charging Stations Map"
+  },
+  communityCharging: {
+    description: "Scenario page for gated-community charging deployment planning.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/community-charging",
+    rendering: "SSG",
+    title: "Community Charging"
+  },
   contact: {
     description: "Public contact intake route for partnership and deployment requests.",
     group: "marketing",
-    migrationStatus: "placeholder",
+    migrationStatus: "active",
     owner: "marketing-team",
     path: "/contact",
     rendering: "SSG",
     title: "Contact"
+  },
+  cpoIndex: {
+    description: "CPO index route containing segment-wise charging scenarios.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/cpo",
+    rendering: "SSG",
+    title: "CPO"
+  },
+  evChargingShop: {
+    description: "EV charging shop migration page with product category guidance.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/ev-charging-shop",
+    rendering: "SSG",
+    title: "EV Charging Shop"
+  },
+  evChargingStationBusiness: {
+    description: "Business landing route for EV charging station setup and operations.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/ev-charging-station-business",
+    rendering: "SSG",
+    title: "EV Charging Station Business"
+  },
+  evTripReport: {
+    description: "Narrative EV trip report route with route-level charging insights.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "content-team",
+    path: "/EV-Trip-Report",
+    rendering: "SSG",
+    title: "EV Trip Report"
+  },
+  fleetCharging: {
+    description: "Scenario page for fleet and depot charging planning.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/fleet-charging",
+    rendering: "SSG",
+    title: "Fleet Charging"
+  },
+  getChargers: {
+    description: "Requirement intake route for EV charger setup planning.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/get-chargers",
+    rendering: "DYNAMIC",
+    title: "Get Chargers"
+  },
+  highwayCharging: {
+    description: "Scenario page for highway and corridor charging deployments.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/highway-charging",
+    rendering: "SSG",
+    title: "Highway Charging"
   },
   home: {
     description: "Public homepage for brand, value proposition, and architecture handoff.",
@@ -78,6 +195,87 @@ export const routeRegistry = {
     path: "/",
     rendering: "SSG",
     title: "Home"
+  },
+  homeCharging: {
+    description: "Scenario page for individual-home EV charging setup.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/home-charging",
+    rendering: "SSG",
+    title: "Home Charging"
+  },
+  hospitalCharging: {
+    description: "Scenario page for institutional and hospital charging setups.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/hospital-charging",
+    rendering: "SSG",
+    title: "Hospital Charging"
+  },
+  mallCharging: {
+    description: "Scenario page for mall and commercial charging deployments.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/mall-charging",
+    rendering: "SSG",
+    title: "Mall Charging"
+  },
+  pgCharging: {
+    description: "Scenario page for PG and co-living EV charging setups.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/pg-charging",
+    rendering: "SSG",
+    title: "PG Charging"
+  },
+  plansOffers: {
+    description: "Pricing route for EV charging plans and operational offers.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/plans-offers",
+    rendering: "SSG",
+    title: "Pricing and Offers"
+  },
+  restaurantCharging: {
+    description: "Scenario page for restaurant and cafe charging deployments.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/restaurant-charging",
+    rendering: "SSG",
+    title: "Restaurant Charging"
+  },
+  retailCharging: {
+    description: "Scenario page for retail storefront charging setups.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/retail-charging",
+    rendering: "SSG",
+    title: "Retail Charging"
+  },
+  societyCharging: {
+    description: "Scenario page for apartment-society and RWA charging rollouts.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/society-charging",
+    rendering: "SSG",
+    title: "Society Charging"
+  },
+  upiCharging: {
+    description: "UPI-first charging flow route for quick session starts.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/upi-charging",
+    rendering: "SSG",
+    title: "UPI Charging"
   }
 } as const satisfies RouteRegistry;
 

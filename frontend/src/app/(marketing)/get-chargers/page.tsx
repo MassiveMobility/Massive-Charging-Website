@@ -1,20 +1,15 @@
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { MarketingRoutePlaceholder } from "@/components/marketing/marketing-route-placeholder";
+import { ChargerIntakeForm } from "@/features/marketing/components/charger-intake-form";
+
+const routePath = "/get-chargers" as const;
 
 export const metadata = buildPageMetadata({
   title: "Get Chargers",
   description:
-    "Legacy charger inquiry route has been scaffolded for migration.",
-  path: "/get-chargers",
-  noIndex: true
+    "Submit charger setup requirements for home, commercial, fleet, or public EV charging deployment.",
+  path: routePath
 });
 
 export default function GetChargersPage() {
-  return (
-    <MarketingRoutePlaceholder
-      title="Get Chargers"
-      routePath="/get-chargers"
-      description="Legacy charger inquiry route has been scaffolded for migration."
-    />
-  );
+  return <ChargerIntakeForm />;
 }

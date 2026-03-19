@@ -1,20 +1,14 @@
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { MarketingRoutePlaceholder } from "@/components/marketing/marketing-route-placeholder";
+import { ScenarioRoutePage } from "@/features/marketing/components/scenario-route-page";
+
+const routePath = "/restaurant-charging" as const;
 
 export const metadata = buildPageMetadata({
   title: "Restaurant Charging",
-  description:
-    "Legacy restaurant charging route has been scaffolded for migration.",
-  path: "/restaurant-charging",
-  noIndex: true
+  description: "Enable EV charging at restaurants and cafes for better customer experience and retention.",
+  path: routePath
 });
 
-export default function RestaurantChargingPage() {
-  return (
-    <MarketingRoutePlaceholder
-      title="Restaurant Charging"
-      routePath="/restaurant-charging"
-      description="Legacy restaurant charging route has been scaffolded for migration."
-    />
-  );
+export default function ScenarioPage() {
+  return <ScenarioRoutePage routePath={routePath} />;
 }

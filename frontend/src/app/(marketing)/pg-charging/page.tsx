@@ -1,20 +1,14 @@
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { MarketingRoutePlaceholder } from "@/components/marketing/marketing-route-placeholder";
+import { ScenarioRoutePage } from "@/features/marketing/components/scenario-route-page";
+
+const routePath = "/pg-charging" as const;
 
 export const metadata = buildPageMetadata({
   title: "PG Charging",
-  description:
-    "Legacy PG charging route has been scaffolded for migration.",
-  path: "/pg-charging",
-  noIndex: true
+  description: "Offer EV charging for PG and co-living properties with low-maintenance setup models.",
+  path: routePath
 });
 
-export default function PgChargingPage() {
-  return (
-    <MarketingRoutePlaceholder
-      title="PG Charging"
-      routePath="/pg-charging"
-      description="Legacy PG charging route has been scaffolded for migration."
-    />
-  );
+export default function ScenarioPage() {
+  return <ScenarioRoutePage routePath={routePath} />;
 }

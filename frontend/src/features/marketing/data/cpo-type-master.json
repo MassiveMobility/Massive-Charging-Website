@@ -1,0 +1,534 @@
+{
+  "name": "CPO_Type_Master",
+  "version": "1.0.0",
+  "source": {
+    "excel": "C:\\Users\\later\\OneDrive - Massive Earth Foundation\\Shailesh Vickram Singh's files - 11. MCM\\Massive Content Mega Folder\\Massive Charging Network ROOT\\MXN Coding\\MC_Customer Base (2).xlsx",
+    "generatedBy": "Excel2Json-MXN_CPO_Type.py"
+  },
+  "segments": [
+    {
+      "id": "residential",
+      "label": "Residential CPOs",
+      "definition": "Charging primarily for self / residents",
+      "sheet": "Residential",
+      "children": [
+        {
+          "id": "individual-home-owner-independent-house",
+          "label": "Individual Home Owner (Independent House)",
+          "slug": "/cpo/residential/individual-home-owner-independent-house",
+          "landSituation": "Private owned land",
+          "parkingSituation": "Private parking (1–2 slots)",
+          "evType": "2W / 4W",
+          "scale": "1–2 chargers",
+          "coreRequirement": "Basic AC charging, safety",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        },
+        {
+          "id": "villa-owner",
+          "label": "Villa Owner",
+          "slug": "/cpo/residential/villa-owner",
+          "landSituation": "Private gated land",
+          "parkingSituation": "Dedicated parking",
+          "evType": "4W",
+          "scale": "1–2 chargers",
+          "coreRequirement": "Smart AC charger",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        },
+        {
+          "id": "builder-floor-owner",
+          "label": "Builder Floor Owner",
+          "slug": "/cpo/residential/builder-floor-owner",
+          "landSituation": "Shared land",
+          "parkingSituation": "Semi-private parking",
+          "evType": "2W / 4W",
+          "scale": "1–3 chargers",
+          "coreRequirement": "Load management",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        },
+        {
+          "id": "apartment-resident-individual",
+          "label": "Apartment Resident (Individual)",
+          "slug": "/cpo/residential/apartment-resident-individual",
+          "landSituation": "Shared society land",
+          "parkingSituation": "Assigned slot",
+          "evType": "2W / 4W",
+          "scale": "1 charger",
+          "coreRequirement": "Metering + billing",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        },
+        {
+          "id": "apartment-society-rwa",
+          "label": "Apartment Society / RWA",
+          "slug": "/cpo/residential/apartment-society-rwa",
+          "landSituation": "Large shared land",
+          "parkingSituation": "Common parking",
+          "evType": "2W / 4W",
+          "scale": "5–50 chargers",
+          "coreRequirement": "Energy management, access control",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        },
+        {
+          "id": "gated-community",
+          "label": "Gated Community",
+          "slug": "/cpo/residential/gated-community",
+          "landSituation": "Large residential campus",
+          "parkingSituation": "Dedicated EV bays",
+          "evType": "2W / 4W",
+          "scale": "10–100 chargers",
+          "coreRequirement": "Networked charging",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        },
+        {
+          "id": "pg-co-living-owner",
+          "label": "PG / Co-Living Owner",
+          "slug": "/cpo/residential/pg-co-living-owner",
+          "landSituation": "Private / leased land",
+          "parkingSituation": "Shared parking",
+          "evType": "2W",
+          "scale": "2–10 chargers",
+          "coreRequirement": "Cost-efficient setup",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        }
+      ]
+    },
+    {
+      "id": "commercial",
+      "label": "Commercial CPOs",
+      "definition": "Charging for customers / visitors",
+      "sheet": "Commercial",
+      "children": [
+        {
+          "id": "retail-shop-owner",
+          "label": "Retail Shop Owner",
+          "slug": "/cpo/commercial/retail-shop-owner",
+          "landSituation": "Private / leased",
+          "parkingSituation": "1–2 front parking",
+          "evType": "2W",
+          "scale": "1 charger",
+          "coreRequirement": "Attract footfall",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        },
+        {
+          "id": "restaurant-caf",
+          "label": "Restaurant / Café",
+          "slug": "/cpo/commercial/restaurant-caf",
+          "landSituation": "Leased land",
+          "parkingSituation": "Customer parking",
+          "evType": "2W / 4W",
+          "scale": "1–4 chargers",
+          "coreRequirement": "Dwell-time charging",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        },
+        {
+          "id": "mall-owner",
+          "label": "Mall Owner",
+          "slug": "/cpo/commercial/mall-owner",
+          "landSituation": "Large commercial land",
+          "parkingSituation": "Basement / open parking",
+          "evType": "2W / 4W",
+          "scale": "10–100 chargers",
+          "coreRequirement": "Revenue + analytics",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        },
+        {
+          "id": "cinema-multiplex",
+          "label": "Cinema / Multiplex",
+          "slug": "/cpo/commercial/cinema-multiplex",
+          "landSituation": "Commercial complex",
+          "parkingSituation": "Large parking",
+          "evType": "4W",
+          "scale": "5–20 chargers",
+          "coreRequirement": "Smart charging",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        },
+        {
+          "id": "hotel-resort",
+          "label": "Hotel / Resort",
+          "slug": "/cpo/commercial/hotel-resort",
+          "landSituation": "Owned land",
+          "parkingSituation": "Guest parking",
+          "evType": "4W",
+          "scale": "5–50 chargers",
+          "coreRequirement": "Premium experience",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        },
+        {
+          "id": "office-building-owner",
+          "label": "Office Building Owner",
+          "slug": "/cpo/commercial/office-building-owner",
+          "landSituation": "Owned / leased",
+          "parkingSituation": "Employee parking",
+          "evType": "2W / 4W",
+          "scale": "5–30 chargers",
+          "coreRequirement": "Employee benefit",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        },
+        {
+          "id": "it-park-tech-campus",
+          "label": "IT Park / Tech Campus",
+          "slug": "/cpo/commercial/it-park-tech-campus",
+          "landSituation": "Large campus",
+          "parkingSituation": "Dedicated parking",
+          "evType": "2W / 4W",
+          "scale": "20–200 chargers",
+          "coreRequirement": "Load optimization",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        },
+        {
+          "id": "gym-club",
+          "label": "Gym / Club",
+          "slug": "/cpo/commercial/gym-club",
+          "landSituation": "Leased land",
+          "parkingSituation": "Limited parking",
+          "evType": "2W / 4W",
+          "scale": "1–5 chargers",
+          "coreRequirement": "Value add",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        }
+      ]
+    },
+    {
+      "id": "fleet",
+      "label": "Fleet CPOs",
+      "definition": "Charging for owned or contracted fleets",
+      "sheet": "Fleet",
+      "children": [
+        {
+          "id": "ola-uber-fleet-partner",
+          "label": "Ola / Uber Fleet Partner",
+          "slug": "/cpo/fleet/ola-uber-fleet-partner",
+          "landSituation": "Leased depot",
+          "parkingSituation": "Fleet parking",
+          "evType": "4W",
+          "scale": "10–100 chargers",
+          "coreRequirement": "Fast turnaround",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        },
+        {
+          "id": "delivery-fleet-amazon-flipkart-partners",
+          "label": "Delivery Fleet (Amazon, Flipkart partners)",
+          "slug": "/cpo/fleet/delivery-fleet-amazon-flipkart-partners",
+          "landSituation": "Depot land",
+          "parkingSituation": "Structured parking",
+          "evType": "2W / 3W",
+          "scale": "10–200 chargers",
+          "coreRequirement": "Cost per km",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        },
+        {
+          "id": "corporate-fleet-owner",
+          "label": "Corporate Fleet Owner",
+          "slug": "/cpo/fleet/corporate-fleet-owner",
+          "landSituation": "Owned land",
+          "parkingSituation": "Dedicated fleet bays",
+          "evType": "4W",
+          "scale": "5–50 chargers",
+          "coreRequirement": "Reliability",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        },
+        {
+          "id": "logistics-fleet-operator",
+          "label": "Logistics Fleet Operator",
+          "slug": "/cpo/fleet/logistics-fleet-operator",
+          "landSituation": "Industrial land",
+          "parkingSituation": "Yard parking",
+          "evType": "3W / 4W",
+          "scale": "20–100 chargers",
+          "coreRequirement": "DC fast charging",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        },
+        {
+          "id": "rental-ev-company",
+          "label": "Rental EV Company",
+          "slug": "/cpo/fleet/rental-ev-company",
+          "landSituation": "Commercial land",
+          "parkingSituation": "Fleet parking",
+          "evType": "2W / 4W",
+          "scale": "10–50 chargers",
+          "coreRequirement": "Monitoring",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        }
+      ]
+    },
+    {
+      "id": "institutional",
+      "label": "Institutional CPOs",
+      "definition": "Charging for campuses, public bodies",
+      "sheet": "Institutional",
+      "children": [
+        {
+          "id": "university-college",
+          "label": "University / College",
+          "slug": "/cpo/institutional/university-college",
+          "landSituation": "Campus land",
+          "parkingSituation": "Staff + student parking",
+          "evType": "2W / 4W",
+          "scale": "5–30 chargers",
+          "coreRequirement": "Cost control",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        },
+        {
+          "id": "hospital",
+          "label": "Hospital",
+          "slug": "/cpo/institutional/hospital",
+          "landSituation": "Owned land",
+          "parkingSituation": "Visitor parking",
+          "evType": "4W",
+          "scale": "5–20 chargers",
+          "coreRequirement": "Reliability",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        },
+        {
+          "id": "government-office",
+          "label": "Government Office",
+          "slug": "/cpo/institutional/government-office",
+          "landSituation": "Public land",
+          "parkingSituation": "Official parking",
+          "evType": "4W",
+          "scale": "2–10 chargers",
+          "coreRequirement": "Compliance",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        },
+        {
+          "id": "municipal-parking",
+          "label": "Municipal Parking",
+          "slug": "/cpo/institutional/municipal-parking",
+          "landSituation": "Public land",
+          "parkingSituation": "Paid parking",
+          "evType": "2W / 4W",
+          "scale": "5–50 chargers",
+          "coreRequirement": "Revenue",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        }
+      ]
+    },
+    {
+      "id": "transit-and-corridor",
+      "label": "Transit & Corridor CPOs",
+      "definition": "Charging along highways & mobility corridors",
+      "sheet": "Transit",
+      "children": [
+        {
+          "id": "highway-restaurant-dhaba",
+          "label": "Highway Restaurant / Dhaba",
+          "slug": "/cpo/transit-and-corridor/highway-restaurant-dhaba",
+          "landSituation": "Owned / leased roadside",
+          "parkingSituation": "Open parking",
+          "evType": "4W",
+          "scale": "2–10 chargers",
+          "coreRequirement": "DC fast charging",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        },
+        {
+          "id": "fuel-pump-owner",
+          "label": "Fuel Pump Owner",
+          "slug": "/cpo/transit-and-corridor/fuel-pump-owner",
+          "landSituation": "Large owned land",
+          "parkingSituation": "Vehicle bays",
+          "evType": "4W",
+          "scale": "4–20 chargers",
+          "coreRequirement": "Transition to EV",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        },
+        {
+          "id": "toll-plaza-operator",
+          "label": "Toll Plaza Operator",
+          "slug": "/cpo/transit-and-corridor/toll-plaza-operator",
+          "landSituation": "Govt / concession land",
+          "parkingSituation": "Lay-by parking",
+          "evType": "4W",
+          "scale": "2–10 chargers",
+          "coreRequirement": "Fast charging",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        },
+        {
+          "id": "bus-terminal",
+          "label": "Bus Terminal",
+          "slug": "/cpo/transit-and-corridor/bus-terminal",
+          "landSituation": "Public land",
+          "parkingSituation": "Large bays",
+          "evType": "Bus / 3W",
+          "scale": "10–50 chargers",
+          "coreRequirement": "Power infra",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        },
+        {
+          "id": "railway-station-parking",
+          "label": "Railway Station Parking",
+          "slug": "/cpo/transit-and-corridor/railway-station-parking",
+          "landSituation": "Public land",
+          "parkingSituation": "Pay parking",
+          "evType": "2W / 4W",
+          "scale": "5–20 chargers",
+          "coreRequirement": "Public access",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        }
+      ]
+    },
+    {
+      "id": "industrial-and-logistics",
+      "label": "Industrial & Logistics CPOs",
+      "definition": "Charging for goods movement",
+      "sheet": "Industrial ",
+      "children": [
+        {
+          "id": "factory-owner",
+          "label": "Factory Owner",
+          "slug": "/cpo/industrial-and-logistics/factory-owner",
+          "landSituation": "Industrial land",
+          "parkingSituation": "Yard parking",
+          "evType": "3W / 4W",
+          "scale": "10–50 chargers",
+          "coreRequirement": "Power handling",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        },
+        {
+          "id": "warehouse",
+          "label": "Warehouse",
+          "slug": "/cpo/industrial-and-logistics/warehouse",
+          "landSituation": "Industrial land",
+          "parkingSituation": "Dockside parking",
+          "evType": "3W / 4W",
+          "scale": "10–100 chargers",
+          "coreRequirement": "Fast + scheduled",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        },
+        {
+          "id": "cold-storage",
+          "label": "Cold Storage",
+          "slug": "/cpo/industrial-and-logistics/cold-storage",
+          "landSituation": "Industrial land",
+          "parkingSituation": "Fleet bays",
+          "evType": "3W / 4W",
+          "scale": "5–30 chargers",
+          "coreRequirement": "Reliability",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        }
+      ]
+    },
+    {
+      "id": "mixed-use",
+      "label": "Mixed-Use CPOs",
+      "definition": "Combination of residential + commercial",
+      "sheet": "Mixed User",
+      "children": [
+        {
+          "id": "builder-developer",
+          "label": "Builder / Developer",
+          "slug": "/cpo/mixed-use/builder-developer",
+          "landSituation": "Under-construction land",
+          "parkingSituation": "Planned parking",
+          "evType": "2W / 4W",
+          "scale": "10–100 chargers",
+          "coreRequirement": "Future-ready",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        },
+        {
+          "id": "landlord-with-idle-land",
+          "label": "Landlord with Idle Land",
+          "slug": "/cpo/mixed-use/landlord-with-idle-land",
+          "landSituation": "Private land",
+          "parkingSituation": "Flexible",
+          "evType": "Any",
+          "scale": "1–20 chargers",
+          "coreRequirement": "Monetization",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        },
+        {
+          "id": "solar-plant-owner",
+          "label": "Solar Plant Owner",
+          "slug": "/cpo/mixed-use/solar-plant-owner",
+          "landSituation": "Energy land",
+          "parkingSituation": "Limited parking",
+          "evType": "4W",
+          "scale": "2–10 chargers",
+          "coreRequirement": "Green charging",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        },
+        {
+          "id": "smart-city-projects",
+          "label": "Smart City Projects",
+          "slug": "/cpo/mixed-use/smart-city-projects",
+          "landSituation": "Public land",
+          "parkingSituation": "Multi-modal",
+          "evType": "Any",
+          "scale": "50–500 chargers",
+          "coreRequirement": "Platform scale",
+          "pageKey": null,
+          "formTemplate": null,
+          "defaults": {}
+        }
+      ]
+    }
+  ]
+}

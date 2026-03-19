@@ -1,20 +1,26 @@
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { MarketingRoutePlaceholder } from "@/components/marketing/marketing-route-placeholder";
+import { CpoIndexPage } from "@/features/marketing/components/cpo-index-page";
+import { cpoSegments } from "@/features/marketing/data/cpo";
+
+const routePath = "/cpo" as const;
 
 export const metadata = buildPageMetadata({
   title: "CPO",
   description:
-    "Legacy CPO index route has been scaffolded for migration.",
-  path: "/cpo",
-  noIndex: true
+    "Browse all CPO scenario types for EV charging deployment across residential, commercial, fleet, and institutional segments.",
+  path: routePath
 });
 
 export default function CpoPage() {
   return (
-    <MarketingRoutePlaceholder
-      title="CPO"
-      routePath="/cpo"
-      description="Legacy CPO index route has been scaffolded for migration."
+    <CpoIndexPage
+      intro={{
+        badge: "CPO Index",
+        title: "Choose your EV charging scenario",
+        description:
+          "Explore deployment models by segment and open detailed setup pages for each CPO route."
+      }}
+      segments={cpoSegments}
     />
   );
 }

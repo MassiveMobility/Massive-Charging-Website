@@ -1,20 +1,14 @@
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { MarketingRoutePlaceholder } from "@/components/marketing/marketing-route-placeholder";
+import { ScenarioRoutePage } from "@/features/marketing/components/scenario-route-page";
+
+const routePath = "/apartment-resident" as const;
 
 export const metadata = buildPageMetadata({
   title: "Apartment Resident Charging",
-  description:
-    "Legacy apartment-resident charging route has been scaffolded for migration.",
-  path: "/apartment-resident",
-  noIndex: true
+  description: "Install EV charging in assigned apartment slots with permission and safety guidance.",
+  path: routePath
 });
 
-export default function ApartmentResidentPage() {
-  return (
-    <MarketingRoutePlaceholder
-      title="Apartment Resident Charging"
-      routePath="/apartment-resident"
-      description="Legacy apartment-resident charging route has been scaffolded for migration."
-    />
-  );
+export default function ScenarioPage() {
+  return <ScenarioRoutePage routePath={routePath} />;
 }

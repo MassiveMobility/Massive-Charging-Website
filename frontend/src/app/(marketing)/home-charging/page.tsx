@@ -1,20 +1,14 @@
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { MarketingRoutePlaceholder } from "@/components/marketing/marketing-route-placeholder";
+import { ScenarioRoutePage } from "@/features/marketing/components/scenario-route-page";
+
+const routePath = "/home-charging" as const;
 
 export const metadata = buildPageMetadata({
-  title: "Home Charging",
-  description:
-    "Legacy home-charging landing route has been scaffolded for migration.",
-  path: "/home-charging",
-  noIndex: true
+  title: "Home Charging Setup",
+  description: "Plan EV charging for independent homes with practical infra and deployment guidance.",
+  path: routePath
 });
 
-export default function HomeChargingPage() {
-  return (
-    <MarketingRoutePlaceholder
-      title="Home Charging"
-      routePath="/home-charging"
-      description="Legacy home-charging landing route has been scaffolded for migration."
-    />
-  );
+export default function ScenarioPage() {
+  return <ScenarioRoutePage routePath={routePath} />;
 }

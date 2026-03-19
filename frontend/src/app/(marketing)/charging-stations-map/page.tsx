@@ -1,20 +1,15 @@
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { MarketingRoutePlaceholder } from "@/components/marketing/marketing-route-placeholder";
+import { ChargingStationsExplorer } from "@/features/marketing/components/charging-stations-explorer";
+
+const routePath = "/charging-stations-map" as const;
 
 export const metadata = buildPageMetadata({
   title: "Charging Stations Map",
   description:
-    "Legacy charging-station discovery route has been scaffolded for migration.",
-  path: "/charging-stations-map",
-  noIndex: true
+    "Search and browse EV charging stations with connector type, status, and route direction support.",
+  path: routePath
 });
 
 export default function ChargingStationsMapPage() {
-  return (
-    <MarketingRoutePlaceholder
-      title="Charging Stations Map"
-      routePath="/charging-stations-map"
-      description="Legacy charging-station discovery route has been scaffolded for migration."
-    />
-  );
+  return <ChargingStationsExplorer />;
 }

@@ -1,20 +1,16 @@
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { MarketingRoutePlaceholder } from "@/components/marketing/marketing-route-placeholder";
+import { PlansOffersPage } from "@/features/marketing/components/plans-offers-page";
+import { getMarketingPageContent } from "@/features/marketing/data/general-pages";
+
+const routePath = "/plans-offers" as const;
+const pageContent = getMarketingPageContent(routePath);
 
 export const metadata = buildPageMetadata({
-  title: "Pricing & Offers",
-  description:
-    "Legacy pricing and offers route has been scaffolded for migration.",
-  path: "/plans-offers",
-  noIndex: true
+  title: "Pricing and Offers",
+  description: pageContent.description,
+  path: routePath
 });
 
-export default function PlansOffersPage() {
-  return (
-    <MarketingRoutePlaceholder
-      title="Pricing & Offers"
-      routePath="/plans-offers"
-      description="Legacy pricing and offers route has been scaffolded for migration."
-    />
-  );
+export default function PlansOffersRoutePage() {
+  return <PlansOffersPage />;
 }
