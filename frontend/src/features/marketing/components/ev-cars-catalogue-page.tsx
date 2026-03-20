@@ -1,6 +1,6 @@
 "use client";
 
-import type { LegacyVehicleCatalogueItem } from "@/features/marketing/data/legacy-guide-data";
+import type { LegacyVehicleCatalogueItem } from "@/data/articles";
 
 import { useMemo, useState } from "react";
 

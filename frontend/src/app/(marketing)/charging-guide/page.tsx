@@ -1,7 +1,7 @@
 import {
   getLegacyCategoryArticles,
   legacyFourWheelVehicles
-} from "@/features/marketing/data/legacy-guide-data";
+} from "@/data/articles";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { LegacyGuideHomePage } from "@/features/marketing/components/legacy-guide-home-page";
 

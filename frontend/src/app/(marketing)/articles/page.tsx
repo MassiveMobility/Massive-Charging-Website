@@ -1,3 +1,4 @@
+import { articlePreviewItems } from "@/data/articles";
 import { Badge } from "@/components/ui";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { Card } from "@/components/ui";
@@ -15,17 +16,6 @@ export const metadata = buildPageMetadata({
     "Explore EV charging strategy articles focused on deployment planning, uptime, and scalable charging operations.",
   path: routePaths.articles
 });
-
-const articlePreviewItems = [
-  {
-    summary: "A practical architecture baseline for reliable public charging programs.",
-    title: "Designing EV charging networks for operational uptime"
-  },
-  {
-    summary: "How modular route and feature boundaries reduce long-term migration risk.",
-    title: "Scaling charging platforms without architecture debt"
-  }
-];
 
 export default function ArticlesPage() {
   return (

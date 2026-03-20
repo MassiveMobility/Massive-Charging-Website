@@ -1,7 +1,7 @@
 import type {
   LegacyCoreMessageBlock,
   LegacyGuideArticleSummary
-} from "@/features/marketing/data/legacy-guide-data";
+} from "@/data/articles";
 
 import Link from "next/link";
 

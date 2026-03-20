@@ -1,5 +1,5 @@
-import coreMessageBlockRaw from "@/features/marketing/data/legacy/core_message_block.json";
-import vehicleGuideRaw from "@/features/marketing/data/legacy/vehicle_guide.json";
+import coreMessageBlockRaw from "@/data/articles/legacy/core_message_block.json";
+import vehicleGuideRaw from "@/data/articles/legacy/vehicle_guide.json";
 
 export type LegacyVehicleMaster = {
   Vehicle_ID: string;
@@ -62,6 +62,13 @@ type LegacyCoreMessageBlocksData = {
   Core_message_blocks: LegacyCoreMessageBlock[];
 };
 
+/**
+ * Single source of truth for all legacy charging-guide article data.
+ * This module owns:
+ * 1) Raw legacy JSON contracts
+ * 2) Parsing and normalization
+ * 3) Query helpers consumed by guide routes/components
+ */
 const vehicleGuideData = vehicleGuideRaw as LegacyVehicleGuideData;
 const coreMessageBlockData = coreMessageBlockRaw as LegacyCoreMessageBlocksData;
 

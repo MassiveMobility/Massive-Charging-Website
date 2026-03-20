@@ -1,6 +1,6 @@
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { EvCarsCataloguePage } from "@/features/marketing/components/ev-cars-catalogue-page";
-import { legacyFourWheelVehicles } from "@/features/marketing/data/legacy-guide-data";
+import { legacyFourWheelVehicles } from "@/data/articles";
 
 const routePath = "/charging-guide/ev-cars" as const;
 
