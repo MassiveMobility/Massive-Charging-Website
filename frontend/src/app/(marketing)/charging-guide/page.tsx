@@ -1,7 +1,9 @@
+import {
+  getLegacyCategoryArticles,
+  legacyFourWheelVehicles
+} from "@/features/marketing/data/legacy-guide-data";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { LegacyGuideHomePage } from "@/features/marketing/components/legacy-guide-home-page";
-import { getLegacyCategoryArticles } from "@/features/marketing/data/legacy-guide-data";
-import { legacyFourWheelVehicles } from "@/features/marketing/data/legacy-guide-data";
 
 const routePath = "/charging-guide" as const;
 

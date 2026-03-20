@@ -1,6 +1,6 @@
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { UpiChargingPage } from "@/features/marketing/components/upi-charging-page";
 import { getMarketingPageContent } from "@/features/marketing/data/general-pages";
+import { UpiChargingPage } from "@/features/marketing/components/upi-charging-page";
 
 const routePath = "/upi-charging" as const;
 const pageContent = getMarketingPageContent(routePath);

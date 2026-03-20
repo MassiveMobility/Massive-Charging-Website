@@ -1,8 +1,10 @@
-import { GuideArticlePage } from "@/features/marketing/components/guide-article-page";
+import {
+  getLegacyGuideArticleBySlug,
+  getLegacyGuideBlocksByMessageId,
+  legacyGuideArticles
+} from "@/features/marketing/data/legacy-guide-data";
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { getLegacyGuideArticleBySlug } from "@/features/marketing/data/legacy-guide-data";
-import { getLegacyGuideBlocksByMessageId } from "@/features/marketing/data/legacy-guide-data";
-import { legacyGuideArticles } from "@/features/marketing/data/legacy-guide-data";
+import { GuideArticlePage } from "@/features/marketing/components/guide-article-page";
 
 type ChargingGuideSlugPageProps = {
   params: {

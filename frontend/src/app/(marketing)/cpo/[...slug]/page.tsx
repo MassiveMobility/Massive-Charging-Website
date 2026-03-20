@@ -1,5 +1,5 @@
-import { CpoDetailPage } from "@/features/marketing/components/cpo-detail-page";
 import { buildPageMetadata } from "@/lib/seo/metadata";
+import { CpoDetailPage } from "@/features/marketing/components/cpo-detail-page";
 import { getCpoScenarioFromSlug } from "@/features/marketing/data/cpo";
 
 type CpoCatchAllPageProps = {

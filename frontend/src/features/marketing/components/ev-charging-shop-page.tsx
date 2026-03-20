@@ -5,19 +5,18 @@ import Link from "next/link";
  */
 export function EvChargingShopPage() {
   return (
-    <section className="ev-shop-legacy">
-      <div className="ev-shop-legacy__overlay" />
-      <div className="ev-shop-legacy__container">
-        <div className="ev-shop-legacy__badge">EV Charging Shop</div>
-        <h1 className="ev-shop-legacy__title">Coming Soon</h1>
-        <p className="ev-shop-legacy__description">
+    <section className="ev-shop-page">
+      <div className="ev-shop-page__container">
+        <div className="ev-shop-page__badge">EV Charging Shop</div>
+        <h1 className="ev-shop-page__title">Coming Soon</h1>
+        <p className="ev-shop-page__description">
           We are building a focused marketplace for chargers, accessories, and installation kits.
         </p>
-        <div className="ev-shop-legacy__actions">
-          <Link className="ev-shop-legacy__cta ev-shop-legacy__cta--primary" href="/charging-guide">
+        <div className="ev-shop-page__actions">
+          <Link className="ev-shop-page__cta ev-shop-page__cta--primary" href="/charging-guide">
             Explore Charging Guide
           </Link>
-          <Link className="ev-shop-legacy__cta ev-shop-legacy__cta--secondary" href="/get-chargers">
+          <Link className="ev-shop-page__cta ev-shop-page__cta--secondary" href="/get-chargers">
             Request Product Recommendation
           </Link>
         </div>

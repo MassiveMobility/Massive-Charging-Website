@@ -14,36 +14,39 @@ const benefits = [
 ] as const;
 
 /**
- * Legacy pricing route rebuilt with dark visual treatment.
+ * Legacy pricing route rebuilt with the centralized dark plans-page style contract.
  */
 export function PlansOffersPage() {
   return (
-    <section className="plans-legacy">
-      <div className="plans-legacy__bg" />
-      <div className="plans-legacy__container">
-        <header className="plans-legacy__hero">
-          <p>Subscribe to</p>
+    <section className="plans-page">
+      <div className="plans-page__container">
+        <header className="plans-page__hero">
+          <p className="plans-page__label">Subscribe to</p>
           <h1>ELITE</h1>
-          <div className="plans-legacy__pill">Subscription Plans</div>
+          <p>Membership plans for frequent charging users.</p>
         </header>
 
-        <div className="plans-legacy__cards">
+        <div className="plans-page__cards">
           {plans.map((plan) => (
-            <article className={`plans-legacy__card ${plan.highlighted ? "plans-legacy__card--highlighted" : ""}`} key={plan.name}>
-              <h2>{plan.price}</h2>
-              <p className="plans-legacy__original">{plan.originalPrice}</p>
-              <p className="plans-legacy__duration">{plan.duration}</p>
+            <article
+              className={`plans-page__card ${plan.highlighted ? "plans-page__card--highlighted" : ""}`}
+              key={plan.name}
+            >
+              <h2>{plan.name}</h2>
+              <p className="plans-page__price">{plan.price}</p>
+              <p className="plans-page__original">{plan.originalPrice}</p>
+              <p className="plans-page__duration">{plan.duration}</p>
             </article>
           ))}
         </div>
 
-        <p className="plans-legacy__policy">Only for personal use, commercial use is prohibited.</p>
+        <p className="plans-page__policy">Only for personal use, commercial use is prohibited.</p>
 
-        <section className="plans-legacy__benefits">
+        <section className="plans-page__benefits">
           <h2>Benefits</h2>
-          <div className="plans-legacy__benefit-grid">
+          <div className="plans-page__benefit-grid">
             {benefits.map((benefit) => (
-              <article className="plans-legacy__benefit-card" key={benefit.title}>
+              <article className="plans-page__benefit-card" key={benefit.title}>
                 <h3>{benefit.title}</h3>
                 <p>{benefit.description}</p>
               </article>
@@ -51,9 +54,9 @@ export function PlansOffersPage() {
           </div>
         </section>
 
-        <div className="plans-legacy__cta-wrap">
+        <div className="plans-page__cta-wrap">
           <a
-            className="plans-legacy__cta"
+            className="plans-page__cta"
             href="https://play.google.com/store/apps/details?id=in.one.charging&hl=en_IN"
             rel="noopener noreferrer"
             target="_blank"

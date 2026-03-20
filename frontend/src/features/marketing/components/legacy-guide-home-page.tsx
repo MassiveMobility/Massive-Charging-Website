@@ -157,7 +157,7 @@ export function LegacyGuideHomePage({ articlesByCategory, vehicles }: LegacyGuid
                                 <div className="guide-categories__search-result-name">{vehicle.name}</div>
                                 <div className="guide-categories__search-result-brand">{vehicle.manufacturer}</div>
                               </div>
-                              <span aria-hidden="true">></span>
+                              <span aria-hidden="true">&gt;</span>
                             </button>
                           ))}
                         </div>
@@ -256,7 +256,7 @@ export function LegacyGuideHomePage({ articlesByCategory, vehicles }: LegacyGuid
                           </p>
                           <h4 className="guide-categories__trip-title">{article.title}</h4>
                         </div>
-                        <span aria-hidden="true">></span>
+                        <span aria-hidden="true">&gt;</span>
                       </Link>
                     ))}
                   </div>

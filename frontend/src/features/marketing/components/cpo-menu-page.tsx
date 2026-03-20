@@ -56,7 +56,7 @@ export function CpoMenuPage({ segments }: CpoMenuPageProps) {
               <Link className="cpo-menu__child-card" href={child.slug} key={child.id}>
                 <h2>{child.label}</h2>
                 <p>{[child.evType, child.scale].filter(Boolean).join(" | ") || child.coreRequirement || "Open details"}</p>
-                <span>Open Scenario ></span>
+                <span>Open Scenario &gt;</span>
               </Link>
             ))}
           </div>

@@ -9,6 +9,8 @@ type Episode = {
   title: string;
 };
 
+const routeStops = ["Noida Sector 61", "Vrindavan (Omaxe, near Prem Mandir)", "Kundli"] as const;
+
 const episodes: Episode[] = [
   {
     id: 1,
@@ -66,86 +68,51 @@ export function EvTripReportPage() {
   }
 
   return (
-    <section className="trip-report-legacy">
-      <header className="trip-report-legacy__hero">
-        <div className="trip-report-legacy__container">
-          <div className="trip-report-legacy__badge">EV Journey Report</div>
-          <h1>Noida to Vrindavan to Kundli with MG Windsor EV</h1>
-          <p>
+    <section className="trip-report">
+      <div className="trip-report__container">
+        <header className="trip-report__hero">
+          <div className="trip-report__badge">EV Journey Report</div>
+          <h1 className="trip-report__title">Noida to Vrindavan to Kundli with MG Windsor EV</h1>
+          <p className="trip-report__description">
             Field-report style summary of charger discovery, reliability, and operational reality across a multi-stop EV journey.
           </p>
+          <p className="trip-report__description">
+            Vehicle: MG Windsor EV | Battery: 38 kWh | Estimated Range: 220-300 km
+          </p>
+          <p className="trip-report__description">
+            Route: {routeStops.join(" -> ")}
+          </p>
 
-          <div className="trip-report-legacy__vehicle-card">
-            <h2>Vehicle Snapshot</h2>
-            <div className="trip-report-legacy__vehicle-grid">
-              <div>
-                <span>Vehicle</span>
-                <strong>MG Windsor EV</strong>
-              </div>
-              <div>
-                <span>Battery Capacity</span>
-                <strong>38 kWh</strong>
-              </div>
-              <div>
-                <span>Estimated Range</span>
-                <strong>220-300 km</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <div className="trip-report-legacy__tabs" role="tablist" aria-label="Trip report episodes">
-        <div className="trip-report-legacy__container">
-          {episodes.map((episode, index) => (
-            <button
-              aria-selected={index === activeEpisodeIndex}
-              className={`trip-report-legacy__tab ${index === activeEpisodeIndex ? "trip-report-legacy__tab--active" : ""}`}
-              key={episode.id}
-              onClick={() => setActiveEpisodeIndex(index)}
-              role="tab"
-              type="button"
-            >
-              Episode {episode.id}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      <div className="trip-report-legacy__container trip-report-legacy__content-wrap">
-        <article className="trip-report-legacy__content" role="tabpanel">
-          <h2>{activeEpisode.title}</h2>
-          <div className="trip-report-legacy__paragraphs">
-            {activeEpisode.paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
+          <div className="trip-report__episode-tabs" role="tablist" aria-label="Trip report episodes">
+            {episodes.map((episode, index) => (
+              <button
+                aria-selected={index === activeEpisodeIndex}
+                className={`trip-report__episode-tab ${index === activeEpisodeIndex ? "trip-report__episode-tab--active" : ""}`}
+                key={episode.id}
+                onClick={() => setActiveEpisodeIndex(index)}
+                role="tab"
+                type="button"
+              >
+                Episode {episode.id}
+              </button>
             ))}
           </div>
+        </header>
 
-          <section className="trip-report-legacy__insights">
-            <h3>Key insights</h3>
-            <ul>
-              {activeEpisode.insights.map((insight) => (
-                <li key={insight}>{insight}</li>
-              ))}
-            </ul>
-          </section>
+        <article className="trip-report__episode-body" role="tabpanel">
+          <h2 className="trip-report__episode-title">{activeEpisode.title}</h2>
+          {activeEpisode.paragraphs.map((paragraph) => (
+            <p className="trip-report__episode-summary" key={paragraph}>
+              {paragraph}
+            </p>
+          ))}
 
-          <div className="trip-report-legacy__pager">
-            <button
-              disabled={activeEpisodeIndex === 0}
-              onClick={() => setActiveEpisodeIndex((current) => Math.max(0, current - 1))}
-              type="button"
-            >
-              Previous
-            </button>
-            <button
-              disabled={activeEpisodeIndex === episodes.length - 1}
-              onClick={() => setActiveEpisodeIndex((current) => Math.min(episodes.length - 1, current + 1))}
-              type="button"
-            >
-              Next
-            </button>
-          </div>
+          <h3 className="trip-report__insights-title">Key insights</h3>
+          <ul className="trip-report__insights">
+            {activeEpisode.insights.map((insight) => (
+              <li key={insight}>{insight}</li>
+            ))}
+          </ul>
         </article>
       </div>
     </section>

@@ -1,6 +1,6 @@
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { PlansOffersPage } from "@/features/marketing/components/plans-offers-page";
 import { getMarketingPageContent } from "@/features/marketing/data/general-pages";
+import { PlansOffersPage } from "@/features/marketing/components/plans-offers-page";
 
 const routePath = "/plans-offers" as const;
 const pageContent = getMarketingPageContent(routePath);

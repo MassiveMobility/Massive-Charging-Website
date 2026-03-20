@@ -1,10 +1,10 @@
-import type { ScenarioRoutePath } from "@/features/marketing/data/scenario-routes";
-
+import {
+  type ScenarioRoutePath,
+  scenarioRouteToCpoId
+} from "@/features/marketing/data/scenario-routes";
 import { getCpoScenarioById } from "@/features/marketing/data/cpo";
-import { scenarioRouteToCpoId } from "@/features/marketing/data/scenario-routes";
-import { ScenarioContentPage } from "@/features/marketing/components/scenario-content-page";
-
 import { notFound } from "next/navigation";
+import { ScenarioContentPage } from "@/features/marketing/components/scenario-content-page";
 
 type ScenarioRoutePageProps = {
   routePath: ScenarioRoutePath;

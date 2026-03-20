@@ -125,7 +125,7 @@ export function ChargingBusinessFreshPage() {
               <Link className="business-fresh__setup-card" href={item.path} key={item.path}>
                 <span className="business-fresh__setup-category">{item.category}</span>
                 <h3>{item.title}</h3>
-                <span className="business-fresh__setup-link">View Plan ></span>
+                <span className="business-fresh__setup-link">View Plan &gt;</span>
               </Link>
             ))}
           </div>
