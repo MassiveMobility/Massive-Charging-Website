@@ -10,12 +10,15 @@ type EvCarsCataloguePageProps = {
   cars: LegacyVehicleCatalogueItem[];
 };
 
+const PAGE_SIZE = 6;
+
 /**
  * Legacy-style EV cars catalogue for /charging-guide/ev-cars.
  */
 export function EvCarsCataloguePage({ cars }: EvCarsCataloguePageProps) {
   const [selectedId, setSelectedId] = useState(cars[0]?.Vehicle_ID ?? "");
   const [query, setQuery] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
 
   const filteredCars = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
@@ -29,7 +32,30 @@ export function EvCarsCataloguePage({ cars }: EvCarsCataloguePageProps) {
     });
   }, [cars, query]);
 
-  const selectedVehicle = filteredCars.find((car) => car.Vehicle_ID === selectedId) ?? filteredCars[0] ?? null;
+  const totalPages = Math.max(1, Math.ceil(filteredCars.length / PAGE_SIZE));
+  const safeCurrentPage = Math.min(currentPage, totalPages);
+  const pageStart = (safeCurrentPage - 1) * PAGE_SIZE;
+  const paginatedCars = filteredCars.slice(pageStart, pageStart + PAGE_SIZE);
+
+  const selectedVehicle =
+    paginatedCars.find((car) => car.Vehicle_ID === selectedId) ?? paginatedCars[0] ?? null;
+
+  const effectiveSelectedId = selectedVehicle?.Vehicle_ID ?? "";
+
+  const pageNumbers = useMemo(() => {
+    if (totalPages <= 5) {
+      return Array.from({ length: totalPages }, (_, index) => index + 1);
+    }
+
+    const start = Math.max(1, safeCurrentPage - 2);
+    const end = Math.min(totalPages, start + 4);
+    const adjustedStart = Math.max(1, end - 4);
+
+    return Array.from(
+      { length: end - adjustedStart + 1 },
+      (_, index) => adjustedStart + index
+    );
+  }, [safeCurrentPage, totalPages]);
 
   return (
     <section className="legacy-cars">
@@ -56,7 +82,10 @@ export function EvCarsCataloguePage({ cars }: EvCarsCataloguePageProps) {
                 </div>
                 <input
                   className="legacy-cars__search-input"
-                  onChange={(event) => setQuery(event.target.value)}
+                  onChange={(event) => {
+                    setQuery(event.target.value);
+                    setCurrentPage(1);
+                  }}
                   placeholder="Search by model or manufacturer"
                   type="search"
                   value={query}
@@ -64,8 +93,8 @@ export function EvCarsCataloguePage({ cars }: EvCarsCataloguePageProps) {
               </div>
 
               <div className="legacy-cars__cards">
-                {filteredCars.map((car) => {
-                  const isSelected = car.Vehicle_ID === selectedId;
+                {paginatedCars.map((car) => {
+                  const isSelected = car.Vehicle_ID === effectiveSelectedId;
 
                   return (
                     <button
@@ -90,6 +119,44 @@ export function EvCarsCataloguePage({ cars }: EvCarsCataloguePageProps) {
                   );
                 })}
               </div>
+
+              {filteredCars.length ? (
+                <nav aria-label="EV cars pagination" className="legacy-cars__pagination">
+                  <button
+                    aria-label="Previous page"
+                    className="legacy-cars__pagination-btn"
+                    disabled={safeCurrentPage === 1}
+                    onClick={() => setCurrentPage((page) => Math.max(1, page - 1))}
+                    type="button"
+                  >
+                    Previous
+                  </button>
+
+                  <div className="legacy-cars__pagination-pages">
+                    {pageNumbers.map((page) => (
+                      <button
+                        aria-current={page === safeCurrentPage ? "page" : undefined}
+                        className={`legacy-cars__pagination-btn ${page === safeCurrentPage ? "legacy-cars__pagination-btn--active" : ""}`}
+                        key={page}
+                        onClick={() => setCurrentPage(page)}
+                        type="button"
+                      >
+                        {page}
+                      </button>
+                    ))}
+                  </div>
+
+                  <button
+                    aria-label="Next page"
+                    className="legacy-cars__pagination-btn"
+                    disabled={safeCurrentPage === totalPages}
+                    onClick={() => setCurrentPage((page) => Math.min(totalPages, page + 1))}
+                    type="button"
+                  >
+                    Next
+                  </button>
+                </nav>
+              ) : null}
             </section>
 
             <aside className="legacy-cars__details">

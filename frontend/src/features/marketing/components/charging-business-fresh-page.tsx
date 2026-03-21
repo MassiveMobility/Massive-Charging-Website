@@ -76,8 +76,8 @@ export function ChargingBusinessFreshPage() {
               <h2>Operator Dashboard</h2>
               <p className="business-fresh__dashboard-subtitle">Live status, sessions, payouts</p>
               <p className="business-fresh__earning-label">Estimated monthly earning</p>
-              <p className="business-fresh__earning-value">₹ 80,000+</p>
-              <p className="business-fresh__earning-note">~18 sessions/day x ₹150/session</p>
+              <p className="business-fresh__earning-value">{"\u20B9"} 80,000+</p>
+              <p className="business-fresh__earning-note">~18 sessions/day x {"\u20B9"}150/session</p>
               <div className="business-fresh__dashboard-grid">
                 <div>
                   <span>Uptime</span>
@@ -89,7 +89,7 @@ export function ChargingBusinessFreshPage() {
                 </div>
                 <div>
                   <span>Tariff</span>
-                  <strong>₹/kWh</strong>
+                  <strong>{"\u20B9"}/kWh</strong>
                 </div>
                 <div>
                   <span>Payouts</span>
