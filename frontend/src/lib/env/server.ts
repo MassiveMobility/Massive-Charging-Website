@@ -1,4 +1,10 @@
-const optionalServerKeys = ["CMS_API_BASE_URL", "CMS_API_TOKEN"] as const;
+const optionalServerKeys = [
+  "CMS_API_BASE_URL",
+  "CMS_API_TOKEN",
+  "STATIONS_API_BASE_URL",
+  "STATIONS_API_BEARER_TOKEN",
+  "STATIONS_API_X_API"
+] as const;
 
 export type ServerEnv = Partial<Record<(typeof optionalServerKeys)[number], string>>;
 

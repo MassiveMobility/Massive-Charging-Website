@@ -7331,6 +7331,14 @@ select:focus-visible {
   line-height: 1.45;
 }
 
+.stations-map__details-note {
+  margin: 10px 0 0;
+  color: #334155;
+  font-family: var(--font-brand-body);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
 .stations-map__details-close {
   border: 0;
   border-radius: 8px;
