@@ -47,11 +47,8 @@ export type StationQueryPayload = {
   search?: string;
 };
 
-const stationsApiBaseUrl =
-  process.env.NEXT_PUBLIC_STATIONS_API_BASE_URL?.trim() ||
-  "https://backend.1charging.com";
-const stationsApiBearerToken = process.env.NEXT_PUBLIC_STATIONS_API_BEARER_TOKEN?.trim() ?? "";
-const stationsApiXApiKey = process.env.NEXT_PUBLIC_STATIONS_API_X_API?.trim() ?? "";
+/** All station requests go through the internal Next.js proxy so that
+ *  secrets (bearer token, x-api-key) stay on the server. */
 
 const DEFAULT_WORKING_DAYS =
   "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday";
@@ -385,24 +382,13 @@ const getErrorMessageFromPayload = (payload: unknown): string | null => {
 };
 
 const requestStationsApi = async (
-  endpoint: string,
+  proxyPath: string,
   payload: StationQueryPayload,
   signal?: AbortSignal
 ) => {
-  // Direct browser-to-backend request path, as requested for deployed API debugging.
-  const response = await fetch(new URL(endpoint, stationsApiBaseUrl).toString(), {
+  const response = await fetch(proxyPath, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      ...(stationsApiXApiKey
-        ? {
-            "x-api-key": stationsApiXApiKey
-          }
-        : {}),
-      ...(stationsApiBearerToken
-        ? { Authorization: `Bearer ${stationsApiBearerToken}` }
-        : {})
-    },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
     signal: signal ?? null
   });
@@ -426,7 +412,7 @@ export async function fetchNearbyStations(
   payload: StationQueryPayload,
   signal?: AbortSignal
 ): Promise<ChargingStation[]> {
-  const responsePayload = await requestStationsApi("/api/web/stations", payload, signal);
+  const responsePayload = await requestStationsApi("/api/stations", payload, signal);
   return extractCollection(responsePayload)
     .map((entry, index) => buildSummaryFromRaw(entry, index))
     .filter((entry): entry is ChargingStation => entry !== null);
@@ -442,7 +428,7 @@ export async function fetchStationDetails(
   signal?: AbortSignal
 ): Promise<StationPanelDetails> {
   const responsePayload = await requestStationsApi(
-    `/api/web/station/${encodeURIComponent(stationId)}`,
+    `/api/stations/${encodeURIComponent(stationId)}`,
     payload,
     signal
   );
