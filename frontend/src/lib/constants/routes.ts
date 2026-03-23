@@ -98,21 +98,21 @@ export const routeRegistry = {
     title: "Charging Station Biz"
   },
   chargingStationsMap: {
-    description: "Temporary coming-soon route while the upgraded charging station map ships.",
+    description: "Canonical live map route for station discovery and directions.",
     group: "marketing",
-    migrationStatus: "placeholder",
+    migrationStatus: "active",
     owner: "marketing-team",
     path: "/charging-stations-map",
-    rendering: "SSG",
+    rendering: "DYNAMIC",
     title: "Charging Stations Map"
   },
   chargingScootationsMap: {
-    description: "Temporary coming-soon alias route for the charging station map experience.",
+    description: "Legacy typo alias that redirects to the canonical charging stations map route.",
     group: "marketing",
-    migrationStatus: "placeholder",
+    migrationStatus: "active",
     owner: "marketing-team",
     path: "/charging-scootations-map",
-    rendering: "SSG",
+    rendering: "DYNAMIC",
     title: "Charging Scootations Map"
   },
   communityCharging: {

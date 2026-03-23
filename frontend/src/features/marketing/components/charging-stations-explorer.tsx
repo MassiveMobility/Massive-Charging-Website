@@ -4,7 +4,6 @@ import {
   ArrowRight,
   Building2,
   CalendarDays,
-  Copy,
   Info,
   MapPin,
   Phone,
@@ -13,7 +12,7 @@ import {
   User,
   X
 } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 import {
@@ -67,8 +66,13 @@ export function ChargingStationsExplorer() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  const [searchTerm, setSearchTerm] = useState("");
-  const [debouncedSearchTerm, setDebouncedSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState(
+    () => searchParams.get("search")?.trim() ?? ""
+  );
+  const [debouncedSearchTerm, setDebouncedSearchTerm] = useState(
+    () => searchParams.get("search")?.trim() ?? ""
+  );
+  const internalSearchSyncRef = useRef<string | null>(null);
   const [stations, setStations] = useState<ChargingStation[]>([]);
   const [isStationsLoading, setIsStationsLoading] = useState(true);
   const [stationsError, setStationsError] = useState<string | null>(null);
@@ -83,7 +87,13 @@ export function ChargingStationsExplorer() {
 
   useEffect(() => {
     const routeSearch = searchParams.get("search")?.trim() ?? "";
-    setSearchTerm((previous) => (previous === routeSearch ? previous : routeSearch));
+    if (internalSearchSyncRef.current === routeSearch) {
+      internalSearchSyncRef.current = null;
+      return;
+    }
+
+    setSearchTerm(routeSearch);
+    setDebouncedSearchTerm(routeSearch);
   }, [searchParams]);
 
   useEffect(() => {
@@ -109,6 +119,7 @@ export function ChargingStationsExplorer() {
 
     const nextQuery = nextParams.toString();
     const nextUrl = nextQuery ? `${pathname}?${nextQuery}` : pathname;
+    internalSearchSyncRef.current = debouncedSearchTerm;
     router.replace(nextUrl, { scroll: false });
   }, [debouncedSearchTerm, pathname, router, searchParams]);
 
@@ -463,7 +474,7 @@ export function ChargingStationsExplorer() {
                   <p className="stations-map__details-note">{detailsError}</p>
                 ) : null}
 
-                <div className="stations-map__id-box">
+                {/* <div className="stations-map__id-box">
                   <div className="stations-map__id-label">Station ID</div>
                   <div className="stations-map__id-row">
                     <code className="stations-map__id-value">
@@ -480,7 +491,7 @@ export function ChargingStationsExplorer() {
                       Copy
                     </button>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="stations-map__metrics-grid">
                   <div className="stations-map__metric-card">

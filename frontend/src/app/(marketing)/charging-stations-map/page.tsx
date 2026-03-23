@@ -1,15 +1,15 @@
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { ChargingStationsMapComingSoonPage } from "@/features/marketing/components/charging-stations-map-coming-soon-page";
+import { ChargingStationsExplorer } from "@/features/marketing/components/charging-stations-explorer";
 
 const routePath = "/charging-stations-map" as const;
 
 export const metadata = buildPageMetadata({
-  title: "Charging Stations Map | Coming Soon",
+  title: "Find EV Charging Stations Across India",
   description:
-    "The Massive Charging station map is temporarily unavailable while we ship an upgraded experience.",
+    "Discover nearby EV charging stations, view live map locations, and open turn-by-turn directions with Massive Charging.",
   path: routePath
 });
 
 export default function ChargingStationsMapPage() {
-  return <ChargingStationsMapComingSoonPage />;
+  return <ChargingStationsExplorer />;
 }

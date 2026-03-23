@@ -1,15 +1,15 @@
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { ChargingStationsMapComingSoonPage } from "@/features/marketing/components/charging-stations-map-coming-soon-page";
+import { redirect } from "next/navigation";
 
 const routePath = "/charging-scootations-map" as const;
 
 export const metadata = buildPageMetadata({
-  title: "Charging Scootations Map | Coming Soon",
+  title: "Charging Scootations Map Redirect",
   description:
-    "The Massive Charging station map is temporarily unavailable while we ship an upgraded experience.",
+    "Legacy alias route that redirects to the canonical charging stations map page.",
   path: routePath
 });
 
 export default function ChargingScootationsMapRoutePage() {
-  return <ChargingStationsMapComingSoonPage />;
+  redirect("/charging-stations-map");
 }

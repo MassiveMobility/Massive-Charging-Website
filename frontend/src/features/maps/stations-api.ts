@@ -162,15 +162,25 @@ const buildStationAddress = (station: Record<string, unknown>): string => {
 
 const extractLatLon = (station: Record<string, unknown>): { lat: number; lon: number } | null => {
   const location = asRecord(station.location);
+  const loc = asRecord(station.loc);
   const coordinates = asRecord(station.coordinates);
   const geo = asRecord(station.geo);
 
+  const locationCoordinates = Array.isArray(location?.coordinates)
+    ? location.coordinates
+    : null;
+  const locCoordinates = Array.isArray(loc?.coordinates) ? loc.coordinates : null;
+
   const lat = readFirstNumber(
+    locationCoordinates?.[1],
+    locCoordinates?.[1],
     station.lat,
     station.latitude,
     station.locationLat,
     location?.lat,
     location?.latitude,
+    loc?.lat,
+    loc?.latitude,
     coordinates?.lat,
     coordinates?.latitude,
     geo?.lat,
@@ -178,6 +188,8 @@ const extractLatLon = (station: Record<string, unknown>): { lat: number; lon: nu
   );
 
   const lon = readFirstNumber(
+    locationCoordinates?.[0],
+    locCoordinates?.[0],
     station.lon,
     station.lng,
     station.longitude,
@@ -185,6 +197,9 @@ const extractLatLon = (station: Record<string, unknown>): { lat: number; lon: nu
     location?.lon,
     location?.lng,
     location?.longitude,
+    loc?.lon,
+    loc?.lng,
+    loc?.longitude,
     coordinates?.lon,
     coordinates?.lng,
     coordinates?.longitude,
