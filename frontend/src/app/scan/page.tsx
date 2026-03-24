@@ -332,6 +332,7 @@ const scanPageStyles = `
 export default function ScanPage() {
   useEffect(() => {
     // Language toggle
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (window as any).setLang = function (lang: string) {
       const body = document.body;
       const btnEn = document.getElementById("btn-en");
@@ -384,6 +385,7 @@ export default function ScanPage() {
 
     return () => {
       observer.disconnect();
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       delete (window as any).setLang;
     };
   }, []);
