@@ -59,12 +59,12 @@ const appPageHTML = `
       </div>
     </div>
     <div class="feature-card">
-      <div class="feature-icon">\uD83D\uDD0B</div>
+      <div class="feature-icon">\uD83C\uDFD9\uFE0F</div>
       <div class="feature-text">
-        <div class="feature-title en">Battery Health Monitor</div>
-        <div class="feature-title hi" style="display:none;">\u092C\u0948\u091F\u0930\u0940 \u0939\u0947\u0932\u094D\u0925 \u092E\u0949\u0928\u093F\u091F\u0930</div>
-        <div class="feature-sub en">Track your EV battery condition in real-time</div>
-        <div class="feature-sub hi" style="display:none;">\u0905\u092A\u0928\u0940 EV \u092C\u0948\u091F\u0930\u0940 \u0915\u0940 \u0938\u094D\u0925\u093F\u0924\u093F \u0930\u093F\u092F\u0932-\u091F\u093E\u0907\u092E \u091F\u094D\u0930\u0948\u0915 \u0915\u0930\u0947\u0902</div>
+        <div class="feature-title en">30+ Cities</div>
+        <div class="feature-title hi" style="display:none;">30+ \u0936\u0939\u0930</div>
+        <div class="feature-sub en">Rapidly expanding across India</div>
+        <div class="feature-sub hi" style="display:none;">\u092A\u0942\u0930\u0947 \u092D\u093E\u0930\u0924 \u092E\u0947\u0902 \u0924\u0947\u091C\u093C\u0940 \u0938\u0947 \u092C\u0922\u093C \u0930\u0939\u093E \u0939\u0948</div>
       </div>
     </div>
     <div class="feature-card">
