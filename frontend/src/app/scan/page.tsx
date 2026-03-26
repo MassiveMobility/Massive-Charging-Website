@@ -22,9 +22,9 @@ const scanPageHTML = `
     <div class="hero-glow"></div>
     <div class="hero-badge">Live Charging Network</div>
     <h1 class="hero-headline en">Power Up<br/><span class="accent">Your Future</span></h1>
-    <h1 class="hero-headline-hi">\u0905\u092A\u0928\u0947 <span class="accent">\u092D\u0935\u093F\u0937\u094D\u092F</span> \u0915\u094B<br/>\u091A\u093E\u0930\u094D\u091C \u0915\u0930\u0947\u0902</h1>
-    <p class="hero-sub en">India\u2019s fastest-growing EV charging network \u2014 now with Bharat Taxi.</p>
-    <p class="hero-sub-hi hi" style="margin-top:10px;font-size:14px;color:var(--text-2);line-height:1.55;">\u092D\u093E\u0930\u0924 \u0915\u0940 \u0924\u0947\u091C\u093C\u0940 \u0938\u0947 \u092C\u0922\u093C\u0924\u0940 EV \u091A\u093E\u0930\u094D\u091C\u093F\u0902\u0917 \u0928\u0947\u091F\u0935\u0930\u094D\u0915 \u2014 \u0905\u092C Bharat Taxi \u0915\u0947 \u0938\u093E\u0925\u0964</p>
+    <h1 class="hero-headline-hi">\u0906\u092A\u0915\u0940 <span class="accent">\u0908\u0935\u0940 \u092F\u093E\u0924\u094D\u0930\u093E</span> \u0915\u093E<br/>\u092D\u0930\u094B\u0938\u0947\u092E\u0902\u0926 \u0938\u093E\u0925\u0940</h1>
+    <p class="hero-sub en">India\u2019s fastest-growing EV charging network.</p>
+    <p class="hero-sub-hi hi" style="margin-top:10px;font-size:14px;color:var(--text-2);line-height:1.55;">\u092D\u093E\u0930\u0924 \u0915\u093E \u0938\u092C\u0938\u0947 \u0924\u0947\u091C\u093C\u0940 \u0938\u0947 \u092C\u0922\u093C\u0924\u093E EV \u091A\u093E\u0930\u094D\u091C\u093F\u0902\u0917 \u0928\u0947\u091F\u0935\u0930\u094D\u0915\u0964</p>
   </div>
 
   <!-- STATS -->
@@ -32,12 +32,12 @@ const scanPageHTML = `
     <div class="stat-chip">
       <div class="stat-num">1500+</div>
       <div class="stat-label en">Chargers</div>
-      <div class="stat-label-hi hi" style="font-size:11px;color:var(--red-dark);margin-top:4px;font-weight:600;">\u091A\u093E\u0930\u094D\u091C\u0930</div>
+      <div class="stat-label-hi hi" style="font-size:11px;color:var(--red-dark);margin-top:4px;font-weight:600;">\u091A\u093E\u0930\u094D\u091C\u093F\u0902\u0917 \u0938\u094D\u091F\u0947\u0936\u0928</div>
     </div>
     <div class="stat-chip">
       <div class="stat-num">30+</div>
       <div class="stat-label en">Cities</div>
-      <div class="stat-label-hi hi" style="font-size:11px;color:var(--red-dark);margin-top:4px;font-weight:600;">\u0936\u0939\u0930</div>
+      <div class="stat-label-hi hi" style="font-size:11px;color:var(--red-dark);margin-top:4px;font-weight:600;">\u0936\u0939\u0930\u094B\u0902 \u092E\u0947\u0902</div>
     </div>
   </div>
 
@@ -51,9 +51,9 @@ const scanPageHTML = `
         <div class="nav-box-tag en">01 \u2014 Charging App</div>
         <div class="nav-box-tag hi" style="display:none;">01 \u2014 \u091A\u093E\u0930\u094D\u091C\u093F\u0902\u0917 \u0910\u092A</div>
         <div class="nav-box-title en">Charge Smarter with Massive</div>
-        <div class="nav-box-title hi" style="display:none;">Massive \u0915\u0947 \u0938\u093E\u0925 \u0938\u094D\u092E\u093E\u0930\u094D\u091F \u091A\u093E\u0930\u094D\u091C\u093F\u0902\u0917</div>
+        <div class="nav-box-title hi" style="display:none;">Massive \u0910\u092A \u0938\u0947 \u0906\u0938\u093E\u0928 \u091A\u093E\u0930\u094D\u091C\u093F\u0902\u0917</div>
         <div class="nav-box-sub en">Download the app & start charging</div>
-        <div class="nav-box-sub hi" style="display:none;">\u0910\u092A \u0921\u093E\u0909\u0928\u0932\u094B\u0921 \u0915\u0930\u0947\u0902 \u0914\u0930 \u091A\u093E\u0930\u094D\u091C\u093F\u0902\u0917 \u0936\u0941\u0930\u0942 \u0915\u0930\u0947\u0902</div>
+        <div class="nav-box-sub hi" style="display:none;">\u0910\u092A \u0921\u093E\u0909\u0928\u0932\u094B\u0921 \u0915\u0930\u0947\u0902, \u0924\u0941\u0930\u0902\u0924 \u091A\u093E\u0930\u094D\u091C\u093F\u0902\u0917 \u0936\u0941\u0930\u0942 \u0915\u0930\u0947\u0902</div>
       </div>
       <div class="nav-box-arrow">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="var(--red)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -67,9 +67,9 @@ const scanPageHTML = `
         <div class="nav-box-tag en">02 \u2014 Business Opportunity</div>
         <div class="nav-box-tag hi" style="display:none;">02 \u2014 \u0935\u094D\u092F\u093E\u092A\u093E\u0930 \u0915\u093E \u0905\u0935\u0938\u0930</div>
         <div class="nav-box-title en">Start Your EV Charging Business</div>
-        <div class="nav-box-title hi" style="display:none;">EV \u091A\u093E\u0930\u094D\u091C\u093F\u0902\u0917 \u092C\u093F\u091C\u093C\u0928\u0947\u0938 \u0936\u0941\u0930\u0942 \u0915\u0930\u0947\u0902</div>
+        <div class="nav-box-title hi" style="display:none;">\u0905\u092A\u0928\u093E EV \u091A\u093E\u0930\u094D\u091C\u093F\u0902\u0917 \u0915\u093E\u0930\u094B\u092C\u093E\u0930 \u0936\u0941\u0930\u0942 \u0915\u0930\u0947\u0902</div>
         <div class="nav-box-sub en">Earn \u20b980,000+ monthly with us</div>
-        <div class="nav-box-sub hi" style="display:none;">\u0939\u092E\u093E\u0930\u0947 \u0938\u093E\u0925 \u20b980,000+ \u092E\u093E\u0938\u093F\u0915 \u0915\u092E\u093E\u090F\u0902</div>
+        <div class="nav-box-sub hi" style="display:none;">\u0939\u092E\u093E\u0930\u0947 \u0938\u093E\u0925 \u091C\u0941\u0921\u093C\u0947\u0902, \u0939\u0930 \u092E\u0939\u0940\u0928\u0947 \u20b980,000+ \u0915\u092E\u093E\u090F\u0902</div>
       </div>
       <div class="nav-box-arrow">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="var(--red)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
