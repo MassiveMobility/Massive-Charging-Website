@@ -12,8 +12,8 @@ const scanPageHTML = `
       </div>
     </div>
     <div class="lang-toggle">
-      <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
-      <button class="lang-btn" id="btn-hi" onclick="setLang('hi')">\u0939\u093F\u0902</button>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+      <button class="lang-btn active" id="btn-hi" onclick="setLang('hi')">\u0939\u093F\u0902</button>
     </div>
   </div>
 
@@ -310,6 +310,9 @@ export default function ScanPage() {
         document.querySelectorAll<HTMLElement>(".nav-box-tag.en, .nav-box-title.en, .nav-box-sub.en").forEach((el) => (el.style.display = "block"));
       }
     };
+
+    const initialSetLang = (window as { setLang?: (lang: string) => void }).setLang;
+    initialSetLang?.("hi");
 
     // Reveal animation
     const reveals = document.querySelectorAll(".reveal");
