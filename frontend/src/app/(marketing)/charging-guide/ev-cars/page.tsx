@@ -1,16 +1,21 @@
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { EvCarsCataloguePage } from "@/features/marketing/components/ev-cars-catalogue-page";
 import { legacyFourWheelVehicles } from "@/data/articles";
+import { fetchEvCarsFromWp } from "@/lib/api/wp-adapters";
 
 const routePath = "/charging-guide/ev-cars" as const;
 
 export const metadata = buildPageMetadata({
   title: "EV Cars Catalogue",
   description:
-    "Legacy EV cars catalogue migrated to Next.js with searchable vehicle cards and charging-guide links.",
+    "Browse all electric vehicles with specs, pricing, battery capacity, range, and charging-guide links.",
   path: routePath
 });
 
-export default function ChargingGuideEvCarsPage() {
-  return <EvCarsCataloguePage cars={legacyFourWheelVehicles} />;
+export default async function ChargingGuideEvCarsPage() {
+  // Try WordPress first; fall back to static legacy JSON if WP is unavailable
+  const wpCars = await fetchEvCarsFromWp();
+  const cars = wpCars ?? legacyFourWheelVehicles;
+
+  return <EvCarsCataloguePage cars={cars} />;
 }

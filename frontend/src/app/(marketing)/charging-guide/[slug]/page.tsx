@@ -3,6 +3,7 @@ import {
   getLegacyGuideBlocksByMessageId,
   legacyGuideArticles
 } from "@/data/articles";
+import { fetchWpPostBySlug } from "@/lib/api/wordpress";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { GuideArticlePage } from "@/features/marketing/components/guide-article-page";
 
@@ -16,25 +17,60 @@ export function generateStaticParams() {
   return legacyGuideArticles.map((article) => ({ slug: article.slug }));
 }
 
-export function generateMetadata({ params }: ChargingGuideSlugPageProps) {
-  const article = getLegacyGuideArticleBySlug(params.slug);
+export async function generateMetadata({ params }: ChargingGuideSlugPageProps) {
+  // Prefer WP title if available for accurate SEO
+  let title = "Charging Guide Article";
+  let description = "EV charging article for practical setup and operations guidance.";
 
-  if (!article) {
-    return buildPageMetadata({
-      title: "Charging Guide Article",
-      description: "EV charging article for practical setup and operations guidance.",
-      path: "/charging-guide" as const
-    });
+  const wpPost = await fetchWpPostBySlug(params.slug).catch(() => null);
+  if (wpPost) {
+    title = wpPost.title.rendered;
+    description = wpPost.yoast_head_json?.description ?? `EV charging guide: ${title}`;
+  } else {
+    const article = getLegacyGuideArticleBySlug(params.slug);
+    if (article) {
+      title = article.title;
+      description = `Legacy charging guide article: ${article.title}`;
+    }
   }
 
   return buildPageMetadata({
-    title: article.title,
-    description: `Legacy charging guide article: ${article.title}`,
+    title,
+    description,
     path: "/charging-guide" as const
   });
 }
 
-export default function ChargingGuideSlugPage({ params }: ChargingGuideSlugPageProps) {
+export default async function ChargingGuideSlugPage({ params }: ChargingGuideSlugPageProps) {
+  // ── 1. Try WordPress first ────────────────────────────────────────────────────
+  const wpPost = await fetchWpPostBySlug(params.slug).catch(() => null);
+
+  if (wpPost) {
+    // Synthesise a minimal article summary for the page header
+    const article = {
+      author: "Massive",
+      cmsgId: "",
+      context: "",
+      createdAt: wpPost.modified
+        ? new Date(wpPost.modified).toLocaleDateString("en-IN", { dateStyle: "medium" })
+        : "",
+      guideId: "",
+      guideType: "",
+      slug: wpPost.slug,
+      status: wpPost.status,
+      title: wpPost.title.rendered
+    };
+
+    return (
+      <GuideArticlePage
+        article={article}
+        blocks={[]}
+        wpContent={wpPost.content.rendered}
+      />
+    );
+  }
+
+  // ── 2. Fall back to static legacy data ────────────────────────────────────────
   const article = getLegacyGuideArticleBySlug(params.slug);
 
   if (!article) {
@@ -52,5 +88,10 @@ export default function ChargingGuideSlugPage({ params }: ChargingGuideSlugPageP
     );
   }
 
-  return <GuideArticlePage article={article} blocks={getLegacyGuideBlocksByMessageId(article.cmsgId)} />;
+  return (
+    <GuideArticlePage
+      article={article}
+      blocks={getLegacyGuideBlocksByMessageId(article.cmsgId)}
+    />
+  );
 }

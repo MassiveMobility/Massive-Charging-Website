@@ -8,6 +8,8 @@ import Link from "next/link";
 type GuideArticlePageProps = {
   article: LegacyGuideArticleSummary;
   blocks: LegacyCoreMessageBlock[];
+  /** Raw HTML from WordPress content.rendered. When provided, replaces block rendering. */
+  wpContent?: string;
 };
 
 function slugifyHeading(text: string): string {
@@ -60,14 +62,16 @@ function TableRenderer({ rawText }: { rawText: string }) {
 /**
  * Legacy article renderer for /charging-guide/[slug].
  */
-export function GuideArticlePage({ article, blocks }: GuideArticlePageProps) {
-  const tocItems = blocks
-    .filter((block) => ["heading_1", "heading_2", "heading_3"].includes(block.block_type))
-    .map((block) => ({
-      id: slugifyHeading(block.text || ""),
-      level: block.block_type,
-      text: block.text
-    }));
+export function GuideArticlePage({ article, blocks, wpContent }: GuideArticlePageProps) {
+  const tocItems = wpContent
+    ? [] // TOC not available for WP HTML content without DOM parsing
+    : blocks
+        .filter((block) => ["heading_1", "heading_2", "heading_3"].includes(block.block_type))
+        .map((block) => ({
+          id: slugifyHeading(block.text || ""),
+          level: block.block_type,
+          text: block.text
+        }));
 
   const renderBlock = (block: LegacyCoreMessageBlock) => {
     const blockId = slugifyHeading(block.text || "");
@@ -148,7 +152,13 @@ export function GuideArticlePage({ article, blocks }: GuideArticlePageProps) {
             <Link className="legacy-guide-article__back-link" href="/charging-guide/ev-cars">
               Back to EV cars
             </Link>
-            <div className="legacy-guide-article__blocks">{blocks.map(renderBlock)}</div>
+            {wpContent ? (
+              // WordPress HTML content — already sanitised server-side by WP kses
+              // eslint-disable-next-line react/no-danger
+              <div className="legacy-guide-article__blocks" dangerouslySetInnerHTML={{ __html: wpContent }} />
+            ) : (
+              <div className="legacy-guide-article__blocks">{blocks.map(renderBlock)}</div>
+            )}
             <div className="legacy-guide-article__cta-wrap">
               <Link className="legacy-guide-article__cta" href="/get-chargers">
                 Talk to an EV charging expert
