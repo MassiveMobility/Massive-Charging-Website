@@ -20,17 +20,12 @@ set -euo pipefail
 # ── Configuration — edit these before running ─────────────────────────────────
 DB_NAME="massive_cms"
 DB_USER="massive_cms_user"
-DB_PASS=""                 # Fill in before running — use a strong password
+DB_PASS="8SXtMB5lN4CEmB5zpvBvC7b0watXiES7"
 WP_DIR="/var/www/cms"
 NGINX_SITES="/etc/nginx/sites-available"
 NGINX_ENABLED="/etc/nginx/sites-enabled"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "${SCRIPT_DIR}/../../.." && pwd)"
-
-if [[ -z "${DB_PASS}" ]]; then
-  echo "ERROR: Set DB_PASS in this script before running." >&2
-  exit 1
-fi
 
 # ── 1. System update ──────────────────────────────────────────────────────────
 echo "==> Updating system packages..."
