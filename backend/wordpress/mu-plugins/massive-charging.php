@@ -396,11 +396,32 @@ function mc_expose_acf_in_rest(): void {
 
 	foreach ( $types as $type ) {
 		register_rest_field( $type, 'acf', [
-			'get_callback' => static function ( array $post ): array {
-				if ( ! function_exists( 'get_fields' ) ) {
-					return [];
+			'get_callback' => static function ( array $post ) use ( $type ): array {
+				// Try ACF first (works when field-key references are present)
+				if ( function_exists( 'get_fields' ) ) {
+					$fields = get_fields( $post['id'] );
+					if ( $fields ) {
+						return $fields;
+					}
 				}
-				return get_fields( $post['id'] ) ?: [];
+
+				// Fallback: read post meta directly.
+				// Required for ev_car posts migrated via update_post_meta() without
+				// ACF field-key references (_fieldname entries).
+				if ( $type === 'ev_car' ) {
+					return [
+						'make'          => get_post_meta( $post['id'], 'make',          true ) ?: null,
+						'model'         => get_post_meta( $post['id'], 'model',         true ) ?: null,
+						'price_inr'     => get_post_meta( $post['id'], 'price_inr',     true ) ?: null,
+						'battery_kwh'   => get_post_meta( $post['id'], 'battery_kwh',   true ) ?: null,
+						'range_km'      => get_post_meta( $post['id'], 'range_km',      true ) ?: null,
+						'connector'     => get_post_meta( $post['id'], 'connector',     true ) ?: null,
+						'guide_slug'    => get_post_meta( $post['id'], 'guide_slug',    true ) ?: null,
+						'charge_speed_kw' => get_post_meta( $post['id'], 'charge_speed_kw', true ) ?: null,
+					];
+				}
+
+				return [];
 			},
 			'schema' => [ 'type' => 'object' ],
 		] );
