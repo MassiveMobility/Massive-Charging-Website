@@ -34,7 +34,7 @@ const getCmsConfig = () => {
 
   if (!baseUrl) {
     throw new WordPressApiError(
-      "Missing CMS_API_BASE_URL. Add it to frontend/.env to enable CMS integration.",
+      "Missing CMS_API_BASE_URL. Set it to https://content.massivecharging.com in frontend/.env.",
       500
     );
   }

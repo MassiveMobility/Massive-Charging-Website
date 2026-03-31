@@ -106,8 +106,8 @@ ${WP_SALTS}
 \$table_prefix = 'mc_';
 
 // Headless — no need for the WP front-end theme to be publicly browsable
-define( 'WP_HOME',    'https://cms.massivecharging.com' );
-define( 'WP_SITEURL', 'https://cms.massivecharging.com' );
+define( 'WP_HOME',    'https://content.massivecharging.com' );
+define( 'WP_SITEURL', 'https://content.massivecharging.com' );
 
 define( 'WP_DEBUG',         false );
 define( 'WP_DEBUG_LOG',     false );
@@ -141,12 +141,12 @@ sudo chown www-data:www-data "${MU_PLUGIN_DIR}/massive-charging.php"
 
 # ── 7. Nginx site config ──────────────────────────────────────────────────────
 echo "==> Installing Nginx site config..."
-sudo cp "${REPO_ROOT}/backend/wordpress/nginx/cms.conf" \
-        "${NGINX_SITES}/cms.massivecharging.com"
+sudo cp "${REPO_ROOT}/backend/wordpress/nginx/content.conf" \
+        "${NGINX_SITES}/content.massivecharging.com"
 
-if [[ ! -L "${NGINX_ENABLED}/cms.massivecharging.com" ]]; then
-  sudo ln -s "${NGINX_SITES}/cms.massivecharging.com" \
-              "${NGINX_ENABLED}/cms.massivecharging.com"
+if [[ ! -L "${NGINX_ENABLED}/content.massivecharging.com" ]]; then
+  sudo ln -s "${NGINX_SITES}/content.massivecharging.com" \
+              "${NGINX_ENABLED}/content.massivecharging.com"
 fi
 
 sudo nginx -t
@@ -159,13 +159,13 @@ echo "  Setup complete."
 echo ""
 echo "  Next steps:"
 echo ""
-echo "  1. Point DNS: cms.massivecharging.com → this server's IP"
+echo "  1. Point DNS: content.massivecharging.com → this server's IP"
 echo ""
 echo "  2. Once DNS propagates, provision SSL:"
-echo "     sudo certbot --nginx -d cms.massivecharging.com"
+echo "     sudo certbot --nginx -d content.massivecharging.com"
 echo ""
 echo "  3. Complete WordPress install in the browser:"
-echo "     https://cms.massivecharging.com/wp-admin/install.php"
+echo "     https://content.massivecharging.com/wp-admin/install.php"
 echo ""
 echo "  4. In WordPress admin:"
 echo "     - Install ACF Pro (upload plugin zip)"
@@ -174,7 +174,7 @@ echo "     - Install Yoast SEO"
 echo "     - Set Permalinks to 'Post name' (Settings → Permalinks)"
 echo ""
 echo "  5. Set environment variables in frontend/.env:"
-echo "     CMS_API_BASE_URL=https://cms.massivecharging.com"
+echo "     CMS_API_BASE_URL=https://content.massivecharging.com"
 echo "     CMS_API_TOKEN=<Application Password from WP admin>"
 echo "     CMS_REVALIDATE_SECRET=<random secret string>"
 echo "============================================================"

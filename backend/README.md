@@ -6,12 +6,12 @@ WordPress backend and integrate it with the Next.js frontend.
 ## Architecture
 
 ```
-cms.massivecharging.com   ← WordPress admin + REST API  (this workspace)
+content.massivecharging.com   ← WordPress admin + REST API  (this workspace)
 massivecharging.com       ← Next.js frontend             (../frontend)
 ```
 
 WordPress serves **only** the REST API and the `/wp-admin` editor UI.
-The Next.js frontend fetches content from `cms.massivecharging.com/wp-json/wp/v2/`
+The Next.js frontend fetches content from `content.massivecharging.com/wp-json/wp/v2/`
 at build time (ISR) and purges the cache via the revalidation webhook on publish.
 
 ## Directory structure
@@ -49,9 +49,9 @@ and are version-controlled here. Do not define fields through the WP admin UI.
    ```bash
    bash backend/wordpress/scripts/server-setup.sh
    ```
-4. Point DNS: `cms.massivecharging.com` → server IP.
-5. Provision SSL: `sudo certbot --nginx -d cms.massivecharging.com`
-6. Complete WP install at `https://cms.massivecharging.com/wp-admin/install.php`
+4. Point DNS: `content.massivecharging.com` → server IP.
+5. Provision SSL: `sudo certbot --nginx -d content.massivecharging.com`
+6. Complete WP install at `https://content.massivecharging.com/wp-admin/install.php`
 
 ## WordPress plugins to install manually
 
@@ -65,7 +65,7 @@ and are version-controlled here. Do not define fields through the WP admin UI.
 ## Environment variables (frontend/.env)
 
 ```env
-CMS_API_BASE_URL=https://cms.massivecharging.com
+CMS_API_BASE_URL=https://content.massivecharging.com
 CMS_API_TOKEN=<username:application-password>   # WP Application Passwords
 CMS_REVALIDATE_SECRET=<random secret string>
 ```
