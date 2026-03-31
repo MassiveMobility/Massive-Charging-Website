@@ -3,8 +3,8 @@ import {
   getLegacyGuideBlocksByMessageId,
   legacyGuideArticles
 } from "@/data/articles";
-import { fetchWpPostBySlug } from "@/lib/api/wordpress";
 import { buildPageMetadata } from "@/lib/seo/metadata";
+import { fetchWpPostBySlug } from "@/lib/api/wordpress";
 import { GuideArticlePage } from "@/features/marketing/components/guide-article-page";
 
 type ChargingGuideSlugPageProps = {

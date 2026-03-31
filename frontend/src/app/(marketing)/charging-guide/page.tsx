@@ -3,8 +3,8 @@ import {
   legacyFourWheelVehicles
 } from "@/data/articles";
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { LegacyGuideHomePage } from "@/features/marketing/components/legacy-guide-home-page";
 import { fetchEvCarsFromWp } from "@/lib/api/wp-adapters";
+import { LegacyGuideHomePage } from "@/features/marketing/components/legacy-guide-home-page";
 
 const routePath = "/charging-guide" as const;
 
