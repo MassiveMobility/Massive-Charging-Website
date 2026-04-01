@@ -21,13 +21,11 @@ export function adaptWpEvCar(car: WpEvCar): LegacyVehicleCatalogueItem {
     Manufacturer: car.acf.make ?? "",
     Vehicle_Name: car.acf.model ?? "",
     Category_ID: "CAT_006",
-    // Optional detail fields from ACF meta
-    Battery_Capacity: car.acf.battery_kwh ?? undefined,
-    Claimed_Range: car.acf.range_km ?? undefined,
-    Realworld_Range: undefined, // not stored in WP migration
-    Charging_Type: car.acf.connector ?? undefined,
-    Price: car.acf.price_inr ?? undefined,
-    Guide_ID: undefined,
+    // Spread optional fields only when present — required by exactOptionalPropertyTypes
+    ...(car.acf.battery_kwh  && { Battery_Capacity: car.acf.battery_kwh }),
+    ...(car.acf.range_km     && { Claimed_Range:     car.acf.range_km }),
+    ...(car.acf.connector    && { Charging_Type:     car.acf.connector }),
+    ...(car.acf.price_inr    && { Price:             car.acf.price_inr }),
     // guide_slug links to the /charging-guide/[slug] article for this vehicle
     slug: car.acf.guide_slug || null,
     title: car.title.rendered,
