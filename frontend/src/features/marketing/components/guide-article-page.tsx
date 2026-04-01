@@ -59,12 +59,45 @@ function TableRenderer({ rawText }: { rawText: string }) {
   );
 }
 
+type WpTocItem = { id: string; level: string; text: string };
+
+/**
+ * Extracts h2/h3 headings from WordPress HTML, injects id attributes so
+ * in-page anchor links work, and returns TOC items alongside the patched HTML.
+ */
+function processWpContent(html: string): { html: string; tocItems: WpTocItem[] } {
+  const tocItems: WpTocItem[] = [];
+
+  const processed = html.replace(
+    /<(h[23])([^>]*)>([\s\S]*?)<\/\1>/gi,
+    (_match, tag: string, attrs: string, inner: string) => {
+      const text = inner.replace(/<[^>]+>/g, "").trim();
+      if (!text) return _match;
+
+      const id = slugifyHeading(text);
+      const level = tag.toLowerCase() === "h2" ? "heading_1" : "heading_2";
+      tocItems.push({ id, level, text });
+
+      // Skip if id already present (e.g. from WP block editor)
+      if (/\bid=/.test(attrs)) return _match;
+      return `<${tag} id="${id}"${attrs}>${inner}</${tag}>`;
+    }
+  );
+
+  return { html: processed, tocItems };
+}
+
 /**
  * Legacy article renderer for /charging-guide/[slug].
  */
 export function GuideArticlePage({ article, blocks, wpContent }: GuideArticlePageProps) {
+  // For WP HTML content: extract headings and inject IDs in one pass
+  const { html: renderedWpContent, tocItems: wpTocItems } = wpContent
+    ? processWpContent(wpContent)
+    : { html: "", tocItems: [] };
+
   const tocItems = wpContent
-    ? [] // TOC not available for WP HTML content without DOM parsing
+    ? wpTocItems
     : blocks
         .filter((block) => ["heading_1", "heading_2", "heading_3"].includes(block.block_type))
         .map((block) => ({
@@ -153,9 +186,9 @@ export function GuideArticlePage({ article, blocks, wpContent }: GuideArticlePag
               Back to EV cars
             </Link>
             {wpContent ? (
-              // WordPress HTML content — already sanitised server-side by WP kses
+              // WordPress HTML — sanitised by WP kses; headings have id attrs injected above
               // eslint-disable-next-line react/no-danger
-              <div className="legacy-guide-article__blocks" dangerouslySetInnerHTML={{ __html: wpContent }} />
+              <div className="legacy-guide-article__blocks" dangerouslySetInnerHTML={{ __html: renderedWpContent }} />
             ) : (
               <div className="legacy-guide-article__blocks">{blocks.map(renderBlock)}</div>
             )}
