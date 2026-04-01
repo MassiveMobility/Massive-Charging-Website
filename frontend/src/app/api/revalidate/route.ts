@@ -1,5 +1,5 @@
-import { revalidatePath } from "next/cache";
 import { NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 
 import { getServerEnv } from "@/lib/env/server";
 import type { WpRevalidatePayload } from "@/types/wordpress";

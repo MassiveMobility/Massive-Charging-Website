@@ -1,7 +1,7 @@
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { EvCarsCataloguePage } from "@/features/marketing/components/ev-cars-catalogue-page";
-import { legacyFourWheelVehicles } from "@/data/articles";
 import { fetchEvCarsFromWp } from "@/lib/api/wp-adapters";
+import { legacyFourWheelVehicles } from "@/data/articles";
 
 const routePath = "/charging-guide/ev-cars" as const;
 
