@@ -285,6 +285,33 @@ export const routeRegistry = {
     path: "/upi-charging",
     rendering: "SSG",
     title: "UPI Charging"
+  },
+  platform: {
+    description: "Operator platform page for white-label EV charging CMS and apps.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/platform",
+    rendering: "SSG",
+    title: "Platform"
+  },
+  forCpos: {
+    description: "CPO segment page covering the full Massive stack for charging point operators.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/for/cpos",
+    rendering: "SSG",
+    title: "For CPOs"
+  },
+  chargersDc: {
+    description: "DC fast charger category page with deployment guidance and requirement intake.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/chargers/dc",
+    rendering: "SSG",
+    title: "DC Chargers"
   }
 } as const satisfies RouteRegistry;
 
