@@ -14,9 +14,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 // 1. Custom Post Type: marketing_page
 // ---------------------------------------------------------------------------
 
-add_action( 'init', 'mc_register_marketing_page_cpt' );
+add_action( 'init', 'mcmp_register_cpt' );
 
-function mc_register_marketing_page_cpt() {
+function mcmp_register_cpt() {
 	register_post_type( 'marketing_page', [
 		'labels'       => [
 			'name'               => 'Marketing Pages',
@@ -44,10 +44,10 @@ function mc_register_marketing_page_cpt() {
 
 // ---------------------------------------------------------------------------
 // Helper: build numbered flat fields (top-level to avoid redeclaration fatal)
-// e.g. mc_numbered_fields('stat', ['label'=>'Stat Label','value'=>'Stat Value'], 4)
+// e.g. mcmp_numbered_fields('stat', ['label'=>'Stat Label','value'=>'Stat Value'], 4)
 // ---------------------------------------------------------------------------
 
-function mc_numbered_fields( $prefix, $keys, $max, $tab_label = '' ) {
+function mcmp_numbered_fields( $prefix, $keys, $max, $tab_label = '' ) {
 	$fields = [];
 
 	if ( $tab_label ) {
@@ -76,9 +76,9 @@ function mc_numbered_fields( $prefix, $keys, $max, $tab_label = '' ) {
 	return $fields;
 }
 
-add_action( 'acf/init', 'mc_register_acf_fields' );
+add_action( 'acf/init', 'mcmp_register_acf_fields' );
 
-function mc_register_acf_fields() {
+function mcmp_register_acf_fields() {
 	if ( ! function_exists( 'acf_add_local_field_group' ) ) {
 		return;
 	}
@@ -174,7 +174,7 @@ function mc_register_acf_fields() {
 	// Stats (max 4)
 	$standard_fields = array_merge(
 		$standard_fields,
-		mc_numbered_fields( 'stat', [ 'label' => 'Stat Label', 'value' => 'Stat Value', 'note' => 'Stat Note' ], 4, 'Stats' )
+		mcmp_numbered_fields( 'stat', [ 'label' => 'Stat Label', 'value' => 'Stat Value', 'note' => 'Stat Note' ], 4, 'Stats' )
 	);
 
 	// Cards (max 8)
@@ -194,7 +194,7 @@ function mc_register_acf_fields() {
 				'type'  => 'text',
 			],
 		],
-		mc_numbered_fields( 'card', [ 'title' => 'Card Title', 'description' => 'Card Description' ], 8 )
+		mcmp_numbered_fields( 'card', [ 'title' => 'Card Title', 'description' => 'Card Description' ], 8 )
 	);
 
 	// Steps (max 6)
@@ -214,7 +214,7 @@ function mc_register_acf_fields() {
 				'type'  => 'text',
 			],
 		],
-		mc_numbered_fields( 'step', [ 'title' => 'Step Title', 'description' => 'Step Description' ], 6 )
+		mcmp_numbered_fields( 'step', [ 'title' => 'Step Title', 'description' => 'Step Description' ], 6 )
 	);
 
 	// FAQs (max 6)
@@ -234,7 +234,7 @@ function mc_register_acf_fields() {
 				'type'  => 'text',
 			],
 		],
-		mc_numbered_fields( 'faq', [ 'question' => 'Question', 'answer' => 'Answer' ], 6 )
+		mcmp_numbered_fields( 'faq', [ 'question' => 'Question', 'answer' => 'Answer' ], 6 )
 	);
 
 	// Spec table rows (max 20)
@@ -248,7 +248,7 @@ function mc_register_acf_fields() {
 				'type'  => 'tab',
 			],
 		],
-		mc_numbered_fields( 'spec', [ 'label' => 'Spec Label', 'value' => 'Spec Value' ], 20 )
+		mcmp_numbered_fields( 'spec', [ 'label' => 'Spec Label', 'value' => 'Spec Value' ], 20 )
 	);
 
 	// Note
@@ -417,18 +417,18 @@ function mc_register_acf_fields() {
 //    GET /wp-json/massivecharging/v1/marketing-pages/by-route?path=/platform → full page data
 // ---------------------------------------------------------------------------
 
-add_action( 'rest_api_init', 'mc_register_rest_routes' );
+add_action( 'rest_api_init', 'mcmp_register_rest_routes' );
 
-function mc_register_rest_routes() {
+function mcmp_register_rest_routes() {
 	register_rest_route( 'massivecharging/v1', '/marketing-pages', [
 		'methods'             => 'GET',
-		'callback'            => 'mc_rest_list_marketing_pages',
+		'callback'            => 'mcmp_rest_list_pages',
 		'permission_callback' => '__return_true',
 	] );
 
 	register_rest_route( 'massivecharging/v1', '/marketing-pages/by-route', [
 		'methods'             => 'GET',
-		'callback'            => 'mc_rest_get_marketing_page_by_route',
+		'callback'            => 'mcmp_rest_get_page_by_route',
 		'permission_callback' => '__return_true',
 		'args'                => [
 			'path' => [ 'required' => true, 'type' => 'string' ],
@@ -437,7 +437,7 @@ function mc_register_rest_routes() {
 }
 
 // Returns [{id, route_path, title}] for generateStaticParams
-function mc_rest_list_marketing_pages() {
+function mcmp_rest_list_pages() {
 	$posts = get_posts( [
 		'post_type'      => 'marketing_page',
 		'post_status'    => 'publish',
@@ -456,7 +456,7 @@ function mc_rest_list_marketing_pages() {
 }
 
 // Returns full MarketingContent-shaped data for one page
-function mc_rest_get_marketing_page_by_route( WP_REST_Request $request ) {
+function mcmp_rest_get_page_by_route( WP_REST_Request $request ) {
 	$path = trim( $request->get_param( 'path' ) );
 
 	$posts = get_posts( [
@@ -472,14 +472,14 @@ function mc_rest_get_marketing_page_by_route( WP_REST_Request $request ) {
 	}
 
 	$id = $posts[0]->ID;
-	return mc_build_page_response( $id );
+	return mcmp_build_response( $id );
 }
 
 // ---------------------------------------------------------------------------
 // 4. Response builder helpers
 // ---------------------------------------------------------------------------
 
-function mc_build_page_response( int $id ): array {
+function mcmp_build_response( int $id ): array {
 	$template = get_field( 'page_template', $id ) ?: 'standard';
 
 	$response = [
@@ -488,28 +488,28 @@ function mc_build_page_response( int $id ): array {
 		'badge'         => get_field( 'badge', $id ) ?: '',
 		'title'         => get_field( 'page_title', $id ) ?: '',
 		'description'   => get_field( 'description', $id ) ?: '',
-		'primary_cta'   => mc_cta( $id, 'primary' ),
-		'secondary_cta' => mc_cta( $id, 'secondary' ),
-		'stats'         => mc_collect( $id, 'stat', [ 'label', 'value', 'note' ], 4 ),
+		'primary_cta'   => mcmp_cta( $id, 'primary' ),
+		'secondary_cta' => mcmp_cta( $id, 'secondary' ),
+		'stats'         => mcmp_collect( $id, 'stat', [ 'label', 'value', 'note' ], 4 ),
 		'card_title'    => get_field( 'card_section_title', $id ) ?: '',
-		'cards'         => mc_collect( $id, 'card', [ 'title', 'description' ], 8 ),
+		'cards'         => mcmp_collect( $id, 'card', [ 'title', 'description' ], 8 ),
 		'steps_title'   => get_field( 'steps_section_title', $id ) ?: '',
-		'steps'         => mc_collect( $id, 'step', [ 'title', 'description' ], 6 ),
+		'steps'         => mcmp_collect( $id, 'step', [ 'title', 'description' ], 6 ),
 		'faq_title'     => get_field( 'faq_section_title', $id ) ?: '',
-		'faqs'          => mc_collect( $id, 'faq', [ 'question', 'answer' ], 6 ),
-		'spec_table'    => mc_collect( $id, 'spec', [ 'label', 'value' ], 20 ),
+		'faqs'          => mcmp_collect( $id, 'faq', [ 'question', 'answer' ], 6 ),
+		'spec_table'    => mcmp_collect( $id, 'spec', [ 'label', 'value' ], 20 ),
 		'note'          => get_field( 'note', $id ) ?: '',
 	];
 
 	if ( $template === 'homepage' ) {
-		$response['homepage'] = mc_homepage_fields( $id );
+		$response['homepage'] = mcmp_homepage_fields( $id );
 	}
 
 	return $response;
 }
 
 // Assemble a CTA object; returns null if label is empty
-function mc_cta( int $id, string $type ): ?array {
+function mcmp_cta( int $id, string $type ): ?array {
 	$label = get_field( "{$type}_cta_label", $id );
 	$href  = get_field( "{$type}_cta_href", $id );
 	if ( ! $label ) return null;
@@ -517,7 +517,7 @@ function mc_cta( int $id, string $type ): ?array {
 }
 
 // Collect numbered flat fields into an array, skipping empty rows
-function mc_collect( int $id, string $prefix, array $keys, int $max ): array {
+function mcmp_collect( int $id, string $prefix, array $keys, int $max ): array {
 	$results = [];
 	for ( $i = 1; $i <= $max; $i++ ) {
 		$row      = [];
@@ -533,7 +533,7 @@ function mc_collect( int $id, string $prefix, array $keys, int $max ): array {
 }
 
 // Homepage-specific fields
-function mc_homepage_fields( int $id ): array {
+function mcmp_homepage_fields( int $id ): array {
 	$stations = [];
 	for ( $i = 1; $i <= 5; $i++ ) {
 		$s = get_field( "hero_station_{$i}", $id );
