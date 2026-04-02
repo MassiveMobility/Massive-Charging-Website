@@ -1,4 +1,4 @@
-import { buildPageMetadata } from "@/lib/seo/metadata";
+/* eslint-disable sort-imports */
 import { HomeBusinessScroll } from "@/components/marketing/home/home-business-scroll";
 import { HomeFifthScroll } from "@/components/marketing/home/home-fifth-scroll";
 import { HomeHero } from "@/components/marketing/home/home-hero";
@@ -7,6 +7,7 @@ import { HomeSixthScroll } from "@/components/marketing/home/home-sixth-scroll";
 import { HomeThirdScroll } from "@/components/marketing/home/home-third-scroll";
 import { fetchMarketingPageByRoute } from "@/lib/api/wordpress";
 import { routePaths } from "@/lib/constants/routes";
+import { buildPageMetadata } from "@/lib/seo/metadata";
 
 export const revalidate = 60;
 
