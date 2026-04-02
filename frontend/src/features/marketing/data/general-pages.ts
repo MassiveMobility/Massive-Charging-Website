@@ -556,6 +556,99 @@ export const marketingPageContent: Record<string, MarketingContent> = {
     ],
     note: "Earning potential depends on location quality, utilization, tariff, and uptime discipline."
   },
+  "/gridwatch": {
+    badge: "Gridwatch",
+    title: "Independent Audit Software for EV Charging Networks",
+    description:
+      "Gridwatch is third-party audit software for EV charging networks, providing independent visibility into utilisation, uptime, and downtime. It enables transparent SLA validation without relying solely on operator-reported data.",
+    primaryCta: {
+      href: "/get-chargers",
+      label: "Talk to Us About Gridwatch"
+    },
+    secondaryCta: {
+      href: "/for/cpos",
+      label: "CPO Partnership Overview"
+    },
+    cardTitle: "What Gridwatch provides",
+    cards: [
+      {
+        title: "Validate uptime claims independently",
+        description:
+          "Independent verification of reported uptime data instead of relying only on operator dashboards. Applicable for CPOs auditing their own network and for OEMs auditing third-party CPO performance."
+      },
+      {
+        title: "Detect downtime patterns",
+        description:
+          "Identify recurring faults, location-specific failures, and underperforming chargers through data analysis — before they become customer-facing problems."
+      },
+      {
+        title: "SLA benchmarking",
+        description:
+          "Measure actual network performance against agreed service-level commitments. Provides objective evidence for SLA reviews and dispute resolution."
+      },
+      {
+        title: "Corridor-level reliability reports",
+        description:
+          "Assess charging reliability across key routes and high-traffic highway clusters. Identify gaps in coverage and underperforming stations on critical corridors."
+      },
+      {
+        title: "Customer experience protection",
+        description:
+          "Flag risk areas before they impact end users and brand perception — whether for a CPO, a vehicle OEM relying on third-party networks, or a fleet operator."
+      },
+      {
+        title: "Revenue leakage detection",
+        description:
+          "Identify under-billing, failed sessions, or settlement inefficiencies affecting revenue realization across the network."
+      },
+      {
+        title: "AC vs DC usage trends",
+        description:
+          "Understand charging preference patterns across slow and fast charging environments to shape infrastructure investment decisions."
+      },
+      {
+        title: "Model-wise behaviour analysis",
+        description:
+          "Charging patterns segmented by vehicle model to support product planning, battery strategy, and range communication."
+      }
+    ],
+    stepsTitle: "How Gridwatch fits your operations",
+    steps: [
+      {
+        title: "1. Connect your network via OCPI",
+        description:
+          "Gridwatch receives session and status data through OCPI — no operator dashboard access required. Independent data path ensures audit integrity."
+      },
+      {
+        title: "2. Monitor uptime and utilisation continuously",
+        description:
+          "Real-time and historical visibility into station availability, session completion rates, and fault frequency across all connected sites."
+      },
+      {
+        title: "3. Report against SLA commitments",
+        description:
+          "Generate corridor-level and network-level reliability reports to validate SLA delivery to customers, investors, or OEM partners."
+      }
+    ],
+    faqTitle: "Gridwatch FAQ",
+    faqs: [
+      {
+        question: "Is Gridwatch hardware or software?",
+        answer:
+          "Software only. Gridwatch is a third-party audit software product for EV charging networks. It receives data through OCPI and does not require any hardware installation."
+      },
+      {
+        question: "Who uses Gridwatch?",
+        answer:
+          "CPOs use it to validate their own network's SLA delivery. Vehicle OEMs use it to audit the reliability of third-party CPOs in their charging ecosystem. Fleet operators use it to verify uptime on contracted charging infrastructure."
+      },
+      {
+        question: "How is Gridwatch different from an operator's own CMS dashboard?",
+        answer:
+          "Gridwatch is independent — it does not rely on operator-reported data. This makes it useful for transparent SLA validation between parties who have different interests in the reported uptime figures."
+      }
+    ]
+  },
   "/for/evse-manufacturers-installers": {
     badge: "For EVSE Manufacturers & Installers",
     title: "Go to Market as a Complete EV Charging Partner",
