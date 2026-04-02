@@ -8,11 +8,11 @@ import Link from "next/link";
 const PLAYSTORE_URL = "https://play.google.com/store/apps/details?id=in.one.charging&hl=en_IN";
 const APPSTORE_URL = "https://apps.apple.com/in/app/1c-ev-charging/id6478754214";
 
-const LIVE_STATIONS = [
+const DEFAULT_LIVE_STATIONS = [
   "Gomti Nagar Charging Station",
   "Kalkaji EV Charging Station",
-  "Wave City Center Charging Station"
-] as const;
+  "Wave City Center Charging Station",
+];
 
 type IconProps = {
   className?: string;
@@ -210,11 +210,36 @@ function AppStoreBadge() {
   );
 }
 
+export type HomeHeroProps = {
+  statusText?: string | undefined;
+  titleMain?: string | undefined;
+  titleAnytime?: string | undefined;
+  titleAccent?: string | undefined;
+  subtitle?: string | undefined;
+  ctaPrimaryLabel?: string | undefined;
+  ctaPrimaryHref?: string | undefined;
+  ctaSecondaryLabel?: string | undefined;
+  livePanelTitle?: string | undefined;
+  liveStations?: string[] | undefined;
+};
+
 /**
  * First scroll section for home migration:
  * keeps legacy hero behavior while moving all visual values into centralized CSS.
+ * All text props are optional — falls back to hardcoded defaults when WP is not yet populated.
  */
-export function HomeHero() {
+export function HomeHero({
+  statusText = "Charging Network Is Live",
+  titleMain = "Find Charger",
+  titleAnytime = "Anytime.",
+  titleAccent = "Anywhere.",
+  subtitle = "Live life at 100%",
+  ctaPrimaryLabel = "Find Chargers",
+  ctaPrimaryHref = "/charging-guide",
+  ctaSecondaryLabel = "Get App",
+  livePanelTitle = "Live charging Stations.",
+  liveStations = DEFAULT_LIVE_STATIONS,
+}: HomeHeroProps) {
   const [isScale125Like, setIsScale125Like] = useState(false);
   const [sidebarVisible, setSidebarVisible] = useState(true);
 
@@ -310,20 +335,20 @@ export function HomeHero() {
               <div className="home-hero-v2__left">
                 <div className="home-hero-v2__status-badge">
                   <span aria-hidden="true" className="home-hero-v2__status-dot" />
-                  <span className="home-hero-v2__status-text">Charging Network Is Live</span>
+                  <span className="home-hero-v2__status-text">{statusText}</span>
                 </div>
 
                 <h1 className="home-hero-v2__title" id="home-hero-title">
-                  Find Charger <span className="home-hero-v2__title-anytime">Anytime.</span>{" "}
-                  <span className="home-hero-v2__title-accent">Anywhere.</span>
+                  {titleMain} <span className="home-hero-v2__title-anytime">{titleAnytime}</span>{" "}
+                  <span className="home-hero-v2__title-accent">{titleAccent}</span>
                 </h1>
 
-                <p className="home-hero-v2__subtitle">Live life at 100%</p>
+                <p className="home-hero-v2__subtitle">{subtitle}</p>
 
                 <div className="home-hero-v2__cta-row">
-                  <Link className="home-hero-v2__hero-button home-hero-v2__hero-button--primary" href="/charging-guide">
+                  <Link className="home-hero-v2__hero-button home-hero-v2__hero-button--primary" href={ctaPrimaryHref as `/${string}`}>
                     <SearchIcon className="home-hero-v2__hero-button-icon" />
-                    <span>Find Chargers</span>
+                    <span>{ctaPrimaryLabel}</span>
                   </Link>
                   <a
                     className="home-hero-v2__hero-button home-hero-v2__hero-button--outline"
@@ -332,7 +357,7 @@ export function HomeHero() {
                     target="_blank"
                   >
                     <DownloadIcon className="home-hero-v2__hero-button-icon" />
-                    <span>Get App</span>
+                    <span>{ctaSecondaryLabel}</span>
                   </a>
                 </div>
 
@@ -344,9 +369,9 @@ export function HomeHero() {
 
               <div className="home-hero-v2__right">
                 <div className="home-hero-v2__live-panel">
-                  <p className="home-hero-v2__live-panel-title">Live charging Stations.</p>
+                  <p className="home-hero-v2__live-panel-title">{livePanelTitle}</p>
                   <ul className="home-hero-v2__live-list">
-                    {LIVE_STATIONS.map((station) => (
+                    {liveStations.map((station) => (
                       <li className="home-hero-v2__live-card" key={station}>
                         <span className="home-hero-v2__live-card-name">{station}</span>
                         <span className="home-hero-v2__live-card-badge">Live</span>

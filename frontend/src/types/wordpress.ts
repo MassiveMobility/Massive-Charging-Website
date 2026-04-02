@@ -206,3 +206,131 @@ export type WpRevalidatePayload = {
   type: 'post' | 'page' | 'cpo' | 'ev_car' | 'mc_scenario' | 'mc_product';
   slug: string;
 };
+
+// ── Marketing pages (massivecharging/v1 custom endpoints) ─────────────────────
+
+export type WpMarketingCta = {
+  label: string;
+  href: string;
+};
+
+export type WpMarketingStat = {
+  label: string;
+  value: string;
+  note: string;
+};
+
+export type WpMarketingCard = {
+  title: string;
+  description: string;
+};
+
+export type WpMarketingStep = {
+  title: string;
+  description: string;
+};
+
+export type WpMarketingFaq = {
+  question: string;
+  answer: string;
+};
+
+export type WpMarketingSpecRow = {
+  label: string;
+  value: string;
+};
+
+export type WpHomepageHero = {
+  status_text: string;
+  title_main: string;
+  title_anytime: string;
+  title_accent: string;
+  subtitle: string;
+  cta_primary_label: string;
+  cta_primary_href: string;
+  cta_secondary_label: string;
+  live_panel_title: string;
+  live_stations: string[];
+};
+
+export type WpHomepageMembership = {
+  badge: string;
+  heading_white: string;
+  heading_gold: string;
+  subtitle: string;
+  cta_label: string;
+  cta_href: string;
+  perks: string[];
+};
+
+export type WpHomepageHomeCharger = {
+  eyebrow: string;
+  title_line1: string;
+  title_line2: string;
+  cta_primary_label: string;
+  cta_primary_href: string;
+  cta_secondary_label: string;
+  cta_secondary_href: string;
+};
+
+export type WpHomepageApp = {
+  heading_line1: string;
+  heading_line2: string;
+  subtitle: string;
+  cta_label: string;
+  features: string[];
+};
+
+export type WpHomepageBusiness = {
+  kicker: string;
+  title_line1: string;
+  title_line2: string;
+  subtitle: string;
+  cta_label: string;
+  income_badge: string;
+};
+
+export type WpHomepageGuide = {
+  vehicle_chip: string;
+  heading: string;
+  subheading: string;
+  description: string;
+  cta_label: string;
+  cta_href: string;
+  chips: string[];
+};
+
+export type WpHomepageSections = {
+  hero: WpHomepageHero;
+  membership: WpHomepageMembership;
+  home_charger: WpHomepageHomeCharger;
+  app: WpHomepageApp;
+  business: WpHomepageBusiness;
+  guide: WpHomepageGuide;
+};
+
+export type WpMarketingPage = {
+  route_path: string;
+  page_template: 'standard' | 'homepage';
+  badge: string;
+  title: string;
+  description: string;
+  primary_cta: WpMarketingCta | null;
+  secondary_cta: WpMarketingCta | null;
+  stats: WpMarketingStat[];
+  card_title: string;
+  cards: WpMarketingCard[];
+  steps_title: string;
+  steps: WpMarketingStep[];
+  faq_title: string;
+  faqs: WpMarketingFaq[];
+  spec_table: WpMarketingSpecRow[];
+  note: string;
+  homepage?: WpHomepageSections;
+};
+
+export type WpMarketingPageSummary = {
+  id: number;
+  route_path: string;
+  title: string;
+};

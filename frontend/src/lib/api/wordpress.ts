@@ -3,6 +3,8 @@ import "server-only";
 import type {
   WpCpo,
   WpEvCar,
+  WpMarketingPage,
+  WpMarketingPageSummary,
   WpMedia,
   WpPage,
   WpPost,
@@ -174,4 +176,63 @@ export async function fetchWpProductBySlug(slug: string, opts: FetchOptions = {}
     opts
   );
   return results[0] ?? null;
+}
+
+// ── Marketing Pages (custom massivecharging/v1 namespace) ─────────────────────
+
+async function wpMarketingFetch<T>(path: string, opts: FetchOptions = {}): Promise<T> {
+  const { baseUrl, token } = getCmsConfig();
+  const url = `${baseUrl}/wp-json/massivecharging/v1${path}`;
+
+  const headers: HeadersInit = { "Content-Type": "application/json" };
+  if (token) {
+    headers["Authorization"] = `Basic ${Buffer.from(token).toString("base64")}`;
+  }
+
+  const response = await fetch(url, {
+    headers,
+    next: { revalidate: opts.revalidate ?? 60 }
+  });
+
+  if (!response.ok) {
+    let message = `Marketing API request failed: ${response.status}`;
+    try {
+      const body = (await response.json()) as { message?: string };
+      if (body.message) message = body.message;
+    } catch {
+      // ignore
+    }
+    throw new WordPressApiError(message, response.status);
+  }
+
+  return response.json() as Promise<T>;
+}
+
+/**
+ * Fetch all published marketing pages (id + route_path only).
+ * Used by generateStaticParams.
+ */
+export async function fetchAllMarketingPages(
+  opts: FetchOptions = {}
+): Promise<WpMarketingPageSummary[]> {
+  return wpMarketingFetch<WpMarketingPageSummary[]>("/marketing-pages", opts);
+}
+
+/**
+ * Fetch full page data by route path (e.g. "/platform", "/for/cpos").
+ * Returns null if the page doesn't exist in WP yet.
+ */
+export async function fetchMarketingPageByRoute(
+  routePath: string,
+  opts: FetchOptions = {}
+): Promise<WpMarketingPage | null> {
+  try {
+    return await wpMarketingFetch<WpMarketingPage>(
+      `/marketing-pages/by-route?path=${encodeURIComponent(routePath)}`,
+      opts
+    );
+  } catch (err) {
+    if (isWordPressApiError(err) && err.status === 404) return null;
+    throw err;
+  }
 }

@@ -16,30 +16,43 @@ function BoltIcon() {
   );
 }
 
-export function HomeBusinessScroll() {
+export type HomeBusinessScrollProps = {
+  kicker?: string | undefined;
+  titleLine1?: string | undefined;
+  titleLine2?: string | undefined;
+  subtitle?: string | undefined;
+  ctaLabel?: string | undefined;
+  incomeBadge?: string | undefined;
+};
+
+export function HomeBusinessScroll({
+  kicker = "Setup your charger and earn",
+  titleLine1 = "Start Your EV Charging",
+  titleLine2 = "Business",
+  subtitle = "Covert empty land into EV Charging Station and earn monthly income. Get Hardware and Software to run Charging Station.",
+  ctaLabel = "Get EV Charging App",
+  incomeBadge = "Rs 80,000+ monthly income",
+}: HomeBusinessScrollProps) {
   return (
     <section className="home-business-v2">
       <div className="home-business-v2__container">
         <div className="home-business-v2__left">
-          <p className="home-business-v2__kicker">Setup your charger and earn</p>
+          <p className="home-business-v2__kicker">{kicker}</p>
 
           <h2 className="home-business-v2__title">
-            <span className="home-business-v2__title-line">Start Your EV Charging</span>
-            <span className="home-business-v2__title-line">Business</span>
+            <span className="home-business-v2__title-line">{titleLine1}</span>
+            <span className="home-business-v2__title-line">{titleLine2}</span>
           </h2>
 
-          <p className="home-business-v2__subtitle">
-            Covert empty land into EV Charging Station and earn monthly income. Get Hardware and Software
-            to run Charging Station.
-          </p>
+          <p className="home-business-v2__subtitle">{subtitle}</p>
 
           <a className="home-business-v2__cta" href={PLAYSTORE_URL} rel="noopener noreferrer" target="_blank">
-            Get EV Charging App
+            {ctaLabel}
           </a>
 
           <div className="home-business-v2__income-badge">
             <BoltIcon />
-            <span>Rs 80,000+ monthly income</span>
+            <span>{incomeBadge}</span>
           </div>
         </div>
 

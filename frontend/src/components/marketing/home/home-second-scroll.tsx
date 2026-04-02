@@ -1,6 +1,24 @@
 import Link from "next/link";
 
-export function HomeSecondScroll() {
+export type HomeSecondScrollProps = {
+  eyebrow?: string | undefined;
+  titleLine1?: string | undefined;
+  titleLine2?: string | undefined;
+  ctaPrimaryLabel?: string | undefined;
+  ctaPrimaryHref?: string | undefined;
+  ctaSecondaryLabel?: string | undefined;
+  ctaSecondaryHref?: string | undefined;
+};
+
+export function HomeSecondScroll({
+  eyebrow = "One App, Every Network",
+  titleLine1 = "Install Your Personal",
+  titleLine2 = "EV Charger at Home",
+  ctaPrimaryLabel = "Get My Home Charger",
+  ctaPrimaryHref = "/ev-charging-station-business#choose",
+  ctaSecondaryLabel = "View Installation Guide",
+  ctaSecondaryHref = "/ev-charging-station-business#choose",
+}: HomeSecondScrollProps) {
   return (
     <section className="home-second-v2" id="ev-home-charging">
       <div aria-hidden="true" className="home-second-v2__line" />
@@ -12,23 +30,23 @@ export function HomeSecondScroll() {
             <div className="home-second-v2__left">
               <p className="home-second-v2__eyebrow">
                 <img alt="" aria-hidden="true" className="home-second-v2__bolt" src="/bolt.png" />
-                <span>One App, Every Network</span>
+                <span>{eyebrow}</span>
               </p>
 
               <h2 className="home-second-v2__title">
-                <span className="home-second-v2__title-line">Install Your Personal</span>
-                <span className="home-second-v2__title-line">EV Charger at Home</span>
+                <span className="home-second-v2__title-line">{titleLine1}</span>
+                <span className="home-second-v2__title-line">{titleLine2}</span>
               </h2>
 
               <div className="home-second-v2__spacer">
                 <img alt="" aria-hidden="true" className="home-second-v2__arrow" src="/arrow_insert.svg" />
 
                 <div className="home-second-v2__actions">
-                  <Link className="home-second-v2__button home-second-v2__button--primary" href="/ev-charging-station-business#choose">
-                    Get My Home Charger
+                  <Link className="home-second-v2__button home-second-v2__button--primary" href={ctaPrimaryHref as `/${string}`}>
+                    {ctaPrimaryLabel}
                   </Link>
-                  <Link className="home-second-v2__button home-second-v2__button--secondary" href="/ev-charging-station-business#choose">
-                    View Installation Guide
+                  <Link className="home-second-v2__button home-second-v2__button--secondary" href={ctaSecondaryHref as `/${string}`}>
+                    {ctaSecondaryLabel}
                   </Link>
                 </div>
               </div>
