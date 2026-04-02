@@ -556,6 +556,144 @@ export const marketingPageContent: Record<string, MarketingContent> = {
     ],
     note: "Earning potential depends on location quality, utilization, tariff, and uptime discipline."
   },
+  "/manufacturing": {
+    badge: "EV Charger Manufacturing",
+    title: "EV Chargers Manufactured for Indian Conditions",
+    description:
+      "Massive manufactures AC, Type-6/7, and DC EV chargers from 3 kW to 240 kW — designed for residential, workplace, commercial, and public charging deployments across 2W, 3W, and 4W segments.",
+    primaryCta: {
+      href: "/get-chargers",
+      label: "Get a Hardware Quote"
+    },
+    secondaryCta: {
+      href: "/chargers/ac",
+      label: "Browse AC Chargers"
+    },
+    cardTitle: "Three charger categories",
+    cards: [
+      {
+        title: "AC chargers — 3.3 kW to 22 kW",
+        description:
+          "Designed for residential, workplace, and commercial environments. Type-2 and domestic socket connectors. OCPP 1.6J / OCPP 2.0.1. Natural air cooling. Wall and pedestal mounting options."
+      },
+      {
+        title: "Type-6/7 chargers — 3 kW and 12 kW",
+        description:
+          "Built for new-generation 2W and 3W EVs. Type-6 connector (IEC 62196-2-6 / IS 17017-2-6). Significantly reduces charge times for two-wheeler and three-wheeler fleets."
+      },
+      {
+        title: "DC fast chargers — 30 kW to 240 kW",
+        description:
+          "Engineered for public stations, commercial operators, highway corridors, and fleet depots. CCS-2 connectors, forced air cooling, dual-gun configurations, OCPP 1.6J / OCPP 2.0.1."
+      },
+      {
+        title: "Third-party hardware also supported",
+        description:
+          "Massive quality-checks and deploys third-party charger hardware in addition to its own manufactured range. OCPP-compatible hardware from other manufacturers can be integrated into the CMS."
+      },
+      {
+        title: "CMS integration on all models",
+        description:
+          "Every manufactured charger connects to Massive's operator CMS via OCPP for real-time session management, tariff control, UPI payments, and Gridwatch audit visibility."
+      },
+      {
+        title: "IS 17017 compliance",
+        description:
+          "Manufactured chargers reference IS 17017 standards for safety, metering, and connector compliance — covering relevant BIS requirements for the Indian market."
+      }
+    ],
+    stepsTitle: "From hardware to running station",
+    steps: [
+      {
+        title: "1. Select category and power level",
+        description:
+          "Choose based on vehicle segment (2W, 3W, or 4W), charging scenario (home, depot, public), and available electrical infrastructure."
+      },
+      {
+        title: "2. Site assessment and specification",
+        description:
+          "Massive coordinates load assessment, connector selection, and mounting requirements before hardware supply and installation."
+      },
+      {
+        title: "3. Deploy with CMS and payments active",
+        description:
+          "Hardware goes live connected to the operator CMS with UPI, OCPI roaming, and Gridwatch audit configured from day one."
+      }
+    ],
+    faqTitle: "Manufacturing FAQ",
+    faqs: [
+      {
+        question: "Does Massive manufacture all its own chargers?",
+        answer:
+          "Massive manufactures its own AC, Type-6/7, and DC charger range. It also quality-checks and deploys compatible third-party hardware where required."
+      },
+      {
+        question: "Which standards do the chargers comply with?",
+        answer:
+          "Manufactured chargers reference IS 17017 series standards. Type-6 connectors conform to IEC 62196-2-6 and IS 17017-2-6. DC chargers support DIN SPEC 70121 and ISO 15118 for high-level communication."
+      },
+      {
+        question: "Can chargers be supplied without CMS integration?",
+        answer:
+          "Hardware can be supplied standalone, but all manufactured models are designed to connect to an OCPP-compatible CMS. Integration with Massive's platform or a third-party CMS is supported."
+      }
+    ]
+  },
+  "/marketplace": {
+    badge: "EV Chargers Marketplace",
+    title: "Source EV Chargers for Any Deployment Scenario",
+    description:
+      "Browse Massive's AC, Type-6/7, and DC charger range — from 3.3 kW home chargers to 240 kW public fast chargers. All models connect to the Massive CMS with OCPP and support UPI payments.",
+    primaryCta: {
+      href: "/get-chargers",
+      label: "Request a Charger Quote"
+    },
+    secondaryCta: {
+      href: "/chargers/dc",
+      label: "DC Fast Chargers"
+    },
+    cardTitle: "Browse by category",
+    cards: [
+      {
+        title: "AC chargers",
+        description:
+          "3.3 kW to 22 kW for residential, workplace, and commercial charging. Type-2 connectors, natural air cooling, wall or pedestal mounting, OCPP 1.6J / 2.0.1."
+      },
+      {
+        title: "Type-6/7 chargers",
+        description:
+          "3 kW and 12 kW for 2W and 3W EVs. Type-6 connector (IEC 62196-2-6), forced air cooling, wall mount and stand options, OCPP 1.6J."
+      },
+      {
+        title: "DC fast chargers",
+        description:
+          "30 kW to 240 kW for public corridors, commercial stations, and fleet depots. CCS-2, dual-gun configurations, forced air cooling, OCPP 1.6J / 2.0.1."
+      },
+      {
+        title: "CMS and payments on every charger",
+        description:
+          "All models connect to Massive's operator platform via OCPP. UPI Direct Charging and RFID authentication are supported across the range."
+      }
+    ],
+    stepsTitle: "How to source chargers",
+    steps: [
+      {
+        title: "1. Identify your scenario",
+        description:
+          "Home, residential society, commercial site, fleet depot, or public corridor — each scenario has a recommended charger category and power range."
+      },
+      {
+        title: "2. Submit a requirement",
+        description:
+          "Share site details, vehicle types, and power availability. Massive recommends the right model, connector, and configuration."
+      },
+      {
+        title: "3. Receive with installation",
+        description:
+          "Hardware is supplied with site assessment, installation, CMS configuration, and commissioning — not as a standalone box."
+      }
+    ]
+  },
   "/franchise": {
     badge: "EV Charging Franchise",
     title: "Start Your EV Charging Station with Massive",
