@@ -556,6 +556,177 @@ export const marketingPageContent: Record<string, MarketingContent> = {
     ],
     note: "Earning potential depends on location quality, utilization, tariff, and uptime discipline."
   },
+  "/chargers/ac": {
+    badge: "AC Chargers",
+    title: "AC EV Chargers — 3.3 kW to 22 kW",
+    description:
+      "Massive's AC charger range covers residential, workplace, and commercial charging from 3.3 kW to 22 kW. All models use Type-2 connectors, natural air cooling, and OCPP 1.6J / OCPP 2.0.1 for CMS integration.",
+    primaryCta: {
+      href: "/get-chargers",
+      label: "Get an AC Charger Assessment"
+    },
+    secondaryCta: {
+      href: "/chargers/dc",
+      label: "DC Fast Chargers"
+    },
+    cardTitle: "AC charger range",
+    cards: [
+      {
+        title: "3.3 kW — home and light commercial",
+        description:
+          "Single-phase 230V, 16A. IEC 60309 industrial socket and 3-pin domestic socket. OCPP 1.6J, app authentication, remote on/off, UPI payment. Natural air cooling, wall mounting, ABS enclosure."
+      },
+      {
+        title: "7.4 kW — residential and workplace",
+        description:
+          "Single-phase 180–275V, 32A. Type-2 connector. IP65, IK10. OCPP 1.6J / OCPP 2.0.1. App, QR code, and RFID authentication. Natural air cooling. 280×235×100mm, 5.5kg. Wall / pedestal mounted."
+      },
+      {
+        title: "7.4 kW dual gun — shared workplace charging",
+        description:
+          "Three-phase 415V, 32A. Two Type-2 connectors. 15 kW total rated output. OCPP 1.6J, app and UPI authentication. Natural air cooling. Wall mounting."
+      },
+      {
+        title: "22 kW — commercial and fleet",
+        description:
+          "Three-phase 350–460V, 32A per phase. Type-2 connector, Mode 3. IP65, IK10. OCPP 1.6J / OCPP 2.0.1. App, QR code, and RFID authentication. Natural air cooling. 280×235×100mm, 5.5kg."
+      },
+      {
+        title: "OCPP 1.6J and OCPP 2.0.1 on all models",
+        description:
+          "All AC chargers connect to Massive's operator CMS via OCPP for real-time session management, tariff control, remote start/stop, and UPI payment activation."
+      },
+      {
+        title: "Site assessment before installation",
+        description:
+          "AC charger selection depends on single vs three-phase supply, load availability, and parking layout. Massive assesses site readiness before specifying and installing hardware."
+      }
+    ],
+    stepsTitle: "How AC charger deployments work",
+    steps: [
+      {
+        title: "1. Assess site power and layout",
+        description:
+          "Single-phase sites suit 3.3–7.4 kW models. Three-phase supply enables 22 kW and dual-gun configurations. Load capacity and wiring condition are assessed first."
+      },
+      {
+        title: "2. Select model and connector",
+        description:
+          "Model is selected based on vehicle type, dwell time, and required throughput. All 4W EVs use Type-2 connectors. Domestic socket models suit home and light commercial."
+      },
+      {
+        title: "3. Deploy with CMS and UPI active",
+        description:
+          "Charger goes live connected to the operator platform. Sessions, tariff, remote control, and UPI payments are active from commissioning."
+      }
+    ],
+    faqTitle: "AC charger FAQ",
+    faqs: [
+      {
+        question: "What connector do AC chargers use?",
+        answer:
+          "4W models use Type-2 (IEC 62196-2). The 3.3 kW LEVAC model also includes an IEC 60309 industrial socket and a 3-pin domestic socket for broader compatibility."
+      },
+      {
+        question: "Do AC chargers support UPI payments?",
+        answer:
+          "Yes. All models with app connectivity support UPI payment. No hardware changes are required to enable UPI on existing AC chargers connected to the Massive CMS."
+      },
+      {
+        question: "What is the difference between 7.4 kW single and dual gun?",
+        answer:
+          "The single-gun model is single-phase and charges one vehicle at 7.4 kW. The dual-gun model is three-phase with a 15 kW total output shared across two simultaneous sessions."
+      },
+      {
+        question: "Are Type-6/7 chargers for 2W/3W in this range?",
+        answer:
+          "No. Type-6 and Type-7 chargers for 2W and 3W EVs are a separate category. See the Type-6/7 charger range for those models."
+      }
+    ]
+  },
+  "/chargers/type-6-7": {
+    badge: "Type-6/7 Chargers",
+    title: "Type-6 and Type-7 Chargers for 2W and 3W EVs",
+    description:
+      "Massive's Type-6/7 charger range is built for new-generation electric two-wheelers and three-wheelers. Type-6 connectors (IEC 62196-2-6 / IS 17017-2-6) at 3 kW and 12 kW — significantly reducing charge times for 2W and 3W fleets.",
+    primaryCta: {
+      href: "/get-chargers",
+      label: "Get a Type-6/7 Assessment"
+    },
+    secondaryCta: {
+      href: "/chargers/ac",
+      label: "AC Chargers for 4W"
+    },
+    cardTitle: "Type-6/7 range",
+    cards: [
+      {
+        title: "3 kW Type-6 — single gun",
+        description:
+          "Single-phase 230V input (165–264V range). Output: 40–58V DC, 0–50A. CC-CV charging profile. Power factor >0.99 (APFC). Efficiency >92% (peak >96%). IP54, forced air cooling. OCPP 1.6J. App, QR code, RFID authentication. Wall mount and stand. IS-17017-25 compliant."
+      },
+      {
+        title: "12 kW Type-6/7",
+        description:
+          "Higher-output model for faster 2W and 3W charging. Contact us for full technical specifications and deployment guidance."
+      },
+      {
+        title: "Type-6 connector standard",
+        description:
+          "Type-6 connector conforms to IEC 62196-2-6 and IS 17017-2-6. Regulatory compliance per IS-17017-25. Designed specifically for Indian 2W and 3W EV connector standards."
+      },
+      {
+        title: "LFP battery chemistry compatible",
+        description:
+          "The 3 kW Type-6 model is designed for LFP cell chemistry with passive cell balancing — aligned with the battery types common in current Indian 2W and 3W EVs."
+      },
+      {
+        title: "ESD and surge protection",
+        description:
+          "15 kV air discharge and 8 kV contact discharge ESD immunity. 1 kV surge protection for common and differential mode. Residual current protection: 6 mA DC, 30 mA AC."
+      },
+      {
+        title: "CMS and payment integration",
+        description:
+          "OCPP 1.6J for CMS connectivity. GSM, WiFi, and Ethernet communication options. App, QR code, and RFID authentication supported. OTA updates enabled."
+      }
+    ],
+    stepsTitle: "Deploying Type-6/7 chargers",
+    steps: [
+      {
+        title: "1. Identify your vehicle fleet",
+        description:
+          "Confirm the 2W or 3W vehicle types and battery chemistry at your site. Most current Indian 2W EVs use LFP batteries compatible with the Type-6 specification."
+      },
+      {
+        title: "2. Select power level",
+        description:
+          "3 kW suits single-vehicle or overnight scenarios. 12 kW suits faster turnaround at commercial or fleet locations."
+      },
+      {
+        title: "3. Deploy with CMS integration",
+        description:
+          "Charger connects to the Massive CMS via OCPP. QR-based or app-based session start, UPI or RFID payment, and remote monitoring active from commissioning."
+      }
+    ],
+    faqTitle: "Type-6/7 FAQ",
+    faqs: [
+      {
+        question: "Which vehicles use Type-6/7 connectors?",
+        answer:
+          "Type-6 and Type-7 connectors are used by Indian electric two-wheelers and three-wheelers. They differ from the Type-2 connectors used by 4W EVs."
+      },
+      {
+        question: "What is the output voltage range of the 3 kW model?",
+        answer:
+          "The 3 kW Type-6 model outputs 40–58V DC at 0–50A, using a CC-CV charging profile. It accepts single-phase 230V input with a range of 165–264V."
+      },
+      {
+        question: "Is the Type-6 connector IS 17017 compliant?",
+        answer:
+          "Yes. The Type-6 connector conforms to IEC 62196-2-6 and IS 17017-2-6. The charger meets IS-17017-25 regulatory requirements."
+      }
+    ]
+  },
   "/manufacturing": {
     badge: "EV Charger Manufacturing",
     title: "EV Chargers Manufactured for Indian Conditions",
