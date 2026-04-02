@@ -555,6 +555,99 @@ export const marketingPageContent: Record<string, MarketingContent> = {
       { title: "3. Go live with monitoring", description: "Track sessions, payouts, and station reliability." }
     ],
     note: "Earning potential depends on location quality, utilization, tariff, and uptime discipline."
+  },
+  "/for/fleet-operators": {
+    badge: "For Fleet Operators",
+    title: "Captive EV Charging Infrastructure for Commercial Fleets",
+    description:
+      "Massive deploys and operates charging infrastructure for commercial fleets — covering site assessment, installation, CMS integration, payments, fleet controls, and ongoing maintenance under a single accountable partnership.",
+    primaryCta: {
+      href: "/get-chargers",
+      label: "Start a Fleet Conversation"
+    },
+    secondaryCta: {
+      href: "/platform",
+      label: "See the Platform"
+    },
+    stats: [
+      { label: "Network sessions", value: "3,20,000+", note: "completed on Massive's live network" },
+      { label: "Average uptime", value: "99.95%", note: "structured monitoring and maintenance" },
+      { label: "Deployment scale", value: "Pan-India", note: "urban, highway, and semi-urban markets" }
+    ],
+    cardTitle: "Four pillars of fleet charging support",
+    cards: [
+      {
+        title: "Captive charging infrastructure",
+        description:
+          "End-to-end site assessment, installation, and maintenance under one accountable partner — eliminating multi-vendor fragmentation. We don't just deploy chargers; we protect your fleet operations."
+      },
+      {
+        title: "Multiple network access from day one",
+        description:
+          "Immediate connectivity to Massive's live operational network plus roaming access to partner networks — your drivers gain meaningful charging coverage without waiting for new infrastructure rollout."
+      },
+      {
+        title: "UPI Direct and WhatsApp charging",
+        description:
+          "QR-based or deep-link UPI charging eliminates mandatory app downloads. WhatsApp session initiation reduces the learning curve and increases the likelihood of a successful first charging experience."
+      },
+      {
+        title: "Centralized fleet dashboard",
+        description:
+          "Monitor vehicle-wise charging activity, energy consumption, and cost allocation across all locations from a unified interface."
+      },
+      {
+        title: "Vehicle and driver-level controls",
+        description:
+          "Tag-based access control enabling session authorization by vehicle ID, RFID card, or registered driver credentials."
+      },
+      {
+        title: "Corporate wallets and GST invoicing",
+        description:
+          "Dedicated enterprise wallets with configurable spending limits and automated billing cycles. GST-compliant invoicing with session-level breakdown for accounting, reimbursement, and audit purposes."
+      }
+    ],
+    stepsTitle: "How fleet deployments work",
+    steps: [
+      {
+        title: "1. Site assessment and planning",
+        description:
+          "Comprehensive assessment of depot or parking locations — identifying optimal charger placement, load capacity, and grid integration requirements."
+      },
+      {
+        title: "2. Deploy hardware and software together",
+        description:
+          "AC or DC chargers installed with full CMS integration, payment activation, and fleet controls configured. Single accountable partner for commissioning and go-live."
+      },
+      {
+        title: "3. Operate with full visibility",
+        description:
+          "Track sessions by vehicle and driver, manage corporate wallets, review GST invoices, and monitor utilisation patterns through the fleet dashboard."
+      }
+    ],
+    faqTitle: "Fleet charging FAQ",
+    faqs: [
+      {
+        question: "Can access be restricted to authorised vehicles and drivers only?",
+        answer:
+          "Yes. Tag-based access control supports session authorization by vehicle ID, RFID card, or registered driver credentials."
+      },
+      {
+        question: "Is GST-compliant invoicing available?",
+        answer:
+          "Yes. Consolidated GST-compliant invoices with session-level breakdown are available for accounting, reimbursement, and audit purposes."
+      },
+      {
+        question: "Can fleet drivers charge on networks outside the depot?",
+        answer:
+          "Yes. Roaming access to partner networks is available from day one through Massive's OCPI integration — no separate infrastructure deployment required."
+      },
+      {
+        question: "What charger types are available for fleet depots?",
+        answer:
+          "Both AC (3.3–22 kW) and DC (30–240 kW) chargers are deployed based on vehicle type, dwell time, and power availability at the site."
+      }
+    ]
   }
 };
 

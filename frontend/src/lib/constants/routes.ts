@@ -312,6 +312,87 @@ export const routeRegistry = {
     path: "/chargers/dc",
     rendering: "SSG",
     title: "DC Chargers"
+  },
+  chargersAc: {
+    description: "AC charger category page covering residential and commercial charging.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/chargers/ac",
+    rendering: "SSG",
+    title: "AC Chargers"
+  },
+  chargersType67: {
+    description: "Type-6/7 charger category page for 2W and 3W EV segments.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/chargers/type-6-7",
+    rendering: "SSG",
+    title: "Type-6/7 Chargers"
+  },
+  gridwatch: {
+    description: "Gridwatch product page — third-party audit software for EV charging networks.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/gridwatch",
+    rendering: "SSG",
+    title: "Gridwatch"
+  },
+  franchise: {
+    description: "EV charging franchise page with investment models and economics.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/franchise",
+    rendering: "SSG",
+    title: "Franchise"
+  },
+  manufacturing: {
+    description: "EV charger manufacturing page covering AC, Type-6/7, and DC product range.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/manufacturing",
+    rendering: "SSG",
+    title: "Manufacturing"
+  },
+  marketplace: {
+    description: "EV chargers marketplace for sourcing AC and DC charging hardware.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/marketplace",
+    rendering: "SSG",
+    title: "Marketplace"
+  },
+  forFleetOperators: {
+    description: "Fleet operator segment page covering captive charging and fleet management.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/for/fleet-operators",
+    rendering: "SSG",
+    title: "For Fleet Operators"
+  },
+  forOems: {
+    description: "Vehicle OEM segment page covering the four-layer charging ecosystem.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/for/oems",
+    rendering: "SSG",
+    title: "For Vehicle OEMs"
+  },
+  forEvseManufacturers: {
+    description: "EVSE manufacturer and installer segment page for charger OEM partnerships.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/for/evse-manufacturers-installers",
+    rendering: "SSG",
+    title: "For EVSE Manufacturers & Installers"
   }
 } as const satisfies RouteRegistry;
 
