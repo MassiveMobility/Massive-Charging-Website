@@ -6,17 +6,20 @@ const routePath = "/for/cpos" as const;
 const pageContent = getMarketingPageContent(routePath);
 
 export const metadata = buildPageMetadata({
-  title: "For Charging Point Operators",
+  title: "EV Charging Management System for CPOs | Charge Point Operator Platform",
   description: pageContent.description,
   path: routePath,
   keywords: [
-    "CPO",
-    "charging point operator",
-    "EV charging network",
-    "OCPI",
-    "charging CMS",
-    "UPI charging",
-    "Gridwatch"
+    "CPO platform",
+    "charge point operator software",
+    "EV charging management system",
+    "OCPP charging platform",
+    "charge point operator",
+    "EV charging CMS",
+    "OCPI integration",
+    "tariff management",
+    "CPO network management",
+    "charger monitoring"
   ]
 });
 
