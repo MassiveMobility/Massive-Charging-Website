@@ -1,9 +1,6 @@
-import {
-  getLegacyCategoryArticles,
-  legacyFourWheelVehicles
-} from "@/data/articles";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { fetchEvCarsFromWp } from "@/lib/api/wp-adapters";
+import { getLegacyCategoryArticles } from "@/data/articles";
 import { LegacyGuideHomePage } from "@/features/marketing/components/legacy-guide-home-page";
 
 const routePath = "/charging-guide" as const;
@@ -32,9 +29,9 @@ export default async function ChargingGuideRoutePage() {
     }))
   };
 
-  // Vehicle search: prefer WordPress (live-editable), fall back to static JSON
+  // Vehicle search: WordPress only (no static fallback)
   const wpCars = await fetchEvCarsFromWp();
-  const vehicleSource = wpCars ?? legacyFourWheelVehicles;
+  const vehicleSource = wpCars ?? [];
 
   return (
     <LegacyGuideHomePage

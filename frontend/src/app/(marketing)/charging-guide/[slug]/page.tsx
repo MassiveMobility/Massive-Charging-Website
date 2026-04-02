@@ -1,11 +1,11 @@
+import { fetchWpPostBySlug, fetchWpPosts } from "@/lib/api/wordpress";
 import {
   getLegacyGuideArticleBySlug,
-  getLegacyGuideBlocksByMessageId,
-  legacyGuideArticles
+  getLegacyGuideBlocksByMessageId
 } from "@/data/articles";
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { fetchWpPostBySlug } from "@/lib/api/wordpress";
 import { GuideArticlePage } from "@/features/marketing/components/guide-article-page";
+import { notFound } from "next/navigation";
 
 type ChargingGuideSlugPageProps = {
   params: {
@@ -13,8 +13,9 @@ type ChargingGuideSlugPageProps = {
   };
 };
 
-export function generateStaticParams() {
-  return legacyGuideArticles.map((article) => ({ slug: article.slug }));
+export async function generateStaticParams() {
+  const wpPosts = await fetchWpPosts({ perPage: 200, revalidate: 300 }).catch(() => []);
+  return wpPosts.map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }: ChargingGuideSlugPageProps) {
@@ -70,22 +71,17 @@ export default async function ChargingGuideSlugPage({ params }: ChargingGuideSlu
     );
   }
 
-  // ── 2. Fall back to static legacy data ────────────────────────────────────────
+  // ── 2. Fallback policy ────────────────────────────────────────────────────────
+  // Vehicle charging guides must be served from WordPress only.
+  // Non-vehicle legacy guides can still render from static JSON for now.
   const article = getLegacyGuideArticleBySlug(params.slug);
 
   if (!article) {
-    return (
-      <section className="legacy-guide-article__main">
-        <div className="legacy-guide-article__container">
-          <article className="legacy-guide-article__content">
-            <h1 className="legacy-guide-article__title">Guide not found</h1>
-            <p className="legacy-guide-article__meta">
-              This slug does not exist in the legacy guide dataset.
-            </p>
-          </article>
-        </div>
-      </section>
-    );
+    notFound();
+  }
+
+  if (article.guideType === "vehicle_guide") {
+    notFound();
   }
 
   return (
