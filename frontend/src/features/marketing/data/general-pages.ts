@@ -556,6 +556,99 @@ export const marketingPageContent: Record<string, MarketingContent> = {
     ],
     note: "Earning potential depends on location quality, utilization, tariff, and uptime discipline."
   },
+  "/franchise": {
+    badge: "EV Charging Franchise",
+    title: "Start Your EV Charging Station with Massive",
+    description:
+      "Three franchise models for operating an EV charging station under the Massive Charging brand — from a complete turnkey station with infrastructure development to a charger-supply-only arrangement.",
+    primaryCta: {
+      href: "/get-chargers",
+      label: "Enquire About a Franchise"
+    },
+    secondaryCta: {
+      href: "/ev-charging-station-business",
+      label: "Charging Station Business"
+    },
+    stats: [
+      { label: "Total investment", value: "₹6.5 Lakhs", note: "Model 1 — complete bundle with infra" },
+      { label: "Monthly profit", value: "₹30K–40K", note: "after power and admin costs" },
+      { label: "Breakeven", value: "20–24 months", note: "based on franchise economics model" }
+    ],
+    cardTitle: "Three franchise models",
+    cards: [
+      {
+        title: "Model 1 — Complete bundle (₹6 lakhs)",
+        description:
+          "25 AC 3.3 kW chargers (SIM/WiFi) + electricity connection liaisoning + infrastructure development. Includes franchisee fee, marketing material, training, 45-day operations handholding, and fleet partnerships. Total: ₹6,50,000."
+      },
+      {
+        title: "Model 2 — Chargers only (10+ units)",
+        description:
+          "Franchisee fee ₹35,000. Charger pricing negotiated by dealer. Includes marketing kit, brand kit, full training, and 30-day operations handholding."
+      },
+      {
+        title: "Model 3 — Chargers only (fewer than 10)",
+        description:
+          "No franchisee fee. Charger pricing negotiated by dealer. Includes marketing kit, brand kit, and full training on how to run the station."
+      },
+      {
+        title: "What every model includes",
+        description:
+          "Marketing material (illuminated board, flex, posters, brochures, flyers, stickers, social media promotion), brand kit, and complete training on station operations."
+      },
+      {
+        title: "Remote charger management",
+        description:
+          "Start and stop charging remotely via the 1C app. UPI payment enabled on all chargers. Auto-price calculator based on energy consumed. 4G LTE / WiFi connectivity."
+      },
+      {
+        title: "Fleet partnerships included",
+        description:
+          "Fleet partnerships are provided complimentary with Model 1 — giving your station access to demand from fleet operators from day one."
+      }
+    ],
+    stepsTitle: "How to get started",
+    steps: [
+      {
+        title: "1. Choose your model",
+        description:
+          "Select the complete bundle (Model 1) for a turnkey station including infrastructure, or the charger-only models if you already have a site and electrical setup."
+      },
+      {
+        title: "2. Complete setup with Massive's support",
+        description:
+          "Massive coordinates electrical liaisoning, infrastructure development, charger installation, and CMS configuration. Marketing material and brand kit are provided."
+      },
+      {
+        title: "3. Go live and earn",
+        description:
+          "Accept UPI payments, manage your station remotely via app, and receive payouts. Operations executive on-site support provided for the first 30–45 days."
+      }
+    ],
+    faqTitle: "Franchise FAQ",
+    faqs: [
+      {
+        question: "What are the monthly running costs?",
+        answer:
+          "Based on the Model 1 economics: monthly power costs ₹80,000–₹90,000 and monthly admin costs ₹30,000, against average monthly revenue of ₹1,50,000."
+      },
+      {
+        question: "Is electrical infrastructure included in Model 1?",
+        answer:
+          "Yes. Model 1 includes electricity connection liaisoning and infrastructure development at ₹2,50,000 as part of the total ₹6,50,000 investment."
+      },
+      {
+        question: "What charger type does the franchise model use?",
+        answer:
+          "The franchise model is built on AC 3.3 kW chargers with SIM or WiFi connectivity, UPI payment, remote start/stop, and 1C app integration."
+      },
+      {
+        question: "Is training provided?",
+        answer:
+          "Yes. Complete training on how to run the station is included in all three models. Model 1 and Model 2 also include an operations executive for on-site handholding."
+      }
+    ]
+  },
   "/gridwatch": {
     badge: "Gridwatch",
     title: "Independent Audit Software for EV Charging Networks",
