@@ -12,9 +12,19 @@ export const metadata = buildPageMetadata({
 });
 
 export default async function ChargingGuideEvCarsPage() {
-  // WordPress only (no static fallback)
-  const wpCars = await fetchEvCarsFromWp();
-  const cars = wpCars ?? [];
+  // Try WordPress first; fall back to static legacy JSON if WP is unavailable
+  let cars = legacyFourWheelVehicles;
+
+  try {
+    const wpCars = await fetchEvCarsFromWp();
+    // Only use WordPress data if it has items
+    if (wpCars && wpCars.length > 0) {
+      cars = wpCars;
+    }
+  } catch {
+    // Fall back to legacy data on any error
+    cars = legacyFourWheelVehicles;
+  }
 
   return <EvCarsCataloguePage cars={cars} />;
 }
