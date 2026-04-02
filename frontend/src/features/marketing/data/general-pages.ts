@@ -556,6 +556,99 @@ export const marketingPageContent: Record<string, MarketingContent> = {
     ],
     note: "Earning potential depends on location quality, utilization, tariff, and uptime discipline."
   },
+  "/for/oems": {
+    badge: "For Vehicle OEMs",
+    title: "Four-Layer Charging Ecosystem for EV OEMs",
+    description:
+      "Massive gives vehicle OEMs a structured charging partner across four layers — national infrastructure execution, OEM app integration, multi-CPO roaming access, and independent SLA monitoring through Gridwatch.",
+    primaryCta: {
+      href: "/get-chargers",
+      label: "Start an OEM Conversation"
+    },
+    secondaryCta: {
+      href: "/gridwatch",
+      label: "About Gridwatch"
+    },
+    stats: [
+      { label: "Network sessions", value: "3,20,000+", note: "completed on Massive's live network" },
+      { label: "SLA-driven uptime", value: "99.95%", note: "structured monitoring and maintenance" },
+      { label: "Network growth", value: "20% M-o-M", note: "month-on-month session volume growth" }
+    ],
+    cardTitle: "The four-layer OEM framework",
+    cards: [
+      {
+        title: "Layer 1 — National infrastructure execution",
+        description:
+          "Pan-India AC and DC deployment across urban, highway, and semi-urban markets. Covers dealer and service bay setup, home charger pre-delivery installation, fleet depot electrification, and structured AMC with performance tracking. Single accountable partner for deployment, monitoring, and ongoing operations."
+      },
+      {
+        title: "Layer 2 — OEM app and digital enablement",
+        description:
+          "Direct API integration to embed charging capabilities into your existing mobile app. Real-time availability sync, in-app UPI payment processing without external redirection, and a fully white-labelled charging experience aligned to your brand."
+      },
+      {
+        title: "Layer 3 — Multi-CPO integration layer",
+        description:
+          "Expand charging footprint through one structured OCPI integration — not multiple parallel builds. Access chargers across different operators through a unified backend. No CMS replacement required. Single roaming interface for cross-network access, authentication, and session visibility."
+      },
+      {
+        title: "Layer 4 — Gridwatch independent SLA monitoring",
+        description:
+          "Gridwatch is third-party audit software for EV charging networks. It validates CPO uptime claims, detects downtime patterns, benchmarks actual performance against SLA commitments, and generates corridor-level reliability reports — protecting your brand from unreliable third-party network claims."
+      },
+      {
+        title: "Home and dealer charging enablement",
+        description:
+          "Coordination of site inspection, electrical readiness, and charger installation before vehicle handover. Installation of charging points at dealerships, workshops, and service bays for display vehicles and service operations."
+      },
+      {
+        title: "Charging analytics for product planning",
+        description:
+          "AC vs DC usage trends, public vs home charging split, charging heatmaps, and model-wise behaviour analysis — data to shape product planning, infrastructure strategy, and battery or range decisions."
+      }
+    ],
+    stepsTitle: "How OEM partnerships work",
+    steps: [
+      {
+        title: "1. Scope infrastructure and app needs",
+        description:
+          "Define the geographic rollout plan, vehicle segments, and which layers — infrastructure, app integration, roaming, or Gridwatch — are relevant to your OEM programme."
+      },
+      {
+        title: "2. Deploy infrastructure and integrate apps",
+        description:
+          "Charging infrastructure is deployed in parallel with API integration into the OEM app. Home charger installation, dealer setup, and roaming access go live together."
+      },
+      {
+        title: "3. Monitor SLA with Gridwatch",
+        description:
+          "Gridwatch provides independent visibility into network uptime and utilisation across all CPOs in your ecosystem — without relying on operator-reported data."
+      }
+    ],
+    faqTitle: "OEM partnership FAQ",
+    faqs: [
+      {
+        question: "Does app integration require replacing the existing OEM app?",
+        answer:
+          "No. Charging is embedded into your existing mobile application via direct API integration. The charging experience is white-labelled under your brand."
+      },
+      {
+        question: "How does multi-CPO roaming work?",
+        answer:
+          "One OCPI integration connects your app to multiple CPO networks. Drivers see live availability and charge on any connected network — managed through a single roaming interface."
+      },
+      {
+        question: "What is Gridwatch used for in an OEM context?",
+        answer:
+          "Gridwatch independently validates the uptime and reliability of CPOs in your charging ecosystem — protecting your brand from claims that rely solely on operator-reported data."
+      },
+      {
+        question: "Can Massive handle dealer network charging rollout?",
+        answer:
+          "Yes. Dealer and service bay charging setup, home charger pre-delivery installation, and fleet depot electrification are all covered under the national infrastructure layer."
+      }
+    ]
+  },
   "/for/fleet-operators": {
     badge: "For Fleet Operators",
     title: "Captive EV Charging Infrastructure for Commercial Fleets",
