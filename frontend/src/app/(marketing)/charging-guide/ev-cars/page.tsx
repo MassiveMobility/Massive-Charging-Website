@@ -19,6 +19,19 @@ export const metadata = buildPageMetadata({
 export default async function ChargingGuideEvCarsPage() {
   // Use legacy data as primary source - it's reliable and complete
   // WordPress integration can be added later when RSC serialization is resolved
+
+  // Debug: Log what we're actually getting
+  const vehicleCount = Array.isArray(legacyFourWheelVehicles)
+    ? legacyFourWheelVehicles.length
+    : (legacyFourWheelVehicles ? 'exists but not array' : 'undefined/null');
+
+  console.log('EV Cars Page Debug:', {
+    vehicleCount,
+    type: typeof legacyFourWheelVehicles,
+    isArray: Array.isArray(legacyFourWheelVehicles),
+    firstItem: Array.isArray(legacyFourWheelVehicles) ? legacyFourWheelVehicles[0]?.Manufacturer : 'N/A'
+  });
+
   const cars = legacyFourWheelVehicles;
 
   return <EvCarsCataloguePage cars={cars} />;

@@ -1,5 +1,29 @@
-import coreMessageBlockRaw from "@/data/articles/legacy/core_message_block.json";
-import vehicleGuideRaw from "@/data/articles/legacy/vehicle_guide.json";
+/* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-require-imports */
+import { join } from "path";
+import { readFileSync } from "fs";
+
+// Load JSON data at module initialization time
+let coreMessageBlockRaw: Record<string, unknown>;
+let vehicleGuideRaw: Record<string, unknown>;
+
+try {
+  const basePath = join(process.cwd(), "src/data/articles/legacy");
+  vehicleGuideRaw = JSON.parse(readFileSync(join(basePath, "vehicle_guide.json"), "utf-8"));
+  coreMessageBlockRaw = JSON.parse(readFileSync(join(basePath, "core_message_block.json"), "utf-8"));
+} catch (error) {
+  // Fallback: try importing as module (for bundled environments)
+  try {
+    // eslint-disable-next-line import/no-dynamic-require, global-require
+    vehicleGuideRaw = require("@/data/articles/legacy/vehicle_guide.json");
+    // eslint-disable-next-line import/no-dynamic-require, global-require
+    coreMessageBlockRaw = require("@/data/articles/legacy/core_message_block.json");
+  } catch {
+    console.error("Failed to load legacy guide data", error);
+    vehicleGuideRaw = { Vehicle_master: [], "4w_vehicle_details": [], Guide_article: [], Core_message: [], Category_Guide_Map: [] };
+    coreMessageBlockRaw = { Core_message_blocks: [] };
+  }
+}
+/* eslint-enable @typescript-eslint/no-explicit-any, @typescript-eslint/no-require-imports */
 
 export type LegacyVehicleMaster = {
   Vehicle_ID: string;
