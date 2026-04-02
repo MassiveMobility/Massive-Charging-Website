@@ -42,43 +42,45 @@ function mc_register_marketing_page_cpt() {
 //    The REST callback assembles them into arrays.
 // ---------------------------------------------------------------------------
 
+// ---------------------------------------------------------------------------
+// Helper: build numbered flat fields (top-level to avoid redeclaration fatal)
+// e.g. mc_numbered_fields('stat', ['label'=>'Stat Label','value'=>'Stat Value'], 4)
+// ---------------------------------------------------------------------------
+
+function mc_numbered_fields( $prefix, $keys, $max, $tab_label = '' ) {
+	$fields = [];
+
+	if ( $tab_label ) {
+		$fields[] = [
+			'key'   => "field_tab_{$prefix}",
+			'label' => $tab_label,
+			'name'  => '',
+			'type'  => 'tab',
+		];
+	}
+
+	for ( $i = 1; $i <= $max; $i++ ) {
+		foreach ( $keys as $key => $label ) {
+			$is_long = in_array( $key, [ 'description', 'answer', 'note' ], true );
+			$fields[] = [
+				'key'          => "field_{$prefix}_{$i}_{$key}",
+				'label'        => "{$label} {$i}",
+				'name'         => "{$prefix}_{$i}_{$key}",
+				'type'         => $is_long ? 'textarea' : 'text',
+				'rows'         => $is_long ? 3 : null,
+				'instructions' => "Leave blank to omit item {$i}.",
+			];
+		}
+	}
+
+	return $fields;
+}
+
 add_action( 'acf/init', 'mc_register_acf_fields' );
 
 function mc_register_acf_fields() {
 	if ( ! function_exists( 'acf_add_local_field_group' ) ) {
 		return;
-	}
-
-	// --- Helper: build numbered flat fields ---
-	// e.g. mc_numbered_fields('stat', ['label','value','note'], 4)
-	// produces stat_1_label, stat_1_value, stat_1_note … stat_4_*
-	function mc_numbered_fields( $prefix, $keys, $max, $tab_label = '' ) {
-		$fields = [];
-
-		if ( $tab_label ) {
-			$fields[] = [
-				'key'   => "field_tab_{$prefix}",
-				'label' => $tab_label,
-				'name'  => '',
-				'type'  => 'tab',
-			];
-		}
-
-		for ( $i = 1; $i <= $max; $i++ ) {
-			foreach ( $keys as $key => $label ) {
-				$is_long = in_array( $key, [ 'description', 'answer', 'note' ], true );
-				$fields[] = [
-					'key'   => "field_{$prefix}_{$i}_{$key}",
-					'label' => "{$label} {$i}",
-					'name'  => "{$prefix}_{$i}_{$key}",
-					'type'  => $is_long ? 'textarea' : 'text',
-					'rows'  => $is_long ? 3 : null,
-					'instructions' => "Leave blank to omit item {$i}.",
-				];
-			}
-		}
-
-		return $fields;
 	}
 
 	// -----------------------------------------------------------------------
