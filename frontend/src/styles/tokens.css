@@ -112,4 +112,11 @@
   --raw-layout-narrow-max: 52rem;
   --raw-layout-content-max: 72rem;
   --raw-layout-wide-max: 88rem;
+
+  /* Font families (system fonts as fallbacks for Google Fonts) */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-display: "Georgia", serif;
+  --font-public-sans: "Public Sans", "Segoe UI", sans-serif;
+  --font-urbanist: "Urbanist", "Segoe UI", sans-serif;
+  --font-sora: "Sora", "Segoe UI", sans-serif;
 }

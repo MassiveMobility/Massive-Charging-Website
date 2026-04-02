@@ -1,8 +1,9 @@
 import { notFound } from "next/navigation";
 
-import { buildPageMetadata } from "@/lib/seo/metadata";
 import { fetchAllMarketingPages, fetchMarketingPageByRoute } from "@/lib/api/wordpress";
+
 import { adaptWpMarketingPage } from "@/lib/api/wp-adapters";
+import { buildPageMetadata } from "@/lib/seo/metadata";
 import { MarketingContentPage } from "@/features/marketing/components/marketing-content-page";
 
 export const revalidate = 60;

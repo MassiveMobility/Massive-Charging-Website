@@ -1,10 +1,11 @@
 import "server-only";
 
-import type { LegacyVehicleCatalogueItem } from "@/data/articles/legacy-guide-data";
 import type { WpEvCar, WpMarketingPage } from "@/types/wordpress";
+
+import type { LegacyVehicleCatalogueItem } from "@/data/articles/legacy-guide-data";
 import type { MarketingContent } from "@/features/marketing/data/general-pages";
 
-import { fetchWpEvCars, fetchMarketingPageByRoute } from "@/lib/api/wordpress";
+import { fetchMarketingPageByRoute, fetchWpEvCars } from "@/lib/api/wordpress";
 
 // ── EV Car adapter ────────────────────────────────────────────────────────────
 
