@@ -212,13 +212,13 @@ export const marketingPageContent: Record<string, MarketingContent> = {
     ]
   },
   "/platform": {
-    badge: "EV CMS & Apps",
-    title: "White-Label EV Charging Platform Built for Real Operations",
+    badge: "EV Charging Management Platform",
+    title: "Manage Your Entire EV Charging Network from One Platform",
     description:
-      "Massive's operator CMS is a live, commercially deployed software stack — managing sessions, payments, uptime, and tariffs across 50+ stations with 99.95% average uptime and 3,20,000+ completed sessions.",
+      "Operator CMS managing 3.2M+ sessions across 50+ stations. Real-time monitoring, UPI payments, OCPI roaming, tariff control. 99.95% uptime, live deployment across India.",
     primaryCta: {
       href: "/get-chargers",
-      label: "Talk to the Platform Team"
+      label: "Schedule a Platform Demo"
     },
     secondaryCta: {
       href: "/for/cpos",
@@ -229,65 +229,65 @@ export const marketingPageContent: Record<string, MarketingContent> = {
       { label: "Average uptime", value: "99.95%", note: "structured monitoring and maintenance" },
       { label: "Monthly energy", value: "150+ MWh", note: "growing 20% month-on-month" }
     ],
-    cardTitle: "What the platform covers",
+    cardTitle: "Core platform features",
     cards: [
       {
         title: "Real-time monitoring and control",
         description:
-          "Session status, station health, and fault alerts across your full network — visible from a single operator dashboard."
+          "Live session status, charger health, fault alerts across your full network — visible from a single operator dashboard. Remote stop/start and tariff changes without field visits."
       },
       {
-        title: "Tariff management",
+        title: "Tariff and pricing management",
         description:
-          "Configure pricing per station, set time-of-day rates, and manage revenue with full tariff control in the CMS."
+          "Set pricing per station, configure time-of-day rates, location-based tariffs, and vehicle-segment pricing. Dynamic tariff control with automatic application at session start."
       },
       {
         title: "UPI Direct Charging",
         description:
-          "Enables app-free, instant digital transactions. No wallet preload or registration steps required for basic charging access — no hardware changes, firmware upgrades, or CMS migration needed."
+          "App-free, instant digital transactions via UPI QR codes. No hardware changes, firmware upgrades, or CMS migration needed on existing chargers. Integration with Paytm EV Charging (30cr+ users)."
       },
       {
-        title: "WhatsApp Bot Integration",
+        title: "Payment gateway integration",
         description:
-          "Streamlines charger discovery and session initiation through WhatsApp. Lower entry barriers increase the likelihood of successful first charging experience."
+          "UPI, card payments, digital wallets, and subscription models. Automatic settlement and reconciliation. PCI-compliant payment processing with transparent reporting."
       },
       {
         title: "White-label companion apps",
         description:
-          "Dedicated apps for EV users, station operators, and network owners under your brand — managing sessions, monitoring performance, and controlling operations."
+          "iOS/Android apps for drivers, operators, and network managers — all under your brand. Driver app for charger discovery and payments; operator app for monitoring and maintenance."
       },
       {
         title: "OCPI 2.2.1 roaming",
         description:
-          "Standards-based roaming integration to connect with external CPOs, aggregators, and fleet platforms without CMS replacement."
+          "Standards-based network roaming with partner CPOs, aggregators, and fleet platforms. Real-time authentication and tariff application. No CMS replacement required."
       },
       {
-        title: "Load balancing",
+        title: "Load balancing and smart distribution",
         description:
-          "Scalable architecture prevents electrical overload, improves energy optimisation, and protects uptime at multi-charger sites."
+          "Scalable architecture prevents electrical overload at multi-charger sites. Dynamic power allocation protects uptime and improves energy optimization."
       },
       {
         title: "Gridwatch — independent network audit",
         description:
-          "Third-party audit software providing independent visibility into utilisation, uptime, and downtime. Validates SLA claims without relying solely on operator-reported data."
+          "Third-party audit software validating utilization, uptime, and downtime. Transparent SLA validation and corridor-level reliability reports for investor confidence."
       }
     ],
-    stepsTitle: "How operators go live",
+    stepsTitle: "Launch the platform in 3 steps",
     steps: [
       {
         title: "1. Connect your hardware",
         description:
-          "Integrate chargers via OCPP 1.6J or OCPP 2.1. Register stations, map locations, and configure tariffs in the CMS."
+          "Integrate chargers via OCPP 1.6J or OCPP 2.0.1 (compatible with 90%+ of commercial chargers). Register stations, map locations, configure tariffs. Connect via WiFi, GSM, or Ethernet."
       },
       {
         title: "2. Enable payments and apps",
         description:
-          "Activate UPI Direct and branded app flows for drivers. Install QR codes and configure payment settlement cycles."
+          "Activate UPI Direct, branded app flows, and payment settlement. Install QR codes, configure reconciliation cycles, test end-to-end flows before production launch."
       },
       {
-        title: "3. Monitor and manage",
+        title: "3. Monitor and scale",
         description:
-          "Track live sessions, adjust tariffs, receive fault alerts, and use Gridwatch audit data to validate uptime against SLA commitments."
+          "Track live sessions, adjust tariffs in real-time, receive charger alerts. Use Gridwatch audit data to validate uptime against SLA commitments. Scale to additional locations with standardized process."
       }
     ],
     faqTitle: "Platform FAQ",
@@ -295,42 +295,57 @@ export const marketingPageContent: Record<string, MarketingContent> = {
       {
         question: "Is the CMS white-label?",
         answer:
-          "Yes. Driver and operator apps are deployed under your brand. The underlying infrastructure is Massive's platform."
+          "Yes. Driver and operator apps deploy under your brand with your logo, colors, and messaging. The underlying infrastructure is Massive's enterprise platform, providing reliability without infrastructure complexity."
       },
       {
         question: "Which OCPP versions are supported?",
         answer:
-          "The CMS supports OCPP 1.6J and OCPP 2.1, enabling integration with a wide range of AC and DC charger hardware."
-      },
-      {
-        question: "What is Gridwatch?",
-        answer:
-          "Gridwatch is third-party audit software for EV charging networks. It provides independent visibility into utilisation, uptime, and downtime — enabling transparent SLA validation without relying solely on operator-reported data."
+          "OCPP 1.6J and OCPP 2.0.1. This covers 90%+ of commercially deployed AC and DC chargers in India, from legacy installations to new OEM deployments."
       },
       {
         question: "Does the platform support OCPI roaming?",
         answer:
-          "Yes. The platform uses OCPI 2.2.1 for standards-based roaming integration with partner networks, aggregators, and fleet platforms."
+          "Yes. OCPI 2.2.1 enables standards-based roaming with partner networks, aggregators, and fleet platforms without CMS replacement."
+      },
+      {
+        question: "What is Gridwatch?",
+        answer:
+          "Third-party audit software providing independent visibility into utilization, uptime, and downtime across your network. Validates SLA claims and generates credible uptime reports for investor confidence."
       },
       {
         question: "Can UPI be enabled on existing hardware?",
         answer:
-          "Yes. UPI Direct Charging is enabled via OCPI integration. No hardware changes, firmware upgrades, or CMS migration are required on existing infrastructure."
+          "Yes. UPI Direct Charging is enabled via OCPI integration with no hardware changes, firmware upgrades, or CMS migration needed."
+      },
+      {
+        question: "What about mobile connectivity in remote areas?",
+        answer:
+          "The platform supports WiFi, GSM (2G/3G/4G), and Ethernet. Multi-connectivity failover ensures chargers stay connected even in remote areas with poor signal."
+      },
+      {
+        question: "How does payment settlement work?",
+        answer:
+          "Sessions generate revenue records in the CMS. Settlement reconciliation happens daily (or per your preferred cycle). Payouts go directly to your designated bank account with full audit trail in the dashboard."
+      },
+      {
+        question: "Can I customize the tariff structure?",
+        answer:
+          "Completely. Set per-station, per-charger, or network-wide tariffs. Support for time-of-day pricing, vehicle-segment pricing, promotional windows, and subscriber discounts."
       }
     ]
   },
   "/for/cpos": {
-    badge: "For Charging Point Operators",
-    title: "Improve Charger Economics Across Your CPO Network",
+    badge: "EV Charging Management System for CPOs",
+    title: "EV Charging Platform Designed for CPO Economics & Network Scale",
     description:
-      "Massive partners with CPOs to improve charger-level unit economics across revenue, capex efficiency, and uptime governance — through a five-layer operational framework already deployed across 50+ stations.",
+      "Five-layer operational framework for CPOs: software, hardware optimization, installation, maintenance, and independent audit. Manage charger economics and network scale across India.",
     primaryCta: {
       href: "/get-chargers",
-      label: "Start a CPO Conversation"
+      label: "Book a CPO Strategy Call"
     },
     secondaryCta: {
       href: "/platform",
-      label: "See the Platform"
+      label: "Explore Full Platform Capabilities"
     },
     stats: [
       { label: "Network sessions", value: "3,20,000+", note: "completed on Massive's live network" },
@@ -340,178 +355,243 @@ export const marketingPageContent: Record<string, MarketingContent> = {
     cardTitle: "Five layers of CPO support",
     cards: [
       {
-        title: "Layer 1 — Increase charger utilisation",
+        title: "Layer 1: Increase charger utilization",
         description:
-          "OCPI integration with Paytm EV Charging expands visibility across Paytm's 30cr user base. UPI Direct Charging enables app-free sessions — no hardware changes, firmware upgrades, or CMS migration required."
+          "OCPI integration with Paytm EV Charging (30cr+ users) expands visibility and user reach. UPI Direct Charging enables app-free sessions with no hardware changes, firmware upgrades, or CMS migration. Access partner networks and aggregators via standards-based roaming."
       },
       {
-        title: "Layer 2 — CMS software control",
+        title: "Layer 2: CMS software control",
         description:
-          "White-label EV CMS supporting OCPP 1.6J and OCPP 2.1. Includes companion apps for users, operators, and network owners; integrated payment gateway (UPI, cards, wallets); load balancing; and OCPI 2.2.1 roaming for access to partner networks and aggregators."
+          "White-label EV CMS supporting OCPP 1.6J and OCPP 2.0.1. Companion apps for drivers, operators, and managers. Integrated payment gateway (UPI, cards, wallets). Load balancing. OCPI 2.2.1 roaming. Real-time session monitoring with remote charger control."
       },
       {
-        title: "Layer 3 — Hardware cost optimisation",
+        title: "Layer 3: Hardware cost optimization",
         description:
-          "Massive aggregates hardware demand across multiple CPO and OEM projects to negotiate better pricing, enforce stronger SLA terms, and benchmark real-world performance across charger brands."
+          "Aggregated procurement across multiple CPO projects negotiates better pricing and SLA terms with OEMs. Benchmarking real-world performance across charger brands. Volume-based negotiation with leading OEMs (Chargepoint, BP Pulse, Kempower, ABB, and regional suppliers)."
       },
       {
-        title: "Layer 4 — Installation and maintenance",
+        title: "Layer 4: Installation and maintenance",
         description:
-          "End-to-end site assessment, installation, and preventive and corrective maintenance programs. Single accountable partner covering commissioning, CMS integration, and ongoing support — eliminating multi-vendor fragmentation."
+          "End-to-end site assessment, installation, and preventive/corrective maintenance. Qualified teams across urban, highway, and semi-urban markets. 24/7 fault response and parts supply. Single accountable partner — eliminating multi-vendor coordination."
       },
       {
-        title: "Layer 5 — Gridwatch independent audit",
+        title: "Layer 5: Gridwatch independent audit",
         description:
-          "Gridwatch is third-party audit software for EV charging networks. It provides independent visibility into utilisation, uptime, and downtime — validating OEM uptime claims, detecting downtime patterns, benchmarking against SLA commitments, and generating corridor-level reliability reports."
+          "Third-party monitoring validating utilization, uptime, and downtime independently. Transparent SLA validation. Detects downtime patterns and benchmarks against vendor claims. Corridor-level reliability reports for investor confidence."
       },
       {
         title: "National-scale deployment capability",
         description:
-          "Pan-India execution covering urban, highway, and semi-urban markets with both AC and DC charger installations. Structured rollout processes ensure speed, standardisation, and quality control."
+          "Pan-India execution covering urban, highway, and semi-urban markets with AC and DC installations. Structured rollout processes ensure speed, standardization, and quality control from 5 to 500+ stations."
       }
     ],
-    stepsTitle: "How CPOs engage with Massive",
+    stepsTitle: "Engagement process",
     steps: [
       {
         title: "1. Share your network and scale plan",
         description:
-          "Tell us about your locations, vehicle segments, current hardware stack, and commercial model."
+          "Tell us: locations, vehicle segments, current hardware stack, commercial model, and growth timeline. We assess electrical feasibility, market demand, competitive landscape, and revenue potential."
       },
       {
         title: "2. Activate the layers that apply",
         description:
-          "UPI and OCPI can be enabled on existing infrastructure. CMS migration, hardware, and maintenance support are available where needed."
+          "Existing network? Start with Layer 2 (CMS) + Layer 3 (hardware optimization) + Layer 5 (Gridwatch). New deployment? Integrate all five layers. Scale incrementally — UPI and OCPI enable on existing chargers without hardware changes."
       },
       {
         title: "3. Operate with full visibility",
         description:
-          "Track sessions, manage tariffs, receive payouts, and use Gridwatch audit data to validate uptime against SLA commitments."
+          "Track sessions in real-time, manage tariffs, receive payouts automatically. Monitor charger health and respond to faults proactively. Use Gridwatch audit data to validate uptime and inform expansion decisions."
       }
     ],
-    faqTitle: "CPO FAQ",
+    faqTitle: "CPO Platform FAQ",
     faqs: [
       {
         question: "Can UPI be enabled on existing chargers without hardware changes?",
         answer:
-          "Yes. UPI Direct Charging is enabled via OCPI integration. No hardware changes, firmware upgrades, or CMS migration are required."
+          "Yes. UPI Direct Charging is enabled via OCPI integration. No hardware changes, firmware upgrades, or CMS migration required. Sessions can start accepting UPI within days of activation."
       },
       {
         question: "Which OCPP versions does the CMS support?",
         answer:
-          "The white-label EV CMS supports OCPP 1.6J and OCPP 2.1, covering the majority of commercially deployed AC and DC charger hardware."
+          "OCPP 1.6J and OCPP 2.0.1. This covers the vast majority of commercially deployed AC and DC chargers in India — from older installations to new OEM deployments."
       },
       {
-        question: "How does OCPI roaming work for CPOs?",
+        question: "How does OCPI roaming work for my network?",
         answer:
-          "The platform uses OCPI 2.2.1 for session-level interoperability — enabling real-time authentication, tariff application, and settlement with partner networks, aggregators, and fleet platforms without replacing your CMS."
+          "OCPI 2.2.1 enables real-time authentication and tariff application with partner networks, aggregators, and fleet platforms. A driver from a partner network's app can authenticate and charge at your station — you keep revenue control and settlement happens automatically."
       },
       {
-        question: "What is Gridwatch?",
+        question: "What is Gridwatch and why do I need it?",
         answer:
-          "Gridwatch is third-party audit software for EV charging networks. It provides independent visibility into utilisation, uptime, and downtime — enabling transparent SLA validation without relying solely on operator-reported data."
+          "Gridwatch is third-party audit software providing independent uptime visibility. Rather than relying on your own reports, Gridwatch validates claims transparently. This builds investor confidence and helps identify which chargers/sites need attention."
+      },
+      {
+        question: "What if I already have a CMS from another vendor?",
+        answer:
+          "You can still use Massive's hardware optimization, installation, maintenance, and Gridwatch audit layers. CMS migration is available but optional if you want to transition later."
+      },
+      {
+        question: "How long does it take to go live?",
+        answer:
+          "Existing networks: CMS activation in 2–4 weeks. New deployments: 3–6 months for site assessment, permitting, installation, and commissioning (varies by location and infrastructure readiness)."
+      },
+      {
+        question: "What's included in preventive maintenance?",
+        answer:
+          "Routine inspections (monthly), firmware updates, connector maintenance, cooling system checks, and component replacement per OEM schedules. This reduces unexpected downtime and extends charger life."
+      },
+      {
+        question: "Can I customize pricing and tariffs per location?",
+        answer:
+          "Completely. Set tariffs per station, per charger, or network-wide. Support for time-of-day pricing, location-based pricing, vehicle-segment pricing, promotional windows, and subscriber discounts. Changes take effect in real-time."
       }
     ]
   },
   "/chargers/dc": {
     badge: "DC Fast Chargers",
-    title: "DC Fast Chargers — 30 kW to 240 kW for Commercial Deployments",
+    title: "Deploy Fast-Charging Infrastructure with Hardware + Software Integration",
     description:
-      "Massive deploys DC fast chargers from 30 kW to 240 kW for public stations, commercial operators, highway corridors, and fleet depots. All models use CCS-2 connectors, forced air cooling, and OCPP 1.6J / OCPP 2.0.1 for CMS integration.",
+      "30–240 kW DC fast chargers for highways, commercial stations, and fleets. CCS-2, OCPP 1.6J/2.0.1, UPI support. Full deployment and integration support included.",
     primaryCta: {
       href: "/get-chargers",
-      label: "Get a DC Charger Assessment"
+      label: "Request Deployment Consultation"
     },
     secondaryCta: {
-      href: "/ev-charging-station-business",
-      label: "Charging Station Business"
+      href: "/platform",
+      label: "Explore Operator Platform"
     },
-    cardTitle: "DC charger range — at a glance",
+    stats: [
+      { label: "Output range", value: "30–240 kW", note: "scalable across network" },
+      { label: "Connector", value: "CCS-2", note: "universal standard for India" },
+      { label: "Integration", value: "OCPP 1.6J/2.0.1", note: "operator CMS control" }
+    ],
+    cardTitle: "DC charger portfolio",
     cards: [
       {
-        title: "30 kW — single and dual gun",
+        title: "30 kW — Entry-level commercial",
         description:
-          "Entry-level DC fast charging for commercial stations with moderate traffic. Dual-gun models serve two vehicles simultaneously from a shared power module."
+          "Output: 30 kW (single gun) or dual gun. CCS-2 connector. Input: single or three-phase (location dependent). Use case: commercial stations with moderate traffic, small fleet depots, emerging corridors. Lower hardware cost, easier site integration. Can serve 4–6 vehicles/day. 99%+ uptime."
       },
       {
-        title: "60 kW dual gun",
+        title: "60 kW — Dual gun, multi-vehicle",
         description:
-          "Three-phase 415V input, dual CCS-2 guns, 100–1000Vdc output, max 200A per gun. IP55 enclosure, forced air cooling, operating range -25°C to 75°C (de-rated above 55°C). Dynamic power sharing between guns."
+          "Output: 60 kW total (split across 2 CCS-2 guns). Input: three-phase 415V. Current: 200A max per gun. Voltage: 100–1000Vdc. Enclosure: IP55. Cooling: forced air, -25°C to 75°C (de-rated above 55°C). Power sharing: dynamic between guns. Session time: 20–40 min per 40 kWh battery. Use case: public stations, retail locations, workplace."
       },
       {
-        title: "120 kW dual gun",
+        title: "120 kW — Medium-high power",
         description:
-          "Three-phase 350–460V input, dual CCS-2 guns, 100–1000Vdc output, max 250A. IP54 enclosure, forced air cooling, operating range -25°C to 55°C. Dimensions: 1725×500×700mm, weight under 350 kg."
+          "Output: 120 kW total (split across 2 CCS-2 guns). Input: three-phase 350–460V. Current: 250A max per gun. Voltage: 100–1000Vdc. Enclosure: IP54. Cooling: forced air, -25°C to 55°C. Dimensions: 1725×500×700mm, <350kg. Display: 10-inch TFT screen. Session time: 15–25 min per 40 kWh. Use case: highway corridors, tier-1 commercial, high-traffic fleets."
       },
       {
-        title: "180 kW and 240 kW dual gun",
+        title: "180 kW — High-power",
         description:
-          "High-power configurations on a shared platform. Three-phase 350–460V input, dual CCS-2 guns, 100–1000Vdc output, max 150A per gun. IP54 enclosure, forced air cooling. Dimensions: 1850×1064×790mm, weight under 350 kg."
+          "Output: 180 kW total (split across 2 CCS-2 guns). Input: three-phase 350–460V. Current: 150A max per gun. Voltage: 100–1000Vdc. Enclosure: IP54. Cooling: forced air. Dimensions: 1850×1064×790mm, <350kg. Display: 10-inch TFT. Session time: 10–15 min per 40 kWh. Use case: premium highway locations, high-volume fleets, express corridors."
+      },
+      {
+        title: "240 kW — Ultra-high power",
+        description:
+          "Output: 240 kW total (120 kW per gun). Input: three-phase 350–460V. Current: 150A max per gun. Voltage: 100–1000Vdc. Enclosure: IP54. Cooling: forced air. Dimensions: 1850×1064×790mm, <350kg. Display: 10-inch TFT. Session time: 8–12 min per 40 kWh. Use case: national expressways, premium fleets, express hubs."
       },
       {
         title: "CMS integration via OCPP 1.6J / OCPP 2.0.1",
         description:
-          "All DC chargers connect to the Massive operator platform via OCPP 1.6J or OCPP 2.0.1 — enabling real-time session management, tariff control, reporting, and Gridwatch audit visibility."
+          "All models connect to Massive operator CMS for real-time session management, tariff control, reporting, and Gridwatch audit visibility. Communication: WiFi, GSM (2G/3G/4G), or Ethernet. Power rating: variable voltage output (100–1000Vdc) for different EV battery architectures."
       },
       {
-        title: "Authentication and payment options",
+        title: "Safety & environmental standards",
         description:
-          "Session start via mobile app, UPI QR code, RFID card, or password login. DC stations on the Massive platform support UPI Direct Charging with no hardware modifications required."
+          "Emergency stop on all models (100ms cut). Protection: IP54/IP55 suited for Indian weather extremes. Thermal management: forced air with intelligent de-rating above 55°C. Grounding & surge protection: multi-stage against grid surges and vehicle faults."
       },
       {
-        title: "Display and interface",
+        title: "Site assessment and deployment support",
         description:
-          "Models from 60 kW and above include a 10-inch TFT touch screen with session status, state-of-charge indicator, and error display. Emergency stop push button on all models."
-      },
-      {
-        title: "Site assessment before specification",
-        description:
-          "DC deployments require three-phase power infrastructure, load calculations, and civil preparation. Massive coordinates site readiness, electrical assessment, and commissioning as part of deployment."
+          "DC deployments require site assessment, electrical feasibility analysis, civil preparation, and commissioning. Massive coordinates full readiness — electrical infrastructure, load calculations, transformer capacity, and grid stability validation."
       }
     ],
-    stepsTitle: "How DC charger deployments work",
+    stepsTitle: "Deployment workflow",
     steps: [
       {
         title: "1. Site and power assessment",
         description:
-          "Share your location, electrical supply (three-phase availability), and expected vehicle volume. Load feasibility and transformer capacity are assessed first."
+          "Share location, electrical supply (three-phase availability), and expected vehicle volume. We assess: transformer capacity, infrastructure, civil prep needs. Load feasibility calculated; upgrade recommendations if needed. Timeline: 1–2 weeks."
       },
       {
-        title: "2. Model selection based on requirements",
+        title: "2. Model selection and specification",
         description:
-          "Power output (30–240 kW), number of guns, and enclosure rating are selected based on your vehicle mix, site constraints, and traffic profile."
+          "Based on site assessment, recommend charger power (30/60/120/180/240 kW) and number of guns. Selection based on vehicle volume, space constraints, traffic profile. Equipment quote, delivery timeline, and installation schedule. Timeline: 2–3 weeks (manufacturing + QC)."
       },
       {
-        title: "3. Deploy with full network integration",
+        title: "3. Installation and commissioning",
         description:
-          "Hardware goes live connected to the operator platform via OCPP. Sessions, UPI payments, uptime monitoring, and Gridwatch audit run from day one."
+          "Installation teams handle electrical work, civil prep, and charger deployment. OCPP integration with CMS configured. WiFi/GSM connectivity established. UPI payments activated. Operator dashboard access provided with staff training. Timeline: 2–4 weeks (varies by location)."
+      },
+      {
+        title: "4. Go live and ongoing support",
+        description:
+          "Charger goes live; sessions flow through CMS and Gridwatch monitoring. Preventive maintenance activates (monthly inspections, firmware updates). Corrective maintenance 24/7. Quarterly optimization reviews (utilization, tariff adjustments, expansion planning)."
       }
     ],
-    faqTitle: "DC charger FAQ",
+    faqTitle: "DC Charger FAQ",
     faqs: [
       {
         question: "What connector type do Massive DC chargers use?",
         answer:
-          "All Massive DC chargers in the 60–240 kW range use CCS-2 (Combined Charging System Type 2) connectors, compatible with current-generation 4W EVs in India."
+          "CCS-2 (Combined Charging System Type 2) on all models. Standard connector across current-generation 4-wheeler EVs in India and compatible with international EVs."
       },
       {
         question: "What are the infrastructure requirements for DC charging?",
         answer:
-          "DC chargers require three-phase electrical supply (typically 350–460V), dedicated load capacity, and civil preparation. A site assessment is conducted before hardware specification."
+          "Three-phase electrical supply (350–460V), dedicated load capacity matched to charger power, and site-specific civil preparation. We conduct a site assessment before hardware specification to ensure feasibility."
       },
       {
         question: "Which OCPP versions are supported?",
         answer:
-          "DC chargers on the Massive platform support OCPP 1.6J and OCPP 2.0.1, with communication via WiFi, GSM (2G/3G/4G), or Ethernet."
+          "OCPP 1.6J and OCPP 2.0.1. Communication via WiFi, GSM (2G/3G/4G), or Ethernet — flexible for remote and urban sites."
       },
       {
-        question: "Can DC stations accept UPI payments?",
+        question: "Can DC chargers accept UPI payments?",
         answer:
-          "Yes. DC stations on the Massive platform support UPI Direct Charging via QR code — no hardware changes required on existing infrastructure."
+          "Yes. All Massive DC chargers integrate with the operator CMS and support UPI Direct Charging via QR codes — no hardware modifications required."
+      },
+      {
+        question: "How long does a DC fast charging session typically take?",
+        answer:
+          "For a standard 40 kWh battery: 8–15 min at 240 kW, 12–20 min at 120 kW, 15–25 min at 60 kW. Actual time depends on EV model, battery state-of-charge, and thermal conditions."
+      },
+      {
+        question: "What's the operational difference between single and dual-gun chargers?",
+        answer:
+          "Dual-gun chargers (60/120/180/240 kW) serve two vehicles simultaneously, doubling utilization per charger. Single-gun (30 kW) models cost less and suit lower-traffic sites."
+      },
+      {
+        question: "How is uptime guaranteed and monitored?",
+        answer:
+          "Gridwatch third-party audit software monitors each charger independently. Uptime calculated transparently from session logs vs. outage events. Scheduled maintenance excluded; unplanned downtime counted against SLA."
+      },
+      {
+        question: "What's included in preventive maintenance?",
+        answer:
+          "Monthly inspections, firmware updates, connector maintenance, cooling system checks, thermal validation, and component replacements per OEM schedules. Reduces mean-time-to-repair and extends charger life."
+      },
+      {
+        question: "Can I monitor multiple DC chargers across locations in one dashboard?",
+        answer:
+          "Yes. The Massive operator CMS provides network-wide visibility across all AC and DC chargers with drill-down to individual charger status, session history, and fault logs."
+      },
+      {
+        question: "What if I don't have three-phase power at my site?",
+        answer:
+          "Three-phase is required for DC. We evaluate single-phase sites for AC charging alternatively or recommend electrical infrastructure upgrades. A preliminary site assessment determines feasibility."
       },
       {
         question: "Are AC chargers also available?",
         answer:
-          "Yes. Massive deploys AC chargers at 3.3, 7.4, 11, 15, and 22 kW for residential, workplace, and overnight commercial scenarios."
+          "Yes. Massive deploys AC chargers at 3.3, 7.4, 11, 15, and 22 kW for residential, workplace, and overnight commercial scenarios. Mix AC and DC based on your site and traffic profile."
+      },
+      {
+        question: "What's the typical ROI on a DC charger deployment?",
+        answer:
+          "Example: 120 kW DC charger at 60 kWh/day × ₹12/kWh = ₹720/day revenue. With dual guns serving 2 vehicles, monthly revenue potential ≈ ₹21,600. Monthly cost (CMS + maintenance): ₹3–4K. Gross monthly profit potential: ₹17.6–18.6K (varies by utilization and tariff)."
       }
     ]
   },

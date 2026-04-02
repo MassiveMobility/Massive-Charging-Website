@@ -6,16 +6,19 @@ const routePath = "/platform" as const;
 const pageContent = getMarketingPageContent(routePath);
 
 export const metadata = buildPageMetadata({
-  title: "Operator Platform",
+  title: "EV Charging Management Platform | OCPP CMS Software for Operators",
   description: pageContent.description,
   path: routePath,
   keywords: [
-    "EV charging platform",
-    "white-label charging CMS",
-    "charging station management",
+    "EV charging management platform",
+    "EV charging software",
+    "EV charging CMS",
+    "OCPP platform",
+    "OCPI roaming",
+    "charging station management system",
+    "white-label charging platform",
     "operator dashboard",
-    "OCPI",
-    "UPI charging"
+    "EV charging backend"
   ]
 });
 
