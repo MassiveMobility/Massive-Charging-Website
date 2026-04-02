@@ -1,9 +1,10 @@
 import "server-only";
 
 import type { LegacyVehicleCatalogueItem } from "@/data/articles/legacy-guide-data";
-import type { WpEvCar } from "@/types/wordpress";
+import type { WpEvCar, WpMarketingPage } from "@/types/wordpress";
+import type { MarketingContent } from "@/features/marketing/data/general-pages";
 
-import { fetchWpEvCars } from "@/lib/api/wordpress";
+import { fetchWpEvCars, fetchMarketingPageByRoute } from "@/lib/api/wordpress";
 
 // ── EV Car adapter ────────────────────────────────────────────────────────────
 
@@ -43,6 +44,51 @@ export async function fetchEvCarsFromWp(
   try {
     const cars = await fetchWpEvCars({ perPage: 200, revalidate: opts.revalidate ?? 300 });
     return cars.map(adaptWpEvCar);
+  } catch {
+    return null;
+  }
+}
+
+// ── Marketing Page adapter ────────────────────────────────────────────────────
+
+/**
+ * Maps a WpMarketingPage REST response to the MarketingContent shape
+ * expected by MarketingContentPage. Empty strings become undefined so
+ * optional sections are omitted correctly.
+ */
+export function adaptWpMarketingPage(page: WpMarketingPage): MarketingContent {
+  const str = (v: string) => v || undefined;
+
+  return {
+    badge: page.badge,
+    title: page.title,
+    description: page.description,
+    ...(page.primary_cta   && { primaryCta:   page.primary_cta }),
+    ...(page.secondary_cta && { secondaryCta: page.secondary_cta }),
+    ...(page.stats.length  && { stats: page.stats }),
+    ...(str(page.card_title) && { cardTitle: page.card_title }),
+    ...(page.cards.length  && { cards: page.cards }),
+    ...(str(page.steps_title) && { stepsTitle: page.steps_title }),
+    ...(page.steps.length  && { steps: page.steps }),
+    ...(str(page.faq_title) && { faqTitle: page.faq_title }),
+    ...(page.faqs.length   && { faqs: page.faqs }),
+    ...(str(page.note)     && { note: page.note }),
+  };
+}
+
+/**
+ * Fetches a marketing page from WordPress and adapts it to MarketingContent.
+ * Returns null if the page doesn't exist in WP yet (allows fallback to
+ * general-pages.ts during migration).
+ */
+export async function fetchMarketingContentByRoute(
+  routePath: string,
+  opts: { revalidate?: number } = {}
+): Promise<MarketingContent | null> {
+  try {
+    const page = await fetchMarketingPageByRoute(routePath, { revalidate: opts.revalidate ?? 60 });
+    if (!page) return null;
+    return adaptWpMarketingPage(page);
   } catch {
     return null;
   }

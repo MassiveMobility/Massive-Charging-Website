@@ -1,3 +1,4 @@
+import React from "react";
 import Link from "next/link";
 
 const PLAYSTORE_URL = "https://play.google.com/store/apps/details?id=in.one.charging&hl=en_IN";
@@ -111,29 +112,43 @@ function ArrowRightIcon() {
   );
 }
 
-const FEATURES = [
-  { icon: <LocateIcon />, label: "Locate Chargers" },
-  { icon: <PayIcon />, label: "Pay for Charging" },
-  { icon: <BatteryIcon />, label: "Battery Health" },
-  { icon: <StartStopIcon />, label: "Start & Stop" },
-  { icon: <CommunityIcon />, label: "Join Community" }
-] as const;
+const FEATURE_ICONS: Array<() => React.JSX.Element> = [LocateIcon, PayIcon, BatteryIcon, StartStopIcon, CommunityIcon];
 
-export function HomeThirdScroll() {
+const DEFAULT_FEATURE_LABELS = [
+  "Locate Chargers",
+  "Pay for Charging",
+  "Battery Health",
+  "Start & Stop",
+  "Join Community",
+];
+
+export type HomeThirdScrollProps = {
+  headingLine1?: string | undefined;
+  headingLine2?: string | undefined;
+  subtitle?: string | undefined;
+  ctaLabel?: string | undefined;
+  featureLabels?: string[] | undefined;
+};
+
+export function HomeThirdScroll({
+  headingLine1 = "Get 1C Charging App",
+  headingLine2 = "One App For All Activities",
+  subtitle = "Control all charging activities from single app in your phone.",
+  ctaLabel = "Get EV Charging App",
+  featureLabels = DEFAULT_FEATURE_LABELS,
+}: HomeThirdScrollProps) {
   return (
     <section className="home-third-v2" id="ev-charging-app">
       <div className="home-third-v2__top">
         <div className="home-third-v2__left">
           <h2 className="home-third-v2__heading">
-            <span className="home-third-v2__heading-line">Get 1C Charging App</span>
+            <span className="home-third-v2__heading-line">{headingLine1}</span>
             <span className="home-third-v2__heading-line home-third-v2__heading-line--accent">
-              One App For All Activities
+              {headingLine2}
             </span>
           </h2>
 
-          <p className="home-third-v2__subtitle">
-            Control all charging activities from single app in your phone.
-          </p>
+          <p className="home-third-v2__subtitle">{subtitle}</p>
 
           <a
             className="home-third-v2__cta"
@@ -141,7 +156,7 @@ export function HomeThirdScroll() {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <span>Get EV Charging App</span>
+            <span>{ctaLabel}</span>
             <ArrowRightIcon />
           </a>
         </div>
@@ -154,12 +169,15 @@ export function HomeThirdScroll() {
       <hr className="home-third-v2__divider" />
 
       <div className="home-third-v2__features">
-        {FEATURES.map((feature) => (
-          <div className="home-third-v2__feature-card" key={feature.label}>
-            {feature.icon}
-            <span className="home-third-v2__feature-label">{feature.label}</span>
-          </div>
-        ))}
+        {featureLabels.map((label, i) => {
+          const Icon = FEATURE_ICONS[i % FEATURE_ICONS.length] ?? LocateIcon;
+          return (
+            <div className="home-third-v2__feature-card" key={label}>
+              <Icon />
+              <span className="home-third-v2__feature-label">{label}</span>
+            </div>
+          );
+        })}
       </div>
 
       <div className="home-third-v2__deep-link">
