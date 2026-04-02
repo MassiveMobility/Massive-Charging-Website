@@ -1,7 +1,6 @@
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { EvCarsCataloguePage } from "@/features/marketing/components/ev-cars-catalogue-page";
 import { fetchEvCarsFromWp } from "@/lib/api/wp-adapters";
-import { legacyFourWheelVehicles } from "@/data/articles";
 
 const routePath = "/charging-guide/ev-cars" as const;
 
@@ -13,9 +12,9 @@ export const metadata = buildPageMetadata({
 });
 
 export default async function ChargingGuideEvCarsPage() {
-  // Try WordPress first; fall back to static legacy JSON if WP is unavailable
+  // WordPress only (no static fallback)
   const wpCars = await fetchEvCarsFromWp();
-  const cars = wpCars ?? legacyFourWheelVehicles;
+  const cars = wpCars ?? [];
 
   return <EvCarsCataloguePage cars={cars} />;
 }

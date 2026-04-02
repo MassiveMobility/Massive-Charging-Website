@@ -3,6 +3,13 @@
   Components should consume these semantic tokens instead of raw palette values.
 */
 :root {
+  /* Font variable defaults (build-safe fallback when Google Fonts are blocked) */
+  --font-sans: "Inter", "Segoe UI", -apple-system, blinkmacsystemfont, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Montserrat", "Segoe UI", -apple-system, blinkmacsystemfont, "Helvetica Neue", Arial, sans-serif;
+  --font-public-sans: "Public Sans", "Segoe UI", -apple-system, blinkmacsystemfont, "Helvetica Neue", Arial, sans-serif;
+  --font-urbanist: "Urbanist", "Segoe UI", -apple-system, blinkmacsystemfont, "Helvetica Neue", Arial, sans-serif;
+  --font-sora: "Sora", "Segoe UI", -apple-system, blinkmacsystemfont, "Helvetica Neue", Arial, sans-serif;
+
   /* Semantic surfaces */
   --color-canvas: var(--raw-color-slate-50);
   --color-canvas-soft: var(--raw-color-slate-100);
