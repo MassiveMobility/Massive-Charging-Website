@@ -393,6 +393,69 @@ export const routeRegistry = {
     path: "/for/evse-manufacturers-installers",
     rendering: "SSG",
     title: "For EVSE Manufacturers & Installers"
+  },
+  chargersDc60kw: {
+    description: "60kW dual-gun DC fast charger — CCS-2, OCPP 2.0.1, 30-min battery backup.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/chargers/dc/60-dual-gun",
+    rendering: "SSG",
+    title: "60kW DC Fast Charger"
+  },
+  chargersDc120kw: {
+    description: "120kW dual-gun DC fast charger — CCS-2, OCPP 2.0.1, highway and fleet deployments.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/chargers/dc/120-dual-gun",
+    rendering: "SSG",
+    title: "120kW DC Fast Charger"
+  },
+  chargersDc180kw: {
+    description: "180kW dual-gun DC fast charger — CCS-2, OCPP 2.0.1, high-throughput charging.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/chargers/dc/180-dual-gun",
+    rendering: "SSG",
+    title: "180kW DC Fast Charger"
+  },
+  chargersDc240kw: {
+    description: "240kW dual-gun DC fast charger — CCS-2, OCPP 2.0.1, Plug & Charge ready.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/chargers/dc/240-dual-gun",
+    rendering: "SSG",
+    title: "240kW DC Fast Charger"
+  },
+  chargersAc74kw: {
+    description: "7.4kW single-phase AC charger — Type-2, OCPP 1.6J/2.0.1, residential and commercial.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/chargers/ac/7-4-kw",
+    rendering: "SSG",
+    title: "7.4kW AC Charger"
+  },
+  chargersAc22kw: {
+    description: "22kW three-phase AC charger — Type-2 Mode 3, OCPP 1.6J/2.0.1, commercial installations.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/chargers/ac/22-kw",
+    rendering: "SSG",
+    title: "22kW AC Charger"
+  },
+  chargersType67_3kw: {
+    description: "3kW Type-6 DC charger for 2-wheeler and 3-wheeler EVs — IEC 62196-2-6, OCPP 1.6J.",
+    group: "marketing",
+    migrationStatus: "active",
+    owner: "marketing-team",
+    path: "/chargers/type-6-7/3-kw",
+    rendering: "SSG",
+    title: "3kW Type-6 Charger"
   }
 } as const satisfies RouteRegistry;
 

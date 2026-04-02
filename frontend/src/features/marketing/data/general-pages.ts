@@ -1309,6 +1309,506 @@ export const marketingPageContent: Record<string, MarketingContent> = {
           "Both AC (3.3–22 kW) and DC (30–240 kW) chargers are deployed based on vehicle type, dwell time, and power availability at the site."
       }
     ]
+  },
+  "/chargers/dc/60-dual-gun": {
+    badge: "DC Fast Charger",
+    title: "60kW Dual-Gun DC Fast Charger",
+    description:
+      "A 60 kW dual-gun DC fast charger built for commercial stations, fleet depots, and highway corridors. CCS-2 connectors, 30-minute battery backup, and OCPP 2.0.1 — fully integrated with the Massive operator platform.",
+    primaryCta: {
+      href: "/get-chargers",
+      label: "Request a Quote"
+    },
+    secondaryCta: {
+      href: "/chargers/dc",
+      label: "All DC Chargers"
+    },
+    stats: [
+      { label: "Output power", value: "60 kW", note: "split across 2 CCS-2 guns" },
+      { label: "Protection rating", value: "IP55", note: "dust-tight, water-jet resistant" },
+      { label: "Battery backup", value: "30 minutes", note: "integrated UPS for session continuity" }
+    ],
+    cardTitle: "Key capabilities",
+    cards: [
+      {
+        title: "Dual CCS-2 guns",
+        description:
+          "Two simultaneous charging outputs. Each gun delivers up to 200A at 100–1000V DC, allowing two 4W EVs to charge concurrently."
+      },
+      {
+        title: "30-minute battery backup",
+        description:
+          "Integrated UPS keeps active sessions running through brief power interruptions — preserving revenue and user trust at critical charging points."
+      },
+      {
+        title: "Wide operating range",
+        description:
+          "Rated for -25°C to +75°C — broader than the standard DC range. Suited for outdoor deployments from hill stations to coastal sites."
+      },
+      {
+        title: "OCPP 1.6J & OCPP 2.0.1",
+        description:
+          "Connects to any OCPP-compatible CMS. ISO 15118 and DIN SPEC 70121 high-level communication enable Plug & Charge capability."
+      },
+      {
+        title: "UPI Direct Charging",
+        description:
+          "Supports QR-based UPI payment with no hardware changes or CMS migration required. RFID authentication also supported."
+      },
+      {
+        title: "Forced air cooling",
+        description:
+          "Active thermal management maintains continuous output across ambient temperatures. Sized for always-on commercial operation."
+      }
+    ],
+    faqTitle: "60kW Charger FAQ",
+    faqs: [
+      {
+        question: "What connector type does the 60kW model use?",
+        answer:
+          "The 60kW model uses CCS-2 (Combined Charging System, Type 2) connectors — the standard DC fast-charging connector for 4W EVs in India."
+      },
+      {
+        question: "What is the input power requirement?",
+        answer:
+          "The charger requires a 415V three-phase AC supply. Site electrical infrastructure must be assessed before installation."
+      },
+      {
+        question: "Does this charger support Plug & Charge?",
+        answer:
+          "Yes. The 60kW model supports ISO 15118 and DIN SPEC 70121 high-level communication, enabling Plug & Charge capability for compatible vehicles."
+      },
+      {
+        question: "What happens during a power cut?",
+        answer:
+          "The integrated 30-minute battery backup maintains active charging sessions through brief outages, avoiding mid-session disconnects."
+      }
+    ]
+  },
+  "/chargers/dc/120-dual-gun": {
+    badge: "DC Fast Charger",
+    title: "120kW Dual-Gun DC Fast Charger",
+    description:
+      "A 120 kW dual-gun DC fast charger for high-throughput public stations, fleet depots, and highway corridors. CCS-2 connectors, 250A per gun, and OCPP 2.0.1 — with Plug & Charge readiness via ISO 15118.",
+    primaryCta: {
+      href: "/get-chargers",
+      label: "Request a Quote"
+    },
+    secondaryCta: {
+      href: "/chargers/dc",
+      label: "All DC Chargers"
+    },
+    stats: [
+      { label: "Output power", value: "120 kW", note: "split across 2 CCS-2 guns" },
+      { label: "Max current", value: "250A per gun", note: "at 350–1000V DC output" },
+      { label: "Protection rating", value: "IP54", note: "dust and splash protected" }
+    ],
+    cardTitle: "Key capabilities",
+    cards: [
+      {
+        title: "Dual CCS-2 guns at 250A",
+        description:
+          "Two simultaneous outputs at up to 250A per gun across a 350–1000V DC range, supporting fast turnaround for high-traffic locations."
+      },
+      {
+        title: "ISO 15118 Plug & Charge ready",
+        description:
+          "High-level communication via ISO 15118 and DIN SPEC 70121 enables Plug & Charge for supported vehicles — no RFID or app required."
+      },
+      {
+        title: "OCPP 1.6J & OCPP 2.0.1",
+        description:
+          "Full CMS interoperability with any OCPP-compatible platform. Integrates with Massive's operator platform for remote management and revenue collection."
+      },
+      {
+        title: "UPI Direct Charging",
+        description:
+          "QR-based UPI payment and RFID authentication supported — no hardware modification required for UPI activation."
+      },
+      {
+        title: "Forced air cooling",
+        description:
+          "Active thermal management for continuous operation. Rated for -25°C to +55°C ambient range."
+      },
+      {
+        title: "Gridwatch audit visibility",
+        description:
+          "Sessions at this charger are independently audited by Gridwatch — uptime, utilisation, and downtime data visible to operators without relying on CMS-reported figures."
+      }
+    ],
+    faqTitle: "120kW Charger FAQ",
+    faqs: [
+      {
+        question: "What is the maximum current output per gun?",
+        answer:
+          "Each CCS-2 gun delivers up to 250A at 350–1000V DC output range."
+      },
+      {
+        question: "What input supply does this charger require?",
+        answer:
+          "The 120kW model requires a 350–460V three-phase AC supply. Site electrical assessment is recommended before installation."
+      },
+      {
+        question: "Does it support both RFID and UPI charging?",
+        answer:
+          "Yes. RFID authentication and QR-based UPI Direct Charging are both supported natively."
+      }
+    ]
+  },
+  "/chargers/dc/180-dual-gun": {
+    badge: "DC Fast Charger",
+    title: "180kW Dual-Gun DC Fast Charger",
+    description:
+      "A 180 kW dual-gun DC fast charger for high-throughput public corridors and large fleet operations. CCS-2 connectors, OCPP 2.0.1, ISO 15118 Plug & Charge ready — designed for operators who need serious throughput.",
+    primaryCta: {
+      href: "/get-chargers",
+      label: "Request a Quote"
+    },
+    secondaryCta: {
+      href: "/chargers/dc",
+      label: "All DC Chargers"
+    },
+    stats: [
+      { label: "Output power", value: "180 kW", note: "split across 2 CCS-2 guns" },
+      { label: "Max current", value: "150A per gun", note: "at 350–1000V DC output" },
+      { label: "Operating range", value: "-25°C to +55°C", note: "outdoor and indoor rated" }
+    ],
+    cardTitle: "Key capabilities",
+    cards: [
+      {
+        title: "180kW total output",
+        description:
+          "180 kW split across two CCS-2 guns at 150A per gun. Suited for operators where speed and throughput drive return on investment."
+      },
+      {
+        title: "ISO 15118 Plug & Charge ready",
+        description:
+          "ISO 15118 and DIN SPEC 70121 high-level communication enable Plug & Charge. Session starts automatically when a compatible vehicle connects."
+      },
+      {
+        title: "OCPP 1.6J & OCPP 2.0.1",
+        description:
+          "Connects to any OCPP-compatible CMS. Full integration with Massive's operator platform for real-time session data, tariff control, and OCPI roaming."
+      },
+      {
+        title: "UPI Direct Charging",
+        description:
+          "QR-based UPI payment supported at the charger. No hardware changes or CMS migration required to activate."
+      },
+      {
+        title: "IP54 enclosure",
+        description:
+          "Dust-tight and splash-protected enclosure. Suitable for covered outdoor installations and indoor fleet depots."
+      },
+      {
+        title: "Forced air cooling",
+        description:
+          "Active thermal management for continuous high-power output. Supports -25°C to +55°C ambient range."
+      }
+    ],
+    faqTitle: "180kW Charger FAQ",
+    faqs: [
+      {
+        question: "What is the difference between the 180kW and 240kW models?",
+        answer:
+          "Both models share the same enclosure dimensions (1850×1064×790mm), connector type (CCS-2), and current output (150A/gun). The 240kW model delivers higher total power for faster simultaneous charging."
+      },
+      {
+        question: "What input supply does the 180kW charger require?",
+        answer:
+          "350–460V three-phase AC supply. Site electrical infrastructure must be confirmed before installation."
+      },
+      {
+        question: "Does this charger support OCPI roaming?",
+        answer:
+          "Yes. When integrated with the Massive CMS, OCPI 2.2.1 roaming allows drivers from partner networks to authenticate and pay — without requiring a separate account."
+      }
+    ]
+  },
+  "/chargers/dc/240-dual-gun": {
+    badge: "DC Fast Charger",
+    title: "240kW Dual-Gun DC Fast Charger",
+    description:
+      "Massive's highest-power dual-gun DC fast charger. 240 kW total output with CCS-2 connectors, ISO 15118 Plug & Charge, OCPP 2.0.1, and OCPI 2.2.1 roaming — for operators building premium public charging destinations.",
+    primaryCta: {
+      href: "/get-chargers",
+      label: "Request a Quote"
+    },
+    secondaryCta: {
+      href: "/chargers/dc",
+      label: "All DC Chargers"
+    },
+    stats: [
+      { label: "Output power", value: "240 kW", note: "split across 2 CCS-2 guns" },
+      { label: "Max current", value: "150A per gun", note: "at 350–1000V DC output" },
+      { label: "Protocol", value: "OCPP 2.0.1", note: "with ISO 15118 Plug & Charge" }
+    ],
+    cardTitle: "Key capabilities",
+    cards: [
+      {
+        title: "240kW total output",
+        description:
+          "The highest-power model in the Massive DC range. 240 kW across two CCS-2 guns enables the shortest charge times for high-dwell-time commercial stations."
+      },
+      {
+        title: "ISO 15118 Plug & Charge ready",
+        description:
+          "ISO 15118 and DIN SPEC 70121 high-level communication. Compatible vehicles authenticate and start charging automatically — no interaction required."
+      },
+      {
+        title: "OCPI 2.2.1 roaming",
+        description:
+          "Integrated with Massive's OCPI 2.2.1 roaming layer. Drivers from partner networks can charge and pay without a separate account or app."
+      },
+      {
+        title: "OCPP 1.6J & OCPP 2.0.1",
+        description:
+          "Full interoperability with any OCPP-compatible CMS. Supports advanced features including smart charging profiles and remote diagnostics."
+      },
+      {
+        title: "UPI Direct Charging",
+        description:
+          "QR-based UPI payment at the charger face. No hardware changes required — works alongside RFID and app-based authentication."
+      },
+      {
+        title: "Gridwatch audit visibility",
+        description:
+          "Independent uptime and utilisation data from Gridwatch — not dependent on CMS-reported figures. Used for SLA validation and operator reporting."
+      }
+    ],
+    faqTitle: "240kW Charger FAQ",
+    faqs: [
+      {
+        question: "What is the per-gun current output on the 240kW model?",
+        answer:
+          "Each CCS-2 gun delivers up to 150A at 350–1000V DC output — the same as the 180kW model, with higher total power across both guns."
+      },
+      {
+        question: "Is this charger suitable for public highway corridors?",
+        answer:
+          "Yes. The 240kW model is designed for high-throughput public corridors and premium commercial stations where dwell time and session revenue per bay are critical."
+      },
+      {
+        question: "What size enclosure does the 240kW model use?",
+        answer:
+          "The enclosure measures 1850×1064×790mm and weighs under 350kg. The same form factor as the 180kW model."
+      }
+    ]
+  },
+  "/chargers/ac/7-4-kw": {
+    badge: "AC EV Charger",
+    title: "7.4kW Single-Phase AC Charger",
+    description:
+      "A 7.4 kW single-phase AC charger for home, residential society, and commercial installations. Type-2 connector, OCPP 1.6J / OCPP 2.0.1, IP65 rated — fully managed via the Massive operator platform.",
+    primaryCta: {
+      href: "/get-chargers",
+      label: "Request a Quote"
+    },
+    secondaryCta: {
+      href: "/chargers/ac",
+      label: "All AC Chargers"
+    },
+    stats: [
+      { label: "Output power", value: "7.4 kW", note: "single-phase, 32A" },
+      { label: "Protection rating", value: "IP65 / IK10", note: "dust-tight, jet-wash resistant" },
+      { label: "Weight", value: "5.5 kg", note: "wall-mount compact form factor" }
+    ],
+    cardTitle: "Key features",
+    cards: [
+      {
+        title: "Type-2 connector",
+        description:
+          "Mode 3 Type-2 connector for compatibility with all modern 4W EVs sold in India. Single-phase input at 180–275V, 32A."
+      },
+      {
+        title: "IP65 & IK10 rated",
+        description:
+          "Fully sealed against dust ingress and water jets. IK10 impact resistance makes it suitable for semi-public and commercial environments."
+      },
+      {
+        title: "OCPP 1.6J & OCPP 2.0.1",
+        description:
+          "Connects to any OCPP-compatible CMS. Full session management, tariff control, and remote diagnostics via the Massive operator platform."
+      },
+      {
+        title: "Multiple authentication methods",
+        description:
+          "App-based, QR code, and RFID authentication all supported. UPI Direct Charging enabled for pay-per-session operation."
+      },
+      {
+        title: "Compact form factor",
+        description:
+          "280×235×100mm enclosure, 5.5kg. Wall-mount installation for home garages, residential parking bays, and commercial car parks."
+      },
+      {
+        title: "Natural air cooling",
+        description:
+          "Passive thermal management — no moving parts, no noise. Suitable for enclosed parking structures and residential settings."
+      }
+    ],
+    faqTitle: "7.4kW Charger FAQ",
+    faqs: [
+      {
+        question: "What input supply does the 7.4kW charger need?",
+        answer:
+          "Single-phase supply at 180–275V, 32A. Compatible with standard domestic and commercial single-phase infrastructure."
+      },
+      {
+        question: "How long does it take to charge an EV at 7.4kW?",
+        answer:
+          "Charge time depends on the vehicle battery capacity. A 30 kWh battery charges from 20% to 80% in approximately 3–4 hours at 7.4kW."
+      },
+      {
+        question: "Is the 7.4kW charger suitable for outdoor installation?",
+        answer:
+          "Yes. IP65 and IK10 ratings make it suitable for outdoor wall mounting, covered car parks, and open residential bays."
+      }
+    ]
+  },
+  "/chargers/ac/22-kw": {
+    badge: "AC EV Charger",
+    title: "22kW Three-Phase AC Charger",
+    description:
+      "A 22 kW three-phase AC charger for commercial premises, workplace charging, and high-dwell-time public bays. Type-2 Mode 3, OCPP 1.6J / OCPP 2.0.1, IP65 rated — managed via the Massive operator platform.",
+    primaryCta: {
+      href: "/get-chargers",
+      label: "Request a Quote"
+    },
+    secondaryCta: {
+      href: "/chargers/ac",
+      label: "All AC Chargers"
+    },
+    stats: [
+      { label: "Output power", value: "22 kW", note: "three-phase, 32A/phase" },
+      { label: "Protection rating", value: "IP65 / IK10", note: "dust-tight, jet-wash resistant" },
+      { label: "Weight", value: "5.5 kg", note: "same compact body as 7.4kW model" }
+    ],
+    cardTitle: "Key features",
+    cards: [
+      {
+        title: "Type-2 Mode 3 connector",
+        description:
+          "Three-phase Type-2 Mode 3 charging. Input at 350–460V, 32A per phase. Compatible with EVs that accept three-phase AC charging."
+      },
+      {
+        title: "IP65 & IK10 rated",
+        description:
+          "Sealed against dust and water jets. IK10 impact resistance. Suitable for commercial car parks, workplaces, and covered outdoor bays."
+      },
+      {
+        title: "OCPP 1.6J & OCPP 2.0.1",
+        description:
+          "Full CMS interoperability. Connects to Massive's operator platform for session management, tariff control, and remote diagnostics."
+      },
+      {
+        title: "Multiple authentication methods",
+        description:
+          "App, QR code, and RFID authentication supported. UPI Direct Charging enabled for pay-per-session commercial operation."
+      },
+      {
+        title: "Compact shared form factor",
+        description:
+          "280×235×100mm, 5.5kg — same enclosure dimensions as the 7.4kW model. Simplifies multi-bay installations with consistent mounting."
+      },
+      {
+        title: "Natural air cooling",
+        description:
+          "Passive cooling — no fan noise, no moving parts. Suitable for office buildings, hotels, and enclosed parking structures."
+      }
+    ],
+    faqTitle: "22kW Charger FAQ",
+    faqs: [
+      {
+        question: "What input supply does the 22kW charger need?",
+        answer:
+          "Three-phase supply at 350–460V, 32A per phase. Three-phase infrastructure is required at the installation site."
+      },
+      {
+        question: "Which vehicles can use the 22kW three-phase charger?",
+        answer:
+          "Any EV with an onboard AC charger that accepts three-phase input via Type-2 Mode 3. Not all EVs have three-phase onboard chargers — some will charge at their onboard charger limit rather than the full 22kW."
+      },
+      {
+        question: "Is this charger suitable for workplace and commercial deployment?",
+        answer:
+          "Yes. The 22kW model is designed for commercial premises, office car parks, hotels, and high-dwell-time public bays where faster AC charging improves bay turnover."
+      }
+    ]
+  },
+  "/chargers/type-6-7/3-kw": {
+    badge: "Type-6 EV Charger",
+    title: "3kW Type-6 Charger for 2W & 3W EVs",
+    description:
+      "A 3 kW DC charger with a Type-6 connector (IEC 62196-2-6 / IS 17017-2-6) for electric two-wheelers and three-wheelers. CC-CV charging profile, OCPP 1.6J, and LFP battery compatible — deployed across home, fleet, and commercial 2W/3W sites.",
+    primaryCta: {
+      href: "/get-chargers",
+      label: "Request a Quote"
+    },
+    secondaryCta: {
+      href: "/chargers/type-6-7",
+      label: "All Type-6/7 Chargers"
+    },
+    stats: [
+      { label: "Output power", value: "3 kW", note: "CC-CV charging, 0–50A" },
+      { label: "Output voltage", value: "40–58V DC", note: "matched to 2W/3W battery range" },
+      { label: "Operating temp", value: "0°C to +55°C", note: "forced air cooling" }
+    ],
+    cardTitle: "Key features",
+    cards: [
+      {
+        title: "Type-6 connector (IEC 62196-2-6)",
+        description:
+          "Conforms to IEC 62196-2-6 and IS 17017-2-6 — the connector standard for Indian electric two-wheelers and three-wheelers. Not compatible with 4W Type-2 infrastructure."
+      },
+      {
+        title: "CC-CV charging profile",
+        description:
+          "Constant-current / constant-voltage charging profile. Output adjusts automatically between 0–50A as the battery reaches full charge."
+      },
+      {
+        title: "LFP battery compatible",
+        description:
+          "Output range of 40–58V DC is matched to LFP (lithium iron phosphate) battery packs commonly used in Indian 2W and 3W EVs."
+      },
+      {
+        title: "OCPP 1.6J CMS integration",
+        description:
+          "Connects to the Massive CMS via OCPP 1.6J. Session management, QR-based authentication, and remote monitoring available from commissioning."
+      },
+      {
+        title: "IS-17017-25 compliant",
+        description:
+          "Meets IS-17017-25 regulatory requirements applicable to this charger category in the Indian market."
+      },
+      {
+        title: "IP54 enclosure",
+        description:
+          "Dust and splash protected. Suitable for semi-outdoor installations at fleet depots, roadside bays, and residential properties."
+      }
+    ],
+    faqTitle: "3kW Type-6 Charger FAQ",
+    faqs: [
+      {
+        question: "Is this charger compatible with all Indian 2-wheelers?",
+        answer:
+          "The Type-6 connector (IEC 62196-2-6) is designed for Indian 2W and 3W EVs. Compatibility with specific vehicle models depends on the vehicle's onboard charging inlet — confirm before ordering."
+      },
+      {
+        question: "What input supply does the 3kW Type-6 charger need?",
+        answer:
+          "Single-phase 230V AC, with an input range of 165–264V. Compatible with standard domestic supply."
+      },
+      {
+        question: "What is the charging time for a typical 2-wheeler?",
+        answer:
+          "At 3 kW, a typical 2W EV battery (2–3 kWh) charges from 20% to 80% in approximately 45–90 minutes, depending on the vehicle's battery capacity and state."
+      },
+      {
+        question: "Can this charger be used at a fleet depot for multiple vehicles?",
+        answer:
+          "Yes. Multiple units can be installed at a fleet depot and managed centrally via OCPP through the Massive CMS."
+      }
+    ]
   }
 };
 
