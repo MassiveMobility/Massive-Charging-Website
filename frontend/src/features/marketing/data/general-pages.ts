@@ -556,6 +556,79 @@ export const marketingPageContent: Record<string, MarketingContent> = {
     ],
     note: "Earning potential depends on location quality, utilization, tariff, and uptime discipline."
   },
+  "/for/evse-manufacturers-installers": {
+    badge: "For EVSE Manufacturers & Installers",
+    title: "Go to Market as a Complete EV Charging Partner",
+    description:
+      "Massive gives charger manufacturers and installation partners direct access to live EV projects, pan-India EPC execution capability, and a white-label CMS with OCPI, UPI, and WhatsApp — so you can offer clients hardware, installation, and software as a single package.",
+    primaryCta: {
+      href: "/get-chargers",
+      label: "Explore a Partnership"
+    },
+    secondaryCta: {
+      href: "/platform",
+      label: "See the CMS Platform"
+    },
+    cardTitle: "Three partnership offerings",
+    cards: [
+      {
+        title: "Direct access to live EV projects",
+        description:
+          "Access to active opportunities across enterprise fleets, residential developers, corporate campuses, and public sector deployments. Jointly positioned project submissions combining your hardware with Massive's EPC execution and software — instead of competing as a standalone hardware vendor."
+      },
+      {
+        title: "Pan-India EPC and installation capability",
+        description:
+          "Site assessment, end-to-end installation, commissioning, and preventive and corrective maintenance programs under a single accountable partner. Pre-integration testing, coordinated firmware updates, and a defined fault escalation matrix with SLA-governed response times."
+      },
+      {
+        title: "White-label CMS with OCPI, UPI, and WhatsApp",
+        description:
+          "Custom-branded CMS platform (OCPP 1.6J and 2.1) enabling you to launch and manage charging networks under your own identity. Companion apps for EV users, operators, and network owners. OCPI roaming readiness, UPI Direct Charging, and WhatsApp bot integration included."
+      }
+    ],
+    stepsTitle: "How the partnership works",
+    steps: [
+      {
+        title: "1. Define your partnership scope",
+        description:
+          "Identify which combination applies — project access, EPC support, CMS white-labelling, or all three. Massive aligns to your current go-to-market model."
+      },
+      {
+        title: "2. Position as an integrated solution",
+        description:
+          "Joint submissions position your hardware alongside Massive's installation and software as a complete charger + EPC + CMS offering — increasing competitiveness in enterprise and government tenders."
+      },
+      {
+        title: "3. Deploy and support together",
+        description:
+          "Massive handles commissioning, CMS integration, and ongoing maintenance. You retain hardware supply and brand presence while clients receive end-to-end accountability."
+      }
+    ],
+    faqTitle: "EVSE partnership FAQ",
+    faqs: [
+      {
+        question: "Does Massive work with third-party charger hardware?",
+        answer:
+          "Yes. Massive quality-checks and deploys third-party hardware as well as its own manufactured range. OCPP 1.6J and 2.1 compatible hardware can be integrated into the CMS."
+      },
+      {
+        question: "What types of projects does Massive have in its pipeline?",
+        answer:
+          "Enterprise fleets, residential developers, commercial campuses, and public sector deployments. Joint participation in project discussions is available to hardware partners."
+      },
+      {
+        question: "Can the CMS be deployed under the hardware partner's brand?",
+        answer:
+          "Yes. The white-label CMS is deployed under your brand with full control over users, stations, and pricing. Driver and operator apps carry your identity."
+      },
+      {
+        question: "What protocols does the CMS support?",
+        answer:
+          "The CMS supports OCPP 1.6J and OCPP 2.1 for charger integration, and OCPI for roaming. UPI Direct Charging and WhatsApp bot integration are included as standard."
+      }
+    ]
+  },
   "/for/oems": {
     badge: "For Vehicle OEMs",
     title: "Four-Layer Charging Ecosystem for EV OEMs",
