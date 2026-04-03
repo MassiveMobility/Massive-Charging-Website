@@ -143,6 +143,18 @@ export const mainNavigation: NavMenu[] = [
         }
       ]
     }
+  },
+  {
+    label: "Find EV Chargers",
+    href: "/charging-stations-map"
+  },
+  {
+    label: "UPI Charging",
+    href: "/upi-charging"
+  },
+  {
+    label: "EV Charging Guide",
+    href: "/charging-guide"
   }
 ];
 
@@ -203,7 +215,8 @@ export const footerColumns: FooterColumn[] = [
       { label: "Charging Guide", href: "/charging-guide" },
       { label: "EV Cars Guide", href: "/charging-guide/ev-cars", indent: true },
       { label: "EV Charging Guide", href: "/ev-charging-guide" },
-      { label: "EV Shop", href: "/ev-charging-shop" }
+      { label: "Shop", href: "/ev-charging-shop" },
+      { label: "Prices & Offers", href: "/plans-offers" }
     ]
   }
 ];
