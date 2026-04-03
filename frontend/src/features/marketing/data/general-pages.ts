@@ -1876,6 +1876,109 @@ export const marketingPageContent: Record<string, MarketingContent> = {
           "Yes. Multiple units can be installed at a fleet depot and managed centrally via OCPP through the Massive CMS."
       }
     ]
+  },
+  "/home-charging": {
+    badge: "Home EV Charging Solutions",
+    title: "Home EV Charging Solutions | Massive Charging",
+    description:
+      "Install a safe, reliable home EV charger with Massive Charging. Get site assessment, electrical readiness, installation, and ongoing support.",
+    primaryCta: {
+      href: "/get-chargers",
+      label: "Book a Home Charging Consultation"
+    },
+    secondaryCta: {
+      href: "/get-chargers",
+      label: "Request Installation Support"
+    },
+    stats: [
+      { label: "Live stations", value: "50+", note: "across residential and commercial locations" },
+      { label: "Monthly sessions", value: "3,20,000+", note: "completed on Massive's live network" },
+      { label: "Average uptime", value: "99.95%", note: "structured monitoring and maintenance" }
+    ],
+    cardTitle: "Safe, reliable, ready home charging",
+    cards: [
+      {
+        title: "Home charging should feel effortless, not uncertain",
+        description:
+          "For most EV owners, home is the most important charging location. It is where convenience matters most, and where the charging experience needs to be dependable every single day. Massive Charging's home charging proposition is presented as an end-to-end enablement service, including coordination of site inspection, electrical readiness, and charger installation before vehicle handover, coupled with structured annual maintenance support and uptime management."
+      },
+      {
+        title: "Safe charging starts with the right installation",
+        description:
+          "A home charger should inspire confidence, not workarounds. Normal sockets and improvised charging arrangements are not built for sustained EV load. Continuous 10–15A draw on a normal socket can cause overheating risk, insulation damage, short-circuit risk, and possible fire. Proper home charging requires industrial-grade charging equipment supported by RCCB, MCB, proper earthing, and professionally managed installation."
+      },
+      {
+        title: "Choose the right charger for your home and vehicle",
+        description:
+          "Massive Charging's AC chargers are available in 3.3 kW, 7.4 kW, 11 kW, 15 kW, and 22 kW variants, and are designed for residential and workplace environments. The right charger is chosen based on vehicle type, charging pattern, available electrical load, and installation conditions at the property. A home charging setup that is sized correctly, installed correctly, and easier to depend on every day."
+      },
+      {
+        title: "Home charger installation before delivery makes ownership easier",
+        description:
+          "Home charger pre-delivery installation is explicitly described as coordination of site inspection, electrical readiness, and charger installation before the vehicle reaches the customer. New EV owners do not want to receive the vehicle first and then spend days figuring out charging. They want the home setup to be ready when the vehicle arrives. Massive Charging can own that expectation by positioning the service around speed, planning, and a smoother ownership start."
+      },
+      {
+        title: "Support does not end after installation",
+        description:
+          "Home charging is more valuable when the owner knows there is support behind it. The promise is not just installation—it is continuity. If the charging point is part of a daily routine, then maintenance, service response, and operational confidence matter. Massive Charging is a long-term home charging partner rather than a one-time installer, with AMC and uptime management with defined service timelines and performance tracking."
+      },
+      {
+        title: "Built by a company that understands live charging operations",
+        description:
+          "Massive Charging is not just selling a residential device. It is coming from a live charging operations background that spans software, electronics, deployment, and on-ground charging infrastructure across multiple vehicle categories. Customers are not dealing with a reseller that only ships a box—they are dealing with an EV charging company that understands installation, performance, support, and charging behaviour in real operating environments."
+      }
+    ],
+    stepsTitle: "How It Works",
+    steps: [
+      {
+        title: "Site assessment and electrical readiness",
+        description:
+          "Tell us about your home, parking setup, available electrical connection, and EV type. We assess electrical feasibility, power availability, and any upgrades needed."
+      },
+      {
+        title: "Choose the right charger and plan installation",
+        description:
+          "Based on your site assessment, we recommend the right charger (3.3–22 kW). Installation is coordinated before your vehicle arrives, with full commissioning and safety validation."
+      },
+      {
+        title: "Go live with ongoing support",
+        description:
+          "Your home charger goes live with all safety checks complete. Structured maintenance, service response, and uptime management provide confidence in daily operation."
+      }
+    ],
+    faqTitle: "Home Charging FAQ",
+    faqs: [
+      {
+        question: "What does Massive Charging offer for home charging?",
+        answer:
+          "Massive Charging offers home charger pre-delivery installation, site inspection, electrical readiness checks, charger installation, and ongoing maintenance-oriented support as part of its home and dealer charging enablement model."
+      },
+      {
+        question: "Which chargers are suitable for home use?",
+        answer:
+          "Massive Charging's AC chargers are available in 3.3 kW, 7.4 kW, 11 kW, 15 kW, and 22 kW configurations for residential and workplace environments. The right option depends on the vehicle, electrical setup, and charging pattern at home."
+      },
+      {
+        question: "Why not charge from a normal socket?",
+        answer:
+          "Sustained EV load on ordinary sockets can create overheating, insulation damage, short-circuit risk, and possible fire. Proper EV charging hardware, RCCB and MCB protection, proper earthing, and professional installation are the safer alternative."
+      },
+      {
+        question: "Can the home charger be installed before I receive my vehicle?",
+        answer:
+          "Yes. Home charger pre-delivery installation is explicitly part of Massive Charging's enablement offering, with site inspection and electrical readiness planned before vehicle handover."
+      },
+      {
+        question: "Does Massive Charging provide support after installation?",
+        answer:
+          "Yes. The offering includes AMC and uptime management with structured service timelines and performance tracking."
+      },
+      {
+        question: "Can Massive Charging install only its own chargers?",
+        answer:
+          "Third-party hardware can also be quality-checked and deployed where required."
+      }
+    ]
   }
 };
 
