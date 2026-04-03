@@ -6,7 +6,7 @@ const routePath = "/chargers/dc" as const;
 const pageContent = getMarketingPageContent(routePath);
 
 export const metadata = buildPageMetadata({
-  title: "DC Fast Chargers 30–240 kW | Commercial EV Charging Hardware in India",
+  title: "DC Fast Chargers for Commercial EV Charging | Massive Charging",
   description: pageContent.description,
   path: routePath,
   keywords: [

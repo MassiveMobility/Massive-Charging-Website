@@ -6,7 +6,7 @@ const routePath = "/platform" as const;
 const pageContent = getMarketingPageContent(routePath);
 
 export const metadata = buildPageMetadata({
-  title: "EV Charging Management Platform | OCPP CMS Software for Operators",
+  title: "EV Charging Management Platform for Scalable Charging Networks",
   description: pageContent.description,
   path: routePath,
   keywords: [

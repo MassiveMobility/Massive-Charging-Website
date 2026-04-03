@@ -6,7 +6,7 @@ const routePath = "/for/cpos" as const;
 const pageContent = getMarketingPageContent(routePath);
 
 export const metadata = buildPageMetadata({
-  title: "EV Charging Management System for CPOs | Charge Point Operator Platform",
+  title: "EV Charging Management System Built for Charge Point Operators",
   description: pageContent.description,
   path: routePath,
   keywords: [
