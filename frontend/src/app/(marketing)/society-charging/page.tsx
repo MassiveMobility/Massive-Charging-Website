@@ -1,14 +1,25 @@
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { ScenarioRoutePage } from "@/features/marketing/components/scenario-route-page";
+import { getMarketingPageContent } from "@/features/marketing/data/general-pages";
+import { MarketingContentPage } from "@/features/marketing/components/marketing-content-page";
 
 const routePath = "/society-charging" as const;
+const pageContent = getMarketingPageContent(routePath);
 
 export const metadata = buildPageMetadata({
-  title: "Society Charging",
-  description: "Set up EV charging for apartment societies and RWAs with scalable rollout planning.",
-  path: routePath
+  title: "Society EV Charging Solutions for Apartments & RWAs | Massive Charging",
+  description: pageContent.description,
+  path: routePath,
+  keywords: [
+    "society EV charging solutions",
+    "apartment EV charging",
+    "EV charging for RWAs",
+    "gated community EV charging",
+    "residential EV charging setup",
+    "EV charging for housing societies",
+    "apartment parking EV charger"
+  ]
 });
 
-export default function ScenarioPage() {
-  return <ScenarioRoutePage routePath={routePath} />;
+export default function SocietyChargingPage() {
+  return <MarketingContentPage content={pageContent} />;
 }

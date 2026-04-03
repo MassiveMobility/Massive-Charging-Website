@@ -1979,6 +1979,114 @@ export const marketingPageContent: Record<string, MarketingContent> = {
           "Third-party hardware can also be quality-checked and deployed where required."
       }
     ]
+  },
+  "/society-charging": {
+    badge: "Society EV Charging Solutions",
+    title: "Society EV Charging Solutions for Apartments & RWAs | Massive Charging",
+    description:
+      "Set up EV charging in your apartment society or gated community with Massive Charging. Shared chargers, slot-based setups, installation, software, and support.",
+    primaryCta: {
+      href: "/get-chargers",
+      label: "Talk to a Society Charging Expert"
+    },
+    secondaryCta: {
+      href: "/get-chargers",
+      label: "Assess EV Charging for Your Society"
+    },
+    stats: [
+      { label: "Live stations", value: "50+", note: "across India's residential communities" },
+      { label: "Monthly sessions", value: "3,20,000+", note: "completed on Massive's live network" },
+      { label: "Average uptime", value: "99.95%", note: "structured monitoring and maintenance" }
+    ],
+    cardTitle: "Society charging made practical and scalable",
+    cards: [
+      {
+        title: "Society charging should be planned, not improvised",
+        description:
+          "As EV adoption grows, residential communities are becoming one of the most important charging environments. Residents want the convenience of charging where they already park. RWAs and builders want a solution that supports current demand without creating long-term operational confusion. Society charging should not be approached as an ad hoc electrical add-on. It should be treated as a proper EV charging setup with the right hardware, site assessment, installation planning, and operating system behind it."
+      },
+      {
+        title: "Support both individual slot charging and shared community charging",
+        description:
+          "Not every residential property needs the same model. Some societies want chargers installed in designated resident parking slots. Others prefer shared chargers in common areas. Some larger communities may need a combination of both as EV adoption rises across the property. Massive does not force one deployment model—it helps residential communities choose the right setup based on parking layout, electrical readiness, and resident usage."
+      },
+      {
+        title: "End-to-end installation and execution for residential properties",
+        description:
+          "Residential properties do not want a fragmented model where one vendor sells hardware, another handles installation, and nobody owns post-installation support. Massive Charging provides site assessment, end-to-end installation, maintenance programs, national-scale AC and DC deployment capability, technical support and integration, and one accountable partner for operations."
+      },
+      {
+        title: "Residential hardware that fits everyday charging needs",
+        description:
+          "Most society charging deployments are built around dependable AC charging rather than purely fast-charging infrastructure. Massive's AC chargers are available in 3.3 kW, 7.4 kW, 11 kW, 15 kW, and 22 kW variants, specifically designed for residential and workplace environments. Massive positions itself as the partner that helps determine the right charger mix based on parking type, electrical capacity, expected resident usage, and future expansion needs."
+      },
+      {
+        title: "Software makes society charging easier to manage",
+        description:
+          "Hardware alone does not make residential charging easy to operate. The software layer matters just as much when multiple residents, multiple chargers, and different access conditions need to be managed over time. Massive's CMS provides control over users, stations, and pricing, along with dedicated apps for EV users, station operators, and network owners to manage sessions, monitor performance, and control operations. It also includes customer support integration, OCPI-ready architecture, UPI direct charging, and WhatsApp bot integration to lower user friction."
+      },
+      {
+        title: "Reduce friction for residents from day one",
+        description:
+          "A good society charging experience should feel simple to the people using it. Massive focuses on UPI direct charging for app-free, instant transactions and WhatsApp bot integration for charger discovery and session initiation. Society charging is not only about infrastructure deployment—it is about reducing everyday friction for residents and improving adoption inside the community."
+      },
+      {
+        title: "A future-ready amenity for modern residential communities",
+        description:
+          "EV charging is quickly becoming part of what residents expect from modern residential infrastructure. Society charging supports current residents and future EV adoption, while adding long-term value for the community. Society charging is not just a technical installation—it is a property-level upgrade that improves convenience for current residents and makes the community more prepared for the way mobility is changing."
+      }
+    ],
+    stepsTitle: "How It Works",
+    steps: [
+      {
+        title: "Assess your society's charging needs and site readiness",
+        description:
+          "Tell us about your property layout, parking structure, electrical infrastructure, and resident EV adoption expectations. We assess whether slot-based charging, shared systems, or a combination makes sense for your community."
+      },
+      {
+        title: "Plan installation and commission the system",
+        description:
+          "Based on site assessment, we recommend the right charger mix and deployment model. Installation is handled end-to-end with electrical integration, commissioning, and safety validation. The software platform is configured for your community's operating needs."
+      },
+      {
+        title: "Go live with ongoing support and management",
+        description:
+          "Your charging system goes live with resident access, payments, and management through digital interfaces. Structured maintenance, technical support, and uptime monitoring provide confidence in daily operations and future growth."
+      }
+    ],
+    faqTitle: "Society Charging FAQ",
+    faqs: [
+      {
+        question: "Can an apartment society set up EV charging for residents?",
+        answer:
+          "Yes. If the society has parking and electricity, it can set up EV charging to enable residents to charge and support future EV adoption."
+      },
+      {
+        question: "What is the difference between slot-based charging and shared society charging?",
+        answer:
+          "Slot-based charging is installed in individual resident parking slots with power. Shared society charging uses common area chargers for community access. The right model depends on parking structure and resident needs—some societies use both."
+      },
+      {
+        question: "Does Massive Charging handle installation as well as chargers?",
+        answer:
+          "Yes. Massive provides site assessment, end-to-end installation, maintenance programs, technical integration, and one accountable partner for operations from start to finish."
+      },
+      {
+        question: "Which chargers are suitable for residential societies?",
+        answer:
+          "Massive's AC chargers range from 3.3 kW to 22 kW and are designed for residential and workplace environments. The right charger depends on parking conditions, electrical capacity, and expected resident usage."
+      },
+      {
+        question: "Can charging in the society be managed digitally?",
+        answer:
+          "Yes. Massive's software provides control over users, stations, and pricing, along with apps for residents and operators, UPI direct charging, and WhatsApp bot integration to manage access and payments."
+      },
+      {
+        question: "Can this work for gated communities as well as apartment societies?",
+        answer:
+          "Yes. Massive supports both apartment societies and gated communities, positioning the offer as scalable charging infrastructure that adds long-term value for residents."
+      }
+    ]
   }
 };
 
