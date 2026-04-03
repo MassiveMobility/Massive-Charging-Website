@@ -1,50 +1,29 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
-
-import { FRONTPAGE_SIDEBAR_VISIBILITY_EVENT } from "@/lib/constants/ui-events";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-type NavItem = { label: string; to: string; canHighlight?: boolean };
-
-function isRouteActive(pathname: string, routePath: string) {
-  if (routePath === "/") {
-    return pathname === routePath;
-  }
-
-  return pathname === routePath || pathname.startsWith(`${routePath}/`);
-}
+import { mainNavigation, type NavMenu } from "@/lib/constants/navigation";
+import { FRONTPAGE_SIDEBAR_VISIBILITY_EVENT } from "@/lib/constants/ui-events";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [isScale125Like, setIsScale125Like] = useState(false);
   const [showBlackStrip, setShowBlackStrip] = useState(false);
   const pathname = usePathname();
 
-  const CHARGING_GUIDE_ROUTE = "/charging-guide";
-  const BUSINESS_ROUTE = "/ev-charging-station-business";
-  const PRICING_ROUTE = "/plans-offers";
-
-  const navItems = useMemo<NavItem[]>(
-    () => [
-      { label: "Find Charging Stations", to: "/charging-stations-map", canHighlight: true },
-      { label: "UPI Charging", to: "/upi-charging", canHighlight: true },
-      { label: "Get Charging Guide", to: CHARGING_GUIDE_ROUTE, canHighlight: true },
-      { label: "EV Charging Shop", to: "/ev-charging-shop", canHighlight: true },
-      { label: "Pricing & Offers", to: PRICING_ROUTE, canHighlight: true }
-    ],
-    []
-  );
-
   useEffect(() => {
     setOpen(false);
+    setOpenDropdown(null);
   }, [pathname]);
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setOpen(false);
+        setOpenDropdown(null);
       }
     };
 
@@ -122,6 +101,56 @@ export function SiteHeader() {
     ? "site-header-v2__black-strip--visible"
     : "site-header-v2__black-strip--hidden";
 
+  const renderNavDropdown = (item: NavMenu) => {
+    if (!item.dropdown) return null;
+
+    const isOpen = openDropdown === item.label;
+    const gridColsClass = `site-header-v2__dropdown--cols-${item.dropdown.columns}`;
+
+    return (
+      <div
+        key={`dropdown-${item.label}`}
+        className={`site-header-v2__dropdown-wrap ${isOpen ? "site-header-v2__dropdown-wrap--open" : ""}`}
+        onMouseEnter={() => setOpenDropdown(item.label)}
+        onMouseLeave={() => setOpenDropdown(null)}
+      >
+        <button
+          className="site-header-v2__desktop-nav-link"
+          onClick={() => setOpenDropdown(isOpen ? null : item.label)}
+          type="button"
+        >
+          {item.label}
+        </button>
+
+        {isOpen && (
+          <div className={`site-header-v2__dropdown ${gridColsClass}`}>
+            {item.dropdown.sections.map((section) => (
+              <div key={section.title} className="site-header-v2__dropdown-section">
+                {section.title && (
+                  <h3 className="site-header-v2__dropdown-section-title">{section.title}</h3>
+                )}
+                <ul className="site-header-v2__dropdown-links">
+                  {section.links.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className={`site-header-v2__dropdown-link ${
+                          link.sub ? "site-header-v2__dropdown-link--sub" : ""
+                        }`}
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    );
+  };
+
   return (
     <header className={`site-header-v2 ${headerScaleClass}`}>
       <div className="site-header-v2__row">
@@ -137,25 +166,22 @@ export function SiteHeader() {
 
         <div className="site-header-v2__desktop-nav-wrap">
           <ul className="site-header-v2__desktop-nav-list">
-            {navItems.map((item) => {
-              const isActive = item.canHighlight ? isRouteActive(pathname, item.to) : false;
-
-              return (
-                <li className="site-header-v2__desktop-nav-item" key={item.label}>
-                  <Link
-                    className={`site-header-v2__desktop-nav-link ${isActive ? "site-header-v2__desktop-nav-link--active" : ""}`}
-                    href={item.to}
-                  >
+            {mainNavigation.map((item) => (
+              <li className="site-header-v2__desktop-nav-item" key={item.label}>
+                {item.dropdown ? (
+                  renderNavDropdown(item)
+                ) : (
+                  <Link className="site-header-v2__desktop-nav-link" href={item.href || "#"}>
                     {item.label}
                   </Link>
-                </li>
-              );
-            })}
+                )}
+              </li>
+            ))}
           </ul>
         </div>
 
-        <Link className="site-header-v2__desktop-cta" href={BUSINESS_ROUTE}>
-          Start Charging Station Business
+        <Link className="site-header-v2__desktop-cta" href="/franchise">
+          Get Started →
         </Link>
 
         <div className="site-header-v2__mobile-trigger-wrap">
@@ -206,29 +232,68 @@ export function SiteHeader() {
 
             <div className="site-header-v2__mobile-drawer-body">
               <div className="site-header-v2__mobile-links">
-                {navItems.map((item) => {
-                  const isActive = item.canHighlight ? isRouteActive(pathname, item.to) : false;
-
-                  return (
-                    <Link
-                      className={`site-header-v2__mobile-link ${isActive ? "site-header-v2__mobile-link--active" : ""}`}
-                      href={item.to}
-                      key={`mobile-${item.to}-${item.label}`}
-                      onClick={() => setOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
-                  );
-                })}
+                {mainNavigation.map((item) => (
+                  <div key={item.label}>
+                    {item.dropdown ? (
+                      <div className="site-header-v2__mobile-dropdown">
+                        <button
+                          className="site-header-v2__mobile-link site-header-v2__mobile-link--dropdown-trigger"
+                          onClick={() =>
+                            setOpenDropdown(openDropdown === item.label ? null : item.label)
+                          }
+                          type="button"
+                        >
+                          {item.label}
+                          <span className="site-header-v2__mobile-dropdown-arrow">
+                            {openDropdown === item.label ? "−" : "+"}
+                          </span>
+                        </button>
+                        {openDropdown === item.label && (
+                          <div className="site-header-v2__mobile-dropdown-content">
+                            {item.dropdown.sections.map((section) => (
+                              <div key={section.title}>
+                                {section.title && (
+                                  <h4 className="site-header-v2__mobile-dropdown-section-title">
+                                    {section.title}
+                                  </h4>
+                                )}
+                                {section.links.map((link) => (
+                                  <Link
+                                    key={link.href}
+                                    href={link.href}
+                                    className={`site-header-v2__mobile-dropdown-link ${
+                                      link.sub ? "site-header-v2__mobile-dropdown-link--sub" : ""
+                                    }`}
+                                    onClick={() => setOpen(false)}
+                                  >
+                                    {link.label}
+                                  </Link>
+                                ))}
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ) : (
+                      <Link
+                        className="site-header-v2__mobile-link"
+                        href={item.href || "#"}
+                        onClick={() => setOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    )}
+                  </div>
+                ))}
               </div>
 
               <div className="site-header-v2__mobile-cta-wrap">
                 <Link
                   className="site-header-v2__mobile-cta"
-                  href={BUSINESS_ROUTE}
+                  href="/franchise"
                   onClick={() => setOpen(false)}
                 >
-                  Start Charging Station Business
+                  Get Started →
                 </Link>
               </div>
             </div>
