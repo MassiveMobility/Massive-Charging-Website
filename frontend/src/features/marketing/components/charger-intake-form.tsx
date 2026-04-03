@@ -14,7 +14,8 @@ export function ChargerIntakeForm() {
     script.async = true;
     script.onload = () => {
       if (typeof window !== "undefined" && "Tally" in window) {
-        (window as any).Tally.loadEmbeds();
+        const tally = window as unknown as { Tally: { loadEmbeds: () => void } };
+        tally.Tally.loadEmbeds();
       }
     };
     document.body.appendChild(script);
