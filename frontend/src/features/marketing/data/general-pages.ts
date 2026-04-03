@@ -1089,261 +1089,291 @@ export const marketingPageContent: Record<string, MarketingContent> = {
     ]
   },
   "/for/evse-manufacturers-installers": {
-    badge: "For EVSE Manufacturers & Installers",
-    title: "Go to Market as a Complete EV Charging Partner",
+    badge: "EVSE Partnership for Manufacturers & Installers",
+    title: "EVSE Partnership for Manufacturers & Installers | Massive Charging",
     description:
-      "Massive gives charger manufacturers and installation partners direct access to live EV projects, pan-India EPC execution capability, and a white-label CMS with OCPI, UPI, and WhatsApp — so you can offer clients hardware, installation, and software as a single package.",
+      "Access EV charging projects, pan-India EPC execution, and white-label EV CMS through one EVSE partnership with Massive Charging.",
     primaryCta: {
       href: "/get-chargers",
-      label: "Explore a Partnership"
+      label: "Partner with Massive Charging"
     },
     secondaryCta: {
       href: "/platform",
-      label: "See the CMS Platform"
+      label: "Discuss a Joint Go-to-Market Model"
     },
-    cardTitle: "Three partnership offerings",
+    stats: [
+      { label: "Live stations", value: "50+", note: "across India's major corridors" },
+      { label: "Monthly energy", value: "150+ MWh", note: "dispensed through network" },
+      { label: "Uptime guarantee", value: "99.95%", note: "SLA-backed operations" }
+    ],
+    cardTitle: "Turn charger supply into complete deployment value",
     cards: [
       {
-        title: "Direct access to live EV projects",
+        title: "Access live EV charging opportunities without building the full pipeline alone",
         description:
-          "Access to active opportunities across enterprise fleets, residential developers, corporate campuses, and public sector deployments. Jointly positioned project submissions combining your hardware with Massive's EPC execution and software — instead of competing as a standalone hardware vendor."
+          "One of the biggest barriers for EVSE manufacturers and installers is access to serious, live deployment opportunities. Massive Charging's partner deck explicitly highlights participation in enterprise, fleet, real estate, and government projects, along with access to Massive Charging's demand pipeline and ongoing project discussions. Instead of approaching the market as a standalone charger vendor, you can position your business as part of an integrated EV charging solution that includes hardware, EPC execution, and software."
       },
       {
-        title: "Pan-India EPC and installation capability",
+        title: "Pan-India execution that supports your hardware in the field",
         description:
-          "Site assessment, end-to-end installation, commissioning, and preventive and corrective maintenance programs under a single accountable partner. Pre-integration testing, coordinated firmware updates, and a defined fault escalation matrix with SLA-governed response times."
+          "Winning a project is one thing. Delivering it consistently is another. Massive Charging's offering includes site assessment, end-to-end installation, preventive and corrective maintenance, national-scale AC and DC deployment, technical support, and CMS integration under one accountable execution model. That matters because infrastructure performance is judged in the field, not in a catalogue. A reliable execution partner helps protect brand reputation, speed up commissioning, and reduce post-installation friction."
       },
       {
-        title: "White-label CMS with OCPI, UPI, and WhatsApp",
+        title: "Add software value, not just hardware value",
         description:
-          "Custom-branded CMS platform (OCPP 1.6J and 2.1) enabling you to launch and manage charging networks under your own identity. Companion apps for EV users, operators, and network owners. OCPI roaming readiness, UPI Direct Charging, and WhatsApp bot integration included."
+          "The strongest commercial differentiation comes from software. Massive Charging's white-label EV CMS can be positioned as a branded digital network layer for partners that want to launch and manage charging operations under their own identity. That gives EVSE manufacturers and installers a clearer path to recurring value. Instead of stopping at hardware sales and installation revenue, they can participate in the software, network, and user experience layer that drives charging utilisation and long-term stickiness."
+      },
+      {
+        title: "Support partners across hardware categories and deployment types",
+        description:
+          "Massive Charging's charger ecosystem approach is relevant across multiple hardware categories. Support for AC chargers, Type-6/7 chargers for 2W and 3W ecosystems, and DC fast chargers for higher-power use cases. Third-party hardware can be quality-checked and deployed where needed. That makes the partnership useful not only for charger manufacturers with a fixed portfolio, but also for installers and ecosystem partners who need flexibility across customer segments, site conditions, and vehicle categories."
+      },
+      {
+        title: "Why manufacturers and installers work with Massive Charging",
+        description:
+          "Massive Charging gives EVSE partners a more expandable commercial model. You bring hardware and technical depth. Massive brings live market access, execution capability, a managed CMS layer, and an operating ecosystem that already serves 2W, 3W, and 4W charging with live infrastructure and structured monitoring. That proof makes the partnership proposition more credible because it is not theory—it is built on live operational experience."
       }
     ],
-    stepsTitle: "How the partnership works",
+    stepsTitle: "How It Works",
     steps: [
       {
-        title: "1. Define your partnership scope",
+        title: "Discuss partnership scope and opportunities",
         description:
-          "Identify which combination applies — project access, EPC support, CMS white-labelling, or all three. Massive aligns to your current go-to-market model."
+          "Define which combination applies—project access, EPC support, CMS white-labelling, or all three. Massive aligns to your current go-to-market model and identifies joint opportunities."
       },
       {
-        title: "2. Position as an integrated solution",
+        title: "Position as an integrated solution",
         description:
-          "Joint submissions position your hardware alongside Massive's installation and software as a complete charger + EPC + CMS offering — increasing competitiveness in enterprise and government tenders."
+          "Joint project submissions position your hardware alongside Massive's installation and software as a complete charger + EPC + CMS offering, increasing competitiveness in enterprise and government tenders."
       },
       {
-        title: "3. Deploy and support together",
+        title: "Deploy and operate together",
         description:
           "Massive handles commissioning, CMS integration, and ongoing maintenance. You retain hardware supply and brand presence while clients receive end-to-end accountability."
       }
     ],
-    faqTitle: "EVSE partnership FAQ",
+    faqTitle: "EVSE Partnership FAQ",
     faqs: [
       {
-        question: "Does Massive work with third-party charger hardware?",
+        question: "Who is this page for?",
         answer:
-          "Yes. Massive quality-checks and deploys third-party hardware as well as its own manufactured range. OCPP 1.6J and 2.1 compatible hardware can be integrated into the CMS."
+          "This page is for EVSE manufacturers, charger installers, system integrators, and ecosystem partners that want access to projects, execution capability, and a white-label software layer."
       },
       {
-        question: "What types of projects does Massive have in its pipeline?",
+        question: "Can Massive Charging help us access active projects?",
         answer:
-          "Enterprise fleets, residential developers, commercial campuses, and public sector deployments. Joint participation in project discussions is available to hardware partners."
+          "Yes. Massive Charging specifically highlights access to live EV charging infrastructure projects and Massive Charging's demand pipeline across enterprise, fleet, real estate, and government opportunities."
       },
       {
-        question: "Can the CMS be deployed under the hardware partner's brand?",
+        question: "Do you provide only installation support or full project execution?",
         answer:
-          "Yes. The white-label CMS is deployed under your brand with full control over users, stations, and pricing. Driver and operator apps carry your identity."
+          "Massive Charging's proposition covers site assessment, installation, commissioning, maintenance, technical support, CMS integration, and SLA-backed operations."
       },
       {
-        question: "What protocols does the CMS support?",
+        question: "Can we launch charging software under our own brand?",
         answer:
-          "The CMS supports OCPP 1.6J and OCPP 2.1 for charger integration, and OCPI for roaming. UPI Direct Charging and WhatsApp bot integration are included as standard."
+          "Yes. The white-label EV CMS is positioned as a custom-branded platform that enables operators and OEMs to launch and manage charging networks under their own identity."
+      },
+      {
+        question: "Do you support OCPP and roaming integration?",
+        answer:
+          "Yes. The CMS references OCPP 1.6J and 2.1 support and a roaming-ready OCPI architecture for broader cross-network access."
       }
     ]
   },
   "/for/oems": {
-    badge: "For Vehicle OEMs",
-    title: "Four-Layer Charging Ecosystem for EV OEMs",
+    badge: "EV Charging Ecosystem Partner for OEMs",
+    title: "EV Charging Ecosystem Partner for OEMs | Massive Charging",
     description:
-      "Massive gives vehicle OEMs a structured charging partner across four layers — national infrastructure execution, OEM app integration, multi-CPO roaming access, and independent SLA monitoring through Gridwatch.",
+      "Support vehicle sales with charging infrastructure, OEM app integration, multi-CPO access, and analytics from Massive Charging.",
     primaryCta: {
       href: "/get-chargers",
-      label: "Start an OEM Conversation"
+      label: "Talk to the OEM Solutions Team"
     },
     secondaryCta: {
-      href: "/gridwatch",
-      label: "About Gridwatch"
+      href: "/platform",
+      label: "Explore an OEM Charging Integration"
     },
     stats: [
-      { label: "Network sessions", value: "3,20,000+", note: "completed on Massive's live network" },
-      { label: "SLA-driven uptime", value: "99.95%", note: "structured monitoring and maintenance" },
-      { label: "Network growth", value: "20% M-o-M", note: "month-on-month session volume growth" }
+      { label: "Live stations", value: "50+", note: "across India's corridors" },
+      { label: "Monthly growth", value: "20% M-o-M", note: "session volume growth" },
+      { label: "Average uptime", value: "99.95%", note: "SLA-driven operations" }
     ],
-    cardTitle: "The four-layer OEM framework",
+    cardTitle: "Support vehicle sales with a charging ecosystem your customers can actually use",
     cards: [
       {
-        title: "Layer 1 — National infrastructure execution",
+        title: "Layer 1: National charging infrastructure execution",
         description:
-          "Pan-India AC and DC deployment across urban, highway, and semi-urban markets. Covers dealer and service bay setup, home charger pre-delivery installation, fleet depot electrification, and structured AMC with performance tracking. Single accountable partner for deployment, monitoring, and ongoing operations."
+          "OEMs need charging readiness wherever vehicles are sold, delivered, serviced, and operated. Massive Charging's first layer focuses on pan-India AC and DC deployment, urban and highway corridor coverage, dealer and fleet electrification, SLA-driven uptime, and one accountable partner for deployment and operations. This includes home charger pre-delivery installation, dealer and service-bay charging setup, fleet depot electrification, and annual maintenance management."
       },
       {
-        title: "Layer 2 — OEM app and digital enablement",
+        title: "Layer 2: Charging inside the OEM app, not outside it",
         description:
-          "Direct API integration to embed charging capabilities into your existing mobile app. Real-time availability sync, in-app UPI payment processing without external redirection, and a fully white-labelled charging experience aligned to your brand."
+          "A modern EV customer expects charging to feel like part of the ownership experience, not a disconnected third-party step. Massive Charging's OEM app charging integration layer includes API integration into the OEM app, real-time availability sync, payment integration including UPI, and a white-labelled charging experience aligned to the OEM's own interface and brand. Massive should not be framed as just another backend provider, but as the ecosystem layer that helps OEMs own the charging journey in their own digital environment."
       },
       {
-        title: "Layer 3 — Multi-CPO integration layer",
+        title: "Layer 3: Multi-CPO integration without forcing a CMS rebuild",
         description:
-          "Expand charging footprint through one structured OCPI integration — not multiple parallel builds. Access chargers across different operators through a unified backend. No CMS replacement required. Single roaming interface for cross-network access, authentication, and session visibility."
+          "No OEM wants to build a full charging network from scratch before it can offer meaningful customer access. Massive Charging addresses that through a multi-CPO aggregation layer built on OCPI roaming enablement. Integration across multiple CPOs through one backend connection, no need to replace existing CMS infrastructure, and faster rollout compared with building a proprietary network. A single roaming interface for authentication, session visibility, and cross-network access."
       },
       {
-        title: "Layer 4 — Gridwatch independent SLA monitoring",
+        title: "Layer 4: Independent SLA monitoring and charging analytics",
         description:
-          "Gridwatch is third-party audit software for EV charging networks. It validates CPO uptime claims, detects downtime patterns, benchmarks actual performance against SLA commitments, and generates corridor-level reliability reports — protecting your brand from unreliable third-party network claims."
+          "Charging access is important, but charging quality matters just as much. Massive Charging extends the proposition beyond connectivity through an independent monitoring and analytics layer. Gridwatch as a third-party audit software for EV charging networks provides independent visibility into utilisation, uptime, and downtime without relying only on operator-reported data. Validation of CPO uptime claims, downtime detection, SLA benchmarking, corridor-level reliability reporting, and customer experience protection."
       },
       {
-        title: "Home and dealer charging enablement",
+        title: "Built for the realities of vehicle growth in India",
         description:
-          "Coordination of site inspection, electrical readiness, and charger installation before vehicle handover. Installation of charging points at dealerships, workshops, and service bays for display vehicles and service operations."
+          "As EV sales grow, OEM charging needs become more complex. Customers need confidence before delivery. Dealers need functional charging for display and service. Fleets need depot infrastructure. Drivers need discoverable public charging. Massive Charging's four-layer framework is built to answer those realities through one coordinated partner rather than a patchwork of vendors, operators, and software stacks."
       },
       {
-        title: "Charging analytics for product planning",
+        title: "Why OEMs choose Massive Charging",
         description:
-          "AC vs DC usage trends, public vs home charging split, charging heatmaps, and model-wise behaviour analysis — data to shape product planning, infrastructure strategy, and battery or range decisions."
+          "OEMs do not need another fragmented charging relationship. They need a partner that can connect infrastructure, digital experience, network access, and performance visibility in a way that supports vehicle adoption and protects brand trust. Massive Charging positions itself exactly in that role: a structured ecosystem partner with live operations, multi-layer charging capability, partner integrations, and a clear path from infrastructure readiness to charging intelligence."
       }
     ],
-    stepsTitle: "How OEM partnerships work",
+    stepsTitle: "How It Works",
     steps: [
       {
-        title: "1. Scope infrastructure and app needs",
+        title: "Define charging ecosystem needs and layers",
         description:
-          "Define the geographic rollout plan, vehicle segments, and which layers — infrastructure, app integration, roaming, or Gridwatch — are relevant to your OEM programme."
+          "Identify your geographic rollout plan, vehicle segments, and which layers—infrastructure, app integration, roaming, or analytics—are relevant to your OEM programme."
       },
       {
-        title: "2. Deploy infrastructure and integrate apps",
+        title: "Deploy infrastructure and integrate apps",
         description:
-          "Charging infrastructure is deployed in parallel with API integration into the OEM app. Home charger installation, dealer setup, and roaming access go live together."
+          "Charging infrastructure is deployed in parallel with API integration into the OEM app. Home charger installation, dealer setup, multi-CPO access, and Gridwatch monitoring go live together."
       },
       {
-        title: "3. Monitor SLA with Gridwatch",
+        title: "Monitor quality and scale with insights",
         description:
-          "Gridwatch provides independent visibility into network uptime and utilisation across all CPOs in your ecosystem — without relying on operator-reported data."
+          "Gridwatch provides independent visibility into network quality and utilisation across all CPOs in your ecosystem. Use charging analytics to understand usage patterns and inform product planning."
       }
     ],
-    faqTitle: "OEM partnership FAQ",
+    faqTitle: "OEM Charging Partner FAQ",
     faqs: [
       {
-        question: "Does app integration require replacing the existing OEM app?",
+        question: "What does Massive Charging offer vehicle OEMs?",
         answer:
-          "No. Charging is embedded into your existing mobile application via direct API integration. The charging experience is white-labelled under your brand."
+          "Massive Charging offers infrastructure deployment, home and dealer charging enablement, OEM app integration, multi-CPO access, and independent charging analytics."
       },
       {
-        question: "How does multi-CPO roaming work?",
+        question: "Can charging be embedded inside the OEM's own app?",
         answer:
-          "One OCPI integration connects your app to multiple CPO networks. Drivers see live availability and charge on any connected network — managed through a single roaming interface."
+          "Yes. The OEM deck specifically describes API integration, real-time availability sync, in-app payment including UPI, and a white-labelled charging experience aligned to the OEM's app."
       },
       {
-        question: "What is Gridwatch used for in an OEM context?",
+        question: "Do OEMs need to build their own charging network first?",
         answer:
-          "Gridwatch independently validates the uptime and reliability of CPOs in your charging ecosystem — protecting your brand from claims that rely solely on operator-reported data."
+          "No. Massive Charging's multi-CPO aggregation layer is designed to provide access across multiple operators without requiring an OEM to replace existing systems or build a proprietary network from day one."
       },
       {
-        question: "Can Massive handle dealer network charging rollout?",
+        question: "Can Massive support home charger installation before vehicle delivery?",
         answer:
-          "Yes. Dealer and service bay charging setup, home charger pre-delivery installation, and fleet depot electrification are all covered under the national infrastructure layer."
+          "Yes. The infrastructure layer includes home charger pre-delivery installation along with dealer, service-bay, and fleet depot charging enablement."
+      },
+      {
+        question: "Can Massive help validate network quality and uptime?",
+        answer:
+          "Yes. The Gridwatch layer is positioned for independent SLA monitoring, downtime analysis, reliability reporting, and charging analytics to protect customer experience and brand trust."
       }
     ]
   },
   "/for/fleet-operators": {
-    badge: "For Fleet Operators",
-    title: "Captive EV Charging Infrastructure for Commercial Fleets",
+    badge: "EV Charging Solutions for Fleet Operators",
+    title: "EV Charging Solutions for Fleet Operators | Massive Charging",
     description:
-      "Massive deploys and operates charging infrastructure for commercial fleets — covering site assessment, installation, CMS integration, payments, fleet controls, and ongoing maintenance under a single accountable partnership.",
+      "Build reliable fleet charging with captive infrastructure, roaming access, UPI payments, and fleet wallet controls from Massive Charging.",
     primaryCta: {
       href: "/get-chargers",
-      label: "Start a Fleet Conversation"
+      label: "Talk to a Fleet Charging Expert"
     },
     secondaryCta: {
       href: "/platform",
-      label: "See the Platform"
+      label: "Plan Your Fleet Charging Setup"
     },
     stats: [
-      { label: "Network sessions", value: "3,20,000+", note: "completed on Massive's live network" },
-      { label: "Average uptime", value: "99.95%", note: "structured monitoring and maintenance" },
-      { label: "Deployment scale", value: "Pan-India", note: "urban, highway, and semi-urban markets" }
+      { label: "Active stations", value: "50+", note: "across India's fleet corridors" },
+      { label: "Monthly sessions", value: "3,20,000+", note: "completed on Massive's live network" },
+      { label: "Average uptime", value: "99.95%", note: "structured monitoring and maintenance" }
     ],
-    cardTitle: "Four pillars of fleet charging support",
+    cardTitle: "Fleet charging without the complexity",
     cards: [
       {
-        title: "Captive charging infrastructure",
+        title: "Captive charging infrastructure that works like fleet infrastructure should",
         description:
-          "End-to-end site assessment, installation, and maintenance under one accountable partner — eliminating multi-vendor fragmentation. We don't just deploy chargers; we protect your fleet operations."
+          "Fleet charging cannot be treated like generic public charging rollout. Your vehicles have route commitments, charging windows, utilisation targets, and operational dependencies. Massive Charging positions itself as a captive charging infrastructure partner rather than just a charger vendor. The offering includes site assessment, end-to-end installation, preventive and corrective maintenance, national-scale AC and DC deployment capability, and a single accountable partner for commissioning, CMS integration, maintenance, and support."
       },
       {
-        title: "Multiple network access from day one",
+        title: "Build the right charging mix for your fleet",
         description:
-          "Immediate connectivity to Massive's live operational network plus roaming access to partner networks — your drivers gain meaningful charging coverage without waiting for new infrastructure rollout."
+          "Every fleet has a different charging profile. Some require overnight AC charging at depots. Others need fast top-ups during operational shifts. Some mixed fleets need both. Massive Charging supports AC chargers from 3.3 kW to 22 kW, Type-6/7 chargers for new-age EV 2-wheelers and 3-wheelers, and DC chargers from 30 kW to 180 kW. That flexibility allows fleet operators to plan infrastructure around dwell time, vehicle type, turnaround expectations, and site constraints."
       },
       {
-        title: "UPI Direct and WhatsApp charging",
+        title: "Give your fleet access from day one, not after a long rollout cycle",
         description:
-          "QR-based or deep-link UPI charging eliminates mandatory app downloads. WhatsApp session initiation reduces the learning curve and increases the likelihood of a successful first charging experience."
+          "Electrification delays often come from limited charging access in early stages. Massive Charging addresses that by combining captive deployment with immediate access to live operational and partner networks. For a fleet operator, vehicles do not have to wait for every depot or route node to be fully built before they can begin charging reliably. You can start with structured access and expand into deeper infrastructure over time."
       },
       {
-        title: "Centralized fleet dashboard",
+        title: "Remove friction for drivers and fleet teams",
         description:
-          "Monitor vehicle-wise charging activity, energy consumption, and cost allocation across all locations from a unified interface."
+          "A fleet charging experience should be easy to use in the field. Massive Charging supports QR-based or deep-link-enabled charging through UPI, removing mandatory app downloads for basic charging access. It also supports charger discovery and session initiation through a WhatsApp interface, lowering the learning curve for new drivers and simplifying first-time charging."
       },
       {
-        title: "Vehicle and driver-level controls",
+        title: "Get fleet-level visibility, controls, and billing discipline",
         description:
-          "Tag-based access control enabling session authorization by vehicle ID, RFID card, or registered driver credentials."
+          "Infrastructure without control creates leakage. Massive Charging's fleet management and corporate wallet capabilities help enterprise operators maintain charging discipline across vehicles, drivers, sites, and budgets. Centralized dashboard for vehicle-wise charging activity, energy consumption, and cost allocation, along with vehicle- and driver-level controls, dedicated corporate wallets with configurable spend limits, GST-compliant invoicing, and usage analytics for utilisation and charging efficiency."
       },
       {
-        title: "Corporate wallets and GST invoicing",
+        title: "Why fleet operators choose Massive Charging",
         description:
-          "Dedicated enterprise wallets with configurable spending limits and automated billing cycles. GST-compliant invoicing with session-level breakdown for accounting, reimbursement, and audit purposes."
+          "Fleet operators need charging partners who understand throughput, uptime, cost control, and rollout discipline. Massive Charging combines infrastructure execution, software integration, network access, and billing visibility in one operating model. Instead of piecing together hardware vendors, EPC teams, software providers, roaming integrations, and finance workflows, fleet operators work with one partner that aligns charging to operations."
       }
     ],
-    stepsTitle: "How fleet deployments work",
+    stepsTitle: "How It Works",
     steps: [
       {
-        title: "1. Site assessment and planning",
+        title: "Share your fleet charging plan",
         description:
-          "Comprehensive assessment of depot or parking locations — identifying optimal charger placement, load capacity, and grid integration requirements."
+          "Tell us about your vehicle fleet, locations, charging windows, utilisation targets, and growth plans. We assess feasibility and design the right infrastructure and access strategy for your deployment."
       },
       {
-        title: "2. Deploy hardware and software together",
+        title: "Get visibility and control",
         description:
-          "AC or DC chargers installed with full CMS integration, payment activation, and fleet controls configured. Single accountable partner for commissioning and go-live."
+          "Connect your infrastructure into a unified operating layer. Access real-time monitoring, fleet controls, driver management, corporate wallets, and payment flows from a single platform."
       },
       {
-        title: "3. Operate with full visibility",
+        title: "Scale with confidence",
         description:
-          "Track sessions by vehicle and driver, manage corporate wallets, review GST invoices, and monitor utilisation patterns through the fleet dashboard."
+          "As your fleet grows, the charging infrastructure and software scale with you. Maintain operational clarity, control costs, and make better decisions about optimization and expansion based on charging data."
       }
     ],
-    faqTitle: "Fleet charging FAQ",
+    faqTitle: "Fleet Charging FAQ",
     faqs: [
       {
-        question: "Can access be restricted to authorised vehicles and drivers only?",
+        question: "What does Massive Charging offer fleet operators?",
         answer:
-          "Yes. Tag-based access control supports session authorization by vehicle ID, RFID card, or registered driver credentials."
+          "Massive Charging offers captive charging infrastructure deployment, multi-network charging access, UPI and WhatsApp-based charging journeys, and fleet management controls such as dashboards, wallets, driver permissions, and reporting."
       },
       {
-        question: "Is GST-compliant invoicing available?",
+        question: "Can Massive Charging support depot charging as well as on-road charging access?",
         answer:
-          "Yes. Consolidated GST-compliant invoices with session-level breakdown are available for accounting, reimbursement, and audit purposes."
+          "Yes. The fleet proposition combines captive charging infrastructure with access to Massive Charging's live network and partner networks, so fleets can build depot charging while also enabling network-based charging access from day one."
       },
       {
-        question: "Can fleet drivers charge on networks outside the depot?",
+        question: "Do drivers need to download an app to start charging?",
         answer:
-          "Yes. Roaming access to partner networks is available from day one through Massive's OCPI integration — no separate infrastructure deployment required."
+          "Not always. Massive Charging supports UPI-based charging flows and WhatsApp-led charging access designed to reduce friction and simplify session initiation."
       },
       {
-        question: "What charger types are available for fleet depots?",
+        question: "Can charging be controlled at vehicle or driver level?",
         answer:
-          "Both AC (3.3–22 kW) and DC (30–240 kW) chargers are deployed based on vehicle type, dwell time, and power availability at the site."
+          "Yes. The fleet management layer supports tag-based access and session authorization using vehicle ID, RFID, or registered driver credentials."
+      },
+      {
+        question: "Does Massive Charging support enterprise billing and wallet controls?",
+        answer:
+          "Yes. Corporate wallets, spend controls, GST-compliant invoicing, and usage analytics are part of the fleet offering."
       }
     ]
   },

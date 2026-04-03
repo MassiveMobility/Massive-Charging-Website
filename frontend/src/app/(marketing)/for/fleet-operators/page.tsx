@@ -6,15 +6,17 @@ const routePath = "/for/fleet-operators" as const;
 const pageContent = getMarketingPageContent(routePath);
 
 export const metadata = buildPageMetadata({
-  title: "For Fleet Operators",
+  title: "EV Charging Solutions for Fleet Operators | Massive Charging",
   description: pageContent.description,
   path: routePath,
   keywords: [
-    "fleet EV charging",
-    "captive charging infrastructure",
+    "EV charging solutions for fleet operators",
+    "fleet EV charging infrastructure",
+    "captive charging partner",
     "fleet charging management",
-    "corporate EV charging",
-    "fleet depot charging India"
+    "EV fleet charging platform",
+    "corporate wallet for EV fleets",
+    "depot charging solutions"
   ]
 });
 

@@ -6,15 +6,16 @@ const routePath = "/for/oems" as const;
 const pageContent = getMarketingPageContent(routePath);
 
 export const metadata = buildPageMetadata({
-  title: "For Vehicle OEMs",
+  title: "EV Charging Ecosystem Partner for OEMs | Massive Charging",
   description: pageContent.description,
   path: routePath,
   keywords: [
-    "EV OEM charging partner",
-    "vehicle OEM charging infrastructure",
+    "EV charging solutions for OEMs",
+    "OEM charging ecosystem partner",
     "OEM app charging integration",
-    "multi-CPO roaming",
-    "EV charging ecosystem India"
+    "multi-CPO charging integration",
+    "home charger installation for EV OEMs",
+    "charging analytics for OEMs"
   ]
 });
 

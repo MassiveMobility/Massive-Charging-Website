@@ -6,15 +6,17 @@ const routePath = "/for/evse-manufacturers-installers" as const;
 const pageContent = getMarketingPageContent(routePath);
 
 export const metadata = buildPageMetadata({
-  title: "For EVSE Manufacturers & Installers",
+  title: "EVSE Partnership for Manufacturers & Installers | Massive Charging",
   description: pageContent.description,
   path: routePath,
   keywords: [
-    "EVSE manufacturer partnership",
-    "EV charger OEM India",
-    "EPC EV charging",
-    "white-label EV CMS",
-    "EV charging installation partner"
+    "EVSE partnership for manufacturers and installers",
+    "EV charger installation partner",
+    "EV charger EPC partner",
+    "white-label EV CMS for OEMs",
+    "EVSE deployment partner",
+    "OCPP CMS for charger OEMs",
+    "EV charging hardware installation and maintenance"
   ]
 });
 
