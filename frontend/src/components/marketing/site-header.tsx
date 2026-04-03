@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -12,11 +12,15 @@ export function SiteHeader() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [isScale125Like, setIsScale125Like] = useState(false);
   const [showBlackStrip, setShowBlackStrip] = useState(false);
+  const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
     setOpen(false);
     setOpenDropdown(null);
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+    }
   }, [pathname]);
 
   useEffect(() => {
@@ -107,12 +111,26 @@ export function SiteHeader() {
     const isOpen = openDropdown === item.label;
     const gridColsClass = `site-header-v2__dropdown--cols-${item.dropdown.columns}`;
 
+    const handleDropdownMouseEnter = () => {
+      if (dropdownTimeoutRef.current) {
+        clearTimeout(dropdownTimeoutRef.current);
+        dropdownTimeoutRef.current = null;
+      }
+      setOpenDropdown(item.label);
+    };
+
+    const handleDropdownMouseLeave = () => {
+      dropdownTimeoutRef.current = setTimeout(() => {
+        setOpenDropdown(null);
+      }, 200);
+    };
+
     return (
       <div
         key={`dropdown-${item.label}`}
         className={`site-header-v2__dropdown-wrap ${isOpen ? "site-header-v2__dropdown-wrap--open" : ""}`}
-        onMouseEnter={() => setOpenDropdown(item.label)}
-        onMouseLeave={() => setOpenDropdown(null)}
+        onMouseEnter={handleDropdownMouseEnter}
+        onMouseLeave={handleDropdownMouseLeave}
       >
         <button
           className="site-header-v2__desktop-nav-link"
