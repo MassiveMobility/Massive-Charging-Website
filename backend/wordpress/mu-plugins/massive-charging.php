@@ -309,6 +309,97 @@ function mc_acf_scenario_fields(): void {
 				'name'  => 'cta_url',
 				'type'  => 'url',
 			],
+			// Marketing page format fields (for WpMarketingPage transformation)
+			[
+				'key'          => 'field_scenario_stats',
+				'label'        => 'Stats',
+				'name'         => 'stats',
+				'type'         => 'repeater',
+				'button_label' => 'Add Stat',
+				'sub_fields'   => [
+					[
+						'key'   => 'field_scenario_stat_label',
+						'label' => 'Label',
+						'name'  => 'label',
+						'type'  => 'text',
+					],
+					[
+						'key'   => 'field_scenario_stat_value',
+						'label' => 'Value',
+						'name'  => 'value',
+						'type'  => 'text',
+					],
+					[
+						'key'   => 'field_scenario_stat_note',
+						'label' => 'Note',
+						'name'  => 'note',
+						'type'  => 'text',
+					],
+				],
+			],
+			[
+				'key'          => 'field_scenario_cards',
+				'label'        => 'Cards',
+				'name'         => 'cards',
+				'type'         => 'repeater',
+				'button_label' => 'Add Card',
+				'sub_fields'   => [
+					[
+						'key'   => 'field_scenario_card_title',
+						'label' => 'Title',
+						'name'  => 'title',
+						'type'  => 'text',
+					],
+					[
+						'key'   => 'field_scenario_card_description',
+						'label' => 'Description',
+						'name'  => 'description',
+						'type'  => 'textarea',
+					],
+				],
+			],
+			[
+				'key'          => 'field_scenario_steps',
+				'label'        => 'Steps',
+				'name'         => 'steps',
+				'type'         => 'repeater',
+				'button_label' => 'Add Step',
+				'sub_fields'   => [
+					[
+						'key'   => 'field_scenario_step_title',
+						'label' => 'Title',
+						'name'  => 'title',
+						'type'  => 'text',
+					],
+					[
+						'key'   => 'field_scenario_step_description',
+						'label' => 'Description',
+						'name'  => 'description',
+						'type'  => 'textarea',
+					],
+				],
+			],
+			[
+				'key'          => 'field_scenario_faqs',
+				'label'        => 'FAQs',
+				'name'         => 'faqs',
+				'type'         => 'repeater',
+				'button_label' => 'Add FAQ',
+				'sub_fields'   => [
+					[
+						'key'   => 'field_scenario_faq_question',
+						'label' => 'Question',
+						'name'  => 'question',
+						'type'  => 'text',
+					],
+					[
+						'key'   => 'field_scenario_faq_answer',
+						'label' => 'Answer',
+						'name'  => 'answer',
+						'type'  => 'textarea',
+					],
+				],
+			],
 		],
 		'location' => [ [ [ 'param' => 'post_type', 'operator' => '==', 'value' => 'mc_scenario' ] ] ],
 	] );
@@ -456,3 +547,165 @@ add_action( 'init', static function (): void {
 		exit;
 	}
 } );
+
+// ── Custom marketing pages endpoint (massivecharging/v1) ──────────────────────
+
+add_action( 'rest_api_init', 'mc_register_marketing_pages_endpoint' );
+
+function mc_register_marketing_pages_endpoint(): void {
+	register_rest_route( 'massivecharging/v1', '/marketing-pages/by-route', [
+		'methods'             => 'GET',
+		'callback'            => 'mc_get_marketing_page_by_route',
+		'permission_callback' => '__return_true',
+	] );
+
+	register_rest_route( 'massivecharging/v1', '/marketing-pages', [
+		'methods'             => 'GET',
+		'callback'            => 'mc_list_marketing_pages',
+		'permission_callback' => '__return_true',
+	] );
+}
+
+/**
+ * Fetches and transforms a scenario post into WpMarketingPage format by route path.
+ * E.g. /for/cpos, /community-charging, etc.
+ */
+function mc_get_marketing_page_by_route( \WP_REST_Request $request ) {
+	$path = $request->get_param( 'path' );
+
+	if ( ! $path ) {
+		return new \WP_REST_Response( [
+			'code'    => 'missing_path',
+			'message' => 'Missing "path" parameter',
+		], 400 );
+	}
+
+	// Normalize path for comparison (remove leading/trailing slashes)
+	$path_slug = trim( $path, '/' );
+
+	// Query scenarios and find by slug/route_slug
+	$scenarios = get_posts( [
+		'post_type'      => 'mc_scenario',
+		'posts_per_page' => 200,
+		'post_status'    => 'publish',
+	] );
+
+	$scenario_post = null;
+	foreach ( $scenarios as $post ) {
+		$acf = get_fields( $post->ID );
+		$route_slug = $acf['route_slug'] ?? '';
+
+		// Match by route_slug or normalized post slug
+		if ( $route_slug === $path_slug || sanitize_title( $post->post_title ) === $path_slug ) {
+			$scenario_post = $post;
+			break;
+		}
+	}
+
+	if ( ! $scenario_post ) {
+		return new \WP_REST_Response( [
+			'code'    => 'not_found',
+			'message' => "No marketing page found for path: {$path}",
+			'data'    => [ 'status' => 404 ],
+		], 404 );
+	}
+
+	// Transform scenario post to WpMarketingPage format
+	$acf = get_fields( $scenario_post->ID );
+
+	$page = [
+		'route_path'     => '/' . $path_slug,
+		'page_template'  => 'standard',
+		'badge'          => '',
+		'title'          => $scenario_post->post_title,
+		'description'    => wp_strip_all_tags( $scenario_post->post_content ),
+		'primary_cta'    => $acf['cta_url'] ? [
+			'label' => $acf['cta_text'] ?? 'Learn More',
+			'href'  => $acf['cta_url'],
+		] : null,
+		'secondary_cta'  => null,
+		'stats'          => mc_normalize_acf_array( $acf['stats'] ?? [], [
+			'label' => 'Label',
+			'value' => 'Value',
+			'note'  => 'Note',
+		] ),
+		'card_title'     => '',
+		'cards'          => mc_normalize_acf_array( $acf['cards'] ?? [], [
+			'title'       => 'Title',
+			'description' => 'Description',
+		] ),
+		'steps_title'    => '',
+		'steps'          => mc_normalize_acf_array( $acf['steps'] ?? [], [
+			'title'       => 'Title',
+			'description' => 'Description',
+		] ),
+		'faq_title'      => '',
+		'faqs'           => mc_normalize_acf_array( $acf['faqs'] ?? [], [
+			'question' => 'Question',
+			'answer'   => 'Answer',
+		] ),
+		'spec_table'     => [],
+		'note'           => '',
+	];
+
+	return new \WP_REST_Response( $page, 200 );
+}
+
+/**
+ * Normalizes ACF repeater field arrays to ensure consistent structure.
+ * Handles both array and non-array inputs gracefully.
+ *
+ * @param mixed $data The ACF field data (might be array, false, or WP_Error)
+ * @param array $fields Expected field keys for the structure
+ * @return array Normalized array or empty array
+ */
+function mc_normalize_acf_array( $data, array $fields ): array {
+	if ( ! is_array( $data ) || empty( $data ) ) {
+		return [];
+	}
+
+	// If first element is not array, it's a single item — wrap it
+	if ( isset( $data[0] ) && ! is_array( $data[0] ) ) {
+		$data = [ $data ];
+	}
+
+	// Filter to keep only expected fields
+	return array_map(
+		static function ( array $item ) use ( $fields ): array {
+			$normalized = [];
+			foreach ( $fields as $key => $_ ) {
+				if ( isset( $item[ $key ] ) ) {
+					$normalized[ $key ] = $item[ $key ];
+				}
+			}
+			return $normalized;
+		},
+		array_filter( $data, 'is_array' )
+	);
+}
+
+/**
+ * Lists all marketing page summaries.
+ */
+function mc_list_marketing_pages( \WP_REST_Request $request ) {
+	// Fetch all published scenario posts and convert to summaries.
+	$scenarios = get_posts( [
+		'post_type'      => 'mc_scenario',
+		'posts_per_page' => 200,
+		'post_status'    => 'publish',
+	] );
+
+	$summaries = array_map( static function ( \WP_Post $post ) {
+		// Get route_slug from ACF if available
+		$acf = get_fields( $post->ID );
+		$route_slug = $acf['route_slug'] ?? sanitize_title( $post->post_title );
+
+		return [
+			'id'         => $post->ID,
+			'route_path' => '/' . trim( $route_slug, '/' ),
+			'title'      => $post->post_title,
+		];
+	}, $scenarios );
+
+	return new \WP_REST_Response( $summaries, 200 );
+}
