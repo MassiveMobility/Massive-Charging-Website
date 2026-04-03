@@ -2401,7 +2401,7 @@ select:focus-visible {
 /* PC screen footer width constraint */
 @media (min-width: 1025px) {
   .site-footer-v2__main {
-    max-width: 60vw;
+    max-width: 80vw;
     margin-inline: auto;
   }
 }
