@@ -274,19 +274,27 @@ select:focus-visible {
 
 /* Centralized marketing header styles */
 .site-header-v2 {
+  --mc-red: #e10600;
+  --mc-text: #161616;
+  --mc-muted: #666666;
+  --mc-white: #ffffff;
+  --mc-border: rgba(0, 0, 0, 0.08);
   --desktop-bar-gap: clamp(12px, 1.55vw, 32px);
-  --desktop-nav-gap: clamp(12px, 1.35vw, 40px);
+  --desktop-nav-gap: 36px;
   --desktop-logo-height: clamp(36px, 2.5vw, 48px);
-  --desktop-cta-padding: clamp(7px, 0.62vw, 10.5px) clamp(13px, 1.2vw, 21px);
-  --desktop-cta-font-size: clamp(13px, 1.05vw, 17px);
-  --desktop-cta-line-height: clamp(20px, 1.55vw, 28px);
-  --desktop-nav-font-size: clamp(13px, 1.05vw, 17px);
-  --desktop-nav-line-height: clamp(20px, 1.58vw, 28px);
+  --desktop-cta-padding: 14px 24px;
+  --desktop-cta-font-size: 16px;
+  --desktop-cta-line-height: 1;
+  --desktop-nav-font-size: 17px;
+  --desktop-nav-line-height: 1.2;
   --desktop-black-strip-width: clamp(96px, 7vw, 128px);
   position: sticky;
   top: 0;
-  z-index: 58;
+  z-index: 999;
   width: 100%;
+  background: var(--mc-white);
+  border-bottom: 1px solid var(--mc-border);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
 }
 
 .site-header-v2--scale-125 {
@@ -369,24 +377,48 @@ select:focus-visible {
 
 .site-header-v2__desktop-nav-link {
   white-space: nowrap;
-  border-bottom: 2px solid transparent;
-  padding-bottom: 0.25rem;
+  padding-bottom: 8px;
   font-family: var(--font-brand-body);
   font-size: var(--desktop-nav-font-size);
-  font-weight: 400;
+  font-weight: 500;
   line-height: var(--desktop-nav-line-height);
-  letter-spacing: 0.002em;
-  color: #0c0c0c;
+  letter-spacing: 0.01em;
+  color: var(--mc-text);
   text-decoration: none;
-  transition: color var(--transition-standard);
+  position: relative;
+  transition: color 0.22s ease, opacity 0.22s ease;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.site-header-v2__desktop-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--mc-red);
+  transition: width 0.22s ease;
 }
 
 .site-header-v2__desktop-nav-link:hover {
+  color: var(--mc-red);
   text-decoration: none;
 }
 
+.site-header-v2__desktop-nav-link:hover::after {
+  width: 100%;
+}
+
 .site-header-v2__desktop-nav-link--active {
-  border-bottom-color: var(--raw-color-brand-500);
+  color: var(--mc-red);
+}
+
+.site-header-v2__desktop-nav-link--active::after {
+  width: 100%;
 }
 
 .site-header-v2__desktop-cta {
@@ -396,24 +428,33 @@ select:focus-visible {
   display: none;
   flex-shrink: 0;
   align-items: center;
-  border-radius: 10.72px;
-  background: var(--raw-color-brand-500);
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--mc-red);
+  border: 1px solid var(--mc-red);
   padding: var(--desktop-cta-padding);
   font-family: var(--font-brand-body);
   font-size: var(--desktop-cta-font-size);
-  font-weight: 400;
+  font-weight: 700;
   line-height: var(--desktop-cta-line-height);
-  letter-spacing: 0.002em;
-  color: var(--color-text-on-emphasis);
+  letter-spacing: 0.01em;
+  color: #ffffff;
   text-decoration: none;
   white-space: nowrap;
-  transition: background-color var(--transition-standard);
+  min-height: 48px;
+  transition: background-color 0.22s ease, border-color 0.22s ease, transform 0.22s ease;
+}
+
+.site-header-v2__desktop-cta::after {
+  display: none;
 }
 
 .site-header-v2__desktop-cta:hover {
-  background: var(--raw-color-brand-600);
-  color: var(--color-text-on-emphasis);
+  background: #c90500;
+  border-color: #c90500;
+  color: #ffffff;
   text-decoration: none;
+  transform: translateY(-1px);
 }
 
 .site-header-v2__mobile-trigger-wrap {
@@ -570,12 +611,13 @@ select:focus-visible {
   text-decoration: none;
 }
 
-/* Desktop dropdown navigation */
+/* Desktop dropdown navigation - hidden for flat nav design */
 .site-header-v2__dropdown-wrap {
   position: relative;
 }
 
 .site-header-v2__dropdown {
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -585,7 +627,6 @@ select:focus-visible {
   border-radius: 0.5rem;
   box-shadow: var(--shadow-lg);
   padding: 1.5rem;
-  display: grid;
   gap: 2rem;
   z-index: var(--z-dropdown);
   min-width: 280px;
@@ -2901,10 +2942,16 @@ select:focus-visible {
 
   .site-header-v2__desktop-nav-wrap {
     display: flex;
+    flex: 1;
+    justify-content: center;
   }
 
   .site-header-v2__desktop-cta {
     display: inline-flex;
+  }
+
+  .site-header-v2__dropdown {
+    display: none;
   }
 
   .site-header-v2__mobile-trigger-wrap {
