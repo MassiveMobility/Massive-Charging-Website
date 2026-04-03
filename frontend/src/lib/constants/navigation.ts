@@ -170,8 +170,7 @@ export const footerColumns: FooterColumn[] = [
       { label: "120kW DC", href: "/chargers/dc/120-dual-gun", indent: true },
       { label: "180kW DC", href: "/chargers/dc/180-dual-gun", indent: true },
       { label: "240kW DC", href: "/chargers/dc/240-dual-gun", indent: true },
-      { label: "Type 2 / Combo", href: "/chargers/type-6-7" },
-      { label: "3kW Type 2", href: "/chargers/type-6-7/3-kw", indent: true }
+      { label: "3kW Type 6/7", href: "/chargers/type-6-7/3-kw", indent: true }
     ]
   },
   {
