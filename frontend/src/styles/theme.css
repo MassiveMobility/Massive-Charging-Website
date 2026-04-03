@@ -2165,7 +2165,7 @@ select:focus-visible {
   margin: 0 0 clamp(6px, 0.8vw, 10px) 0;
   font-family: var(--font-brand-heading);
   font-weight: 600;
-  font-size: clamp(14px, 1vw, 17px);
+  font-size: clamp(12px, 1vw, 14px);
   line-height: clamp(20px, 1.4vw, 24px);
   letter-spacing: -0.002em;
   color: #fff;
@@ -2175,7 +2175,7 @@ select:focus-visible {
 .site-footer-v2__column-link {
   font-family: var(--font-brand-body);
   font-weight: 400;
-  font-size: clamp(10px, 0.75vw, 13px);
+  font-size: clamp(10px, 0.75vw, 12px);
   line-height: clamp(15px, 1.2vw, 20px);
   letter-spacing: 0.002em;
   color: #fff;
@@ -2231,7 +2231,7 @@ select:focus-visible {
 .site-footer-v2__column-link-item {
   font-family: var(--font-brand-body);
   font-weight: 400;
-  font-size: clamp(10px, 0.75vw, 13px);
+  font-size: clamp(10px, 0.75vw, 12px);
   line-height: clamp(15px, 1.2vw, 20px);
   letter-spacing: 0.002em;
   color: #fff;
@@ -3094,13 +3094,13 @@ select:focus-visible {
 
   .site-footer-v2__column-title,
   .site-footer-v2__right-title {
-    font-size: clamp(18px, 1.2vw, 22px);
+    font-size: clamp(12px, 1.2vw, 14px);
     line-height: clamp(26px, 1.8vw, 30px);
   }
 
   .site-footer-v2__column-text,
   .site-footer-v2__column-link {
-    font-size: clamp(14px, 1vw, 18px);
+    font-size: clamp(10px, 1vw, 12px);
     line-height: clamp(22px, 1.6vw, 28px);
   }
 
@@ -3244,13 +3244,13 @@ select:focus-visible {
 
   .site-footer-v2__column-title,
   .site-footer-v2__right-title {
-    font-size: clamp(22px, 1.65vw, 30px);
+    font-size: clamp(12px, 1.65vw, 14px);
     line-height: clamp(30px, 2.2vw, 40px);
   }
 
   .site-footer-v2__column-text,
   .site-footer-v2__column-link {
-    font-size: clamp(18px, 1.3vw, 24px);
+    font-size: clamp(10px, 1.3vw, 12px);
     line-height: clamp(28px, 2vw, 36px);
   }
 
