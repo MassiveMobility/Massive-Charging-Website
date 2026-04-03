@@ -2236,6 +2236,7 @@ select:focus-visible {
   font-size: clamp(10px, 0.75vw, 13px);
   line-height: clamp(15px, 1.2vw, 20px);
   letter-spacing: 0.002em;
+  color: #fff;
 }
 
 .site-footer-v2__column-link-item--indent {
