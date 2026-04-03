@@ -28,6 +28,10 @@ export function buildRootMetadata(): Metadata {
     },
     description: siteConfig.description,
     keywords: mergeKeywords(),
+    icons: {
+      icon: "/favicon.ico",
+      shortcut: "/favicon.ico"
+    },
     alternates: {
       canonical: routePaths.home
     },
