@@ -2398,6 +2398,14 @@ select:focus-visible {
   text-decoration: none;
 }
 
+/* PC screen footer width constraint */
+@media (min-width: 1025px) {
+  .site-footer-v2__main {
+    max-width: 60vw;
+    margin-inline: auto;
+  }
+}
+
 /* Layout primitives */
 .layout-container {
   width: min(100% - (2 * var(--layout-gutter)), var(--layout-container-content));
