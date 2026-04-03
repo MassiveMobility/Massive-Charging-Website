@@ -336,114 +336,124 @@ export const marketingPageContent: Record<string, MarketingContent> = {
   },
   "/for/cpos": {
     badge: "EV Charging Management System for CPOs",
-    title: "EV Charging Platform Designed for CPO Economics & Network Scale",
+    title: "EV Charging Management System Built for Charge Point Operators",
     description:
-      "Five-layer operational framework for CPOs: software, hardware optimization, installation, maintenance, and independent audit. Manage charger economics and network scale across India.",
+      "Run, monitor and scale your EV charging network with a powerful EV charging management system for charge point operators.",
     primaryCta: {
       href: "/get-chargers",
-      label: "Book a CPO Strategy Call"
+      label: "Book a Demo"
     },
     secondaryCta: {
       href: "/platform",
-      label: "Explore Full Platform Capabilities"
+      label: "Explore Platform Features"
     },
     stats: [
       { label: "Network sessions", value: "3,20,000+", note: "completed on Massive's live network" },
       { label: "Average uptime", value: "99.95%", note: "structured monitoring and maintenance" },
       { label: "Paytm reach", value: "30cr+ users", note: "via OCPI integration with Paytm EV Charging" }
     ],
-    cardTitle: "Five layers of CPO support",
+    cardTitle: "Four Core Capabilities Every Charging Network Requires",
     cards: [
       {
-        title: "Layer 1: Increase charger utilization",
+        title: "Real-Time Charger Visibility",
         description:
-          "OCPI integration with Paytm EV Charging (30cr+ users) expands visibility and user reach. UPI Direct Charging enables app-free sessions with no hardware changes, firmware upgrades, or CMS migration. Access partner networks and aggregators via standards-based roaming."
+          "Know what's happening on your network at any moment. Monitor charger health, session activity, energy output and fault events in real-time. Uptime is revenue. When a charger goes down, you need to know before your users do."
       },
       {
-        title: "Layer 2: CMS software control",
+        title: "Flexible Tariff & Pricing Control",
         description:
-          "White-label EV CMS supporting OCPP 1.6J and OCPP 2.0.1. Companion apps for drivers, operators, and managers. Integrated payment gateway (UPI, cards, wallets). Load balancing. OCPI 2.2.1 roaming. Real-time session monitoring with remote charger control."
+          "Every deployment demands different commercial logic. Public charging has different pricing than destination charging. Partner networks need different access controls than private fleets. Configure tariffs, define who pays what, and support the commercial structure behind each deployment without workarounds."
       },
       {
-        title: "Layer 3: Hardware cost optimization",
+        title: "Session & User Management",
         description:
-          "Aggregated procurement across multiple CPO projects negotiates better pricing and SLA terms with OEMs. Benchmarking real-world performance across charger brands. Volume-based negotiation with leading OEMs (Chargepoint, BP Pulse, Kempower, ABB, and regional suppliers)."
+          "Control who uses which charger, when they can charge, and how much they pay. Support roaming networks, fleet management, subscriber models or public-access charging—all from one operational interface."
       },
       {
-        title: "Layer 4: Installation and maintenance",
+        title: "Network Intelligence & Reporting",
         description:
-          "End-to-end site assessment, installation, and preventive/corrective maintenance. Qualified teams across urban, highway, and semi-urban markets. 24/7 fault response and parts supply. Single accountable partner — eliminating multi-vendor coordination."
+          "Performance data is only valuable if you can act on it. Track utilization, identify underperforming sites, understand charging behavior and plan expansion with clarity. Better data drives better network decisions."
       },
       {
-        title: "Layer 5: Gridwatch independent audit",
+        title: "Built on OCPP—For Network Freedom",
         description:
-          "Third-party monitoring validating utilization, uptime, and downtime independently. Transparent SLA validation. Detects downtime patterns and benchmarks against vendor claims. Corridor-level reliability reports for investor confidence."
+          "Interoperability matters. A lot. If your CPO platform is tied to one charger manufacturer, you lose flexibility. Massive Charging is built to support OCPP-based operations, meaning you can integrate chargers from multiple manufacturers, scale without lock-in, and maintain consistency across mixed deployments."
       },
       {
-        title: "National-scale deployment capability",
+        title: "Remote Monitoring & Uptime Management",
         description:
-          "Pan-India execution covering urban, highway, and semi-urban markets with AC and DC installations. Structured rollout processes ensure speed, standardization, and quality control from 5 to 500+ stations."
+          "Charger downtime isn't just an operational problem—it's a revenue problem. Get real-time charger health tracking, remote operational control, fault detection and alerting, plus historical performance data to understand reliability trends and plan preventative maintenance."
+      },
+      {
+        title: "Tariff, Pricing & Access Management",
+        description:
+          "Your software should match how you make money. Define per-location pricing, set time-of-use tariffs, control access by user type, membership or subscription, and support roaming partner networks. Whether your network is open, restricted, partner-led or multi-site, you have the commercial controls to align operations with revenue."
+      },
+      {
+        title: "Designed to Scale with Your Growth",
+        description:
+          "A charging platform that works for 5 chargers might buckle at 50. Massive Charging is designed for CPO growth—centralized management of hundreds of chargers, consistent oversight, flexible infrastructure, and performance stability as complexity increases without losing visibility or control."
       }
     ],
-    stepsTitle: "Engagement process",
+    stepsTitle: "How It Works",
     steps: [
       {
-        title: "1. Share your network and scale plan",
+        title: "1. Share Your Network Plan",
         description:
-          "Tell us: locations, vehicle segments, current hardware stack, commercial model, and growth timeline. We assess electrical feasibility, market demand, competitive landscape, and revenue potential."
+          "Tell us about your locations, network size, commercial model, and growth timeline. We assess feasibility, opportunity, and the right operational approach for your deployment."
       },
       {
-        title: "2. Activate the layers that apply",
+        title: "2. Get Visibility and Control",
         description:
-          "Existing network? Start with Layer 2 (CMS) + Layer 3 (hardware optimization) + Layer 5 (Gridwatch). New deployment? Integrate all five layers. Scale incrementally — UPI and OCPI enable on existing chargers without hardware changes."
+          "Connect your chargers (or deploy new ones) into one unified operating layer. Access real-time monitoring, tariff management, user control, and payment flows from a single platform."
       },
       {
-        title: "3. Operate with full visibility",
+        title: "3. Scale with Confidence",
         description:
-          "Track sessions in real-time, manage tariffs, receive payouts automatically. Monitor charger health and respond to faults proactively. Use Gridwatch audit data to validate uptime and inform expansion decisions."
+          "As your network grows, the platform scales with you. Maintain operational clarity, manage complex pricing scenarios, and make better decisions about optimization and expansion based on network data."
       }
     ],
     faqTitle: "CPO Platform FAQ",
     faqs: [
       {
-        question: "Can UPI be enabled on existing chargers without hardware changes?",
+        question: "What is a charge point operator platform?",
         answer:
-          "Yes. UPI Direct Charging is enabled via OCPI integration. No hardware changes, firmware upgrades, or CMS migration required. Sessions can start accepting UPI within days of activation."
+          "A charge point operator platform is the software used to manage EV charging stations, monitor uptime, control sessions, configure tariffs, handle users and analyse network performance. It's the operational backbone for running charging infrastructure."
       },
       {
-        question: "Which OCPP versions does the CMS support?",
+        question: "What's the difference between EV charging CMS and CPO software?",
         answer:
-          "OCPP 1.6J and OCPP 2.0.1. This covers the vast majority of commercially deployed AC and DC chargers in India — from older installations to new OEM deployments."
+          "They're closely related. EV charging CMS typically refers to the management software itself, while CPO software emphasizes the operator-facing business layer—the controls CPOs need to run operations, manage revenue, scale networks and make strategic decisions."
       },
       {
-        question: "How does OCPI roaming work for my network?",
+        question: "Why is OCPP important for charge point operators?",
         answer:
-          "OCPI 2.2.1 enables real-time authentication and tariff application with partner networks, aggregators, and fleet platforms. A driver from a partner network's app can authenticate and charge at your station — you keep revenue control and settlement happens automatically."
+          "OCPP creates interoperability between chargers and management platforms. This gives CPOs the freedom to integrate chargers from different manufacturers, scale without being locked into one hardware supplier, and maintain consistency across mixed deployments."
       },
       {
-        question: "What is Gridwatch and why do I need it?",
+        question: "Who needs dedicated CPO software?",
         answer:
-          "Gridwatch is third-party audit software providing independent uptime visibility. Rather than relying on your own reports, Gridwatch validates claims transparently. This builds investor confidence and helps identify which chargers/sites need attention."
+          "Any organization operating public, semi-public, partner-led or private charging networks benefits from dedicated software—especially when managing multiple chargers or expanding across locations. Manual processes and fragmented tools become untenable at scale."
       },
       {
-        question: "What if I already have a CMS from another vendor?",
+        question: "Can this platform grow with my network?",
         answer:
-          "You can still use Massive's hardware optimization, installation, maintenance, and Gridwatch audit layers. CMS migration is available but optional if you want to transition later."
+          "Yes. Massive Charging is designed for networks that grow from a few chargers to hundreds. The platform maintains operational clarity, control and performance as complexity increases—it scales with you, not against you."
       },
       {
-        question: "How long does it take to go live?",
+        question: "Does it support different charging business models?",
         answer:
-          "Existing networks: CMS activation in 2–4 weeks. New deployments: 3–6 months for site assessment, permitting, installation, and commissioning (varies by location and infrastructure readiness)."
+          "Yes. The platform supports public charging, destination charging, partner networks, fleet management, subscription models and private deployments. Configure tariffs, access controls and pricing to match your specific business model."
       },
       {
-        question: "What's included in preventive maintenance?",
+        question: "How long does implementation take?",
         answer:
-          "Routine inspections (monthly), firmware updates, connector maintenance, cooling system checks, and component replacement per OEM schedules. This reduces unexpected downtime and extends charger life."
+          "For existing networks, CMS activation typically takes 2–4 weeks. For new deployments, expect 3–6 months for site assessment, permitting, installation, and commissioning (varies by location and infrastructure readiness)."
       },
       {
-        question: "Can I customize pricing and tariffs per location?",
+        question: "What about chargers from different manufacturers?",
         answer:
-          "Completely. Set tariffs per station, per charger, or network-wide. Support for time-of-day pricing, location-based pricing, vehicle-segment pricing, promotional windows, and subscriber discounts. Changes take effect in real-time."
+          "Our OCPP support means you can integrate chargers from multiple manufacturers into one management layer. You're never locked into a single hardware vendor, giving you negotiating power and deployment flexibility."
       }
     ]
   },
