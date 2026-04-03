@@ -1,5 +1,7 @@
-import coreMessageBlockRaw from "@/data/articles/legacy/core_message_block.json";
-import vehicleGuideRaw from "@/data/articles/legacy/vehicle_guide.json";
+// Import JSON data as ES modules
+// This ensures the data is bundled and available in all deployment environments
+import coreMessageBlockRaw from "./legacy/core_message_block.json";
+import vehicleGuideRaw from "./legacy/vehicle_guide.json";
 
 export type LegacyVehicleMaster = {
   Vehicle_ID: string;

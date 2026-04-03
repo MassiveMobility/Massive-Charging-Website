@@ -1,13 +1,12 @@
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { EvCarsCataloguePage } from "@/features/marketing/components/ev-cars-catalogue-page";
-import { legacyFourWheelVehicles } from "@/data/articles";
+import { fetchEvCarsFromWordPress } from "@/lib/wp-api/ev-cars";
 
 const routePath = "/charging-guide/ev-cars" as const;
 
-// Disable ISR for this page - static generation only
-// Runtime RSC serialization was causing cars array to become empty
-// Static build works correctly with 101 vehicles from legacy data
-export const revalidate = false;
+// Mark as dynamic to prevent prerendering during build
+// WordPress API data is fetched at request time with ISR caching
+export const dynamic = "force-dynamic";
 
 export const metadata = buildPageMetadata({
   title: "EV Cars Catalogue",
@@ -17,9 +16,9 @@ export const metadata = buildPageMetadata({
 });
 
 export default async function ChargingGuideEvCarsPage() {
-  // Use legacy data as primary source - it's reliable and complete
-  // WordPress integration can be added later when RSC serialization is resolved
-  const cars = legacyFourWheelVehicles;
+  // Fetch EV cars from WordPress API - source of truth for vehicle data
+  // Falls back gracefully if API is unavailable
+  const cars = await fetchEvCarsFromWordPress();
 
   return <EvCarsCataloguePage cars={cars} />;
 }
