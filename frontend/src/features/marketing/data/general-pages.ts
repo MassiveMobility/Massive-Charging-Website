@@ -213,124 +213,124 @@ export const marketingPageContent: Record<string, MarketingContent> = {
   },
   "/platform": {
     badge: "EV Charging Management Platform",
-    title: "Manage Your Entire EV Charging Network from One Platform",
+    title: "EV Charging Management Platform for Scalable Charging Networks",
     description:
-      "Operator CMS managing 3.2M+ sessions across 50+ stations. Real-time monitoring, UPI payments, OCPI roaming, tariff control. 99.95% uptime, live deployment across India.",
+      "Manage chargers, users, pricing, payments and analytics with Massive Charging's EV charging management platform for commercial networks.",
     primaryCta: {
       href: "/get-chargers",
-      label: "Schedule a Platform Demo"
+      label: "Book a Demo"
     },
     secondaryCta: {
       href: "/for/cpos",
-      label: "CPO Partnership Overview"
+      label: "Talk to an EV Charging Expert"
     },
     stats: [
       { label: "Sessions completed", value: "3,20,000+", note: "across live network" },
       { label: "Average uptime", value: "99.95%", note: "structured monitoring and maintenance" },
       { label: "Monthly energy", value: "150+ MWh", note: "growing 20% month-on-month" }
     ],
-    cardTitle: "Core platform features",
+    cardTitle: "Complete Charger Visibility & Control",
     cards: [
       {
-        title: "Real-time monitoring and control",
+        title: "Monitor Every Charger. Control Every Session.",
         description:
-          "Live session status, charger health, fault alerts across your full network — visible from a single operator dashboard. Remote stop/start and tariff changes without field visits."
+          "Real-time visibility into charger health, availability, sessions and power output. Identify faults faster, initiate or stop sessions remotely, maintain better control over site performance. Less manual intervention, faster issue resolution, stronger network reliability."
       },
       {
-        title: "Tariff and pricing management",
+        title: "Pricing, Access & Payments—Your Business Model",
         description:
-          "Set pricing per station, configure time-of-day rates, location-based tariffs, and vehicle-segment pricing. Dynamic tariff control with automatic application at session start."
+          "Configure per-location tariffs, time-of-use pricing, user-based access rules and payment workflows. Support public charging, fleet charging, captive charging and commercial destination charging without workarounds. Your software adapts to your business model, not the reverse."
+      },
+      {
+        title: "Data That Drives Decisions",
+        description:
+          "Track utilization, performance trends, usage patterns and revenue by location and tariff. Understand which chargers work, which locations underperform, where to expand next. Make deployment decisions backed by real operating data instead of guesses."
+      },
+      {
+        title: "Built for Growth",
+        description:
+          "Manage hundreds of chargers from one dashboard without architectural compromises. Add locations, add chargers, add users without system rebuilds. Scale from pilot deployments to multi-city networks without changing the core platform."
+      },
+      {
+        title: "OCPP Integration & Interoperability",
+        description:
+          "OCPP 1.6J and OCPP 2.0.1 support means compatibility with 90%+ of commercial chargers. Connect hardware from multiple manufacturers into one management layer without lock-in or vendor dependency."
       },
       {
         title: "UPI Direct Charging",
         description:
-          "App-free, instant digital transactions via UPI QR codes. No hardware changes, firmware upgrades, or CMS migration needed on existing chargers. Integration with Paytm EV Charging (30cr+ users)."
+          "App-free, instant digital transactions via QR codes. No hardware changes, firmware upgrades, or CMS migration needed on existing chargers. Integration with Paytm EV Charging opens access to 30cr+ users."
       },
       {
-        title: "Payment gateway integration",
+        title: "OCPI 2.2.1 Roaming & Partnerships",
         description:
-          "UPI, card payments, digital wallets, and subscription models. Automatic settlement and reconciliation. PCI-compliant payment processing with transparent reporting."
+          "Enable partner network roaming with automatic authentication and tariff application. Support fleet platforms, charging aggregators and partner CPOs without CMS replacement. Expand your network reach without operational silos."
       },
       {
-        title: "White-label companion apps",
+        title: "Gridwatch—Independent Network Audit",
         description:
-          "iOS/Android apps for drivers, operators, and network managers — all under your brand. Driver app for charger discovery and payments; operator app for monitoring and maintenance."
-      },
-      {
-        title: "OCPI 2.2.1 roaming",
-        description:
-          "Standards-based network roaming with partner CPOs, aggregators, and fleet platforms. Real-time authentication and tariff application. No CMS replacement required."
-      },
-      {
-        title: "Load balancing and smart distribution",
-        description:
-          "Scalable architecture prevents electrical overload at multi-charger sites. Dynamic power allocation protects uptime and improves energy optimization."
-      },
-      {
-        title: "Gridwatch — independent network audit",
-        description:
-          "Third-party audit software validating utilization, uptime, and downtime. Transparent SLA validation and corridor-level reliability reports for investor confidence."
+          "Third-party monitoring validates utilization, uptime and downtime independently. Transparent SLA validation and corridor-level reliability reports build investor confidence and identify optimization opportunities."
       }
     ],
-    stepsTitle: "Launch the platform in 3 steps",
+    stepsTitle: "How It Works",
     steps: [
       {
-        title: "1. Connect your hardware",
+        title: "1. Connect Your Chargers",
         description:
-          "Integrate chargers via OCPP 1.6J or OCPP 2.0.1 (compatible with 90%+ of commercial chargers). Register stations, map locations, configure tariffs. Connect via WiFi, GSM, or Ethernet."
+          "Integrate via OCPP 1.6J or OCPP 2.0.1. Register stations, map locations, configure tariffs. Connect via WiFi, GSM, or Ethernet. Compatible with 90%+ of commercial chargers."
       },
       {
-        title: "2. Enable payments and apps",
+        title: "2. Configure Operations & Payments",
         description:
-          "Activate UPI Direct, branded app flows, and payment settlement. Install QR codes, configure reconciliation cycles, test end-to-end flows before production launch."
+          "Set pricing policies, user access rules and payment workflows. Enable UPI Direct, configure settlement cycles, set up branded apps. Test end-to-end flows before launch."
       },
       {
-        title: "3. Monitor and scale",
+        title: "3. Monitor, Optimize & Scale",
         description:
-          "Track live sessions, adjust tariffs in real-time, receive charger alerts. Use Gridwatch audit data to validate uptime against SLA commitments. Scale to additional locations with standardized process."
+          "Track live sessions, adjust tariffs in real-time, receive fault alerts. Use data to identify optimization opportunities and expansion decisions. Scale to new locations with standardized processes."
       }
     ],
     faqTitle: "Platform FAQ",
     faqs: [
       {
-        question: "Is the CMS white-label?",
+        question: "What is an EV charging management platform?",
         answer:
-          "Yes. Driver and operator apps deploy under your brand with your logo, colors, and messaging. The underlying infrastructure is Massive's enterprise platform, providing reliability without infrastructure complexity."
+          "It's the software layer that controls complete charging operations—from monitoring charger health and managing sessions, to configuring pricing, processing payments, managing user access and analyzing performance. It's the backbone that turns hardware into a managed business."
       },
       {
-        question: "Which OCPP versions are supported?",
+        question: "How is this different from a charger app?",
         answer:
-          "OCPP 1.6J and OCPP 2.0.1. This covers 90%+ of commercially deployed AC and DC chargers in India, from legacy installations to new OEM deployments."
+          "A charger app is what users see. The management platform is what operators need—the backend system that controls operations, business logic, user access, charger status, pricing rules, payments, reporting and network visibility."
       },
       {
-        question: "Does the platform support OCPI roaming?",
+        question: "Who should use this platform?",
         answer:
-          "Yes. OCPI 2.2.1 enables standards-based roaming with partner networks, aggregators, and fleet platforms without CMS replacement."
+          "Charge point operators building public networks, fleet operators managing captive charging, property owners deploying chargers across commercial assets, and any business operating EV charging at commercial scale who needs centralized control and visibility."
       },
       {
-        question: "What is Gridwatch?",
+        question: "Can it handle multi-site operations?",
         answer:
-          "Third-party audit software providing independent visibility into utilization, uptime, and downtime across your network. Validates SLA claims and generates credible uptime reports for investor confidence."
+          "Yes, completely. The platform is built to manage chargers and operations across multiple locations while giving operators centralized visibility, unified reporting and consistent control—whether you have 3 sites or 30."
       },
       {
-        question: "Can UPI be enabled on existing hardware?",
+        question: "Does it help with pricing and payments?",
         answer:
-          "Yes. UPI Direct Charging is enabled via OCPI integration with no hardware changes, firmware upgrades, or CMS migration needed."
+          "Yes. Managing chargers is only half the job. The platform gives you commercial controls for tariffs, pricing policies, payment workflows, user access and subscription models so you can run charging as a viable, profitable business."
       },
       {
-        question: "What about mobile connectivity in remote areas?",
+        question: "Can I integrate with existing systems?",
         answer:
-          "The platform supports WiFi, GSM (2G/3G/4G), and Ethernet. Multi-connectivity failover ensures chargers stay connected even in remote areas with poor signal."
+          "Yes. The platform supports OCPP for charger integration and OCPI for roaming network partnerships, making it interoperable with existing infrastructure and partner networks without CMS replacement."
       },
       {
-        question: "How does payment settlement work?",
+        question: "Is the platform scalable?",
         answer:
-          "Sessions generate revenue records in the CMS. Settlement reconciliation happens daily (or per your preferred cycle). Payouts go directly to your designated bank account with full audit trail in the dashboard."
+          "Yes. Designed to scale from pilot deployments to large multi-city networks without needing system rebuilds or migrations. As you add more chargers, locations and complexity, the platform maintains performance and visibility."
       },
       {
-        question: "Can I customize the tariff structure?",
+        question: "Can I customize pricing and tariffs?",
         answer:
-          "Completely. Set per-station, per-charger, or network-wide tariffs. Support for time-of-day pricing, vehicle-segment pricing, promotional windows, and subscriber discounts."
+          "Completely. Set per-station, per-charger, or network-wide tariffs. Support time-of-day pricing, vehicle-segment pricing, promotional windows, subscription models and user-based access rules."
       }
     ]
   },
