@@ -2143,9 +2143,7 @@ select:focus-visible {
 .site-footer-v2__main {
   flex: 1;
   position: relative;
-  display: flex;
-  align-items: flex-start;
-  gap: 0;
+  display: block;
   padding: var(--footer-top) var(--footer-gutter) 0 var(--footer-gutter);
 }
 
@@ -2159,10 +2157,8 @@ select:focus-visible {
 
 .site-footer-v2__column {
   display: flex;
-  flex: 1 1 0;
-  min-width: 0;
   flex-direction: column;
-  gap: clamp(10px, 1.2vw, 16px);
+  gap: clamp(4px, 0.6vw, 8px);
 }
 
 .site-footer-v2__column-title {
@@ -2179,8 +2175,8 @@ select:focus-visible {
 .site-footer-v2__column-link {
   font-family: var(--font-brand-body);
   font-weight: 400;
-  font-size: clamp(16px, 1.15vw, 20px);
-  line-height: clamp(24px, 1.9vw, 32px);
+  font-size: clamp(10px, 0.75vw, 13px);
+  line-height: clamp(15px, 1.2vw, 20px);
   letter-spacing: 0.002em;
   color: #fff;
   text-decoration: none;
