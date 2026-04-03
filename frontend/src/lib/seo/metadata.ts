@@ -29,8 +29,8 @@ export function buildRootMetadata(): Metadata {
     description: siteConfig.description,
     keywords: mergeKeywords(),
     icons: {
-      icon: "/favicon.ico",
-      shortcut: "/favicon.ico"
+      icon: "/favicon.svg",
+      shortcut: "/favicon.svg"
     },
     alternates: {
       canonical: routePaths.home
