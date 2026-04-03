@@ -2131,19 +2131,20 @@ select:focus-visible {
   --footer-col-gap: clamp(20px, 3vw, 60px);
   --footer-split-gap: clamp(16px, 2vw, 40px);
   width: 100%;
-  min-height: 70vh;
+  min-height: auto;
   border-top: 0;
   background: #0a0a0a;
   backdrop-filter: none;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .site-footer-v2__main {
   flex: 1;
   position: relative;
-  display: block;
+  display: grid;
+  grid-template-columns: 1fr;
   padding: var(--footer-top) var(--footer-gutter) 0 var(--footer-gutter);
 }
 
