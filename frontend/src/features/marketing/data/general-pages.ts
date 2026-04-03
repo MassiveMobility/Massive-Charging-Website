@@ -459,149 +459,96 @@ export const marketingPageContent: Record<string, MarketingContent> = {
   },
   "/chargers/dc": {
     badge: "DC Fast Chargers",
-    title: "Deploy Fast-Charging Infrastructure with Hardware + Software Integration",
+    title: "DC Fast Chargers for Commercial EV Charging | Massive Charging",
     description:
-      "30–240 kW DC fast chargers for highways, commercial stations, and fleets. CCS-2, OCPP 1.6J/2.0.1, UPI support. Full deployment and integration support included.",
+      "Deploy reliable DC fast chargers for fleets, highways and commercial locations with integrated software and deployment support.",
     primaryCta: {
       href: "/get-chargers",
-      label: "Request Deployment Consultation"
+      label: "Request a Quote"
     },
     secondaryCta: {
-      href: "/platform",
-      label: "Explore Operator Platform"
+      href: "/for/cpos",
+      label: "Talk to a Deployment Specialist"
     },
-    stats: [
-      { label: "Output range", value: "30–240 kW", note: "scalable across network" },
-      { label: "Connector", value: "CCS-2", note: "universal standard for India" },
-      { label: "Integration", value: "OCPP 1.6J/2.0.1", note: "operator CMS control" }
-    ],
-    cardTitle: "DC charger portfolio",
+    cardTitle: "Building reliable DC charging",
     cards: [
       {
-        title: "30 kW — Entry-level commercial",
+        title: "Why DC fast chargers matter for commercial charging",
         description:
-          "Output: 30 kW (single gun) or dual gun. CCS-2 connector. Input: single or three-phase (location dependent). Use case: commercial stations with moderate traffic, small fleet depots, emerging corridors. Lower hardware cost, easier site integration. Can serve 4–6 vehicles/day. 99%+ uptime."
+          "When charging demand is high, speed matters. DC fast chargers are ideal for locations where vehicle turnaround, driver convenience and operational efficiency are critical. For fleets, that means reducing charging downtime and improving vehicle readiness. For highways and transit corridors, it means enabling faster top-ups for drivers on the move. For commercial sites, it means offering a stronger charging experience where speed directly affects usability and throughput."
       },
       {
-        title: "60 kW — Dual gun, multi-vehicle",
+        title: "DC chargers for fleets, highways and commercial sites",
         description:
-          "Output: 60 kW total (split across 2 CCS-2 guns). Input: three-phase 415V. Current: 200A max per gun. Voltage: 100–1000Vdc. Enclosure: IP55. Cooling: forced air, -25°C to 75°C (de-rated above 55°C). Power sharing: dynamic between guns. Session time: 20–40 min per 40 kWh battery. Use case: public stations, retail locations, workplace."
+          "Massive Charging supports DC charger deployments across a wide range of commercial use cases. For fleet operators, DC fast charging helps maintain vehicle availability and improve charging efficiency across working vehicles. For highway and intercity locations, it supports fast charging demand from long-distance EV traffic. For commercial sites such as business parks, retail destinations, fuel-adjacent sites and hospitality properties, DC chargers create a stronger infrastructure offering and a more practical charging experience for users who need faster sessions."
       },
       {
-        title: "120 kW — Medium-high power",
+        title: "More than hardware: a complete commercial charging solution",
         description:
-          "Output: 120 kW total (split across 2 CCS-2 guns). Input: three-phase 350–460V. Current: 250A max per gun. Voltage: 100–1000Vdc. Enclosure: IP54. Cooling: forced air, -25°C to 55°C. Dimensions: 1725×500×700mm, <350kg. Display: 10-inch TFT screen. Session time: 15–25 min per 40 kWh. Use case: highway corridors, tier-1 commercial, high-traffic fleets."
+          "A DC charger should not be evaluated only by power output. Commercial success depends on the full deployment environment around the charger. Massive Charging combines charger deployment support with software integration, charger monitoring and operational visibility. This helps businesses manage not just installation, but also how the charger performs once it is live. From charger oversight to charging operations, the solution is designed to support uptime, usability and long-term growth."
       },
       {
-        title: "180 kW — High-power",
+        title: "Built for uptime and operational confidence",
         description:
-          "Output: 180 kW total (split across 2 CCS-2 guns). Input: three-phase 350–460V. Current: 150A max per gun. Voltage: 100–1000Vdc. Enclosure: IP54. Cooling: forced air. Dimensions: 1850×1064×790mm, <350kg. Display: 10-inch TFT. Session time: 10–15 min per 40 kWh. Use case: premium highway locations, high-volume fleets, express corridors."
+          "In commercial charging, charger reliability is not optional. Downtime affects utilisation, revenue and customer trust. Massive Charging helps businesses deploy DC charging infrastructure with the operational layer needed to support monitoring, issue visibility and more consistent performance. For operators and site owners, that means better confidence in day-to-day charger availability and stronger control over live charging assets."
       },
       {
-        title: "240 kW — Ultra-high power",
+        title: "Software-integrated DC charging",
         description:
-          "Output: 240 kW total (120 kW per gun). Input: three-phase 350–460V. Current: 150A max per gun. Voltage: 100–1000Vdc. Enclosure: IP54. Cooling: forced air. Dimensions: 1850×1064×790mm, <350kg. Display: 10-inch TFT. Session time: 8–12 min per 40 kWh. Use case: national expressways, premium fleets, express hubs."
+          "Hardware works best when it is connected to a software layer that gives operators visibility and control. Our DC charger deployments can be aligned with the Massive Charging platform so businesses can manage charger status, monitor usage, control sessions and support commercial charging operations through one connected environment. This makes DC charging more manageable for businesses that want both physical infrastructure and operational control."
       },
       {
-        title: "CMS integration via OCPP 1.6J / OCPP 2.0.1",
+        title: "Choosing the right DC charging setup",
         description:
-          "All models connect to Massive operator CMS for real-time session management, tariff control, reporting, and Gridwatch audit visibility. Communication: WiFi, GSM (2G/3G/4G), or Ethernet. Power rating: variable voltage output (100–1000Vdc) for different EV battery architectures."
+          "The right DC charger depends on your deployment model, expected usage and commercial objectives. A fleet depot has different charging requirements from a highway corridor. A destination site has different user behaviour from a public fast charging point. Massive Charging helps businesses evaluate the right deployment approach based on operational needs, charging demand and long-term commercial goals."
       },
       {
-        title: "Safety & environmental standards",
+        title: "Why businesses choose Massive Charging for DC fast charging",
         description:
-          "Emergency stop on all models (100ms cut). Protection: IP54/IP55 suited for Indian weather extremes. Thermal management: forced air with intelligent de-rating above 55°C. Grounding & surge protection: multi-stage against grid surges and vehicle faults."
-      },
-      {
-        title: "Site assessment and deployment support",
-        description:
-          "DC deployments require site assessment, electrical feasibility analysis, civil preparation, and commissioning. Massive coordinates full readiness — electrical infrastructure, load calculations, transformer capacity, and grid stability validation."
+          "Massive Charging combines charger deployment understanding with platform capability. That means businesses can evaluate DC chargers not as isolated hardware purchases, but as part of a larger charging operation. Our approach is suited to organisations that want reliable charging infrastructure, stronger visibility after deployment and a more scalable foundation for future expansion."
       }
     ],
-    stepsTitle: "Deployment workflow",
-    steps: [
-      {
-        title: "1. Site and power assessment",
-        description:
-          "Share location, electrical supply (three-phase availability), and expected vehicle volume. We assess: transformer capacity, infrastructure, civil prep needs. Load feasibility calculated; upgrade recommendations if needed. Timeline: 1–2 weeks."
-      },
-      {
-        title: "2. Model selection and specification",
-        description:
-          "Based on site assessment, recommend charger power (30/60/120/180/240 kW) and number of guns. Selection based on vehicle volume, space constraints, traffic profile. Equipment quote, delivery timeline, and installation schedule. Timeline: 2–3 weeks (manufacturing + QC)."
-      },
-      {
-        title: "3. Installation and commissioning",
-        description:
-          "Installation teams handle electrical work, civil prep, and charger deployment. OCPP integration with CMS configured. WiFi/GSM connectivity established. UPI payments activated. Operator dashboard access provided with staff training. Timeline: 2–4 weeks (varies by location)."
-      },
-      {
-        title: "4. Go live and ongoing support",
-        description:
-          "Charger goes live; sessions flow through CMS and Gridwatch monitoring. Preventive maintenance activates (monthly inspections, firmware updates). Corrective maintenance 24/7. Quarterly optimization reviews (utilization, tariff adjustments, expansion planning)."
-      }
-    ],
-    faqTitle: "DC Charger FAQ",
+    faqTitle: "DC Fast Charger FAQ",
     faqs: [
       {
-        question: "What connector type do Massive DC chargers use?",
+        question: "What is a DC fast charger?",
         answer:
-          "CCS-2 (Combined Charging System Type 2) on all models. Standard connector across current-generation 4-wheeler EVs in India and compatible with international EVs."
+          "A DC fast charger delivers high-speed charging by supplying direct current to the vehicle battery, making it suitable for applications where faster charging is important."
       },
       {
-        question: "What are the infrastructure requirements for DC charging?",
+        question: "Who should install a commercial DC charger?",
         answer:
-          "Three-phase electrical supply (350–460V), dedicated load capacity matched to charger power, and site-specific civil preparation. We conduct a site assessment before hardware specification to ensure feasibility."
+          "DC chargers are well suited for fleets, highway locations, public charging networks, fuel-adjacent sites and commercial properties where faster charging improves throughput and user convenience."
       },
       {
-        question: "Which OCPP versions are supported?",
+        question: "Are DC chargers suitable for fleet depots?",
         answer:
-          "OCPP 1.6J and OCPP 2.0.1. Communication via WiFi, GSM (2G/3G/4G), or Ethernet — flexible for remote and urban sites."
+          "Yes. DC charging can be a strong fit for fleets that need quicker turnaround and better vehicle readiness, especially in operational environments with high utilisation."
       },
       {
-        question: "Can DC chargers accept UPI payments?",
+        question: "Can DC chargers be integrated with charging management software?",
         answer:
-          "Yes. All Massive DC chargers integrate with the operator CMS and support UPI Direct Charging via QR codes — no hardware modifications required."
+          "Yes. DC chargers become more effective in commercial environments when integrated with a platform that supports monitoring, control and network operations."
       },
       {
-        question: "How long does a DC fast charging session typically take?",
+        question: "How do I choose the right DC charger for my site?",
         answer:
-          "For a standard 40 kWh battery: 8–15 min at 240 kW, 12–20 min at 120 kW, 15–25 min at 60 kW. Actual time depends on EV model, battery state-of-charge, and thermal conditions."
+          "The right option depends on vehicle mix, charging demand, dwell time, site power availability and the commercial model of the location. Massive Charging can help assess the best-fit deployment approach."
       },
       {
-        question: "What's the operational difference between single and dual-gun chargers?",
+        question: "What are the key benefits of DC fast charging?",
         answer:
-          "Dual-gun chargers (60/120/180/240 kW) serve two vehicles simultaneously, doubling utilization per charger. Single-gun (30 kW) models cost less and suit lower-traffic sites."
+          "DC fast charging reduces charging times significantly compared to AC charging, improving vehicle turnaround and utilisation. This is especially valuable for commercial locations, fleets and highway corridors where charging speed directly impacts operational efficiency."
       },
       {
-        question: "How is uptime guaranteed and monitored?",
+        question: "Can I manage multiple DC chargers from a single dashboard?",
         answer:
-          "Gridwatch third-party audit software monitors each charger independently. Uptime calculated transparently from session logs vs. outage events. Scheduled maintenance excluded; unplanned downtime counted against SLA."
+          "Yes. The Massive Charging platform provides unified visibility across all your DC chargers with real-time status, session monitoring, utilisation analytics and remote control capabilities."
       },
       {
-        question: "What's included in preventive maintenance?",
+        question: "What deployment support is included?",
         answer:
-          "Monthly inspections, firmware updates, connector maintenance, cooling system checks, thermal validation, and component replacements per OEM schedules. Reduces mean-time-to-repair and extends charger life."
-      },
-      {
-        question: "Can I monitor multiple DC chargers across locations in one dashboard?",
-        answer:
-          "Yes. The Massive operator CMS provides network-wide visibility across all AC and DC chargers with drill-down to individual charger status, session history, and fault logs."
-      },
-      {
-        question: "What if I don't have three-phase power at my site?",
-        answer:
-          "Three-phase is required for DC. We evaluate single-phase sites for AC charging alternatively or recommend electrical infrastructure upgrades. A preliminary site assessment determines feasibility."
-      },
-      {
-        question: "Are AC chargers also available?",
-        answer:
-          "Yes. Massive deploys AC chargers at 3.3, 7.4, 11, 15, and 22 kW for residential, workplace, and overnight commercial scenarios. Mix AC and DC based on your site and traffic profile."
-      },
-      {
-        question: "What's the typical ROI on a DC charger deployment?",
-        answer:
-          "Example: 120 kW DC charger at 60 kWh/day × ₹12/kWh = ₹720/day revenue. With dual guns serving 2 vehicles, monthly revenue potential ≈ ₹21,600. Monthly cost (CMS + maintenance): ₹3–4K. Gross monthly profit potential: ₹17.6–18.6K (varies by utilization and tariff)."
+          "Massive Charging provides site assessment, electrical feasibility analysis, deployment planning, installation coordination, software integration and commissioning support. Get guidance on DC charger selection, deployment planning and software-backed operations."
       }
     ]
   },
