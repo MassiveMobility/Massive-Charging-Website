@@ -611,22 +611,22 @@ select:focus-visible {
   text-decoration: none;
 }
 
-/* Desktop dropdown navigation - hidden for flat nav design */
+/* Desktop dropdown navigation */
 .site-header-v2__dropdown-wrap {
   position: relative;
 }
 
 .site-header-v2__dropdown {
-  display: none;
   position: absolute;
   top: 100%;
   left: 0;
   margin-top: 0.5rem;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  background: var(--mc-white);
+  border: 1px solid var(--mc-border);
   border-radius: 0.5rem;
   box-shadow: var(--shadow-lg);
   padding: 1.5rem;
+  display: grid;
   gap: 2rem;
   z-index: var(--z-dropdown);
   min-width: 280px;
@@ -2948,10 +2948,6 @@ select:focus-visible {
 
   .site-header-v2__desktop-cta {
     display: inline-flex;
-  }
-
-  .site-header-v2__dropdown {
-    display: none;
   }
 
   .site-header-v2__mobile-trigger-wrap {
