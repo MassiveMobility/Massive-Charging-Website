@@ -2158,7 +2158,9 @@ select:focus-visible {
 .site-footer-v2__column {
   display: flex;
   flex-direction: column;
-  gap: clamp(4px, 0.6vw, 8px);
+  align-items: center;
+  text-align: center;
+  gap: clamp(3px, 0.48vw, 7px);
 }
 
 .site-footer-v2__column-title {
@@ -2215,7 +2217,7 @@ select:focus-visible {
 .site-footer-v2__columns-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: clamp(12px, 1.8vw, 28px);
+  gap: clamp(9px, 1.35vw, 21px);
   width: 100%;
 }
 
@@ -2225,7 +2227,7 @@ select:focus-visible {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: clamp(4px, 0.6vw, 8px);
+  gap: clamp(3px, 0.48vw, 7px);
 }
 
 .site-footer-v2__column-link-item {
